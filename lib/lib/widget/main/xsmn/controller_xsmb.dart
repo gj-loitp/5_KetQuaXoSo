@@ -133,6 +133,7 @@ class ControllerXSMN extends BaseController {
     );
     // debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
     kqxs.value = KQXS.fromJson(response.data);
+    // kqxs.value = KQXS.fromJson(response.data);
     // debugPrint("roy93~ web ${web.toJson()}");
     // debugPrint("roy93~ web data ${web.pageProps?.resp?.data?.content?.entries}");
     // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {

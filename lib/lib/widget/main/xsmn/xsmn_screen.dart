@@ -57,6 +57,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
       child: CalendarTimeline(
+        shrink: false,
+        showYears: false,
         initialDate: _controllerXSMN.selectedDateTime.value,
         firstDate: DateTime.now().subtract(const Duration(days: 365)),
         lastDate: DateTime.now().add(const Duration(days: 365)),
@@ -103,36 +105,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         );
       } else {
         if (isFuture) {
-          return Container(
-            width: double.infinity,
-            color: Colors.white,
-            child: Stack(
-              children: [
-                Image.asset(
-                  "assets/images/bkg_2.jpg",
-                  height: double.infinity,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  color: Colors.white70,
-                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                  height: 50,
-                  child: const Text(
-                    "Chưa có kết quả xổ số vào ngày này.",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.center,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
-            ),
-          );
+          return _buildFutureView();
         } else {
           if (isNativeMode) {
             return _buildNativeView();
@@ -142,6 +115,39 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         }
       }
     });
+  }
+
+  Widget _buildFutureView() {
+    return Container(
+      width: double.infinity,
+      color: Colors.white,
+      child: Stack(
+        children: [
+          Image.asset(
+            "assets/images/bkg_2.jpg",
+            height: double.infinity,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            alignment: Alignment.center,
+            color: Colors.white70,
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+            height: 50,
+            child: const Text(
+              "Chưa có kết quả xổ số vào ngày này.",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+              ),
+              textAlign: TextAlign.center,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildWebView() {
@@ -154,11 +160,18 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget _buildNativeView() {
     var kqxs = _controllerXSMN.kqxs.value;
     var text = "";
+
+    var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
+    if (listEntries.isEmpty) {
+      return _buildFutureView();
+    }
     kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
       text += "${element.displayName} ~ ${element.award} ~ ${element.value}\n";
       debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
     });
     return Container(
+      width: double.infinity,
+      height: double.infinity,
       color: Colors.white,
       child: Text(text),
     );
