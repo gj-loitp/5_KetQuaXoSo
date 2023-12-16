@@ -1,9 +1,15 @@
+import 'dart:convert';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_pretty_dio_logger/flutter_pretty_dio_logger.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_controller.dart';
+import 'package:ketquaxoso/lib/model/web.dart';
 import 'package:ketquaxoso/lib/util/log_dog_utils.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:dio/dio.dart';
 
 class ControllerXSMN extends BaseController {
   var selectedDateTime = DateTime.now().obs;
@@ -65,6 +71,9 @@ class ControllerXSMN extends BaseController {
         ),
       )
       ..loadRequest(Uri.parse(link));
+
+    //test
+    test();
   }
 
   Future<void> addBottomSpace() async {
@@ -75,5 +84,39 @@ class ControllerXSMN extends BaseController {
     ''';
 
     await webViewController.value.runJavaScript(script);
+  }
+
+  final dio = Dio();
+
+  Future<void> test() async {
+    if (kDebugMode) {
+      dio.interceptors.add(
+        PrettyDioLogger(
+          requestHeader: true,
+          queryParameters: true,
+          requestBody: true,
+          responseHeader: true,
+          responseBody: true,
+          error: true,
+          showProcessingTime: true,
+          showCUrl: true,
+          canShowLog: kDebugMode,
+          convertFormData: true,
+        ),
+      );
+    }
+    var response = await dio.post(
+      'https://xoso.mobi/embedded/kq-miennam',
+      data: "ngay_quay=16-12-2023",
+      options: Options(
+        headers: {
+          "x-requested-with": "XMLHttpRequest",
+        },
+      ),
+    );
+    debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
+    var web = Web.fromJson(response.data);
+    debugPrint("roy93~ web stt ${web.stt}");
+    debugPrint("roy93~ web data ${web.data}");
   }
 }

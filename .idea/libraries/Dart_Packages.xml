@@ -324,6 +324,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_pretty_dio_logger">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_pretty_dio_logger-3.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_rounded_date_picker">
           <value>
             <list>
@@ -1093,6 +1100,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_lints-3.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_native_splash-2.3.7/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_pretty_dio_logger-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_rounded_date_picker-3.0.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9/lib" />
