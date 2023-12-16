@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
-import 'package:ketquaxoso/lib/widget/main/minhngoc/minhngoc_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
-import 'package:ketquaxoso/lib/widget/main/tracking/tracking_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
 
 import 'controller_main.dart';
 
@@ -29,7 +30,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   final _controllerBottomBar = NotchBottomBarController(index: 0);
 
-  final int _maxCount = 5;
   var _isTouchBottomBarItem = false;
 
   @override
@@ -40,9 +40,10 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   final List<Widget> bottomBarPages = [
-    const MinhNgocScreen(),
+    const XSMNScreen(),
+    const XSMTScreen(),
+    const XSMBScreen(),
     const ScanScreen(),
-    const TrackingScreen(),
     const ProfileScreen(),
   ];
 
@@ -76,11 +77,11 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
         },
       ),
       extendBody: true,
-      bottomNavigationBar: (bottomBarPages.length <= _maxCount)
+      bottomNavigationBar: (bottomBarPages.length <= bottomBarPages.length)
           ? AnimatedNotchBottomBar(
               notchBottomBarController: _controllerBottomBar,
               color: Colors.white,
-              showLabel: false,
+              showLabel: true,
               notchColor: Colors.white,
               removeMargins: false,
               bottomBarWidth: 500,
@@ -88,14 +89,36 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
               bottomBarItems: const [
                 BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.home,
+                    Icons.looks_one,
                     color: Colors.grey,
                   ),
                   activeItem: Icon(
-                    Icons.home,
+                    Icons.looks_one,
                     color: ColorConstants.appColor,
                   ),
-                  itemLabel: 'Trang chủ',
+                  itemLabel: 'XSMN',
+                ),
+                BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.looks_two,
+                    color: Colors.grey,
+                  ),
+                  activeItem: Icon(
+                    Icons.looks_two,
+                    color: ColorConstants.appColor,
+                  ),
+                  itemLabel: 'XSMT',
+                ),
+                BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.looks_3,
+                    color: Colors.grey,
+                  ),
+                  activeItem: Icon(
+                    Icons.looks_3,
+                    color: ColorConstants.appColor,
+                  ),
+                  itemLabel: 'XSMB',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
@@ -107,17 +130,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                     color: ColorConstants.appColor,
                   ),
                   itemLabel: 'Dò vé số',
-                ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.history,
-                    color: Colors.grey,
-                  ),
-                  activeItem: Icon(
-                    Icons.history,
-                    color: ColorConstants.appColor,
-                  ),
-                  itemLabel: 'Thống kê',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
