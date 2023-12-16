@@ -23,16 +23,16 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends BaseStatefulState<MainScreen> {
   final ControllerMain _controllerMain = Get.put(ControllerMain());
 
-  final _pageController = PageController(initialPage: 0);
+  final _controllerPage = PageController(initialPage: 0);
 
-  final _controller = NotchBottomBarController(index: 0);
+  final _controllerBottomBar = NotchBottomBarController(index: 0);
 
-  int _maxCount = 5;
+  final int _maxCount = 5;
 
   @override
   void dispose() {
     _controllerMain.clearOnDispose();
-    _pageController.dispose();
+    _controllerPage.dispose();
     super.dispose();
   }
 
@@ -61,22 +61,26 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       //   iconData: Icons.policy,
       // ),
       body: PageView(
-        controller: _pageController,
+        controller: _controllerPage,
         physics: const BouncingScrollPhysics(),
         children: List.generate(bottomBarPages.length, (index) => bottomBarPages[index]),
+        onPageChanged: (int page) {
+          debugPrint("roy93~ onPageChanged page $page");
+          _controllerBottomBar.jumpTo(page);
+        },
       ),
       extendBody: true,
       bottomNavigationBar: (bottomBarPages.length <= _maxCount)
           ? AnimatedNotchBottomBar(
-              notchBottomBarController: _controller,
+              notchBottomBarController: _controllerBottomBar,
               color: Colors.white,
               showLabel: false,
               notchColor: Colors.black87,
               removeMargins: false,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
-              bottomBarItems: [
-                const BottomBarItem(
+              bottomBarItems: const [
+                BottomBarItem(
                   inActiveItem: Icon(
                     Icons.home_filled,
                     color: Colors.blueGrey,
@@ -87,7 +91,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                   ),
                   itemLabel: 'Page 1',
                 ),
-                const BottomBarItem(
+                BottomBarItem(
                   inActiveItem: Icon(
                     Icons.star,
                     color: Colors.blueGrey,
@@ -99,17 +103,17 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                   itemLabel: 'Page 2',
                 ),
                 BottomBarItem(
-                  inActiveItem: SvgPicture.asset(
-                    'assets/search_icon.svg',
+                  inActiveItem: Icon(
+                    Icons.settings,
                     color: Colors.blueGrey,
                   ),
-                  activeItem: SvgPicture.asset(
-                    'assets/search_icon.svg',
-                    color: Colors.white,
+                  activeItem: Icon(
+                    Icons.settings,
+                    color: Colors.pink,
                   ),
                   itemLabel: 'Page 3',
                 ),
-                const BottomBarItem(
+                BottomBarItem(
                   inActiveItem: Icon(
                     Icons.settings,
                     color: Colors.blueGrey,
@@ -120,7 +124,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                   ),
                   itemLabel: 'Page 4',
                 ),
-                const BottomBarItem(
+                BottomBarItem(
                   inActiveItem: Icon(
                     Icons.person,
                     color: Colors.blueGrey,
@@ -133,8 +137,8 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                 ),
               ],
               onTap: (index) {
+                _controllerPage.jumpToPage(index);
                 debugPrint('roy93~ current selected index $index');
-                _pageController.jumpToPage(index);
               },
             )
           : null,
