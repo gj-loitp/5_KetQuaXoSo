@@ -7,6 +7,7 @@ import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/widget/main/minhngoc/minhngoc_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
 
 import 'controller_main.dart';
 
@@ -41,6 +42,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   final List<Widget> bottomBarPages = [
     const MinhNgocScreen(),
+    const ScanScreen(),
     const ProfileScreen(),
   ];
 
@@ -94,6 +96,17 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                     color: Colors.blueAccent,
                   ),
                   itemLabel: 'MinhNgoc',
+                ),
+                BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.home_filled,
+                    color: Colors.blueGrey,
+                  ),
+                  activeItem: Icon(
+                    Icons.home_filled,
+                    color: Colors.blueAccent,
+                  ),
+                  itemLabel: 'Scan',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
