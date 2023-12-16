@@ -27,7 +27,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        color: Colors.white,
+        color: ColorConstants.bkg,
       ),
     );
   }

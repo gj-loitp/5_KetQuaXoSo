@@ -27,7 +27,7 @@ class _MinhNgocScreenState extends BaseStatefulState<MinhNgocScreen> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        color: Colors.white,
+        color: ColorConstants.bkg,
       ),
     );
   }

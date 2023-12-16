@@ -27,7 +27,7 @@ class _ScanScreenState extends BaseStatefulState<ScanScreen> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        color: Colors.white,
+        color: ColorConstants.bkg,
       ),
     );
   }
