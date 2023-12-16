@@ -81,13 +81,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       var timeNow = DateTime.now().microsecondsSinceEpoch;
       var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
       var isFuture = false;
-      debugPrint("roy93~ timeNow $timeNow");
-      debugPrint("roy93~ timeSelected $timeSelected");
+      // debugPrint("timeNow $timeNow");
+      // debugPrint("timeSelected $timeSelected");
       if (timeNow > timeSelected) {
-        debugPrint("roy93~ if");
+        // debugPrint("if");
         isFuture = false;
       } else {
-        debugPrint("roy93~ else");
+        // debugPrint("else");
         isFuture = true;
       }
       if (isLoading) {

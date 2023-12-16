@@ -26,7 +26,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
         onProgress: (int progress) {},
         onPageStarted: (String url) {},
         onPageFinished: (String url) async {
-          debugPrint("roy93~ onPageFinished");
+          // debugPrint("onPageFinished");
           addBottomSpace();
         },
         onWebResourceError: (WebResourceError error) {},

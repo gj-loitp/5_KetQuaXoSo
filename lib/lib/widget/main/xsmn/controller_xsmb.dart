@@ -15,7 +15,7 @@ class ControllerXSMN extends BaseController {
   }
 
   void setSelectedDateTime(DateTime dateTime) {
-    debugPrint("roy93~ setSelectedDateTime $dateTime");
+    // debugPrint("setSelectedDateTime $dateTime");
     isLoading.value = true;
     selectedDateTime.value = dateTime;
 
@@ -34,7 +34,7 @@ class ControllerXSMN extends BaseController {
     var date = "#n$day-$month-${dateTime.year}";
     // debugPrint("date $date");
     var link = "${StringConstants.kqMienNam}$date";
-    debugPrint("roy93~ link $link");
+    // debugPrint("link $link");
 
     webViewController.value = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
