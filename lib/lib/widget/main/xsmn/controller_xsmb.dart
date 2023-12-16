@@ -6,7 +6,7 @@ import 'package:flutter_pretty_dio_logger/flutter_pretty_dio_logger.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_controller.dart';
-import 'package:ketquaxoso/lib/model/web.dart';
+import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/util/log_dog_utils.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:dio/dio.dart';
@@ -105,18 +105,21 @@ class ControllerXSMN extends BaseController {
         ),
       );
     }
-    var response = await dio.post(
-      'https://xoso.mobi/embedded/kq-miennam',
-      data: "ngay_quay=16-12-2023",
-      options: Options(
-        headers: {
-          "x-requested-with": "XMLHttpRequest",
-        },
-      ),
+    var response = await dio.get(
+      'https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json?date=15-12-2023&slug=xsmn-mien-nam',
+      // data: "ngay_quay=16-12-2023",
+      // options: Options(
+      //   headers: {
+      //     "x-requested-with": "XMLHttpRequest",
+      //   },
+      // ),
     );
     debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
-    var web = Web.fromJson(response.data);
-    debugPrint("roy93~ web stt ${web.stt}");
-    debugPrint("roy93~ web data ${web.data}");
+    var web = KQXS.fromJson(response.data);
+    debugPrint("roy93~ web ${web.toJson()}");
+    debugPrint("roy93~ web data ${web.pageProps?.resp?.data?.content?.entries}");
+    web.pageProps?.resp?.data?.content?.entries?.forEach((element) {
+      debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
+    });
   }
 }
