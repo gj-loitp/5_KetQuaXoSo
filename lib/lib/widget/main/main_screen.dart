@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
+import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
 
 import 'controller_main.dart';
 
@@ -38,11 +39,11 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   final List<Widget> bottomBarPages = [
-    const Page1(),
-    const Page2(),
-    const Page3(),
-    const Page4(),
-    const Page5(),
+    const ProfileScreen(),
+    const ProfileScreen(),
+    const ProfileScreen(),
+    const ProfileScreen(),
+    const ProfileScreen(),
   ];
 
   @override
@@ -149,50 +150,5 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
             )
           : null,
     );
-  }
-}
-
-class Page1 extends StatelessWidget {
-  const Page1({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(color: Colors.yellow, child: const Center(child: Text('Page 1')));
-  }
-}
-
-class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(color: Colors.green, child: const Center(child: Text('Page 2')));
-  }
-}
-
-class Page3 extends StatelessWidget {
-  const Page3({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(color: Colors.red, child: const Center(child: Text('Page 3')));
-  }
-}
-
-class Page4 extends StatelessWidget {
-  const Page4({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(color: Colors.blue, child: const Center(child: Text('Page 4')));
-  }
-}
-
-class Page5 extends StatelessWidget {
-  const Page5({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(color: Colors.lightGreenAccent, child: const Center(child: Text('Page 5')));
   }
 }
