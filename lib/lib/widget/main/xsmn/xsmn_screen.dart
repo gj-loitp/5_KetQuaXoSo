@@ -105,11 +105,31 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           return Container(
             width: double.infinity,
             color: Colors.white,
-            child: Image.asset(
-              "assets/images/bkg_2.jpg",
-              height: double.infinity,
-              width: double.infinity,
-              fit: BoxFit.cover,
+            child: Stack(
+              children: [
+                Image.asset(
+                  "assets/images/bkg_2.jpg",
+                  height: double.infinity,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  color: Colors.white70,
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                  height: 50,
+                  child: const Text(
+                    "Chưa có kết quả xổ số vào ngày này.",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
             ),
           );
         } else {
