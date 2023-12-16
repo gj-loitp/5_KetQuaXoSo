@@ -1,10 +1,8 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
-import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/widget/main/minhngoc/minhngoc_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
@@ -80,57 +78,57 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       extendBody: true,
       bottomNavigationBar: (bottomBarPages.length <= _maxCount)
           ? AnimatedNotchBottomBar(
-              notchBottomBarController: _controllerBottomBar,
+        notchBottomBarController: _controllerBottomBar,
               color: Colors.white,
               showLabel: false,
-              notchColor: Colors.black87,
+              notchColor: Colors.white,
               removeMargins: false,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
               bottomBarItems: const [
                 BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueGrey,
+                    Icons.home,
+                    color: Colors.grey,
                   ),
                   activeItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueAccent,
+                    Icons.home,
+                    color: ColorConstants.appColor,
                   ),
-                  itemLabel: 'MinhNgoc',
+                  itemLabel: 'Trang chủ',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueGrey,
+                    Icons.document_scanner,
+                    color: Colors.grey,
                   ),
                   activeItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueAccent,
+                    Icons.document_scanner,
+                    color: ColorConstants.appColor,
                   ),
-                  itemLabel: 'Scan',
+                  itemLabel: 'Dò vé số',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.star,
-                    color: Colors.blueGrey,
+                    Icons.history,
+                    color: Colors.grey,
                   ),
                   activeItem: Icon(
-                    Icons.star,
-                    color: Colors.blueAccent,
+                    Icons.history,
+                    color: ColorConstants.appColor,
                   ),
-                  itemLabel: 'Tracking',
+                  itemLabel: 'Thống kê',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
-                    Icons.star,
-                    color: Colors.blueGrey,
+                    Icons.person,
+                    color: Colors.grey,
                   ),
                   activeItem: Icon(
-                    Icons.star,
-                    color: Colors.blueAccent,
+                    Icons.person,
+                    color: ColorConstants.appColor,
                   ),
-                  itemLabel: 'Profile',
+                  itemLabel: 'Cá nhân',
                 ),
               ],
               onTap: (index) {
