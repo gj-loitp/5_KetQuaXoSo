@@ -37,9 +37,9 @@ class ControllerXSMN extends BaseController {
     } else {
       month = "0${dateTime.month}";
     }
-    var date = "#n$day-$month-${dateTime.year}";
+    var date = "$day-$month-${dateTime.year}";
     // debugPrint("date $date");
-    var link = "${StringConstants.kqMienNam}$date";
+    var link = "${StringConstants.kqMienNam}#n$date";
     // debugPrint("link $link");
 
     webViewController.value = WebViewController()
@@ -73,7 +73,7 @@ class ControllerXSMN extends BaseController {
       ..loadRequest(Uri.parse(link));
 
     //test
-    test();
+    getData(date);
   }
 
   Future<void> addBottomSpace() async {
@@ -88,7 +88,7 @@ class ControllerXSMN extends BaseController {
 
   final dio = Dio();
 
-  Future<void> test() async {
+  Future<void> getData(String dateTime) async {
     if (kDebugMode) {
       dio.interceptors.add(
         PrettyDioLogger(
@@ -105,8 +105,9 @@ class ControllerXSMN extends BaseController {
         ),
       );
     }
+    debugPrint("roy93~ >>>dateTime $dateTime");
     var response = await dio.get(
-      'https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json?date=15-12-2023&slug=xsmn-mien-nam',
+      'https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json?date=$dateTime&slug=xsmn-mien-nam',
       // data: "ngay_quay=16-12-2023",
       // options: Options(
       //   headers: {
@@ -114,10 +115,10 @@ class ControllerXSMN extends BaseController {
       //   },
       // ),
     );
-    debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
+    // debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
     var web = KQXS.fromJson(response.data);
-    debugPrint("roy93~ web ${web.toJson()}");
-    debugPrint("roy93~ web data ${web.pageProps?.resp?.data?.content?.entries}");
+    // debugPrint("roy93~ web ${web.toJson()}");
+    // debugPrint("roy93~ web data ${web.pageProps?.resp?.data?.content?.entries}");
     web.pageProps?.resp?.data?.content?.entries?.forEach((element) {
       debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
     });
