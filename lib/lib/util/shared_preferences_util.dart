@@ -6,6 +6,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// +840766040293
 /// freuss47@gmail.com
 class SharedPreferencesUtil {
+  static String themeIndex = "themeIndex";
+  static int themeIndexNativeView = 0;
+  static int themeIndexWebView = 1;
+
   static Future<void> setInt(String key, int value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setInt(key, value);
