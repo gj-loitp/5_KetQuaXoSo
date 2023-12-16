@@ -64,10 +64,10 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       // ),
       body: PageView(
         controller: _controllerPage,
-        physics: const BouncingScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(), //disable horizontal swipe
         children: List.generate(bottomBarPages.length, (index) => bottomBarPages[index]),
         onPageChanged: (int page) {
-          debugPrint("roy93~ onPageChanged page $page");
+          // debugPrint("onPageChanged page $page");
           if (_isTouchBottomBarItem) {
             _isTouchBottomBarItem = false;
           } else {
@@ -78,7 +78,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       extendBody: true,
       bottomNavigationBar: (bottomBarPages.length <= _maxCount)
           ? AnimatedNotchBottomBar(
-        notchBottomBarController: _controllerBottomBar,
+              notchBottomBarController: _controllerBottomBar,
               color: Colors.white,
               showLabel: false,
               notchColor: Colors.white,
