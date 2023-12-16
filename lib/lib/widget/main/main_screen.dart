@@ -28,6 +28,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   final _controllerBottomBar = NotchBottomBarController(index: 0);
 
   final int _maxCount = 5;
+  var _isTouchBottomBarItem = false;
 
   @override
   void dispose() {
@@ -66,7 +67,11 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
         children: List.generate(bottomBarPages.length, (index) => bottomBarPages[index]),
         onPageChanged: (int page) {
           debugPrint("roy93~ onPageChanged page $page");
-          _controllerBottomBar.jumpTo(page);
+          if (_isTouchBottomBarItem) {
+            _isTouchBottomBarItem = false;
+          } else {
+            _controllerBottomBar.jumpTo(page);
+          }
         },
       ),
       extendBody: true,
@@ -137,8 +142,9 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                 ),
               ],
               onTap: (index) {
+                _isTouchBottomBarItem = true;
                 _controllerPage.jumpToPage(index);
-                debugPrint('roy93~ current selected index $index');
+                // debugPrint('roy93~ current selected index $index');
               },
             )
           : null,
