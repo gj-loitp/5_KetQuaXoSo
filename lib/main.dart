@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/widget/demo_login/demo_login_screen.dart';
 
-//TODO splash screen
 //TODO rate app
 //TODO share app
 //TODO more app
@@ -14,6 +13,7 @@ import 'package:ketquaxoso/lib/widget/demo_login/demo_login_screen.dart';
 //ic_launcher
 //pkg name
 //ad id manifest
+//splash screen
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Learn Flutter Step By Step',
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.red,
       ),
       home: const DemoLoginScreen(title: 'Learn Flutter Step By Step'),
     );

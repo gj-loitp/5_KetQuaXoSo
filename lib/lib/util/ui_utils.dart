@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 
 import '../common/const/dimen_constants.dart';
 
@@ -16,7 +17,7 @@ class UIUtils {
     String text,
     VoidCallback? onPressed,
     VoidCallback? onPressCodeViewer, {
-    Color backgroundColor = Colors.deepOrange,
+    Color backgroundColor = ColorConstants.appColor,
     IconData iconData = Icons.code,
   }) {
     // ignore: no_leading_underscores_for_local_identifiers
