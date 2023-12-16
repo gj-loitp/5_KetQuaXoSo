@@ -96,6 +96,10 @@ dependencies:
 #  flutter_phoenix: ^1.1.1
   #https://pub.dev/packages/hexcolor
 #  hexcolor: ^3.0.1
+  #https://pub.dev/packages/restart_app
+#  restart_app: ^1.2.1
+  #https://pub.dev/packages/panara_dialogs
+  panara_dialogs: ^0.1.4
 
   ##l
   #https://pub.dev/packages/load_switch

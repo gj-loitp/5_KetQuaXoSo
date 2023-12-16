@@ -13,6 +13,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'package:dio/dio.dart';
 
 class ControllerXSMN extends BaseController {
+  final dio = Dio();
   var selectedDateTime = DateTime.now().obs;
   var webViewController = WebViewController().obs;
   var isLoading = true.obs;
@@ -89,6 +90,7 @@ class ControllerXSMN extends BaseController {
   }
 
   Future<void> addBottomSpace() async {
+    isLoading.value = true;
     const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "150px";
@@ -97,8 +99,6 @@ class ControllerXSMN extends BaseController {
 
     await webViewController.value.runJavaScript(script);
   }
-
-  final dio = Dio();
 
   Future<void> _getData(String dateTime) async {
     if (kDebugMode) {
@@ -134,5 +134,6 @@ class ControllerXSMN extends BaseController {
     web.pageProps?.resp?.data?.content?.entries?.forEach((element) {
       debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
     });
+    isLoading.value = false;
   }
 }

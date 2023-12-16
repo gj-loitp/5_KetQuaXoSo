@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
-import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
+import 'package:ketquaxoso/lib/widget/main/main_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/controller_profile.dart';
+import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
+import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -99,6 +101,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           onToggle: (index) {
                             debugPrint('switched to: $index');
                             _controllerProfile.setThemeIndex(index);
+                            _showPopupRestart();
                           },
                         ),
                       ],
@@ -110,6 +113,20 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
           ),
         );
       }),
+    );
+  }
+
+  void _showPopupRestart() {
+    PanaraInfoDialog.show(
+      context,
+      title: "Kết quả xổ số",
+      message: "Đã thay đổi giao diện thành công, bạn cần khởi động lại ứng dụng.",
+      buttonText: "Okay",
+      onTapDismiss: () {
+        Get.off(() => const SplashScreen());
+      },
+      panaraDialogType: PanaraDialogType.normal,
+      barrierDismissible: false,
     );
   }
 }

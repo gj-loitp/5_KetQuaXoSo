@@ -446,6 +446,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "panara_dialogs",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/panara_dialogs-0.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
@@ -914,7 +920,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-16T16:52:47.111695Z",
+  "generated": "2023-12-16T17:35:35.930280Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }

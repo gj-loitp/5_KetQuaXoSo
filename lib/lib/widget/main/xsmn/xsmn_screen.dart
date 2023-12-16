@@ -55,7 +55,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     return Container(
       color: ColorConstants.bkgYellow,
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(0, 8, 16, 0),
+      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
       child: CalendarTimeline(
         initialDate: _controllerXSMN.selectedDateTime.value,
         firstDate: DateTime.now().subtract(const Duration(days: 365)),
