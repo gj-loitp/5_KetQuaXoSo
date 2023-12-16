@@ -2,12 +2,12 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/core/base_controller.dart';
 import 'package:ketquaxoso/lib/util/log_dog_utils.dart';
 
-class ControllerLogin extends BaseController {
+class ControllerMain extends BaseController {
   var id = "".obs;
   var pw = "".obs;
 
   void clearOnDispose() {
-    Get.delete<ControllerLogin>();
+    Get.delete<ControllerMain>();
   }
 
   void setId(String id) {

@@ -4,7 +4,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/log_dog_utils.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
-import 'package:ketquaxoso/lib/widget/demo_login/demo_login_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/main_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({
@@ -45,7 +45,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
 
   void _goToMainScreen() {
     Future.delayed(const Duration(milliseconds: 1500)).then((val) {
-      Get.off(() => const DemoLoginScreen());
+      Get.off(() => const MainScreen());
     });
   }
 }

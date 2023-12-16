@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 
-import 'controller_login.dart';
+import 'controller_main.dart';
 
-class DemoLoginScreen extends StatefulWidget {
-  const DemoLoginScreen({
+class MainScreen extends StatefulWidget {
+  const MainScreen({
     super.key,
     this.title,
   });
@@ -14,11 +14,11 @@ class DemoLoginScreen extends StatefulWidget {
   final String? title;
 
   @override
-  State<DemoLoginScreen> createState() => _DemoLoginScreenState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _DemoLoginScreenState extends BaseStatefulState<DemoLoginScreen> {
-  ControllerLogin controllerLogin = Get.put(ControllerLogin());
+class _MainScreenState extends BaseStatefulState<MainScreen> {
+  ControllerMain controllerLogin = Get.put(ControllerMain());
 
   TextEditingController textControllerId = TextEditingController();
   TextEditingController textControllerPw = TextEditingController();
