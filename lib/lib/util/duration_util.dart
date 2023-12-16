@@ -59,9 +59,7 @@ class DurationUtils {
   //1617727620030 -> value 2021-04-06T23:47:00.030Z
   static String formatTime(int millisecondsSinceEpoch, String dateFormat) {
     final df = DateFormat(dateFormat);
-    String value = df.format(DateTime.fromMillisecondsSinceEpoch(
-        millisecondsSinceEpoch,
-        isUtc: false));
+    String value = df.format(DateTime.fromMillisecondsSinceEpoch(millisecondsSinceEpoch, isUtc: false));
     return value;
   }
 
@@ -115,8 +113,7 @@ class DurationUtils {
     if (timeTarget.isEmpty || timeTargetFormat.isEmpty) {
       return false;
     }
-    int timeBetweenTargetAndNow =
-        getTimeBetweenTargetAndNow(timeTarget, timeTargetFormat);
+    int timeBetweenTargetAndNow = getTimeBetweenTargetAndNow(timeTarget, timeTargetFormat);
     return timeBetweenTargetAndNow > 0;
   }
 

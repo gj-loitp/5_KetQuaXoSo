@@ -69,13 +69,9 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                     foregroundColor: const Color(0xff0A79F8),
                                     padding: const EdgeInsets.fromLTRB(
                                       DimenConstants.marginPaddingMedium,
-                                      DimenConstants.marginPaddingMedium *
-                                          2 /
-                                          3,
+                                      DimenConstants.marginPaddingMedium * 2 / 3,
                                       DimenConstants.marginPaddingMedium,
-                                      DimenConstants.marginPaddingMedium *
-                                          2 /
-                                          3,
+                                      DimenConstants.marginPaddingMedium * 2 / 3,
                                     ),
                                     backgroundColor: const Color(0xffffffff),
                                     textStyle: const TextStyle(
@@ -83,10 +79,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                       fontWeight: FontWeight.w500,
                                     ),
                                     shape: const RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(15)),
-                                      side: BorderSide(
-                                          color: Color(0xffDEE1EB), width: 1.0),
+                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                      side: BorderSide(color: Color(0xffDEE1EB), width: 1.0),
                                     ),
                                   ),
                                   onPressed: () {
@@ -113,10 +107,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                     fontWeight: FontWeight.w500,
                                   ),
                                   shape: const RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(15)),
-                                    side: BorderSide(
-                                        color: Color(0xffDEE1EB), width: 1.0),
+                                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                                    side: BorderSide(color: Color(0xffDEE1EB), width: 1.0),
                                   ),
                                 ),
                                 onPressed: () {
@@ -130,8 +122,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                       ),
                       Visibility(
                         visible: okTitle.isNotEmpty == true,
-                        child: const SizedBox(
-                            width: DimenConstants.marginPaddingSmall),
+                        child: const SizedBox(width: DimenConstants.marginPaddingSmall),
                       ),
                       Visibility(
                         visible: okTitle.isNotEmpty == true,
@@ -151,10 +142,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                 fontWeight: FontWeight.w500,
                               ),
                               shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(
-                                    DimenConstants.radiusRound)),
-                                side: BorderSide(
-                                    color: Color(0xff2B67F6), width: 1.0),
+                                borderRadius: BorderRadius.all(Radius.circular(DimenConstants.radiusRound)),
+                                side: BorderSide(color: Color(0xff2B67F6), width: 1.0),
                               ),
                             ),
                             onPressed: () {
@@ -247,8 +236,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Visibility(
-                      visible:
-                          cancelTitle != null && cancelTitle.isNotEmpty == true,
+                      visible: cancelTitle != null && cancelTitle.isNotEmpty == true,
                       child: (okTitle != null && okTitle.isNotEmpty == true)
                           ? (Expanded(
                               child: TextButton(
@@ -266,10 +254,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                     fontWeight: FontWeight.w500,
                                   ),
                                   shape: const RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(15)),
-                                    side: BorderSide(
-                                        color: Color(0xffDEE1EB), width: 1.0),
+                                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                                    side: BorderSide(color: Color(0xffDEE1EB), width: 1.0),
                                   ),
                                 ),
                                 onPressed: () {
@@ -296,10 +282,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                   fontWeight: FontWeight.w500,
                                 ),
                                 shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(15)),
-                                  side: BorderSide(
-                                      color: Color(0xffDEE1EB), width: 1.0),
+                                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                                  side: BorderSide(color: Color(0xffDEE1EB), width: 1.0),
                                 ),
                               ),
                               onPressed: () {
@@ -313,8 +297,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                     ),
                     Visibility(
                       visible: okTitle != null && okTitle.isNotEmpty == true,
-                      child: const SizedBox(
-                          width: DimenConstants.marginPaddingSmall),
+                      child: const SizedBox(width: DimenConstants.marginPaddingSmall),
                     ),
                     Visibility(
                       visible: okTitle != null && okTitle.isNotEmpty == true,
@@ -334,10 +317,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                               fontWeight: FontWeight.w500,
                             ),
                             shape: const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
-                              side: BorderSide(
-                                  color: Color(0xff2B67F6), width: 1.0),
+                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              side: BorderSide(color: Color(0xff2B67F6), width: 1.0),
                             ),
                           ),
                           onPressed: () {
@@ -442,8 +423,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
               ),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius:
-                    BorderRadius.circular(DimenConstants.radiusMedium),
+                borderRadius: BorderRadius.circular(DimenConstants.radiusMedium),
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -473,8 +453,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                         ),
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(15)),
-                          side:
-                              BorderSide(color: Color(0xffDEE1EB), width: 1.0),
+                          side: BorderSide(color: Color(0xffDEE1EB), width: 1.0),
                         ),
                       ),
                       onPressed: () {

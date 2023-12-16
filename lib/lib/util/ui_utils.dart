@@ -355,8 +355,7 @@ class UIUtils {
     );
   }
 
-  static Widget buildHorizontalDivider(
-      Color color, double width, double height) {
+  static Widget buildHorizontalDivider(Color color, double width, double height) {
     return Container(
       margin: const EdgeInsets.all(0.0),
       height: height,
@@ -374,8 +373,7 @@ class UIUtils {
     );
   }
 
-  static void showFullWidthSnackBar(String title, String message,
-      {bool isTop = true}) {
+  static void showFullWidthSnackBar(String title, String message, {bool isTop = true}) {
     Get.snackbar(
       title,
       message,
@@ -402,8 +400,7 @@ class UIUtils {
     );
   }
 
-  static void showFullWidthSnackBarError(String title, String message,
-      {bool isTop = true}) {
+  static void showFullWidthSnackBarError(String title, String message, {bool isTop = true}) {
     Get.snackbar(
       title,
       message,
