@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
+import 'package:ketquaxoso/lib/widget/main/minhngoc/minhngoc_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
 
 import 'controller_main.dart';
@@ -39,10 +40,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   final List<Widget> bottomBarPages = [
-    const ProfileScreen(),
-    const ProfileScreen(),
-    const ProfileScreen(),
-    const ProfileScreen(),
+    const MinhNgocScreen(),
     const ProfileScreen(),
   ];
 
@@ -95,7 +93,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                     Icons.home_filled,
                     color: Colors.blueAccent,
                   ),
-                  itemLabel: 'Page 1',
+                  itemLabel: 'MinhNgoc',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
@@ -106,40 +104,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                     Icons.star,
                     color: Colors.blueAccent,
                   ),
-                  itemLabel: 'Page 2',
-                ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.settings,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.settings,
-                    color: Colors.pink,
-                  ),
-                  itemLabel: 'Page 3',
-                ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.settings,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.settings,
-                    color: Colors.pink,
-                  ),
-                  itemLabel: 'Page 4',
-                ),
-                BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.person,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.person,
-                    color: Colors.yellow,
-                  ),
-                  itemLabel: 'Page 5',
+                  itemLabel: 'Profile',
                 ),
               ],
               onTap: (index) {
