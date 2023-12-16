@@ -22,6 +22,7 @@ dependencies:
   shimmer: ^3.0.0
   #https://pub.dev/packages/package_info_plus
   package_info_plus:
+
   #https://pub.dev/packages/avatar_glow
   avatar_glow: ^2.0.2
   #https://pub.dev/packages/in_app_review
@@ -53,7 +54,7 @@ dependencies:
   #https://pub.dev/packages/dio
   dio: ^5.4.0
   #https://pub.dev/packages/dotted_border
-  dotted_border: ^2.0.0+3
+  dotted_border: ^2.1.0
   #https://pub.dev/packages/dotted_line
   dotted_line: ^3.2.2
   #https://pub.dev/packages/easy_debounce
@@ -70,6 +71,7 @@ dependencies:
   flutter_local_notifications: ^14.0.0+1
   #https://pub.dev/packages/flutter_native_splash
   flutter_native_splash:
+
   #https://pub.dev/packages/flutter_rounded_date_picker
   flutter_rounded_date_picker: ^3.0.4
   #https://pub.dev/packages/flutter_svg
@@ -98,6 +100,7 @@ dependencies:
   path_provider: ^2.1.1
   #https://pub.dev/packages/permission_handler
   permission_handler:
+
   #https://pub.dev/packages/photo_view
   photo_view: ^0.14.0
   #https://pub.dev/packages/platform_device_id
@@ -112,8 +115,10 @@ dependencies:
   tiengviet: ^1.0.0
   #https://pub.dev/packages/timeago
   timeago:
+
   #https://pub.dev/packages/uuid
   uuid:
+
   #https://pub.dev/packages/vibration
   vibration: ^1.8.4
   #https://pub.dev/packages/webview_flutter

@@ -243,7 +243,7 @@
         <entry key="dotted_border">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/dotted_border-2.0.0+3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/dotted_border-2.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -1299,7 +1299,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/device_info_plus-9.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dio-5.4.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dotted_border-2.0.0+3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dotted_border-2.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dotted_line-3.2.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/easy_debounce-2.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/event_bus-2.0.0/lib" />

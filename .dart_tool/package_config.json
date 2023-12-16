@@ -207,7 +207,7 @@
     },
     {
       "name": "dotted_border",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/dotted_border-2.0.0+3",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/dotted_border-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1088,7 +1088,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-16T04:53:16.633694Z",
+  "generated": "2023-12-16T05:05:38.199405Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }
