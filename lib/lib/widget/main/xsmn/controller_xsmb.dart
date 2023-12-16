@@ -40,7 +40,11 @@ class ControllerXSMN extends BaseController {
     var date = "$day-$month-${dateTime.year}";
     // debugPrint("date $date");
 
-    _loadWeb(date);
+    //co 2 cach
+    //1 load bang web view
+    //2 call api va load custom view
+    // _loadWeb(date);
+
     _getData(date);
   }
 
@@ -110,7 +114,7 @@ class ControllerXSMN extends BaseController {
     }
     debugPrint("roy93~ >>>dateTime $dateTime");
     var response = await dio.get(
-      'https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json?date=$dateTime&slug=xsmn-mien-nam',
+      '${StringConstants.apiXsmn}?date=$dateTime&slug=xsmn-mien-nam',
       // data: "ngay_quay=16-12-2023",
       // options: Options(
       //   headers: {

@@ -43,7 +43,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           children: [
             _buildCalendar(),
             Expanded(
-              child: _buildWebView(),
+              child: _buildContentView(),
             ),
           ],
         ),
@@ -75,7 +75,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     );
   }
 
-  Widget _buildWebView() {
+  Widget _buildContentView() {
     return Obx(() {
       var isLoading = _controllerXSMN.isLoading.value;
       var timeNow = DateTime.now().microsecondsSinceEpoch;

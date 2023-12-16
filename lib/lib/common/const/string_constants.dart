@@ -21,4 +21,5 @@ class StringConstants {
   static const String kqMienNam = "https://xoso.mobi/embedded/kq-miennam";
   static const String kqMienTrung = "https://xoso.mobi/embedded/kq-mientrung";
   static const String kqMienBac = "https://xoso.mobi/embedded/kq-mienbac";
+  static const String apiXsmn = "https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json";
 }
