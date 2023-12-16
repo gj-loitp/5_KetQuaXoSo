@@ -78,6 +78,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget _buildContentView() {
     return Obx(() {
       var isLoading = _controllerXSMN.isLoading.value;
+      var isNativeMode = _controllerXSMN.isNativeMode.value;
       var timeNow = DateTime.now().microsecondsSinceEpoch;
       var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
       var isFuture = false;
@@ -133,13 +134,34 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             ),
           );
         } else {
-          return Container(
-            color: Colors.white,
-            child: WebViewWidget(controller: _controllerXSMN.webViewController.value),
-          );
+          if (isNativeMode) {
+            return _buildNativeView();
+          } else {
+            return _buildWebView();
+          }
         }
       }
     });
+  }
+
+  Widget _buildWebView() {
+    return Container(
+      color: Colors.white,
+      child: WebViewWidget(controller: _controllerXSMN.webViewController.value),
+    );
+  }
+
+  Widget _buildNativeView() {
+    var kqxs = _controllerXSMN.kqxs.value;
+    var text = "";
+    kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
+      text += "${element.displayName} ~ ${element.award} ~ ${element.value}\n";
+      debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
+    });
+    return Container(
+      color: Colors.white,
+      child: Text(text),
+    );
   }
 
   void _selectDay(DateTime dateTime) {

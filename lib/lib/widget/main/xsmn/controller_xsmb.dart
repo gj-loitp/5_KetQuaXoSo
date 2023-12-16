@@ -17,6 +17,8 @@ class ControllerXSMN extends BaseController {
   var selectedDateTime = DateTime.now().obs;
   var webViewController = WebViewController().obs;
   var isLoading = true.obs;
+  var isNativeMode = true.obs;
+  var kqxs = KQXS().obs;
 
   void clearOnDispose() {
     Get.delete<ControllerXSMN>();
@@ -48,8 +50,10 @@ class ControllerXSMN extends BaseController {
     //1 load bang web view
     //2 call api va load custom view
     if (index == SharedPreferencesUtil.themeIndexNativeView) {
+      isNativeMode.value = true;
       _getData(date);
     } else {
+      isNativeMode.value = false;
       _loadWeb(date);
     }
   }
@@ -128,12 +132,12 @@ class ControllerXSMN extends BaseController {
       // ),
     );
     // debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
-    var web = KQXS.fromJson(response.data);
+    kqxs.value = KQXS.fromJson(response.data);
     // debugPrint("roy93~ web ${web.toJson()}");
     // debugPrint("roy93~ web data ${web.pageProps?.resp?.data?.content?.entries}");
-    web.pageProps?.resp?.data?.content?.entries?.forEach((element) {
-      debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
-    });
+    // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
+    //   debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
+    // });
     isLoading.value = false;
   }
 }
