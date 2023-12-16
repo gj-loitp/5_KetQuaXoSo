@@ -21,7 +21,7 @@ dependencies:
   #https://pub.dev/packages/shimmer
   shimmer: ^3.0.0
   #https://pub.dev/packages/package_info_plus
-  package_info_plus:
+#  package_info_plus:
 
   #https://pub.dev/packages/avatar_glow
   avatar_glow: ^2.0.2
@@ -32,11 +32,11 @@ dependencies:
   #https://pub.dev/packages/animated_text_kit
   animated_text_kit: ^4.2.2
   #https://pub.dev/packages/animated_toggle_switch
-  animated_toggle_switch: ^0.8.0
+#  animated_toggle_switch: ^0.8.0
   #https://pub.dev/packages/auto_size_text
-  auto_size_text: ^3.0.0
+#  auto_size_text: ^3.0.0
   #https://pub.dev/packages/app_settings
-  app_settings: ^5.1.1
+#  app_settings: ^5.1.1
   #https://pub.dev/packages/blur
   blur: ^3.1.0
   #https://pub.dev/packages/cached_network_image
@@ -50,13 +50,13 @@ dependencies:
   #https://pub.dev/packages/connectivity_plus
   connectivity_plus: ^5.0.2
   #https://pub.dev/packages/device_info_plus
-  device_info_plus: ^9.1.1
+#  device_info_plus: ^9.1.1
   #https://pub.dev/packages/dio
   dio: ^5.4.0
   #https://pub.dev/packages/dotted_border
-  dotted_border: ^2.1.0
+#  dotted_border: ^2.1.0
   #https://pub.dev/packages/dotted_line
-  dotted_line: ^3.2.2
+#  dotted_line: ^3.2.2
   #https://pub.dev/packages/easy_debounce
   easy_debounce: ^2.0.3
   #https://pub.dev/packages/event_bus
@@ -64,11 +64,11 @@ dependencies:
   #https://pub.dev/packages/focus_detector
   focus_detector: ^2.0.1
   #https://pub:dev/packages/file_picker
-  file_picker: ^6.1.1
+#  file_picker: ^6.1.1
   #https://pub.dev/packages/flutter_easyloading
   flutter_easyloading: ^3.0.5
   #https://pub.dev/packages/flutter_local_notifications
-  flutter_local_notifications: ^16.2.0
+#  flutter_local_notifications: ^16.2.0
   #https://pub.dev/packages/flutter_native_splash
   flutter_native_splash:
 
@@ -77,13 +77,13 @@ dependencies:
   #https://pub.dev/packages/flutter_svg
   flutter_svg: ^2.0.9
   #https://pub.dev/packages/flutter_phoenix
-  flutter_phoenix: ^1.1.1
+#  flutter_phoenix: ^1.1.1
   #https://pub.dev/packages/hexcolor
-  hexcolor: ^3.0.1
+#  hexcolor: ^3.0.1
   #https://pub.dev/packages/lottie
   lottie: ^2.7.0
   #https://pub.dev/packages/scrollable_positioned_list
-  scrollable_positioned_list: ^0.3.8
+#  scrollable_positioned_list: ^0.3.8
   #https://pub.dev/packages/share_plus
   share_plus: ^7.2.1
   #https://pub.dev/packages/marquee
@@ -91,18 +91,18 @@ dependencies:
   #https://pub.dev/packages/rxdart
   rxdart: ^0.27.7
   #https://pub.dev/packages/image_gallery_saver
-  image_gallery_saver: ^2.0.3
+#  image_gallery_saver: ^2.0.3
   #https://pub.dev/packages/image_picker
-  image_picker: ^1.0.5
+#  image_picker: ^1.0.5
   #https://pub.dev/packages/kenburns_nullsafety
   kenburns_nullsafety: ^1.0.1
   #https://pub.dev/packages/path_provider
-  path_provider: ^2.1.1
+#  path_provider: ^2.1.1
   #https://pub.dev/packages/permission_handler
   permission_handler:
 
   #https://pub.dev/packages/photo_view
-  photo_view: ^0.14.0
+#  photo_view: ^0.14.0
   #https://pub.dev/packages/platform_device_id
   platform_device_id: ^1.0.1
   #https://pub.dev/packages/pull_to_refresh
@@ -112,9 +112,9 @@ dependencies:
   #https://pub.dev/packages/sliding_up_panel
   sliding_up_panel: ^2.0.0+1
   #https://pub.dev/packages/tiengviet
-  tiengviet: ^1.0.0
+#  tiengviet: ^1.0.0
   #https://pub.dev/packages/timeago
-  timeago:
+#  timeago:
 
   #https://pub.dev/packages/uuid
 #  uuid:
