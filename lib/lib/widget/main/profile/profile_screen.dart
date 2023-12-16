@@ -119,6 +119,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   void _showPopupRestart() {
     PanaraInfoDialog.showAnimatedGrow(
       context,
+      imagePath: "assets/images/anim_1.gif",
       title: "Kết quả xổ số",
       message: "Đã thay đổi giao diện thành công, bạn cần khởi động lại ứng dụng.",
       buttonText: "Okay",
