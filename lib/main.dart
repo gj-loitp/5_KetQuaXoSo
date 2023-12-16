@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ketquaxoso/lib/widget/demo_login/demo_login_screen.dart';
+import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
 //TODO rate app
 //TODO share app
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const DemoLoginScreen(title: 'Learn Flutter Step By Step'),
+      home: const SplashScreen(),
     );
   }
 }
