@@ -77,7 +77,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   Widget _buildWebView() {
     return Obx(() {
-      return WebViewWidget(controller: _controllerXSMN.webViewController.value);
+      return Container(
+        color: Colors.white,
+        child: WebViewWidget(controller: _controllerXSMN.webViewController.value),
+      );
     });
   }
 
