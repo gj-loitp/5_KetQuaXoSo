@@ -117,14 +117,14 @@ dependencies:
   timeago:
 
   #https://pub.dev/packages/uuid
-  uuid:
+#  uuid:
 
   #https://pub.dev/packages/vibration
   vibration: ^1.8.4
   #https://pub.dev/packages/webview_flutter
   webview_flutter: ^4.4.2
   #https://pub.dev/packages/youtube_player_flutter
-  youtube_player_flutter: ^8.1.2
+#  youtube_player_flutter: ^8.1.2
 
 dev_dependencies:
   flutter_test:

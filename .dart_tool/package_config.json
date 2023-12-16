@@ -302,12 +302,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_inappwebview",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_inappwebview-5.7.2+3",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
       "name": "flutter_launcher_icons",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
       "packageUri": "lib/",
@@ -1076,19 +1070,13 @@
       "languageVersion": "2.19"
     },
     {
-      "name": "youtube_player_flutter",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/youtube_player_flutter-8.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "ketquaxoso",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-16T05:06:13.844398Z",
+  "generated": "2023-12-16T05:07:41.482394Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }
