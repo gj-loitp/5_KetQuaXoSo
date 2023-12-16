@@ -78,8 +78,21 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget _buildWebView() {
     return Obx(() {
       var isLoading = _controllerXSMN.isLoading.value;
+      var timeNow = DateTime.now().microsecondsSinceEpoch;
+      var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
+      var isFuture = false;
+      debugPrint("roy93~ timeNow $timeNow");
+      debugPrint("roy93~ timeSelected $timeSelected");
+      if (timeNow > timeSelected) {
+        debugPrint("roy93~ if");
+        isFuture = false;
+      } else {
+        debugPrint("roy93~ else");
+        isFuture = true;
+      }
       if (isLoading) {
         return Container(
+          width: double.infinity,
           color: Colors.white,
           alignment: Alignment.center,
           child: Image.asset(
@@ -88,10 +101,23 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
         );
       } else {
-        return Container(
-          color: Colors.white,
-          child: WebViewWidget(controller: _controllerXSMN.webViewController.value),
-        );
+        if (isFuture) {
+          return Container(
+            width: double.infinity,
+            color: Colors.white,
+            child: Image.asset(
+              "assets/images/bkg_2.jpg",
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+          );
+        } else {
+          return Container(
+            color: Colors.white,
+            child: WebViewWidget(controller: _controllerXSMN.webViewController.value),
+          );
+        }
       }
     });
   }
