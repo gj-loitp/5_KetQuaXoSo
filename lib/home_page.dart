@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:learn_flutter_step_by_step/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 
 import 'controller.dart';
 import 'demo_login/demo_login_screen.dart';

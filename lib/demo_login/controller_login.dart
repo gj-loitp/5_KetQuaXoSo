@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:learn_flutter_step_by_step/lib/core/base_controller.dart';
-import 'package:learn_flutter_step_by_step/lib/util/log_dog_utils.dart';
+import 'package:ketquaxoso/lib/core/base_controller.dart';
+import 'package:ketquaxoso/lib/util/log_dog_utils.dart';
 
 class ControllerLogin extends BaseController {
   var id = "".obs;

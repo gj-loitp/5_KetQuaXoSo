@@ -54,7 +54,7 @@
         <entry key="avatar_glow">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/avatar_glow-3.0.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/avatar_glow-2.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -1244,7 +1244,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/args-2.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.11.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/avatar_glow-3.0.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/avatar_glow-2.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/blur-3.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cached_network_image-3.3.0/lib" />
