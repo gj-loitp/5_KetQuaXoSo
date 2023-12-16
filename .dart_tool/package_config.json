@@ -740,6 +740,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "toggle_switch",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/toggle_switch-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "typed_data",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
@@ -908,7 +914,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-16T14:49:30.847080Z",
+  "generated": "2023-12-16T16:52:47.111695Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }

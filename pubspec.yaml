@@ -96,6 +96,10 @@ dependencies:
 #  flutter_phoenix: ^1.1.1
   #https://pub.dev/packages/hexcolor
 #  hexcolor: ^3.0.1
+
+  ##l
+  #https://pub.dev/packages/load_switch
+#  load_switch: ^2.0.8
   #https://pub.dev/packages/lottie
   lottie: ^2.7.0
   #https://pub.dev/packages/scrollable_positioned_list
@@ -131,6 +135,9 @@ dependencies:
 #  tiengviet: ^1.0.0
   #https://pub.dev/packages/timeago
 #  timeago:
+
+  ##t
+  toggle_switch: ^2.1.0
 
   #https://pub.dev/packages/uuid
 #  uuid:
