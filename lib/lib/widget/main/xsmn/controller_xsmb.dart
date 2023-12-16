@@ -8,6 +8,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 class ControllerXSMN extends BaseController {
   var selectedDateTime = DateTime.now().obs;
   var webViewController = WebViewController().obs;
+  var isLoading = true.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerXSMN>();
@@ -15,6 +16,7 @@ class ControllerXSMN extends BaseController {
 
   void setSelectedDateTime(DateTime dateTime) {
     debugPrint("roy93~ setSelectedDateTime $dateTime");
+    isLoading.value = true;
     selectedDateTime.value = dateTime;
 
     var day = "";
@@ -48,6 +50,7 @@ class ControllerXSMN extends BaseController {
           onPageFinished: (String url) async {
             // debugPrint("onPageFinished url $url");
             addBottomSpace();
+            isLoading.value = false;
           },
           onWebResourceError: (WebResourceError error) {
             // debugPrint("onPageFinished url $error");
