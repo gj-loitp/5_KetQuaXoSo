@@ -39,6 +39,12 @@ class ControllerXSMN extends BaseController {
     }
     var date = "$day-$month-${dateTime.year}";
     // debugPrint("date $date");
+
+    _loadWeb(date);
+    _getData(date);
+  }
+
+  void _loadWeb(String date) {
     var link = "${StringConstants.kqMienNam}#n$date";
     // debugPrint("link $link");
 
@@ -71,9 +77,6 @@ class ControllerXSMN extends BaseController {
         ),
       )
       ..loadRequest(Uri.parse(link));
-
-    //test
-    getData(date);
   }
 
   Future<void> addBottomSpace() async {
@@ -88,7 +91,7 @@ class ControllerXSMN extends BaseController {
 
   final dio = Dio();
 
-  Future<void> getData(String dateTime) async {
+  Future<void> _getData(String dateTime) async {
     if (kDebugMode) {
       dio.interceptors.add(
         PrettyDioLogger(
