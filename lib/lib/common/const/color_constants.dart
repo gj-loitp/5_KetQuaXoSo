@@ -6,6 +6,6 @@ import 'package:flutter/material.dart';
 /// +840766040293
 /// freuss47@gmail.com
 class ColorConstants {
-  static const Color appColor = Colors.deepOrangeAccent;
-  static Color disabledColor = Colors.deepOrangeAccent.withOpacity(0.5);
+  static const Color appColor = Colors.deepOrange;
+  static Color disabledColor = Colors.deepOrange.withOpacity(0.5);
 }
