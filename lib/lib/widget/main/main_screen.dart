@@ -1,6 +1,5 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
@@ -8,8 +7,6 @@ import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
-
-import 'controller_main.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({
@@ -24,8 +21,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends BaseStatefulState<MainScreen> {
-  final ControllerMain _controllerMain = Get.put(ControllerMain());
-
   final _controllerPage = PageController(initialPage: 0);
 
   final _controllerBottomBar = NotchBottomBarController(index: 0);
@@ -34,7 +29,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   @override
   void dispose() {
-    _controllerMain.clearOnDispose();
     _controllerPage.dispose();
     super.dispose();
   }

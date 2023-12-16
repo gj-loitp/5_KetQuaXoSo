@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMNScreen extends StatefulWidget {
@@ -15,32 +16,45 @@ class XSMNScreen extends StatefulWidget {
 }
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
-  final _controller = WebViewController()
+  var _wvController = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(Colors.white);
+
+  // final ControllerXSMN _controllerXSMN = Get.put(ControllerXSMN());
 
   @override
   void initState() {
     super.initState();
-    _controller.setNavigationDelegate(
+    _wvController.setNavigationDelegate(
       NavigationDelegate(
-        onProgress: (int progress) {},
-        onPageStarted: (String url) {},
+        onProgress: (int progress) {
+          // debugPrint("roy93~ progress $progress");
+        },
+        onPageStarted: (String url) {
+          debugPrint("roy93~ onPageStarted url $url");
+        },
         onPageFinished: (String url) async {
-          debugPrint("roy93~ onPageFinished");
+          debugPrint("roy93~ onPageFinished url $url");
           addBottomSpace();
         },
-        onWebResourceError: (WebResourceError error) {},
+        onWebResourceError: (WebResourceError error) {
+          debugPrint("roy93~ onPageFinished url $error");
+        },
         onNavigationRequest: (NavigationRequest request) {
-          return NavigationDecision.prevent;
+          debugPrint("roy93~ request ${request.url}");
+          if (request.url.contains(".html")) {
+            return NavigationDecision.prevent;
+          }
+          return NavigationDecision.navigate;
         },
       ),
     );
-    _controller.loadRequest(Uri.parse(StringConstants.kqMienNam));
+    _selectDay(DateTime.now(), true);
   }
 
   @override
   void dispose() {
+    // _controllerXSMN.clearOnDispose();
     super.dispose();
   }
 
@@ -75,7 +89,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         firstDate: DateTime.now().subtract(const Duration(days: 365)),
         lastDate: DateTime.now().add(const Duration(days: 365)),
         onDateSelected: (date) {
-          _selectDay(date);
+          _selectDay(date, false);
         },
         leftMargin: 0,
         monthColor: Colors.black,
@@ -83,14 +97,14 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         activeDayColor: Colors.white,
         activeBackgroundDayColor: ColorConstants.appColor,
         dotsColor: Colors.white,
-        // selectableDayPredicate: (date) => date.day != 23,
+        // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
         locale: 'vi',
       ),
     );
   }
 
   Widget _buildWebView() {
-    return WebViewWidget(controller: _controller);
+    return WebViewWidget(controller: _wvController);
   }
 
   Future<void> addBottomSpace() async {
@@ -100,10 +114,56 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       document.body.appendChild(spaceDiv);
     ''';
 
-    await _controller.runJavaScript(script);
+    await _wvController.runJavaScript(script);
   }
 
-  void _selectDay(DateTime dateTime){
-    debugPrint("roy93~ dateTime $dateTime");
+  void _selectDay(DateTime dateTime, bool isFirstInit) {
+    // debugPrint("dateTime $dateTime");
+    var day = "";
+    if (dateTime.day >= 10) {
+      day = "${dateTime.day}";
+    } else {
+      day = "0${dateTime.day}";
+    }
+    var date = "#n$day-${dateTime.month}-${dateTime.year}";
+    // debugPrint("date $date");
+    var link = "${StringConstants.kqMienNam}$date";
+    debugPrint("roy93~ link $link");
+
+    if (isFirstInit) {
+      _wvController.loadRequest(Uri.parse(link));
+    } else {
+      _wvController = WebViewController()
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+        ..setBackgroundColor(Colors.white);
+      _wvController.setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            // debugPrint("roy93~ progress $progress");
+          },
+          onPageStarted: (String url) {
+            debugPrint("roy93~ onPageStarted url $url");
+          },
+          onPageFinished: (String url) async {
+            debugPrint("roy93~ onPageFinished url $url");
+            addBottomSpace();
+          },
+          onWebResourceError: (WebResourceError error) {
+            debugPrint("roy93~ onPageFinished url $error");
+          },
+          onNavigationRequest: (NavigationRequest request) {
+            debugPrint("roy93~ request ${request.url}");
+            if (request.url.contains(".html")) {
+              return NavigationDecision.prevent;
+            }
+            return NavigationDecision.navigate;
+          },
+        ),
+      );
+      _wvController.loadRequest(Uri.parse(link));
+      setState(() {
+
+      });
+    }
   }
 }
