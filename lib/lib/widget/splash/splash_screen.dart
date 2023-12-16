@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
@@ -31,11 +32,22 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
       body: Container(
         alignment: Alignment.center,
         color: ColorConstants.appColor,
-        child: Image.asset(
-          "assets/images/bkg_1.png",
-          height: double.infinity,
-          width: double.infinity,
-          fit: BoxFit.cover,
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Image.asset(
+              "assets/images/bkg_1.png",
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 32),
+              child: CupertinoActivityIndicator(
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
     );
