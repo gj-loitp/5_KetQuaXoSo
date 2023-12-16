@@ -21,24 +21,21 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends BaseStatefulState<MainScreen> {
-  ControllerMain controllerLogin = Get.put(ControllerMain());
+  final ControllerMain _controllerMain = Get.put(ControllerMain());
 
-  /// Controller to handle PageView and also handles initial page
   final _pageController = PageController(initialPage: 0);
 
-  /// Controller to handle bottom nav bar and also handles initial page
   final _controller = NotchBottomBarController(index: 0);
 
-  int maxCount = 5;
+  int _maxCount = 5;
 
   @override
   void dispose() {
-    controllerLogin.clearOnDispose();
+    _controllerMain.clearOnDispose();
     _pageController.dispose();
     super.dispose();
   }
 
-  /// widget list
   final List<Widget> bottomBarPages = [
     const Page1(),
     const Page2(),
@@ -65,19 +62,16 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       // ),
       body: PageView(
         controller: _pageController,
-        physics: const NeverScrollableScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         children: List.generate(bottomBarPages.length, (index) => bottomBarPages[index]),
       ),
       extendBody: true,
-      bottomNavigationBar: (bottomBarPages.length <= maxCount)
+      bottomNavigationBar: (bottomBarPages.length <= _maxCount)
           ? AnimatedNotchBottomBar(
-              /// Provide NotchBottomBarController
               notchBottomBarController: _controller,
               color: Colors.white,
               showLabel: false,
               notchColor: Colors.black87,
-
-              /// restart app if you change removeMargins
               removeMargins: false,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
@@ -104,8 +98,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                   ),
                   itemLabel: 'Page 2',
                 ),
-
-                ///svg example
                 BottomBarItem(
                   inActiveItem: SvgPicture.asset(
                     'assets/search_icon.svg',
