@@ -117,7 +117,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   }
 
   void _showPopupRestart() {
-    PanaraInfoDialog.show(
+    PanaraInfoDialog.showAnimatedGrow(
       context,
       title: "Kết quả xổ số",
       message: "Đã thay đổi giao diện thành công, bạn cần khởi động lại ứng dụng.",
@@ -125,8 +125,9 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
       onTapDismiss: () {
         Get.off(() => const SplashScreen());
       },
-      panaraDialogType: PanaraDialogType.normal,
+      panaraDialogType: PanaraDialogType.custom,
       barrierDismissible: false,
+      color: ColorConstants.appColor,
     );
   }
 }
