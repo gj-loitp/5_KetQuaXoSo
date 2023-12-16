@@ -8,6 +8,7 @@ import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_controller.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/util/log_dog_utils.dart';
+import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:dio/dio.dart';
 
@@ -20,7 +21,7 @@ class ControllerXSMN extends BaseController {
     Get.delete<ControllerXSMN>();
   }
 
-  void setSelectedDateTime(DateTime dateTime) {
+  Future<void> setSelectedDateTime(DateTime dateTime) async {
     // debugPrint("setSelectedDateTime $dateTime");
     isLoading.value = true;
     selectedDateTime.value = dateTime;
@@ -40,12 +41,16 @@ class ControllerXSMN extends BaseController {
     var date = "$day-$month-${dateTime.year}";
     // debugPrint("date $date");
 
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
+
     //co 2 cach
     //1 load bang web view
     //2 call api va load custom view
-    // _loadWeb(date);
-
-    _getData(date);
+    if (index == SharedPreferencesUtil.themeIndexNativeView) {
+      _getData(date);
+    } else {
+      _loadWeb(date);
+    }
   }
 
   void _loadWeb(String date) {
