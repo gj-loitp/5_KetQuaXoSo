@@ -97,6 +97,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  calendar_timeline_sbk:
+    dependency: "direct main"
+    description:
+      name: calendar_timeline_sbk
+      sha256: e0ece736829e32b7140950e4c956d2be0c509688ca468f8e3bb7505df11ad7b7
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.5"
   carousel_slider:
     dependency: "direct main"
     description:
@@ -457,13 +465,13 @@ packages:
     source: hosted
     version: "2.0.5"
   intl:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: intl
-      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
+      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.19.0"
+    version: "0.18.1"
   js:
     dependency: transitive
     description:
@@ -768,6 +776,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.27.7"
+  scrollable_positioned_list:
+    dependency: transitive
+    description:
+      name: scrollable_positioned_list
+      sha256: "1b54d5f1329a1e263269abc9e2543d90806131aa14fe7c6062a8054d57249287"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.8"
   shape_of_view_null_safe:
     dependency: "direct main"
     description:

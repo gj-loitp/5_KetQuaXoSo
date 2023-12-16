@@ -9,5 +9,6 @@ class ColorConstants {
   static const Color appColor = Colors.red;
   static Color disabledColor = Colors.red.withOpacity(0.5);
   static Color bkg = const Color(0xFFE0E0E0);
-  // static Color bkg = const Color(0xFFFF0000);
+  static Color bkgYellow = const Color(0xfffdf2c2);
+// static Color bkg = const Color(0xFFFF0000);
 }

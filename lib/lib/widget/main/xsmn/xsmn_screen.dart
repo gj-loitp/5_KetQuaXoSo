@@ -1,3 +1,4 @@
+import 'package:calendar_timeline_sbk/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
@@ -51,8 +52,39 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
-        color: ColorConstants.bkg,
-        child: _buildWebView(),
+        color: ColorConstants.appColor,
+        child: Column(
+          children: [
+            _buildCalendar(),
+            Expanded(
+              child: _buildWebView(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCalendar() {
+    return Container(
+      color: ColorConstants.bkgYellow,
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(0, 8, 16, 0),
+      child: CalendarTimeline(
+        initialDate: DateTime.now(),
+        firstDate: DateTime.now().subtract(const Duration(days: 365)),
+        lastDate: DateTime.now().add(const Duration(days: 365)),
+        onDateSelected: (date) {
+          _selectDay(date);
+        },
+        leftMargin: 0,
+        monthColor: Colors.black,
+        dayColor: Colors.black,
+        activeDayColor: Colors.white,
+        activeBackgroundDayColor: ColorConstants.appColor,
+        dotsColor: Colors.white,
+        // selectableDayPredicate: (date) => date.day != 23,
+        locale: 'vi',
       ),
     );
   }
@@ -69,5 +101,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     ''';
 
     await _controller.runJavaScript(script);
+  }
+
+  void _selectDay(DateTime dateTime){
+    debugPrint("roy93~ dateTime $dateTime");
   }
 }
