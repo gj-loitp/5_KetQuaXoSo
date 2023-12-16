@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -34,8 +35,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
         },
       ),
     );
-    _controller.loadRequest(Uri.parse('https://xoso.mobi//embedded/kq-tinh?tinh=khanh-hoa#n09-08-2023'));
-    // controller.loadRequest(Uri.parse('https://tinhte.vn'));
+    _controller.loadRequest(Uri.parse(StringConstants.kqMienTrung));
   }
 
   @override
