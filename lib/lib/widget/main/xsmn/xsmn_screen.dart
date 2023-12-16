@@ -82,7 +82,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         return Container(
           color: Colors.white,
           alignment: Alignment.center,
-          child: Text("Loading"),
+          child: Image.asset(
+            "assets/images/anim_1.gif",
+            height: 250,
+          ),
         );
       } else {
         return Container(
