@@ -793,7 +793,7 @@ class DataWrapper {
       s += "${element.trim()}\n";
     }
 
-    return s;
+    return s.trim();
   }
 }
 

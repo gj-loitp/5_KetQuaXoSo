@@ -84,7 +84,7 @@ class ControllerMain extends BaseController {
     isLoading.value = true;
     const script = '''
       var spaceDiv = document.createElement("div");
-      spaceDiv.style.height = "150px";
+      spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
