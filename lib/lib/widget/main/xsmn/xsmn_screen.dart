@@ -499,7 +499,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
           child: Text(
             dataWrapper.getValueByAward("7"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -512,9 +512,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.6",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          child: Text(
+            dataWrapper.getValueByAward("6"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -527,9 +527,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.5",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          child: Text(
+            dataWrapper.getValueByAward("5"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -542,9 +542,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.4",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          child: Text(
+            dataWrapper.getValueByAward("4"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -557,9 +557,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.3",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          child: Text(
+            dataWrapper.getValueByAward("3"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -572,9 +572,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.2",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          child: Text(
+            dataWrapper.getValueByAward("2"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -587,9 +587,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.1",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          child: Text(
+            dataWrapper.getValueByAward("1"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -602,9 +602,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "Đ.B",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
+          child: Text(
+            dataWrapper.getValueByAward("ĐB"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),
         ),
