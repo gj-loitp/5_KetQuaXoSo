@@ -62,59 +62,67 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       child: Row(
         children: [
           Expanded(
-            child: CalendarTimeline(
-              shrink: false,
-              showYears: false,
-              initialDate: _controllerXSMN.selectedDateTime.value,
-              firstDate: DateTime.now().subtract(const Duration(days: 365)),
-              lastDate: DateTime.now().add(const Duration(days: 365)),
-              onDateSelected: (date) {
-                _selectDay(date);
-              },
-              leftMargin: 0,
-              monthColor: Colors.black,
-              dayColor: Colors.black,
-              activeDayColor: Colors.white,
-              activeBackgroundDayColor: ColorConstants.appColor,
-              dotsColor: Colors.white,
-              // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-              locale: 'vi',
+            child: Visibility(
+              visible: _controllerXSMN.isFullScreen.value,
+              child: CalendarTimeline(
+                shrink: false,
+                showYears: false,
+                initialDate: _controllerXSMN.selectedDateTime.value,
+                firstDate: DateTime.now().subtract(const Duration(days: 365)),
+                lastDate: DateTime.now().add(const Duration(days: 365)),
+                onDateSelected: (date) {
+                  _selectDay(date);
+                },
+                leftMargin: 0,
+                monthColor: Colors.black,
+                dayColor: Colors.black,
+                activeDayColor: Colors.white,
+                activeBackgroundDayColor: ColorConstants.appColor,
+                dotsColor: Colors.white,
+                // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+                locale: 'vi',
+              ),
             ),
           ),
           const SizedBox(width: 8),
           Column(
             children: [
-              SizedBox(
-                width: 40,
-                height: 40,
-                child: MaterialButton(
-                  onPressed: () {},
-                  color: ColorConstants.appColor,
-                  padding: const EdgeInsets.all(0),
-                  shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.fullscreen,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 8),
               SizedBox(
                 width: 40,
                 height: 40,
                 child: MaterialButton(
                   onPressed: () {
-                    _controllerXSMN.setSelectedDateTime(DateTime.now());
+                    _controllerXSMN.toggleFullScreen();
                   },
                   color: ColorConstants.appColor,
                   padding: const EdgeInsets.all(0),
                   shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.today,
+                  child: Icon(
+                    _controllerXSMN.isFullScreen.value ? Icons.fullscreen_exit : Icons.fullscreen,
                     color: Colors.white,
                   ),
                 ),
-              )
+              ),
+              if (_controllerXSMN.isFullScreen.value) const SizedBox(height: 4),
+              if (_controllerXSMN.isFullScreen.value)
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: MaterialButton(
+                    onPressed: () {
+                      _controllerXSMN.setSelectedDateTime(DateTime.now());
+                    },
+                    color: ColorConstants.appColor,
+                    padding: const EdgeInsets.all(0),
+                    shape: const CircleBorder(),
+                    child: const Icon(
+                      Icons.today,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              const SizedBox(height: 8),
             ],
           ),
         ],

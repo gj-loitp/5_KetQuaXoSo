@@ -18,6 +18,7 @@ class ControllerXSMN extends BaseController {
   var webViewController = WebViewController().obs;
   var isLoading = true.obs;
   var isNativeMode = true.obs;
+  var isFullScreen = true.obs;
   var kqxs = KQXS().obs;
 
   void clearOnDispose() {
@@ -146,5 +147,9 @@ class ControllerXSMN extends BaseController {
     }
     var date = "$day-$month-${dateTime.year}";
     return date;
+  }
+
+  void toggleFullScreen() {
+    isFullScreen.value = !isFullScreen.value;
   }
 }
