@@ -40,14 +40,16 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         height: double.infinity,
         alignment: Alignment.center,
         color: ColorConstants.appColor,
-        child: Column(
-          children: [
-            _buildCalendar(),
-            Expanded(
-              child: _buildContentView(),
-            ),
-          ],
-        ),
+        child: Obx(() {
+          return Column(
+            children: [
+              _buildCalendar(),
+              Expanded(
+                child: _buildContentView(),
+              ),
+            ],
+          );
+        }),
       ),
     );
   }
@@ -60,26 +62,24 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       child: Row(
         children: [
           Expanded(
-            child: Obx((){
-              return CalendarTimeline(
-                shrink: false,
-                showYears: false,
-                initialDate: _controllerXSMN.selectedDateTime.value,
-                firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                lastDate: DateTime.now().add(const Duration(days: 365)),
-                onDateSelected: (date) {
-                  _selectDay(date);
-                },
-                leftMargin: 0,
-                monthColor: Colors.black,
-                dayColor: Colors.black,
-                activeDayColor: Colors.white,
-                activeBackgroundDayColor: ColorConstants.appColor,
-                dotsColor: Colors.white,
-                // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-                locale: 'vi',
-              );
-            }),
+            child: CalendarTimeline(
+              shrink: false,
+              showYears: false,
+              initialDate: _controllerXSMN.selectedDateTime.value,
+              firstDate: DateTime.now().subtract(const Duration(days: 365)),
+              lastDate: DateTime.now().add(const Duration(days: 365)),
+              onDateSelected: (date) {
+                _selectDay(date);
+              },
+              leftMargin: 0,
+              monthColor: Colors.black,
+              dayColor: Colors.black,
+              activeDayColor: Colors.white,
+              activeBackgroundDayColor: ColorConstants.appColor,
+              dotsColor: Colors.white,
+              // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+              locale: 'vi',
+            ),
           ),
           const SizedBox(width: 8),
           Column(
@@ -123,43 +123,41 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildContentView() {
-    return Obx(() {
-      var isLoading = _controllerXSMN.isLoading.value;
-      var isNativeMode = _controllerXSMN.isNativeMode.value;
-      var timeNow = DateTime.now().microsecondsSinceEpoch;
-      var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
-      var isFuture = false;
-      // debugPrint("timeNow $timeNow");
-      // debugPrint("timeSelected $timeSelected");
-      if (timeNow > timeSelected) {
-        // debugPrint("if");
-        isFuture = false;
+    var isLoading = _controllerXSMN.isLoading.value;
+    var isNativeMode = _controllerXSMN.isNativeMode.value;
+    var timeNow = DateTime.now().microsecondsSinceEpoch;
+    var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
+    var isFuture = false;
+    // debugPrint("timeNow $timeNow");
+    // debugPrint("timeSelected $timeSelected");
+    if (timeNow > timeSelected) {
+      // debugPrint("if");
+      isFuture = false;
+    } else {
+      // debugPrint("else");
+      isFuture = true;
+    }
+    if (isLoading) {
+      return Container(
+        width: double.infinity,
+        color: Colors.white,
+        alignment: Alignment.center,
+        child: Image.asset(
+          "assets/images/anim_1.gif",
+          height: 250,
+        ),
+      );
+    } else {
+      if (isFuture) {
+        return _buildFutureView();
       } else {
-        // debugPrint("else");
-        isFuture = true;
-      }
-      if (isLoading) {
-        return Container(
-          width: double.infinity,
-          color: Colors.white,
-          alignment: Alignment.center,
-          child: Image.asset(
-            "assets/images/anim_1.gif",
-            height: 250,
-          ),
-        );
-      } else {
-        if (isFuture) {
-          return _buildFutureView();
+        if (isNativeMode) {
+          return _buildNativeView();
         } else {
-          if (isNativeMode) {
-            return _buildNativeView();
-          } else {
-            return _buildWebView();
-          }
+          return _buildWebView();
         }
       }
-    });
+    }
   }
 
   Widget _buildFutureView() {

@@ -29,19 +29,7 @@ class ControllerXSMN extends BaseController {
     isLoading.value = true;
     selectedDateTime.value = dateTime;
 
-    var day = "";
-    if (dateTime.day >= 10) {
-      day = "${dateTime.day}";
-    } else {
-      day = "0${dateTime.day}";
-    }
-    var month = "";
-    if (dateTime.month >= 10) {
-      month = "${dateTime.month}";
-    } else {
-      month = "0${dateTime.month}";
-    }
-    var date = "$day-$month-${dateTime.year}";
+    var date = getSelectedDayInString();
     // debugPrint("date $date");
 
     var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
@@ -143,6 +131,20 @@ class ControllerXSMN extends BaseController {
   }
 
   String getSelectedDayInString() {
-    return "${selectedDateTime.value.day}-${selectedDateTime.value.month}-${selectedDateTime.value.year}";
+    var dateTime = selectedDateTime.value;
+    var day = "";
+    if (dateTime.day >= 10) {
+      day = "${dateTime.day}";
+    } else {
+      day = "0${dateTime.day}";
+    }
+    var month = "";
+    if (dateTime.month >= 10) {
+      month = "${dateTime.month}";
+    } else {
+      month = "0${dateTime.month}";
+    }
+    var date = "$day-$month-${dateTime.year}";
+    return date;
   }
 }
