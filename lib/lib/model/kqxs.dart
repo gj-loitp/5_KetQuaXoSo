@@ -21,6 +21,10 @@ class KQXS {
     // data['__N_SSP'] = bNSSP;
     return data;
   }
+
+  void getData(){
+    pageProps?.resp?.data?.content?.entries;
+  }
 }
 
 class PageProps {

@@ -177,7 +177,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       child: Column(
         children: [
           Container(
+            alignment: Alignment.center,
+            width: double.infinity,
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+            color: ColorConstants.bkgYellow,
             child: Text(
               "Kết quả xổ số ngày ${selectedDateTime.day}-${selectedDateTime.month}-${selectedDateTime.year}",
               style: const TextStyle(
