@@ -191,34 +191,19 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildFutureView() {
-    return SizedBox(
-      width: double.infinity,
-      // color: Colors.white,
-      child: Stack(
-        children: [
-          Image.asset(
-            "assets/images/bkg_2.jpg",
-            height: double.infinity,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
-          Container(
-            alignment: Alignment.center,
-            color: Colors.white70,
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-            height: 50,
-            child: Text(
-              "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInString()}",
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.center,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ],
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: Text(
+        "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInString()}",
+        style: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w700,
+          color: Colors.white,
+        ),
+        textAlign: TextAlign.center,
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }
