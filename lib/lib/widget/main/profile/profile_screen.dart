@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
-import 'package:ketquaxoso/lib/widget/main/main_screen.dart';
-import 'package:ketquaxoso/lib/widget/main/profile/controller_profile.dart';
+import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:toggle_switch/toggle_switch.dart';
@@ -19,17 +18,17 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
-  final _controllerProfile = Get.put(ControllerProfile());
+  final ControllerMain _controllerMain = Get.find();
 
   @override
   void initState() {
     super.initState();
-    _controllerProfile.getThemeIndex();
+    _controllerMain.getThemeIndex();
   }
 
   @override
   void dispose() {
-    _controllerProfile.clearOnDispose();
+    // _controllerMain.clearOnDispose();
     super.dispose();
   }
 
@@ -83,7 +82,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                         const SizedBox(height: 16),
                         ToggleSwitch(
                           minWidth: Get.width / 3,
-                          initialLabelIndex: _controllerProfile.themeIndex.value,
+                          initialLabelIndex: _controllerMain.themeIndex.value,
                           cornerRadius: 45.0,
                           activeFgColor: Colors.white,
                           inactiveBgColor: Colors.grey,
@@ -100,7 +99,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           ],
                           onToggle: (index) {
                             debugPrint('switched to: $index');
-                            _controllerProfile.setThemeIndex(index);
+                            _controllerMain.setThemeIndex(index);
                             _showPopupRestart();
                           },
                         ),

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
-import 'package:ketquaxoso/lib/widget/main/xsmn/controller_xsmb.dart';
+import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMNScreen extends StatefulWidget {
@@ -17,11 +17,12 @@ class XSMNScreen extends StatefulWidget {
 }
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
-  final ControllerXSMN _controllerXSMN = Get.find();
+  final ControllerMain _controllerMain = Get.find();
 
   @override
   void initState() {
     super.initState();
+    debugPrint("roy93~ initState");
     _selectDay(DateTime.now());
   }
 
@@ -65,11 +66,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             child: AnimatedSize(
               duration: const Duration(milliseconds: 300),
               child: SizedBox(
-                height: _controllerXSMN.isFullScreen.value ? 100 : 0,
+                height: _controllerMain.isFullScreen.value ? 100 : 0,
                 child: CalendarTimeline(
                   shrink: false,
                   showYears: false,
-                  initialDate: _controllerXSMN.selectedDateTime.value,
+                  initialDate: _controllerMain.selectedDateTime.value,
                   firstDate: DateTime.now().subtract(const Duration(days: 365)),
                   lastDate: DateTime.now().add(const Duration(days: 365)),
                   onDateSelected: (date) {
@@ -96,13 +97,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 height: 40,
                 child: MaterialButton(
                   onPressed: () {
-                    _controllerXSMN.toggleFullScreen();
+                    _controllerMain.toggleFullScreen();
                   },
                   color: ColorConstants.appColor,
                   padding: const EdgeInsets.all(0),
                   shape: const CircleBorder(),
                   child: Icon(
-                    _controllerXSMN.isFullScreen.value ? Icons.fullscreen_exit : Icons.fullscreen,
+                    _controllerMain.isFullScreen.value ? Icons.fullscreen_exit : Icons.fullscreen,
                     color: Colors.white,
                   ),
                 ),
@@ -110,24 +111,24 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               AnimatedSize(
                 duration: const Duration(milliseconds: 300),
                 child: SizedBox(
-                  height: _controllerXSMN.isFullScreen.value ? 4 : 0,
+                  height: _controllerMain.isFullScreen.value ? 4 : 0,
                 ),
               ),
               AnimatedSize(
                 duration: const Duration(milliseconds: 300),
                 child: SizedBox(
                   width: 40,
-                  height: _controllerXSMN.isFullScreen.value ? 40 : 0,
+                  height: _controllerMain.isFullScreen.value ? 40 : 0,
                   child: MaterialButton(
                     onPressed: () {
-                      _controllerXSMN.setSelectedDateTime(DateTime.now());
+                      _controllerMain.setSelectedDateTime(DateTime.now());
                     },
                     color: ColorConstants.appColor,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
                     child: Icon(
                       Icons.today,
-                      color: _controllerXSMN.isFullScreen.value ? Colors.white : Colors.transparent,
+                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
                     ),
                   ),
                 ),
@@ -141,10 +142,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildContentView() {
-    var isLoading = _controllerXSMN.isLoading.value;
-    var isNativeMode = _controllerXSMN.isNativeMode.value;
+    var isLoading = _controllerMain.isLoading.value;
+    var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
-    var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
+    var timeSelected = _controllerMain.selectedDateTime.value.microsecondsSinceEpoch;
     var isFuture = false;
     // debugPrint("timeNow $timeNow");
     // debugPrint("timeSelected $timeSelected");
@@ -196,7 +197,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
             height: 50,
             child: Text(
-              "Chưa có kết quả xổ số vào ngày ${_controllerXSMN.getSelectedDayInString()}",
+              "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInString()}",
               style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w700,
@@ -214,13 +215,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget _buildWebView() {
     return Container(
       color: Colors.white,
-      child: WebViewWidget(controller: _controllerXSMN.webViewController.value),
+      child: WebViewWidget(controller: _controllerMain.webViewController.value),
     );
   }
 
   Widget _buildNativeView() {
-    var kqxs = _controllerXSMN.kqxs.value;
-    var selectedDateTime = _controllerXSMN.selectedDateTime.value;
+    var kqxs = _controllerMain.kqxs.value;
+    var selectedDateTime = _controllerMain.selectedDateTime.value;
     // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
     // if (listEntries.isEmpty) {
     //   return _buildFutureView();
@@ -596,6 +597,6 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   void _selectDay(DateTime dateTime) {
-    _controllerXSMN.setSelectedDateTime(dateTime);
+    _controllerMain.setSelectedDateTime(dateTime);
   }
 }

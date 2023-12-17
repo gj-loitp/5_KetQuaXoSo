@@ -14,28 +14,9 @@ class XSMTScreen extends StatefulWidget {
 }
 
 class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
-  final _controller = WebViewController()
-    ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..setBackgroundColor(Colors.white);
-
   @override
   void initState() {
     super.initState();
-    _controller.setNavigationDelegate(
-      NavigationDelegate(
-        onProgress: (int progress) {},
-        onPageStarted: (String url) {},
-        onPageFinished: (String url) async {
-          debugPrint("roy93~ onPageFinished");
-          addBottomSpace();
-        },
-        onWebResourceError: (WebResourceError error) {},
-        onNavigationRequest: (NavigationRequest request) {
-          return NavigationDecision.prevent;
-        },
-      ),
-    );
-    _controller.loadRequest(Uri.parse(StringConstants.kqMienTrung));
   }
 
   @override
@@ -52,22 +33,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
         height: double.infinity,
         alignment: Alignment.center,
         color: ColorConstants.bkg,
-        child: _buildWebView(),
       ),
     );
-  }
-
-  Widget _buildWebView() {
-    return WebViewWidget(controller: _controller);
-  }
-
-  Future<void> addBottomSpace() async {
-    const script = '''
-      var spaceDiv = document.createElement("div");
-      spaceDiv.style.height = "150px";
-      document.body.appendChild(spaceDiv);
-    ''';
-
-    await _controller.runJavaScript(script);
   }
 }

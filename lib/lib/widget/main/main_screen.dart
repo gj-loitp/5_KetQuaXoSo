@@ -6,7 +6,7 @@ import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
-import 'package:ketquaxoso/lib/widget/main/xsmn/controller_xsmb.dart';
+import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
 
@@ -23,7 +23,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends BaseStatefulState<MainScreen> {
-  final ControllerXSMN _controllerXSMN = Get.put(ControllerXSMN());
+  final ControllerMain _controllerXSMN = Get.put(ControllerMain());
   final _controllerPage = PageController(initialPage: 0);
 
   final _controllerBottomBar = NotchBottomBarController(index: 0);
@@ -80,84 +80,82 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   Widget? _buildBottomBar() {
-    return Obx(() {
-      var isShow = bottomBarPages.length <= bottomBarPages.length && _controllerXSMN.isFullScreen.value;
-      if (isShow) {
-        return AnimatedNotchBottomBar(
-          notchBottomBarController: _controllerBottomBar,
-          color: Colors.white,
-          showLabel: true,
-          notchColor: Colors.white,
-          showBlurBottomBar: false,
-          removeMargins: false,
-          bottomBarWidth: 500,
-          durationInMilliSeconds: 300,
-          bottomBarItems: const [
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.looks_one,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.looks_one,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'XSMN',
+    var isShow = bottomBarPages.length <= bottomBarPages.length;
+    if (isShow) {
+      return AnimatedNotchBottomBar(
+        notchBottomBarController: _controllerBottomBar,
+        color: Colors.white,
+        showLabel: true,
+        notchColor: Colors.white,
+        showBlurBottomBar: false,
+        removeMargins: false,
+        bottomBarWidth: 500,
+        durationInMilliSeconds: 300,
+        bottomBarItems: const [
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.looks_one,
+              color: Colors.grey,
             ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.looks_two,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.looks_two,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'XSMT',
+            activeItem: Icon(
+              Icons.looks_one,
+              color: ColorConstants.appColor,
             ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.looks_3,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.looks_3,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'XSMB',
+            itemLabel: 'XSMN',
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.looks_two,
+              color: Colors.grey,
             ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.document_scanner,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.document_scanner,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'Dò vé số',
+            activeItem: Icon(
+              Icons.looks_two,
+              color: ColorConstants.appColor,
             ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.person,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.person,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'Cá nhân',
+            itemLabel: 'XSMT',
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.looks_3,
+              color: Colors.grey,
             ),
-          ],
-          onTap: (index) {
-            _isTouchBottomBarItem = true;
-            _controllerPage.jumpToPage(index);
-            // debugPrint('roy93~ current selected index $index');
-          },
-        );
-      } else {
-        return Container();
-      }
-    });
+            activeItem: Icon(
+              Icons.looks_3,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'XSMB',
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.document_scanner,
+              color: Colors.grey,
+            ),
+            activeItem: Icon(
+              Icons.document_scanner,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'Dò vé số',
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.person,
+              color: Colors.grey,
+            ),
+            activeItem: Icon(
+              Icons.person,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'Cá nhân',
+          ),
+        ],
+        onTap: (index) {
+          _isTouchBottomBarItem = true;
+          _controllerPage.jumpToPage(index);
+          // debugPrint('roy93~ current selected index $index');
+        },
+      );
+    } else {
+      return Container();
+    }
   }
 }

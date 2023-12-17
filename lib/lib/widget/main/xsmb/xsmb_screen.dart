@@ -14,28 +14,9 @@ class XSMBScreen extends StatefulWidget {
 }
 
 class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
-  final _controller = WebViewController()
-    ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..setBackgroundColor(Colors.white);
-
   @override
   void initState() {
     super.initState();
-    _controller.setNavigationDelegate(
-      NavigationDelegate(
-        onProgress: (int progress) {},
-        onPageStarted: (String url) {},
-        onPageFinished: (String url) async {
-          // debugPrint("onPageFinished");
-          addBottomSpace();
-        },
-        onWebResourceError: (WebResourceError error) {},
-        onNavigationRequest: (NavigationRequest request) {
-          return NavigationDecision.prevent;
-        },
-      ),
-    );
-    _controller.loadRequest(Uri.parse(StringConstants.kqMienBac));
   }
 
   @override
@@ -52,22 +33,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
         height: double.infinity,
         alignment: Alignment.center,
         color: ColorConstants.bkg,
-        child: _buildWebView(),
       ),
     );
-  }
-
-  Widget _buildWebView() {
-    return WebViewWidget(controller: _controller);
-  }
-
-  Future<void> addBottomSpace() async {
-    const script = '''
-      var spaceDiv = document.createElement("div");
-      spaceDiv.style.height = "150px";
-      document.body.appendChild(spaceDiv);
-    ''';
-
-    await _controller.runJavaScript(script);
   }
 }
