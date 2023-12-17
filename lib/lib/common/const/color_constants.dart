@@ -11,6 +11,6 @@ class ColorConstants {
   static Color gray = const Color(0xfff8f8f8);
   static Color disabledColor = Colors.red.withOpacity(0.5);
   static Color bkg = const Color(0xFFE0E0E0);
-  static Color bkgYellow = const Color(0xfffdf2c2);
+  // static Color bkgYellow = const Color(0xfffdf2c2);
 // static Color bkg = const Color(0xFFFF0000);
 }

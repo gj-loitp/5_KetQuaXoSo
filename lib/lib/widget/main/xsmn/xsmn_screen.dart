@@ -5,8 +5,8 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import 'package:marquee/marquee.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMNScreen extends StatefulWidget {
   const XSMNScreen({
@@ -37,28 +37,38 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.fromLTRB(0, MediaQuery.of(context).viewPadding.top, 0, 0),
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
-        color: ColorConstants.appColor,
-        child: Obx(() {
-          return Column(
-            children: [
-              _buildCalendar(),
-              Expanded(
-                child: _buildContentView(),
-              ),
-            ],
-          );
-        }),
+        child: Stack(
+          children: [
+            Image.asset(
+              "assets/images/bkg_3.jpg",
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+            Obx(() {
+              return Column(
+                children: [
+                  SizedBox(height: MediaQuery.of(context).viewPadding.top),
+                  _buildCalendar(),
+                  Expanded(
+                    child: _buildContentView(),
+                  ),
+                ],
+              );
+            }),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildCalendar() {
     return Container(
-      color: ColorConstants.bkgYellow,
+      // color: ColorConstants.bkgYellow,
+      color: Colors.white70,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
       child: Row(
@@ -160,7 +170,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     if (isLoading) {
       return Container(
         width: double.infinity,
-        color: Colors.white,
+        // color: Colors.white,
         alignment: Alignment.center,
         child: Image.asset(
           "assets/images/anim_1.gif",
@@ -181,9 +191,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildFutureView() {
-    return Container(
+    return SizedBox(
       width: double.infinity,
-      color: Colors.white,
+      // color: Colors.white,
       child: Stack(
         children: [
           Image.asset(
@@ -215,7 +225,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   Widget _buildWebView() {
     return Container(
-      color: Colors.white,
+      padding: EdgeInsets.zero,
+      // color: Colors.white,
       child: WebViewWidget(controller: _controllerMain.webViewController.value),
     );
   }
@@ -254,17 +265,18 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       ));
     }
 
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: double.infinity,
-      color: Colors.white,
+      // color: Colors.white,
       child: Column(
         children: [
           Container(
             alignment: Alignment.center,
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-            color: ColorConstants.bkgYellow,
+            // color: ColorConstants.bkgYellow,
+            color: Colors.white70,
             child: Text(
               "Kết quả xổ số ngày ${selectedDateTime.day}-${selectedDateTime.month}-${selectedDateTime.year}",
               style: const TextStyle(
