@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/controller_xsmb.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -34,10 +35,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.fromLTRB(0, MediaQuery
-            .of(context)
-            .viewPadding
-            .top, 0, 0),
+        padding: EdgeInsets.fromLTRB(0, MediaQuery.of(context).viewPadding.top, 0, 0),
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
@@ -84,9 +82,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     return Obx(() {
       var isLoading = _controllerXSMN.isLoading.value;
       var isNativeMode = _controllerXSMN.isNativeMode.value;
-      var timeNow = DateTime
-          .now()
-          .microsecondsSinceEpoch;
+      var timeNow = DateTime.now().microsecondsSinceEpoch;
       var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
       var isFuture = false;
       // debugPrint("timeNow $timeNow");
@@ -170,15 +166,17 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     //   return _buildFutureView();
     // }
     var listDataWrapper = kqxs.getDataWrapper();
-    debugPrint("roy93~ listDataWrapper ${listDataWrapper.length}");
-    for (var element in listDataWrapper) {
-      debugPrint("roy93~ element ${element.toJson()}");
-    }
-
+    // debugPrint("roy93~ listDataWrapper ${listDataWrapper.length}");
+    // for (var element in listDataWrapper) {
+    //   debugPrint("roy93~ element ${element.toJson()}");
+    // }
 
     if (listDataWrapper.isEmpty) {
       return _buildFutureView();
     }
+
+    var widthItem = Get.width / listDataWrapper.length;
+
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -198,6 +196,37 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 color: Colors.black,
               ),
             ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              itemCount: listDataWrapper.length,
+              itemBuilder: (BuildContext context, int index) {
+                return _buildColumnNative(listDataWrapper[index], widthItem);
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildColumnNative(DataWrapper dataWrapper, double widthItem) {
+    return Container(
+      width: widthItem,
+      padding: const EdgeInsets.fromLTRB(8, 16, 8, 16),
+      child: Column(
+        children: [
+          Text(
+            dataWrapper.displayName ?? "",
+            style: const TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 12,
+              color: Colors.black,
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),
