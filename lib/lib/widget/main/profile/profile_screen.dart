@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
+import 'package:restart_app/restart_app.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -123,7 +123,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
       message: "Đã thay đổi giao diện thành công, bạn cần khởi động lại ứng dụng.",
       buttonText: "Okay",
       onTapDismiss: () {
-        Get.off(() => const SplashScreen());
+        Restart.restartApp();
       },
       panaraDialogType: PanaraDialogType.custom,
       barrierDismissible: false,

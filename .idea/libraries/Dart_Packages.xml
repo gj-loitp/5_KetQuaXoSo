@@ -695,6 +695,13 @@
             </list>
           </value>
         </entry>
+        <entry key="restart_app">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/restart_app-1.2.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="rxdart">
           <value>
             <list>
@@ -1165,6 +1172,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pointycastle-3.7.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pull_to_refresh-2.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/restart_app-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.27.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shape_of_view_null_safe-2.0.0/lib" />
