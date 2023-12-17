@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
@@ -38,11 +39,16 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   final List<Widget> bottomBarPages = [
-    const XSMNScreen(),
-    const XSMTScreen(),
-    const XSMBScreen(),
-    const ScanScreen(),
-    const ProfileScreen(),
+    // const XSMNScreen(),
+    // const XSMTScreen(),
+    // const XSMBScreen(),
+    // const ScanScreen(),
+    // const ProfileScreen(),
+    KeepAlivePage(child:XSMNScreen()),
+    KeepAlivePage(child:XSMTScreen()),
+    KeepAlivePage(child:XSMBScreen()),
+    KeepAlivePage(child:ScanScreen()),
+    KeepAlivePage(child:ProfileScreen()),
   ];
 
   @override
