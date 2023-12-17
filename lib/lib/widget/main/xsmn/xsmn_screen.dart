@@ -166,10 +166,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     //   return _buildFutureView();
     // }
     var listDataWrapper = kqxs.getDataWrapper();
-    // debugPrint("roy93~ listDataWrapper ${listDataWrapper.length}");
-    // for (var element in listDataWrapper) {
-    //   debugPrint("roy93~ element ${element.toJson()}");
-    // }
+    debugPrint("roy93~ listDataWrapper ${listDataWrapper.length}");
+    for (var element in listDataWrapper) {
+      debugPrint("roy93~ element ${element.toJson()}");
+    }
 
     if (listDataWrapper.isEmpty) {
       return _buildFutureView();
@@ -198,18 +198,166 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             ),
           ),
           Expanded(
-            child: ListView.builder(
+            child: SingleChildScrollView(
               padding: EdgeInsets.zero,
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.vertical,
               physics: const BouncingScrollPhysics(),
-              itemCount: listDataWrapper.length,
-              itemBuilder: (BuildContext context, int index) {
-                return _buildColumnNative(listDataWrapper[index], widthItem);
-              },
+              child: Row(
+                children: [_buildNativeTitleView()],
+              ),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildNativeTitleView() {
+    var widthItem = 50.0;
+    return Column(
+      children: [
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.appColor.withOpacity(0.3),
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "Giải",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.white,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.8",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.gray,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.7",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.white,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.6",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.gray,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.5",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.white,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.4",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.gray,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.3",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.white,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.2",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.gray,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "G.1",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          ),
+        ),
+        Container(
+          width: widthItem,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey, width: 0.25),
+            color: ColorConstants.white,
+            borderRadius: BorderRadius.circular(0),
+          ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          child: const Text(
+            "Đặc biệt",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
     );
   }
 
@@ -248,28 +396,32 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-              padding: EdgeInsets.zero,
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: list.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  color: index % 2 == 0 ? Colors.red : Colors.grey,
-                  child: Text(
-                    list[index].value ?? "",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 12,
-                      color: Colors.black,
-                    ),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                );
-              },
-            ),
-          ),
+          // Expanded(
+          //   child: ListView.builder(
+          //     padding: EdgeInsets.zero,
+          //     physics: const NeverScrollableScrollPhysics(),
+          //     shrinkWrap: true,
+          //     itemCount: list.length,
+          //     itemBuilder: (BuildContext context, int index) {
+          //       var text = list[index].value ?? "";
+          //       var arrSplit = text.split("-");
+          //       var height = 40.0 * arrSplit.length;
+          //       return Container(
+          //         alignment: Alignment.center,
+          //         height: height,
+          //         color: index % 2 == 0 ? Colors.white : Colors.grey.withOpacity(0.2),
+          //         child: Text(
+          //           text.replaceAll("-", "\n").trim(),
+          //           style: const TextStyle(
+          //             fontWeight: FontWeight.w700,
+          //             fontSize: 15,
+          //             color: Colors.black,
+          //           ),
+          //         ),
+          //       );
+          //     },
+          //   ),
+          // ),
         ],
       ),
     );
