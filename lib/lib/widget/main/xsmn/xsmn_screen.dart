@@ -22,7 +22,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   @override
   void initState() {
     super.initState();
-    debugPrint("roy93~ initState");
+    // debugPrint("initState");
     _selectDay(DateTime.now());
   }
 

@@ -24,7 +24,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends BaseStatefulState<MainScreen> {
-  final ControllerMain _controllerXSMN = Get.put(ControllerMain());
+  final ControllerMain _controllerMain = Get.put(ControllerMain());
   final _controllerPage = PageController(initialPage: 0);
 
   final _controllerBottomBar = NotchBottomBarController(index: 0);
@@ -33,7 +33,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   @override
   void dispose() {
-    _controllerXSMN.clearOnDispose();
+    _controllerMain.clearOnDispose();
     _controllerPage.dispose();
     super.dispose();
   }
@@ -44,11 +44,11 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
     // const XSMBScreen(),
     // const ScanScreen(),
     // const ProfileScreen(),
-    KeepAlivePage(child:XSMNScreen()),
-    KeepAlivePage(child:XSMTScreen()),
-    KeepAlivePage(child:XSMBScreen()),
-    KeepAlivePage(child:ScanScreen()),
-    KeepAlivePage(child:ProfileScreen()),
+    KeepAlivePage(child: XSMNScreen()),
+    KeepAlivePage(child: XSMTScreen()),
+    KeepAlivePage(child: XSMBScreen()),
+    KeepAlivePage(child: ScanScreen()),
+    KeepAlivePage(child: ProfileScreen()),
   ];
 
   @override
@@ -88,78 +88,84 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   Widget? _buildBottomBar() {
     var isShow = bottomBarPages.length <= bottomBarPages.length;
     if (isShow) {
-      return AnimatedNotchBottomBar(
-        notchBottomBarController: _controllerBottomBar,
-        color: Colors.white,
-        showLabel: true,
-        notchColor: Colors.white,
-        showBlurBottomBar: false,
-        removeMargins: false,
-        bottomBarWidth: 500,
-        durationInMilliSeconds: 300,
-        bottomBarItems: const [
-          BottomBarItem(
-            inActiveItem: Icon(
-              Icons.looks_one,
-              color: Colors.grey,
-            ),
-            activeItem: Icon(
-              Icons.looks_one,
-              color: ColorConstants.appColor,
-            ),
-            itemLabel: 'XSMN',
+      return Obx(() {
+        var isFullScreen = _controllerMain.isFullScreen.value;
+        return Visibility(
+          visible: isFullScreen,
+          child: AnimatedNotchBottomBar(
+            notchBottomBarController: _controllerBottomBar,
+            color: Colors.white,
+            showLabel: true,
+            notchColor: Colors.white,
+            showBlurBottomBar: false,
+            removeMargins: false,
+            bottomBarWidth: 500,
+            durationInMilliSeconds: 300,
+            bottomBarItems: const [
+              BottomBarItem(
+                inActiveItem: Icon(
+                  Icons.looks_one,
+                  color: Colors.grey,
+                ),
+                activeItem: Icon(
+                  Icons.looks_one,
+                  color: ColorConstants.appColor,
+                ),
+                itemLabel: 'XSMN',
+              ),
+              BottomBarItem(
+                inActiveItem: Icon(
+                  Icons.looks_two,
+                  color: Colors.grey,
+                ),
+                activeItem: Icon(
+                  Icons.looks_two,
+                  color: ColorConstants.appColor,
+                ),
+                itemLabel: 'XSMT',
+              ),
+              BottomBarItem(
+                inActiveItem: Icon(
+                  Icons.looks_3,
+                  color: Colors.grey,
+                ),
+                activeItem: Icon(
+                  Icons.looks_3,
+                  color: ColorConstants.appColor,
+                ),
+                itemLabel: 'XSMB',
+              ),
+              BottomBarItem(
+                inActiveItem: Icon(
+                  Icons.document_scanner,
+                  color: Colors.grey,
+                ),
+                activeItem: Icon(
+                  Icons.document_scanner,
+                  color: ColorConstants.appColor,
+                ),
+                itemLabel: 'Dò vé số',
+              ),
+              BottomBarItem(
+                inActiveItem: Icon(
+                  Icons.person,
+                  color: Colors.grey,
+                ),
+                activeItem: Icon(
+                  Icons.person,
+                  color: ColorConstants.appColor,
+                ),
+                itemLabel: 'Cá nhân',
+              ),
+            ],
+            onTap: (index) {
+              _isTouchBottomBarItem = true;
+              _controllerPage.jumpToPage(index);
+              // debugPrint('roy93~ current selected index $index');
+            },
           ),
-          BottomBarItem(
-            inActiveItem: Icon(
-              Icons.looks_two,
-              color: Colors.grey,
-            ),
-            activeItem: Icon(
-              Icons.looks_two,
-              color: ColorConstants.appColor,
-            ),
-            itemLabel: 'XSMT',
-          ),
-          BottomBarItem(
-            inActiveItem: Icon(
-              Icons.looks_3,
-              color: Colors.grey,
-            ),
-            activeItem: Icon(
-              Icons.looks_3,
-              color: ColorConstants.appColor,
-            ),
-            itemLabel: 'XSMB',
-          ),
-          BottomBarItem(
-            inActiveItem: Icon(
-              Icons.document_scanner,
-              color: Colors.grey,
-            ),
-            activeItem: Icon(
-              Icons.document_scanner,
-              color: ColorConstants.appColor,
-            ),
-            itemLabel: 'Dò vé số',
-          ),
-          BottomBarItem(
-            inActiveItem: Icon(
-              Icons.person,
-              color: Colors.grey,
-            ),
-            activeItem: Icon(
-              Icons.person,
-              color: ColorConstants.appColor,
-            ),
-            itemLabel: 'Cá nhân',
-          ),
-        ],
-        onTap: (index) {
-          _isTouchBottomBarItem = true;
-          _controllerPage.jumpToPage(index);
-          // debugPrint('roy93~ current selected index $index');
-        },
-      );
+        );
+      });
     } else {
       return Container();
     }
