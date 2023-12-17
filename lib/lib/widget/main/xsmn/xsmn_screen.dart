@@ -499,7 +499,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("7"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -514,7 +514,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("6"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -529,7 +529,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("5"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -544,7 +544,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("4"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -559,7 +559,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("3"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -574,7 +574,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("2"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -589,7 +589,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("1"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
         Container(
@@ -604,7 +604,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
             dataWrapper.getValueByAward("ĐB"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.red),
             textAlign: TextAlign.center,
           ),
         ),
