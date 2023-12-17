@@ -337,7 +337,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 3,
+          height: heightItem * 2,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -367,7 +367,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 7,
+          height: heightItem * 4,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -382,7 +382,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 2,
+          height: heightItem * 1.5,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.gray,
@@ -504,7 +504,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 3,
+          height: heightItem * 2,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -538,7 +538,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 7,
+          height: heightItem * 4,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -553,7 +553,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 2,
+          height: heightItem * 1.5,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.gray,
