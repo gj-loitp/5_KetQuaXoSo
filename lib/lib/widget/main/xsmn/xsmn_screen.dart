@@ -34,7 +34,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.fromLTRB(0, MediaQuery.of(context).viewPadding.top, 0, 0),
+        padding: EdgeInsets.fromLTRB(0, MediaQuery
+            .of(context)
+            .viewPadding
+            .top, 0, 0),
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
@@ -81,7 +84,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     return Obx(() {
       var isLoading = _controllerXSMN.isLoading.value;
       var isNativeMode = _controllerXSMN.isNativeMode.value;
-      var timeNow = DateTime.now().microsecondsSinceEpoch;
+      var timeNow = DateTime
+          .now()
+          .microsecondsSinceEpoch;
       var timeSelected = _controllerXSMN.selectedDateTime.value.microsecondsSinceEpoch;
       var isFuture = false;
       // debugPrint("timeNow $timeNow");
@@ -160,16 +165,20 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget _buildNativeView() {
     var kqxs = _controllerXSMN.kqxs.value;
     var selectedDateTime = _controllerXSMN.selectedDateTime.value;
-    var text = "";
+    // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
+    // if (listEntries.isEmpty) {
+    //   return _buildFutureView();
+    // }
+    var listDataWrapper = kqxs.getDataWrapper();
+    debugPrint("roy93~ listDataWrapper ${listDataWrapper.length}");
+    for (var element in listDataWrapper) {
+      debugPrint("roy93~ element ${element.toJson()}");
+    }
 
-    var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
-    if (listEntries.isEmpty) {
+
+    if (listDataWrapper.isEmpty) {
       return _buildFutureView();
     }
-    kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
-      text += "${element.displayName} ~ ${element.award} ~ ${element.value}\n";
-      debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
-    });
     return Container(
       width: double.infinity,
       height: double.infinity,

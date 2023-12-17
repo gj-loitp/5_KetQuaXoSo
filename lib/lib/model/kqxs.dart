@@ -22,8 +22,43 @@ class KQXS {
     return data;
   }
 
-  void getData(){
-    pageProps?.resp?.data?.content?.entries;
+  List<DataWrapper> getDataWrapper() {
+    var entries = pageProps?.resp?.data?.content?.entries ?? List.empty();
+    var listDataWrapper = <DataWrapper>[];
+
+    void addDataWrapperByEntries(Entries entries) {
+      var index = listDataWrapper.indexWhere((element) => element.id == entries.id);
+      if (index < 0) {
+        //chua co DataWrapper nay -> tao moi
+        var dataWrapper = DataWrapper();
+        dataWrapper.id = entries.id;
+        dataWrapper.displayName = entries.displayName;
+
+        var recordKQXS = <RecordKQXS>[];
+        recordKQXS.add(
+          RecordKQXS(
+            award: entries.award,
+            value: entries.value,
+          ),
+        );
+        dataWrapper.recordKQXS = recordKQXS;
+
+        listDataWrapper.add(dataWrapper);
+      } else {
+        //da co DataWrapper nay roi
+        listDataWrapper[index].recordKQXS?.add(
+              RecordKQXS(
+                award: entries.award,
+                value: entries.value,
+              ),
+            );
+      }
+    }
+
+    for (var element in entries) {
+      addDataWrapperByEntries(element);
+    }
+    return listDataWrapper;
   }
 }
 
@@ -714,6 +749,54 @@ class Publisher {
     data['name'] = name;
     data['showName'] = showName;
     data['shortName'] = shortName;
+    return data;
+  }
+}
+
+class DataWrapper {
+  String? id;
+  String? displayName;
+  List<RecordKQXS>? recordKQXS;
+
+  DataWrapper({this.id, this.displayName, this.recordKQXS});
+
+  DataWrapper.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    displayName = json['displayName'];
+    if (json['recordKQXS'] != null) {
+      recordKQXS = <RecordKQXS>[];
+      json['recordKQXS'].forEach((v) {
+        recordKQXS!.add(RecordKQXS.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['recordKQXS'] = displayName;
+    if (recordKQXS != null) {
+      data['recordKQXS'] = recordKQXS!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class RecordKQXS {
+  String? award;
+  String? value;
+
+  RecordKQXS({this.award, this.value});
+
+  RecordKQXS.fromJson(Map<String, dynamic> json) {
+    award = json['award'];
+    value = json['value'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['award'] = award;
+    data['value'] = value;
     return data;
   }
 }
