@@ -77,6 +77,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
               color: Colors.white,
               showLabel: true,
               notchColor: Colors.white,
+              showBlurBottomBar: false,
               removeMargins: false,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
