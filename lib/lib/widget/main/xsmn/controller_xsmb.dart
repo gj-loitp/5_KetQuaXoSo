@@ -141,4 +141,8 @@ class ControllerXSMN extends BaseController {
     // });
     isLoading.value = false;
   }
+
+  String getSelectedDayInString() {
+    return "${selectedDateTime.value.day}-${selectedDateTime.value.month}-${selectedDateTime.value.year}";
+  }
 }

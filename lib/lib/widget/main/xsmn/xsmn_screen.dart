@@ -56,24 +56,66 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     return Container(
       color: ColorConstants.bkgYellow,
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-      child: CalendarTimeline(
-        shrink: false,
-        showYears: false,
-        initialDate: _controllerXSMN.selectedDateTime.value,
-        firstDate: DateTime.now().subtract(const Duration(days: 365)),
-        lastDate: DateTime.now().add(const Duration(days: 365)),
-        onDateSelected: (date) {
-          _selectDay(date);
-        },
-        leftMargin: 0,
-        monthColor: Colors.black,
-        dayColor: Colors.black,
-        activeDayColor: Colors.white,
-        activeBackgroundDayColor: ColorConstants.appColor,
-        dotsColor: Colors.white,
-        // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-        locale: 'vi',
+      padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+      child: Row(
+        children: [
+          Expanded(
+            child: CalendarTimeline(
+              shrink: false,
+              showYears: false,
+              initialDate: _controllerXSMN.selectedDateTime.value,
+              firstDate: DateTime.now().subtract(const Duration(days: 365)),
+              lastDate: DateTime.now().add(const Duration(days: 365)),
+              onDateSelected: (date) {
+                _selectDay(date);
+              },
+              leftMargin: 0,
+              monthColor: Colors.black,
+              dayColor: Colors.black,
+              activeDayColor: Colors.white,
+              activeBackgroundDayColor: ColorConstants.appColor,
+              dotsColor: Colors.white,
+              // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+              locale: 'vi',
+            ),
+          ),
+          const SizedBox(width: 8),
+          Column(
+            children: [
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {},
+                  color: ColorConstants.appColor,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.fullscreen,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 4),
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    _controllerXSMN.setSelectedDateTime(DateTime.now());
+                  },
+                  color: ColorConstants.appColor,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.today,
+                    color: Colors.white,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -135,10 +177,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             color: Colors.white70,
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
             height: 50,
-            child: const Text(
-              "Chưa có kết quả xổ số vào ngày này.",
-              style: TextStyle(
-                fontSize: 18,
+            child: Text(
+              "Chưa có kết quả xổ số vào ngày ${_controllerXSMN.getSelectedDayInString()}",
+              style: const TextStyle(
+                fontSize: 14,
                 fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.center,
