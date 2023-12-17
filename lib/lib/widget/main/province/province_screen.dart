@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 
-class ScanScreen extends StatefulWidget {
-  const ScanScreen({
+class ProvinceScreen extends StatefulWidget {
+  const ProvinceScreen({
     super.key,
   });
 
   @override
-  State<ScanScreen> createState() => _ScanScreenState();
+  State<ProvinceScreen> createState() => _ProvinceScreenState();
 }
 
-class _ScanScreenState extends BaseStatefulState<ScanScreen> {
+class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   @override
   void initState() {
     super.initState();

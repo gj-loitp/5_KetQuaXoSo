@@ -6,7 +6,7 @@ import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
-import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
@@ -39,16 +39,11 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   final List<Widget> bottomBarPages = [
-    // const XSMNScreen(),
-    // const XSMTScreen(),
-    // const XSMBScreen(),
-    // const ScanScreen(),
-    // const ProfileScreen(),
-    KeepAlivePage(child: XSMNScreen()),
-    KeepAlivePage(child: XSMTScreen()),
-    KeepAlivePage(child: XSMBScreen()),
-    KeepAlivePage(child: ScanScreen()),
-    KeepAlivePage(child: ProfileScreen()),
+    const KeepAlivePage(child: XSMNScreen()),
+    const KeepAlivePage(child: XSMTScreen()),
+    const KeepAlivePage(child: XSMBScreen()),
+    const KeepAlivePage(child: ProvinceScreen()),
+    const KeepAlivePage(child: ProfileScreen()),
   ];
 
   @override
@@ -133,14 +128,14 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
           ),
           BottomBarItem(
             inActiveItem: Icon(
-              Icons.document_scanner,
+              Icons.location_city,
               color: Colors.grey,
             ),
             activeItem: Icon(
-              Icons.document_scanner,
+              Icons.location_city,
               color: ColorConstants.appColor,
             ),
-            itemLabel: 'Dò vé số',
+            itemLabel: 'Dò theo đài',
           ),
           BottomBarItem(
             inActiveItem: Icon(

@@ -10,6 +10,7 @@ import 'package:connectivity_plus/src/connectivity_plus_web.dart';
 import 'package:device_info_plus/src/device_info_plus_web.dart';
 import 'package:flutter_native_splash/flutter_native_splash_web.dart';
 import 'package:platform_device_id_web/platform_device_id_web.dart';
+import 'package:restart_app/restart_web.dart';
 import 'package:share_plus/src/share_plus_web.dart';
 import 'package:shared_preferences_web/shared_preferences_web.dart';
 import 'package:url_launcher_web/url_launcher_web.dart';
@@ -21,6 +22,7 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   DeviceInfoPlusWebPlugin.registerWith(registrar);
   FlutterNativeSplashWeb.registerWith(registrar);
   PlatformDeviceIdWebPlugin.registerWith(registrar);
+  RestartWeb.registerWith(registrar);
   SharePlusWebPlugin.registerWith(registrar);
   SharedPreferencesPlugin.registerWith(registrar);
   UrlLauncherPlugin.registerWith(registrar);
