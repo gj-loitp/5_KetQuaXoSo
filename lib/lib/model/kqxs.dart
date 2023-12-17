@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 class KQXS {
   PageProps? pageProps;
 
@@ -783,7 +785,15 @@ class DataWrapper {
 
   String getValueByAward(String award) {
     var record = recordKQXS?.firstWhere((element) => element.award == award);
-    return record?.value ?? "";
+    var text = record?.value ?? "";
+
+    var arr = text.split("-");
+    var s = "";
+    for (var element in arr) {
+      s += "${element.trim()}\n";
+    }
+
+    return s;
   }
 }
 

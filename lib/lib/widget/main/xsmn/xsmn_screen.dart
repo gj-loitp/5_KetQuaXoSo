@@ -514,7 +514,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
           child: Text(
             dataWrapper.getValueByAward("6"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+            ),
           ),
         ),
         Container(
