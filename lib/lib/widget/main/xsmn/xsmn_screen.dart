@@ -159,6 +159,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   Widget _buildNativeView() {
     var kqxs = _controllerXSMN.kqxs.value;
+    var selectedDateTime = _controllerXSMN.selectedDateTime.value;
     var text = "";
 
     var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
@@ -173,7 +174,21 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       width: double.infinity,
       height: double.infinity,
       color: Colors.white,
-      child: Text(text),
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+            child: Text(
+              "Kết quả xổ số ngày ${selectedDateTime.day}-${selectedDateTime.month}-${selectedDateTime.year}",
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
