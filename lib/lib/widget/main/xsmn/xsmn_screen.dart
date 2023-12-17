@@ -199,6 +199,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.zero,
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               itemCount: listDataWrapper.length,
@@ -213,20 +214,61 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildColumnNative(DataWrapper dataWrapper, double widthItem) {
+    var list = dataWrapper.recordKQXS ?? List.empty();
     return Container(
       width: widthItem,
-      padding: const EdgeInsets.fromLTRB(8, 16, 8, 16),
+      padding: const EdgeInsets.fromLTRB(0, 1, 0, 0),
       child: Column(
         children: [
-          Text(
-            dataWrapper.displayName ?? "",
-            style: const TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 12,
-              color: Colors.black,
+          Container(
+            height: 40,
+            width: double.infinity,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.white,
+                width: 0.5,
+              ),
+              borderRadius: const BorderRadius.only(
+                topRight: Radius.circular(16.0),
+                topLeft: Radius.circular(16.0),
+                bottomLeft: Radius.circular(16.0),
+                bottomRight: Radius.circular(16.0),
+              ),
+              color: ColorConstants.appColor.withOpacity(0.3),
             ),
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
+            child: Text(
+              dataWrapper.displayName ?? "",
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 15,
+                color: Colors.black,
+              ),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              padding: EdgeInsets.zero,
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: list.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  color: index % 2 == 0 ? Colors.red : Colors.grey,
+                  child: Text(
+                    list[index].value ?? "",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 12,
+                      color: Colors.black,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
