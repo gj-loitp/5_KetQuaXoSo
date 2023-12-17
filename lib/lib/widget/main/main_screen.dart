@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/keep_alive_age.dart';
+import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/scan/scan_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
-import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
 
@@ -88,84 +88,78 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   Widget? _buildBottomBar() {
     var isShow = bottomBarPages.length <= bottomBarPages.length;
     if (isShow) {
-      return Obx(() {
-        var isFullScreen = _controllerMain.isFullScreen.value;
-        return Visibility(
-          visible: isFullScreen,
-          child: AnimatedNotchBottomBar(
-            notchBottomBarController: _controllerBottomBar,
-            color: Colors.white,
-            showLabel: true,
-            notchColor: Colors.white,
-            showBlurBottomBar: false,
-            removeMargins: false,
-            bottomBarWidth: 500,
-            durationInMilliSeconds: 300,
-            bottomBarItems: const [
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.looks_one,
-                  color: Colors.grey,
-                ),
-                activeItem: Icon(
-                  Icons.looks_one,
-                  color: ColorConstants.appColor,
-                ),
-                itemLabel: 'XSMN',
-              ),
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.looks_two,
-                  color: Colors.grey,
-                ),
-                activeItem: Icon(
-                  Icons.looks_two,
-                  color: ColorConstants.appColor,
-                ),
-                itemLabel: 'XSMT',
-              ),
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.looks_3,
-                  color: Colors.grey,
-                ),
-                activeItem: Icon(
-                  Icons.looks_3,
-                  color: ColorConstants.appColor,
-                ),
-                itemLabel: 'XSMB',
-              ),
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.document_scanner,
-                  color: Colors.grey,
-                ),
-                activeItem: Icon(
-                  Icons.document_scanner,
-                  color: ColorConstants.appColor,
-                ),
-                itemLabel: 'Dò vé số',
-              ),
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.person,
-                  color: Colors.grey,
-                ),
-                activeItem: Icon(
-                  Icons.person,
-                  color: ColorConstants.appColor,
-                ),
-                itemLabel: 'Cá nhân',
-              ),
-            ],
-            onTap: (index) {
-              _isTouchBottomBarItem = true;
-              _controllerPage.jumpToPage(index);
-              // debugPrint('roy93~ current selected index $index');
-            },
+      return AnimatedNotchBottomBar(
+        notchBottomBarController: _controllerBottomBar,
+        color: Colors.white,
+        showLabel: true,
+        notchColor: Colors.white,
+        showBlurBottomBar: false,
+        removeMargins: false,
+        bottomBarWidth: 500,
+        durationInMilliSeconds: 300,
+        bottomBarItems: const [
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.looks_one,
+              color: Colors.grey,
+            ),
+            activeItem: Icon(
+              Icons.looks_one,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'XSMN',
           ),
-        );
-      });
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.looks_two,
+              color: Colors.grey,
+            ),
+            activeItem: Icon(
+              Icons.looks_two,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'XSMT',
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.looks_3,
+              color: Colors.grey,
+            ),
+            activeItem: Icon(
+              Icons.looks_3,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'XSMB',
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.document_scanner,
+              color: Colors.grey,
+            ),
+            activeItem: Icon(
+              Icons.document_scanner,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'Dò vé số',
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.person,
+              color: Colors.grey,
+            ),
+            activeItem: Icon(
+              Icons.person,
+              color: ColorConstants.appColor,
+            ),
+            itemLabel: 'Cá nhân',
+          ),
+        ],
+        onTap: (index) {
+          _isTouchBottomBarItem = true;
+          _controllerPage.jumpToPage(index);
+          // debugPrint('roy93~ current selected index $index');
+        },
+      );
     } else {
       return Container();
     }
