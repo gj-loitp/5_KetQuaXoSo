@@ -29,15 +29,16 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
         alignment: Alignment.center,
         color: ColorConstants.bkg,
         child: Stack(
+          alignment: Alignment.center,
           children: [
             Image.asset(
-              "assets/images/bkg_4.jpg",
+              "assets/images/bkg_3.jpg",
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
             Container(
-              margin: const EdgeInsets.fromLTRB(16, 100, 16, 16),
+              margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.white,
