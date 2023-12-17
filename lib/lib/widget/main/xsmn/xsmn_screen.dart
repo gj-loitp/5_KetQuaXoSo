@@ -168,15 +168,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       isFuture = true;
     }
     if (isLoading) {
-      return Container(
-        width: double.infinity,
-        // color: Colors.white,
-        alignment: Alignment.center,
-        child: Image.asset(
-          "assets/images/anim_1.gif",
-          height: 250,
-        ),
-      );
+      return _buildLoadingView();
     } else {
       if (isFuture) {
         return _buildFutureView();
@@ -190,20 +182,62 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     }
   }
 
+  Widget _buildLoadingView() {
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/anim_1.gif",
+            // width: 100,
+            height: 250,
+            fit: BoxFit.cover,
+          ),
+          // const SizedBox(height: 16),
+          const Text(
+            "Đang tải dữ liệu...\nVui lòng chờ...",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildFutureView() {
     return Container(
       alignment: Alignment.center,
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-      child: Text(
-        "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInString()}",
-        style: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
-          color: Colors.white,
-        ),
-        textAlign: TextAlign.center,
-        maxLines: 2,
-        overflow: TextOverflow.ellipsis,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/anim_1.gif",
+            // width: 100,
+            height: 250,
+            fit: BoxFit.cover,
+          ),
+          // const SizedBox(height: 16),
+          Text(
+            "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInString()}",
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ],
       ),
     );
   }
