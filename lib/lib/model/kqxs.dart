@@ -774,7 +774,7 @@ class DataWrapper {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
-    data['recordKQXS'] = displayName;
+    data['displayName'] = displayName;
     if (recordKQXS != null) {
       data['recordKQXS'] = recordKQXS!.map((v) => v.toJson()).toList();
     }
