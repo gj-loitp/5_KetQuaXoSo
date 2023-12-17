@@ -60,24 +60,26 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       child: Row(
         children: [
           Expanded(
-            child: CalendarTimeline(
-              shrink: false,
-              showYears: false,
-              initialDate: _controllerXSMN.selectedDateTime.value,
-              firstDate: DateTime.now().subtract(const Duration(days: 365)),
-              lastDate: DateTime.now().add(const Duration(days: 365)),
-              onDateSelected: (date) {
-                _selectDay(date);
-              },
-              leftMargin: 0,
-              monthColor: Colors.black,
-              dayColor: Colors.black,
-              activeDayColor: Colors.white,
-              activeBackgroundDayColor: ColorConstants.appColor,
-              dotsColor: Colors.white,
-              // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-              locale: 'vi',
-            ),
+            child: Obx((){
+              return CalendarTimeline(
+                shrink: false,
+                showYears: false,
+                initialDate: _controllerXSMN.selectedDateTime.value,
+                firstDate: DateTime.now().subtract(const Duration(days: 365)),
+                lastDate: DateTime.now().add(const Duration(days: 365)),
+                onDateSelected: (date) {
+                  _selectDay(date);
+                },
+                leftMargin: 0,
+                monthColor: Colors.black,
+                dayColor: Colors.black,
+                activeDayColor: Colors.white,
+                activeBackgroundDayColor: ColorConstants.appColor,
+                dotsColor: Colors.white,
+                // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+                locale: 'vi',
+              );
+            }),
           ),
           const SizedBox(width: 8),
           Column(
