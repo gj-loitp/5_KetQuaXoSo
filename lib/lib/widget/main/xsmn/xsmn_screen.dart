@@ -17,7 +17,7 @@ class XSMNScreen extends StatefulWidget {
 }
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
-  final ControllerXSMN _controllerXSMN = Get.put(ControllerXSMN());
+  final ControllerXSMN _controllerXSMN = Get.find();
 
   @override
   void initState() {
@@ -27,7 +27,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   @override
   void dispose() {
-    _controllerXSMN.clearOnDispose();
+    // _controllerXSMN.clearOnDispose();
     super.dispose();
   }
 
