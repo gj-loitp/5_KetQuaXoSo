@@ -780,6 +780,11 @@ class DataWrapper {
     }
     return data;
   }
+
+  String getValueByAward(String award) {
+    var record = recordKQXS?.firstWhere((element) => element.award == award);
+    return record?.value ?? "";
+  }
 }
 
 class RecordKQXS {

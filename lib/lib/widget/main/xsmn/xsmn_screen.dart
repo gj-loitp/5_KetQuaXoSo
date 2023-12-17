@@ -6,6 +6,7 @@ import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:marquee/marquee.dart';
 
 class XSMNScreen extends StatefulWidget {
   const XSMNScreen({
@@ -453,20 +454,27 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       children: [
         Container(
           width: widthItem,
+          height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.appColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "Giải",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
+          child: Marquee(
+            text: "${dataWrapper.displayName}",
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+            ),
+            blankSpace: 50.0,
           ),
         ),
         Container(
           width: widthItem,
+          height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -474,13 +482,14 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.8",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
+          child: Text(
+            dataWrapper.getValueByAward("8"),
+            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
           ),
         ),
         Container(
           width: widthItem,
+          height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.gray,
@@ -488,13 +497,14 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-          child: const Text(
-            "G.7",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+          child: Text(
+            dataWrapper.getValueByAward("7"),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
           width: widthItem,
+          height: heightItem * 3,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -509,6 +519,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
+          height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.gray,
@@ -523,6 +534,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
+          height: heightItem * 7,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -537,6 +549,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
+          height: heightItem * 2,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.gray,
@@ -551,6 +564,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
+          height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -565,6 +579,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
+          height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.gray,
@@ -579,6 +594,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
+          height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -587,7 +603,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
           child: const Text(
-            "Đặc biệt",
+            "Đ.B",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),

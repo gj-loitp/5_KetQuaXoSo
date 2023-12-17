@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class ColorConstants {
   static const Color appColor = Colors.red;
   static const Color white = Colors.white;
-  static Color gray = const Color(0xFFE0E0E0);
+  static Color gray = const Color(0xfff8f8f8);
   static Color disabledColor = Colors.red.withOpacity(0.5);
   static Color bkg = const Color(0xFFE0E0E0);
   static Color bkgYellow = const Color(0xfffdf2c2);
