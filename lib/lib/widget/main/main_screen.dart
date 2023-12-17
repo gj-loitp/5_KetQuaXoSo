@@ -87,6 +87,11 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
         notchBottomBarController: _controllerBottomBar,
         color: Colors.white,
         showLabel: true,
+        itemLabelStyle: const TextStyle(
+          color: Colors.grey,
+          fontWeight: FontWeight.w700,
+          fontSize: 8,
+        ),
         notchColor: Colors.white,
         showBlurBottomBar: false,
         removeMargins: false,
