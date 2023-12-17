@@ -81,7 +81,8 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   Widget? _buildBottomBar() {
     return Obx(() {
-      if (bottomBarPages.length <= bottomBarPages.length && _controllerXSMN.isFullScreen.value) {
+      var isShow = bottomBarPages.length <= bottomBarPages.length && _controllerXSMN.isFullScreen.value;
+      if (isShow) {
         return AnimatedNotchBottomBar(
           notchBottomBarController: _controllerBottomBar,
           color: Colors.white,

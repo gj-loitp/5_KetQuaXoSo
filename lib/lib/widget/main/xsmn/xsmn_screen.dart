@@ -62,25 +62,28 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       child: Row(
         children: [
           Expanded(
-            child: Visibility(
-              visible: _controllerXSMN.isFullScreen.value,
-              child: CalendarTimeline(
-                shrink: false,
-                showYears: false,
-                initialDate: _controllerXSMN.selectedDateTime.value,
-                firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                lastDate: DateTime.now().add(const Duration(days: 365)),
-                onDateSelected: (date) {
-                  _selectDay(date);
-                },
-                leftMargin: 0,
-                monthColor: Colors.black,
-                dayColor: Colors.black,
-                activeDayColor: Colors.white,
-                activeBackgroundDayColor: ColorConstants.appColor,
-                dotsColor: Colors.white,
-                // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-                locale: 'vi',
+            child: AnimatedSize(
+              duration: const Duration(milliseconds: 300),
+              child: SizedBox(
+                height: _controllerXSMN.isFullScreen.value ? 100 : 0,
+                child: CalendarTimeline(
+                  shrink: false,
+                  showYears: false,
+                  initialDate: _controllerXSMN.selectedDateTime.value,
+                  firstDate: DateTime.now().subtract(const Duration(days: 365)),
+                  lastDate: DateTime.now().add(const Duration(days: 365)),
+                  onDateSelected: (date) {
+                    _selectDay(date);
+                  },
+                  leftMargin: 0,
+                  monthColor: Colors.black,
+                  dayColor: Colors.black,
+                  activeDayColor: Colors.white,
+                  activeBackgroundDayColor: ColorConstants.appColor,
+                  dotsColor: Colors.white,
+                  // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+                  locale: 'vi',
+                ),
               ),
             ),
           ),
@@ -104,11 +107,17 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   ),
                 ),
               ),
-              if (_controllerXSMN.isFullScreen.value) const SizedBox(height: 4),
-              if (_controllerXSMN.isFullScreen.value)
-                SizedBox(
+              AnimatedSize(
+                duration: const Duration(milliseconds: 300),
+                child: SizedBox(
+                  height: _controllerXSMN.isFullScreen.value ? 4 : 0,
+                ),
+              ),
+              AnimatedSize(
+                duration: const Duration(milliseconds: 300),
+                child: SizedBox(
                   width: 40,
-                  height: 40,
+                  height: _controllerXSMN.isFullScreen.value ? 40 : 0,
                   child: MaterialButton(
                     onPressed: () {
                       _controllerXSMN.setSelectedDateTime(DateTime.now());
@@ -116,12 +125,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                     color: ColorConstants.appColor,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
-                    child: const Icon(
+                    child: Icon(
                       Icons.today,
-                      color: Colors.white,
+                      color: _controllerXSMN.isFullScreen.value ? Colors.white : Colors.transparent,
                     ),
                   ),
                 ),
+              ),
               const SizedBox(height: 8),
             ],
           ),
