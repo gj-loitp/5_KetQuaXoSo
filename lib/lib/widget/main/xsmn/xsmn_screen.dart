@@ -314,7 +314,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
           child: const Text(
             "Giải",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.white),
           ),
         ),
         Container(
@@ -479,7 +479,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,
-              color: Colors.black,
+              color: Colors.white,
             ),
             blankSpace: 50.0,
           ),
