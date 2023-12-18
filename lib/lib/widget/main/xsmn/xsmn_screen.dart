@@ -5,6 +5,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -103,6 +104,55 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           Column(
             children: [
               const SizedBox(height: 8),
+              AnimatedSize(
+                duration: const Duration(milliseconds: 300),
+                child: SizedBox(
+                  width: 40,
+                  height: _controllerMain.isFullScreen.value ? 40 : 0,
+                  child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.blueAccent,
+                    padding: const EdgeInsets.all(0),
+                    shape: const CircleBorder(),
+                    child: Icon(
+                      Icons.document_scanner_outlined,
+                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
+                    ),
+                  ),
+                ),
+              ),
+              AnimatedSize(
+                duration: const Duration(milliseconds: 300),
+                child: SizedBox(
+                  height: _controllerMain.isFullScreen.value ? 4 : 0,
+                ),
+              ),
+              AnimatedSize(
+                duration: const Duration(milliseconds: 300),
+                child: SizedBox(
+                  width: 40,
+                  height: _controllerMain.isFullScreen.value ? 40 : 0,
+                  child: MaterialButton(
+                    onPressed: () {
+                      _controllerMain.setSelectedDateTime(DateTime.now());
+                    },
+                    color: Colors.pink,
+                    padding: const EdgeInsets.all(0),
+                    shape: const CircleBorder(),
+                    child: Icon(
+                      Icons.today,
+                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 8),
+            ],
+          ),
+          const SizedBox(width: 8),
+          Column(
+            children: [
+              const SizedBox(height: 8),
               SizedBox(
                 width: 40,
                 height: 40,
@@ -110,7 +160,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   onPressed: () {
                     _controllerMain.toggleFullScreen();
                   },
-                  color: ColorConstants.appColor,
+                  color: Colors.green,
                   padding: const EdgeInsets.all(0),
                   shape: const CircleBorder(),
                   child: Icon(
@@ -132,13 +182,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   height: _controllerMain.isFullScreen.value ? 40 : 0,
                   child: MaterialButton(
                     onPressed: () {
-                      _controllerMain.setSelectedDateTime(DateTime.now());
+                      Get.to(() => const ProfileScreen());
                     },
-                    color: ColorConstants.appColor,
+                    color: Colors.deepPurple,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
                     child: Icon(
-                      Icons.today,
+                      Icons.settings,
                       color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
                     ),
                   ),
