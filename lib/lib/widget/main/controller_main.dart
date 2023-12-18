@@ -23,10 +23,11 @@ class ControllerMain extends BaseController {
     Get.delete<ControllerMain>();
   }
 
-  Future<void> setSelectedDateTime(DateTime dateTime) async {
+  Future<void> setSelectedDateTime(DateTime dateTime, bool isFirstInit) async {
     if (selectedDateTime.value.day == dateTime.day &&
         selectedDateTime.value.month == dateTime.month &&
-        selectedDateTime.value.year == dateTime.year) {
+        selectedDateTime.value.year == dateTime.year &&
+        !isFirstInit) {
       return;
     }
 

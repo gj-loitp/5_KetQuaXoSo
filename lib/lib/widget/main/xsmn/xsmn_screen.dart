@@ -25,7 +25,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   void initState() {
     super.initState();
     // debugPrint("initState");
-    _selectDay(DateTime.now());
+    _selectDay(DateTime.now(), true);
   }
 
   @override
@@ -86,7 +86,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   firstDate: DateTime.now().subtract(const Duration(days: 365)),
                   lastDate: DateTime.now().add(const Duration(days: 365)),
                   onDateSelected: (date) {
-                    _selectDay(date);
+                    _selectDay(date, false);
                   },
                   leftMargin: 0,
                   monthColor: Colors.black,
@@ -134,7 +134,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   height: _controllerMain.isFullScreen.value ? 40 : 0,
                   child: MaterialButton(
                     onPressed: () {
-                      _controllerMain.setSelectedDateTime(DateTime.now());
+                      _selectDay(DateTime.now(), false);
                     },
                     color: Colors.pink,
                     padding: const EdgeInsets.all(0),
@@ -693,7 +693,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     );
   }
 
-  void _selectDay(DateTime dateTime) {
-    _controllerMain.setSelectedDateTime(dateTime);
+  void _selectDay(DateTime dateTime, bool isFirstInit) {
+    _controllerMain.setSelectedDateTime(dateTime, isFirstInit);
   }
 }
