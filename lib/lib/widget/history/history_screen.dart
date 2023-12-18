@@ -1,4 +1,3 @@
-import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
@@ -38,51 +37,76 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
-            ListView(
-              physics: const BouncingScrollPhysics(),
-              padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
+            Column(
               children: [
                 Container(
-                  alignment: Alignment.center,
-                  width: double.infinity,
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 40,
-                        height: 40,
-                      ),
-                      const Expanded(
-                        child: Text(
-                          "Lịch sử",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            fontSize: 24,
-                            shadows: [
-                              Shadow(
-                                blurRadius: 5.0,
-                                color: Colors.black,
-                                offset: Offset(2.0, 2.0),
-                              ),
-                            ],
-                          ),
-                          textAlign: TextAlign.center,
+                  padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 40,
+                          height: 40,
                         ),
-                      ),
-                      SizedBox(
-                        width: 40,
-                        height: 40,
-                        child: MaterialButton(
-                          onPressed: () {
-                            Get.back();
-                          },
+                        const Expanded(
+                          child: Text(
+                            "Lịch sử",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              fontSize: 24,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0,
+                                  color: Colors.black,
+                                  offset: Offset(2.0, 2.0),
+                                ),
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.back();
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.clear,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: ListView(
+                    physics: const BouncingScrollPhysics(),
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(16, 16, 16, 16),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
                           color: Colors.white,
-                          padding: const EdgeInsets.all(0),
-                          shape: const CircleBorder(),
-                          child: const Icon(
-                            Icons.clear,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: const Text(
+                          "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
                             color: Colors.black,
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],
