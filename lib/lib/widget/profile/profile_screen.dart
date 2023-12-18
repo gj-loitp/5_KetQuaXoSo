@@ -53,25 +53,52 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                 padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
                 children: [
                   Container(
-                    alignment: Alignment.centerRight,
+                    alignment: Alignment.center,
                     width: double.infinity,
-                    child: SizedBox(
-                      width: 40,
-                      height: 40,
-                      child: MaterialButton(
-                        onPressed: () {
-                          Get.back();
-                        },
-                        color: Colors.white,
-                        padding: const EdgeInsets.all(0),
-                        shape: const CircleBorder(),
-                        child: const Icon(
-                          Icons.clear,
-                          color: Colors.black,
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 40,
+                          height: 40,
                         ),
-                      ),
+                        const Expanded(
+                          child: Text(
+                            "Cá nhân",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              fontSize: 24,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0,
+                                  color: Colors.black,
+                                  offset: Offset(2.0, 2.0),
+                                ),
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.back();
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.clear,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+                  const SizedBox(height: 16),
                   AvatarGlow(
                     glowColor: Colors.white,
                     endRadius: 60.0,
