@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
+import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 import 'package:marquee/marquee.dart';
@@ -110,12 +111,14 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   width: 40,
                   height: _controllerMain.isFullScreen.value ? 40 : 0,
                   child: MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const HistoryScreen());
+                    },
                     color: Colors.blueAccent,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
                     child: Icon(
-                      Icons.document_scanner_outlined,
+                      Icons.history,
                       color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
                     ),
                   ),

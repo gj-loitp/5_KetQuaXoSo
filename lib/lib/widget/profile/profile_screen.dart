@@ -53,7 +53,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                 padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
                 children: [
                   Container(
-                    alignment: Alignment.centerLeft,
+                    alignment: Alignment.centerRight,
                     width: double.infinity,
                     child: SizedBox(
                       width: 40,
@@ -66,7 +66,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                         padding: const EdgeInsets.all(0),
                         shape: const CircleBorder(),
                         child: const Icon(
-                          Icons.arrow_back_ios_new,
+                          Icons.clear,
                           color: Colors.black,
                         ),
                       ),
