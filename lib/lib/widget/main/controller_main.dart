@@ -24,6 +24,12 @@ class ControllerMain extends BaseController {
   }
 
   Future<void> setSelectedDateTime(DateTime dateTime) async {
+    if (selectedDateTime.value.day == dateTime.day &&
+        selectedDateTime.value.month == dateTime.month &&
+        selectedDateTime.value.year == dateTime.year) {
+      return;
+    }
+
     // debugPrint("setSelectedDateTime $dateTime");
     isLoading.value = true;
     selectedDateTime.value = dateTime;
