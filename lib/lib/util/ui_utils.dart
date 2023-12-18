@@ -36,8 +36,15 @@ class UIUtils {
     }
 
     return AppBar(
-      title: Text(text),
-      centerTitle: false,
+      title: Text(
+        text,
+        style: const TextStyle(
+          fontWeight: FontWeight.w700,
+          fontSize: 18,
+          color: Colors.white,
+        ),
+      ),
+      centerTitle: true,
       leading: IconButton(
         icon: const Icon(
           Icons.arrow_back,

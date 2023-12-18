@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:restart_app/restart_app.dart';
@@ -35,6 +36,13 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "Cài đặt",
+        () {
+          Get.back();
+        },
+        null,
+      ),
       body: Obx(() {
         return Container(
           alignment: Alignment.center,
@@ -126,7 +134,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
         Restart.restartApp();
       },
       panaraDialogType: PanaraDialogType.custom,
-      barrierDismissible: false,
+      barrierDismissible: true,
       color: ColorConstants.appColor,
     );
   }
