@@ -36,13 +36,6 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils.getAppBar(
-        "Cài đặt",
-        () {
-          Get.back();
-        },
-        null,
-      ),
       body: Obx(() {
         return Container(
           alignment: Alignment.center,
@@ -59,6 +52,26 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                 physics: const BouncingScrollPhysics(),
                 padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
                 children: [
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    child: SizedBox(
+                      width: 40,
+                      height: 40,
+                      child: MaterialButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        color: Colors.white,
+                        padding: const EdgeInsets.all(0),
+                        shape: const CircleBorder(),
+                        child: const Icon(
+                          Icons.arrow_back_ios_new,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
                   AvatarGlow(
                     glowColor: Colors.white,
                     endRadius: 60.0,
