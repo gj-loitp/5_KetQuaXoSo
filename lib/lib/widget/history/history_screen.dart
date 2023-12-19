@@ -93,7 +93,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                     physics: const BouncingScrollPhysics(),
                     children: [
                       Container(
-                        margin: EdgeInsets.fromLTRB(16, 16, 16, 16),
+                        margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: Colors.white,
