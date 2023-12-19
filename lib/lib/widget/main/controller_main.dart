@@ -18,6 +18,7 @@ class ControllerMain extends BaseController {
   var isFullScreen = true.obs;
   var kqxs = KQXS().obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
+  var buildId = "".obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -115,9 +116,34 @@ class ControllerMain extends BaseController {
         ),
       );
     }
+
+    if (buildId.value.isEmpty) {
+      var responseGetBuildId = await dio.get('https://baomoi.com/');
+      if (responseGetBuildId.statusCode == 200) {
+        String htmlToParse = responseGetBuildId.data;
+        debugPrint("roy93~ responseGetBuildId $htmlToParse");
+        var arrParent = htmlToParse.split('''buildId''');
+        debugPrint("roy93~ arrParent ${arrParent.length}");
+        if (arrParent.isNotEmpty && arrParent.length >= 2) {
+          debugPrint("roy93~ 0 ${arrParent[0]}");
+          debugPrint("roy93~ 1 ${arrParent[1]}");
+
+          var sChild1 = arrParent[1];
+          var arrChild = sChild1.split('''","''');
+          debugPrint("roy93~ arrChild ${arrChild.length}");
+          if (arrChild.isNotEmpty) {
+            debugPrint("roy93~ arrChild 0 ${arrChild[0]}");
+            var sBuildId = arrChild[0].replaceAll('''":"''', '');
+            debugPrint("roy93~ ~~~~~~~~~> sBuildId $sBuildId");
+            buildId.value = sBuildId;
+          }
+        }
+      }
+    }
+
     debugPrint("roy93~ >>>dateTime $dateTime");
     var response = await dio.get(
-      '${StringConstants.apiXsmn}?date=$dateTime&slug=xsmn-mien-nam',
+      '${StringConstants.getApiXsmn(buildId.value)}?date=$dateTime&slug=xsmn-mien-nam',
       // data: "ngay_quay=16-12-2023",
       // options: Options(
       //   headers: {
