@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -346,22 +347,40 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           Container(
             alignment: Alignment.center,
             width: double.infinity,
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-            // color: ColorConstants.bkgYellow,
-            color: Colors.yellow,
+            padding: const EdgeInsets.fromLTRB(0, 8, 8, 8),
+            color: Colors.white70,
             child: Row(
               children: [
                 Expanded(
-                  flex: 1,
-                  child: Text(
-                    "Kết quả xổ số ngày ${selectedDateTime.day}-${selectedDateTime.month}-${selectedDateTime.year}",
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.black,
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
+                      color: Colors.white,
+                    ),
+                    width: double.infinity,
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                    child: DefaultTextStyle(
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.start,
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          WavyAnimatedText('Kết quả xổ số'),
+                          WavyAnimatedText('ngày ${selectedDateTime.day}'),
+                          WavyAnimatedText('tháng ${selectedDateTime.month}'),
+                          WavyAnimatedText('năm ${selectedDateTime.year}'),
+                        ],
+                        isRepeatingAnimation: true,
+                        onTap: () {},
+                      ),
                     ),
                   ),
                 ),
+                const SizedBox(width: 8),
                 const Expanded(
                   flex: 2,
                   child: Text(
