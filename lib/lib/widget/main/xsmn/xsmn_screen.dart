@@ -352,13 +352,14 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             child: Row(
               children: [
                 Expanded(
+                  flex: 2,
                   child: Container(
                     alignment: Alignment.centerLeft,
+                    height: 48,
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
                       color: Colors.white,
                     ),
-                    width: double.infinity,
                     padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                     child: DefaultTextStyle(
                       style: const TextStyle(
@@ -382,7 +383,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 ),
                 const SizedBox(width: 8),
                 const Expanded(
-                  flex: 2,
+                  flex: 5,
                   child: Text(
                     "Nhập vé số của tôi để tự động dò",
                     style: TextStyle(
