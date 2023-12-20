@@ -157,7 +157,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
         onTap: (index) {
           _isTouchBottomBarItem = true;
           _controllerPage.jumpToPage(index);
-          // debugPrint('roy93~ current selected index $index');
+          // debugPrint('current selected index $index');
         },
       );
     } else {

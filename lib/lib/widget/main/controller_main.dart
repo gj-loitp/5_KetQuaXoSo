@@ -121,27 +121,27 @@ class ControllerMain extends BaseController {
       var responseGetBuildId = await dio.get('https://baomoi.com/');
       if (responseGetBuildId.statusCode == 200) {
         String htmlToParse = responseGetBuildId.data;
-        debugPrint("roy93~ responseGetBuildId $htmlToParse");
+        // debugPrint("responseGetBuildId $htmlToParse");
         var arrParent = htmlToParse.split('''buildId''');
-        debugPrint("roy93~ arrParent ${arrParent.length}");
+        // debugPrint("arrParent ${arrParent.length}");
         if (arrParent.isNotEmpty && arrParent.length >= 2) {
-          debugPrint("roy93~ 0 ${arrParent[0]}");
-          debugPrint("roy93~ 1 ${arrParent[1]}");
+          // debugPrint("0 ${arrParent[0]}");
+          // debugPrint("1 ${arrParent[1]}");
 
           var sChild1 = arrParent[1];
           var arrChild = sChild1.split('''","''');
-          debugPrint("roy93~ arrChild ${arrChild.length}");
+          // debugPrint("arrChild ${arrChild.length}");
           if (arrChild.isNotEmpty) {
-            debugPrint("roy93~ arrChild 0 ${arrChild[0]}");
+            // debugPrint("arrChild 0 ${arrChild[0]}");
             var sBuildId = arrChild[0].replaceAll('''":"''', '');
-            debugPrint("roy93~ ~~~~~~~~~> sBuildId $sBuildId");
+            // debugPrint("~~~~~~~~~> sBuildId $sBuildId");
             buildId.value = sBuildId;
           }
         }
       }
     }
 
-    debugPrint("roy93~ >>>dateTime $dateTime");
+    // debugPrint(">>>dateTime $dateTime");
     var response = await dio.get(
       '${StringConstants.getApiXsmn(buildId.value)}?date=$dateTime&slug=xsmn-mien-nam',
       // data: "ngay_quay=16-12-2023",
@@ -151,13 +151,13 @@ class ControllerMain extends BaseController {
       //   },
       // ),
     );
-    // debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
+    // debugPrint("response.data.toString() ${response.data.toString()}");
     kqxs.value = KQXS.fromJson(response.data);
     // kqxs.value = KQXS.fromJson(response.data);
-    // debugPrint("roy93~ web ${web.toJson()}");
-    // debugPrint("roy93~ web data ${web.pageProps?.resp?.data?.content?.entries}");
+    // debugPrint("web ${web.toJson()}");
+    // debugPrint("web data ${web.pageProps?.resp?.data?.content?.entries}");
     // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
-    //   debugPrint("roy93~ ${element.displayName} ~ ${element.award} ~ ${element.value}");
+    //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
     // });
     isLoading.value = false;
   }
