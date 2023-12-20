@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
@@ -46,14 +47,22 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: const Text(
-                "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
-                style: TextStyle(
+              child: DefaultTextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                   color: Colors.black,
                 ),
-                textAlign: TextAlign.center,
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    WavyAnimatedText('Xin chào'),
+                    WavyAnimatedText('Chức năng này'),
+                    WavyAnimatedText('sẽ được cập nhật'),
+                    WavyAnimatedText('ở phiên bản tiếp theo :)~'),
+                  ],
+                  isRepeatingAnimation: true,
+                  onTap: () {},
+                ),
               ),
             ),
           ],
