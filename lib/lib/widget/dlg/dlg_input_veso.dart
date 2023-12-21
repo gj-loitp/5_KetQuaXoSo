@@ -109,6 +109,17 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
                 ),
               ),
             ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+              child: const Text(
+                "Hãy nhập đúng định dạng dd/MM/yyyy",
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.redAccent,
+                  fontSize: 14,
+                ),
+              ),
+            ),
           ],
         ),
       ),
