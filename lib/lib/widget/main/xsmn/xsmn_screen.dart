@@ -392,13 +392,27 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                       borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
                       color: Colors.white,
                     ),
-                    child: const Text(
-                      "Nhập vé số của tôi để tự động dò",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          child: Marquee(
+                            text: 'Nhập vé số để tự động dò',
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black87,
+                            ),
+                            blankSpace: 50.0,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        const Icon(
+                          Icons.search,
+                          color: Colors.black,
+                          size: 24.0,
+                        ),
+                      ],
                     ),
                   ),
                 ),
