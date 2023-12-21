@@ -78,6 +78,35 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
                 ),
               ),
             ),
+            Container(
+              margin: const EdgeInsets.only(top: 16),
+              height: 52,
+              alignment: Alignment.centerRight,
+              child: TextField(
+                textInputAction: TextInputAction.next,
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                ],
+                maxLength: 6,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  icon: Icon(Icons.date_range),
+                  hintText: "dd/MM/yyyy",
+                  hintStyle: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.grey,
+                    fontSize: 18,
+                  ),
+                  counterText: "",
+                  border: OutlineInputBorder(),
+                ),
+                style: const TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize: 22,
+                ),
+              ),
+            ),
           ],
         ),
       ),
