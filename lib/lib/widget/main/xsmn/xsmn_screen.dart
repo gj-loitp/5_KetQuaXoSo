@@ -408,7 +408,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                         ),
                         const SizedBox(width: 4),
                         const Icon(
-                          Icons.search,
+                          Icons.document_scanner_outlined,
                           color: Colors.black,
                           size: 24.0,
                         ),
