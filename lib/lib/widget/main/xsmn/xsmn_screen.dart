@@ -396,16 +396,21 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Expanded(
-                          child: Marquee(
-                            text: 'Nhập vé số để tự động dò',
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black87,
+                            child: Material(
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(45),
+                            child: Marquee(
+                              text: 'Nhập vé số để tự động dò',
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
+                              ),
+                              blankSpace: 50.0,
                             ),
-                            blankSpace: 50.0,
+                            onTap: () {},
                           ),
-                        ),
+                        )),
                         const SizedBox(width: 4),
                         const Icon(
                           Icons.document_scanner_outlined,
