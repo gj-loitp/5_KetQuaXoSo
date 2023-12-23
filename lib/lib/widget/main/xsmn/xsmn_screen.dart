@@ -383,15 +383,15 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   color: Colors.black,
                 ),
                 textAlign: TextAlign.start,
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    WavyAnimatedText('Kết quả xổ số'),
-                    WavyAnimatedText('ngày ${selectedDateTime.day}'),
-                    WavyAnimatedText('tháng ${selectedDateTime.month}'),
-                    WavyAnimatedText('năm ${selectedDateTime.year}'),
-                  ],
-                  isRepeatingAnimation: true,
-                  onTap: () {},
+                child: Marquee(
+                  text:
+                      'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black87,
+                  ),
+                  blankSpace: 50.0,
                 ),
               ),
             ),
@@ -411,26 +411,27 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Expanded(
-                      child: Material(
-                    child: InkWell(
-                      borderRadius: BorderRadius.circular(45),
-                      child: Marquee(
-                        text: 'Nhập vé số để tự động dò',
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black87,
+                    child: Material(
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(45),
+                        child: Marquee(
+                          text: 'Nhập vé số để tự động dò',
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87,
+                          ),
+                          blankSpace: 50.0,
                         ),
-                        blankSpace: 50.0,
+                        onTap: () {
+                          Get.dialog(
+                            const DlgInputVeSo(),
+                            barrierColor: Colors.black87,
+                          );
+                        },
                       ),
-                      onTap: () {
-                        Get.dialog(
-                          const DlgInputVeSo(),
-                          barrierColor: Colors.black87,
-                        );
-                      },
                     ),
-                  )),
+                  ),
                   const SizedBox(width: 4),
                   const Icon(
                     Icons.document_scanner_outlined,
