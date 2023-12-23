@@ -57,6 +57,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 children: [
                   SizedBox(height: MediaQuery.of(context).viewPadding.top),
                   _buildCalendar(),
+                  _buildViewSearchMyLottery(),
                   Expanded(
                     child: _buildContentView(),
                   ),
@@ -236,7 +237,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   Widget _buildLoadingView() {
     return Container(
       alignment: Alignment.center,
-      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -359,6 +360,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     var selectedDateTime = _controllerMain.selectedDateTime.value;
     return Container(
       alignment: Alignment.center,
+      height: 52,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
       color: Colors.white70,
