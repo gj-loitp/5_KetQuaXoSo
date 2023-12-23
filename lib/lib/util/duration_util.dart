@@ -141,4 +141,14 @@ class DurationUtils {
     var outputDate = outputFormat.format(inputDate);
     return outputDate.toString();
   }
+
+  static DateTime? stringToDateTime(String date, String fromFormat) {
+    try {
+      final format = DateFormat(fromFormat);
+      DateTime dateTime = format.parse(date);
+      return dateTime;
+    } catch (e) {
+      return null;
+    }
+  }
 }

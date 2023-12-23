@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_controller.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
+import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -231,10 +232,15 @@ class ControllerMain extends BaseController {
     }
   }
 
-  // void applySearch() {
-  //   var sCurrentSearchNumber = currentSearchNumber.value;
-  //   var sCurrentSearchDate = currentSearchDate.value;
-  //   debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
-  //   debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
-  // }
+  void applySearch() {
+    var sCurrentSearchNumber = currentSearchNumber.value;
+    var sCurrentSearchDate = currentSearchDate.value;
+    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
+    var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
+    debugPrint("roy93~  dt $dt");
+    if (dt != null) {
+      setSelectedDateTime(dt, false);
+    }
+  }
 }
