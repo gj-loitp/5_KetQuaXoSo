@@ -235,10 +235,10 @@ class ControllerMain extends BaseController {
   void applySearch() {
     var sCurrentSearchNumber = currentSearchNumber.value;
     var sCurrentSearchDate = currentSearchDate.value;
-    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
-    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
+    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
-    debugPrint("roy93~  dt $dt");
+    // debugPrint("dt $dt");
     if (dt != null) {
       setSelectedDateTime(dt, false);
     }
