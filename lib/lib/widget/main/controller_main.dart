@@ -231,10 +231,10 @@ class ControllerMain extends BaseController {
     }
   }
 
-  void applySearch() {
-    var sCurrentSearchNumber = currentSearchNumber.value;
-    var sCurrentSearchDate = currentSearchDate.value;
-    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
-    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
-  }
+  // void applySearch() {
+  //   var sCurrentSearchNumber = currentSearchNumber.value;
+  //   var sCurrentSearchDate = currentSearchDate.value;
+  //   debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
+  //   debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
+  // }
 }

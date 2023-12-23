@@ -188,7 +188,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
   }
 
   void applySearch() {
-    _controllerMain.applySearch();
+    // _controllerMain.applySearch();
     Get.back();
   }
 }
