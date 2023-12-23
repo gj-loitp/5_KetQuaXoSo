@@ -307,7 +307,6 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   Widget _buildNativeView() {
     var kqxs = _controllerMain.kqxs.value;
-    var selectedDateTime = _controllerMain.selectedDateTime.value;
     // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
     // if (listEntries.isEmpty) {
     //   return _buildFutureView();
@@ -345,97 +344,102 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       // color: Colors.white,
       child: Column(
         children: [
-          Container(
-            alignment: Alignment.center,
-            width: double.infinity,
-            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-            color: Colors.white70,
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    alignment: Alignment.centerLeft,
-                    height: 48,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
-                      color: Colors.white,
-                    ),
-                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                    child: DefaultTextStyle(
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.start,
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          WavyAnimatedText('Kết quả xổ số'),
-                          WavyAnimatedText('ngày ${selectedDateTime.day}'),
-                          WavyAnimatedText('tháng ${selectedDateTime.month}'),
-                          WavyAnimatedText('năm ${selectedDateTime.year}'),
-                        ],
-                        isRepeatingAnimation: true,
-                        onTap: () {},
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  flex: 5,
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                    alignment: Alignment.centerRight,
-                    height: 48,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
-                      color: Colors.white,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Expanded(
-                            child: Material(
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(45),
-                            child: Marquee(
-                              text: 'Nhập vé số để tự động dò',
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black87,
-                              ),
-                              blankSpace: 50.0,
-                            ),
-                            onTap: () {
-                              Get.dialog(
-                                const DlgInputVeSo(),
-                                barrierColor: Colors.black87,
-                              );
-                            },
-                          ),
-                        )),
-                        const SizedBox(width: 4),
-                        const Icon(
-                          Icons.document_scanner_outlined,
-                          color: Colors.black,
-                          size: 24.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          _buildViewSearchMyLottery(),
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 150),
               scrollDirection: Axis.vertical,
               physics: const BouncingScrollPhysics(),
               child: Row(children: listWidget),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildViewSearchMyLottery() {
+    var selectedDateTime = _controllerMain.selectedDateTime.value;
+    return Container(
+      alignment: Alignment.center,
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+      color: Colors.white70,
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              alignment: Alignment.centerLeft,
+              height: 48,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
+                color: Colors.white,
+              ),
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.start,
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    WavyAnimatedText('Kết quả xổ số'),
+                    WavyAnimatedText('ngày ${selectedDateTime.day}'),
+                    WavyAnimatedText('tháng ${selectedDateTime.month}'),
+                    WavyAnimatedText('năm ${selectedDateTime.year}'),
+                  ],
+                  isRepeatingAnimation: true,
+                  onTap: () {},
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            flex: 5,
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+              alignment: Alignment.centerRight,
+              height: 48,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
+                color: Colors.white,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Expanded(
+                      child: Material(
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(45),
+                      child: Marquee(
+                        text: 'Nhập vé số để tự động dò',
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black87,
+                        ),
+                        blankSpace: 50.0,
+                      ),
+                      onTap: () {
+                        Get.dialog(
+                          const DlgInputVeSo(),
+                          barrierColor: Colors.black87,
+                        );
+                      },
+                    ),
+                  )),
+                  const SizedBox(width: 4),
+                  const Icon(
+                    Icons.document_scanner_outlined,
+                    color: Colors.black,
+                    size: 24.0,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
