@@ -73,16 +73,18 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
                   hintStyle: TextStyle(
                     fontWeight: FontWeight.w700,
                     color: Colors.grey,
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                   counterText: "",
                   border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                 ),
                 style: const TextStyle(
                   fontWeight: FontWeight.w700,
                   color: Colors.black,
                   fontSize: 22,
                 ),
+                textAlign: TextAlign.start,
               ),
             ),
             Container(
@@ -102,16 +104,18 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
                   hintStyle: TextStyle(
                     fontWeight: FontWeight.w700,
                     color: Colors.grey,
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                   counterText: "",
                   border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                 ),
                 style: const TextStyle(
                   fontWeight: FontWeight.w700,
                   color: Colors.black,
                   fontSize: 22,
                 ),
+                textAlign: TextAlign.start,
               ),
             ),
             Container(
