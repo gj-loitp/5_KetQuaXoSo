@@ -342,18 +342,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       width: double.infinity,
       height: double.infinity,
       // color: Colors.white,
-      child: Column(
-        children: [
-          _buildViewSearchMyLottery(),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 150),
-              scrollDirection: Axis.vertical,
-              physics: const BouncingScrollPhysics(),
-              child: Row(children: listWidget),
-            ),
-          ),
-        ],
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 150),
+        scrollDirection: Axis.vertical,
+        physics: const BouncingScrollPhysics(),
+        child: Row(children: listWidget),
       ),
     );
   }
@@ -459,7 +452,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(4, 8, 4, 8),
           child: const Text(
             "Giải",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.white),
