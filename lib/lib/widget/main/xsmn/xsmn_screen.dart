@@ -225,14 +225,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     if (isLoading) {
       return _buildLoadingView();
     } else {
-      if (isFuture) {
-        return _buildFutureView();
+      if (isNativeMode) {
+        return _buildNativeView(isFuture);
       } else {
-        if (isNativeMode) {
-          return _buildNativeView();
-        } else {
-          return _buildWebView();
-        }
+        return _buildWebView(isFuture);
       }
     }
   }
@@ -297,58 +293,66 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     );
   }
 
-  Widget _buildWebView() {
-    return Container(
-      padding: EdgeInsets.zero,
-      // color: Colors.white,
-      child: WebViewWidget(controller: _controllerMain.webViewController.value),
-    );
+  Widget _buildWebView(bool isFuture) {
+    if (isFuture) {
+      return _buildFutureView();
+    } else {
+      return Container(
+        padding: EdgeInsets.zero,
+        // color: Colors.white,
+        child: WebViewWidget(controller: _controllerMain.webViewController.value),
+      );
+    }
   }
 
-  Widget _buildNativeView() {
-    var kqxs = _controllerMain.kqxs.value;
-    // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
-    // if (listEntries.isEmpty) {
-    //   return _buildFutureView();
-    // }
-    var listDataWrapper = kqxs.getDataWrapper();
-    // debugPrint("listDataWrapper ${listDataWrapper.length}");
-    // for (var element in listDataWrapper) {
-    //   debugPrint("element ${element.toJson()}");
-    // }
-
-    if (listDataWrapper.isEmpty) {
+  Widget _buildNativeView(bool isFuture) {
+    if (isFuture) {
       return _buildFutureView();
-    }
+    } else {
+      var kqxs = _controllerMain.kqxs.value;
+      // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
+      // if (listEntries.isEmpty) {
+      //   return _buildFutureView();
+      // }
+      var listDataWrapper = kqxs.getDataWrapper();
+      // debugPrint("listDataWrapper ${listDataWrapper.length}");
+      // for (var element in listDataWrapper) {
+      //   debugPrint("element ${element.toJson()}");
+      // }
 
-    var widthItemTitle = 50.0;
-    var widthItemProvince = (Get.width - widthItemTitle) / listDataWrapper.length;
-    var heightItem = 40.0;
+      if (listDataWrapper.isEmpty) {
+        return _buildFutureView();
+      }
 
-    var listWidget = <Widget>[];
-    listWidget.add(_buildNativeTitleView(
-      widthItemTitle,
-      heightItem,
-    ));
-    for (var element in listDataWrapper) {
-      listWidget.add(_buildNativeProvinceView(
-        element,
-        widthItemProvince,
+      var widthItemTitle = 50.0;
+      var widthItemProvince = (Get.width - widthItemTitle) / listDataWrapper.length;
+      var heightItem = 40.0;
+
+      var listWidget = <Widget>[];
+      listWidget.add(_buildNativeTitleView(
+        widthItemTitle,
         heightItem,
       ));
-    }
+      for (var element in listDataWrapper) {
+        listWidget.add(_buildNativeProvinceView(
+          element,
+          widthItemProvince,
+          heightItem,
+        ));
+      }
 
-    return SizedBox(
-      width: double.infinity,
-      height: double.infinity,
-      // color: Colors.white,
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(0, 0, 0, 150),
-        scrollDirection: Axis.vertical,
-        physics: const BouncingScrollPhysics(),
-        child: Row(children: listWidget),
-      ),
-    );
+      return SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        // color: Colors.white,
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 150),
+          scrollDirection: Axis.vertical,
+          physics: const BouncingScrollPhysics(),
+          child: Row(children: listWidget),
+        ),
+      );
+    }
   }
 
   Widget _buildViewSearchMyLottery() {
