@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/lib/formatter/date_text_formatter.dart';
+import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 
 class DlgInputVeSo extends StatefulWidget {
   const DlgInputVeSo({super.key});
@@ -10,7 +12,18 @@ class DlgInputVeSo extends StatefulWidget {
 }
 
 class _DlgInputVeSoState extends State<DlgInputVeSo> {
-  final TextEditingController _dateController = TextEditingController();
+  final ControllerMain _controllerMain = Get.find();
+  final TextEditingController _tecNumber = TextEditingController();
+  final TextEditingController _tecDate = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _tecNumber.addListener(() {
+      var text = _tecNumber.text.toString();
+      _controllerMain.setCurrentNumber(text);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +32,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
       child: Container(
         padding: const EdgeInsets.all(16),
         alignment: Alignment.center,
-        height: 318 + 16 * 5,
+        height: 375,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(45),
           color: Colors.white,
@@ -61,6 +74,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
               height: 52,
               alignment: Alignment.centerRight,
               child: TextField(
+                controller: _tecNumber,
                 textInputAction: TextInputAction.next,
                 inputFormatters: [
                   FilteringTextInputFormatter.digitsOnly,
@@ -92,7 +106,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
               height: 52,
               alignment: Alignment.centerRight,
               child: TextField(
-                controller: _dateController,
+                controller: _tecDate,
                 textInputAction: TextInputAction.next,
                 inputFormatters: [
                   DateTextFormatter(),
@@ -126,13 +140,13 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
                   color: Colors.redAccent,
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
               ),
             ),
             Container(
               width: double.infinity,
-              height: 100,
+              height: 80,
               margin: const EdgeInsets.fromLTRB(32, 8, 32, 0),
               padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
               child: ElevatedButton(
@@ -153,40 +167,5 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
         ),
       ),
     );
-  }
-}
-
-class DateTextFormatter extends TextInputFormatter {
-  @override
-  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
-    if (newValue.text.length > oldValue.text.length && newValue.text.isNotEmpty && oldValue.text.isNotEmpty) {
-      if (RegExp('[^0-9/]').hasMatch(newValue.text)) return oldValue;
-      if (newValue.text.length > 10) return oldValue;
-      if (newValue.text.length == 2 || newValue.text.length == 5) {
-        return TextEditingValue(
-          text: '${newValue.text}/',
-          selection: TextSelection.collapsed(
-            offset: newValue.selection.end + 1,
-          ),
-        );
-      } else if (newValue.text.length == 3 && newValue.text[2] != '/') {
-        return TextEditingValue(
-          text: '${newValue.text.substring(0, 2)}/${newValue.text.substring(2)}',
-          selection: TextSelection.collapsed(
-            offset: newValue.selection.end + 1,
-          ),
-        );
-      } else if (newValue.text.length == 6 && newValue.text[5] != '/') {
-        return TextEditingValue(
-          text: '${newValue.text.substring(0, 5)}/${newValue.text.substring(5)}',
-          selection: TextSelection.collapsed(
-            offset: newValue.selection.end + 1,
-          ),
-        );
-      }
-    } else if (newValue.text.length == 1 && oldValue.text.isEmpty && RegExp('[^0-9]').hasMatch(newValue.text)) {
-      return oldValue;
-    }
-    return newValue;
   }
 }

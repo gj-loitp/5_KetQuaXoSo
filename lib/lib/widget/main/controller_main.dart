@@ -20,6 +20,8 @@ class ControllerMain extends BaseController {
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
   var buildId = "".obs;
 
+  var currentNumber = "".obs;
+
   void clearOnDispose() {
     Get.delete<ControllerMain>();
   }
@@ -196,5 +198,9 @@ class ControllerMain extends BaseController {
       themeIndex.value = index;
       SharedPreferencesUtil.setInt(SharedPreferencesUtil.themeIndex, index);
     }
+  }
+
+  void setCurrentNumber(String s) {
+    currentNumber.value = s;
   }
 }
