@@ -71,7 +71,7 @@ class DurationUtils {
   //fromFormat yyyy-MM-dd'T'HH:mm:ss.SSS
   //toFormat dd/MM/yyyy - HH:mm
   //formatted 07/04/2021 - 23:29
-  static String convertDate(
+  static String? convertDate(
     String date,
     String fromFormat,
     String toFormat,
@@ -79,12 +79,16 @@ class DurationUtils {
     if (date.isEmpty) {
       return "";
     }
-    final format = DateFormat(fromFormat);
-    DateTime gettingDate = format.parse(date);
-    final DateFormat formatter = DateFormat(toFormat);
-    final String formatted = formatter.format(gettingDate);
-    // Dog.d("date $date, fromFormat $fromFormat, toFormat $toFormat, formatted $formatted");
-    return formatted;
+    try {
+      final format = DateFormat(fromFormat);
+      DateTime gettingDate = format.parse(date);
+      final DateFormat formatter = DateFormat(toFormat);
+      final String formatted = formatter.format(gettingDate);
+      // Dog.d("date $date, fromFormat $fromFormat, toFormat $toFormat, formatted $formatted");
+      return formatted;
+    } catch (e) {
+      return "";
+    }
   }
 
   static int getTimeBetweenTargetAndNow(
@@ -130,5 +134,11 @@ class DurationUtils {
     Future.delayed(Duration(milliseconds: milliseconds), () {
       f.call();
     });
+  }
+
+  static String getFormattedDate(DateTime inputDate) {
+    var outputFormat = DateFormat('dd/MM/yyyy');
+    var outputDate = outputFormat.format(inputDate);
+    return outputDate.toString();
   }
 }

@@ -20,7 +20,8 @@ class ControllerMain extends BaseController {
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
   var buildId = "".obs;
 
-  var currentNumber = "".obs;
+  var currentSearchNumber = "".obs;
+  var currentSearchDate = "".obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -201,6 +202,32 @@ class ControllerMain extends BaseController {
   }
 
   void setCurrentNumber(String s) {
-    currentNumber.value = s;
+    currentSearchNumber.value = s;
+  }
+
+  void setCurrentDate(String s) {
+    currentSearchDate.value = s;
+  }
+
+  bool isValidCurrentSearchDate() {
+    try {
+      var arr = currentSearchDate.split("/");
+      int d = int.parse(arr[0]);
+      int m = int.parse(arr[1]);
+      int y = int.parse(arr[2]);
+      debugPrint("roy93~ isValidCurrentSearchDate $d/$m/$y");
+      if (d > 31) {
+        return false;
+      }
+      if (m > 12) {
+        return false;
+      }
+      if (y < 2020) {
+        return false;
+      }
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 }

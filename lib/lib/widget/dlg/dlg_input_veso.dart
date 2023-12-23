@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/formatter/date_text_formatter.dart';
+import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 
 class DlgInputVeSo extends StatefulWidget {
@@ -23,6 +24,13 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
       var text = _tecNumber.text.toString();
       _controllerMain.setCurrentNumber(text);
     });
+    _tecDate.addListener(() {
+      var text = _tecDate.text.toString();
+      _controllerMain.setCurrentDate(text);
+    });
+    var currentSelectedDateTime = _controllerMain.selectedDateTime.value;
+    var sCurrentSelectedDateTime = DurationUtils.getFormattedDate(currentSelectedDateTime);
+    _tecDate.text = sCurrentSelectedDateTime;
   }
 
   @override
@@ -37,135 +45,143 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
           borderRadius: BorderRadius.circular(45),
           color: Colors.white,
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 52,
-              alignment: Alignment.centerRight,
-              child: Material(
-                child: InkWell(
-                  customBorder: const CircleBorder(),
-                  child: const Icon(
-                    Icons.cancel,
-                    color: Colors.black,
-                    size: 32.0,
-                  ),
-                  onTap: () {
-                    Get.back();
-                  },
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 32,
-              child: Text(
-                "Mời nhập thông tin",
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  fontSize: 22,
-                ),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 16),
-              height: 52,
-              alignment: Alignment.centerRight,
-              child: TextField(
-                controller: _tecNumber,
-                textInputAction: TextInputAction.next,
-                inputFormatters: [
-                  FilteringTextInputFormatter.digitsOnly,
-                ],
-                maxLength: 6,
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.local_atm),
-                  hintText: "Nhập đúng dãy số của bạn",
-                  hintStyle: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: Colors.grey,
-                    fontSize: 15,
-                  ),
-                  counterText: "",
-                  border: OutlineInputBorder(),
-                  contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
-                ),
-                style: const TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  fontSize: 22,
-                ),
-                textAlign: TextAlign.start,
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 16),
-              height: 52,
-              alignment: Alignment.centerRight,
-              child: TextField(
-                controller: _tecDate,
-                textInputAction: TextInputAction.next,
-                inputFormatters: [
-                  DateTextFormatter(),
-                ],
-                keyboardType: TextInputType.datetime,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.date_range),
-                  hintText: "dd/MM/yyyy",
-                  hintStyle: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: Colors.grey,
-                    fontSize: 15,
-                  ),
-                  counterText: "",
-                  border: OutlineInputBorder(),
-                  contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
-                ),
-                style: const TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  fontSize: 22,
-                ),
-                textAlign: TextAlign.start,
-              ),
-            ),
-            Container(
-              height: 32,
-              padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-              child: const Text(
-                "Hãy nhập đúng định dạng dd/MM/yyyy",
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  color: Colors.redAccent,
-                  fontSize: 12,
-                ),
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 80,
-              margin: const EdgeInsets.fromLTRB(32, 8, 32, 0),
-              padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  textStyle: const TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black,
-                    fontSize: 22,
-                  ),
-                ),
-                onPressed: () {
-                  Get.back();
-                },
-                child: const Text('Xác nhận'),
-              ),
-            ),
-          ],
-        ),
+        child: Obx(() {
+          return _buildViewBody();
+        }),
       ),
+    );
+  }
+
+  Widget _buildViewBody() {
+    var isValidCurrentSearchDate = _controllerMain.isValidCurrentSearchDate();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          height: 52,
+          alignment: Alignment.centerRight,
+          child: Material(
+            child: InkWell(
+              customBorder: const CircleBorder(),
+              child: const Icon(
+                Icons.cancel,
+                color: Colors.black,
+                size: 32.0,
+              ),
+              onTap: () {
+                Get.back();
+              },
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 32,
+          child: Text(
+            "Mời nhập thông tin",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+              fontSize: 22,
+            ),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 16),
+          height: 52,
+          alignment: Alignment.centerRight,
+          child: TextField(
+            autofocus: true,
+            controller: _tecNumber,
+            textInputAction: TextInputAction.next,
+            inputFormatters: [
+              FilteringTextInputFormatter.digitsOnly,
+            ],
+            maxLength: 6,
+            keyboardType: TextInputType.number,
+            decoration: const InputDecoration(
+              icon: Icon(Icons.local_atm),
+              hintText: "Nhập đúng dãy số của bạn",
+              hintStyle: TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.grey,
+                fontSize: 15,
+              ),
+              counterText: "",
+              border: OutlineInputBorder(),
+              contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+            ),
+            style: const TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+              fontSize: 22,
+            ),
+            textAlign: TextAlign.start,
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 16),
+          height: 52,
+          alignment: Alignment.centerRight,
+          child: TextField(
+            controller: _tecDate,
+            textInputAction: TextInputAction.next,
+            inputFormatters: [
+              DateTextFormatter(),
+            ],
+            keyboardType: TextInputType.datetime,
+            decoration: const InputDecoration(
+              icon: Icon(Icons.date_range),
+              hintText: "dd/MM/yyyy",
+              hintStyle: TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.grey,
+                fontSize: 15,
+              ),
+              counterText: "",
+              border: OutlineInputBorder(),
+              contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+            ),
+            style: const TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+              fontSize: 22,
+            ),
+            textAlign: TextAlign.start,
+          ),
+        ),
+        Container(
+          height: 32,
+          padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+          child: Text(
+            isValidCurrentSearchDate ? "" : "Hãy nhập đúng định dạng dd/MM/202y",
+            style: const TextStyle(
+              fontWeight: FontWeight.w400,
+              color: Colors.redAccent,
+              fontSize: 12,
+            ),
+          ),
+        ),
+        Container(
+          width: double.infinity,
+          height: 80,
+          margin: const EdgeInsets.fromLTRB(32, 8, 32, 0),
+          padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.black,
+                fontSize: 22,
+              ),
+            ),
+            onPressed: () {
+              Get.back();
+            },
+            child: const Text('Xác nhận'),
+          ),
+        ),
+      ],
     );
   }
 }
