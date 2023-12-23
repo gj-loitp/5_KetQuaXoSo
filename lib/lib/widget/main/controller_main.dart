@@ -215,7 +215,7 @@ class ControllerMain extends BaseController {
       int d = int.parse(arr[0]);
       int m = int.parse(arr[1]);
       int y = int.parse(arr[2]);
-      debugPrint("roy93~ isValidCurrentSearchDate $d/$m/$y");
+      // debugPrint("isValidCurrentSearchDate $d/$m/$y");
       if (d > 31) {
         return false;
       }
@@ -229,5 +229,12 @@ class ControllerMain extends BaseController {
     } catch (e) {
       return false;
     }
+  }
+
+  void applySearch() {
+    var sCurrentSearchNumber = currentSearchNumber.value;
+    var sCurrentSearchDate = currentSearchDate.value;
+    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
   }
 }

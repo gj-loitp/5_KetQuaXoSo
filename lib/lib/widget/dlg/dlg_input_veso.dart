@@ -175,13 +175,20 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
                 fontSize: 22,
               ),
             ),
-            onPressed: () {
-              Get.back();
-            },
+            onPressed: isValidCurrentSearchDate
+                ? () {
+                    applySearch();
+                  }
+                : null,
             child: const Text('Xác nhận'),
           ),
         ),
       ],
     );
+  }
+
+  void applySearch() {
+    _controllerMain.applySearch();
+    Get.back();
   }
 }
