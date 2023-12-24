@@ -230,12 +230,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_rounded_date_picker",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_rounded_date_picker-3.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "flutter_svg",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9",
       "packageUri": "lib/",
@@ -836,7 +830,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-24T07:45:51.568608Z",
+  "generated": "2023-12-24T07:47:34.882950Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

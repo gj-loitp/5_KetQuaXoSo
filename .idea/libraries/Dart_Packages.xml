@@ -72,13 +72,6 @@
             </list>
           </value>
         </entry>
-        <entry key="calendar_timeline_sbk">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/calendar_timeline_sbk-1.1.5/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="characters">
           <value>
             <list>
@@ -335,13 +328,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/in_app_review_platform_interface-2.0.5/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="intl">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/intl-0.18.1/lib" />
             </list>
           </value>
         </entry>
@@ -615,13 +601,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.27.7/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="scrollable_positioned_list">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8/lib" />
             </list>
           </value>
         </entry>
@@ -981,7 +960,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cached_network_image-3.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cached_network_image_platform_interface-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cached_network_image_web-1.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/calendar_timeline_sbk-1.1.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/characters-1.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cli_util-0.4.1/lib" />
@@ -1016,7 +994,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/image-4.1.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/in_app_review-2.0.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/in_app_review_platform_interface-2.0.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/intl-0.18.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.6.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.8.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/kenburns_nullsafety-1.0.1/lib" />
@@ -1056,7 +1033,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pull_to_refresh-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/restart_app-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.27.7/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shape_of_view_null_safe-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/share_plus-7.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/share_plus_platform_interface-3.3.1/lib" />
