@@ -122,10 +122,6 @@ easy_debounce
 2.12
 file:///Users/loitran/.pub-cache/hosted/pub.dev/easy_debounce-2.0.3/
 file:///Users/loitran/.pub-cache/hosted/pub.dev/easy_debounce-2.0.3/lib/
-event_bus
-2.12
-file:///Users/loitran/.pub-cache/hosted/pub.dev/event_bus-2.0.0/
-file:///Users/loitran/.pub-cache/hosted/pub.dev/event_bus-2.0.0/lib/
 fading_edge_scrollview
 2.12
 file:///Users/loitran/.pub-cache/hosted/pub.dev/fading_edge_scrollview-3.0.0/
@@ -178,10 +174,6 @@ flutter_svg
 2.19
 file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9/
 file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9/lib/
-focus_detector
-2.12
-file:///Users/loitran/.pub-cache/hosted/pub.dev/focus_detector-2.0.1/
-file:///Users/loitran/.pub-cache/hosted/pub.dev/focus_detector-2.0.1/lib/
 get
 2.15
 file:///Users/loitran/.pub-cache/hosted/pub.dev/get-4.6.6/
@@ -530,10 +522,6 @@ vibration
 2.12
 file:///Users/loitran/.pub-cache/hosted/pub.dev/vibration-1.8.4/
 file:///Users/loitran/.pub-cache/hosted/pub.dev/vibration-1.8.4/lib/
-visibility_detector
-2.12
-file:///Users/loitran/.pub-cache/hosted/pub.dev/visibility_detector-0.2.2/
-file:///Users/loitran/.pub-cache/hosted/pub.dev/visibility_detector-0.2.2/lib/
 web
 3.2
 file:///Users/loitran/.pub-cache/hosted/pub.dev/web-0.3.0/
