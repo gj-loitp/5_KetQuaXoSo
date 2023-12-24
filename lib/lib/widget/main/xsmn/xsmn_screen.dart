@@ -1,6 +1,7 @@
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
@@ -326,7 +327,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
       var widthItemTitle = 50.0;
       var widthItemProvince = (Get.width - widthItemTitle) / listDataWrapper.length;
-      var heightItem = 40.0;
+      var heightItem = 50.0;
 
       var listWidget = <Widget>[];
       listWidget.add(_buildNativeTitleView(
@@ -618,6 +619,34 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   ) {
     var myCurrentLottery = _controllerMain.currentSearchNumber.value;
     debugPrint("roy93~ _buildNativeProvinceView myCurrentLottery $myCurrentLottery");
+    Map<String, HighlightedWord> words = {
+      "1": HighlightedWord(
+        onTap: () {},
+        textStyle: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontSize: 17,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.green,
+          borderRadius: BorderRadius.circular(45),
+        ),
+        padding: const EdgeInsets.all(2),
+      ),
+      "6": HighlightedWord(
+        onTap: () {},
+        textStyle: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontSize: 17,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.green,
+          borderRadius: BorderRadius.circular(45),
+        ),
+        padding: const EdgeInsets.all(2),
+      ),
+    };
     return Column(
       children: [
         Container(
@@ -650,9 +679,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("8", myCurrentLottery),
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("8"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -666,7 +697,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("7", myCurrentLottery),
+            dataWrapper.getValueByAward("7"),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -681,7 +712,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("6", myCurrentLottery),
+            dataWrapper.getValueByAward("6"),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -696,7 +727,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("5", myCurrentLottery),
+            dataWrapper.getValueByAward("5"),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -711,7 +742,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("4", myCurrentLottery),
+            dataWrapper.getValueByAward("4"),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -726,7 +757,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("3", myCurrentLottery),
+            dataWrapper.getValueByAward("3"),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -741,7 +772,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("2", myCurrentLottery),
+            dataWrapper.getValueByAward("2"),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -756,7 +787,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("1", myCurrentLottery),
+            dataWrapper.getValueByAward("1"),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -771,7 +802,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("ĐB", myCurrentLottery),
+            dataWrapper.getValueByAward("ĐB"),
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.red),
             textAlign: TextAlign.center,
           ),

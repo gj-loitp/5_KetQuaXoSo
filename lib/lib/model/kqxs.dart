@@ -1,6 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:get/get.dart';
-
 class KQXS {
   PageProps? pageProps;
 
@@ -784,7 +781,7 @@ class DataWrapper {
     return data;
   }
 
-  String getValueByAward(String award, String myCurrentLottery) {
+  String getValueByAward(String award) {
     var record = recordKQXS?.firstWhere((element) => element.award == award);
     var text = record?.value ?? "";
 
@@ -793,10 +790,7 @@ class DataWrapper {
     for (var element in arr) {
       s += "${element.trim()}\n";
     }
-
-    debugPrint("roy93~ getValueByAward s $s");
-    debugPrint("roy93~ getValueByAward myCurrentLottery $myCurrentLottery");
-
+    // debugPrint("getValueByAward s $s");
     return s.trim();
   }
 }

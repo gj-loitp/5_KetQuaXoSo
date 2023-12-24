@@ -152,6 +152,8 @@ dependencies:
 #  webview_flutter: ^4.4.2
   #https://pub.dev/packages/youtube_player_flutter
 #  youtube_player_flutter: ^8.1.2
+  #https://pub.dev/packages/highlight_text
+  highlight_text: ^1.7.0
 
 dev_dependencies:
   flutter_test:

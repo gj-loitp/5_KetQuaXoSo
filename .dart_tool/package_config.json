@@ -224,6 +224,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "highlight_text",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/highlight_text-1.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "http",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/http-1.1.0",
       "packageUri": "lib/",
@@ -710,7 +716,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-24T07:50:10.412614Z",
+  "generated": "2023-12-24T07:51:17.994298Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }
