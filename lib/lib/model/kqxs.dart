@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class KQXS {
@@ -783,7 +784,7 @@ class DataWrapper {
     return data;
   }
 
-  String getValueByAward(String award) {
+  String getValueByAward(String award, String myCurrentLottery) {
     var record = recordKQXS?.firstWhere((element) => element.award == award);
     var text = record?.value ?? "";
 
@@ -792,6 +793,9 @@ class DataWrapper {
     for (var element in arr) {
       s += "${element.trim()}\n";
     }
+
+    debugPrint("roy93~ getValueByAward s $s");
+    debugPrint("roy93~ getValueByAward myCurrentLottery $myCurrentLottery");
 
     return s.trim();
   }

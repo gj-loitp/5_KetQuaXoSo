@@ -616,6 +616,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     double widthItem,
     double heightItem,
   ) {
+    var myCurrentLottery = _controllerMain.currentSearchNumber.value;
+    debugPrint("roy93~ _buildNativeProvinceView myCurrentLottery $myCurrentLottery");
     return Column(
       children: [
         Container(
@@ -649,7 +651,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("8"),
+            dataWrapper.getValueByAward("8", myCurrentLottery),
             style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
           ),
         ),
@@ -664,7 +666,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("7"),
+            dataWrapper.getValueByAward("7", myCurrentLottery),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -679,7 +681,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("6"),
+            dataWrapper.getValueByAward("6", myCurrentLottery),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -694,7 +696,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("5"),
+            dataWrapper.getValueByAward("5", myCurrentLottery),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -709,7 +711,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("4"),
+            dataWrapper.getValueByAward("4", myCurrentLottery),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -724,7 +726,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("3"),
+            dataWrapper.getValueByAward("3", myCurrentLottery),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -739,7 +741,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("2"),
+            dataWrapper.getValueByAward("2", myCurrentLottery),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -754,7 +756,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("1"),
+            dataWrapper.getValueByAward("1", myCurrentLottery),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
@@ -769,7 +771,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
           child: Text(
-            dataWrapper.getValueByAward("ĐB"),
+            dataWrapper.getValueByAward("ĐB", myCurrentLottery),
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.red),
             textAlign: TextAlign.center,
           ),
