@@ -617,36 +617,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     double widthItem,
     double heightItem,
   ) {
-    var myCurrentLottery = _controllerMain.currentSearchNumber.value;
-    debugPrint("roy93~ _buildNativeProvinceView myCurrentLottery $myCurrentLottery");
-    Map<String, HighlightedWord> words = {
-      "1": HighlightedWord(
-        onTap: () {},
-        textStyle: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w700,
-          fontSize: 17,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.green,
-          borderRadius: BorderRadius.circular(45),
-        ),
-        padding: const EdgeInsets.all(2),
-      ),
-      "6": HighlightedWord(
-        onTap: () {},
-        textStyle: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w700,
-          fontSize: 17,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.green,
-          borderRadius: BorderRadius.circular(45),
-        ),
-        padding: const EdgeInsets.all(2),
-      ),
-    };
+    var words = _controllerMain.getWordsHighlight();
     return Column(
       children: [
         Container(

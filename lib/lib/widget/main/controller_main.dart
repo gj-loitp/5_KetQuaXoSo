@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pretty_dio_logger/flutter_pretty_dio_logger.dart';
 import 'package:get/get.dart';
+import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_controller.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
@@ -256,4 +257,26 @@ class ControllerMain extends BaseController {
 //     return sCurrentSearchNumber;
 //   }
 // }
+
+  Map<String, HighlightedWord> getWordsHighlight() {
+    var myCurrentLottery = currentSearchNumber.value;
+    Map<String, HighlightedWord> words = {};
+    for (var char in myCurrentLottery.characters) {
+      // debugPrint("char $char");
+      words[char] = HighlightedWord(
+        onTap: () {},
+        textStyle: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontSize: 17,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.green,
+          borderRadius: BorderRadius.circular(45),
+        ),
+        padding: const EdgeInsets.all(2),
+      );
+    }
+    return words;
+  }
 }
