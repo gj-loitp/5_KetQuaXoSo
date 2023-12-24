@@ -186,6 +186,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             //TODO roy93~
                           },
                         ),
+                        UIUtils.getButton(
+                          "Source code ở Github",
+                          Icons.data_object,
+                          description:
+                          "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
+                              () {
+                            //TODO roy93~
+                          },
+                        ),
                       ],
                     ),
                   ),
