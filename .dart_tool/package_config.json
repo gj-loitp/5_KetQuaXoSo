@@ -230,12 +230,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_svg",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
       "name": "flutter_test",
       "rootUri": "file:///Users/loitran/development/flutter_sdk/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -370,12 +364,6 @@
     {
       "name": "path",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/path-1.8.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "path_parsing",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/path_parsing-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -734,24 +722,6 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "vector_graphics",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/vector_graphics-1.1.9+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
-      "name": "vector_graphics_codec",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.9+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
-      "name": "vector_graphics_compiler",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.9+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
       "name": "vector_math",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -830,7 +800,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-24T07:47:34.882950Z",
+  "generated": "2023-12-24T07:48:12.366279Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }
