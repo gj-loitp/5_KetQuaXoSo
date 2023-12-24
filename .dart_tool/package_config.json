@@ -44,12 +44,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "blur",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/blur-3.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
       "name": "boolean_selector",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -920,7 +914,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-24T07:41:20.598321Z",
+  "generated": "2023-12-24T07:43:19.034684Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }
