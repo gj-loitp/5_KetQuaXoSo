@@ -325,13 +325,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         return _buildFutureView();
       }
 
-      var widthItemTitle = 50.0;
-      var widthItemProvince = (Get.width - widthItemTitle) / listDataWrapper.length;
+      var widthItemTitleLabel = 30.0;
+      var widthItemProvince = (Get.width - widthItemTitleLabel) / listDataWrapper.length;
       var heightItem = 50.0;
 
       var listWidget = <Widget>[];
       listWidget.add(_buildNativeTitleView(
-        widthItemTitle,
+        widthItemTitleLabel,
         heightItem,
       ));
       for (var element in listDataWrapper) {
@@ -466,10 +466,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(4, 8, 4, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "Giải",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.white),
+            "🇻🇳",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.white),
           ),
         ),
         Container(
@@ -481,10 +481,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.8",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
+            "8",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
           ),
         ),
         Container(
@@ -496,10 +496,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.7",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            "7",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -511,10 +511,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.6",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            "6",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -526,10 +526,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.5",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            "5",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -541,10 +541,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.4",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            "4",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -556,10 +556,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.3",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            "3",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -571,10 +571,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.2",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            "2",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -586,10 +586,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "G.1",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.grey),
+            "1",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -601,9 +601,9 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "Đ.B",
+            "ĐB",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),
