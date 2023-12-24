@@ -86,7 +86,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 child: CalendarTimeline(
                   shrink: false,
                   showYears: false,
-                  initialDate: _controllerMain.selectedDateTime.value,
+                  initialDate: _controllerMain.xsmnSelectedDateTime.value,
                   firstDate: DateTime.now().subtract(const Duration(days: 365)),
                   lastDate: DateTime.now().add(const Duration(days: 365)),
                   onDateSelected: (date) {
@@ -209,10 +209,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildContentView() {
-    var isLoading = _controllerMain.isLoading.value;
+    var isLoading = _controllerMain.xsmnIsLoading.value;
     var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
-    var timeSelected = _controllerMain.selectedDateTime.value.microsecondsSinceEpoch;
+    var timeSelected = _controllerMain.xsmnSelectedDateTime.value.microsecondsSinceEpoch;
     var isFuture = false;
     // debugPrint("timeNow $timeNow");
     // debugPrint("timeSelected $timeSelected");
@@ -301,7 +301,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       return Container(
         padding: EdgeInsets.zero,
         // color: Colors.white,
-        child: WebViewWidget(controller: _controllerMain.webViewController.value),
+        child: WebViewWidget(controller: _controllerMain.xsmnWebViewController.value),
       );
     }
   }
@@ -310,7 +310,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     if (isFuture) {
       return _buildFutureView();
     } else {
-      var kqxs = _controllerMain.kqxs.value;
+      var kqxs = _controllerMain.xsmnKqxs.value;
       // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
       // if (listEntries.isEmpty) {
       //   return _buildFutureView();
@@ -357,8 +357,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildViewSearchMyLottery() {
-    var selectedDateTime = _controllerMain.selectedDateTime.value;
-    var currentSearchNumber = _controllerMain.currentSearchNumber.value;
+    var selectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
+    var currentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
     var sCurrentSearchNumber = "";
     if (currentSearchNumber.isEmpty) {
       sCurrentSearchNumber = "Nhập vé số để tự động dò";

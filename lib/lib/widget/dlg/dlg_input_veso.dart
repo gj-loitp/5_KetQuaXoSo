@@ -28,11 +28,11 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
       var text = _tecDate.text.toString();
       _controllerMain.setCurrentDate(text);
     });
-    var currentSelectedDateTime = _controllerMain.selectedDateTime.value;
+    var currentSelectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
     var sCurrentSelectedDateTime = DurationUtils.getFormattedDate(currentSelectedDateTime);
     _tecDate.text = sCurrentSelectedDateTime;
 
-    var sCurrentSearchNumber = _controllerMain.currentSearchNumber.value;
+    var sCurrentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
     if (sCurrentSearchNumber.isNotEmpty) {
       _tecNumber.text = sCurrentSearchNumber;
     }

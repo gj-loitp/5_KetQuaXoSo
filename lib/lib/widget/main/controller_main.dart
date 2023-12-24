@@ -13,33 +13,42 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 class ControllerMain extends BaseController {
   final dio = Dio();
-  var selectedDateTime = DateTime.now().obs;
-  var webViewController = WebViewController().obs;
-  var isLoading = true.obs;
   var isNativeMode = true.obs;
   var isFullScreen = true.obs;
-  var kqxs = KQXS().obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
   var buildId = "".obs;
 
-  var currentSearchNumber = "".obs;
-  var currentSearchDate = "".obs;
+  //xsmn
+  var xsmnSelectedDateTime = DateTime.now().obs;
+  var xsmnWebViewController = WebViewController().obs;
+  var xsmnIsLoading = true.obs;
+  var xsmnKqxs = KQXS().obs;
+  var xsmnCurrentSearchNumber = "".obs;
+  var xsmnCurrentSearchDate = "".obs;
+
+  //xsmt
+
+  //xsmb
+
+  //vietlot
+
+  //province
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
   }
 
   Future<void> setSelectedDateTime(DateTime dateTime, bool isFirstInit) async {
-    if (selectedDateTime.value.day == dateTime.day &&
-        selectedDateTime.value.month == dateTime.month &&
-        selectedDateTime.value.year == dateTime.year &&
+    if (xsmnSelectedDateTime.value.day == dateTime.day &&
+        xsmnSelectedDateTime.value.month == dateTime.month &&
+        xsmnSelectedDateTime.value.year == dateTime.year &&
         !isFirstInit) {
       return;
     }
 
     // debugPrint("setSelectedDateTime $dateTime");
-    isLoading.value = true;
-    selectedDateTime.value = dateTime;
+    xsmnIsLoading.value = true;
+    xsmnSelectedDateTime.value = dateTime;
 
     var date = getSelectedDayInString();
     // debugPrint("date $date");
@@ -62,7 +71,7 @@ class ControllerMain extends BaseController {
     var link = "${StringConstants.kqMienNam}#n$date";
     // debugPrint("link $link");
 
-    webViewController.value = WebViewController()
+    xsmnWebViewController.value = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(Colors.white)
       ..setNavigationDelegate(
@@ -76,7 +85,7 @@ class ControllerMain extends BaseController {
           onPageFinished: (String url) async {
             // debugPrint("onPageFinished url $url");
             addBottomSpace();
-            isLoading.value = false;
+            xsmnIsLoading.value = false;
           },
           onWebResourceError: (WebResourceError error) {
             // debugPrint("onPageFinished url $error");
@@ -94,14 +103,14 @@ class ControllerMain extends BaseController {
   }
 
   Future<void> addBottomSpace() async {
-    isLoading.value = true;
+    xsmnIsLoading.value = true;
     const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-    await webViewController.value.runJavaScript(script);
+    await xsmnWebViewController.value.runJavaScript(script);
   }
 
   Future<void> _getData(String dateTime) async {
@@ -157,18 +166,18 @@ class ControllerMain extends BaseController {
       // ),
     );
     // debugPrint("response.data.toString() ${response.data.toString()}");
-    kqxs.value = KQXS.fromJson(response.data);
+    xsmnKqxs.value = KQXS.fromJson(response.data);
     // kqxs.value = KQXS.fromJson(response.data);
     // debugPrint("web ${web.toJson()}");
     // debugPrint("web data ${web.pageProps?.resp?.data?.content?.entries}");
     // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
     //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
     // });
-    isLoading.value = false;
+    xsmnIsLoading.value = false;
   }
 
   String getSelectedDayInString() {
-    var dateTime = selectedDateTime.value;
+    var dateTime = xsmnSelectedDateTime.value;
     var day = "";
     if (dateTime.day >= 10) {
       day = "${dateTime.day}";
@@ -204,20 +213,20 @@ class ControllerMain extends BaseController {
   }
 
   void setCurrentNumber(String s) {
-    currentSearchNumber.value = s;
+    xsmnCurrentSearchNumber.value = s;
   }
 
   void setCurrentDate(String s) {
-    currentSearchDate.value = s;
+    xsmnCurrentSearchDate.value = s;
   }
 
   String msgInvalidCurrentSearchDate() {
     try {
       var currentYear = DateTime.now().year;
-      if (currentSearchDate.value.length != 10) {
+      if (xsmnCurrentSearchDate.value.length != 10) {
         return "Hãy nhập đúng định dạng dd/MM/$currentYear";
       }
-      var arr = currentSearchDate.split("/");
+      var arr = xsmnCurrentSearchDate.split("/");
       int d = int.parse(arr[0]);
       int m = int.parse(arr[1]);
       int y = int.parse(arr[2]);
@@ -238,8 +247,8 @@ class ControllerMain extends BaseController {
   }
 
   void applySearch() {
-    var sCurrentSearchNumber = currentSearchNumber.value;
-    var sCurrentSearchDate = currentSearchDate.value;
+    var sCurrentSearchNumber = xsmnCurrentSearchNumber.value;
+    var sCurrentSearchDate = xsmnCurrentSearchDate.value;
     debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
     debugPrint("sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
@@ -249,15 +258,6 @@ class ControllerMain extends BaseController {
     }
   }
 
-// String getMyLotteryString() {
-//   var sCurrentSearchNumber = currentSearchNumber.value;
-//   if (sCurrentSearchNumber.isEmpty) {
-//     return "Nhập vé số để tự động dò";
-//   } else {
-//     return sCurrentSearchNumber;
-//   }
-// }
-
   String _getLastChars(String inputString, int count) {
     int endIndex = inputString.length;
     int startIndex = endIndex - count;
@@ -266,7 +266,7 @@ class ControllerMain extends BaseController {
   }
 
   Map<String, HighlightedWord> getWordsHighlight(double fontSize) {
-    var myCurrentLottery = currentSearchNumber.value;
+    var myCurrentLottery = xsmnCurrentSearchNumber.value;
     Map<String, HighlightedWord> words = {};
 
     for (int i = 0; i < myCurrentLottery.characters.length; i++) {
