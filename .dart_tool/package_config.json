@@ -92,12 +92,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "clipboard",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/clipboard-0.1.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "clock",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
@@ -108,12 +102,6 @@
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/collection-1.18.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
-    },
-    {
-      "name": "confetti",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/confetti-0.7.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
     },
     {
       "name": "connectivity_plus",
@@ -908,7 +896,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-24T07:44:08.948009Z",
+  "generated": "2023-12-24T07:44:37.331964Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }
