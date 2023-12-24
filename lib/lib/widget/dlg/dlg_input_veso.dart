@@ -58,7 +58,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
   }
 
   Widget _buildViewBody() {
-    var isValidCurrentSearchDate = _controllerMain.isValidCurrentSearchDate();
+    var msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDate();
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -159,7 +159,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
           height: 32,
           padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
           child: Text(
-            isValidCurrentSearchDate ? "" : "Hãy nhập đúng định dạng dd/MM/202y",
+            msgInvalidCurrentSearchDate,
             style: const TextStyle(
               fontWeight: FontWeight.w400,
               color: Colors.redAccent,
@@ -180,7 +180,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
                 fontSize: 22,
               ),
             ),
-            onPressed: isValidCurrentSearchDate
+            onPressed: msgInvalidCurrentSearchDate.isEmpty
                 ? () {
                     applySearch();
                   }

@@ -210,25 +210,29 @@ class ControllerMain extends BaseController {
     currentSearchDate.value = s;
   }
 
-  bool isValidCurrentSearchDate() {
+  String msgInvalidCurrentSearchDate() {
     try {
+      var currentYear = DateTime.now().year;
+      if (currentSearchDate.value.length != 10) {
+        return "Hãy nhập đúng định dạng dd/MM/$currentYear";
+      }
       var arr = currentSearchDate.split("/");
       int d = int.parse(arr[0]);
       int m = int.parse(arr[1]);
       int y = int.parse(arr[2]);
       // debugPrint("isValidCurrentSearchDate $d/$m/$y");
-      if (d > 31) {
-        return false;
+      if (d <= 0 || d >= 32) {
+        return "Ngày không hợp lệ (0<ngày<32)";
       }
-      if (m > 12) {
-        return false;
+      if (m <= 0 || m >= 13) {
+        return "Tháng không hợp lệ (0<tháng<13)";
       }
-      if (y < 2020) {
-        return false;
+      if (y != currentYear) {
+        return "Năm không hợp lệ (Năm = $currentYear)";
       }
-      return true;
+      return "";
     } catch (e) {
-      return false;
+      return "";
     }
   }
 
@@ -244,12 +248,12 @@ class ControllerMain extends BaseController {
     }
   }
 
-  // String getMyLotteryString() {
-  //   var sCurrentSearchNumber = currentSearchNumber.value;
-  //   if (sCurrentSearchNumber.isEmpty) {
-  //     return "Nhập vé số để tự động dò";
-  //   } else {
-  //     return sCurrentSearchNumber;
-  //   }
-  // }
+// String getMyLotteryString() {
+//   var sCurrentSearchNumber = currentSearchNumber.value;
+//   if (sCurrentSearchNumber.isEmpty) {
+//     return "Nhập vé số để tự động dò";
+//   } else {
+//     return sCurrentSearchNumber;
+//   }
+// }
 }
