@@ -468,7 +468,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "🇻🇳",
+            "╲",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.white),
           ),
         ),
@@ -483,7 +483,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "8",
+            "⓼",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
           ),
         ),
@@ -498,7 +498,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "7",
+            "⓻",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -513,7 +513,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "6",
+            "⓺",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -528,7 +528,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "5",
+            "⓹",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -543,7 +543,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "4",
+            "⓸",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -558,7 +558,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "3",
+            "⓷",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -573,7 +573,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "2",
+            "⓶",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -588,7 +588,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "1",
+            "⓵",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -603,7 +603,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "ĐB",
+            "🇻🇳",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),
