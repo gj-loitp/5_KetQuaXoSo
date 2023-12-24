@@ -132,9 +132,9 @@ dependencies:
   #https://pub.dev/packages/pull_to_refresh
 #  pull_to_refresh: ^2.0.0
   #https://pub.dev/packages/shape_of_view_null_safe
-  shape_of_view_null_safe: ^2.0.0
+#  shape_of_view_null_safe: ^2.0.0
   #https://pub.dev/packages/sliding_up_panel
-  sliding_up_panel: ^2.0.0+1
+#  sliding_up_panel: ^2.0.0+1
   #https://pub.dev/packages/tiengviet
 #  tiengviet: ^1.0.0
   #https://pub.dev/packages/timeago
@@ -147,7 +147,7 @@ dependencies:
 #  uuid:
 
   #https://pub.dev/packages/vibration
-  vibration: ^1.8.4
+#  vibration: ^1.8.4
   #https://pub.dev/packages/webview_flutter
 #  webview_flutter: ^4.4.2
   #https://pub.dev/packages/youtube_player_flutter
