@@ -652,6 +652,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("8"),
             words: wordsRed,
             textStyle: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
@@ -669,6 +670,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("7"),
             words: wordsBlack,
             textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
@@ -686,6 +688,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("6"),
             words: wordsBlack,
             textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
@@ -703,6 +706,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("5"),
             words: wordsBlack,
             textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
@@ -720,6 +724,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("4"),
             words: wordsBlack,
             textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
@@ -737,6 +742,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("3"),
             words: wordsBlack,
             textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
@@ -754,6 +760,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("2"),
             words: wordsBlack,
             textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
@@ -773,6 +780,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           child: TextHighlight(
             text: dataWrapper.getValueByAward("1"),
             words: wordsBlack,
+            binding: HighlightBinding.last,
             textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
             textAlign: TextAlign.center,
           ),
@@ -788,6 +796,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
+            binding: HighlightBinding.last,
             text: dataWrapper.getValueByAward("ĐB"),
             words: wordsRed,
             textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.red),

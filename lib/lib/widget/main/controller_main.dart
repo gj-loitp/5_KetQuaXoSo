@@ -258,12 +258,21 @@ class ControllerMain extends BaseController {
 //   }
 // }
 
+  String _getLastChars(String inputString, int count) {
+    int endIndex = inputString.length;
+    int startIndex = endIndex - count;
+    startIndex = startIndex < 0 ? 0 : startIndex;
+    return inputString.substring(startIndex, endIndex);
+  }
+
   Map<String, HighlightedWord> getWordsHighlight(double fontSize) {
     var myCurrentLottery = currentSearchNumber.value;
     Map<String, HighlightedWord> words = {};
-    for (var char in myCurrentLottery.characters) {
-      // debugPrint("char $char");
-      words[char] = HighlightedWord(
+
+    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var lastChar = _getLastChars(myCurrentLottery, i + 1);
+      // debugPrint("lastChar $lastChar");
+      words[lastChar] = HighlightedWord(
         onTap: () {},
         textStyle: TextStyle(
           color: Colors.black,
@@ -277,6 +286,22 @@ class ControllerMain extends BaseController {
         padding: const EdgeInsets.all(2),
       );
     }
+
+    // for (var char in myCurrentLottery.characters) {
+    //   words[char] = HighlightedWord(
+    //     onTap: () {},
+    //     textStyle: TextStyle(
+    //       color: Colors.black,
+    //       fontWeight: FontWeight.w700,
+    //       fontSize: fontSize,
+    //     ),
+    //     decoration: BoxDecoration(
+    //       color: Colors.lightGreenAccent,
+    //       borderRadius: BorderRadius.circular(45),
+    //     ),
+    //     padding: const EdgeInsets.all(2),
+    //   );
+    // }
     return words;
   }
 }
