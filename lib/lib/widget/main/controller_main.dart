@@ -243,4 +243,13 @@ class ControllerMain extends BaseController {
       setSelectedDateTime(dt, false);
     }
   }
+
+  // String getMyLotteryString() {
+  //   var sCurrentSearchNumber = currentSearchNumber.value;
+  //   if (sCurrentSearchNumber.isEmpty) {
+  //     return "Nhập vé số để tự động dò";
+  //   } else {
+  //     return sCurrentSearchNumber;
+  //   }
+  // }
 }

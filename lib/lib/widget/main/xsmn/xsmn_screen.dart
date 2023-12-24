@@ -358,6 +358,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   Widget _buildViewSearchMyLottery() {
     var selectedDateTime = _controllerMain.selectedDateTime.value;
+    var currentSearchNumber = _controllerMain.currentSearchNumber.value;
+    var sCurrentSearchNumber = "";
+    if (currentSearchNumber.isEmpty) {
+      sCurrentSearchNumber = "Nhập vé số để tự động dò";
+    } else {
+      sCurrentSearchNumber = currentSearchNumber;
+    }
     return Container(
       alignment: Alignment.center,
       height: 52,
@@ -415,7 +422,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(45),
                         child: Marquee(
-                          text: 'Nhập vé số để tự động dò',
+                          text: sCurrentSearchNumber,
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
