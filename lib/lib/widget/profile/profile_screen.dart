@@ -160,6 +160,14 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             //TODO roy93~
                           },
                         ),
+                        UIUtils.getButton(
+                          "Thêm ứng dụng",
+                          Icons.card_giftcard,
+                          description: "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
+                              () {
+                            //TODO roy93~
+                          },
+                        ),
                       ],
                     ),
                   ),
