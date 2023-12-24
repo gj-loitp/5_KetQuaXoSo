@@ -266,12 +266,12 @@ class ControllerMain extends BaseController {
       words[char] = HighlightedWord(
         onTap: () {},
         textStyle: TextStyle(
-          color: Colors.white,
+          color: Colors.black,
           fontWeight: FontWeight.w700,
           fontSize: fontSize,
         ),
         decoration: BoxDecoration(
-          color: Colors.lightGreen,
+          color: Colors.lightGreenAccent,
           borderRadius: BorderRadius.circular(45),
         ),
         padding: const EdgeInsets.all(2),
