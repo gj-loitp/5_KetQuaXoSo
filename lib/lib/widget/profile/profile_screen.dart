@@ -136,7 +136,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           inactiveBgColor: Colors.grey,
                           inactiveFgColor: Colors.white,
                           totalSwitches: 2,
-                          labels: const ['Native view', 'Webview'],
+                          labels: const ['Giao diện Tối ưu', 'Giao diện Web'],
                           icons: const [
                             Icons.looks_one,
                             Icons.looks_two,
@@ -149,6 +149,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             debugPrint('switched to: $index');
                             _controllerMain.setThemeIndex(index);
                             _showPopupRestart();
+                          },
+                        ),
+                        const SizedBox(height: 32),
+                        UIUtils.getButton(
+                          "Đánh giá ứng dụng",
+                          Icons.hotel_class,
+                          description: "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐ bạn nhé!Tks bạn nhiều 😘",
+                          () {
+                            //TODO roy93~
                           },
                         ),
                       ],

@@ -64,6 +64,7 @@ class UIUtils {
 
   static Widget getButton(
     String text,
+    IconData? iconData,
     VoidCallback? onPressed, {
     double marginTop = DimenConstants.marginPaddingMedium,
     String description = "",
@@ -76,7 +77,7 @@ class UIUtils {
           foregroundColor: Colors.black,
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(DimenConstants.radiusMedium),
+            borderRadius: BorderRadius.circular(DimenConstants.radiusRound),
             side: BorderSide(
               color: const Color(0xFF8C98A8).withOpacity(0.2),
               width: 0.5,
@@ -110,9 +111,7 @@ class UIUtils {
               ),
             ),
             const SizedBox(width: DimenConstants.marginPaddingMedium),
-            const Icon(
-              Icons.double_arrow,
-            ),
+            Icon(iconData),
           ],
         ),
       ),
