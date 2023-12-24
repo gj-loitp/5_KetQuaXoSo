@@ -22,11 +22,11 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
     super.initState();
     _tecNumber.addListener(() {
       var text = _tecNumber.text.toString();
-      _controllerMain.setCurrentNumber(text);
+      _controllerMain.setCurrentNumberXSMN(text);
     });
     _tecDate.addListener(() {
       var text = _tecDate.text.toString();
-      _controllerMain.setCurrentDate(text);
+      _controllerMain.setCurrentDateXSMN(text);
     });
     var currentSelectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
     var sCurrentSelectedDateTime = DurationUtils.getFormattedDate(currentSelectedDateTime);
@@ -58,7 +58,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
   }
 
   Widget _buildViewBody() {
-    var msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDate();
+    var msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMN();
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -193,7 +193,7 @@ class _DlgInputVeSoState extends State<DlgInputVeSo> {
   }
 
   void applySearch() {
-    _controllerMain.applySearch();
+    _controllerMain.applySearchXSMN();
     Get.back();
   }
 }

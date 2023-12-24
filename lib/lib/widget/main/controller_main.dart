@@ -18,7 +18,59 @@ class ControllerMain extends BaseController {
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
   var buildId = "".obs;
 
-  //xsmn
+  void clearOnDispose() {
+    Get.delete<ControllerMain>();
+  }
+
+  void toggleFullScreen() {
+    isFullScreen.value = !isFullScreen.value;
+  }
+
+  Future<void> getThemeIndex() async {
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
+    if (index != null) {
+      themeIndex.value = index;
+    }
+  }
+
+  void setThemeIndex(int? index) {
+    if (index != null) {
+      themeIndex.value = index;
+      SharedPreferencesUtil.setInt(SharedPreferencesUtil.themeIndex, index);
+    }
+  }
+
+  String _getLastChars(String inputString, int count) {
+    int endIndex = inputString.length;
+    int startIndex = endIndex - count;
+    startIndex = startIndex < 0 ? 0 : startIndex;
+    return inputString.substring(startIndex, endIndex);
+  }
+
+  Map<String, HighlightedWord> getWordsHighlight(double fontSize) {
+    var myCurrentLottery = xsmnCurrentSearchNumber.value;
+    Map<String, HighlightedWord> words = {};
+    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var lastChar = _getLastChars(myCurrentLottery, i + 1);
+      // debugPrint("lastChar $lastChar");
+      words[lastChar] = HighlightedWord(
+        onTap: () {},
+        textStyle: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w700,
+          fontSize: fontSize,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.lightGreenAccent,
+          borderRadius: BorderRadius.circular(45),
+        ),
+        padding: const EdgeInsets.all(2),
+      );
+    }
+    return words;
+  }
+
+  //ZONE XSMN
   var xsmnSelectedDateTime = DateTime.now().obs;
   var xsmnWebViewController = WebViewController().obs;
   var xsmnIsLoading = true.obs;
@@ -26,19 +78,6 @@ class ControllerMain extends BaseController {
   var xsmnCurrentSearchNumber = "".obs;
   var xsmnCurrentSearchDate = "".obs;
 
-  //xsmt
-
-  //xsmb
-
-  //vietlot
-
-  //province
-
-  void clearOnDispose() {
-    Get.delete<ControllerMain>();
-  }
-
-  //ZONE XSMN
   Future<void> setSelectedDateTimeXSMN(DateTime dateTime, bool isFirstInit) async {
     if (xsmnSelectedDateTime.value.day == dateTime.day &&
         xsmnSelectedDateTime.value.month == dateTime.month &&
@@ -196,35 +235,15 @@ class ControllerMain extends BaseController {
     return date;
   }
 
-  //END ZONE
-
-  void toggleFullScreen() {
-    isFullScreen.value = !isFullScreen.value;
-  }
-
-  Future<void> getThemeIndex() async {
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
-    if (index != null) {
-      themeIndex.value = index;
-    }
-  }
-
-  void setThemeIndex(int? index) {
-    if (index != null) {
-      themeIndex.value = index;
-      SharedPreferencesUtil.setInt(SharedPreferencesUtil.themeIndex, index);
-    }
-  }
-
-  void setCurrentNumber(String s) {
+  void setCurrentNumberXSMN(String s) {
     xsmnCurrentSearchNumber.value = s;
   }
 
-  void setCurrentDate(String s) {
+  void setCurrentDateXSMN(String s) {
     xsmnCurrentSearchDate.value = s;
   }
 
-  String msgInvalidCurrentSearchDate() {
+  String msgInvalidCurrentSearchDateXSMN() {
     try {
       var currentYear = DateTime.now().year;
       if (xsmnCurrentSearchDate.value.length != 10) {
@@ -250,7 +269,7 @@ class ControllerMain extends BaseController {
     }
   }
 
-  void applySearch() {
+  void applySearchXSMN() {
     var sCurrentSearchNumber = xsmnCurrentSearchNumber.value;
     var sCurrentSearchDate = xsmnCurrentSearchDate.value;
     debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
@@ -261,51 +280,17 @@ class ControllerMain extends BaseController {
       setSelectedDateTimeXSMN(dt, false);
     }
   }
+//END ZONE XSMN
 
-  String _getLastChars(String inputString, int count) {
-    int endIndex = inputString.length;
-    int startIndex = endIndex - count;
-    startIndex = startIndex < 0 ? 0 : startIndex;
-    return inputString.substring(startIndex, endIndex);
-  }
+//ZONE XSMT
+//END ZONE XSMT
 
-  Map<String, HighlightedWord> getWordsHighlight(double fontSize) {
-    var myCurrentLottery = xsmnCurrentSearchNumber.value;
-    Map<String, HighlightedWord> words = {};
+//ZONE XSMB
+//END ZONE XSMB
 
-    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
-      var lastChar = _getLastChars(myCurrentLottery, i + 1);
-      // debugPrint("lastChar $lastChar");
-      words[lastChar] = HighlightedWord(
-        onTap: () {},
-        textStyle: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.w700,
-          fontSize: fontSize,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.lightGreenAccent,
-          borderRadius: BorderRadius.circular(45),
-        ),
-        padding: const EdgeInsets.all(2),
-      );
-    }
+//ZONE VIETLOT
+//END ZONE VIETLOT
 
-    // for (var char in myCurrentLottery.characters) {
-    //   words[char] = HighlightedWord(
-    //     onTap: () {},
-    //     textStyle: TextStyle(
-    //       color: Colors.black,
-    //       fontWeight: FontWeight.w700,
-    //       fontSize: fontSize,
-    //     ),
-    //     decoration: BoxDecoration(
-    //       color: Colors.lightGreenAccent,
-    //       borderRadius: BorderRadius.circular(45),
-    //     ),
-    //     padding: const EdgeInsets.all(2),
-    //   );
-    // }
-    return words;
-  }
+//ZONE PROVINCE
+//END ZONE PROVINCE
 }
