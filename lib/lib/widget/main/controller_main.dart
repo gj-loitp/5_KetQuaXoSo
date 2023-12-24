@@ -258,20 +258,20 @@ class ControllerMain extends BaseController {
 //   }
 // }
 
-  Map<String, HighlightedWord> getWordsHighlight() {
+  Map<String, HighlightedWord> getWordsHighlight(double fontSize) {
     var myCurrentLottery = currentSearchNumber.value;
     Map<String, HighlightedWord> words = {};
     for (var char in myCurrentLottery.characters) {
       // debugPrint("char $char");
       words[char] = HighlightedWord(
         onTap: () {},
-        textStyle: const TextStyle(
+        textStyle: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.w700,
-          fontSize: 17,
+          fontSize: fontSize,
         ),
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: Colors.lightGreen,
           borderRadius: BorderRadius.circular(45),
         ),
         padding: const EdgeInsets.all(2),
