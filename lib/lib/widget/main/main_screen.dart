@@ -94,7 +94,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
         ),
         notchColor: Colors.white,
         showBlurBottomBar: false,
-        removeMargins: false,
+        removeMargins: true,
         bottomBarWidth: 500,
         durationInMilliSeconds: 300,
         bottomBarItems: const [
@@ -159,8 +159,8 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
           _controllerPage.jumpToPage(index);
           // debugPrint('current selected index $index');
         },
-        kIconSize: 50,
-        kBottomRadius: 45,
+        kIconSize: 20,
+        kBottomRadius: 0,
       );
     } else {
       return Container();
