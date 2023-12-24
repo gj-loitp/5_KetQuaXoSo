@@ -12,6 +12,8 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO do ve so manually
 //TODO do ve so auto
 //TODO scan de do ve so
+//TODO https://pub.dev/packages/animated_introduction
+//TODO https://pub.dev/packages/super_tooltip
 
 //done
 //ic_launcher

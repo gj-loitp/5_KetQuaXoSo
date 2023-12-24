@@ -159,6 +159,8 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
           _controllerPage.jumpToPage(index);
           // debugPrint('current selected index $index');
         },
+        kIconSize: 50,
+        kBottomRadius: 45,
       );
     } else {
       return Container();

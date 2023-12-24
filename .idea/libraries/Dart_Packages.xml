@@ -5,7 +5,7 @@
         <entry key="animated_notch_bottom_bar">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/animated_notch_bottom_bar-1.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/animated_notch_bottom_bar-1.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -1076,7 +1076,7 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/animated_notch_bottom_bar-1.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/animated_notch_bottom_bar-1.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/animated_text_kit-4.2.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/ansicolor-2.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/archive-3.4.9/lib" />
