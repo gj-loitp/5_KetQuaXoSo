@@ -534,7 +534,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 4,
+          height: heightItem * 4.5,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -710,7 +710,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem * 4,
+          height: heightItem * 4.5,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
