@@ -177,6 +177,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             //TODO roy93~
                           },
                         ),
+                        UIUtils.getButton(
+                          "Chính sách bảo mật",
+                          Icons.local_police,
+                          description:
+                              "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
+                          () {
+                            //TODO roy93~
+                          },
+                        ),
                       ],
                     ),
                   ),
