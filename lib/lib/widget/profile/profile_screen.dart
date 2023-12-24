@@ -120,6 +120,14 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     child: Column(
                       children: [
                         const Text(
+                          "ⒸRoy93Group",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        const Text(
                           "Chọn giao diện",
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
