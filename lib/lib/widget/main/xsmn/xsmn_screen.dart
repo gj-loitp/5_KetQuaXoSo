@@ -279,7 +279,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           // const SizedBox(height: 16),
           Text(
-            "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInString()}",
+            "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInStringXSMN()}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
@@ -808,6 +808,6 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   void _selectDay(DateTime dateTime, bool isFirstInit) {
-    _controllerMain.setSelectedDateTime(dateTime, isFirstInit);
+    _controllerMain.setSelectedDateTimeXSMN(dateTime, isFirstInit);
   }
 }

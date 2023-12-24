@@ -38,7 +38,8 @@ class ControllerMain extends BaseController {
     Get.delete<ControllerMain>();
   }
 
-  Future<void> setSelectedDateTime(DateTime dateTime, bool isFirstInit) async {
+  //ZONE XSMN
+  Future<void> setSelectedDateTimeXSMN(DateTime dateTime, bool isFirstInit) async {
     if (xsmnSelectedDateTime.value.day == dateTime.day &&
         xsmnSelectedDateTime.value.month == dateTime.month &&
         xsmnSelectedDateTime.value.year == dateTime.year &&
@@ -50,7 +51,7 @@ class ControllerMain extends BaseController {
     xsmnIsLoading.value = true;
     xsmnSelectedDateTime.value = dateTime;
 
-    var date = getSelectedDayInString();
+    var date = getSelectedDayInStringXSMN();
     // debugPrint("date $date");
 
     var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
@@ -59,124 +60,125 @@ class ControllerMain extends BaseController {
     //1 load bang web view
     //2 call api va load custom view
     if (index == SharedPreferencesUtil.themeIndexNativeView) {
-      isNativeMode.value = true;
-      _getData(date);
-    } else {
-      isNativeMode.value = false;
-      _loadWeb(date);
-    }
-  }
+      Future<void> getDataXSMN(String dateTime) async {
+        if (kDebugMode) {
+          dio.interceptors.add(
+            PrettyDioLogger(
+              requestHeader: true,
+              queryParameters: true,
+              requestBody: true,
+              responseHeader: true,
+              responseBody: true,
+              error: true,
+              showProcessingTime: true,
+              showCUrl: true,
+              canShowLog: kDebugMode,
+              convertFormData: true,
+            ),
+          );
+        }
 
-  void _loadWeb(String date) {
-    var link = "${StringConstants.kqMienNam}#n$date";
-    // debugPrint("link $link");
+        if (buildId.value.isEmpty) {
+          var responseGetBuildId = await dio.get('https://baomoi.com/');
+          if (responseGetBuildId.statusCode == 200) {
+            String htmlToParse = responseGetBuildId.data;
+            // debugPrint("responseGetBuildId $htmlToParse");
+            var arrParent = htmlToParse.split('''buildId''');
+            // debugPrint("arrParent ${arrParent.length}");
+            if (arrParent.isNotEmpty && arrParent.length >= 2) {
+              // debugPrint("0 ${arrParent[0]}");
+              // debugPrint("1 ${arrParent[1]}");
 
-    xsmnWebViewController.value = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(Colors.white)
-      ..setNavigationDelegate(
-        NavigationDelegate(
-          onProgress: (int progress) {
-            // debugPrint("progress $progress");
-          },
-          onPageStarted: (String url) {
-            // debugPrint("onPageStarted url $url");
-          },
-          onPageFinished: (String url) async {
-            // debugPrint("onPageFinished url $url");
-            addBottomSpace();
-            xsmnIsLoading.value = false;
-          },
-          onWebResourceError: (WebResourceError error) {
-            // debugPrint("onPageFinished url $error");
-          },
-          onNavigationRequest: (NavigationRequest request) {
-            // debugPrint("request ${request.url}");
-            if (request.url.contains(".html")) {
-              return NavigationDecision.prevent;
+              var sChild1 = arrParent[1];
+              var arrChild = sChild1.split('''","''');
+              // debugPrint("arrChild ${arrChild.length}");
+              if (arrChild.isNotEmpty) {
+                // debugPrint("arrChild 0 ${arrChild[0]}");
+                var sBuildId = arrChild[0].replaceAll('''":"''', '');
+                // debugPrint("~~~~~~~~~> sBuildId $sBuildId");
+                buildId.value = sBuildId;
+              }
             }
-            return NavigationDecision.navigate;
-          },
-        ),
-      )
-      ..loadRequest(Uri.parse(link));
-  }
+          }
+        }
 
-  Future<void> addBottomSpace() async {
-    xsmnIsLoading.value = true;
-    const script = '''
+        // debugPrint(">>>dateTime $dateTime");
+        var response = await dio.get(
+          '${StringConstants.getApiXsmn(buildId.value)}?date=$dateTime&slug=xsmn-mien-nam',
+          // data: "ngay_quay=16-12-2023",
+          // options: Options(
+          //   headers: {
+          //     "x-requested-with": "XMLHttpRequest",
+          //   },
+          // ),
+        );
+        // debugPrint("response.data.toString() ${response.data.toString()}");
+        xsmnKqxs.value = KQXS.fromJson(response.data);
+        // kqxs.value = KQXS.fromJson(response.data);
+        // debugPrint("web ${web.toJson()}");
+        // debugPrint("web data ${web.pageProps?.resp?.data?.content?.entries}");
+        // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
+        //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
+        // });
+        xsmnIsLoading.value = false;
+      }
+
+      isNativeMode.value = true;
+      getDataXSMN(date);
+    } else {
+      void loadWebXSMN(String date) {
+        var link = "${StringConstants.kqMienNam}#n$date";
+        // debugPrint("link $link");
+
+        xsmnWebViewController.value = WebViewController()
+          ..setJavaScriptMode(JavaScriptMode.unrestricted)
+          ..setBackgroundColor(Colors.white)
+          ..setNavigationDelegate(
+            NavigationDelegate(
+              onProgress: (int progress) {
+                // debugPrint("progress $progress");
+              },
+              onPageStarted: (String url) {
+                // debugPrint("onPageStarted url $url");
+              },
+              onPageFinished: (String url) async {
+                // debugPrint("onPageFinished url $url");
+
+                Future<void> addBottomSpace() async {
+                  xsmnIsLoading.value = true;
+                  const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-    await xsmnWebViewController.value.runJavaScript(script);
-  }
+                  await xsmnWebViewController.value.runJavaScript(script);
+                }
 
-  Future<void> _getData(String dateTime) async {
-    if (kDebugMode) {
-      dio.interceptors.add(
-        PrettyDioLogger(
-          requestHeader: true,
-          queryParameters: true,
-          requestBody: true,
-          responseHeader: true,
-          responseBody: true,
-          error: true,
-          showProcessingTime: true,
-          showCUrl: true,
-          canShowLog: kDebugMode,
-          convertFormData: true,
-        ),
-      );
-    }
-
-    if (buildId.value.isEmpty) {
-      var responseGetBuildId = await dio.get('https://baomoi.com/');
-      if (responseGetBuildId.statusCode == 200) {
-        String htmlToParse = responseGetBuildId.data;
-        // debugPrint("responseGetBuildId $htmlToParse");
-        var arrParent = htmlToParse.split('''buildId''');
-        // debugPrint("arrParent ${arrParent.length}");
-        if (arrParent.isNotEmpty && arrParent.length >= 2) {
-          // debugPrint("0 ${arrParent[0]}");
-          // debugPrint("1 ${arrParent[1]}");
-
-          var sChild1 = arrParent[1];
-          var arrChild = sChild1.split('''","''');
-          // debugPrint("arrChild ${arrChild.length}");
-          if (arrChild.isNotEmpty) {
-            // debugPrint("arrChild 0 ${arrChild[0]}");
-            var sBuildId = arrChild[0].replaceAll('''":"''', '');
-            // debugPrint("~~~~~~~~~> sBuildId $sBuildId");
-            buildId.value = sBuildId;
-          }
-        }
+                addBottomSpace();
+                xsmnIsLoading.value = false;
+              },
+              onWebResourceError: (WebResourceError error) {
+                // debugPrint("onPageFinished url $error");
+              },
+              onNavigationRequest: (NavigationRequest request) {
+                // debugPrint("request ${request.url}");
+                if (request.url.contains(".html")) {
+                  return NavigationDecision.prevent;
+                }
+                return NavigationDecision.navigate;
+              },
+            ),
+          )
+          ..loadRequest(Uri.parse(link));
       }
-    }
 
-    // debugPrint(">>>dateTime $dateTime");
-    var response = await dio.get(
-      '${StringConstants.getApiXsmn(buildId.value)}?date=$dateTime&slug=xsmn-mien-nam',
-      // data: "ngay_quay=16-12-2023",
-      // options: Options(
-      //   headers: {
-      //     "x-requested-with": "XMLHttpRequest",
-      //   },
-      // ),
-    );
-    // debugPrint("response.data.toString() ${response.data.toString()}");
-    xsmnKqxs.value = KQXS.fromJson(response.data);
-    // kqxs.value = KQXS.fromJson(response.data);
-    // debugPrint("web ${web.toJson()}");
-    // debugPrint("web data ${web.pageProps?.resp?.data?.content?.entries}");
-    // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
-    //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
-    // });
-    xsmnIsLoading.value = false;
+      isNativeMode.value = false;
+      loadWebXSMN(date);
+    }
   }
 
-  String getSelectedDayInString() {
+  String getSelectedDayInStringXSMN() {
     var dateTime = xsmnSelectedDateTime.value;
     var day = "";
     if (dateTime.day >= 10) {
@@ -193,6 +195,8 @@ class ControllerMain extends BaseController {
     var date = "$day-$month-${dateTime.year}";
     return date;
   }
+
+  //END ZONE
 
   void toggleFullScreen() {
     isFullScreen.value = !isFullScreen.value;
@@ -254,7 +258,7 @@ class ControllerMain extends BaseController {
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {
-      setSelectedDateTime(dt, false);
+      setSelectedDateTimeXSMN(dt, false);
     }
   }
 
