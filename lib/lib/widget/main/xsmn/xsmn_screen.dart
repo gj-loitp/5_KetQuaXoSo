@@ -696,9 +696,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("7"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("7"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -711,9 +713,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("6"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("6"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -726,9 +730,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("5"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("5"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -741,9 +747,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("4"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("4"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -756,9 +764,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("3"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("3"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -771,9 +781,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("2"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("2"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -786,9 +798,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("1"),
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("1"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
@@ -801,9 +815,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(2, 8, 2, 8),
-          child: Text(
-            dataWrapper.getValueByAward("ĐB"),
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.red),
+          child: TextHighlight(
+            text: dataWrapper.getValueByAward("ĐB"),
+            words: words,
+            textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),
         ),
