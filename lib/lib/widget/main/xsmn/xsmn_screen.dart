@@ -362,7 +362,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     if (currentSearchNumber.isEmpty) {
       sCurrentSearchNumber = "Nhập vé số để tự động dò";
     } else {
-      sCurrentSearchNumber = currentSearchNumber;
+      sCurrentSearchNumber = "Vé của tôi: ${currentSearchNumber}";
     }
     return Container(
       alignment: Alignment.center,
