@@ -5,7 +5,7 @@ import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
-import 'package:ketquaxoso/lib/widget/dlg/dlg_input_veso.dart';
+import 'package:ketquaxoso/lib/widget/dlg/dlg_input_xsmn.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
@@ -432,7 +432,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                         ),
                         onTap: () {
                           Get.dialog(
-                            const DlgInputVeSo(),
+                            const DlgInputXSMN(),
                             barrierColor: Colors.black87,
                           );
                         },

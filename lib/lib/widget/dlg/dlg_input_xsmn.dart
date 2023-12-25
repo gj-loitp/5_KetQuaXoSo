@@ -5,14 +5,14 @@ import 'package:ketquaxoso/lib/formatter/date_text_formatter.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 
-class DlgInputVeSo extends StatefulWidget {
-  const DlgInputVeSo({super.key});
+class DlgInputXSMN extends StatefulWidget {
+  const DlgInputXSMN({super.key});
 
   @override
-  State<DlgInputVeSo> createState() => _DlgInputVeSoState();
+  State<DlgInputXSMN> createState() => _DlgInputXSMNState();
 }
 
-class _DlgInputVeSoState extends State<DlgInputVeSo> {
+class _DlgInputXSMNState extends State<DlgInputXSMN> {
   final ControllerMain _controllerMain = Get.find();
   final TextEditingController _tecNumber = TextEditingController();
   final TextEditingController _tecDate = TextEditingController();
