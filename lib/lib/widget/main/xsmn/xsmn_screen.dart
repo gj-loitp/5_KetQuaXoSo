@@ -433,7 +433,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                         onTap: () {
                           Get.dialog(
                             const DlgInputXSMN(),
-                            barrierColor: Colors.black87,
+                            barrierColor: Colors.black54,
                           );
                         },
                       ),

@@ -42,6 +42,9 @@ class _DlgInputXSMNState extends State<DlgInputXSMN> {
   Widget build(BuildContext context) {
     return Dialog(
       backgroundColor: Colors.transparent,
+      shadowColor: Colors.transparent,
+      surfaceTintColor: Colors.transparent,
+      elevation: 0.0,
       child: Container(
         padding: const EdgeInsets.all(16),
         alignment: Alignment.center,
