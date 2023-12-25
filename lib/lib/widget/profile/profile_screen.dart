@@ -4,9 +4,11 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
+import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:restart_app/restart_app.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -169,7 +171,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 description:
                                     "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐ bạn nhé!Tks bạn nhiều 😘",
                                 () {
-                                  //TODO roy93~
+                                  UrlLauncherUtils.rateApp(null, null);
                                 },
                               ),
                               UIUtils.getButton(
@@ -178,15 +180,19 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 description:
                                     "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
                                 () {
-                                  //TODO roy93~
+                                  UrlLauncherUtils.moreApp();
                                 },
                               ),
                               UIUtils.getButton(
                                 "Chia sẻ ứng dụng",
                                 Icons.ios_share,
                                 description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
-                                () {
-                                  //TODO roy93~
+                                () async {
+                                  final result = await Share.shareWithResult(
+                                      'https://play.google.com/store/apps/details?id=com.roy93group.ketquaxoso');
+                                  if (result.status == ShareResultStatus.success) {
+                                    showSnackBarFull("KQXS", "Cảm ơn bạn đã chia sẻ 👉👈");
+                                  }
                                 },
                               ),
                               UIUtils.getButton(
@@ -195,7 +201,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 description:
                                     "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
                                 () {
-                                  //TODO roy93~
+                                  UrlLauncherUtils.launchPolicy();
                                 },
                               ),
                               UIUtils.getButton(
@@ -204,7 +210,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 description:
                                     "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
                                 () {
-                                  //TODO roy93~
+                                  UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
                                 },
                               ),
                             ],
