@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
-//TODO rate app
-//TODO share app
-//TODO more app
-//TODO policy
 //TODO ad
 //TODO firebase
+
+//TODO notification reminder
 //TODO lich su ve so cua toi
 //TODO do ve so manually
 //TODO do ve so auto
@@ -20,6 +18,10 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //pkg name
 //ad id manifest
 //splash screen
+//rate app
+//share app
+//more app
+//policy
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
@@ -28,7 +30,10 @@ void main() {
     GetMaterialApp(
       enableLog: true,
       debugShowCheckedModeBanner: true,
-      defaultTransition: Transition.cupertino,
+      // defaultTransition: Transition.cupertino,
+      defaultTransition: Transition.circularReveal,
+      // defaultTransition: Transition.size,
+      transitionDuration: const Duration(milliseconds: 1000),
       home: const MyApp(),
       navigatorKey: navigatorKey,
       theme: ThemeData.light(),

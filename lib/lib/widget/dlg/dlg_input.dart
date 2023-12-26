@@ -43,8 +43,7 @@ class _DlgInputState extends State<DlgInput> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            color: Colors.transparent,
+          SizedBox(
             width: double.infinity,
             height: double.infinity,
             child: Image.asset(
@@ -90,6 +89,7 @@ class _DlgInputState extends State<DlgInput> {
                         height: 40,
                         child: MaterialButton(
                           onPressed: () {
+                            FocusManager.instance.primaryFocus?.unfocus();
                             Get.back();
                           },
                           color: Colors.white,
@@ -150,7 +150,7 @@ class _DlgInputState extends State<DlgInput> {
           alignment: Alignment.centerRight,
           child: Focus(
             child: TextField(
-              autofocus: true,
+              autofocus: false,
               controller: _tecNumber,
               textInputAction: TextInputAction.next,
               inputFormatters: [
@@ -255,6 +255,7 @@ class _DlgInputState extends State<DlgInput> {
   }
 
   void _applySearch() {
+    FocusManager.instance.primaryFocus?.unfocus();
     _controllerMain.applySearchXSMN();
     Get.back();
   }
