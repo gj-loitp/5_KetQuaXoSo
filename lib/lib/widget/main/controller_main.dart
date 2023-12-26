@@ -78,6 +78,8 @@ class ControllerMain extends BaseController {
   var xsmnCurrentSearchNumber = "".obs;
   var xsmnCurrentSearchDate = "".obs;
 
+  var hasFocusDialogXSMN = false.obs;
+
   Future<void> setSelectedDateTimeXSMN(DateTime dateTime, bool isFirstInit) async {
     if (xsmnSelectedDateTime.value.day == dateTime.day &&
         xsmnSelectedDateTime.value.month == dateTime.month &&
@@ -279,6 +281,10 @@ class ControllerMain extends BaseController {
     if (dt != null) {
       setSelectedDateTimeXSMN(dt, false);
     }
+  }
+
+  void setHasFocusDialogXSMN(bool value) {
+    hasFocusDialogXSMN.value = value;
   }
 //END ZONE XSMN
 
