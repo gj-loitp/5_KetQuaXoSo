@@ -17,9 +17,6 @@ class _DlgInputXSMNState extends State<DlgInputXSMN> {
   final TextEditingController _tecNumber = TextEditingController();
   final TextEditingController _tecDate = TextEditingController();
 
-  bool _hasFocusNumber = false;
-  bool _hasFocusDate = false;
-
   @override
   void initState() {
     super.initState();
@@ -43,80 +40,64 @@ class _DlgInputXSMNState extends State<DlgInputXSMN> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      var hasFocusDialogXSMN = _controllerMain.hasFocusDialogXSMN.value;
-      // debugPrint("hasFocusDialogXSMN $hasFocusDialogXSMN");
-      return Stack(
+    return Scaffold(
+      body: Stack(
         children: [
-          if (hasFocusDialogXSMN)
-            SizedBox(
-              width: double.infinity,
+          Container(
+            color: Colors.transparent,
+            width: double.infinity,
+            height: double.infinity,
+            child: Image.asset(
+              "assets/images/bkg_3.jpg",
               height: double.infinity,
-              child: Image.asset(
-                "assets/images/bkg_3.jpg",
-                height: double.infinity,
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
-          Dialog(
-            backgroundColor: Colors.transparent,
-            shadowColor: Colors.transparent,
-            surfaceTintColor: Colors.transparent,
-            elevation: 0.0,
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              alignment: Alignment.center,
-              height: 375,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(45),
-                color: Colors.white,
+          ),
+          Obx(() {
+            return Center(
+              child: Container(
+                margin: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
+                alignment: Alignment.center,
+                height: 325,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(45),
+                  color: Colors.white,
+                ),
+                child: _buildViewBody(),
               ),
-              child: _buildViewBody(),
-            ),
-          )
+            );
+          }),
         ],
-      );
-    });
+      ),
+    );
   }
 
   Widget _buildViewBody() {
     var msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMN();
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          height: 52,
-          alignment: Alignment.centerRight,
-          child: Material(
-            child: InkWell(
-              customBorder: const CircleBorder(),
-              child: const Icon(
-                Icons.cancel,
-                color: Colors.black,
-                size: 32.0,
-              ),
-              onTap: () {
-                Get.back();
-              },
-            ),
-          ),
-        ),
-        const SizedBox(
           height: 32,
-          child: Text(
+          width: double.infinity,
+          color: Colors.white,
+          child: const Text(
             "Mời nhập thông tin",
             style: TextStyle(
               fontWeight: FontWeight.w700,
               color: Colors.black,
               fontSize: 22,
             ),
+            textAlign: TextAlign.center,
           ),
         ),
         Container(
           margin: const EdgeInsets.only(top: 16),
           height: 52,
+          color: Colors.white,
           alignment: Alignment.centerRight,
           child: Focus(
             child: TextField(
@@ -147,15 +128,13 @@ class _DlgInputXSMNState extends State<DlgInputXSMN> {
               ),
               textAlign: TextAlign.start,
             ),
-            onFocusChange: (value) {
-              _hasFocusNumber = value;
-              _checkFocus();
-            },
+            onFocusChange: (value) {},
           ),
         ),
         Container(
           margin: const EdgeInsets.only(top: 16),
           height: 52,
+          color: Colors.white,
           alignment: Alignment.centerRight,
           child: Focus(
             child: TextField(
@@ -184,14 +163,12 @@ class _DlgInputXSMNState extends State<DlgInputXSMN> {
               ),
               textAlign: TextAlign.start,
             ),
-            onFocusChange: (value) {
-              _hasFocusDate = value;
-              _checkFocus();
-            },
+            onFocusChange: (value) {},
           ),
         ),
         Container(
           height: 32,
+          color: Colors.white,
           padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
           child: Text(
             msgInvalidCurrentSearchDate,
@@ -203,10 +180,11 @@ class _DlgInputXSMNState extends State<DlgInputXSMN> {
           ),
         ),
         Container(
+          color: Colors.white,
           width: double.infinity,
-          height: 80,
+          height: 52,
           margin: const EdgeInsets.fromLTRB(32, 8, 32, 0),
-          padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               textStyle: const TextStyle(
@@ -230,13 +208,5 @@ class _DlgInputXSMNState extends State<DlgInputXSMN> {
   void _applySearch() {
     _controllerMain.applySearchXSMN();
     Get.back();
-  }
-
-  void _checkFocus() {
-    if (_hasFocusDate || _hasFocusNumber) {
-      _controllerMain.setHasFocusDialogXSMN(true);
-    } else {
-      _controllerMain.setHasFocusDialogXSMN(false);
-    }
   }
 }

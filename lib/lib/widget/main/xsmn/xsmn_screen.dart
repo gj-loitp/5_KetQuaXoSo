@@ -431,10 +431,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                           blankSpace: 50.0,
                         ),
                         onTap: () {
-                          Get.dialog(
-                            const DlgInputXSMN(),
-                            barrierColor: Colors.black54,
-                          );
+                          Get.to(() => const DlgInputXSMN());
                         },
                       ),
                     ),
