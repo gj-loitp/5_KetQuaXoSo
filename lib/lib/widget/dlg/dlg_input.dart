@@ -55,18 +55,67 @@ class _DlgInputState extends State<DlgInput> {
             ),
           ),
           Obx(() {
-            return Center(
-              child: Container(
-                margin: const EdgeInsets.all(16),
-                padding: const EdgeInsets.all(16),
-                alignment: Alignment.center,
-                height: 325,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(45),
-                  color: Colors.white,
+            return Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
+                  width: double.infinity,
+                  child: Row(
+                    children: [
+                      const SizedBox(
+                        width: 40,
+                        height: 40,
+                      ),
+                      const Expanded(
+                        child: Text(
+                          "Cá nhân",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                            fontSize: 24,
+                            shadows: [
+                              Shadow(
+                                blurRadius: 5.0,
+                                color: Colors.black,
+                                offset: Offset(2.0, 2.0),
+                              ),
+                            ],
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 40,
+                        height: 40,
+                        child: MaterialButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          color: Colors.white,
+                          padding: const EdgeInsets.all(0),
+                          shape: const CircleBorder(),
+                          child: const Icon(
+                            Icons.clear,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                child: _buildViewBody(),
-              ),
+                Container(
+                  margin: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
+                  alignment: Alignment.center,
+                  height: 325,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(45),
+                    color: Colors.white,
+                  ),
+                  child: _buildViewBody(),
+                ),
+              ],
             );
           }),
         ],
