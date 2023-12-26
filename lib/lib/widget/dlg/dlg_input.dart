@@ -16,6 +16,7 @@ class _DlgInputState extends State<DlgInput> {
   final ControllerMain _controllerMain = Get.find();
   final TextEditingController _tecNumber = TextEditingController();
   final TextEditingController _tecDate = TextEditingController();
+  final FocusNode _focusNode = FocusNode();
 
   @override
   void initState() {
@@ -36,6 +37,11 @@ class _DlgInputState extends State<DlgInput> {
     if (sCurrentSearchNumber.isNotEmpty) {
       _tecNumber.text = sCurrentSearchNumber;
     }
+
+    //show keyboard & focus to _tecNumber
+    DurationUtils.delay(300, () {
+      _focusNode.requestFocus();
+    });
   }
 
   @override
@@ -150,7 +156,7 @@ class _DlgInputState extends State<DlgInput> {
           alignment: Alignment.centerRight,
           child: Focus(
             child: TextField(
-              autofocus: false,
+              focusNode: _focusNode,
               controller: _tecNumber,
               textInputAction: TextInputAction.next,
               inputFormatters: [
