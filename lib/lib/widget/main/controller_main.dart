@@ -280,9 +280,219 @@ class ControllerMain extends BaseController {
       setSelectedDateTimeXSMN(dt, false);
     }
   }
+
 //END ZONE XSMN
 
 //ZONE XSMT
+  var xsmtSelectedDateTime = DateTime.now().obs;
+  var xsmtWebViewController = WebViewController().obs;
+  var xsmtIsLoading = true.obs;
+  var xsmtKqxs = KQXS().obs;
+  var xsmtCurrentSearchNumber = "".obs;
+  var xsmtCurrentSearchDate = "".obs;
+
+  Future<void> setSelectedDateTimeXSMT(DateTime dateTime, bool isFirstInit) async {
+    if (xsmtSelectedDateTime.value.day == dateTime.day &&
+        xsmtSelectedDateTime.value.month == dateTime.month &&
+        xsmtSelectedDateTime.value.year == dateTime.year &&
+        !isFirstInit) {
+      return;
+    }
+
+    // debugPrint("setSelectedDateTime $dateTime");
+    xsmtIsLoading.value = true;
+    xsmtSelectedDateTime.value = dateTime;
+
+    var date = getSelectedDayInStringXSMT();
+    // debugPrint("date $date");
+
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
+
+    //co 2 cach
+    //1 load bang web view
+    //2 call api va load custom view
+    if (index == SharedPreferencesUtil.themeIndexNativeView) {
+      Future<void> getDataXSMT(String dateTime) async {
+        if (kDebugMode) {
+          dio.interceptors.add(
+            PrettyDioLogger(
+              requestHeader: true,
+              queryParameters: true,
+              requestBody: true,
+              responseHeader: true,
+              responseBody: true,
+              error: true,
+              showProcessingTime: true,
+              showCUrl: true,
+              canShowLog: kDebugMode,
+              convertFormData: true,
+            ),
+          );
+        }
+
+        if (buildId.value.isEmpty) {
+          var responseGetBuildId = await dio.get('https://baomoi.com/');
+          if (responseGetBuildId.statusCode == 200) {
+            String htmlToParse = responseGetBuildId.data;
+            // debugPrint("responseGetBuildId $htmlToParse");
+            var arrParent = htmlToParse.split('''buildId''');
+            // debugPrint("arrParent ${arrParent.length}");
+            if (arrParent.isNotEmpty && arrParent.length >= 2) {
+              // debugPrint("0 ${arrParent[0]}");
+              // debugPrint("1 ${arrParent[1]}");
+
+              var sChild1 = arrParent[1];
+              var arrChild = sChild1.split('''","''');
+              // debugPrint("arrChild ${arrChild.length}");
+              if (arrChild.isNotEmpty) {
+                // debugPrint("arrChild 0 ${arrChild[0]}");
+                var sBuildId = arrChild[0].replaceAll('''":"''', '');
+                // debugPrint("~~~~~~~~~> sBuildId $sBuildId");
+                buildId.value = sBuildId;
+              }
+            }
+          }
+        }
+
+        // debugPrint(">>>dateTime $dateTime");
+        var response = await dio.get(
+          '${StringConstants.getApiXsmt(buildId.value)}?date=$dateTime&slug=xsmt-mien-trung',
+          // data: "ngay_quay=16-12-2023",
+          // options: Options(
+          //   headers: {
+          //     "x-requested-with": "XMLHttpRequest",
+          //   },
+          // ),
+        );
+        // debugPrint("response.data.toString() ${response.data.toString()}");
+        xsmtKqxs.value = KQXS.fromJson(response.data);
+        // kqxs.value = KQXS.fromJson(response.data);
+        // debugPrint("web ${web.toJson()}");
+        // debugPrint("web data ${web.pageProps?.resp?.data?.content?.entries}");
+        // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
+        //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
+        // });
+        xsmtIsLoading.value = false;
+      }
+
+      isNativeMode.value = true;
+      getDataXSMT(date);
+    } else {
+      void loadWebXSMT(String date) {
+        var link = "${StringConstants.kqMienTrung}#n$date";
+        // debugPrint("link $link");
+
+        xsmtWebViewController.value = WebViewController()
+          ..setJavaScriptMode(JavaScriptMode.unrestricted)
+          ..setBackgroundColor(Colors.white)
+          ..setNavigationDelegate(
+            NavigationDelegate(
+              onProgress: (int progress) {
+                // debugPrint("progress $progress");
+              },
+              onPageStarted: (String url) {
+                // debugPrint("onPageStarted url $url");
+              },
+              onPageFinished: (String url) async {
+                // debugPrint("onPageFinished url $url");
+
+                Future<void> addBottomSpace() async {
+                  xsmtIsLoading.value = true;
+                  const script = '''
+      var spaceDiv = document.createElement("div");
+      spaceDiv.style.height = "250px";
+      document.body.appendChild(spaceDiv);
+    ''';
+
+                  await xsmtWebViewController.value.runJavaScript(script);
+                }
+
+                addBottomSpace();
+                xsmtIsLoading.value = false;
+              },
+              onWebResourceError: (WebResourceError error) {
+                // debugPrint("onPageFinished url $error");
+              },
+              onNavigationRequest: (NavigationRequest request) {
+                // debugPrint("request ${request.url}");
+                if (request.url.contains(".html")) {
+                  return NavigationDecision.prevent;
+                }
+                return NavigationDecision.navigate;
+              },
+            ),
+          )
+          ..loadRequest(Uri.parse(link));
+      }
+
+      isNativeMode.value = false;
+      loadWebXSMT(date);
+    }
+  }
+
+  String getSelectedDayInStringXSMT() {
+    var dateTime = xsmtSelectedDateTime.value;
+    var day = "";
+    if (dateTime.day >= 10) {
+      day = "${dateTime.day}";
+    } else {
+      day = "0${dateTime.day}";
+    }
+    var month = "";
+    if (dateTime.month >= 10) {
+      month = "${dateTime.month}";
+    } else {
+      month = "0${dateTime.month}";
+    }
+    var date = "$day-$month-${dateTime.year}";
+    return date;
+  }
+
+  void setCurrentNumberXSMT(String s) {
+    xsmtCurrentSearchNumber.value = s;
+  }
+
+  void setCurrentDateXSMT(String s) {
+    xsmtCurrentSearchDate.value = s;
+  }
+
+  String msgInvalidCurrentSearchDateXSMT() {
+    try {
+      var currentYear = DateTime.now().year;
+      if (xsmtCurrentSearchDate.value.length != 10) {
+        return "Hãy nhập đúng định dạng dd/MM/$currentYear";
+      }
+      var arr = xsmtCurrentSearchDate.split("/");
+      int d = int.parse(arr[0]);
+      int m = int.parse(arr[1]);
+      int y = int.parse(arr[2]);
+      // debugPrint("isValidCurrentSearchDate $d/$m/$y");
+      if (d <= 0 || d >= 32) {
+        return "Ngày không hợp lệ (0<ngày<32)";
+      }
+      if (m <= 0 || m >= 13) {
+        return "Tháng không hợp lệ (0<tháng<13)";
+      }
+      if (y != currentYear) {
+        return "Năm không hợp lệ (Năm = $currentYear)";
+      }
+      return "";
+    } catch (e) {
+      return "";
+    }
+  }
+
+  void applySearchXSMT() {
+    var sCurrentSearchNumber = xsmtCurrentSearchNumber.value;
+    var sCurrentSearchDate = xsmtCurrentSearchDate.value;
+    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("sCurrentSearchDate $sCurrentSearchDate");
+    var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
+    // debugPrint("dt $dt");
+    if (dt != null) {
+      setSelectedDateTimeXSMT(dt, false);
+    }
+  }
 //END ZONE XSMT
 
 //ZONE XSMB

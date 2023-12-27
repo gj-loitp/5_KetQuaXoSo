@@ -25,6 +25,10 @@ class StringConstants {
   // static const String apiXsmn = "https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json";
 
   static getApiXsmn(String buildId) {
-    return "https://baomoi.com/_next/data/${buildId}/utilities/lottery/xsmn-mien-nam.json";
+    return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmn-mien-nam.json";
+  }
+
+  static getApiXsmt(String buildId) {
+    return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmt-mien-trung.json";
   }
 }

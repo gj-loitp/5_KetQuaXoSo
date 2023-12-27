@@ -33,7 +33,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   @override
   void dispose() {
-    // _controllerXSMN.clearOnDispose();
+    // _controllerMain.clearOnDispose();
     super.dispose();
   }
 

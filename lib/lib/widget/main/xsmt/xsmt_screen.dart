@@ -1,10 +1,8 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
-import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
@@ -35,7 +33,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
 
   @override
   void dispose() {
-    // _controllerXSMN.clearOnDispose();
+    // _controllerMain.clearOnDispose();
     super.dispose();
   }
 
@@ -88,7 +86,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                 child: CalendarTimeline(
                   shrink: false,
                   showYears: false,
-                  initialDate: _controllerMain.xsmnSelectedDateTime.value,
+                  initialDate: _controllerMain.xsmtSelectedDateTime.value,
                   firstDate: DateTime.now().subtract(const Duration(days: 365)),
                   lastDate: DateTime.now().add(const Duration(days: 365)),
                   onDateSelected: (date) {
@@ -211,10 +209,10 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
   }
 
   Widget _buildContentView() {
-    var isLoading = _controllerMain.xsmnIsLoading.value;
+    var isLoading = _controllerMain.xsmtIsLoading.value;
     var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
-    var timeSelected = _controllerMain.xsmnSelectedDateTime.value.microsecondsSinceEpoch;
+    var timeSelected = _controllerMain.xsmtSelectedDateTime.value.microsecondsSinceEpoch;
     var isFuture = false;
     // debugPrint("timeNow $timeNow");
     // debugPrint("timeSelected $timeSelected");
@@ -281,7 +279,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
           ),
           // const SizedBox(height: 16),
           Text(
-            "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInStringXSMN()}",
+            "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInStringXSMT()}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
@@ -303,7 +301,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
       return Container(
         padding: EdgeInsets.zero,
         // color: Colors.white,
-        child: WebViewWidget(controller: _controllerMain.xsmnWebViewController.value),
+        child: WebViewWidget(controller: _controllerMain.xsmtWebViewController.value),
       );
     }
   }
@@ -312,7 +310,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
     if (isFuture) {
       return _buildFutureView();
     } else {
-      var kqxs = _controllerMain.xsmnKqxs.value;
+      var kqxs = _controllerMain.xsmtKqxs.value;
       // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
       // if (listEntries.isEmpty) {
       //   return _buildFutureView();
@@ -359,8 +357,8 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
   }
 
   Widget _buildViewSearchMyLottery() {
-    var selectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
-    var currentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
+    var selectedDateTime = _controllerMain.xsmtSelectedDateTime.value;
+    var currentSearchNumber = _controllerMain.xsmtCurrentSearchNumber.value;
     var sCurrentSearchNumber = "";
     if (currentSearchNumber.isEmpty) {
       sCurrentSearchNumber = "Nhập vé số để tự động dò";
@@ -807,6 +805,6 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
   }
 
   void _selectDay(DateTime dateTime, bool isFirstInit) {
-    _controllerMain.setSelectedDateTimeXSMN(dateTime, isFirstInit);
+    _controllerMain.setSelectedDateTimeXSMT(dateTime, isFirstInit);
   }
 }
