@@ -47,29 +47,6 @@ class ControllerMain extends BaseController {
     return inputString.substring(startIndex, endIndex);
   }
 
-  Map<String, HighlightedWord> getWordsHighlight(double fontSize) {
-    var myCurrentLottery = xsmnCurrentSearchNumber.value;
-    Map<String, HighlightedWord> words = {};
-    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
-      var lastChar = _getLastChars(myCurrentLottery, i + 1);
-      // debugPrint("lastChar $lastChar");
-      words[lastChar] = HighlightedWord(
-        onTap: () {},
-        textStyle: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.w700,
-          fontSize: fontSize,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.lightGreenAccent,
-          borderRadius: BorderRadius.circular(45),
-        ),
-        padding: const EdgeInsets.all(2),
-      );
-    }
-    return words;
-  }
-
   //ZONE XSMN
   var xsmnSelectedDateTime = DateTime.now().obs;
   var xsmnWebViewController = WebViewController().obs;
@@ -279,6 +256,29 @@ class ControllerMain extends BaseController {
     if (dt != null) {
       setSelectedDateTimeXSMN(dt, false);
     }
+  }
+
+  Map<String, HighlightedWord> getWordsHighlightXSMN(double fontSize) {
+    var myCurrentLottery = xsmnCurrentSearchNumber.value;
+    Map<String, HighlightedWord> words = {};
+    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var lastChar = _getLastChars(myCurrentLottery, i + 1);
+      // debugPrint("lastChar $lastChar");
+      words[lastChar] = HighlightedWord(
+        onTap: () {},
+        textStyle: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w700,
+          fontSize: fontSize,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.lightGreenAccent,
+          borderRadius: BorderRadius.circular(45),
+        ),
+        padding: const EdgeInsets.all(2),
+      );
+    }
+    return words;
   }
 
 //END ZONE XSMN
@@ -492,6 +492,29 @@ class ControllerMain extends BaseController {
     if (dt != null) {
       setSelectedDateTimeXSMT(dt, false);
     }
+  }
+
+  Map<String, HighlightedWord> getWordsHighlightXSMT(double fontSize) {
+    var myCurrentLottery = xsmtCurrentSearchNumber.value;
+    Map<String, HighlightedWord> words = {};
+    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var lastChar = _getLastChars(myCurrentLottery, i + 1);
+      // debugPrint("lastChar $lastChar");
+      words[lastChar] = HighlightedWord(
+        onTap: () {},
+        textStyle: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w700,
+          fontSize: fontSize,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.lightGreenAccent,
+          borderRadius: BorderRadius.circular(45),
+        ),
+        padding: const EdgeInsets.all(2),
+      );
+    }
+    return words;
   }
 //END ZONE XSMT
 

@@ -4,9 +4,16 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/formatter/date_text_formatter.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
 
 class DlgInput extends StatefulWidget {
-  const DlgInput({super.key});
+  final String callFromScreen;
+
+  const DlgInput({
+    super.key,
+    required this.callFromScreen,
+  });
 
   @override
   State<DlgInput> createState() => _DlgInputState();
@@ -18,22 +25,53 @@ class _DlgInputState extends State<DlgInput> {
   final TextEditingController _tecDate = TextEditingController();
   final FocusNode _focusNode = FocusNode();
 
+  /*
+  if(widget.callFromScreen == XSMNScreen.path){
+
+  }else if(widget.callFromScreen == XSMTScreen.path){
+
+  }
+  */
+
   @override
   void initState() {
     super.initState();
     _tecNumber.addListener(() {
       var text = _tecNumber.text.toString();
-      _controllerMain.setCurrentNumberXSMN(text);
+
+      if (widget.callFromScreen == XSMNScreen.path) {
+        _controllerMain.setCurrentNumberXSMN(text);
+      } else if (widget.callFromScreen == XSMTScreen.path) {
+        _controllerMain.setCurrentNumberXSMT(text);
+      }
     });
     _tecDate.addListener(() {
       var text = _tecDate.text.toString();
-      _controllerMain.setCurrentDateXSMN(text);
+      if (widget.callFromScreen == XSMNScreen.path) {
+        _controllerMain.setCurrentDateXSMN(text);
+      } else if (widget.callFromScreen == XSMTScreen.path) {
+        _controllerMain.setCurrentDateXSMT(text);
+      }
     });
-    var currentSelectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
+    DateTime currentSelectedDateTime;
+    if (widget.callFromScreen == XSMNScreen.path) {
+      currentSelectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
+    } else if (widget.callFromScreen == XSMTScreen.path) {
+      currentSelectedDateTime = _controllerMain.xsmtSelectedDateTime.value;
+    } else {
+      currentSelectedDateTime = DateTime.now();
+    }
+
     var sCurrentSelectedDateTime = DurationUtils.getFormattedDate(currentSelectedDateTime);
     _tecDate.text = sCurrentSelectedDateTime;
 
-    var sCurrentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
+    var sCurrentSearchNumber = "";
+    if (widget.callFromScreen == XSMNScreen.path) {
+      sCurrentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
+    } else if (widget.callFromScreen == XSMTScreen.path) {
+      sCurrentSearchNumber = _controllerMain.xsmtCurrentSearchNumber.value;
+    }
+
     if (sCurrentSearchNumber.isNotEmpty) {
       _tecNumber.text = sCurrentSearchNumber;
     }
@@ -74,7 +112,7 @@ class _DlgInputState extends State<DlgInput> {
                       ),
                       const Expanded(
                         child: Text(
-                          "Cá nhân",
+                          "Nhập vé số của tôi",
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             color: Colors.white,
@@ -130,7 +168,13 @@ class _DlgInputState extends State<DlgInput> {
   }
 
   Widget _buildViewBody() {
-    var msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMN();
+    var msgInvalidCurrentSearchDate = "";
+    if (widget.callFromScreen == XSMNScreen.path) {
+      msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMN();
+    } else if (widget.callFromScreen == XSMTScreen.path) {
+      msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMT();
+    }
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -262,7 +306,11 @@ class _DlgInputState extends State<DlgInput> {
 
   void _applySearch() {
     FocusManager.instance.primaryFocus?.unfocus();
-    _controllerMain.applySearchXSMN();
+    if (widget.callFromScreen == XSMNScreen.path) {
+      _controllerMain.applySearchXSMN();
+    } else if (widget.callFromScreen == XSMTScreen.path) {
+      _controllerMain.applySearchXSMT();
+    }
     Get.back();
   }
 }

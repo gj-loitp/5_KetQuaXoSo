@@ -13,6 +13,8 @@ import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMTScreen extends StatefulWidget {
+  static const path = "XSMTScreen";
+
   const XSMTScreen({
     super.key,
   });
@@ -431,7 +433,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                           blankSpace: 50.0,
                         ),
                         onTap: () {
-                          Get.to(() => const DlgInput());
+                          Get.to(() => const DlgInput(callFromScreen: XSMTScreen.path));
                         },
                       ),
                     ),
@@ -614,8 +616,8 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
     double widthItem,
     double heightItem,
   ) {
-    var wordsBlack = _controllerMain.getWordsHighlight(18);
-    var wordsRed = _controllerMain.getWordsHighlight(16);
+    var wordsBlack = _controllerMain.getWordsHighlightXSMT(18);
+    var wordsRed = _controllerMain.getWordsHighlightXSMT(16);
     return Column(
       children: [
         Container(
