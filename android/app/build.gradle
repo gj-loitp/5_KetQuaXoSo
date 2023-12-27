@@ -56,12 +56,30 @@ android {
         multiDexEnabled = true
     }
 
-    buildTypes {
+    signingConfigs {
         release {
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            storeFile file("keystores.jks")
+            storePassword "04021993"
+            keyAlias "loi"
+            keyPassword "04021993"
         }
     }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            //used android.enableR8=true in gradle.properties
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            //used android.enableR8=true in gradle.properties
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
 }
 
 flutter {
