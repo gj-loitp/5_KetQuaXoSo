@@ -149,7 +149,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 inactiveBgColor: Colors.grey,
                                 inactiveFgColor: Colors.white,
                                 totalSwitches: 2,
-                                labels: const ['Giao diện Tối ưu', 'Giao diện Web'],
+                                labels: const ['Theme Tối ưu', 'Theme Web'],
                                 icons: const [
                                   Icons.looks_one,
                                   Icons.looks_two,
