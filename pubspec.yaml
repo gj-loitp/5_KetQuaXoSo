@@ -81,7 +81,7 @@ dependencies:
 #  flutter_native_splash:
 
   #https://pub.dev/packages/flutter_widget_from_html
-#  flutter_widget_from_html: ^0.14.9
+  flutter_widget_from_html: ^0.14.9
 #  flutter_widget_from_html_core: ^0.14.9
 #  flutter_widget_from_html_core: any
 #  fwfh_webview: ^0.14.8

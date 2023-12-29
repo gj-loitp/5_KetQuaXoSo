@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
-import 'package:ketquaxoso/lib/util/ui_utils.dart';
-import 'package:ketquaxoso/lib/widget/htmlContent/html_content_screen.dart';
 
-class InformationScreen extends StatefulWidget {
-  const InformationScreen({
+class HtmlContentScreen extends StatefulWidget {
+  const HtmlContentScreen({
     super.key,
   });
 
   @override
-  State<InformationScreen> createState() => _InformationScreenState();
+  State<HtmlContentScreen> createState() => _HtmlContentScreenState();
 }
 
-class _InformationScreenState extends BaseStatefulState<InformationScreen> {
+class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
   @override
   void initState() {
     super.initState();
@@ -89,30 +88,29 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                   ),
                 ),
                 Expanded(
-                  child: ListView(
-                    physics: const BouncingScrollPhysics(),
-                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                          color: Colors.white,
-                        ),
-                        child: Column(
-                          children: [
-                            UIUtils.getButton(
-                              "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
-                              Icons.navigate_next,
-                              () {
-                                Get.to(() => const HtmlContentScreen());
-                              },
-                            ),
-                          ],
-                        ),
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                      color: Colors.white,
+                    ),
+                    child: const HtmlWidget(
+                      '''
+  <h3>Heading</h3>
+  <p>
+    A paragraph with <strong>strong</strong>, <em>emphasized</em>
+    and <span style="color: red">colored</span> text.
+  </p>
+  ''',
+                      renderMode: RenderMode.column,
+                      textStyle: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black,
                       ),
-                    ],
+                    ),
                   ),
                 ),
               ],
