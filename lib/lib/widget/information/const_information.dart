@@ -169,18 +169,6 @@ class ConstInformation {
 </ol>
 </li>
 </ol>
-<p><strong><em>Cách chơi xổ số điện toán </em></strong></p>
-<p>Mặc dù cách chơi xổ số điện toán không được phổ biến với nhiều người. Nhưng anh em cũng nên biết và thử vận may. Bởi nếu trúng giải, sẽ nhận phần thưởng lớn có giá trị gấp 100.000 lần giá trị mua vé. Trong xổ số điện toán lại chia ra làm các cách chơi xổ số sau: Xổ số thần tài 4, xổ số điện toán miền Bắc 1-2-3, xổ số điện toán 6×36.</p>
-<p><strong>Cách chơi lô đề xổ số miền Bắc</strong></p>
-<p>Nếu anh em nào không thích những dãy số dài, thì có thể chơi lô đề xổ số dựa vào 2 số cuối trong kết quả XSMB. Trong một phiên quay xổ số miền Bắc có 27 giải thưởng thì sẽ có 27 số lô đề ứng với 2 số cuối mỗi giải, ví dụ như sau:</p>
-<p><img class="wp-image-8224" src="https://moneydaily.vn/wp-content/uploads/2020/05/word-image-5.jpeg" srcset="https://moneydaily.vn/wp-content/uploads/2020/05/word-image-5.jpeg 600w, https://moneydaily.vn/wp-content/uploads/2020/05/word-image-5-300x279.jpeg 300w" sizes="(max-width: 600px) 100vw, 600px"></p>
-<p><em>Kết quả XSMB</em></p>
-<p><img class="wp-image-8225" src="https://moneydaily.vn/wp-content/uploads/2020/05/word-image-6.jpeg" srcset="https://moneydaily.vn/wp-content/uploads/2020/05/word-image-6.jpeg 600w, https://moneydaily.vn/wp-content/uploads/2020/05/word-image-6-300x262.jpeg 300w" sizes="(max-width: 600px) 100vw, 600px"></p>
-<p><em>Ứng với là kết quả lô đề</em></p>
-<p>Mặc dù, với cách chơi lô đề này phần thưởng không cao bằng phần thưởng XSMB nhưng lại rất dễ trúng, dễ ăn chắc. Trung bình tỷ lệ ăn thưởng của lô đề sẽ giao động từ 75-80, tức là nếu anh em đánh lô với mệnh giá 10.000đ khi trúng lô đề xổ số sẽ nhận được 750.000đ đến 800.000đ.</p>
-<p>Đặc biệt hơn, anh em sẽ nhận được tỷ lệ cao hơn, đánh 1 ăn 99 khi tham gia chơi đề online trên website https://kqxs88.net/&nbsp;. Ví dụ, chỉ với 10.000đ anh em đánh trúng con lô sẽ rinh ngay về tay 990.000đ trong nháy mắt.</p>
-<p>Trên đây là những hướng dẫn cách chơi xổ số miền Bắc cho người mới chơi. Hi vọng rằng bài viết này có thể giúp ích cho anh em đang có dự định chơi XSMB và lô đề xổ số. Thông tin tổng hợp và biên tập bởi: Kqxs88.net</p>
-<p>&nbsp;</p>
 	</div><!-- .entry-content -->
 
 	</article><!-- #post-## -->
