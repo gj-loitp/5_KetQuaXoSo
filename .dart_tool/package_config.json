@@ -63,7 +63,7 @@
     },
     {
       "name": "calendar_timeline_sbk",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/calendar_timeline_sbk-1.1.5",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/calendar_timeline_sbk-1.1.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -716,7 +716,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-27T15:04:34.932758Z",
+  "generated": "2023-12-29T14:06:27.461400Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

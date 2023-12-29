@@ -85,10 +85,10 @@ packages:
     dependency: "direct main"
     description:
       name: calendar_timeline_sbk
-      sha256: e0ece736829e32b7140950e4c956d2be0c509688ca468f8e3bb7505df11ad7b7
+      sha256: "0badaa4423b34cea6aec9808b742e1eef026fd2807c70fd74df51864edffbcdd"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.5"
+    version: "1.1.7"
   characters:
     dependency: transitive
     description:
