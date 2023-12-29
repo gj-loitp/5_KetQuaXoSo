@@ -303,6 +303,194 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_2 = '''''';
+  static String infor_2 = '''<div class="body-r">
+  <div>
+    <div>
+     
+      <h1 style="text-align: center;"> TRÚNG SỐ PHẢI ĐÓNG THUẾ BAO NHIÊU PHẦN TRĂM?</h1>
+      <p> &nbsp;</p>
+      <ol>
+        <li> Cá nhân trúng thưởng xổ số các giải thưởng có giá trị trên 10 triệu đồng/01 tờ vé trúng thuộc đối tượng phải nộp thuế thu nhập cá nhân.</li>
+        <li> Mức thuế TNCN là 10% số tiền thưởng vượt trên 10 triệu đồng của tờ vé trúng (giá trị giải trúng - 10 triệu) x 10%.</li>
+      </ol>
+      <p> &nbsp;</p>
+      <p>
+        <strong>- Trúng vé số 2 tỷ đóng thuế bao nhiêu?</strong>
+      </p>
+      <p>
+        <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải trúng Đặc Biệt 2 tỷ: Thuế thu nhập = (2.000.000.000 - 10.000.000) x 10% = 199.000.000đ
+      </p>
+      <p>
+        <strong>- Trúng vé số 50 triệu đóng thuế bao nhiêu?</strong>
+      </p>
+      <p>
+        <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải phụ Đặc Biệt: 50 triệu =&gt; Thuế thu nhập&nbsp;= (50.000.000 - 10.000.000) x 10% = 4.000.000đ
+      </p>
+      <p>
+        <strong>- Trúng vé số 30 triệu đóng thuế bao nhiêu?</strong>
+      </p>
+      <p>
+        <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải nhất 30 triệu: Thuế thu nhập = (30.000.000 - 10.000.000) x 10% = 2.000.000đ
+      </p>
+      <p>
+        <strong>- Trúng vé số 15 triệu đóng thuế bao nhiêu?</strong>
+      </p>
+      <p>
+        <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải nhì 15 triệu: Thuế thu nhập = (15.000.000 - 10.000.000) x 10% = 500.000đ
+      </p>
+      <p>
+        <strong>- Trúng vé số đến 10 triệu đóng thuế bao nhiêu?</strong>
+      </p>
+      <p>
+        <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Các giải còn lại từ 10 triệu trở xuống không phải đóng thuế dù trúng cả cặp nguyên giải ba 100 tờ = 10.000.000 x 100 = 1.000.000.000đ (một tỷ đồng) cũng không phải đóng thuế nhưng lưu ý nếu 1 tờ vé trúng nhiều giải thì tính thuế trên tổng giá trị ví dụ tờ vé trúng cả giải ba và giải 8 trên 10 triệu =&gt; phải đóng thuế là (10.000.000 + 100.000 - 10.000.000) x 10% = 10.000đ.
+      </p>
+      <p> &nbsp;</p>
+      <p>
+        <em>Xem thêm nội dung thông tư hướng dẫn của Bộ Tài Chính:</em>
+      </p>
+      <p> &nbsp;</p>
+      <table border="0" cellpadding="0" cellspacing="0" style="width:595px;" width="595">
+        <tbody>
+          <tr>
+            <td style="width:235px;height:48px;">
+              <p align="center">
+                <strong>BỘ TÀI CHÍNH <br> ------- </strong>
+              </p>
+            </td>
+            <td style="width:360px;height:48px;">
+              <p align="center">
+                <strong>CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM <br> Độc lập - Tự do - Hạnh phúc <br> --------- </strong>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:235px;height:18px;">
+              <p align="center"> Số: 42/2009/TT-BTC</p>
+            </td>
+            <td style="width:360px;height:18px;">
+              <p align="right">
+                <em>Hà Nội, ngày 9 tháng 3 năm 2009</em>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p> &nbsp;</p>
+      <p align="center">
+        <strong>THÔNG TƯ</strong>
+      </p>
+      <p align="center">
+        <strong>Hướng dẫn khấu trừ thuế thu nhập cá nhân đối với cá nhân làm đại lý xổ số và khấu trừ thuế thu nhập cá nhân đối với cá nhân có thu nhập từ trúng thưởng xổ số</strong>
+      </p>
+      <p align="center">
+        <strong>______________________________</strong>
+      </p>
+      <p> Căn cứ Luật Thuế thu nhập cá nhân số 04/2007/QH 12 ngày 21 tháng 11 năm 2007 và văn bản hướng dẫn thi hành;</p>
+      <p> Căn cứ Luật Quản lý thuế số 78/2006/QH 11 ngày 29 tháng 11 năm 2006 và văn bản hướng dẫn thi hành;</p>
+      <p> Căn cứ Nghị định số 118/2008/NĐ-CP ngày 27 tháng 11 năm 2008 của Chính phủ quy định về chức năng, nhiệm vụ, quyền hạn, cơ cấu tổ chức của Bộ Tài chính;</p>
+      <p> Bộ Tài chính hướng dẫn việc đăng ký thuế, khấu trừ thuế, khai thuế, quyết toán thuế thu nhập cá nhân đối với các cá nhân làm đại lý xổ số và khấu trừ thuế thu nhập cá nhân đối với cá nhân trúng thưởng xổ số như sau:</p>
+      <p>
+        <strong>Điều 1. Phạm vi áp dụng</strong>
+      </p>
+      <p> 1. Các cá nhân trực tiếp ký hợp đồng làm đại lý xổ số với Công ty xổ số kiến thiết có thu nhập chịu thuế thu nhập cá nhân. Thu nhập chịu thuế thu nhập cá nhân từ hoạt động đại lý bao gồm các khoản thu nhập: hoa hồng của đại lý, các khoản thưởng dưới các hình thức, các khoản hỗ trợ, chi trả khác nhận được từ cơ sở giao đại lý.</p>
+      <p> 2. Cá nhân trúng thưởng xổ số.</p>
+      <p>
+        <strong>Điều 2. Đăng ký thuế </strong>
+      </p>
+      <p> 1. Cá nhân làm đại lý xổ số phải đăng ký thuế theo quy định của Luật quản lý thuế và các văn bản hướng dẫn thực hiện Luật quản lý thuế.</p>
+      <p> 2. Hồ sơ đăng ký thuế:</p>
+      <p> - Tờ khai đăng ký thuế theo mẫu số 03 ĐK-TCT ban hành kèm theo Thông tư số 85/2007/TT-BTC ngày 18/7/2007 của Bộ Tài chính hướng dẫn thi hành Luật Quản lý thuế về việc đăng ký thuế, Luật thuế thu nhập cá nhân.</p>
+      <p> - Bản sao chứng minh thư nhân dân hoặc hộ chiếu;</p>
+      <p> - Giấy chứng nhận đăng ký kinh doanh hoặc hợp đồng làm đại lý xổ số ký với Công ty xổ số kiến thiết.</p>
+      <p> 3. Địa điểm nộp hồ sơ đăng ký thuế: Cá nhân làm đại lý trực tiếp đăng ký thuế thì hồ sơ đăng ký thuế nộp tại Chi cục thuế quận, huyện nơi cá nhân cư trú.</p>
+      <p>
+        <strong>Điều 3. Khấu trừ thuế đối với thu nhập trả cho các đại lý</strong>
+      </p>
+      <p> - Đối tượng phải khấu trừ thuế: Công ty xổ số kiến thiết chi trả thu nhập cho cá nhân trực tiếp ký hợp đồng đại lý với Công ty xổ số kiến thiết có trách nhiệm khấu trừ thuế thu nhập cá nhân của cá nhân đại lý theo mức thu nhập và tỷ lệ như sau:</p>
+      <p align="right"> Đơn vị: 1.000 đồng Việt Nam</p>
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="width:324px;">
+              <p align="center"> Thu nhập của đại lý/tháng</p>
+            </td>
+            <td style="width:305px;">
+              <p align="center"> Tỷ lệ tạm thu trên thu nhập trả cho đại lý hàng tháng</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:324px;">
+              <p align="center"> Đến 4.000</p>
+            </td>
+            <td style="width:305px;">
+              <p align="center"> 0%</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:324px;">
+              <p align="center"> Trên 4.000</p>
+            </td>
+            <td style="width:305px;">
+              <p align="center"> 5%</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p> - Công ty xổ số kiến thiết có trách nhiệm cấp chứng từ khấu trừ cho đại lý xổ số theo đề nghị của đại lý xổ số.</p>
+      <p> - Thu nhập của đại lý theo biểu này là thu nhập của cá nhân đại lý không trừ các khoản giảm trừ gia cảnh cho người phụ thuộc, các khoản đóng góp bảo hiểm bắt buộc, các khoản đóng góp vào quỹ từ thiện nhân đạo...</p>
+      <p>
+        <strong>Điều 4. Khai thuế, quyết toán thuế</strong>
+      </p>
+      <p> 1. Đối với Công ty xổ số kiến thiết:</p>
+      <p> - Khai thuế tháng: Hàng tháng căn cứ vào số thuế thu nhập cá nhân đã khấu trừ của các đại lý, Công ty xổ số kiến thiết khai thuế theo mẫu số 01/KK-XS ban hành kèm theo Thông tư này và nộp tờ khai cho cơ quan thuế trực tiếp quản lý Công ty xổ số kiến thiết. Thời hạn nộp hồ sơ khai thuế tháng chậm nhất là ngày 20 của tháng sau.</p>
+      <p> Trường hợp số thuế khấu trừ hàng tháng dưới 5 triệu đồng thì lập tờ khai theo quý.</p>
+      <p> Thời hạn nộp tờ khai thuế theo quý chậm nhất là ngày 30 của tháng đầu quý sau.</p>
+      <p> - Khai quyết toán thuế: Công ty xổ số kiến thiết phải khai quyết toán số thuế thu nhập cá nhân đã khấu trừ của các đại lý theo mẫu số 02/KK-XS và lập Bảng kê kèm theo mẫu số 02A/BK-XS ban hành kèm theo Thông tư này.</p>
+      <p> Thời hạn nộp hồ sơ quyết toán thuế chậm nhất là ngày thứ chín mươi kể từ ngày kết thúc năm dương lịch.</p>
+      <p> 2. Đối với cá nhân làm đại lý: Cá nhân làm đại lý có thu nhập chịu thuế thu nhập cá nhân phải khai quyết toán thuế trong các trường hợp:</p>
+      <p> - Có số thuế phải nộp trong năm lớn hơn số thuế đã khấu trừ hoặc đã tạm nộp, hoặc có phát sinh thu nhập đến mức phải nộp thuế nhưng trong năm chưa bị khấu trừ hoặc chưa tạm nộp.</p>
+      <p> - Có yêu cầu về hoàn thuế hoặc bù trừ số thuế đã nộp vào kỳ sau.</p>
+      <p> Hồ sơ khai quyết toán thuế, thời hạn và nơi nộp hồ sơ khai quyết toán thuế được thực hiện theo quy định tại khoản 2.4 điểm 2, mục II phần D Thông tư số 84/2008/TT-BTC ngày 30/9/2008 của Bộ Tài chính nêu trên áp dụng đối với cá nhân kinh doanh.</p>
+      <p> Khai quyết toán thuế cá nhân làm đại lý phải kèm theo hồ sơ chứng minh người phụ thuộc (nếu có khai giảm trừ người phụ thuộc).</p>
+      <p> - Các trường hợp khác không phải khai quyết toán thuế.</p>
+      <p>
+        <strong>Điều 5. Khấu trừ thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng xổ số </strong>
+      </p>
+      <p> - Cá nhân trúng thưởng xổ số các giải thưởng có giá trị trên 10 triệu đồng trên 01 vé xổ số thuộc đối tượng phải nộp thuế thu nhập cá nhân.</p>
+      <p> - Thu nhập tính thuế từ trúng thưởng xổ số là phần giá trị giải thưởng của từng vé xổ số vượt trên 10 triệu đồng mà cá nhân trúng thưởng nhận được.</p>
+      <p> - Công ty xổ số kiến thiết có trách nhiệm khấu trừ thuế thu nhập cá nhân đối với những trường hợp cá nhân trúng thưởng vé xổ số có giá trị trên 10 triệu đồng.</p>
+      <p> - Hàng tháng Công ty xổ số kiến thiết tổng hợp tiền thuế thu nhập cá nhân đã khấu trừ đối với các trường hợp trúng thưởng trên 10 triệu đồng và kê khai theo mẫu số 03/KK-TNCN ban hành kèm theo Thông tư số 84/2008/TT-BTC ngày 30/9/2008 của Bộ Tài chính, nộp tờ khai và nộp tiền thuế đã khấu trừ vào Ngân sách theo quy định. Cuối năm Công ty xổ số kiến thiết phải quyết toán số thuế đã khấu trừ theo mẫu số 06/KK-TNCN và bảng kê số 06D/BK-TNCN ban hành kèm theo Thông tư số 84/2008/TT-BTC nên trên.</p>
+      <p>
+        <strong>Điều 6. Tổ chức thực hiện:</strong>
+      </p>
+      <p> 1. Thông tư này có hiệu lực thi hành sau 45 ngày kể từ ngày ký và áp dụng đối với thu nhập của đại lý xổ số từ ngày 01 tháng 01 năm 2009.</p>
+      <p> 2. Bãi bỏ các nội dung hướng dẫn về thuế thu nhập đối với người có thu nhập cao, thuế thu nhập doanh nghiệp áp dụng đối với cá nhân làm đại lý xổ số.</p>
+      <p> 3. Các nội dung khác không hướng dẫn tại Thông tư này được thực hiện theo quy định tại Thông tư số 84/2008/TT-BTC ngày 30/9/2008 của Bộ Tài chính hướng dẫn thi hành một số điều của Luật thuế thu nhập cá nhân và hướng dẫn thi hành Nghị định số 100/2008/NĐ-CP ngày 08/9/2008 của Chính phủ quy định chi tiết thi hành một số điều của Luật thuế thu nhập cá nhân.</p>
+      <p> Trong quá trình thực hiện nếu có vướng mắc, đề nghị các địa phương phản ánh kịp thời về Bộ Tài chính (Tổng cục Thuế) để nghiên cứu giải quyết./.</p>
+      <p> &nbsp;</p>
+      <table border="0" cellpadding="0" cellspacing="0" style="width:595px;" width="595">
+        <tbody>
+          <tr>
+            <td style="width:343px;height:84px;">
+              <p> &nbsp;</p>
+            </td>
+            <td style="width:252px;height:84px;">
+              <p align="center">
+                <strong>KT. BỘ TRƯỞNG <br> THỨ TRƯỞNG <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br> Đỗ Hoàng Anh Tuấn <br>
+                </strong>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p> &nbsp;</p>
+
+    </div>
+  </div>
+</div>''';
   static String infor_3 = '''''';
 }

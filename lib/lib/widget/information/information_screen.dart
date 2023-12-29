@@ -127,6 +127,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                 );
                               },
                             ),
+                            UIUtils.getButton(
+                              "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
+                              Icons.navigate_next,
+                                  () {
+                                Get.to(
+                                      () => HtmlContentScreen(
+                                    titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
+                                    htmlContent: ConstInformation.infor_2,
+                                  ),
+                                );
+                              },
+                            ),
                           ],
                         ),
                       ),
