@@ -70,7 +70,8 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMN();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
+        SharedPreferencesUtil.themeIndexNativeView;
 
     //co 2 cach
     //1 load bang web view
@@ -306,7 +307,8 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMT();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
+        SharedPreferencesUtil.themeIndexNativeView;
 
     //co 2 cach
     //1 load bang web view
