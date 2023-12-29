@@ -166,6 +166,12 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                               ),
                               const SizedBox(height: 32),
                               UIUtils.getButton(
+                                "Tin tức",
+                                Icons.info,
+                                description: "Các thông tin hữu ích 😘",
+                                    () {},
+                              ),
+                              UIUtils.getButton(
                                 "Đánh giá ứng dụng",
                                 Icons.hotel_class,
                                 description:
