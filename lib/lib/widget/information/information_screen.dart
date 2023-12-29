@@ -93,9 +93,8 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                     padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 16),
                         width: double.infinity,
-                        padding: const EdgeInsets.all(16),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
                         decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(45.0)),
                           color: Colors.white,
