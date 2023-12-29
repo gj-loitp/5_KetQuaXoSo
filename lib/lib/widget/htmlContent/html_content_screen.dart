@@ -5,8 +5,13 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 
 class HtmlContentScreen extends StatefulWidget {
+  final String? titleAppBar;
+  final String? htmlContent;
+
   const HtmlContentScreen({
     super.key,
+    required this.titleAppBar,
+    required this.htmlContent,
   });
 
   @override
@@ -50,10 +55,10 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
                         width: 40,
                         height: 40,
                       ),
-                      const Expanded(
+                      Expanded(
                         child: Text(
-                          "Thông tin hữu ích",
-                          style: TextStyle(
+                          widget.titleAppBar ?? "",
+                          style: const TextStyle(
                             fontWeight: FontWeight.w900,
                             color: Colors.white,
                             fontSize: 24,
@@ -66,6 +71,8 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
                             ],
                           ),
                           textAlign: TextAlign.center,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       SizedBox(
@@ -96,20 +103,15 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
                       borderRadius: BorderRadius.all(Radius.circular(45.0)),
                       color: Colors.white,
                     ),
-                    child: const HtmlWidget(
-                      '''
-  <h3>Heading</h3>
-  <p>
-    A paragraph with <strong>strong</strong>, <em>emphasized</em>
-    and <span style="color: red">colored</span> text.
-  </p>
-  ''',
-                      renderMode: RenderMode.column,
-                      textStyle: TextStyle(
+                    child: HtmlWidget(
+                      widget.htmlContent ?? "",
+                      renderMode: RenderMode.listView,
+                      textStyle: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: Colors.black,
                       ),
+                      enableCaching: true,
                     ),
                   ),
                 ),

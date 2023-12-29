@@ -4,6 +4,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/widget/htmlContent/html_content_screen.dart';
+import 'package:ketquaxoso/lib/widget/information/const_information.dart';
 
 class InformationScreen extends StatefulWidget {
   const InformationScreen({
@@ -106,7 +107,12 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
                               Icons.navigate_next,
                               () {
-                                Get.to(() => const HtmlContentScreen());
+                                Get.to(
+                                  () => HtmlContentScreen(
+                                    titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
+                                    htmlContent: ConstInformation.infor_0,
+                                  ),
+                                );
                               },
                             ),
                           ],
