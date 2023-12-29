@@ -5,6 +5,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
+import 'package:ketquaxoso/lib/widget/information/information_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:restart_app/restart_app.dart';
@@ -169,7 +170,9 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 "Tin tức",
                                 Icons.info,
                                 description: "Các thông tin hữu ích 😘",
-                                    () {},
+                                () {
+                                  Get.to(() => const InformationScreen());
+                                },
                               ),
                               UIUtils.getButton(
                                 "Đánh giá ứng dụng",
