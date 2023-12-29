@@ -174,7 +174,135 @@ class ConstInformation {
 	</article><!-- #post-## -->
 
 		</main>''';
-  static String infor_1 = '''''';
+  static String infor_1 = '''<div class="entry-content no-share" style="transform: none;">
+  <div class="jeg_share_button share-float jeg_sticky_share clearfix share-normal" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+    <div class="jegStickyHolder">
+      <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; top: 71px; left: 157.5px;"></div>
+    </div>
+  </div>
+  <div class="content-inner ">
+    <p style="text-align: justify;">
+      <em>
+        <span style="font-weight: 400;">Cách chơi </span>
+        <b>xổ số truyền thống Miền Bắc</b>
+        <span style="font-weight: 400;"> có gì khác so với Miền Nam &amp; Miền Trung?&nbsp; Cơ cấu giải thưởng, hình thức chơi của xổ số miền bắc ra sao? Cùng Xổ Số KT khám phá và khái quát về xổ số kiến thiết để tìm câu trả lời cho mình ngay sau đây nhé.</span>
+      </em>
+    </p>
+    </div>
+    <h2 style="text-align: justify;">
+      <span class="ez-toc-section" id="Cach_Choi_Xo_So_Mien_Bac_Truyen_Thong_Ra_Sao" ez-toc-data-id="#Cach_Choi_Xo_So_Mien_Bac_Truyen_Thong_Ra_Sao"></span>
+      <b>Cách Chơi Xổ Số Miền Bắc Truyền Thống Ra Sao?</b>
+      <span class="ez-toc-section-end"></span>
+    </h2>
+    <p style="text-align: justify;">
+      <span style="font-weight: 400;">XSMB truyền thống cùng với xổ số 2 miền còn lại đều có cách chơi không thể đơn giản hơn. Mọi người chỉ mất 10.000 đồng cho một tờ vé số mua ở đại lý hay người bán rong là có thể tham gia dự thưởng. Chỉ cần dãy số dự thưởng trên tấm vé của chúng ta trùng khớp và đáp ứng với thể lệ trúng thưởng của 1 trong 27 kết quả xsmb về bất kỳ thì sẽ trúng thưởng. Trúng giải nào thì mọi người sẽ được lãnh thưởng tiền giải nấy.</span>
+    </p>
+    <p style="text-align: justify;">
+      <span style="font-weight: 400;">Như đã đề cập ở trên, mọi người có thể dễ dàng mua một tấm vé số Miền Bắc từ người bán dạo bất kỳ trên địa bàn hoặc tới trực tiếp đại lý vé số để mua vé. Trong thời buổi công nghệ số, smartphone và internet phổ biến rộng rãi như hiện nay thì không chỉ xem xổ số truyền thống mà kể cả việc mua vé số online cũng trở nên đơn giản và dễ dàng hơn rất nhiều. Do vậy bạn có thể mua vé </span>
+      <b>xổ số truyền thống Miền Bắc </b>
+      <span style="font-weight: 400;">trên internet nếu không muốn phải đi xa mua vé số.</span>
+    </p>
+    <div class="jeg_ad jeg_ad_article jnews_content_inline_2_ads  ">
+      <div class="ads-wrapper align-center "></div>
+    </div>
+    <figure id="attachment_38612" aria-describedby="caption-attachment-38612" style="width: 750px" class="wp-caption aligncenter">
+      <img decoding="async" fetchpriority="high" class="wp-image-38612" title="xổ số truyền thống Miền Bắc" src="https://inhat.vn/hcm/wp-content/uploads/2021/11/xo-so-kt-4-1.jpg" alt="xổ số truyền thống Miền Bắc" width="750" height="374" srcset="https://hcm.inhat.vn/wp-content/uploads/2021/11/xo-so-kt-4-1.jpg 683w, https://hcm.inhat.vn/wp-content/uploads/2021/11/xo-so-kt-4-1-300x150.jpg 300w, https://hcm.inhat.vn/wp-content/uploads/2021/11/xo-so-kt-4-1-360x180.jpg 360w" sizes="(max-width: 750px) 100vw, 750px" data-pin-no-hover="true">
+      <figcaption id="caption-attachment-38612" class="wp-caption-text">Một tờ vé số dự thưởng để chơi xsmb</figcaption>
+    </figure>
+    <h2 style="text-align: justify;">
+      <span class="ez-toc-section" id="Cach_Choi_Xo_So_Mien_Bac_Khac_Gi_Voi_Xo_So_Truc_Tiep_Mien_Nam_Mien_Trung" ez-toc-data-id="#Cach_Choi_Xo_So_Mien_Bac_Khac_Gi_Voi_Xo_So_Truc_Tiep_Mien_Nam_Mien_Trung"></span>
+      <b>Cách Chơi Xổ Số Miền Bắc Khác Gì Với Xổ Số Trực Tiếp Miền Nam &amp; Miền Trung?</b>
+      <span class="ez-toc-section-end"></span>
+    </h2>
+    <h3 style="text-align: justify;">
+      <span class="ez-toc-section" id="Xo_so_mb_moi_ngay_chi_quay_duy_nhat_mot_dai" ez-toc-data-id="#Xo_so_mb_moi_ngay_chi_quay_duy_nhat_mot_dai"></span>
+      <strong>Xổ số mb mỗi ngày chỉ quay duy nhất một đài</strong>
+      <span class="ez-toc-section-end"></span>
+    </h3>
+    <p style="text-align: justify;">
+      <span style="font-weight: 400;">XSMB hiện nay có tổng cộng 6 đài quay thưởng xổ số bao gồm: Hà Nội, Bắc Ninh, Hải Phòng, Quảng Ninh, Nam Định, Thái Bình. Thay vì mỗi ngày có 2 – 3 đài quay thưởng như </span>
+      <b>xổ số trực tiếp miền nam</b>
+      <span style="font-weight: 400;"> thì XSMB mỗi ngày chỉ xổ đúng 1 đài.&nbsp;</span>
+    </p>
+    <p style="text-align: justify;">
+      <span style="font-weight: 400;">Đây là khác biệt đầu tiên và dễ thấy nhất trong cách chơi xổ số kiến thiết Miền Bắc khi so với hai miền còn lại. Mỗi ngày, mọi người chỉ có một lựa chọn mua vé cho một đài quay duy nhất của ngày hôm đó mà thôi thay vì phải suy nghĩ, cân nhắc nên ưu tiên mua vé của tỉnh, thành phố nào như 2 miền khác. Điều này giúp chúng ta dễ có thể theo dõi kết quả khi dò số.&nbsp;</span>
+    </p>
+    <h3 style="text-align: justify;">
+      <span class="ez-toc-section" id="Day_so_du_thuong" ez-toc-data-id="#Day_so_du_thuong"></span>
+      <strong>Dãy số dự thưởng</strong>
+      <span class="ez-toc-section-end"></span>
+    </h3>
+    <p style="text-align: justify;">
+      <span style="font-weight: 400;">Tấm vé số dự thưởng của đài </span>
+      <strong>
+        <a href="https://kinhtevadubao.vn/mach-ban-cach-tra-cuu-ket-qua-xo-so-mien-bac-chuan-xac-nhat-19628.html" target="_blank" rel="noopener noreferrer">xổ số miền bắc</a>
+      </strong>
+      <span style="font-weight: 400;"> sẽ chỉ có 5 con số. Thế nhưng XSKT hai miền còn lại có tới 6 con số, nếu tính theo toán học xác suất hay nói đơn giản hơn là xác xuất trúng thưởng vé số thì cơ hội trúng thưởng </span>
+      <b>xổ số truyền thống Miền Bắc</b>
+      <span style="font-weight: 400;"> cũng sẽ cao hơn.&nbsp;</span>
+    </p>
+    <p style="text-align: justify;">
+      <span style="font-weight: 400;">Thực tế cho thấy số tiền mà XSMN, XSMT chi thưởng với số tiền vượt trội hơn nhiều so với XSMB, điều này mới phản ánh đúng tình hình thực tế ở Miền Bắc dường như xổ số không thu hút được nhiều người chơi, thành viên tham&nbsp; gia như 2 miền còn lại.</span>
+    </p>
+    <figure id="attachment_38613" aria-describedby="caption-attachment-38613" style="width: 800px" class="wp-caption aligncenter">
+      <img decoding="async" class="wp-image-38613 size-full" title="xổ số truyền thống Miền Bắc" src="https://inhat.vn/hcm/wp-content/uploads/2021/11/xo-so-10.jpg" alt="xổ số truyền thống Miền Bắc" width="800" height="484" srcset="https://hcm.inhat.vn/wp-content/uploads/2021/11/xo-so-10.jpg 800w, https://hcm.inhat.vn/wp-content/uploads/2021/11/xo-so-10-300x182.jpg 300w, https://hcm.inhat.vn/wp-content/uploads/2021/11/xo-so-10-768x465.jpg 768w, https://hcm.inhat.vn/wp-content/uploads/2021/11/xo-so-10-750x454.jpg 750w" sizes="(max-width: 800px) 100vw, 800px" data-pin-no-hover="true">
+      <figcaption id="caption-attachment-38613" class="wp-caption-text">Dãy số dự thưởng ở miền bắc chỉ có 5 chữ số</figcaption>
+    </figure>
+    <h3 style="text-align: justify;">
+      <span class="ez-toc-section" id="Thu_tu_quay_so_mo_thuong_tai_xsmb" ez-toc-data-id="#Thu_tu_quay_so_mo_thuong_tai_xsmb"></span>
+      <strong>Thứ tự quay số mở thưởng tại xsmb</strong>
+      <span class="ez-toc-section-end"></span>
+    </h3>
+    <p style="text-align: justify;">
+      <span style="font-weight: 400;">Khi chơi </span>
+      <strong>
+        <a href="https://tienphong.vn/he-thong-xo-so-kien-thiet-mien-bac-dich-vu-chuyen-nghiep-xo-so-kt-post1388865.tpo" target="_blank" rel="noopener noreferrer">xổ số miền bắc</a>
+      </strong>
+      <span style="font-weight: 400;">, chung ta dễ dàng thấy rằng dãy số đầu tiên được mở thưởng là giải nhất, sau đó mở lần lượt đến giải nhì, giải ba, giải tư…, giải bảy rồi cuối cùng mới tới giải đặc biệt. Còn số Miền Nam &amp; Miền Trung thì kết quả mở thưởng ngược lại. thường sẽ quay từ giải tám, lần lượt mở thưởng từ giải nhỏ đến giải lớn hơn.</span>
+    </p>
+    <p style="text-align: justify;">
+    </p>
+    <div class="kk-star-ratings kksr-auto kksr-align-right kksr-valign-bottom" data-payload="{&quot;align&quot;:&quot;right&quot;,&quot;id&quot;:&quot;38610&quot;,&quot;slug&quot;:&quot;default&quot;,&quot;valign&quot;:&quot;bottom&quot;,&quot;ignore&quot;:&quot;&quot;,&quot;reference&quot;:&quot;auto&quot;,&quot;class&quot;:&quot;&quot;,&quot;count&quot;:&quot;0&quot;,&quot;legendonly&quot;:&quot;&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;score&quot;:&quot;0&quot;,&quot;starsonly&quot;:&quot;&quot;,&quot;best&quot;:&quot;5&quot;,&quot;gap&quot;:&quot;5&quot;,&quot;greet&quot;:&quot;Rate this post&quot;,&quot;legend&quot;:&quot;0\/5 - (0 b\u00ecnh ch\u1ecdn)&quot;,&quot;size&quot;:&quot;24&quot;,&quot;title&quot;:&quot;C\u00e1ch Ch\u01a1i X\u1ed5 S\u1ed1 Truy\u1ec1n Th\u1ed1ng Mi\u1ec1n B\u1eafc Kh\u00e1c G\u00ec V\u1edbi 2 Mi\u1ec1n C\u00f2n L\u1ea1i?&quot;,&quot;width&quot;:&quot;0&quot;,&quot;_legend&quot;:&quot;{score}\/{best} - ({count} {votes})&quot;,&quot;font_factor&quot;:&quot;1.25&quot;}">
+      <div class="kksr-stars">
+        <div class="kksr-stars-inactive">
+          <div class="kksr-star" data-star="1" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" data-star="2" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" data-star="3" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" data-star="4" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" data-star="5" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+        </div>
+        <div class="kksr-stars-active" style="width: 0px;">
+          <div class="kksr-star" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+          <div class="kksr-star" style="padding-right: 5px">
+            <div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kksr-legend" style="font-size: 19.2px;"></div>
+    </div>
+  </div>
+</div>''';
   static String infor_2 = '''''';
   static String infor_3 = '''''';
 }

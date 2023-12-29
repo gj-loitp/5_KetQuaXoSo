@@ -115,6 +115,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                 );
                               },
                             ),
+                            UIUtils.getButton(
+                              "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
+                              Icons.navigate_next,
+                              () {
+                                Get.to(
+                                  () => HtmlContentScreen(
+                                    titleAppBar: "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
+                                    htmlContent: ConstInformation.infor_1,
+                                  ),
+                                );
+                              },
+                            ),
                           ],
                         ),
                       ),
