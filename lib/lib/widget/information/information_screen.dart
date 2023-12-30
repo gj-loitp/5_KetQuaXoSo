@@ -214,6 +214,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
+                                      htmlContent: ConstInformation.infor_9,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),
