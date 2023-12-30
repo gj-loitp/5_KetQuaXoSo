@@ -299,7 +299,7 @@ class ConstInformation {
           </div>
         </div>
       </div>
-      <div class="kksr-legend" style="font-size: 19.2px;"></div>
+      <div class="kksr-legend" style="font-size: 16px;"></div>
     </div>
   </div>
 </div>''';
@@ -616,12 +616,12 @@ class ConstInformation {
         <p>
           <strong>
             <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
-              <span style="font-size: 28px;">
+              <span style="font-size: 16px;">
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">XỔ SỐ&nbsp;</span>
               </span>
             </span>
             <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
-              <span style="font-size: 28px;">
+              <span style="font-size: 16px;">
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">
                   <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">MINH NGỌC</span>
                 </span>
@@ -630,17 +630,17 @@ class ConstInformation {
           </strong>
         </p>
         <p>
-          <span style="font-size: 20px;">Hệ thống phân phối vé xổ số kiến thiết các tỉnh <br> Hoạt động lâu năm, ổn định &amp; phát triển </span>
+          <span style="font-size: 16px;">Hệ thống phân phối vé xổ số kiến thiết các tỉnh <br> Hoạt động lâu năm, ổn định &amp; phát triển </span>
           <br> Tường thuật trực tiếp kết quả xổ số toàn quốc -&nbsp; Với hệ thống Số&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <strong>
-              <span style="font-size: 26px;">1</span>
+              <span style="font-size: 16px;">1</span>
             </strong>
           </span>&nbsp;Việt Nam. <br> Là hệ thống đứng đầu Google nhiều từ khóa liên quan đến "xo so". "xổ số", "xổ số trực tiếp", "kết quả xổ số" ... với hàng triệu người dùng thường xuyên và hàng nghìn người dùng bình chọn tích cực. &nbsp; <a href="https://www.minhngoc.net.vn/page/gioi-thieu.html" target="_blank">xem thêm!</a>... <a href="https://goo.gl/maps/R7dGb36ZNviAHonq5">xem trên google</a>!...
         </p>
         <p> &nbsp;</p>
         <h1>
           <a href="/thong-tin/doi-so-trung.html" target="_blank">
-            <strong style="color: rgb(178, 34, 34); font-size: 48px; --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">ĐỔI SỐ TRÚNG</strong>
+            <strong style="color: rgb(178, 34, 34); font-size: 16px; --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">ĐỔI SỐ TRÚNG</strong>
           </a>
         </h1>
         <p> Nhận đổi số trúng các giải, khả năng tài chính tốt nhất (hỗ trợ nhanh chóng các giải trúng lớn và Giải Đặc Biệt)</p>
@@ -649,7 +649,7 @@ class ConstInformation {
         <p> &nbsp;</p>
         <p>
           <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
-            <span style="font-size: 18px;">
+            <span style="font-size: 16px;">
               <strong>
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">ĐỔI SỐ TRÚNG ĐẶC BIỆT</span>
               </strong>
@@ -658,7 +658,7 @@ class ConstInformation {
         </p>
         <p>
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
-            <span style="font-size: 18px;">
+            <span style="font-size: 16px;">
               <strong>
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">Nhanh nhất - Uy tín - Bảo mật &amp; Tận nơi theo yêu cầu !...</span>
               </strong>
@@ -667,7 +667,7 @@ class ConstInformation {
         </p>
         <p style="text-align: left;">
           <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="font-family: &quot;times new roman&quot;, times, serif;">
-            <span style="font-size: 20px;">
+            <span style="font-size: 16px;">
               <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
                 <strong>Nhanh nhất!</strong>
               </span>
@@ -676,7 +676,7 @@ class ConstInformation {
         </p>
         <p style="text-align: left;">
           <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
-            <span style="font-size: 20px;">
+            <span style="font-size: 16px;">
               <strong>
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">Uy tín, bảo mật!</span>
               </strong>
@@ -687,7 +687,7 @@ class ConstInformation {
           <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <strong>
               <span style="font-family: &quot;times new roman&quot;, times, serif;">
-                <span style="font-size: 20px;">Thanh toán tận nơi an toàn!</span>
+                <span style="font-size: 16px;">Thanh toán tận nơi an toàn!</span>
               </span>
             </strong>
           </span>&nbsp;Thanh toán tại chi nhánh đại lý vé số gần nhất hoặc tại nhà riêng của khách hàng hoặc tại Ngân Hàng do khách hàng chỉ định.
@@ -695,7 +695,7 @@ class ConstInformation {
         <p style="text-align: left;">
           <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <strong>
             <span style="font-family: &quot;times new roman&quot;, times, serif;">
-              <span style="font-size: 20px;">
+              <span style="font-size: 16px;">
                 <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">Phương thức linh động!</span>
               </span>
             </span>
@@ -704,7 +704,7 @@ class ConstInformation {
         <p> &nbsp;</p>
         <h2>
           <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
-            <span style="font-size: 22px;">&nbsp; <strong>
+            <span style="font-size: 16px;">&nbsp; <strong>
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">Quy định về thuế thu nhập trúng xổ số:</span>
               </strong>
             </span>
@@ -739,7 +739,7 @@ class ConstInformation {
             <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
               <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">
-                  <span style="font-size: 24px;">
+                  <span style="font-size: 16px;">
                     <strong>ĐỔI VÉ SỐ TRÚNG THƯỞNG</strong>
                   </span>
                   <br> Liên hệ Hotline: </span>
@@ -748,7 +748,7 @@ class ConstInformation {
           </span>
           <br>
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
-            <span style="font-size: 48px;">
+            <span style="font-size: 16px;">
               <strong>0973 777779</strong>
             </span>
           </span>
@@ -772,7 +772,7 @@ class ConstInformation {
         </p>
         <p>
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
-            <span style="font-size: 20px;">
+            <span style="font-size: 16px;">
               <strong>
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">Kính chúc quý khách may mắn phát tài!...</span>
               </strong>
@@ -781,7 +781,7 @@ class ConstInformation {
         </p>
         <p>
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
-            <span style="font-size: 20px;">
+            <span style="font-size: 16px;">
               <strong>
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">
                   <a href="https://www.minhngoc.net.vn/upload/images/xsmn2.jpg" target="_blank">
@@ -795,7 +795,7 @@ class ConstInformation {
         <p> &nbsp;</p>
         <p>
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
-            <span style="font-size: 20px;">
+            <span style="font-size: 16px;">
               <strong>
                 <span style="font-family: &quot;times new roman&quot;, times, serif;">
                   <a href="https://www.minhngoc.net.vn/upload/images/xsmn.jpg" target="_blank">
@@ -829,7 +829,7 @@ class ConstInformation {
                 </h3>
                 <h3 style="text-align: right">
                   <b>
-                    <span style="font-size: 11px">
+                    <span style="font-size: 16px">
                       <em>
                         <span style="font-family: times new roman">Thứ Bảy, ngày 14 tháng năm năm 2011.</span>
                       </em>
@@ -852,7 +852,7 @@ class ConstInformation {
                 <div style="text-align: justify"> &nbsp;</div>
                 <div style="text-align: justify">
                   <strong>
-                    <span style="font-size: 18px">I/</span> Như đã nói ở trên vé số cả nước nói chung và Miền Nam nói riêng được in nhiều công đoạn, hình nền được in trước, số nhảy và các chi tiết khác in sau… </strong> Tôi xin liệt kê một số đặc điểm chính của tờ vé xổ số Miền Nam:
+                    <span style="font-size: 16px">I/</span> Như đã nói ở trên vé số cả nước nói chung và Miền Nam nói riêng được in nhiều công đoạn, hình nền được in trước, số nhảy và các chi tiết khác in sau… </strong> Tôi xin liệt kê một số đặc điểm chính của tờ vé xổ số Miền Nam:
                 </div>
                 <div style="text-align: justify"> &nbsp;</div>
                 <div style="text-align: justify"> + Bộ số nhảy đóng cứng hoặc hoặc in mềm có kèm bộ chữ, một số tỉnh dùng bộ số đột thủng lỗ kim, bộ ký hiệu con vật. Bộ số cứng khi đóng có in dấu trên tờ vé giống như dấu nỗi giáp lai ảnh của CMND, hai phía trên dưới có dấu của mép con số liền kề. Bộ số in mềm không có dấu đóng nhưng chi tiết cao có số nhỏ bên trong hoặc họa tiết hoặc nội dung tùy theo tỉnh.</div>
@@ -968,5 +968,88 @@ class ConstInformation {
     </div>
   </div>
 </td>''';
-  static String infor_7 = '''''';
+  static String infor_7 = '''<div class="body-r">
+  <div>
+    <div>
+      <h3> &nbsp;</h3>
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td class="style17">
+              <div style="text-align: justify">
+                <h4>
+                  <span style="color: rgb(128, 0, 0); --darkreader-inline-color: #ff7272;" data-darkreader-inline-color="">
+                    <font class="PortletHeading2">
+                      <strong>Mức chi hoa hồng đại lý của các loại hình xổ số </strong>
+                    </font>
+                  </span>
+                </h4>
+                <p style="text-indent: 15px">
+                  <font class="PortletHeading2">
+                    <strong>Bộ Tài chính vừa ban hành Thông tư 112/2007/TT-BTC hướng dẫn chế độ quản lý tài chính đối với Công ty xổ số kiến thiết (XSKT). Cụ thể, Thông tư được áp dụng cho các công ty XSKT được tổ chức và hoạt động theo các hình thức công ty trách nhiệm hữu hạn một thành viên do Nhà nước sở hữu 100% vốn, công ty nhà nước trong thời gian chuyển đổi thành công ty trách nhiệm hữu hạn một thành viên. </strong>
+                  </font>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="style17">
+              <table align="left" border="0" id="table221">
+                <tbody>
+                  <tr>
+                    <td class="style17">
+                      <p align="center">
+                        <strong>
+                          <img alt="" height="84" src="/upload/image/imagesCAXUD74J.jpg" width="150">
+                        </strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="style17">
+                      <p align="center" class="style9">
+                        <span class="style_italic">Một buổi quay xổ số</span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px">
+                <font face="Arial" size="2">Theo Thông tư mới ban hành (thay thế Thông tư 77/2005/TT-BTC ngày 13/9/2005 của Bộ Tài chính), mức chi hoa hồng đại lý cho mỗi đại lý của từng loại hình xổ số tại từng thời điểm không vượt quá 15% doanh thu bán vé có thuế (theo quy định cũ là 13%). Quy định này áp dụng trong cả trường hợp Công ty XSKT làm đại lý tiêu thụ vé cho Công ty XSKT khác.</font>
+              </p>
+              <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px">
+                <font face="Arial" size="2">Mức phí thanh toán cho đại lý được ủy quyền trả thưởng cho khách hàng trúng thưởng không được vượt quá 0,2% trên tổng giá trị giải thưởng đại lý đã thanh toán theo ủy quyền. Đại lý được ủy quyền trả thưởng không được lấy bất cứ khoản phí nào của khách hàng trúng thưởng.</font>
+              </p>
+              <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px">
+                <font face="Arial" size="2">Thông tư đã đưa ra quy định mới về việc chi chống số đề lợi dụng XSKT để hoạt động.&nbsp; Cụ thể, mức chi tối đa cho 1 vụ án số đề bị đưa ra xét xử là 15 triệu đồng. Tổng mức chi chống số đề tối đa trong năm tài chính áp dụng cho các Công ty XSKT đang hoạt động kinh doanh trong khu vực miền Bắc và miền Trung không quá 1%, khu vực miền Nam không quá 0,5% tổng doanh thu hoạt động kinh doanh xổ số (có thuế) hàng năm của công ty. Các Công ty XSKT chi hỗ trợ trực tiếp qua cơ quan công an thực hiện công tác điều tra, khám phá, thụ lý chính của vụ án số đề.</font>
+              </p>
+              <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px">
+                <font face="Arial" size="2">Thông tư mới đã quy định một cách cụ thể hơn mức chi đóng góp hoạt động của Hội đồng XSKT khu vực. Mức đóng góp tối đa (theo năm) đối với các Công ty XSKT là 48 triệu đồng/năm/công ty, mức đóng góp cụ thể của từng công ty do Hội đồng XSKT khu vực thống nhất và thực hiện.</font>
+              </p>
+              <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px">
+                <span lang="nl">
+                  <font size="2">
+                    <span style="font-family: Arial">Thông tư cũng nêu rõ, </span>
+                  </font>
+                </span>
+                <span id="_ctl5_lblContent0" lang="NL" style="font-family: Arial; font-size: 16px">Công ty xổ số kiến thiết phải thực hiện công khai tài chính hàng năm theo quy định; chịu sự quản lý, kiểm tra, giám sát của UBND các tỉnh, thành phố trực thuộc Trung ương và các cơ quan có thẩm quyền tại địa phương. Bộ Tài chính thực hiện việc giám sát, kiểm tra định kỳ hoặc đột xuất đối với Công ty XSKT trong việc chấp hành chế độ quản lý tài chính theo quy định tại Thông tư này.</span>
+              </p>
+              <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px"> &nbsp;</p>
+              <p align="right" style="margin-top: 6px; margin-bottom: 6px">
+                <em>
+                  <font face="Arial" size="2">(Nguồn: Thông tư 112/2007/TT-BTC)</font>
+                </em>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p> &nbsp;</p>
+      
+    </div>
+  </div>
+</div>''';
+  static String infor_8 = '''''';
+  static String infor_9 = '''''';
+  static String infor_10 = '''''';
 }

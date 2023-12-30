@@ -190,6 +190,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Mức chi hoa hồng đại lý của các loại hình xổ số",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Mức chi hoa hồng đại lý của các loại hình xổ số",
+                                      htmlContent: ConstInformation.infor_7,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),
