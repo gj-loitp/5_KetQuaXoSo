@@ -98,6 +98,8 @@ class UIUtils {
                       color: Colors.black,
                       fontSize: DimenConstants.txtMedium,
                     ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   if (description.isNotEmpty == true)
                     Text(

@@ -108,9 +108,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
                                       htmlContent: ConstInformation.infor_0,
                                     ),
@@ -120,9 +120,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
                                       htmlContent: ConstInformation.infor_1,
                                     ),
@@ -132,11 +132,24 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
                                       htmlContent: ConstInformation.infor_2,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
+                                Icons.navigate_next,
+                                () {
+                                  Get.to(
+                                    () => HtmlContentScreen(
+                                      titleAppBar:
+                                          "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
+                                      htmlContent: ConstInformation.infor_3,
                                     ),
                                   );
                                 },
