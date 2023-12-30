@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
@@ -90,59 +91,61 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                   ),
                 ),
                 Expanded(
-                  child: ListView(
-                    physics: const BouncingScrollPhysics(),
-                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                          color: Colors.white,
+                  child: CupertinoScrollbar(
+                    child: ListView(
+                      physics: const BouncingScrollPhysics(),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                            color: Colors.white,
+                          ),
+                          child: Column(
+                            children: [
+                              UIUtils.getButton(
+                                "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
+                                      htmlContent: ConstInformation.infor_0,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
+                                      htmlContent: ConstInformation.infor_1,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
+                                      htmlContent: ConstInformation.infor_2,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
                         ),
-                        child: Column(
-                          children: [
-                            UIUtils.getButton(
-                              "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
-                              Icons.navigate_next,
-                              () {
-                                Get.to(
-                                  () => HtmlContentScreen(
-                                    titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
-                                    htmlContent: ConstInformation.infor_0,
-                                  ),
-                                );
-                              },
-                            ),
-                            UIUtils.getButton(
-                              "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
-                              Icons.navigate_next,
-                              () {
-                                Get.to(
-                                  () => HtmlContentScreen(
-                                    titleAppBar: "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
-                                    htmlContent: ConstInformation.infor_1,
-                                  ),
-                                );
-                              },
-                            ),
-                            UIUtils.getButton(
-                              "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
-                              Icons.navigate_next,
-                                  () {
-                                Get.to(
-                                      () => HtmlContentScreen(
-                                    titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
-                                    htmlContent: ConstInformation.infor_2,
-                                  ),
-                                );
-                              },
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],

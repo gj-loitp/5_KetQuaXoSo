@@ -493,4 +493,8 @@ class ConstInformation {
   </div>
 </div>''';
   static String infor_3 = '''''';
+  static String infor_4 = '''''';
+  static String infor_5 = '''''';
+  static String infor_6 = '''''';
+  static String infor_7 = '''''';
 }

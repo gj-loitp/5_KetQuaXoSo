@@ -1,4 +1,5 @@
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
@@ -101,131 +102,133 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     ),
                   ),
                   Expanded(
-                    child: ListView(
-                      physics: const BouncingScrollPhysics(),
-                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                      children: [
-                        AvatarGlow(
-                          glowColor: Colors.white,
-                          endRadius: 60.0,
-                          showTwoGlows: true,
-                          child: Image.asset(
-                            'assets/images/anim_2.gif',
-                            width: 90,
-                            fit: BoxFit.cover,
+                    child: CupertinoScrollbar(
+                      child: ListView(
+                        physics: const BouncingScrollPhysics(),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                        children: [
+                          AvatarGlow(
+                            glowColor: Colors.white,
+                            endRadius: 60.0,
+                            showTwoGlows: true,
+                            child: Image.asset(
+                              'assets/images/anim_2.gif',
+                              width: 90,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 16),
-                          width: double.infinity,
-                          padding: const EdgeInsets.all(16),
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                            color: Colors.white,
-                          ),
-                          child: Column(
-                            children: [
-                              const Text(
-                                "ⒸRoy93Group",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12,
-                                  color: Colors.grey,
+                          Container(
+                            margin: const EdgeInsets.only(top: 16),
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(16),
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: [
+                                const Text(
+                                  "ⒸRoy93Group",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: Colors.grey,
+                                  ),
                                 ),
-                              ),
-                              const Text(
-                                "Chọn giao diện",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 22,
-                                  color: Colors.black,
+                                const Text(
+                                  "Chọn giao diện",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 22,
+                                    color: Colors.black,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 16),
-                              ToggleSwitch(
-                                minWidth: Get.width / 3,
-                                initialLabelIndex: _controllerMain.themeIndex.value,
-                                cornerRadius: 45.0,
-                                activeFgColor: Colors.white,
-                                inactiveBgColor: Colors.grey,
-                                inactiveFgColor: Colors.white,
-                                totalSwitches: 2,
-                                labels: const ['Theme Tối ưu', 'Theme Web'],
-                                icons: const [
-                                  Icons.looks_one,
-                                  Icons.looks_two,
-                                ],
-                                activeBgColors: const [
-                                  [ColorConstants.appColor],
-                                  [ColorConstants.appColor]
-                                ],
-                                onToggle: (index) {
-                                  debugPrint('switched to: $index');
-                                  _controllerMain.setThemeIndex(index);
-                                  _showPopupRestart();
-                                },
-                              ),
-                              const SizedBox(height: 32),
-                              UIUtils.getButton(
-                                "Tin tức",
-                                Icons.info,
-                                description: "Các thông tin hữu ích 😘",
-                                () {
-                                  Get.to(() => const InformationScreen());
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Đánh giá ứng dụng",
-                                Icons.hotel_class,
-                                description:
-                                    "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐ bạn nhé!Tks bạn nhiều 😘",
-                                () {
-                                  UrlLauncherUtils.rateApp(null, null);
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Thêm ứng dụng",
-                                Icons.card_giftcard,
-                                description:
-                                    "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
-                                () {
-                                  UrlLauncherUtils.moreApp();
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Chia sẻ ứng dụng",
-                                Icons.ios_share,
-                                description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
-                                () async {
-                                  final result = await Share.shareWithResult(
-                                      'https://play.google.com/store/apps/details?id=com.roy93group.ketquaxoso');
-                                  if (result.status == ShareResultStatus.success) {
-                                    showSnackBarFull("KQXS", "Cảm ơn bạn đã chia sẻ 👉👈");
-                                  }
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Chính sách bảo mật",
-                                Icons.local_police,
-                                description:
-                                    "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
-                                () {
-                                  UrlLauncherUtils.launchPolicy();
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Source code ở Github",
-                                Icons.data_object,
-                                description:
-                                    "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
-                                () {
-                                  UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
-                                },
-                              ),
-                            ],
+                                const SizedBox(height: 16),
+                                ToggleSwitch(
+                                  minWidth: Get.width / 3,
+                                  initialLabelIndex: _controllerMain.themeIndex.value,
+                                  cornerRadius: 45.0,
+                                  activeFgColor: Colors.white,
+                                  inactiveBgColor: Colors.grey,
+                                  inactiveFgColor: Colors.white,
+                                  totalSwitches: 2,
+                                  labels: const ['Theme Tối ưu', 'Theme Web'],
+                                  icons: const [
+                                    Icons.looks_one,
+                                    Icons.looks_two,
+                                  ],
+                                  activeBgColors: const [
+                                    [ColorConstants.appColor],
+                                    [ColorConstants.appColor]
+                                  ],
+                                  onToggle: (index) {
+                                    debugPrint('switched to: $index');
+                                    _controllerMain.setThemeIndex(index);
+                                    _showPopupRestart();
+                                  },
+                                ),
+                                const SizedBox(height: 32),
+                                UIUtils.getButton(
+                                  "Tin tức",
+                                  Icons.info,
+                                  description: "Các thông tin hữu ích 😘",
+                                      () {
+                                    Get.to(() => const InformationScreen());
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Đánh giá ứng dụng",
+                                  Icons.hotel_class,
+                                  description:
+                                  "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐ bạn nhé!Tks bạn nhiều 😘",
+                                      () {
+                                    UrlLauncherUtils.rateApp(null, null);
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Thêm ứng dụng",
+                                  Icons.card_giftcard,
+                                  description:
+                                  "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
+                                      () {
+                                    UrlLauncherUtils.moreApp();
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Chia sẻ ứng dụng",
+                                  Icons.ios_share,
+                                  description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
+                                      () async {
+                                    final result = await Share.shareWithResult(
+                                        'https://play.google.com/store/apps/details?id=com.roy93group.ketquaxoso');
+                                    if (result.status == ShareResultStatus.success) {
+                                      showSnackBarFull("KQXS", "Cảm ơn bạn đã chia sẻ 👉👈");
+                                    }
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Chính sách bảo mật",
+                                  Icons.local_police,
+                                  description:
+                                  "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
+                                      () {
+                                    UrlLauncherUtils.launchPolicy();
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Source code ở Github",
+                                  Icons.data_object,
+                                  description:
+                                  "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
+                                      () {
+                                    UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
+                                  },
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ],
