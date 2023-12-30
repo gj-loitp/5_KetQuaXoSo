@@ -241,9 +241,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Câu chuyện chơi lô đề ở đâu cũng có",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Câu chuyện chơi lô đề ở đâu cũng có",
                                       htmlContent: ConstInformation.infor_11,
                                     ),
@@ -253,11 +253,23 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
                                       htmlContent: ConstInformation.infor_12,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
+                                Icons.navigate_next,
+                                () {
+                                  Get.to(
+                                    () => HtmlContentScreen(
+                                      titleAppBar: "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
+                                      htmlContent: ConstInformation.infor_13,
                                     ),
                                   );
                                 },

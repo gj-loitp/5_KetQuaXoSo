@@ -2493,5 +2493,321 @@ class ConstInformation {
     </p>
   </div>
 </div>''';
-  static String infor_13 = '''''';
+  static String infor_13 = '''<div class="block block_1">
+  <div class="block-main-heading">
+    <h1>Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất</h1>
+  </div>
+  <div class="contentPostSingle result margin-10">
+    <p>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Vietlott mega</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none"> là một trò chơi có mặt khá sớm trên thị trường cá cược <a href="https://xosoketqua.com/xo-so-vietlott.html">xổ số vietlott</a>. Sở hữu lối chơi đơn giản cùng với đó là phần thưởng giá trị nên trò chơi này được rất nhiều người tham gia. Vậy làm thế nào để chơi <a href="https://vsmb.vn/mega645">XS Mega</a> có tỷ lệ ăn cược cao nhất? </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Cách tính xác suất các con số cho lần ra tiếp theo là như thế nào? Và sau đây sẽ là những chia sẻ cực kỳ hữu ích dành cho tất cả các bạn .</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.8; margin-top: 13px; margin-bottom: 8px; text-align: center;">
+      <img alt="Hình ảnh giải vietlott mega" src="/admin/kcfinder/upload/images/hinh-anh-giai-vietlott-mega.jpg">
+    </p>
+    <p style="line-height: 1.0; text-align:center; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Hình ảnh giải vietlott mega</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h2 style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#0000ff">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Những mẹo chơi vietlott mega hiệu quả nhất</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h2>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Để chơi </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">vietlott mega</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none"> hiệu quả nhất, cơ hội xác suất trúng cao thì anh em hãy áp dụng những kinh nghiệm chiến thuật sau nhé!</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Luôn phân tích và đưa ra quy luật kết quả</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Việc nghiên cứu các con số và đưa ra được quy luật của chúng là điều vô cùng hữu ích. Những con số này xuất hiện không phải là điều ngẫu nhiên mà nó hoàn toàn theo một quy luật.&nbsp;</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Tuy nhiên số người tìm ra được điều đó thì chỉ đếm trên đầu ngón tay, thậm chí là rất khó. Vì vậy bạn luôn phải ghi chép lại những kết quả từng ngày sau đó vận dụng kinh nghiệm và tham khảo những người chơi khác để cùng phân tích nhé!</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Kết hợp số chẵn lẻ cân bằng nhau</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Thay vì phải lựa chọn vào mãi một con số, nó làm giảm đi tỷ lệ ăn cược của bạn thì lúc này bạn hãy rải đều đặt cược các loại số chẵn lẻ đan xen. Bởi vì như anh em đã biết không có một kết quả nào của <a href="https://xosoketqua.com/">
+                    <strong>xổ số</strong>
+                  </a> Vietlott đưa ra toàn số chẵn và số lẻ cả, hãy thật linh động cho những phương án đặt cược của các bạn.&nbsp; </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.8; margin-top: 13px; margin-bottom: 8px; text-align: center;">
+      <img alt="Kết quả xổ số mega hôm nay" src="/admin/kcfinder/upload/images/ket-qua-xo-so-mega-hom-nay.jpg">
+    </p>
+    <p style="line-height: 1.0; text-align:center; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Kết quả xổ số mega hôm nay</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Chơi theo nhóm tăng tỷ lệ ăn cược</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Thật khó tính toán và đưa ra phân tích kết quả </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">vietlott mega </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">khi chỉ có một mình bạn. Vậy tại sao chúng ta không liên kết lại thành một nhóm, một diễn đàn những người chơi Vietlott?&nbsp;</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Khi chơi theo nhóm sẽ giúp cho tỷ lệ phần trăm ăn cược của các bạn cao hơn rất nhiều. Vì khi quay chọn số, xác suất của những lần ra giải có bộ số giống nhau là khá cao, chơi cùng nhóm nhiều người sẽ là một mẹo hữu ích mà bạn không thể bỏ qua.&nbsp;</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h2 style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#0000ff">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Kết luận</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h2>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Thực tế đã cho thấy có rất nhiều người vận dụng cách chơi này thành công và nhận được những giải thưởng vô cùng giá trị. Vừa tiết kiệm thời gian, tận dụng nguồn lực trí óc, tăng tính hiệu quả đặt cược!</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:8px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Bài viết là toàn bộ những chia sẻ kinh nghiệm để chơi</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none"> vietlott mega </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">sao cho hiệu quả nhất, tăng tỷ lệ ăn cược. Chúc anh em sẽ vận dụng thành công và mang về thật nhiều giải thưởng cao tại xosoketqua.com. Cảm ơn các bạn đã đọc hết bài viết!</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    
+    <p style="font-style: italic; font-size: 16px; line-height: 1.5;">
+      <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.5;">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
+    </p>
+  </div>
+</div>''';
 }
