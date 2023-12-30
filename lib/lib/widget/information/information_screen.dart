@@ -250,6 +250,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
+                                      htmlContent: ConstInformation.infor_12,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),

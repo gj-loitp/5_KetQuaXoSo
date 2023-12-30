@@ -2141,13 +2141,357 @@ class ConstInformation {
           </span>
         </p>
       
-        <p style="font-style: italic; font-size: 16px; line-height: 1.5;">
-          <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.5;">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
+        <p style="font-style: italic; font-size: 16px; line-height: 1.0;">
+          <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.0;">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
         </p>
       </div>
     </div>
   </div>
 </div>''';
-  static String infor_12 = '''''';
+  static String infor_12 = '''<div class="block block_1">
+  <div class="block-main-heading">
+    <h1>Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn</h1>
+  </div>
+  <div class="contentPostSingle result margin-10">
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Thị trường cạnh tranh ngày càng khắc nghiệt, những đại lý bán vé số mọc lên càng nhiều. Điều này khiến cho những người đi bán vé số dạo gặp phải nhiều khó khăn. Chính vì vậy, để có thể cạnh tranh lại đối với những đại lý lớn, những người bán vé tại Sài Gòn đã nghĩ ra cách bán vé cực độc đáo. </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Chúng ta cùng <a href="https://xosoketqua.com/">xosoketqua.com</a>&nbsp;tìm hiểu xem những tuyệt chiêu </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">dở khóc dở cười này nhé!</span>
+        </span>
+      </span>
+    </p>
+    <h2 style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:Arial">
+          <span style="color:#000000">“Thần Tài” ghé chơi để bán vé số</span>
+        </span>
+      </span>
+    </h2>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Thần tài ghé qua thì chắc hẳn điều may mắn về tài lộc sẽ đến. Ai trong chúng ta cũng đều mong gặp được Thần tài. Những người hay chơi xổ số lại càng mong muốn điều này trở thành hiện thực. Như hiểu được tâm lý mọi người, ông Trương Minh Tấn ở Sài Gòn đã diện bộ quần áo Thần tài ghé thăm mọi người. Thực tế việc làm này của ông nhằm mục đích </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">cho những người ông đi qua. Mặc dù đã 60 tuổi nhưng ông vẫn gây sốt cộng động mạng một thời nhờ tuyệt chiêu độc đáo này.&nbsp;</span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:center">
+      <img alt="dong-gia-than-tai-di-ban-ve-so" src="/admin/kcfinder/upload/images/Thang-04-2020/dong-gia-than-tai-di-ban-ve-so.jpg">
+    </p>
+    <p style="text-align:center">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <em>Đóng giả thần tài đi bán vé số</em>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Ông diện trên mình bộ quần áo giống như trang phục của những người đi diễn tuồng chèo. Bộ xiêm y màu đỏ mang đậm vẻ may mắn, cùng hia mão, bộ râu trắng, vàng miếng đeo ở cổ. Đây chính là trang phục khá phổ biến mà chúng ta có thể bắt gặp của Thần tài - vị thần may mắn tài lộc. Ai nấy đều rất thích thú khi bắt gặp ông ghé qua. Và họ đều vui vẻ mua vé số mong nhận được may mắn từ vị thần Tài </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé <a href="https://xosoketqua.com/xsmn-xo-so-mien-nam.html">xổ số miền nam</a>&nbsp; </strong>này tại&nbsp; <a href="https://xosoketqua.com/xsmn-xo-so-mien-nam.html">https://xosoketqua.com/xsmn-xo-so-mien-nam.html</a>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Với cách thức </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">hiệu quả này, ông không chỉ đi trên địa bàn Sài Gòn mà còn mở rộng khu vực kinh doanh. Ông Tấn đã đi xuyên Việt qua rất nhiều tỉnh thành để có thể kiếm thêm thu nhập. Chính vì môi trường cạnh tranh </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">ở Sài Gòn quá khắc nghiệt nên ông mới có thể nghĩ ra cách kinh doanh hay ho này.&nbsp;</span>
+        </span>
+      </span>
+    </p>
+    <h2 style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:Arial">
+          <span style="color:#000000">Khóc lóc để bán được vé số</span>
+        </span>
+      </span>
+    </h2>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Chúng ta có thể dễ dàng bắt gặp những cậu bé, những đứa trẻ nhỏ mồ côi, nhà nghèo phải đi </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số</strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">. Nhưng chắc chắn, sẽ hiếm ai ở đây được chứng kiến cảnh người phụ nữ khóc lóc đi lang thang bán vé. Theo một nguồn tin cho biết, mới đây, ở khu vực ngã tư CMT8 - Điện Biên Phủ (Q.3, TP.HCM) có một người phụ nữ vừa khóc vừa đi khắp nơi để </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số. </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Bằng cách đánh vào tâm lý của người khác, người phụ nữ này đã khóc rất nhiều và đi mời mọi người mua ủng hộ.&nbsp;</span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:center">
+      <img alt="nguoi-phu-nu-ban-ve-so" src="/admin/kcfinder/upload/images/Thang-04-2020/nguoi-phu-nu-ban-ve-so.jpg">
+    </p>
+    <p style="text-align:center">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <em>Người phụ nữ bán vé số&nbsp;</em>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Cách này được cho là rất hiệu quả đối với những người có tính cách nhạy cảm, dễ mủi lòng. Chúng tôi được biết, bằng cách thức này, người phụ nữ đó đã bán được 500 tờ vé số mỗi ngày. Với bề ngoài ngoài 40 tuổi, người phụ nữ này đã vừa đi vừa khóc, bất chấp dòng xe đang di chuyển để mời mọi người </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>mua vé số</strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">. Cuộc sống mưu sinh khiến họ phải nghĩ ra thật nhiều cách để kiếm tiền. Người phụ nữ này cũng thật đáng thương khi phải kiếm tiền bằng cách sử dụng lòng thương cảm của mọi người.&nbsp;</span>
+        </span>
+      </span>
+    </p>
+    <h2 style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:Arial">
+          <span style="color:#000000">“Dị nhân” bán vé số ở Sài Gòn</span>
+        </span>
+      </span>
+    </h2>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Hai tuyệt chiêu ở trên có vẻ đã rất độc lạ đối với chúng ta. Thế nhưng, đó chưa phải là điều độc lạ nhất trong cách tuyệt chiêu </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán <a href="https://xosoketqua.com/xsmn-xo-so-mien-nam.html">xổ số miền nam&nbsp;</a>
+            </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">tại Sài Gòn. Ông Châu Thơ Phương - một người có biết danh là Dị Nhân cũng đang sử dụng một cách thức hết sức đặc biệt để </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>kinh doanh vé xổ số. </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Người đàn ông 56 tuổi này đã tự thiết kế cho mình những bộ trang phục sặc sỡ, không giống ai để thu hút sự chú ý của mọi người.&nbsp;</span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:center">
+      <img alt="di-nhan-ban-ve-so-noi-tieng-o-sai-gon" src="/admin/kcfinder/upload/images/Thang-04-2020/di-nhan-ban-ve-so-noi-tieng-o-sai-gon.jpg">
+    </p>
+    <p style="text-align:center">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <em>Dị nhân bán vé số nổi tiếng ở Sài Gòn</em>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Cách thức này cũng đem lại cho ông rất nhiều cơ hội </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">đắt hàng. Những bộ đồ xanh, vàng, đỏ lòe loẹt, kết hợp với một vài phụ kiện hóa trang, người đàn ông này đã trở nên dị nhân, khác biệt. </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Không chỉ quần áo, đầu tóc, phụ kiện, mà ông còn trau chuốt từ những vật dụng nhỏ nhất. Chiếc xe đạp của ông cũng có thiết kế vô cùng độc lạ. Ông cho biết, mọi đồ dùng của ông từ quần áo cho đến xe cộ đều do một tay ông thiết kế.</span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">&gt;&gt; Đọc thêm: Các mua vé số dễ&nbsp;trúng <a href="https://docdac.vn/">Độc Đắc</a> tại&nbsp; <a href="https://docdac.vn/">https://docdac.vn/</a>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Không chỉ gây sự chú ý bằng quần áo trang phục phụ kiện khác người. Ông còn sử dụng tài năng ăn nói của mình để khiến mọi người cảm thấy thoải mái, thú vị. Chính vì vậy, ông được rất nhiều người yêu quý, việc </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">cũng trở nên dễ dàng hơn. Sau những tiếng cười mà ông mang lại, mọi người đều sẵn sàng chi tiền mua những tấm vé số ủng hộ cho ông.&nbsp;</span>
+        </span>
+      </span>
+    </p>
+    <h2 style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:Arial">
+          <span style="color:#000000">Ghi kết quả xổ số lên người để bán vé số dễ dàng hơn</span>
+        </span>
+      </span>
+    </h2>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Không sử dụng trang phục phụ kiện, không đánh vào lòng thương người nhưng người đàn ông này vẫn có thể </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">dễ dàng. Thay vì sử dụng một tờ giấy, một tấm biển để ghi lại kết quả xổ số của ngày hôm trước. </span>
+        </span>
+      </span>
+    </p>
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Người đàn ông 40 tuổi này đã ghi thẳng những con số đó lên người của mình để thuận tiện trong việc bán vé. Điều này không chỉ thu hút sự chú ý của rất nhiều người muốn mua vé. Mà hơn cả sự tò mò những câu chuyện lạ cũng khiến ông bán thêm được nhiều vé xổ số hơn.</span>
+        </span>
+      </span>
+    </p>
+   
+    <p style="text-align:justify">
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">Bài viết đã tổng hợp 4 tuyệt chiêu </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <strong>bán vé số </strong>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt">
+        <span style="font-family:''">
+          <span style="color:#000000">độc đáo tại Sài Gòn. Những tuyệt chiêu này đều đem lại những kết quả khả quan trong việc bán vé số. Sự canh tranh đã khiến họ phải nghĩ ra thêm những điều mới mẻ để thu hút khách hàng.</span>
+        </span>
+      </span>
+    </p>
+    <p style="font-style: italic; font-size: 16px; line-height: 1.0;">
+      <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.0;">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
+    </p>
+  </div>
+</div>''';
   static String infor_13 = '''''';
 }
