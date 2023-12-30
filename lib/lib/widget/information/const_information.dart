@@ -617,12 +617,12 @@ class ConstInformation {
           <strong>
             <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
               <span style="font-size: 16px;">
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">XỔ SỐ&nbsp;</span>
+                <span>XỔ SỐ&nbsp;</span>
               </span>
             </span>
             <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
               <span style="font-size: 16px;">
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                <span>
                   <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">MINH NGỌC</span>
                 </span>
               </span>
@@ -651,7 +651,7 @@ class ConstInformation {
           <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">
               <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">ĐỔI SỐ TRÚNG ĐẶC BIỆT</span>
+                <span>ĐỔI SỐ TRÚNG ĐẶC BIỆT</span>
               </strong>
             </span>
           </span>
@@ -660,13 +660,13 @@ class ConstInformation {
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">
               <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">Nhanh nhất - Uy tín - Bảo mật &amp; Tận nơi theo yêu cầu !...</span>
+                <span>Nhanh nhất - Uy tín - Bảo mật &amp; Tận nơi theo yêu cầu !...</span>
               </strong>
             </span>
           </span>
         </p>
         <p style="text-align: left;">
-          <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="font-family: &quot;times new roman&quot;, times, serif;">
+          <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span>
             <span style="font-size: 16px;">
               <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
                 <strong>Nhanh nhất!</strong>
@@ -678,7 +678,7 @@ class ConstInformation {
           <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">
               <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">Uy tín, bảo mật!</span>
+                <span>Uy tín, bảo mật!</span>
               </strong>
             </span>
           </span>&nbsp;Tuyệt đối bảo mật thông tin người trúng xổ số.
@@ -686,7 +686,7 @@ class ConstInformation {
         <p style="text-align: left;">
           <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <strong>
-              <span style="font-family: &quot;times new roman&quot;, times, serif;">
+              <span>
                 <span style="font-size: 16px;">Thanh toán tận nơi an toàn!</span>
               </span>
             </strong>
@@ -694,7 +694,7 @@ class ConstInformation {
         </p>
         <p style="text-align: left;">
           <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <strong>
-            <span style="font-family: &quot;times new roman&quot;, times, serif;">
+            <span>
               <span style="font-size: 16px;">
                 <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">Phương thức linh động!</span>
               </span>
@@ -705,7 +705,7 @@ class ConstInformation {
         <h2>
           <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">&nbsp; <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">Quy định về thuế thu nhập trúng xổ số:</span>
+                <span>Quy định về thuế thu nhập trúng xổ số:</span>
               </strong>
             </span>
           </span>
@@ -738,7 +738,7 @@ class ConstInformation {
           <span style="font-size: 16px;">
             <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
               <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                <span>
                   <span style="font-size: 16px;">
                     <strong>ĐỔI VÉ SỐ TRÚNG THƯỞNG</strong>
                   </span>
@@ -763,7 +763,7 @@ class ConstInformation {
           <span style="color: rgb(255, 140, 0); --darkreader-inline-color: #ff981a;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">
               <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">Khi bạn trúng xổ số giải lớn hoặc có tổng giá trị các tờ vé trúng lớn hãy liên hệ với chúng tôi! <br>
+                <span>Khi bạn trúng xổ số giải lớn hoặc có tổng giá trị các tờ vé trúng lớn hãy liên hệ với chúng tôi! <br>
                   <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">Chuyên Nghiệp - An Toàn &amp; Đơn Giản Nhất - Đảm bảo cho niềm vui trọn vẹn!...</span>
                 </span>
               </strong>
@@ -774,7 +774,7 @@ class ConstInformation {
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">
               <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">Kính chúc quý khách may mắn phát tài!...</span>
+                <span>Kính chúc quý khách may mắn phát tài!...</span>
               </strong>
             </span>
           </span>
@@ -783,7 +783,7 @@ class ConstInformation {
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">
               <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                <span>
                   <a href="https://www.minhngoc.net.vn/upload/images/xsmn2.jpg" target="_blank">
                     <img alt="" src="/upload/images/xsmn2.jpg" style="width: 700px; height: 525px;">
                   </a>
@@ -797,7 +797,7 @@ class ConstInformation {
           <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
             <span style="font-size: 16px;">
               <strong>
-                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                <span>
                   <a href="https://www.minhngoc.net.vn/upload/images/xsmn.jpg" target="_blank">
                     <img alt="" src="/upload/images/xsmn.jpg" style="width: 700px; height: 525px;">
                   </a>
@@ -831,7 +831,7 @@ class ConstInformation {
                   <b>
                     <span style="font-size: 16px">
                       <em>
-                        <span style="font-family: times new roman">Thứ Bảy, ngày 14 tháng năm năm 2011.</span>
+                        <span>Thứ Bảy, ngày 14 tháng năm năm 2011.</span>
                       </em>
                     </span>
                   </b>
@@ -1029,10 +1029,10 @@ class ConstInformation {
               <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px">
                 <span lang="nl">
                   <font size="2">
-                    <span style="font-family: Arial">Thông tư cũng nêu rõ, </span>
+                    <span>Thông tư cũng nêu rõ, </span>
                   </font>
                 </span>
-                <span id="_ctl5_lblContent0" lang="NL" style="font-family: Arial; font-size: 16px">Công ty xổ số kiến thiết phải thực hiện công khai tài chính hàng năm theo quy định; chịu sự quản lý, kiểm tra, giám sát của UBND các tỉnh, thành phố trực thuộc Trung ương và các cơ quan có thẩm quyền tại địa phương. Bộ Tài chính thực hiện việc giám sát, kiểm tra định kỳ hoặc đột xuất đối với Công ty XSKT trong việc chấp hành chế độ quản lý tài chính theo quy định tại Thông tư này.</span>
+                <span id="_ctl5_lblContent0" lang="NL" style="font-size: 16px">Công ty xổ số kiến thiết phải thực hiện công khai tài chính hàng năm theo quy định; chịu sự quản lý, kiểm tra, giám sát của UBND các tỉnh, thành phố trực thuộc Trung ương và các cơ quan có thẩm quyền tại địa phương. Bộ Tài chính thực hiện việc giám sát, kiểm tra định kỳ hoặc đột xuất đối với Công ty XSKT trong việc chấp hành chế độ quản lý tài chính theo quy định tại Thông tư này.</span>
               </p>
               <p align="justify" style="margin-top: 6px; text-indent: 15px; margin-bottom: 6px"> &nbsp;</p>
               <p align="right" style="margin-top: 6px; margin-bottom: 6px">
