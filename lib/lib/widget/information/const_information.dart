@@ -1242,11 +1242,549 @@ class ConstInformation {
       <strong> ket qua</strong>
     </a> số lô miền Nam. </p>
   <p>Ketqua TV chúc bạn may mắn và thành công!</p>
-  <p style="font-style: italic; font-size: 16px; line-height: 1.5;">
-    <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.5; --darkreader-inline-color: #ff1a1a;" data-darkreader-inline-color="">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
+  <p style="font-style: italic; font-size: 16px; line-height: 1.0;">
+    <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.0; --darkreader-inline-color: #ff1a1a;" data-darkreader-inline-color="">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
   </p>
 </div>''';
-  static String infor_10 = '''''';
+  static String infor_10 = '''<div class="block block_1">
+  <div class="block-main-heading">
+    <h1>Số 0 Có Ý Nghĩa Gì? Luận Giải Chi Tiết Về Số 0 Bạn Nên Biết</h1>
+  </div>
+  <div class="contentPostSingle result margin-10">
+    <p>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Số 0 có ý nghĩa gì </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">trong đời sống và phong thủy</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none"></span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">khiến nhiều người thắc mắc. Con số này những ai nên sử dụng và ai không nên dùng? Để hiểu sâu sa hơn về con số được cho là khá bí ẩn này. </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Dưới đây, <a href="https://xosoketqua.com/">Xổ Số Kết Quả</a> sẽ chia sẻ những luận giải của chuyên gia về con số 0 này nhé! </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h2 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Khám phá bí ẩn số 0 có ý nghĩa gì?</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h2>
+    <p style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Để hiểu hết về con số 0, bạn cần hiểu tường tận, rõ nét nhất. Từ đó, đưa ra quyết định có nên sử dụng con số này hay không nhé, cụ thể:</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Số 0 thuộc vào hàng chẵn hay lẻ?</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Trong dãy số tự nhiên có 10 chữ số từ 0 - 9 theo thứ tự được chia làm dãy chẵn và dãy lẻ. Các số chẵn gồm có 2 4, 6, 8 và các số lẻ gồm 1, 3, 5, 7, 9.</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Như vậy, số 0 không nằm trong bất cứ dãy số chẵn hay lẻ nào. Nó chính là con số đứng đầu trong dãy số, là nguồn gốc, cái nôi của vũ trụ.</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; margin-top: 13px; text-align: center;">
+      <img alt="Số 0 thuộc vào hàng chẵn hay lẻ" src="/admin/kcfinder/upload/images/so-0-co-y-nghia-gi-3.jpg">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Số 0 thuộc vào hàng chẵn hay lẻ</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Trong kinh dịch số 0 có ý nghĩa gì?</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Trong kinh dịch có viết Vô Cực sinh Thái Cực, Thái Cực sinh Lưỡng Nghi, Lưỡng Nghi sinh Tứ tượng, Tứ Tượng sinh Bát Quái, Bát Quái sinh Vô lượng. Chính vì vậy, con số 0 là nguồn gốc của tất cả mọi thứ trên trái đất này. Nó chính là sự vô cùng, vô tận tạo ra con người, sinh vật,...</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">&gt;&gt; Xem thêm: Cách dùng số 0 hiệu quả khi mua <a href="https://xosoketqua.com/xsmb-xo-so-mien-bac.html">xổ số miền bắc</a> bách phát bách trúng tại <a href="https://xosoketqua.com/xsmb-xo-so-mien-bac.html">https://xosoketqua.com/xsmb-xo-so-mien-bac.html</a>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h2 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Số 0 có ý nghĩa gì trong văn hóa phương Đông</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h2>
+    <p style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Để hiểu hết về ý nghĩa của con số 0, chúng ta cần biết được trong văn hóa phương Đông con số này được dùng như thế nào. Cụ thể:</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <ul>
+      <li aria-level="1" style="list-style-type:disc">
+        <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+          <span style="font-family:''">
+            <span style="color:#000000">
+              <span style="font-weight:400">
+                <span style="font-style:normal">
+                  <span style="text-decoration:none">Số 0 tượng trưng cho trường khí vô tận, nuôi dưỡng sự sống cho mọi sinh vật. Nó sẽ mang lại sự phát triển và khai sáng đầy triển vọng. Chính vì thế, với trái đất hình tròn như số 0 chính là nơi khởi nguồn của tất cả, là gốc rễ của con người, sinh vật.</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </li>
+      <li aria-level="1" style="list-style-type:disc">
+        <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+          <span style="font-family:''">
+            <span style="color:#000000">
+              <span style="font-weight:400">
+                <span style="font-style:normal">
+                  <span style="text-decoration:none">Con số 0 có kết cấu là một hình tròn, nên nếu thu nhỏ hay mở rộng ra thì vô cùng bao la. Nó chính là không gian vô cực chứa đựng mọi thứ. Trên thực tế, để tồn tại thì ai cũng cần có không gian, con người sẽ cần đến không khí và cả sinh vật cũng vậy.</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </li>
+      <li aria-level="1" style="list-style-type:disc">
+        <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+          <span style="font-family:''">
+            <span style="color:#000000">
+              <span style="font-weight:400">
+                <span style="font-style:normal">
+                  <span style="text-decoration:none">Bên cạnh đó, những dòng sim phong thủy tứ quý hay ngũ quý 0 đều khẳng định được giá trị của nó. Đồng thời ý nghĩa của các chuyên gia phong thủy muốn gửi gắm vào đó và nhắc nhở mọi người. Để có thể thành công thì hãy tự mình làm mọi việc bắt đầu từ con số 0. Có như vậy, những thứ mà mình làm ra mới có giá trị cao.</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </li>
+    </ul>
+    <p style="line-height: 1.0; margin-top: 13px; margin-bottom: 19px; text-align: center;">
+      <img alt="Số 0 có ý nghĩa gì trong văn hóa phương Đông" src="/admin/kcfinder/upload/images/so-0-co-y-nghia-gi-2.jpg">
+    </p>
+    <p style="line-height: 1.0; margin-top: 13px; margin-bottom: 19px; text-align: center;">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Số 0 có ý nghĩa gì trong văn hóa phương Đông</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h2 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Khi dùng số điện thoại phong thủy số 0 có ý nghĩa gì?</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h2>
+    <p style="line-height: 1.0; text-align:justify; margin-top:13px; margin-bottom:5px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Khi sử dụng sim phong thủy, bạn cần nghiên cứu về ý nghĩa của những con số, cũng như cần biết</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none"> số 0 có ý nghĩa gì</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">. Ý nghĩa của số 0 khi dùng số điện thoại phong thủy có thể hiểu như sau:</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <ul>
+      <li aria-level="1" style="list-style-type:disc">
+        <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+          <span style="font-family:''">
+            <span style="color:#000000">
+              <span style="font-weight:400">
+                <span style="font-style:normal">
+                  <span style="text-decoration:none">Xét về mặt âm dương, số 0 thuộc âm và có sức mạnh cực kỳ lớn có thể hút mọi thứ. Vì thế, những ai sử dụng số điện thoại nhiều số 0 sẽ hút lộc, vượng khí dồi dào. Hơn nữa, cũng sẽ là người vô cùng tài năng, càng về sau càng phát triển mạnh.</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </li>
+      <li aria-level="1" style="list-style-type:disc">
+        <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+          <span style="font-family:''">
+            <span style="color:#000000">
+              <span style="font-weight:400">
+                <span style="font-style:normal">
+                  <span style="text-decoration:none">Trong số điện thoại phong thủy, số 0 nằm trong hành Thủy và là nơi khởi nguồn vô tận. Nó thể hiện sự sâu sắc, mềm mỏng và đa tài. Đặc biệt, những <a href="https://simdaiphat.vn/sim-tu-quy/">sim tứ quý</a>, tam quý cực ký phát tài, phát lộc, tương lai sáng lạn. </span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </li>
+    </ul>
+    <h2 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Những ai nên và không nên sử dụng con số 0?</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h2>
+    <p style="line-height: 1.0; text-align:justify; background-color:#ffffff; padding:10pt 0pt 3.75pt 0pt">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Đối với những người hợp con số 0 sẽ mang lại nhiều may mắn, tài lộc. Con số bắt nguồn cho vạn vật sinh sôi sẽ phù hợp với những ai và không hợp với ai. Dưới đây, chúng ta cùng tìm hiểu kỹ hơn về con số 0 hợp với những người như thế nào và không hợp với ai nhé!</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; background-color: rgb(255, 255, 255); padding: 6.25pt 0pt 3.75pt; text-align: center;">
+      <img alt="Những ai nên và không nên sử dụng con số 0" src="/admin/kcfinder/upload/images/so-0-co-y-nghia-gi-1.jpg">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:italic">
+                <span style="text-decoration:none">Những ai nên và không nên sử dụng con số 0</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Số 0 có ý nghĩa gì trong học hành?</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; text-align:justify; background-color:#ffffff; padding:10pt 0pt 3.75pt 0pt">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Trong học hành, thi cử nếu những ai sở hữu con số này sẽ là người có tri thức rộng lớn, kiến thức bao la. Người này sẽ lĩnh hội đầy đủ các yếu tố của một nhà lãnh đạo. Theo đó, những nhận thức mà họ có được không phải tầm thường. Bên cạnh đó, họ sẽ gặp được quý nhân phù trợ nâng đỡ khi gặp khó khăn.</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Ý nghĩa của số 0 với người trưởng thành</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; text-align:justify; background-color:#ffffff; padding:10pt 0pt 3.75pt 0pt">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Đối với người trưởng thành, con số 0 sẽ không được ưa chuộng và họ cho rằng con số này là sự thất bại, vô sản, không có gì trong tay.</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; text-align:justify; background-color:#ffffff; padding:6.25pt 0pt 3.75pt 0pt">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Còn đối với những người tu đạo vạn vật hư vô, ảo mộng.</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="line-height: 1.0; text-align:justify; background-color:#ffffff; padding:6.25pt 0pt 3.75pt 0pt">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Bên cạnh đó, với những người có sức khỏe không tốt thì không nên chọn sim nhiều số 0. Bởi vì nó không giúp cho họ bớt được gánh nặng về bệnh tật, không bảo vệ được sức khỏe.</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h3 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Ý nghĩa của số 0 với các chòm sao</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h3>
+    <p style="line-height: 1.0; text-align:justify; background-color:#ffffff; padding:10pt 0pt 3.75pt 0pt">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Những người thuộc các chòm sao Lộc Tồn, Hóa Lộc, Vũ Khúc, Thiên Phủ không hợp số 0. Bởi nếu dùng số 0 sẽ gặp khó khăn về kinh tế. Đối với chòm sao Phá Quân, Tham Lang cũng không nên sử dụng vì dễ nợ nần, phá sản.</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <h2 style="line-height: 1.0; margin-top:13px">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Kết luận</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </h2>
+    <p style="line-height: 1.0; text-align:justify; background-color:#ffffff; margin-bottom:5px; padding:10pt 0pt 0pt 0pt">
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">Trên đây là những thông tin về </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:700">
+              <span style="font-style:normal">
+                <span style="text-decoration:none">số 0 có ý nghĩa gì</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+      <span style="font-size:16pt; font-variant:normal; white-space:pre-wrap">
+        <span style="font-family:''">
+          <span style="color:#000000">
+            <span style="font-weight:400">
+              <span style="font-style:normal">
+                <span style="text-decoration:none"> mà chúng tôi mang đến cho bạn. Hy vọng những chia sẻ này sẽ là nguồn thông tin hữu ích mà bạn đang tìm kiếm. Từ những ý nghĩa này bạn sẽ đưa ra quyết định cho mình, nếu phù hợp hãy chọn ngay sim phong thủy số 0 để mang về may mắn cho mình nhé</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
+    <p style="font-style: italic; font-size: 16px; line-height: 1.0;">
+      <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.0;">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
+    </p>
+  </div>
+</div>''';
   static String infor_11 = '''''';
   static String infor_12 = '''''';
   static String infor_13 = '''''';

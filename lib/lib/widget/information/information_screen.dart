@@ -169,9 +169,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
                                       htmlContent: ConstInformation.infor_5,
                                     ),
@@ -181,9 +181,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Khuyến cáo khi đổi số trúng",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Khuyến cáo khi đổi số trúng",
                                       htmlContent: ConstInformation.infor_6,
                                     ),
@@ -193,9 +193,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Mức chi hoa hồng đại lý của các loại hình xổ số",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Mức chi hoa hồng đại lý của các loại hình xổ số",
                                       htmlContent: ConstInformation.infor_7,
                                     ),
@@ -205,9 +205,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
                                       htmlContent: ConstInformation.infor_8,
                                     ),
@@ -217,11 +217,23 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
                                       htmlContent: ConstInformation.infor_9,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
+                                Icons.navigate_next,
+                                () {
+                                  Get.to(
+                                    () => HtmlContentScreen(
+                                      titleAppBar: "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
+                                      htmlContent: ConstInformation.infor_10,
                                     ),
                                   );
                                 },
