@@ -581,7 +581,236 @@ class ConstInformation {
     </td>
   </tr>
 </tbody>''';
-  static String infor_5 = '''''';
+  static String infor_5 = '''<div class="body-r">
+  <div>
+    <div>
+      <div align="center">
+        <p style="text-align: left;">
+          <strong>Đổi số trúng Đặc Biệt ở đâu thuận tiện nhất? Thủ tục trả thưởng xổ số như thế nào? Bảo mật, an toàn như&nbsp;</strong>
+          <strong>thế nào</strong>
+          <strong>?...</strong>
+        </p>
+        <p style="text-align: left;"> &nbsp;</p>
+        <p style="text-align: left;"> Người chơi xổ số sau khi trúng giải có các cách sau để nhận thưởng:</p>
+        <p style="text-align: left; margin-left: 40px;"> 1/ Liên hệ với người bán hoặc điểm bán hàng.</p>
+        <p style="text-align: left; margin-left: 40px;"> 2/ Đến đại lý vé số gần nhất.</p>
+        <p style="text-align: left; margin-left: 40px;"> 3/ Đến trực tiếp trụ sở các Công ty xổ số tại tỉnh thành phát hành tờ vé trúng làm thủ tục và chờ nhận giải.</p>
+        <p style="text-align: left;">
+          <strong>Thủ tục thông thường đổi số trúng giải tại các Công ty Xổ Số:</strong>
+        </p>
+        <p style="text-align: left; margin-left: 40px;"> Đến trụ sở hoặc VPĐD Công ty phát hành tờ vé trúng thưởng.</p>
+        <p style="text-align: left; margin-left: 40px;"> Thông báo trúng thưởng đến bộ phận tiếp nhận trả thưởng.</p>
+        <p style="text-align: left; margin-left: 40px;"> Phòng trả thưởng kiểm tra sơ bộ và chuyển bộ phận lưu cùi xác minh kỹ thuật bảo an tờ vé trúng.</p>
+        <p style="text-align: left; margin-left: 40px;"> Sau khi xác minh tính hợp lệ tờ vé trúng &gt;&gt; Ký quyết định trả thưởng.</p>
+        <p style="text-align: left; margin-left: 40px;"> Làm thủ tục kê khai, xác định mức thuế thu nhập và đóng thuế.</p>
+        <p style="text-align: left; margin-left: 40px;"> Chuyển bộ phận thanh toán.</p>
+        <p style="text-align: left;">
+          <strong>
+            <em>Thời gian trả thưởng cho người trúng thưởng theo quy định chậm nhất là 05 ngày kể từ ngày nhận được đề nghị lĩnh thưởng.&nbsp;Trường hợp có phát sinh tranh chấp, khiếu nại, thời gian thanh toán được kéo dài cho đến khi có kết luận chính thức của cơ quan nhà nước có thẩm quyền.</em>
+          </strong>
+        </p>
+        <p style="text-align: left;"> &nbsp;</p>
+        <p style="text-align: left;"> Cách 1 và 2 thuận tiện các giải có giá trị nhỏ, mất một khoản phí hoa hồng (tùy từng nơi, tùy quy mô của đại lý...) cách 3 thường phải đi xa, từ vùng nông thôn lên thành phố, từ tỉnh này qua tỉnh khác nên khá bất tiện.</p>
+        <p style="text-align: left;"> Ngoài các cách trên người trúng thưởng lớn còn cách thuận tiện hơn là liên hệ với một đại lý lớn có hệ thống phân phối vé số rộng khắp các tỉnh thành, có khả năng tài chính tốt để hỗ trợ thủ tục nhận giải tại nhà hoặc tại ngân hàng địa phương. Bảo mật, an toàn và nhanh nhất.</p>
+        <p> &nbsp;</p>
+        <p>
+          <strong>
+            <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+              <span style="font-size: 28px;">
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">XỔ SỐ&nbsp;</span>
+              </span>
+            </span>
+            <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
+              <span style="font-size: 28px;">
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                  <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">MINH NGỌC</span>
+                </span>
+              </span>
+            </span>
+          </strong>
+        </p>
+        <p>
+          <span style="font-size: 20px;">Hệ thống phân phối vé xổ số kiến thiết các tỉnh <br> Hoạt động lâu năm, ổn định &amp; phát triển </span>
+          <br> Tường thuật trực tiếp kết quả xổ số toàn quốc -&nbsp; Với hệ thống Số&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <strong>
+              <span style="font-size: 26px;">1</span>
+            </strong>
+          </span>&nbsp;Việt Nam. <br> Là hệ thống đứng đầu Google nhiều từ khóa liên quan đến "xo so". "xổ số", "xổ số trực tiếp", "kết quả xổ số" ... với hàng triệu người dùng thường xuyên và hàng nghìn người dùng bình chọn tích cực. &nbsp; <a href="https://www.minhngoc.net.vn/page/gioi-thieu.html" target="_blank">xem thêm!</a>... <a href="https://goo.gl/maps/R7dGb36ZNviAHonq5">xem trên google</a>!...
+        </p>
+        <p> &nbsp;</p>
+        <h1>
+          <a href="/thong-tin/doi-so-trung.html" target="_blank">
+            <strong style="color: rgb(178, 34, 34); font-size: 48px; --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">ĐỔI SỐ TRÚNG</strong>
+          </a>
+        </h1>
+        <p> Nhận đổi số trúng các giải, khả năng tài chính tốt nhất (hỗ trợ nhanh chóng các giải trúng lớn và Giải Đặc Biệt)</p>
+        <p> (Tất cả các Tỉnh/ T. Phố khu vực Xổ số Miền Nam, một số tỉnh khu vực Miền Trung, Cao Nguyên và Miền Bắc)</p>
+        <p> Thanh toán 1 lần bằng tiền mặt &nbsp;hoặc chuyển khoản... Bất kỳ giải nào và số lượng bao nhiêu tờ! nhận tiền ngay không cần những thủ tục phức tạp, không phải chờ đợi, giao tận nơi.</p>
+        <p> &nbsp;</p>
+        <p>
+          <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
+            <span style="font-size: 18px;">
+              <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">ĐỔI SỐ TRÚNG ĐẶC BIỆT</span>
+              </strong>
+            </span>
+          </span>
+        </p>
+        <p>
+          <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <span style="font-size: 18px;">
+              <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">Nhanh nhất - Uy tín - Bảo mật &amp; Tận nơi theo yêu cầu !...</span>
+              </strong>
+            </span>
+          </span>
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="font-family: &quot;times new roman&quot;, times, serif;">
+            <span style="font-size: 20px;">
+              <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+                <strong>Nhanh nhất!</strong>
+              </span>
+            </span>
+          </span>&nbsp;30 phút sau khi nhận cuộc gọi trúng số trong nội thành TP.HCM, 1 tiếng đối với các khu vực ngoại thành và các tỉnh thành khác thuộc khối xổ số Miền Nam.
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <span style="font-size: 20px;">
+              <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">Uy tín, bảo mật!</span>
+              </strong>
+            </span>
+          </span>&nbsp;Tuyệt đối bảo mật thông tin người trúng xổ số.
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <strong>
+              <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                <span style="font-size: 20px;">Thanh toán tận nơi an toàn!</span>
+              </span>
+            </strong>
+          </span>&nbsp;Thanh toán tại chi nhánh đại lý vé số gần nhất hoặc tại nhà riêng của khách hàng hoặc tại Ngân Hàng do khách hàng chỉ định.
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="18" src="/upload/images/ok_daxosoxong.png" width="18">&nbsp; <strong>
+            <span style="font-family: &quot;times new roman&quot;, times, serif;">
+              <span style="font-size: 20px;">
+                <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">Phương thức linh động!</span>
+              </span>
+            </span>
+          </strong>&nbsp;Thanh toán 100% tiền VNĐ mệnh giá lớn (tiền mặt theo qui chuẩn bó 1.000 tờ có niêm phong của ngân hàng) hoặc chuyển khoản. Tư vấn - Hỗ trợ gởi tiền vào ngân hàng an toàn, linh động &amp; phù hợp nhất theo nhu cầu của từng khách hàng.
+        </p>
+        <p> &nbsp;</p>
+        <h2>
+          <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
+            <span style="font-size: 22px;">&nbsp; <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">Quy định về thuế thu nhập trúng xổ số:</span>
+              </strong>
+            </span>
+          </span>
+        </h2>
+        <p> &nbsp;</p>
+        <p style="text-align: left;"> &nbsp;Tất cả vé trúng xổ số có giá trị đến 10 triệu đồng không phải đóng thuế, các giải trúng trên 10 triệu phải đóng thuế thu nhập&nbsp; <strong>10% của số tiền vượt trên 10 triệu</strong>&nbsp;= (giải trúng - 10 triệu) x 10%. </p>
+        <p style="text-align: left;"> &nbsp;</p>
+        <p style="text-align: left;">
+          <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải trúng Đặc Biệt: 2 tỷ =&gt; Thuế thu nhập = (2.000.000.000 - 10.000.000) x 10% = 199.000.000đ
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải phụ Đặc Biệt: 50 triệu =&gt; Thuế thu nhập&nbsp;= (50.000.000 - 10.000.000) x 10% = 4.000.000đ
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải nhất: 30 triệu =&gt; Thuế thu nhập = (30.000.000 - 10.000.000) x 10% = 2.000.000đ
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Giải nhì: 15 triệu =&gt; Thuế thu nhập = (15.000.000 - 10.000.000) x 10% = 500.000đ
+        </p>
+        <p style="text-align: left;">
+          <img alt="" height="10" src="/upload/images/arrow_2.png" width="10">&nbsp;Các giải còn lại từ 10 triệu trở xuống không phải đóng thuế dù trúng cả cặp nguyên giải ba 100 tờ = 10.000.000 x 100 = 1.000.000.000đ (một tỷ đồng) cũng không phải đóng thuế nhưng lưu ý nếu 1 tờ vé trúng nhiều giải thì tính thuế tổng giá trị ví dụ tờ vé trúng cả giải ba và giải 8 trên 10 triệu =&gt; phải đóng thuế là (10.000.000 + 100.000 - 10.000.000) x 10% = 10.000đ.
+        </p>
+        <p style="text-align: right;">
+          <em>Cập nhật thay đổi theo cơ cấu giải thưởng từ</em>
+          <em>&nbsp;ngày&nbsp;</em>
+          <em>01/01/2017</em>
+        </p>
+        <p style="text-align: right;"> &nbsp;</p>
+        <p>
+          <span style="font-size: 16px;">
+            <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+              <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                  <span style="font-size: 24px;">
+                    <strong>ĐỔI VÉ SỐ TRÚNG THƯỞNG</strong>
+                  </span>
+                  <br> Liên hệ Hotline: </span>
+              </span>
+            </span>
+          </span>
+          <br>
+          <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <span style="font-size: 48px;">
+              <strong>0973 777779</strong>
+            </span>
+          </span>
+        </p>
+        <p> Hoa hồng thấp nhất, hỗ trợ trực tiếp tận nơi nhanh nhất đối với đại lý vé số trong ngày có phát hành cặp vé Đặc Biệt.</p>
+        <p> Lưu ý chỉ hỗ trợ tận nơi với tổng giá trị lớn, các giải nhỏ vui lòng nhận tại Đ/c: 117-119-121 Ngô Tất Tố, F. 22, Q. Bình Thạnh, TP. HCM.</p>
+        <p>
+          <span style="font-size: 16px;">Tel:&nbsp; <strong>090 363 7779 - (028) 6266 2222</strong>; Fax:&nbsp; <strong>028 6294 5858</strong>
+          </span>
+        </p>
+        <p>
+          <span style="color: rgb(255, 140, 0); --darkreader-inline-color: #ff981a;" data-darkreader-inline-color="">
+            <span style="font-size: 16px;">
+              <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">Khi bạn trúng xổ số giải lớn hoặc có tổng giá trị các tờ vé trúng lớn hãy liên hệ với chúng tôi! <br>
+                  <span style="color: rgb(0, 0, 205); --darkreader-inline-color: #5190ff;" data-darkreader-inline-color="">Chuyên Nghiệp - An Toàn &amp; Đơn Giản Nhất - Đảm bảo cho niềm vui trọn vẹn!...</span>
+                </span>
+              </strong>
+            </span>
+          </span>
+        </p>
+        <p>
+          <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <span style="font-size: 20px;">
+              <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">Kính chúc quý khách may mắn phát tài!...</span>
+              </strong>
+            </span>
+          </span>
+        </p>
+        <p>
+          <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <span style="font-size: 20px;">
+              <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                  <a href="https://www.minhngoc.net.vn/upload/images/xsmn2.jpg" target="_blank">
+                    <img alt="" src="/upload/images/xsmn2.jpg" style="width: 700px; height: 525px;">
+                  </a>
+                </span>
+              </strong>
+            </span>
+          </span>
+        </p>
+        <p> &nbsp;</p>
+        <p>
+          <span style="color: rgb(178, 34, 34); --darkreader-inline-color: #df5858;" data-darkreader-inline-color="">
+            <span style="font-size: 20px;">
+              <strong>
+                <span style="font-family: &quot;times new roman&quot;, times, serif;">
+                  <a href="https://www.minhngoc.net.vn/upload/images/xsmn.jpg" target="_blank">
+                    <img alt="" src="/upload/images/xsmn.jpg" style="width: 700px; height: 525px;">
+                  </a>
+                </span>
+              </strong>
+            </span>
+          </span>
+        </p>
+      </div>
+    
+    </div>
+  </div>
+</div>''';
   static String infor_6 = '''''';
   static String infor_7 = '''''';
 }

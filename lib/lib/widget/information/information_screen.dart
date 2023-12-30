@@ -166,6 +166,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
+                                      htmlContent: ConstInformation.infor_5,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),
