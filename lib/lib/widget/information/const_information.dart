@@ -1049,7 +1049,141 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_8 = '''''';
+  static String infor_8 = '''<article class="the-article">
+  <header class="the-article-header">
+    <h1 class="the-article-title">Hướng Dẫn Cách Chơi Xổ Số Kiến Thiết Miền Nam Mới Nhất</h1>
+  </header>
+  <div class="the-article-body">
+    <h2 style="text-align:justify">
+      <span style="font-size:14px">
+        <span style="font-family:arial,helvetica,sans-serif">
+          <strong>Xổ số kiến thiết miền Nam với giải thưởng cao nhất lên đến 2 tỷ đồng cho 1 vé trúng thưởng ở giải đặc biệt. Dưới đây là cách chơi và cách dò vé số miền Nam được cập nhật mới nhất.</strong>
+        </span>
+      </span>
+    </h2>
+    <div style="text-align:justify">
+      <span style="font-size:14px">
+        <span style="font-family:arial,helvetica,sans-serif">Cách chơi vé số miền Nam thật ra rất đơn giản, các giải thưởng và con số theo từng giải được in sẵn trên mỗi tấm vé. Mỗi giải thưởng tương ứng với số lần ra của các con số và mức giá trị từ thấp đến cao. <br> Đây là mặt trước và mặt sau của 1 tấm vé <a href="https://xosothienphu.com/xsmn-xo-so-mien-nam-sxmn.html">xổ số miền Nam</a> của đài Cần Thơ, các đài khác của miền Nam cung tương tự như vậy </span>
+      </span>
+      <br>
+    </div>
+    <div style="text-align:center">
+      <span style="font-size:14px">
+        <span style="font-family:arial,helvetica,sans-serif">
+          <img alt="mặt trước vé số miền Nam" src="https://cms.xosothienphu.com/uploaded/Images/Original/2020/12/05/ve-so-can-tho-mat-truoc_1_0512105558.jpg" style="width:100%">
+        </span>
+      </span>
+    </div>
+    <div style="text-align:justify"></div>
+    <div style="text-align:center">
+      <span style="font-size:14px">
+        <span style="font-family:arial,helvetica,sans-serif">
+          <img alt="Mặt sau vé số miền Nam" src="https://cms.xosothienphu.com/uploaded/Images/Original/2020/12/05/ve-so-can-tho-mat-sau_1_0512105558.jpg" style="width:100%">
+        </span>
+      </span>
+      <br>
+    </div>
+    <div style="text-align:justify">
+      <h3>
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">Các giải trúng thưởng sẽ được tính từ bên phải dãy số sang bên trái của dãy số. Nếu những con số của bạn trùng khớp theo thứ tự của kết quả mở thưởng (như hình bên dưới), thì bạn sẽ trúng thưởng tương ứng</span>
+        </span>
+        <br>
+      </h3>
+      <h3 style="text-align:center">
+        <img alt="Các vị trí trúng giải" src="https://cms.xosothienphu.com/uploaded/Images/Original/2020/12/05/cach-do-ve-so-mien-nam_1_0512105558.jpg" style="width:100%">
+      </h3>
+      <h3>
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">Thông tin bên dưới sẽ giúp bạn hiểu rõ hơn giá trị các giải thưởng của xổ số kiến thiết miền Nam</span>
+        </span>
+      </h3>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">+ Giải thưởng của vé số kiến thiết các tỉnh miền Nam bao gồm:</span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Đặc Biệt:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 2.000.000.000đ (2 tỷ đồng) <br style="box-sizing:border-box"> - Số giải: 1 <br style="box-sizing:border-box"> - Quay 1 lần: 6 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Nhất:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 30.000.000đ (30 triệu đồng) <br style="box-sizing:border-box"> - Số giải: 10 <br style="box-sizing:border-box"> - Quay 1 lần: 5 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Nhì:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 15.000.000đ (15 triệu đồng) <br style="box-sizing:border-box"> - Số giải: 10 <br style="box-sizing:border-box"> - Quay 1 lần: 5 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Ba:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 10.000.000đ (10 triệu đồng) <br style="box-sizing:border-box"> - Số giải: 20 <br style="box-sizing:border-box"> - Quay 2 lần: 5 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Tư:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 3.000.000đ (3 triệu đồng) <br style="box-sizing:border-box"> - Số giải: 70 <br style="box-sizing:border-box"> - Quay 7 lần: 5 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Năm:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 1.000.000đ (1 triệu đồng) <br style="box-sizing:border-box"> - Số giải: 100 <br style="box-sizing:border-box"> - Quay 1 lần: 4 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Sáu:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 400.000đ (400 nghìn đồng) <br style="box-sizing:border-box"> - Số giải: 300 <br style="box-sizing:border-box"> - Quay 3 lần: 4 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Bảy:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 200.000đ (200 nghìn đồng) <br style="box-sizing:border-box"> - Số giải: 1000 <br style="box-sizing:border-box"> - Quay 1 lần: 3 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải Tám:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 100.000đ (100 nghìn đồng) <br style="box-sizing:border-box"> - Số giải: 10.000 <br style="box-sizing:border-box"> - Quay 1 lần: 2 số trúng </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải phụ Đặc Biệt:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 50.000đ (50 triệu đồng) <br style="box-sizing:border-box"> - Số giải: 09 <br style="box-sizing:border-box"> - Cho những vé chỉ sai 1 chữ số ở hàng trăm ngàn (so với giải đặc biệt) </span>
+        </span>
+      </p>
+      <p style="box-sizing: border-box; margin: 0px; padding: 3px 0px; color: rgb(34, 34, 34); font-family: arial; font-size: 14px; --darkreader-inline-color: #d3cfc9;" data-darkreader-inline-color="">
+        <span style="font-size:14px">
+          <span style="font-family:arial,helvetica,sans-serif">
+            <strong style="box-sizing:border-box">Giải khuyến khích:</strong>
+            <br style="box-sizing:border-box"> - Giá trị mỗi giải: 6.000đ (6 triệu đồng) <br style="box-sizing:border-box"> - Số giải: 45 <br style="box-sizing:border-box"> - Cho những vé trúng ở hàng trăm ngàn nhưng chỉ sai 1 chữ số ở bất cứ hàng nào của 5 chữ số còn lại (so với giải đặc biệt) <br> Để dò kết quả xổ số miền Nam trực tiếp, hãy truy cập vào <a href="https://xosothienphu.com/">xổ số Thiên Phú</a>&nbsp;mỗi ngày lúc 16h10. Cập nhật và truyền tải nhanh nhất kết qua xổ số các tỉnh miền Nam. <br> Thật đơn giản, bạn chỉ cần mua vé số của bất kỳ tỉnh nào miền Nam (tùy theo ngày) và đợi kết quả mỗi chiều để dò vé số. <br> Trúng thì trời cho, không trúng thì xem như trò chơi. Xổ số kiến thiết ích nước lợi nhà. <br> Chúc các bạn may mắn. </span>
+        </span>
+      </p>
+      <div></div>
+    </div>
+  </div>
+</article>''';
   static String infor_9 = '''''';
   static String infor_10 = '''''';
 }

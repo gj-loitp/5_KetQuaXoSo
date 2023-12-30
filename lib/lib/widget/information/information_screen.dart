@@ -202,6 +202,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
+                                      htmlContent: ConstInformation.infor_8,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),
