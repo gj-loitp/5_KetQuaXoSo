@@ -1785,7 +1785,376 @@ class ConstInformation {
     </p>
   </div>
 </div>''';
-  static String infor_11 = '''''';
+  static String infor_11 = '''<div class="row">
+  <div class="col-xs-12">
+    <div class="block block_1">
+      <div class="block-main-heading">
+        <h1>Câu chuyện chơi lô đề ở đâu cũng có</h1>
+      </div>
+      <div class="contentPostSingle result margin-10">
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Cá cược, cờ bạc được coi là một trong những vấn nạn của xã hội, quốc gia. Lô đề cũng được coi là một phần cũng vấn nạn này. Thế nhưng, trong cuộc sống hiện nay, chúng ta được nghe rất nhiều về lô đề. </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Không cứ ở địa phương, thành thị nào, mà bất cứ ở đâu có xổ số thì dường như ở đó có lô đề diễn ra. Việc chơi lô đề cũng giống như một trò chơi đen đỏ. Vậy thực tế những câu chuyện </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>
+                  <a href="https://xosoketqua.com/lo-to-mien-bac/ket-qua-lo-to-mien-bac.html">chơi lô đề</a>
+                </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">này như thế nào?</span>
+            </span>
+          </span>
+        </p>
+        <h2 style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:Arial">
+              <span style="color:#000000">Sức hút của việc chơi lô đề</span>
+            </span>
+          </span>
+        </h2>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Lô đề giống như một trò chơi gây nghiện. Nếu người chơi không biết điểm dừng có thể sẽ gây ra rất nhiều kết cục nghiêm trọng. Lô và đề là một dạng đánh số ăn tiền. Khác với xổ số, việc </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề</strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000"> sẽ ăn được tiền nhiều hơn, dễ dàng hơn. </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Nhưng cũng vì thế mà người chơi có thể mất tiền nhanh hơn, ngập sâu vào nó bất cứ lúc nào không hay. Đề được tính dựa vào hai số cuối cùng kết quả đặc biệt của giải xổ số kiến thiết.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:center">
+          <img alt="suc-hut-cua-viec-choi-lo-de" src="/admin/kcfinder/upload/images/Thang-04-2020/suc-hut-cua-viec-choi-lo-de.jpg">
+        </p>
+        <p style="text-align:center">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <em>Sức hút của việc chơi lô đề</em>
+              </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Còn lô được tính là hai số cuối của tất cả các giải <a href="https://xosoketqua.com/">Xổ Số</a>&nbsp;trong phần quay <a href="https://xosoketqua.com/xsmn-xo-so-mien-nam.html">xổ số kiến thiết miền nam</a> ở <a href="https://xosoketqua.com/xsmn-xo-so-mien-nam.html">https://xosoketqua.com/xsmn-xo-so-mien-nam.html</a>. Dựa vào những con số này, người chơi có thể đánh ăn tiền và nhận thưởng theo từng loại khác nhau. </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Hỏi về cách tính tiền thưởng của việc chơi đề, những người chơi chân thật chia sẻ. Họ sẽ được nhận lại tiền thưởng gấp 70 lần số tiền họ bỏ ra đánh nếu trúng. Đó là cũng là lý do tại sao việc </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">lại có sức hút đến thế.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Với việc chơi lô, họ chia sẻ về cách chơi có khác hơn một chút. Lô khi chơi phải tính theo điểm. Ghi 1 điểm lô tương ứng với việc phải trả cho người ghi 23.000 đồng. Tiền thưởng nếu trúng 1 điểm lô sẽ là 80.000 đồng. </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Chơi lô <a href="https://xosoketqua.com/xsmb-xo-so-mien-bac.html">xổ số miền bắc</a> có tỉ lệ trúng cao hơn rất nhiều so với số đề, thề nên giá trị giải thưởng sẽ ít hơn. </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>Chơi lô đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">với số lượng lớn, người chơi còn được các chủ lô đề chiết khấu phần trăm tiền chơi. Đây cũng được gọi là tiền hoa hồng cho những người trung gian nhận ghi số đề.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <h2 style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:Arial">
+              <span style="color:#000000">Ai sẽ là người chơi lô đề?</span>
+            </span>
+          </span>
+        </h2>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Bất cứ ai cũng có thể trở thành người </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề</strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">. Chỉ cần người đó có tiền, đủ để chi trả cho số họ muốn đánh, thì người ghi sẽ chấp nhận ghi số lô đề cho họ. </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Trò chơi đen đỏ này không kén chọn người chơi, bất cứ người già trẻ nhỏ chỉ cần biết tính tiền đều có thể tham gia. Đó chính là lý do, mặc dù bị cấm, nhưng vẫn rất rất nhiều nơi xuất hiện hiện tượng này. Nếu để đánh giá việc </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">là xấu thì cũng không hẳn đúng.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:center">
+          <img alt="choi-lo-de-lien-quan-den-quay-thuong-xo-so" src="/admin/kcfinder/upload/images/Thang-04-2020/choi-lo-de-lien-quan-den-quay-thuong-xo-so.jpg">
+        </p>
+        <p style="text-align:center">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <em>Chơi lô đề liên quan đến quay thưởng xổ số</em>
+              </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Những người </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">để giảm bớt stress, giải trí chơi với số lượng ít, không tốn nhiều tiền thì cũng không quá ảnh hưởng. Họ vẫn có thể chi trả cho số tiền mà họ chơi, thì điều này không ảnh hưởng đến ai. </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Thực tế rất nhiều người nhờ chơi số lô, số đề mà thay đổi được cả cuộc sống. Nếu như những người chơi biết dừng đúng lúc thì sẽ không gây ra nợ nần, mất tiền mất của.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Sở dĩ </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">có tính gây nghiện cao nên nó mới được coi như một trò chơi cờ bạc nguy hiểm. Những người chơi nếu trúng được một lần chắc chắn sẽ chơi tiếp để mong trúng lần hai.</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Đây chính là tâm lý chung của rất nhiều người khi chơi trò chơi đen đỏ. Tâm lý muốn gỡ gạc cũng chính là động cơ để nhiều người lún sâu vào đánh số lô số đề. Thua nhiều nên muốn gỡ, chính vì thế lại càng mất thêm nhiều tiền hơn.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <h2 style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:Arial">
+              <span style="color:#000000">Thực trạng hiện tượng chơi lô đề hiện nay&nbsp;</span>
+            </span>
+          </span>
+        </h2>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Để nói đến thực trạng hiện tượng </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề,</strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000"> chắc chắn chúng ta sẽ không thể nào kiểm soát được. Những gì chúng ta biết chỉ là bề nổi của một tảng băng chìm. Rất rất nhiều người ngoài kia đang chơi, thậm chí là sống bằng việc </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>đánh lô đánh đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">hằng ngày. Những người ghi số trung gian cũng được hưởng hoa hồng từ việc ghi số này.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:center">
+          <img alt="kinh-nghiem-choi-lo-de-cua-nhung-nguoi-choi-lau-nam" src="/admin/kcfinder/upload/images/Thang-04-2020/kinh-nghiem-choi-lo-de-cua-nhung-nguoi-choi-lau-nam.jpg">
+        </p>
+        <p style="text-align:center">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <em>Kinh nghiệm chơi lô đề của những người chơi lâu năm</em>
+              </span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Theo tìm hiểu, chúng tôi được biết, những người ghi từ 15 điểm lô <a href="https://xosoketqua.com/xsmb-xo-so-mien-bac.html">xổ số miền bắc</a>&nbsp;trở lên có thể được tính thành 22.500 đồng cho 1 điểm thay vì 23.000 đồng. Đây chính là phần chênh lệch mà những người ghi số lô đề trung gian được hưởng. Những khách quen, đánh nhiều có thể được chiết khấu nhiều hơn. Việc </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">không hẳn xấu nhưng cũng không tốt. Chúng ta không nên khuyến khích cho việc chơi lô đề này.&nbsp;</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Thời gian trước đây, những trò chơi đen đỏ, cá cược thường chỉ có cánh đàn ông đam mê. Nhưng hiện nay, hiện tượng này đã xảy ra ngay cả với phụ nữ. Rất nhiều các chị, các cô rất thích </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề.</strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000"></span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Nếu các bạn ngồi ở các hàng trà đá, hay đi chợ buổi sáng nhiều khi có thể nghe được các cô các chị bàn tán với nhau về số lô, số đề. Những người chơi không chỉ chọn số một cách ngẫu nhiên, mà còn dựa trên tính toán, cầu số, giải mã giấc mơ.</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">Trên đây là những thông tin về thực trạng </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">
+                <strong>chơi lô đề </strong>
+              </span>
+            </span>
+          </span>
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">hiện nay. Mặc dù đã bị nhà nước cấm nhưng hình thức hoạt động ngầm của việc này vẫn diễn ra. Chúng ta không nên chơi hay lún sâu vào những trò chơi đen đỏ. Luôn phải biết điểm dừng trong mọi việc mình làm.</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align:justify">
+          <span style="font-size:16pt">
+            <span style="font-family:''">
+              <span style="color:#000000">&gt;&gt; Đọc nhiều bài:&nbsp; <a href="https://xosoketqua.com/nhieu-nguoi-thich-nhung-tro-choi-may-rui-lieu-co-phai-chi-choi-bang-may-man">Nhiều người thích những trò chơi may rủi, liệu có phải chỉ chơi bằng may mắn</a> tại&nbsp; <a href="https://xosoketqua.com/nhieu-nguoi-thich-nhung-tro-choi-may-rui-lieu-co-phai-chi-choi-bang-may-man">https://xosoketqua.com/nhieu-nguoi-thich-nhung-tro-choi-may-rui-lieu-co-phai-chi-choi-bang-may-man</a>
+              </span>
+            </span>
+          </span>
+        </p>
+        <p style="font-style: italic; font-size: 16px; line-height: 1.5;">
+          <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.5;">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>''';
   static String infor_12 = '''''';
   static String infor_13 = '''''';
 }

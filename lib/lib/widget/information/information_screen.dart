@@ -238,6 +238,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Câu chuyện chơi lô đề ở đâu cũng có",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Câu chuyện chơi lô đề ở đâu cũng có",
+                                      htmlContent: ConstInformation.infor_11,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),
