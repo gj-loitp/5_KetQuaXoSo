@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
 //TODO ad
@@ -36,7 +37,12 @@ void main() {
       transitionDuration: const Duration(milliseconds: 1000),
       home: const MyApp(),
       navigatorKey: navigatorKey,
-      theme: ThemeData.light(),
+      theme: ThemeData.light().copyWith(
+        primaryColor: ColorConstants.appColor,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        splashColor: ColorConstants.appColor,
+        highlightColor: ColorConstants.white,
+      ),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.light,
     ),
