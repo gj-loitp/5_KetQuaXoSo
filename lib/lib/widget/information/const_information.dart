@@ -811,6 +811,162 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_6 = '''''';
+  static String infor_6 = '''<td class="main">
+  <div class="mainbody">
+    <div id="noidung">
+      <div id="component">
+        <div class="title-l">
+          <div class="title-r">
+            <h1>KHUYẾN CÁO KHI ĐỔI SỐ TRÚNG</h1>
+          </div>
+        </div>
+        <div class="body-l">
+          <div class="body-r">
+            <div>
+              <div>
+                <h3 style="text-align: justify">
+                  <b>VÉ SỐ GIẢ TRÚNG THƯỞNG AI &nbsp;LÀ NẠN NHÂN ?...</b>
+                </h3>
+                <h3 style="text-align: right">
+                  <b>
+                    <span style="font-size: 11px">
+                      <em>
+                        <span style="font-family: times new roman">Thứ Bảy, ngày 14 tháng năm năm 2011.</span>
+                      </em>
+                    </span>
+                  </b>
+                </h3>
+                <div style="text-align: justify"> -Thời gian qua các cơ quan thông tấn báo chí có thường xuyên đưa tin nạn vé trúng giả, đó chỉ là một phần rất nhỏ so với rủi ro mà các đại lý và người bán số cầm tay gặp hàng ngày. Lượng vé trúng giả mà các công ty xổ số trả ngược về đại lý nhỏ hơn nhiều so với lượng vé giả mà các đại lý loại ra trước khi nộp lên. Một điều rất đau lòng là nạn nhân chủ yếu của vấn nạn này là những người nghèo ít hiểu biết, người già yếu,&nbsp;người sức khỏe kém không lao động nặng được, người thiểu năng tàn tật... kinh tế rất khó khăn phải đi bán dạo từng tờ vé số mưu sinh.</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <h3 style="text-align: justify">
+                  <b>KHUYẾN CÁO KHI ĐỔI SỐ TRÚNG!</b>
+                </h3>
+                <div style="text-align: justify"> 1/ Người bán số cầm tay tuyệt đối không đổi vé trúng của người lạ, hạn chế đổi vé của những người quen&nbsp;(do đi bán cả ngày không được bao nhiêu, người trúng số thường mua hộ lại 1 ít nên người bán dù biết rủi ro cũng chấp nhận, tất cả chỉ dựa vào cảm tính. Đây là miếng mồi ngon của kẻ lừa đảo). Tốt nhất chỉ đổi vé do chính mình bán trúng! Điều này có thể làm doanh số bán của cá nhân ít đi một chút nhưng so với rủi ro lớn thì nên làm. Có câu nói đùa&nbsp;nhưng là thật&nbsp;của những người bán xổ số thâm niên: " <strong>Chưa bị số giả chưa phải là dân bán số!</strong>". </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify"> 2/ Đối với đại lý vé số lâu năm có nhiều kinh nghiệm, nhân viên được đào tạo nên rủi ro ít ngược lại những anh chị&nbsp;đại lý mới hoạt động, bàn bán lẻ.. cần phải nâng cao nghề nghiệp và thận trọng hơn khi nhận đổi vé. Có nhiều đại lý mới mở phải gánh 1 khoản nợ khổng lồ khi đại lý trên trả vé giả về.</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <h3 style="text-align: justify">
+                  <b>ĐẶC ĐIỂM KỸ THUẬT BẢO AN&nbsp;CỦA TỜ VÉ SỐ</b>.
+                </h3>
+                <div style="text-align: justify"> -Vé xổ số hiện nay đã cải tiến rất nhiều, được in chủ yếu từ những đơn vị in tài chánh bằng kỹ thuật in tiên tiến, qui trình in nhiều công đoạn. Tuy nhiên vì chi phí để in 1 tờ vé số thấp nên không thể có những đăc điểm chống giả cao cấp&nbsp;như tiền được, để phân biệt cần phải có 1 số kiến thức cơ bản. Vé số Miền Nam có chất lượng và kỹ thuật chống giả cao nhất nhưng cũng là khu vực có nhiều vé giả nhất do thị trường phân phối rộng lớn, doanh số tiêu thụ cao:</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>
+                    <span style="font-size: 18px">I/</span> Như đã nói ở trên vé số cả nước nói chung và Miền Nam nói riêng được in nhiều công đoạn, hình nền được in trước, số nhảy và các chi tiết khác in sau… </strong> Tôi xin liệt kê một số đặc điểm chính của tờ vé xổ số Miền Nam:
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify"> + Bộ số nhảy đóng cứng hoặc hoặc in mềm có kèm bộ chữ, một số tỉnh dùng bộ số đột thủng lỗ kim, bộ ký hiệu con vật. Bộ số cứng khi đóng có in dấu trên tờ vé giống như dấu nỗi giáp lai ảnh của CMND, hai phía trên dưới có dấu của mép con số liền kề. Bộ số in mềm không có dấu đóng nhưng chi tiết cao có số nhỏ bên trong hoặc họa tiết hoặc nội dung tùy theo tỉnh.</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify"> + Bộ chữ và bộ số phụ đi kèm định hình cố định với bộ số nên vị trí tương đối các dẫy số và chữ cố định (nếu dãy số có 1 số lệch không ngay hàng thì các dãy số phụ và chữ hay ký hiệu con vật&nbsp;cũng lệch theo tương ứng),</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify"> + Độ nét của tờ vé khá cao thể hiện những chi tiết rất nhỏ, chi tiết nền của khung in số có nội dung liên tục (Lưu ý nền và số được in trong 2 công đoạn khác nhau, bằng 2 màu mực khác nhau và luôn nhìn được nội dung của nền phía dưới con số).</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify"> + Giáp lai là phần in ngẫu nhiên hai mặt giữa tờ vé bán cho người tham gia dự thưởng và phần lưu lại công ty để đối chiếu khi trả thưởng. Phần này cũng có những đặc điểm kỹ thuật cao như: họa tiết hoặc nội dung nền in trước, bộ số phụ nằm ngang, ngày tháng, dấu giáp lai … in sau. Lưu ý phần giáp lai này tỷ lệ trùng lặp giữa các tờ vé là rất nhỏ có thể nói không có sự trùng lặp.</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify"> + Có một số tỉnh dùng những kỹ thuật cao cấp hơn trên 1 số chi tiết như mực chỉ nhìn thấy khi chiếu tia cực tím, nghiên tờ vé trước ánh sáng ... Các công ty xổ số và các đơn vị in vé liên tục nâng cao chất lượng, tính thẩm mỹ, kỹ thuật chống giả trong điều kiện chi phí hợp lý.</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <h3 style="text-align: justify"> II/ CÁC LOẠI VÉ TRÚNG GIẢ THƯỜNG GẶP VÀ CÁCH PHÒNG CHỐNG</h3>
+                <div style="text-align: justify">
+                  <span style="color: rgb(0, 0, 255); --darkreader-inline-color: #337dff;" data-darkreader-inline-color="">
+                    <b>
+                      <i>A-&nbsp; DẠNG VÉ GIẢ THỦ CÔNG ĐƠN GIẢN: </i>
+                    </b>
+                  </span>Là loại vé giả đơn giản không có sự hỗ trợ của kỹ thuật tân tiến, thường do những cá nhân lười lao động nhưng thích xài tiền nên tìm cách lừa đảo. Loại này anh&nbsp;em đại lý hay nói đùa là "nhìn thấy cách 30 mét"
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>1/ Vé cạo sửa, dán:</strong>
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>a/ Vé cạo sửa số, dán số:</strong> là vé số không trúng cùng kỳ phát hành được cạo sửa bằng màu mực tương tự, cạo và dán con số trúng vào.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <em>
+                    <strong>-Cách nhận biết:</strong>
+                  </em> Vé cạo sửa có màu mực không đồng nhất, vé dán có nền không liên tục, đưa ra ngược sáng dễ dàng thấy chổ cạo sửa hoặc dán, không còn dấu hiệu nổi và các mép số liền kề của bộ số cứng, mực sửa bị lem và chổ số dán&nbsp;bị bong tróc khi thấm nước…. Tuy loại này dễ bị phát hiện nhưng dễ làm nhất nên số lượng tương đối lớn.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>b/ Vé số sửa ngày và ghép:</strong> Giống cạo sửa số, là loại vé cùng đài nhưng khác kỳ xổ thường kẻ gian mua tờ số mới trúng giải nếu so với kết quả của kỳ trước, sau khi xổ không trúng mới đem cạo sửa ngày (hoặc lượm những tờ vé của khách dò sai đem về so lại với kết quả của các tuần trước). Vé ghép là vé có phần số của kỳ xổ khác ghép với tờ vé đúng kỳ xổ thay vì sửa ngày.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>
+                    <em>-Cách nhận biết:</em>
+                  </strong> Vé cạo sửa ngày có hình và ký hiệu khác tờ vé phát hành của kỳ đó. Ngày in rất nhỏ dưới nền số và ngày ở phần giáp lai không sửa được nên không trùng với kỳ xổ… Vé ghép có hình, giáp lai&nbsp;đúng nhưng&nbsp; nền in&nbsp;số không đúng kỳ xổ và có dấu ghép. Lưu ý: Tờ vé của một số tỉnh không in ngày nhỏ li ti&nbsp;dưới nền số nên phải xem thêm những chi tiết khác như bộ số phụ, bộ ký hiệu&nbsp;con vật...
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>2/ Tráo kết quả xổ số:</strong> Thay vì làm giả tờ vé số, những tên lừa đảo này làm giả tờ vé dò, làm sai lệch 1 giải khớp với tờ vé số chúng định <a href="/doi-so-trung.html">đổi số trúng</a>. Loại này không lừa được ở đại lý nhưng dể dàng lừa được người bán dạo bằng cách 2 tên: một tên giả "mua" lựa số gây chú ý cho người bán, tên còn lại "mượn sổ" để dò vé cũ, đánh tráo tờ vé dò kqxs và trả lại.&nbsp;Sau khi mua mua 1, 2 tờ vé, tên "mua" này mới móc ví trả tiền và mượn lại sổ&nbsp;để&nbsp;dò tờ vé khớp với vé dò đã bị tráo.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <em>
+                    <strong>-Cách phòng chống:</strong>
+                  </em> Người bán dạo tự làm dấu hiệu riêng cho tờ kqxs của mình như ký vào chẳng hạn hoặc dán cố định vào tập sổ…
+                </div>
+                <div style="text-align: justify"> …vv…&amp; vv……….</div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <span style="color: rgb(0, 0, 255); --darkreader-inline-color: #337dff;" data-darkreader-inline-color="">
+                    <b>
+                      <i>B-&nbsp; DẠNG VÉ GIẢ &nbsp;KỸ THUẬT CAO:</i>
+                    </b>
+                  </span>
+                  <b>
+                    <i></i>
+                  </b>Là loại vé được làm giả với kỹ thuật cao hơn, có sự hỗ trợ của&nbsp;máy móc&nbsp;do những đối tượng có trí thức hoặc có bàn tay của những nghệ nhân thiếu đạo đức… Loại này có tỷ lệ thấp hơn nhưng giá trị giải thưởng lớn hơn.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>1/ Vé scan từ tờ vé trúng thật và in lại bằng máy in chuyên dụng:</strong> (Là 1 trong những loại vé giả có số lượng lớn so với các&nbsp;loại khác&nbsp;ở mục <strong>B</strong>, giá trị giải thưởng cao).
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>
+                    <em>-Cách nhận dạng: </em>
+                  </strong>Tuy tờ vé trúng được scan lại với độ phân giải rất lớn và in bằng những kỹ thuật in hiện đại nhưng kẻ gian không thể tách các chi tiết kỹ thuật trên tờ vé và có được 1 dây chuyền in ấn từng phần nên tờ vé không có những đặc điểm&nbsp;như đã nêu ở mục ĐẶC ĐIỂM KỸ THUẬT CỦA TỜ VÉ SỐ. Tờ vé giả có độ nét các chi tiết nhỏ kém, không nhìn thấy nền phía dưới con số, lỗ kim không đúng… nói chung vé&nbsp;có màu sắc kém hơn, <strong>một lớp IN&nbsp;duy nhất </strong>, có đặc tính của bản photo (nếu anh chị nào thường photo thì dễ dàng phân biệt được sự khác&nbsp;nhau giữa&nbsp;"bản gốc" và "bản photo").
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>2/ Vé cạo sửa, dán&nbsp;số từ những nghệ nhân</strong> có tay nghề thật sự nhưng đạo đức kém.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>
+                    <em>-Cách nhận dạng: </em>
+                  </strong>Như&nbsp;loại vé cạo sửa, dán&nbsp;thông thường&nbsp;nhưng được làm tinh vi hơn nhiều, có kiến thức về&nbsp;màu sắc, chất liệu mực tương đồng, phần cạo dán khớp và đồng nhất khi đưa lên ngược sáng... có thể phải phóng lớn mới nhìn thấy được.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>3/ Vé làm “mất” số và đóng lại số mới.</strong> Là loại vé được ngâm vào hóa chất biến màu mực in số thành trong suốt mà hình nền và các chi tiết khác không bị ảnh hưởng xong in số mới lên.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>
+                    <em>-Cách nhận dạng: </em>
+                  </strong>Loại giả này chỉ làm được trên những tờ vé có chất liệu mực in các con số bị tác dụng bởi hóa chất&nbsp;biến thành "không màu". Vì mực in số "đổi màu" chứ không bị mất đi nên tờ vé này khi nhúng nước những con số sẽ hiện lên do thấm chậm hơn những chổ khác. Bộ số dùng để in lại có chi phí thấp, những kẻ lừa đảo thường dùng kỹ thuật in dấu mềm nên các con số in lại có độ nét kém, màu mực lem rất dể nhận ra. Khi gặp dấu hiệu này hãy thấm ước tờ vé.
+                </div>
+                <div style="text-align: justify"> &nbsp;</div>
+                <div style="text-align: justify">
+                  <strong>(*) Ngoài những loại vé giả được sơ lược trên đây còn có nhiều kỹ thuật giả khác ngày càng tinh vi hơn, trong giới hạn 1 bài viết không thể đề cập hết.&nbsp;Hy vọng các anh&nbsp;chị em đại lý vé số mới hoạt động ý thức hơn, thường xuyên cập nhật những loại vé giả mới, thường xuyên nhắc nhở bạn hàng bán số dạo hạn chế được phần nào rủi ro nghề nghiệp.</strong>
+                </div>
+                <div> &nbsp;</div>
+                <div>
+                  <em>
+                    <strong>Chúc các bạn thành công!</strong>
+                  </em>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</td>''';
   static String infor_7 = '''''';
 }

@@ -178,6 +178,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Khuyến cáo khi đổi số trúng",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Khuyến cáo khi đổi số trúng",
+                                      htmlContent: ConstInformation.infor_6,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),
