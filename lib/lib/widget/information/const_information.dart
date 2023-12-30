@@ -527,7 +527,60 @@ class ConstInformation {
     <p> Nghị định 78/2012/NĐ-CP quy định về việc xử lý các hành vi sai phạm như sau: Các hành vi vi phạm, hình thức xử phạt, mức phạt, thẩm quyền xử phạt vi phạm hành chính về hoạt động kinh doanh xổ số được thực hiện theo quy định của pháp luật hiện hành về xử phạt vi phạm hành chính đối với hoạt động kinh doanh xổ số. Hình thức xử phạt và mức phạt đối với hành vi vi phạm được thực hiện theo quy định của pháp luật hiện hành đối với hành vi vi phạm quy định về sử dụng kết quả xổ số và thông tin kết quả trúng thưởng.</p>
   </div>
 </div>''';
-  static String infor_4 = '''''';
+  static String infor_4 = '''<tbody>
+  <tr>
+    <td class="main">
+      <div class="mainbody">
+        <div id="noidung">
+          <div id="component">
+            <div class="title-l">
+              <div class="title-r">
+                <h1>Thay đổi giờ mở thưởng Xổ số Miền Bắc</h1>
+              </div>
+            </div>
+            <div class="body-l">
+              <div class="body-r">
+                <div>
+                  <div>
+                    <div class="nDesc"> Từ ngày 01/02/2013, thay đổi thời gian quay số mở thưởng xổ số kiến thiết Miền Bắc hàng ngày như sau:</div>
+                    <div class="nContent">
+                      <div>
+                        <br> - Thời gian quay số mở thưởng xổ số điện toán: 18 giờ 5 phút
+                      </div>
+                      <div>
+                        <br> - Thời gian quay số mở thưởng xổ số truyền thống: 18 giờ 15 phút (06 giờ 15 phút chiều)
+                      </div>
+                      <div> &nbsp;</div>
+                      <div>
+                        <em>Lịch nghỉ tết Xổ số Miền Bắc từ 09 đến hết ngày 12-02-2013 (Nhằm ngày 29 tết đến hết mùng 3 âm lịch) <br>
+                        </em>
+                      </div>
+                      <div>
+                        <br> Kết quả xổ số toàn quốc tự động cập nhật liên tục từng giải như ngồi xem trước hội trường xổ số trong suốt quá trình mở thưởng từ hệ thống máy chủ dữ liệu trực tuyến của Đại Lý Vé Số MINH NGỌC
+                      </div>
+                      <div> &nbsp;</div>
+                      <div style="text-align: center;">
+                        <strong>Kính chúc quý khách may mắn phát tài!!!</strong>
+                      </div>
+                      <div style="text-align: center;"> &nbsp;</div>
+                     
+                      <div style="text-align: center;">
+                        <br>
+                        <br>
+                        <br> &nbsp; <img alt="" height="352" src="/upload/images/dientoan.jpg" width="500">
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</tbody>''';
   static String infor_5 = '''''';
   static String infor_6 = '''''';
   static String infor_7 = '''''';

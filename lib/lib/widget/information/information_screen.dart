@@ -154,6 +154,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   );
                                 },
                               ),
+                              UIUtils.getButton(
+                                "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
+                                Icons.navigate_next,
+                                () {
+                                  Get.to(
+                                    () => HtmlContentScreen(
+                                      titleAppBar: "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
+                                      htmlContent: ConstInformation.infor_4,
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),
