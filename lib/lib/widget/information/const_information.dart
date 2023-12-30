@@ -2140,14 +2140,7 @@ class ConstInformation {
             </span>
           </span>
         </p>
-        <p style="text-align:justify">
-          <span style="font-size:16pt">
-            <span style="font-family:''">
-              <span style="color:#000000">&gt;&gt; Đọc nhiều bài:&nbsp; <a href="https://xosoketqua.com/nhieu-nguoi-thich-nhung-tro-choi-may-rui-lieu-co-phai-chi-choi-bang-may-man">Nhiều người thích những trò chơi may rủi, liệu có phải chỉ chơi bằng may mắn</a> tại&nbsp; <a href="https://xosoketqua.com/nhieu-nguoi-thich-nhung-tro-choi-may-rui-lieu-co-phai-chi-choi-bang-may-man">https://xosoketqua.com/nhieu-nguoi-thich-nhung-tro-choi-may-rui-lieu-co-phai-chi-choi-bang-may-man</a>
-              </span>
-            </span>
-          </span>
-        </p>
+      
         <p style="font-style: italic; font-size: 16px; line-height: 1.5;">
           <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.5;">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
         </p>
