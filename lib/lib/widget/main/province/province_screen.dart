@@ -85,7 +85,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
       var listProvince = _controllerMain.listProvince;
       return CupertinoScrollbar(
         child: ListView.builder(
-            padding: EdgeInsets.zero,
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 150),
             physics: const BouncingScrollPhysics(),
             itemCount: listProvince.length,
             itemBuilder: (BuildContext context, int index) {
