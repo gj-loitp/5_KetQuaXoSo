@@ -1,10 +1,10 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
 
 class ProvinceListScreen extends StatefulWidget {
   const ProvinceListScreen({
@@ -122,7 +122,13 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                       ],
                     ),
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(
+                      () => ProvinceScreen(
+                        province: province,
+                      ),
+                    );
+                  },
                 ),
               );
             }),
