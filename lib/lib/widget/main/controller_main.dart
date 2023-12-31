@@ -72,7 +72,6 @@ class ControllerMain extends BaseController {
 
     var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
-
     //co 2 cach
     //1 load bang web view
     //2 call api va load custom view
