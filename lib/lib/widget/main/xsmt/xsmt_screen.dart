@@ -281,7 +281,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
           ),
           // const SizedBox(height: 16),
           Text(
-            "Chưa có kết quả xổ số vào ngày ${_controllerMain.getSelectedDayInStringXSMT()}",
+            "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringXSMT()}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
