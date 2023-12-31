@@ -6,16 +6,16 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 
-class ProvinceScreen extends StatefulWidget {
-  const ProvinceScreen({
+class ProvinceListScreen extends StatefulWidget {
+  const ProvinceListScreen({
     super.key,
   });
 
   @override
-  State<ProvinceScreen> createState() => _ProvinceScreenState();
+  State<ProvinceListScreen> createState() => _ProvinceListScreenState();
 }
 
-class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
+class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
   final ControllerMain _controllerMain = Get.find();
 
   @override

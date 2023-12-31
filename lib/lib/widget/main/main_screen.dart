@@ -5,7 +5,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
@@ -42,7 +42,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
     const KeepAlivePage(child: XSMNScreen()),
     const KeepAlivePage(child: XSMTScreen()),
     const KeepAlivePage(child: XSMBScreen()),
-    const KeepAlivePage(child: ProvinceScreen()),
+    const KeepAlivePage(child: ProvinceListScreen()),
     const KeepAlivePage(child: VietlotScreen()),
   ];
 
