@@ -90,32 +90,39 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             itemCount: listProvince.length,
             itemBuilder: (BuildContext context, int index) {
               var province = listProvince[index];
-              return Container(
-                width: double.infinity,
-                margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(45),
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        "${province.name}",
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
+              return Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  child: Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.9),
+                      borderRadius: BorderRadius.circular(45),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            "${province.name}",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                        const Icon(
+                          Icons.navigate_next,
                           color: Colors.black,
                         ),
-                        textAlign: TextAlign.start,
-                      ),
+                      ],
                     ),
-                    const Icon(
-                      Icons.navigate_next,
-                      color: Colors.black,
-                    ),
-                  ],
+                  ),
+                  onTap: () {},
                 ),
               );
             }),
