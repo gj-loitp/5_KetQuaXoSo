@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
@@ -38,34 +39,52 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: DefaultTextStyle(
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
+            Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.fromLTRB(16, 48, 16, 16),
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: const Text(
+                    "Danh sách các đài",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 18,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    WavyAnimatedText('Xin chào'),
-                    WavyAnimatedText('Chức năng này'),
-                    WavyAnimatedText('sẽ được cập nhật'),
-                    WavyAnimatedText('ở phiên bản tiếp theo :)~'),
-                  ],
-                  isRepeatingAnimation: true,
-                  onTap: () {},
-                ),
-              ),
+                Expanded(child: _buildViewListProvince()),
+              ],
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildViewListProvince() {
+    return CupertinoScrollbar(
+        child: ListView.builder(
+            padding: EdgeInsets.zero,
+            physics: const BouncingScrollPhysics(),
+            itemCount: 50,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text('Contact ${(index + 1)}'),
+                leading: const Icon(Icons.person_outline_rounded),
+                trailing: const Icon(Icons.select_all_rounded),
+                onTap: () {
+                  debugPrint('Contact ${(index + 1)}');
+                },
+              );
+            }
+        ),
     );
   }
 }
