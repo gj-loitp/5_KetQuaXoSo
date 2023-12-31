@@ -291,6 +291,34 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.black,
+                fontSize: 16,
+              ),
+            ),
+            onPressed: () {
+              _selectDay(DateTime.now().subtract(const Duration(days: 1)), false);
+            },
+            child: const Text('Xem kết quả hôm qua'),
+          ),
+          const SizedBox(height: 8),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.black,
+                fontSize: 16,
+              ),
+            ),
+            onPressed: () {
+              _selectDay(DateTime.now(), true);
+            },
+            child: const Text('Làm mới'),
+          ),
         ],
       ),
     );
