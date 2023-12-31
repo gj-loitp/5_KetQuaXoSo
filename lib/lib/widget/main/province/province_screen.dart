@@ -49,17 +49,24 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                 Container(
                   width: double.infinity,
                   margin: const EdgeInsets.fromLTRB(16, 48, 16, 16),
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.transparent,
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: const Text(
                     "Danh sách các đài",
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 18,
-                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                      fontSize: 24,
+                      shadows: [
+                        Shadow(
+                          blurRadius: 5.0,
+                          color: Colors.black,
+                          offset: Offset(2.0, 2.0),
+                        ),
+                      ],
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -83,12 +90,33 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             itemCount: listProvince.length,
             itemBuilder: (BuildContext context, int index) {
               var province = listProvince[index];
-              return ListTile(
-                title: Text("${province.name}"),
-                leading: const Icon(Icons.person_outline_rounded),
-                trailing: const Icon(Icons.select_all_rounded),
-                onTap: () {
-                },
+              return Container(
+                width: double.infinity,
+                margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.9),
+                  borderRadius: BorderRadius.circular(45),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        "${province.name}",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
+                        textAlign: TextAlign.start,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.navigate_next,
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
               );
             }),
       );
