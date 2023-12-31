@@ -18,4 +18,14 @@ class Province {
     data['url'] = url;
     return data;
   }
+
+  static List<Province> genList() {
+    var list = <Province>[];
+    list.add(Province(
+      name: "An Giang",
+      slug: "",
+      url: "",
+    ));
+    return list;
+  }
 }

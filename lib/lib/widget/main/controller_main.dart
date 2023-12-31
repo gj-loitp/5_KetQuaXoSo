@@ -7,6 +7,7 @@ import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_controller.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
+import 'package:ketquaxoso/lib/model/province.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -517,6 +518,7 @@ class ControllerMain extends BaseController {
     }
     return words;
   }
+
 //END ZONE XSMT
 
 //ZONE XSMB
@@ -526,5 +528,13 @@ class ControllerMain extends BaseController {
 //END ZONE VIETLOT
 
 //ZONE PROVINCE
+  var listProvince = <Province>[].obs;
+
+  void genListProvince() {
+    listProvince.clear();
+    listProvince.value = Province.genList();
+    listProvince.refresh();
+  }
+
 //END ZONE PROVINCE
 }

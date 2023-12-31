@@ -1,8 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 
 class ProvinceScreen extends StatefulWidget {
   const ProvinceScreen({
@@ -14,9 +16,12 @@ class ProvinceScreen extends StatefulWidget {
 }
 
 class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
+  final ControllerMain _controllerMain = Get.find();
+
   @override
   void initState() {
     super.initState();
+    _controllerMain.genListProvince();
   }
 
   @override
@@ -69,22 +74,24 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   }
 
   Widget _buildViewListProvince() {
-    return CupertinoScrollbar(
+    return Obx(() {
+      var listProvince = _controllerMain.listProvince;
+      return CupertinoScrollbar(
         child: ListView.builder(
             padding: EdgeInsets.zero,
             physics: const BouncingScrollPhysics(),
-            itemCount: 50,
+            itemCount: listProvince.length,
             itemBuilder: (BuildContext context, int index) {
+              var province = listProvince[index];
               return ListTile(
-                title: Text('Contact ${(index + 1)}'),
+                title: Text("${province.name}"),
                 leading: const Icon(Icons.person_outline_rounded),
                 trailing: const Icon(Icons.select_all_rounded),
                 onTap: () {
-                  debugPrint('Contact ${(index + 1)}');
                 },
               );
-            }
-        ),
-    );
+            }),
+      );
+    });
   }
 }
