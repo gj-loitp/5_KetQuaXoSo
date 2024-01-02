@@ -239,21 +239,20 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             child: const Text('👈 Xem kết quả xổ số kì trước'),
           ),
           const SizedBox(height: 8),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              textStyle: const TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.black,
-                fontSize: 16,
+          if (_controllerMain.isShowNextResult())
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                textStyle: const TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
               ),
+              onPressed: () {
+                _selectDay(_controllerMain.provinceSelectedDateTime.value.add(const Duration(days: 1)), false);
+              },
+              child: const Text('Xem kết quả xổ số kì tới 👉'),
             ),
-            onPressed: () {
-              //TODO roy93~
-              // _selectDay(DateTime.now(), true);
-              // _selectDay(DateTime.now().subtract(const Duration(days: 1)), false);
-            },
-            child: const Text('Xem kết quả xổ số kì tới 👉'),
-          ),
         ],
       ),
     );

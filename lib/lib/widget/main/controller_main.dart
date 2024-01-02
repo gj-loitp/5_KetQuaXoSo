@@ -768,5 +768,23 @@ class ControllerMain extends BaseController {
     }
     return words;
   }
+
+  bool isShowNextResult() {
+    var today = DateTime.now();
+    var selectedDay = provinceSelectedDateTime.value;
+    // debugPrint("${selectedDay.year}~${today.year}");
+    // debugPrint("${selectedDay.month}~${today.month}");
+    // debugPrint("${selectedDay.day}~${today.day}");
+    if (selectedDay.year < today.year) {
+      return true;
+    }
+    if (selectedDay.month < today.month) {
+      return true;
+    }
+    if (selectedDay.day < today.day) {
+      return true;
+    }
+    return false;
+  }
 //END ZONE PROVINCE
 }
