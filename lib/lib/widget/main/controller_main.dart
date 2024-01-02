@@ -547,7 +547,8 @@ class ControllerMain extends BaseController {
     Province province,
     DateTime dateTime,
     bool isFirstInit,
-    bool isForceGetData,
+    bool isForceGetDataPast,
+    bool isForceGetDataFuture,
   ) async {
     if (provinceSelectedDateTime.value.day == dateTime.day &&
         provinceSelectedDateTime.value.month == dateTime.month &&
@@ -556,7 +557,8 @@ class ControllerMain extends BaseController {
       return;
     }
 
-    debugPrint("roy93~ setSelectedDateTime $dateTime, isForceGetData $isForceGetData");
+    debugPrint(
+        "roy93~ setSelectedDateTime $dateTime, isForceGetDataPast $isForceGetDataPast, isForceGetDataFuture $isForceGetDataFuture");
     provinceIsLoading.value = true;
     provinceSelectedDateTime.value = dateTime;
 
@@ -630,6 +632,19 @@ class ControllerMain extends BaseController {
         // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
         //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
         // });
+        if (provinceKqxs.value.pageProps?.resp?.data?.content?.entries?.isEmpty == true) {
+          debugPrint(
+              "roy93~ empty data isForceGetDataPast $isForceGetDataPast, isForceGetDataFuture $isForceGetDataFuture");
+
+          // var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
+          // var sCurrentSearchDate = provinceCurrentSearchDate.value;
+          // debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+          // debugPrint("sCurrentSearchDate $sCurrentSearchDate");
+          // var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
+          // if (dt != null) {
+          //   setSelectedDateTimeProvince(province, dt, false, isForceGetData);
+          // }
+        }
         provinceIsLoading.value = false;
       }
 
@@ -740,7 +755,7 @@ class ControllerMain extends BaseController {
     }
   }
 
-  void applySearchProvince(Province province, bool isForceGetData) {
+  void applySearchProvince(Province province, bool isForceGetDataPast, bool isForceGetDataFuture) {
     var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
     var sCurrentSearchDate = provinceCurrentSearchDate.value;
     debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
@@ -748,7 +763,7 @@ class ControllerMain extends BaseController {
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {
-      setSelectedDateTimeProvince(province, dt, false, isForceGetData);
+      setSelectedDateTimeProvince(province, dt, false, isForceGetDataPast, isForceGetDataFuture);
     }
   }
 
