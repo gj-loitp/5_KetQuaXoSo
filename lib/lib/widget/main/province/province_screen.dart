@@ -289,7 +289,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             child: const Text('👈 Xem kết quả xổ số kì trước'),
           ),
           const SizedBox(height: 8),
-          if (_controllerMain.isShowNextResult())
+          if (_controllerMain.isPastDateTime(_controllerMain.provinceSelectedDateTime.value))
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 textStyle: const TextStyle(
@@ -325,11 +325,6 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
       return _buildFutureView();
     } else {
       var kqxs = _controllerMain.provinceKqxs.value;
-      //TODO roy93~
-      // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
-      // if (listEntries.isEmpty) {
-      // return Container();
-      // }
       var listDataWrapper = kqxs.getDataWrapper();
       // debugPrint("listDataWrapper ${listDataWrapper.length}");
       // for (var element in listDataWrapper) {

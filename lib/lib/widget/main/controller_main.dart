@@ -557,8 +557,7 @@ class ControllerMain extends BaseController {
       return;
     }
 
-    debugPrint(
-        "roy93~ setSelectedDateTime $dateTime, isForceGetDataPast $isForceGetDataPast, isForceGetDataFuture $isForceGetDataFuture");
+    // debugPrint("setSelectedDateTime $dateTime, isForceGetDataPast $isForceGetDataPast, isForceGetDataFuture $isForceGetDataFuture");
     provinceIsLoading.value = true;
     provinceSelectedDateTime.value = dateTime;
 
@@ -624,7 +623,29 @@ class ControllerMain extends BaseController {
           // ),
         );
         // debugPrint("response.data.toString() ${response.data.toString()}");
-        provinceKqxs.value = KQXS.fromJson(response.data);
+        var tempKQXS = KQXS.fromJson(response.data);
+        // debugPrint("tempKQXS $tempKQXS");
+        // debugPrint("tempKQXS.getDataWrapper() ${tempKQXS.getDataWrapper().length}");
+        if (tempKQXS.getDataWrapper().isEmpty) {
+          // debugPrint("empty data $isForceGetDataPast ~ $isForceGetDataFuture");
+          var dt = provinceSelectedDateTime.value;
+          // debugPrint("dt $dt");
+          if (isForceGetDataPast == true) {
+            dt = provinceSelectedDateTime.value.subtract(const Duration(days: 1));
+            setSelectedDateTimeProvince(province, dt, false, isForceGetDataPast, isForceGetDataFuture);
+            return;
+          }
+          if (isForceGetDataFuture == true) {
+            var isPast = isPastDateTime(provinceSelectedDateTime.value);
+            // debugPrint("isPast $isPast -> ${provinceSelectedDateTime.value}");
+            if (isPast) {
+              dt = provinceSelectedDateTime.value.add(const Duration(days: 1));
+              setSelectedDateTimeProvince(province, dt, false, isForceGetDataPast, isForceGetDataFuture);
+              return;
+            }
+          }
+        }
+        provinceKqxs.value = tempKQXS;
         // debugPrint("provinceKqxs ${provinceKqxs.value.pageProps?.resp?.data?.content?.entries}");
         // kqxs.value = KQXS.fromJson(response.data);
         // debugPrint("web ${web.toJson()}");
@@ -632,19 +653,6 @@ class ControllerMain extends BaseController {
         // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
         //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
         // });
-        if (provinceKqxs.value.pageProps?.resp?.data?.content?.entries?.isEmpty == true) {
-          debugPrint(
-              "roy93~ empty data isForceGetDataPast $isForceGetDataPast, isForceGetDataFuture $isForceGetDataFuture");
-
-          // var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
-          // var sCurrentSearchDate = provinceCurrentSearchDate.value;
-          // debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
-          // debugPrint("sCurrentSearchDate $sCurrentSearchDate");
-          // var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
-          // if (dt != null) {
-          //   setSelectedDateTimeProvince(province, dt, false, isForceGetData);
-          // }
-        }
         provinceIsLoading.value = false;
       }
 
@@ -790,9 +798,8 @@ class ControllerMain extends BaseController {
     return words;
   }
 
-  bool isShowNextResult() {
+  bool isPastDateTime(DateTime selectedDay) {
     var today = DateTime.now();
-    var selectedDay = provinceSelectedDateTime.value;
     // debugPrint("${selectedDay.year}~${today.year}");
     // debugPrint("${selectedDay.month}~${today.month}");
     // debugPrint("${selectedDay.day}~${today.day}");
