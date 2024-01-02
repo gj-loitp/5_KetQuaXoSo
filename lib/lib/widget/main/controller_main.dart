@@ -618,6 +618,7 @@ class ControllerMain extends BaseController {
         );
         // debugPrint("response.data.toString() ${response.data.toString()}");
         provinceKqxs.value = KQXS.fromJson(response.data);
+        // debugPrint("provinceKqxs ${provinceKqxs.value.pageProps?.resp?.data?.content?.entries}");
         // kqxs.value = KQXS.fromJson(response.data);
         // debugPrint("web ${web.toJson()}");
         // debugPrint("web data ${web.pageProps?.resp?.data?.content?.entries}");
