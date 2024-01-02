@@ -245,11 +245,14 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
-          const SizedBox(
-            width: double.infinity,
+          Container(
+            padding: const EdgeInsets.all(32),
+            width: 124,
             height: 124,
-            child: CupertinoActivityIndicator(
+            child: const CircularProgressIndicator(
               color: Colors.white,
+              strokeWidth: 6.0,
+              strokeCap: StrokeCap.round,
             ),
           ),
         ],

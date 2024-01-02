@@ -41,10 +41,14 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
-            const Padding(
-              padding: EdgeInsets.only(bottom: 32),
-              child: CupertinoActivityIndicator(
+            Container(
+              padding: const EdgeInsets.all(32),
+              width: 124,
+              height: 124,
+              child: const CircularProgressIndicator(
                 color: Colors.white,
+                strokeWidth: 6.0,
+                strokeCap: StrokeCap.round,
               ),
             ),
           ],
