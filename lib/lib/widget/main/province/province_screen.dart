@@ -134,7 +134,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             height: 40,
             child: MaterialButton(
               onPressed: () {
-                _subtractDay(true, false);
+                _subtractDay();
               },
               color: Colors.white,
               padding: const EdgeInsets.all(0),
@@ -177,7 +177,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             height: 40,
             child: MaterialButton(
               onPressed: () {
-                _addDay(false, true);
+                _addDay();
               },
               color: Colors.white,
               padding: const EdgeInsets.all(0),
@@ -284,7 +284,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               ),
             ),
             onPressed: () {
-              _subtractDay(false, false);
+              _subtractDay();
             },
             child: const Text('👈 Xem kết quả xổ số kì trước'),
           ),
@@ -299,7 +299,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                 ),
               ),
               onPressed: () {
-                _addDay(false, false);
+                _addDay();
               },
               child: const Text('Xem kết quả xổ số kì tới 👉'),
             ),
@@ -719,27 +719,21 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     );
   }
 
-  void _subtractDay(
-    bool isForceGetDataPast,
-    bool isForceGetDataFuture,
-  ) {
+  void _subtractDay() {
     _selectDay(
       _controllerMain.provinceSelectedDateTime.value.subtract(const Duration(days: 1)),
       false,
-      isForceGetDataPast,
-      isForceGetDataFuture,
+      true,
+      false,
     );
   }
 
-  void _addDay(
-    bool isForceGetDataPast,
-    bool isForceGetDataFuture,
-  ) {
+  void _addDay() {
     _selectDay(
       _controllerMain.provinceSelectedDateTime.value.add(const Duration(days: 1)),
       false,
-      isForceGetDataPast,
-      isForceGetDataFuture,
+      false,
+      true,
     );
   }
 
