@@ -551,7 +551,7 @@ class ControllerMain extends BaseController {
       return;
     }
 
-    // debugPrint("setSelectedDateTime $dateTime");
+    debugPrint("roy93~ setSelectedDateTime $dateTime");
     provinceIsLoading.value = true;
     provinceSelectedDateTime.value = dateTime;
 

@@ -236,7 +236,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             onPressed: () {
               _selectDay(DateTime.now().subtract(const Duration(days: 1)), false);
             },
-            child: const Text('Xem kết quả hôm qua'),
+            child: const Text('👈 Xem kết quả xổ số kì trước'),
           ),
           const SizedBox(height: 8),
           ElevatedButton(
@@ -248,9 +248,10 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               ),
             ),
             onPressed: () {
-              _selectDay(DateTime.now(), true);
+              // _selectDay(DateTime.now(), true);
+              // _selectDay(DateTime.now().subtract(const Duration(days: 1)), false);
             },
-            child: const Text('Làm mới'),
+            child: const Text('Xem kết quả xổ số kì tới 👉'),
           ),
         ],
       ),
