@@ -234,7 +234,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               ),
             ),
             onPressed: () {
-              _selectDay(DateTime.now().subtract(const Duration(days: 1)), false);
+              _selectDay(_controllerMain.provinceSelectedDateTime.value.subtract(const Duration(days: 1)), false);
             },
             child: const Text('👈 Xem kết quả xổ số kì trước'),
           ),
@@ -248,6 +248,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               ),
             ),
             onPressed: () {
+              //TODO roy93~
               // _selectDay(DateTime.now(), true);
               // _selectDay(DateTime.now().subtract(const Duration(days: 1)), false);
             },
