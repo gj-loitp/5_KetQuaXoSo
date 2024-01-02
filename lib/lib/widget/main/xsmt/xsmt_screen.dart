@@ -75,7 +75,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
   Widget _buildCalendar() {
     return Container(
       // color: ColorConstants.bkgYellow,
-      color: Colors.white70,
+      color: Colors.white.withOpacity(0.9),
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
       child: Row(
@@ -400,7 +400,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
       height: 52,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-      color: Colors.white70,
+      color: Colors.white.withOpacity(0.9),
       child: Row(
         children: [
           Expanded(

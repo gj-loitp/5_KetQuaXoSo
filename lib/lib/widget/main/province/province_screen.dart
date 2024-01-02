@@ -77,138 +77,26 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
 
   Widget _buildCalendar() {
     return Container(
-      // color: ColorConstants.bkgYellow,
-      color: Colors.white70,
+      color: Colors.white.withOpacity(0.9),
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
-      child: Row(
-        children: [
-          Expanded(
-            child: AnimatedSize(
-              duration: const Duration(milliseconds: 300),
-              child: SizedBox(
-                height: _controllerMain.isFullScreen.value ? 100 : 0,
-                child: CalendarTimeline(
-                  shrink: false,
-                  showYears: false,
-                  initialDate: _controllerMain.xsmnSelectedDateTime.value,
-                  firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                  lastDate: DateTime.now().add(const Duration(days: 365)),
-                  onDateSelected: (date) {
-                    _selectDay(date, false);
-                  },
-                  leftMargin: 0,
-                  monthColor: Colors.black,
-                  dayColor: Colors.black,
-                  activeDayColor: Colors.white,
-                  activeBackgroundDayColor: ColorConstants.appColor,
-                  dotsColor: Colors.white,
-                  // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-                  locale: 'vi',
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(width: 8),
-          Column(
-            children: [
-              const SizedBox(height: 8),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: _controllerMain.isFullScreen.value ? 40 : 0,
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.to(() => const HistoryScreen());
-                    },
-                    color: Colors.blueAccent,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: Icon(
-                      Icons.history,
-                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
-                    ),
-                  ),
-                ),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  height: _controllerMain.isFullScreen.value ? 4 : 0,
-                ),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: _controllerMain.isFullScreen.value ? 40 : 0,
-                  child: MaterialButton(
-                    onPressed: () {
-                      _selectDay(DateTime.now(), false);
-                    },
-                    color: Colors.pink,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: Icon(
-                      Icons.today,
-                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 8),
-            ],
-          ),
-          const SizedBox(width: 8),
-          Column(
-            children: [
-              const SizedBox(height: 8),
-              SizedBox(
-                width: 40,
-                height: 40,
-                child: MaterialButton(
-                  onPressed: () {
-                    _controllerMain.toggleFullScreen();
-                  },
-                  color: Colors.green,
-                  padding: const EdgeInsets.all(0),
-                  shape: const CircleBorder(),
-                  child: Icon(
-                    _controllerMain.isFullScreen.value ? Icons.fullscreen_exit : Icons.fullscreen,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  height: _controllerMain.isFullScreen.value ? 4 : 0,
-                ),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: _controllerMain.isFullScreen.value ? 40 : 0,
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.to(() => const ProfileScreen());
-                    },
-                    color: Colors.deepPurple,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: Icon(
-                      Icons.settings,
-                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 8),
-            ],
-          ),
-        ],
+      child: CalendarTimeline(
+        shrink: true,
+        showYears: false,
+        initialDate: _controllerMain.xsmnSelectedDateTime.value,
+        firstDate: DateTime.now().subtract(const Duration(days: 365)),
+        lastDate: DateTime.now().add(const Duration(days: 365)),
+        onDateSelected: (date) {
+          _selectDay(date, false);
+        },
+        leftMargin: 0,
+        monthColor: Colors.black,
+        dayColor: Colors.black,
+        activeDayColor: Colors.white,
+        activeBackgroundDayColor: ColorConstants.appColor,
+        dotsColor: Colors.white,
+        // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+        locale: 'vi',
       ),
     );
   }
@@ -403,7 +291,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
       height: 52,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-      color: Colors.white70,
+      color: Colors.white.withOpacity(0.9),
       child: Row(
         children: [
           Expanded(
