@@ -6,10 +6,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/model/province.dart';
-import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
-import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -60,9 +57,54 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             Obx(() {
               return Column(
                 children: [
-                  SizedBox(height: MediaQuery.of(context).viewPadding.top),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.fromLTRB(16, MediaQuery.of(context).viewPadding.top, 16, 16),
+                    width: double.infinity,
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 40,
+                          height: 40,
+                        ),
+                        Expanded(
+                          child: Text(
+                            "${widget.province.name}",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              fontSize: 24,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0,
+                                  color: Colors.black,
+                                  offset: Offset(2.0, 2.0),
+                                ),
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.back();
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.clear,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   _buildCalendar(),
-                  _buildViewSearchMyLottery(),
                   Expanded(
                     child: _buildContentView(),
                   ),
@@ -275,101 +317,6 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
         ),
       );
     }
-  }
-
-  Widget _buildViewSearchMyLottery() {
-    var selectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
-    var currentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
-    var sCurrentSearchNumber = "";
-    if (currentSearchNumber.isEmpty) {
-      sCurrentSearchNumber = "Nhập vé số để tự động dò";
-    } else {
-      sCurrentSearchNumber = "Vé của tôi: $currentSearchNumber";
-    }
-    return Container(
-      alignment: Alignment.center,
-      height: 52,
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-      color: Colors.white.withOpacity(0.9),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 2,
-            child: Container(
-              alignment: Alignment.centerLeft,
-              height: 48,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
-                color: Colors.white,
-              ),
-              padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-              child: DefaultTextStyle(
-                style: const TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.start,
-                child: Marquee(
-                  text:
-                      'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black87,
-                  ),
-                  blankSpace: 50.0,
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(width: 8),
-          Expanded(
-            flex: 5,
-            child: Container(
-              padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-              alignment: Alignment.centerRight,
-              height: 48,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
-                color: Colors.white,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Expanded(
-                    child: Material(
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(45),
-                        child: Marquee(
-                          text: sCurrentSearchNumber,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black87,
-                          ),
-                          blankSpace: 50.0,
-                        ),
-                        onTap: () {
-                          Get.to(() => const DlgInput(callFromScreen: ProvinceScreen.path));
-                        },
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 4),
-                  const Icon(
-                    Icons.document_scanner_outlined,
-                    color: Colors.black,
-                    size: 24.0,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
   }
 
   Widget _buildNativeTitleView(double widthItem, double heightItem) {
