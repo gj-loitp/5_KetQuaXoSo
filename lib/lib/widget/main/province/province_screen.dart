@@ -1,4 +1,5 @@
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -244,6 +245,13 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
+          const SizedBox(
+            width: double.infinity,
+            height: 124,
+            child: CupertinoActivityIndicator(
+              color: Colors.white,
+            ),
+          ),
         ],
       ),
     );
@@ -275,22 +283,9 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 16),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              textStyle: const TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.black,
-                fontSize: 16,
-              ),
-            ),
-            onPressed: () {
-              _subtractDay();
-            },
-            child: const Text('👈 Xem kết quả xổ số kì trước'),
-          ),
-          const SizedBox(height: 8),
-          if (_controllerMain.isPastDateTime(_controllerMain.provinceSelectedDateTime.value))
-            ElevatedButton(
+          SizedBox(
+            height: 50,
+            child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 textStyle: const TextStyle(
                   fontWeight: FontWeight.w700,
@@ -299,10 +294,31 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                 ),
               ),
               onPressed: () {
-                _addDay();
+                _subtractDay();
               },
-              child: const Text('Xem kết quả xổ số kì tới 👉'),
+              child: const Text('👈 Xem kết quả xổ số kì trước'),
             ),
+          ),
+          const SizedBox(height: 8),
+          SizedBox(
+            height: 50,
+            child: Visibility(
+              visible: _controllerMain.isPastDateTime(_controllerMain.provinceSelectedDateTime.value),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  textStyle: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                    fontSize: 16,
+                  ),
+                ),
+                onPressed: () {
+                  _addDay();
+                },
+                child: const Text('Xem kết quả xổ số kì tới 👉'),
+              ),
+            ),
+          ),
         ],
       ),
     );
