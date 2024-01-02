@@ -125,7 +125,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
       child: CalendarTimeline(
         shrink: true,
         showYears: false,
-        initialDate: _controllerMain.xsmnSelectedDateTime.value,
+        initialDate: _controllerMain.provinceSelectedDateTime.value,
         firstDate: DateTime.now().subtract(const Duration(days: 365)),
         lastDate: DateTime.now().add(const Duration(days: 365)),
         onDateSelected: (date) {
@@ -144,10 +144,10 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   }
 
   Widget _buildContentView() {
-    var isLoading = _controllerMain.xsmnIsLoading.value;
+    var isLoading = _controllerMain.provinceIsLoading.value;
     var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
-    var timeSelected = _controllerMain.xsmnSelectedDateTime.value.microsecondsSinceEpoch;
+    var timeSelected = _controllerMain.provinceSelectedDateTime.value.microsecondsSinceEpoch;
     var isFuture = false;
     // debugPrint("timeNow $timeNow");
     // debugPrint("timeSelected $timeSelected");
@@ -214,7 +214,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
           ),
           // const SizedBox(height: 16),
           Text(
-            "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringXSMN()}",
+            "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringProvince()}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
@@ -264,7 +264,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
       return Container(
         padding: EdgeInsets.zero,
         // color: Colors.white,
-        child: WebViewWidget(controller: _controllerMain.xsmnWebViewController.value),
+        child: WebViewWidget(controller: _controllerMain.provinceWebViewController.value),
       );
     }
   }
@@ -273,7 +273,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     if (isFuture) {
       return _buildFutureView();
     } else {
-      var kqxs = _controllerMain.xsmnKqxs.value;
+      var kqxs = _controllerMain.provinceKqxs.value;
       // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
       // if (listEntries.isEmpty) {
       //   return _buildFutureView();
@@ -482,8 +482,8 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     double widthItem,
     double heightItem,
   ) {
-    var wordsBlack = _controllerMain.getWordsHighlightXSMN(18);
-    var wordsRed = _controllerMain.getWordsHighlightXSMN(16);
+    var wordsBlack = _controllerMain.getWordsHighlightProvince(18);
+    var wordsRed = _controllerMain.getWordsHighlightProvince(16);
     return Column(
       children: [
         Container(
@@ -673,6 +673,6 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   }
 
   void _selectDay(DateTime dateTime, bool isFirstInit) {
-    _controllerMain.setSelectedDateTimeXSMN(dateTime, isFirstInit);
+    _controllerMain.setSelectedDateTimeProvince(dateTime, isFirstInit);
   }
 }
