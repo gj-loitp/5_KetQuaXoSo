@@ -673,6 +673,6 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   }
 
   void _selectDay(DateTime dateTime, bool isFirstInit) {
-    _controllerMain.setSelectedDateTimeProvince(dateTime, isFirstInit);
+    _controllerMain.setSelectedDateTimeProvince(widget.province, dateTime, isFirstInit);
   }
 }

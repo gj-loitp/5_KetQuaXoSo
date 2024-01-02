@@ -543,7 +543,7 @@ class ControllerMain extends BaseController {
   var provinceCurrentSearchNumber = "".obs;
   var provinceCurrentSearchDate = "".obs;
 
-  Future<void> setSelectedDateTimeProvince(DateTime dateTime, bool isFirstInit) async {
+  Future<void> setSelectedDateTimeProvince(Province province, DateTime dateTime, bool isFirstInit) async {
     if (provinceSelectedDateTime.value.day == dateTime.day &&
         provinceSelectedDateTime.value.month == dateTime.month &&
         provinceSelectedDateTime.value.year == dateTime.year &&
@@ -608,7 +608,7 @@ class ControllerMain extends BaseController {
 
         // debugPrint(">>>dateTime $dateTime");
         var response = await dio.get(
-          '${StringConstants.getApiProvince(buildId.value, dateTime, "xsag-an-giang")}',
+          '${StringConstants.getApiProvince(buildId.value, dateTime, province.slug)}',
           // data: "ngay_quay=16-12-2023",
           // options: Options(
           //   headers: {
@@ -734,7 +734,7 @@ class ControllerMain extends BaseController {
     }
   }
 
-  void applySearchProvince() {
+  void applySearchProvince(Province province) {
     var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
     var sCurrentSearchDate = provinceCurrentSearchDate.value;
     debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
@@ -742,7 +742,7 @@ class ControllerMain extends BaseController {
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {
-      setSelectedDateTimeProvince(dt, false);
+      setSelectedDateTimeProvince(province, dt, false);
     }
   }
 

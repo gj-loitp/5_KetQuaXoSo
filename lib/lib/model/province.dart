@@ -23,7 +23,7 @@ class Province {
     var list = <Province>[];
     list.add(Province(
       name: "An Giang",
-      slug: "",
+      slug: "xsag-an-giang",
       url: "",
     ));
     list.add(Province(

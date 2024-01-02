@@ -32,8 +32,8 @@ class StringConstants {
     return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmt-mien-trung.json";
   }
 
-  static getApiProvince(String buildId, String dateTime, String slug) {
+  static getApiProvince(String buildId, String dateTime, String? slug) {
     // return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmt-mien-trung.json";
-    return "https://baomoi.com/_next/data/$buildId/utilities/lottery/$slug.json?date=$dateTime&slug=$slug";
+    return "https://baomoi.com/_next/data/$buildId/utilities/lottery/$slug.json?date=$dateTime&slug=${slug ?? ""}";
   }
 }
