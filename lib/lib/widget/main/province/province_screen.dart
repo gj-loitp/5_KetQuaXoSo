@@ -121,24 +121,64 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     return Container(
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
-      child: CalendarTimeline(
-        shrink: true,
-        showYears: false,
-        initialDate: _controllerMain.provinceSelectedDateTime.value,
-        firstDate: DateTime.now().subtract(const Duration(days: 365)),
-        lastDate: DateTime.now().add(const Duration(days: 365)),
-        onDateSelected: (date) {
-          _selectDay(date, false);
-        },
-        leftMargin: 0,
-        monthColor: Colors.black,
-        dayColor: Colors.black,
-        activeDayColor: Colors.white,
-        activeBackgroundDayColor: ColorConstants.appColor,
-        dotsColor: Colors.white,
-        // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-        locale: 'vi',
+      padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 40,
+            height: 40,
+            child: MaterialButton(
+              onPressed: () {
+                _subtractDay();
+              },
+              color: Colors.white,
+              padding: const EdgeInsets.all(0),
+              shape: const CircleBorder(),
+              child: const Icon(
+                Icons.keyboard_double_arrow_left,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          const SizedBox(width: 2),
+          Expanded(
+            child: CalendarTimeline(
+              shrink: true,
+              showYears: false,
+              initialDate: _controllerMain.provinceSelectedDateTime.value,
+              firstDate: DateTime.now().subtract(const Duration(days: 365)),
+              lastDate: DateTime.now().add(const Duration(days: 365)),
+              onDateSelected: (date) {
+                _selectDay(date, false);
+              },
+              leftMargin: 0,
+              monthColor: Colors.black,
+              dayColor: Colors.black,
+              activeDayColor: Colors.white,
+              activeBackgroundDayColor: ColorConstants.appColor,
+              dotsColor: Colors.white,
+              // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+              locale: 'vi',
+            ),
+          ),
+          const SizedBox(width: 2),
+          SizedBox(
+            width: 40,
+            height: 40,
+            child: MaterialButton(
+              onPressed: () {
+                _addDay();
+              },
+              color: Colors.white,
+              padding: const EdgeInsets.all(0),
+              shape: const CircleBorder(),
+              child: const Icon(
+                Icons.keyboard_double_arrow_right,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -234,7 +274,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               ),
             ),
             onPressed: () {
-              _selectDay(_controllerMain.provinceSelectedDateTime.value.subtract(const Duration(days: 1)), false);
+              _subtractDay();
             },
             child: const Text('👈 Xem kết quả xổ số kì trước'),
           ),
@@ -249,7 +289,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                 ),
               ),
               onPressed: () {
-                _selectDay(_controllerMain.provinceSelectedDateTime.value.add(const Duration(days: 1)), false);
+                _addDay();
               },
               child: const Text('Xem kết quả xổ số kì tới 👉'),
             ),
@@ -278,7 +318,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
       //TODO roy93~
       // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
       // if (listEntries.isEmpty) {
-        // return Container();
+      // return Container();
       // }
       var listDataWrapper = kqxs.getDataWrapper();
       // debugPrint("listDataWrapper ${listDataWrapper.length}");
@@ -672,6 +712,14 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
         ),
       ],
     );
+  }
+
+  void _subtractDay() {
+    _selectDay(_controllerMain.provinceSelectedDateTime.value.subtract(const Duration(days: 1)), false);
+  }
+
+  void _addDay() {
+    _selectDay(_controllerMain.provinceSelectedDateTime.value.add(const Duration(days: 1)), false);
   }
 
   void _selectDay(DateTime dateTime, bool isFirstInit) {
