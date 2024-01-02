@@ -30,7 +30,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   void initState() {
     super.initState();
     // debugPrint("initState");
-    _selectDay(DateTime.now(), true);
+    _selectDay(DateTime.now(), true, false);
   }
 
   @override
@@ -129,7 +129,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             height: 40,
             child: MaterialButton(
               onPressed: () {
-                _subtractDay();
+                _subtractDay(true);
               },
               color: Colors.white,
               padding: const EdgeInsets.all(0),
@@ -149,7 +149,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               firstDate: DateTime.now().subtract(const Duration(days: 365)),
               lastDate: DateTime.now().add(const Duration(days: 365)),
               onDateSelected: (date) {
-                _selectDay(date, false);
+                _selectDay(date, false, false);
               },
               leftMargin: 0,
               monthColor: Colors.black,
@@ -167,7 +167,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             height: 40,
             child: MaterialButton(
               onPressed: () {
-                _addDay();
+                _addDay(true);
               },
               color: Colors.white,
               padding: const EdgeInsets.all(0),
@@ -274,7 +274,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               ),
             ),
             onPressed: () {
-              _subtractDay();
+              _subtractDay(false);
             },
             child: const Text('👈 Xem kết quả xổ số kì trước'),
           ),
@@ -289,7 +289,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                 ),
               ),
               onPressed: () {
-                _addDay();
+                _addDay(false);
               },
               child: const Text('Xem kết quả xổ số kì tới 👉'),
             ),
@@ -714,15 +714,23 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     );
   }
 
-  void _subtractDay() {
-    _selectDay(_controllerMain.provinceSelectedDateTime.value.subtract(const Duration(days: 1)), false);
+  void _subtractDay(bool isForceGetData) {
+    _selectDay(
+      _controllerMain.provinceSelectedDateTime.value.subtract(const Duration(days: 1)),
+      false,
+      isForceGetData,
+    );
   }
 
-  void _addDay() {
-    _selectDay(_controllerMain.provinceSelectedDateTime.value.add(const Duration(days: 1)), false);
+  void _addDay(bool isForceGetData) {
+    _selectDay(
+      _controllerMain.provinceSelectedDateTime.value.add(const Duration(days: 1)),
+      false,
+      isForceGetData,
+    );
   }
 
-  void _selectDay(DateTime dateTime, bool isFirstInit) {
-    _controllerMain.setSelectedDateTimeProvince(widget.province, dateTime, isFirstInit);
+  void _selectDay(DateTime dateTime, bool isFirstInit, bool isForceGetData) {
+    _controllerMain.setSelectedDateTimeProvince(widget.province, dateTime, isFirstInit, isForceGetData);
   }
 }
