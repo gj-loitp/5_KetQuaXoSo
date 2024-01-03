@@ -238,8 +238,8 @@ class ControllerMain extends BaseController {
       if (m <= 0 || m >= 13) {
         return "Tháng không hợp lệ (0<tháng<13)";
       }
-      if (y != currentYear) {
-        return "Năm không hợp lệ (Năm = $currentYear)";
+      if (y != currentYear && y != (currentYear - 1)) {
+        return "Năm không hợp lệ (Năm = $currentYear hoặc Năm = ${currentYear - 1})";
       }
       return "";
     } catch (e) {
@@ -475,8 +475,8 @@ class ControllerMain extends BaseController {
       if (m <= 0 || m >= 13) {
         return "Tháng không hợp lệ (0<tháng<13)";
       }
-      if (y != currentYear) {
-        return "Năm không hợp lệ (Năm = $currentYear)";
+      if (y != currentYear && y != (currentYear - 1)) {
+        return "Năm không hợp lệ (Năm = $currentYear hoặc Năm = ${currentYear - 1})";
       }
       return "";
     } catch (e) {
@@ -754,8 +754,8 @@ class ControllerMain extends BaseController {
       if (m <= 0 || m >= 13) {
         return "Tháng không hợp lệ (0<tháng<13)";
       }
-      if (y != currentYear) {
-        return "Năm không hợp lệ (Năm = $currentYear)";
+      if (y != currentYear && y != (currentYear - 1)) {
+        return "Năm không hợp lệ (Năm = $currentYear hoặc Năm = ${currentYear - 1})";
       }
       return "";
     } catch (e) {
