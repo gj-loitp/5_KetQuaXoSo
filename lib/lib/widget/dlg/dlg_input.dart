@@ -2,17 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/formatter/date_text_formatter.dart';
+import 'package:ketquaxoso/lib/model/province.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
 
 class DlgInput extends StatefulWidget {
   final String callFromScreen;
+  final Province? province;
 
   const DlgInput({
     super.key,
     required this.callFromScreen,
+    required this.province,
   });
 
   @override
@@ -43,6 +47,8 @@ class _DlgInputState extends State<DlgInput> {
         _controllerMain.setCurrentNumberXSMN(text);
       } else if (widget.callFromScreen == XSMTScreen.path) {
         _controllerMain.setCurrentNumberXSMT(text);
+      } else if (widget.callFromScreen == ProvinceScreen.path) {
+        _controllerMain.setCurrentNumberProvince(text);
       }
     });
     _tecDate.addListener(() {
@@ -51,6 +57,8 @@ class _DlgInputState extends State<DlgInput> {
         _controllerMain.setCurrentDateXSMN(text);
       } else if (widget.callFromScreen == XSMTScreen.path) {
         _controllerMain.setCurrentDateXSMT(text);
+      } else if (widget.callFromScreen == ProvinceScreen.path) {
+        _controllerMain.setCurrentDateProvince(text);
       }
     });
     DateTime currentSelectedDateTime;
@@ -58,6 +66,8 @@ class _DlgInputState extends State<DlgInput> {
       currentSelectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
     } else if (widget.callFromScreen == XSMTScreen.path) {
       currentSelectedDateTime = _controllerMain.xsmtSelectedDateTime.value;
+    } else if (widget.callFromScreen == ProvinceScreen.path) {
+      currentSelectedDateTime = _controllerMain.provinceSelectedDateTime.value;
     } else {
       currentSelectedDateTime = DateTime.now();
     }
@@ -70,6 +80,8 @@ class _DlgInputState extends State<DlgInput> {
       sCurrentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
     } else if (widget.callFromScreen == XSMTScreen.path) {
       sCurrentSearchNumber = _controllerMain.xsmtCurrentSearchNumber.value;
+    } else if (widget.callFromScreen == ProvinceScreen.path) {
+      sCurrentSearchNumber = _controllerMain.provinceCurrentSearchNumber.value;
     }
 
     if (sCurrentSearchNumber.isNotEmpty) {
@@ -173,6 +185,8 @@ class _DlgInputState extends State<DlgInput> {
       msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMN();
     } else if (widget.callFromScreen == XSMTScreen.path) {
       msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMT();
+    } else if (widget.callFromScreen == ProvinceScreen.path) {
+      msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateProvince();
     }
 
     return Column(
@@ -310,6 +324,10 @@ class _DlgInputState extends State<DlgInput> {
       _controllerMain.applySearchXSMN();
     } else if (widget.callFromScreen == XSMTScreen.path) {
       _controllerMain.applySearchXSMT();
+    } else if (widget.callFromScreen == ProvinceScreen.path) {
+      if (widget.province != null) {
+        _controllerMain.applySearchProvince(widget.province!, false, false);
+      }
     }
     Get.back();
   }

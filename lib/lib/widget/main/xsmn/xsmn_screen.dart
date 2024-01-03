@@ -461,7 +461,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                           blankSpace: 50.0,
                         ),
                         onTap: () {
-                          Get.to(() => const DlgInput(callFromScreen: XSMNScreen.path));
+                          Get.to(() => const DlgInput(
+                                province: null,
+                                callFromScreen: XSMNScreen.path,
+                              ));
                         },
                       ),
                     ),

@@ -7,6 +7,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/model/province.dart';
+import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -111,6 +112,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                     ),
                   ),
                   _buildCalendar(),
+                  _buildViewSearchMyLottery(),
                   Expanded(
                     child: _buildContentView(),
                   ),
@@ -119,6 +121,104 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
             }),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildViewSearchMyLottery() {
+    var selectedDateTime = _controllerMain.provinceSelectedDateTime.value;
+    var currentSearchNumber = _controllerMain.provinceCurrentSearchNumber.value;
+    var sCurrentSearchNumber = "";
+    if (currentSearchNumber.isEmpty) {
+      sCurrentSearchNumber = "Nhập vé số để tự động dò";
+    } else {
+      sCurrentSearchNumber = "Vé của tôi: $currentSearchNumber";
+    }
+    return Container(
+      alignment: Alignment.center,
+      height: 52,
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+      color: Colors.white.withOpacity(0.9),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              alignment: Alignment.centerLeft,
+              height: 48,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
+                color: Colors.white,
+              ),
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.start,
+                child: Marquee(
+                  text:
+                      'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black87,
+                  ),
+                  blankSpace: 50.0,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            flex: 5,
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+              alignment: Alignment.centerRight,
+              height: 48,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
+                color: Colors.white,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Expanded(
+                    child: Material(
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(45),
+                        child: Marquee(
+                          text: sCurrentSearchNumber,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87,
+                          ),
+                          blankSpace: 50.0,
+                        ),
+                        onTap: () {
+                          Get.to(() => DlgInput(
+                                province: widget.province,
+                                callFromScreen: ProvinceScreen.path,
+                              ));
+                        },
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  const Icon(
+                    Icons.document_scanner_outlined,
+                    color: Colors.black,
+                    size: 24.0,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
