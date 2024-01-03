@@ -48,6 +48,10 @@ class ControllerMain extends BaseController {
     return inputString.substring(startIndex, endIndex);
   }
 
+  String _getFirstChars(String inputString, int count) {
+    return inputString.substring(0, count);
+  }
+
   //ZONE XSMN
   var xsmnSelectedDateTime = DateTime.now().obs;
   var xsmnWebViewController = WebViewController().obs;
@@ -263,21 +267,40 @@ class ControllerMain extends BaseController {
     var myCurrentLottery = xsmnCurrentSearchNumber.value;
     Map<String, HighlightedWord> words = {};
     for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var firstChar = _getFirstChars(myCurrentLottery, i + 1);
+      debugPrint("firstChar $firstChar");
+      if (firstChar.length > 1) {
+        words[firstChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
       var lastChar = _getLastChars(myCurrentLottery, i + 1);
-      // debugPrint("lastChar $lastChar");
-      words[lastChar] = HighlightedWord(
-        onTap: () {},
-        textStyle: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.w700,
-          fontSize: fontSize,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.lightGreenAccent,
-          borderRadius: BorderRadius.circular(45),
-        ),
-        padding: const EdgeInsets.all(2),
-      );
+      if (lastChar.length > 1) {
+        debugPrint("getWordsHighlightXSMN lastChar $lastChar");
+        words[lastChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
     }
     return words;
   }
@@ -500,21 +523,40 @@ class ControllerMain extends BaseController {
     var myCurrentLottery = xsmtCurrentSearchNumber.value;
     Map<String, HighlightedWord> words = {};
     for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var firstChar = _getFirstChars(myCurrentLottery, i + 1);
+      debugPrint("firstChar $firstChar");
+      if (firstChar.length > 1) {
+        words[firstChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
       var lastChar = _getLastChars(myCurrentLottery, i + 1);
-      // debugPrint("lastChar $lastChar");
-      words[lastChar] = HighlightedWord(
-        onTap: () {},
-        textStyle: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.w700,
-          fontSize: fontSize,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.lightGreenAccent,
-          borderRadius: BorderRadius.circular(45),
-        ),
-        padding: const EdgeInsets.all(2),
-      );
+      if (lastChar.length > 1) {
+        debugPrint("getWordsHighlightXSMT lastChar $lastChar");
+        words[lastChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
     }
     return words;
   }
@@ -766,8 +808,8 @@ class ControllerMain extends BaseController {
   void applySearchProvince(Province province, bool isForceGetDataPast, bool isForceGetDataFuture) {
     var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
     var sCurrentSearchDate = provinceCurrentSearchDate.value;
-    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
-    debugPrint("sCurrentSearchDate $sCurrentSearchDate");
+    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {
@@ -776,25 +818,47 @@ class ControllerMain extends BaseController {
   }
 
   Map<String, HighlightedWord> getWordsHighlightProvince(double fontSize) {
+    // debugPrint("getWordsHighlightProvince fontSize $fontSize");
     var myCurrentLottery = provinceCurrentSearchNumber.value;
     Map<String, HighlightedWord> words = {};
     for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      // debugPrint("i $i");
+      var firstChar = _getFirstChars(myCurrentLottery, i + 1);
+      debugPrint("firstChar $firstChar");
+      if (firstChar.length > 1) {
+        words[firstChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
       var lastChar = _getLastChars(myCurrentLottery, i + 1);
-      // debugPrint("lastChar $lastChar");
-      words[lastChar] = HighlightedWord(
-        onTap: () {},
-        textStyle: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.w700,
-          fontSize: fontSize,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.lightGreenAccent,
-          borderRadius: BorderRadius.circular(45),
-        ),
-        padding: const EdgeInsets.all(2),
-      );
+      debugPrint("lastChar $lastChar");
+      if (lastChar.length > 1) {
+        words[lastChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
     }
+    // debugPrint("getWordsHighlightProvince fontSize $fontSize -> words ${words.length}");
     return words;
   }
 

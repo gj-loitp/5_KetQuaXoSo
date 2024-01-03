@@ -42,7 +42,7 @@ class _DlgInputState extends State<DlgInput> {
     super.initState();
     _tecNumber.addListener(() {
       var text = _tecNumber.text.toString();
-
+      // debugPrint("text $text");
       if (widget.callFromScreen == XSMNScreen.path) {
         _controllerMain.setCurrentNumberXSMN(text);
       } else if (widget.callFromScreen == XSMTScreen.path) {
