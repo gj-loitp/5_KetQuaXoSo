@@ -398,7 +398,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
     }
     return Container(
       alignment: Alignment.center,
-      height: 52,
+      height: 60,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
       color: Colors.white.withOpacity(0.9),
@@ -408,8 +408,11 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
             flex: 2,
             child: Container(
               alignment: Alignment.centerLeft,
-              height: 48,
-              decoration: const BoxDecoration(
+              height: 56,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.white,
+                ),
                 borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
                 color: Colors.white,
               ),
@@ -441,16 +444,20 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
               child: Container(
                 padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                 alignment: Alignment.centerRight,
-                height: 48,
-                decoration: const BoxDecoration(
+                height: 56,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.red,
+                  ),
                   borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
-                  color: Colors.white,
+                  color: Colors.yellow,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Expanded(
                       child: Material(
+                        color: Colors.transparent,
                         child: InkWell(
                           borderRadius: BorderRadius.circular(45),
                           child: Marquee(
