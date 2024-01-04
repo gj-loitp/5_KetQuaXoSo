@@ -28,18 +28,18 @@ class Province {
     ));
     list.add(Province(
       name: "Bạc Liêu",
-      slug: "",
-      url: "",
+      slug: "",//TODO roy93~
+      url: "https://xoso.mobi//embedded/kq-tinh?tinh=bac-lieu",//ok
     ));
     list.add(Province(
       name: "Bến Tre",
       slug: "",
-      url: "",
+      url: "https://xoso.mobi//embedded/kq-tinh?tinh=ben-tre",//ok
     ));
     list.add(Province(
       name: "Bình Định",
       slug: "",
-      url: "",
+      url: "https://xoso.mobi//embedded/kq-tinh?tinh=binh-dinh",//ok
     ));
     list.add(Province(
       name: "Bình Dương",
