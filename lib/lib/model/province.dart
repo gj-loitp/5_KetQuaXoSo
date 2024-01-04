@@ -1,3 +1,5 @@
+import 'package:ketquaxoso/lib/common/const/string_constants.dart';
+
 class Province {
   String? name;
   String? slug;
@@ -24,22 +26,22 @@ class Province {
     list.add(Province(
       name: "An Giang",
       slug: "xsag-an-giang", //ok
-      url: "https://xoso.mobi//embedded/kq-tinh?tinh=an-giang",//ok
+      url: "${StringConstants.kqProvince}an-giang", //ok
     ));
     list.add(Province(
       name: "Bạc Liêu",
-      slug: "",//TODO roy93~
-      url: "https://xoso.mobi//embedded/kq-tinh?tinh=bac-lieu",//ok
+      slug: "", //TODO roy93~
+      url: "${StringConstants.kqProvince}bac-lieu", //ok
     ));
     list.add(Province(
       name: "Bến Tre",
       slug: "",
-      url: "https://xoso.mobi//embedded/kq-tinh?tinh=ben-tre",//ok
+      url: "${StringConstants.kqProvince}ben-tre", //ok
     ));
     list.add(Province(
       name: "Bình Định",
       slug: "",
-      url: "https://xoso.mobi//embedded/kq-tinh?tinh=binh-dinh",//ok
+      url: "${StringConstants.kqProvince}binh-dinh", //ok
     ));
     list.add(Province(
       name: "Bình Dương",

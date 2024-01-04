@@ -18,9 +18,11 @@ class StringConstants {
   static const String URL_IMG_6 = "https://live.staticflickr.com/8277/28953938513_9ea7e4a4e5_b.jpg";
   static const String URL_IMG_7 = "https://live.staticflickr.com/5542/30333782080_ef19d1b037_b.jpg";
 
-  static const String kqMienNam = "https://xoso.mobi/embedded/kq-miennam";
-  static const String kqMienTrung = "https://xoso.mobi/embedded/kq-mientrung";
-  static const String kqMienBac = "https://xoso.mobi/embedded/kq-mienbac";
+  static const String kqApiXoso = "https://xoso.mobi/embedded";
+  static const String kqMienNam = "$kqApiXoso/kq-miennam";
+  static const String kqMienTrung = "$kqApiXoso/kq-mientrung";
+  static const String kqMienBac = "$kqApiXoso/kq-mienbac";
+  static const String kqProvince = "$kqApiXoso/kq-tinh?tinh=";
 
   // static const String apiXsmn = "https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json";
 
