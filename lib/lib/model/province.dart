@@ -106,22 +106,22 @@ class Province {
     list.add(Province(
       name: "Hậu Giang",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}hau-giang",//ok
     ));
     list.add(Province(
       name: "Huế",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}thua-thien-hue",//ok
     ));
     list.add(Province(
       name: "Khánh Hoà",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}khanh-hoa",//ok
     ));
     list.add(Province(
       name: "Kiên Giang",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}kien-giang",//ok
     ));
     list.add(Province(
       name: "Kon Tum",
