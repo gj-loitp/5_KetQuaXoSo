@@ -186,17 +186,17 @@ class Province {
     list.add(Province(
       name: "Trà Vinh",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}tra-vinh",//ok
     ));
     list.add(Province(
       name: "Vĩnh Long",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}vinh-long",//ok
     ));
     list.add(Province(
       name: "Vũng Tàu",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}vung-tau",//ok
     ));
     return list;
   }
