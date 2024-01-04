@@ -68,48 +68,6 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                     alignment: Alignment.center,
                     padding: EdgeInsets.fromLTRB(16, MediaQuery.of(context).viewPadding.top, 16, 16),
                     width: double.infinity,
-                    child: Row(
-                      children: [
-                        const SizedBox(
-                          width: 40,
-                          height: 40,
-                        ),
-                        Expanded(
-                          child: Text(
-                            "${widget.province.name}",
-                            style: const TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
                   ),
                   _buildCalendar(),
                   _buildViewSearchMyLottery(),
@@ -232,23 +190,32 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
       padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
       child: Row(
         children: [
-          SizedBox(
-            width: 40,
-            height: 40,
-            child: MaterialButton(
-              onPressed: () {
-                _subtractDay();
-              },
-              color: Colors.white,
-              padding: const EdgeInsets.all(0),
-              shape: const CircleBorder(),
-              child: const Icon(
-                Icons.keyboard_double_arrow_left,
-                color: Colors.black,
+          Column(
+            children: [
+              const SizedBox(
+                width: 40,
+                height: 40,
               ),
-            ),
+              const SizedBox(height: 8),
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    _subtractDay();
+                  },
+                  color: Colors.green,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.keyboard_double_arrow_left,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(width: 2),
+          const SizedBox(width: 4),
           Expanded(
             child: CalendarTimeline(
               shrink: true,
@@ -274,22 +241,43 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               locale: 'vi',
             ),
           ),
-          const SizedBox(width: 2),
-          SizedBox(
-            width: 40,
-            height: 40,
-            child: MaterialButton(
-              onPressed: () {
-                _addDay();
-              },
-              color: Colors.white,
-              padding: const EdgeInsets.all(0),
-              shape: const CircleBorder(),
-              child: const Icon(
-                Icons.keyboard_double_arrow_right,
-                color: Colors.black,
+          const SizedBox(width: 4),
+          Column(
+            children: [
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  color: ColorConstants.appColor,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.clear,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
+              const SizedBox(height: 8),
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    _addDay();
+                  },
+                  color: Colors.green,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.keyboard_double_arrow_right,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
