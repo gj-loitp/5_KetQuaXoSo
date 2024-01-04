@@ -25,7 +25,7 @@ class StringConstants {
   static const String kqProvince = "$kqApiXoso/kq-tinh?tinh=";
 
   // static const String apiXsmn = "https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json";
-
+  //https://xoso.mobi/tin-tuc/cach-chen-ma-code-nhung-ket-qua-truc-tiep-xo-so-dua-vao-website-blog-n7417.html
   static getApiXsmn(String buildId) {
     return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmn-mien-nam.json";
   }

@@ -30,17 +30,17 @@ class Province {
     ));
     list.add(Province(
       name: "Bạc Liêu",
-      slug: "", //TODO roy93~
+      slug: "xsbl-bac-lieu",//ok
       url: "${StringConstants.kqProvince}bac-lieu", //ok
     ));
     list.add(Province(
       name: "Bến Tre",
-      slug: "",
+      slug: "xsbt-ben-tre",//ok
       url: "${StringConstants.kqProvince}ben-tre", //ok
     ));
     list.add(Province(
       name: "Bình Định",
-      slug: "",
+      slug: "",//TODO roy93~
       url: "${StringConstants.kqProvince}binh-dinh", //ok
     ));
     list.add(Province(
