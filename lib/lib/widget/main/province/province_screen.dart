@@ -640,6 +640,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   ) {
     var wordsBlack = _controllerMain.getWordsHighlightProvince(18);
     var wordsRed = _controllerMain.getWordsHighlightProvince(16);
+    var selectedDateTime = _controllerMain.provinceSelectedDateTime.value;
     return Column(
       children: [
         Container(
@@ -653,13 +654,14 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Marquee(
-            text: "${dataWrapper.displayName}",
+            text:
+                "Kết quả ${dataWrapper.displayName} ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}",
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
-            blankSpace: 50.0,
+            blankSpace: 200.0,
           ),
         ),
         Container(
