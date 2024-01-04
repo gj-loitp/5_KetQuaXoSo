@@ -166,22 +166,22 @@ class Province {
     list.add(Province(
       name: "Sóc Trăng",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}soc-trang",//ok
     ));
     list.add(Province(
       name: "Tây Ninh",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}tay-ninh",//ok
     ));
     list.add(Province(
       name: "Tiền Giang",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}tien-giang",//ok
     ));
     list.add(Province(
       name: "TPHCM",
       slug: "",
-      url: "",
+      url: "${StringConstants.kqProvince}thanh-pho-ho-chi-minh",//ok
     ));
     list.add(Province(
       name: "Trà Vinh",
