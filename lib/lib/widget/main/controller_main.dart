@@ -702,8 +702,8 @@ class ControllerMain extends BaseController {
       getDataProvince(date);
     } else {
       void loadWebProvince(String date) {
-        var link = "${StringConstants.kqMienNam}#n$date";
-        // debugPrint("link $link");
+        var link = "${province.url}#n$date";
+        debugPrint("roy93~ link $link");
 
         provinceWebViewController.value = WebViewController()
           ..setJavaScriptMode(JavaScriptMode.unrestricted)

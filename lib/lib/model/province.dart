@@ -23,8 +23,8 @@ class Province {
     var list = <Province>[];
     list.add(Province(
       name: "An Giang",
-      slug: "xsag-an-giang",
-      url: "",
+      slug: "xsag-an-giang", //ok
+      url: "https://xoso.mobi//embedded/kq-tinh?tinh=an-giang",//ok
     ));
     list.add(Province(
       name: "Bạc Liêu",

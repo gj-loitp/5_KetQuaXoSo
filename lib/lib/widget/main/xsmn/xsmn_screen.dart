@@ -390,6 +390,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     var selectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
     var currentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
     var sCurrentSearchNumber = "";
+    var isNativeMode = _controllerMain.isNativeMode.value;
     if (currentSearchNumber.isEmpty) {
       sCurrentSearchNumber = "Nhập vé số để tự động dò";
     } else {
@@ -433,52 +434,53 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               ),
             ),
           ),
-          const SizedBox(width: 8),
-          Expanded(
-            flex: 5,
-            child: Container(
-              padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-              alignment: Alignment.centerRight,
-              height: 48,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
-                color: Colors.white,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Expanded(
-                    child: Material(
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(45),
-                        child: Marquee(
-                          text: sCurrentSearchNumber,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black87,
+          if (isNativeMode) const SizedBox(width: 8),
+          if (isNativeMode)
+            Expanded(
+              flex: 5,
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                alignment: Alignment.centerRight,
+                height: 48,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
+                  color: Colors.white,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Expanded(
+                      child: Material(
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(45),
+                          child: Marquee(
+                            text: sCurrentSearchNumber,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black87,
+                            ),
+                            blankSpace: 50.0,
                           ),
-                          blankSpace: 50.0,
+                          onTap: () {
+                            Get.to(() => const DlgInput(
+                                  province: null,
+                                  callFromScreen: XSMNScreen.path,
+                                ));
+                          },
                         ),
-                        onTap: () {
-                          Get.to(() => const DlgInput(
-                                province: null,
-                                callFromScreen: XSMNScreen.path,
-                              ));
-                        },
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 4),
-                  const Icon(
-                    Icons.document_scanner_outlined,
-                    color: Colors.black,
-                    size: 24.0,
-                  ),
-                ],
+                    const SizedBox(width: 4),
+                    const Icon(
+                      Icons.document_scanner_outlined,
+                      color: Colors.black,
+                      size: 24.0,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
         ],
       ),
     );
