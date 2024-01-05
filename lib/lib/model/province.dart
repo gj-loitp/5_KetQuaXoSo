@@ -40,7 +40,7 @@ class Province {
     ));
     list.add(Province(
       name: "Bình Định",
-      slug: "",//TODO roy93~
+      slug: "xsbdi-binh-dinh",//ok
       url: "${StringConstants.kqProvince}binh-dinh", //ok
     ));
     list.add(Province(
