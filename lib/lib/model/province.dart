@@ -65,27 +65,27 @@ class Province {
     ));
     list.add(Province(
       name: "Cần Thơ",
-      slug: "",
+      slug: "xsct-can-tho",//ok
       url: "${StringConstants.kqProvince}can-tho",//ok
     ));
     list.add(Province(
       name: "Đà Lạt",
-      slug: "",
+      slug: "xsdl-da-lat",//ok
       url: "${StringConstants.kqProvince}da-lat",//ok
     ));
     list.add(Province(
       name: "Đà Nẵng",
-      slug: "",
+      slug: "xsdna-da-nang",//ok
       url: "${StringConstants.kqProvince}da-nang",//ok
     ));
     list.add(Province(
       name: "Đắk Lắk",
-      slug: "",
+      slug: "xsdlk-dak-lak",//ok
       url: "${StringConstants.kqProvince}dac-lac",//ok
     ));
     list.add(Province(
       name: "Đắk Nông",
-      slug: "",
+      slug: "xsdno-dak-nong",//ok
       url: "${StringConstants.kqProvince}dac-nong",//ok
     ));
     list.add(Province(
