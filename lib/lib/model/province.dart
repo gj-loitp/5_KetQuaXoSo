@@ -90,27 +90,27 @@ class Province {
     ));
     list.add(Province(
       name: "Đồng Nai",
-      slug: "",
+      slug: "xsdn-dong-nai",//ok
       url: "${StringConstants.kqProvince}dong-nai",//ok
     ));
     list.add(Province(
       name: "Đồng Tháp",
-      slug: "",
+      slug: "xsdt-dong-thap",//ok
       url: "${StringConstants.kqProvince}dong-thap",//ok
     ));
     list.add(Province(
       name: "Gia Lai",
-      slug: "",
+      slug: "xsgl-gia-lai",//ok
       url: "${StringConstants.kqProvince}gia-lai",//ok
     ));
     list.add(Province(
       name: "Hậu Giang",
-      slug: "",
+      slug: "xshg-hau-giang",//ok
       url: "${StringConstants.kqProvince}hau-giang",//ok
     ));
     list.add(Province(
       name: "Huế",
-      slug: "",
+      slug: "xstth-hue",//ok
       url: "${StringConstants.kqProvince}thua-thien-hue",//ok
     ));
     list.add(Province(
