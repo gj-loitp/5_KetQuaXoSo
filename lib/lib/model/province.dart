@@ -190,12 +190,12 @@ class Province {
     ));
     list.add(Province(
       name: "Vĩnh Long",
-      slug: "",
+      slug: "xsvl-vinh-long",//ok
       url: "${StringConstants.kqProvince}vinh-long",//ok
     ));
     list.add(Province(
       name: "Vũng Tàu",
-      slug: "",
+      slug: "xsvt-vung-tau",//ok
       url: "${StringConstants.kqProvince}vung-tau",//ok
     ));
     return list;
