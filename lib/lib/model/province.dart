@@ -45,22 +45,22 @@ class Province {
     ));
     list.add(Province(
       name: "Bình Dương",
-      slug: "",
+      slug: "xsbd-binh-duong",//ok
       url: "${StringConstants.kqProvince}binh-duong",//ok
     ));
     list.add(Province(
       name: "Bình Phước",
-      slug: "",
+      slug: "xsbp-binh-phuoc",//ok
       url: "${StringConstants.kqProvince}binh-phuoc",//ok
     ));
     list.add(Province(
       name: "Bình Thuận",
-      slug: "",
+      slug: "xsbth-binh-thuan",//ok
       url: "${StringConstants.kqProvince}binh-thuan",//ok
     ));
     list.add(Province(
       name: "Cà Mau",
-      slug: "",
+      slug: "xscm-ca-mau",//ok
       url: "${StringConstants.kqProvince}ca-mau",//ok
     ));
     list.add(Province(
