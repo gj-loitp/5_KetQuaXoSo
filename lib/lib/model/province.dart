@@ -165,27 +165,27 @@ class Province {
     ));
     list.add(Province(
       name: "Sóc Trăng",
-      slug: "",
+      slug: "xsst-soc-trang",//ok
       url: "${StringConstants.kqProvince}soc-trang",//ok
     ));
     list.add(Province(
       name: "Tây Ninh",
-      slug: "",
+      slug: "xstn-tay-ninh",//ok
       url: "${StringConstants.kqProvince}tay-ninh",//ok
     ));
     list.add(Province(
       name: "Tiền Giang",
-      slug: "",
+      slug: "xstg-tien-giang",//ok
       url: "${StringConstants.kqProvince}tien-giang",//ok
     ));
     list.add(Province(
       name: "TPHCM",
-      slug: "",
+      slug: "xshcm-hcm",//ok
       url: "${StringConstants.kqProvince}thanh-pho-ho-chi-minh",//ok
     ));
     list.add(Province(
       name: "Trà Vinh",
-      slug: "",
+      slug: "xstv-tra-vinh",//ok
       url: "${StringConstants.kqProvince}tra-vinh",//ok
     ));
     list.add(Province(
