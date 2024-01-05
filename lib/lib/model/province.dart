@@ -140,27 +140,27 @@ class Province {
     ));
     list.add(Province(
       name: "Phú Yên",
-      slug: "",
+      slug: "xspy-phu-yen",//ok
       url: "${StringConstants.kqProvince}phu-yen",//ok
     ));
     list.add(Province(
       name: "Quảng Bình",
-      slug: "",
+      slug: "xsqb-quang-binh",//ok
       url: "${StringConstants.kqProvince}quang-binh",//ok
     ));
     list.add(Province(
       name: "Quảng Nam",
-      slug: "",
+      slug: "xsqna-quang-nam",//ok
       url: "${StringConstants.kqProvince}quang-nam",//ok
     ));
     list.add(Province(
       name: "Quảng Ngãi",
-      slug: "",
+      slug: "xsqn-quang-ngai",//ok
       url: "${StringConstants.kqProvince}quang-ngai",//ok
     ));
     list.add(Province(
       name: "Quảng Trị",
-      slug: "",
+      slug: "xsqt-quang-tri",//ok
       url: "${StringConstants.kqProvince}quang-tri",//ok
     ));
     list.add(Province(
