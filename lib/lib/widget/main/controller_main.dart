@@ -703,7 +703,7 @@ class ControllerMain extends BaseController {
     } else {
       void loadWebProvince(String date) {
         var link = "${province.url}#n$date";
-        debugPrint("roy93~ link $link");
+        // debugPrint("link $link");
 
         provinceWebViewController.value = WebViewController()
           ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -808,8 +808,8 @@ class ControllerMain extends BaseController {
   void applySearchProvince(Province province, bool isForceGetDataPast, bool isForceGetDataFuture) {
     var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
     var sCurrentSearchDate = provinceCurrentSearchDate.value;
-    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
-    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
+    // debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    // debugPrint("sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {
