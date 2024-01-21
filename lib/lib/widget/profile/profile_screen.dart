@@ -1,4 +1,5 @@
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,6 +52,10 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                 height: double.infinity,
                 width: double.infinity,
                 fit: BoxFit.cover,
+              ).blurred(
+                colorOpacity: 0.0,
+                borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
+                blur: 5,
               ),
               Column(
                 children: [
@@ -172,7 +177,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   "Tin tức",
                                   Icons.info,
                                   description: "Các thông tin hữu ích 😘",
-                                      () {
+                                  () {
                                     Get.to(() => const InformationScreen());
                                   },
                                 ),
@@ -180,8 +185,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   "Đánh giá ứng dụng",
                                   Icons.hotel_class,
                                   description:
-                                  "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐ bạn nhé!Tks bạn nhiều 😘",
-                                      () {
+                                      "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐ bạn nhé!Tks bạn nhiều 😘",
+                                  () {
                                     UrlLauncherUtils.rateApp(null, null);
                                   },
                                 ),
@@ -189,16 +194,17 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   "Thêm ứng dụng",
                                   Icons.card_giftcard,
                                   description:
-                                  "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
-                                      () {
+                                      "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
+                                  () {
                                     UrlLauncherUtils.moreApp();
                                   },
                                 ),
                                 UIUtils.getButton(
                                   "Chia sẻ ứng dụng",
                                   Icons.ios_share,
-                                  description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
-                                      () async {
+                                  description:
+                                      "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
+                                  () async {
                                     final result = await Share.shareWithResult(
                                         'https://play.google.com/store/apps/details?id=com.mckimquyen.kqxs');
                                     if (result.status == ShareResultStatus.success) {
@@ -210,8 +216,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   "Chính sách bảo mật",
                                   Icons.local_police,
                                   description:
-                                  "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
-                                      () {
+                                      "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
+                                  () {
                                     UrlLauncherUtils.launchPolicy();
                                   },
                                 ),
@@ -219,8 +225,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   "Source code ở Github",
                                   Icons.data_object,
                                   description:
-                                  "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
-                                      () {
+                                      "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
+                                  () {
                                     UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
                                   },
                                 ),

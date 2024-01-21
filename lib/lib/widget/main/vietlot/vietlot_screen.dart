@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
@@ -37,6 +38,10 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
+            ).blurred(
+              colorOpacity: 0.0,
+              borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
+              blur: 5,
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),

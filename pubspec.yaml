@@ -45,7 +45,7 @@ dependencies:
   #https://pub.dev/packages/app_settings
 #  app_settings: ^5.1.1
   #https://pub.dev/packages/blur
-#  blur: ^3.1.0
+  blur: ^3.1.0
   #https://pub.dev/packages/cached_network_image
   cached_network_image: ^3.3.1
   #https://pub.dev/packages/carousel_slider

@@ -1,3 +1,4 @@
+import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -53,6 +54,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
+            ).blurred(
+              colorOpacity: 0.0,
+              borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
+              blur: 5,
             ),
             Obx(() {
               return Column(

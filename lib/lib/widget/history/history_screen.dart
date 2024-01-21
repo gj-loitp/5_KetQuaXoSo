@@ -1,3 +1,4 @@
+import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,6 +38,10 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
+            ).blurred(
+              colorOpacity: 0.0,
+              borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
+              blur: 5,
             ),
             Column(
               children: [
@@ -91,28 +96,28 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                 ),
                 Expanded(
                   child: CupertinoScrollbar(
-                      child: ListView(
-                        physics: const BouncingScrollPhysics(),
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                            padding: const EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Text(
-                              "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
+                    child: ListView(
+                      physics: const BouncingScrollPhysics(),
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                        ],
-                      ),
+                          child: const Text(
+                            "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

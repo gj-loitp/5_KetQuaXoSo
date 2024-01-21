@@ -1,3 +1,4 @@
+import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:get/get.dart';
@@ -42,6 +43,10 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
+            ).blurred(
+              colorOpacity: 0.0,
+              borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
+              blur: 5,
             ),
             Column(
               children: [
