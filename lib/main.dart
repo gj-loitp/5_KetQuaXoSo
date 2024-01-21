@@ -13,8 +13,9 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
 //TODO https://pub.dev/packages/super_tooltip
+//TODO keystore mckimquyen
 
-//done
+//done mckimquyen
 //ic_launcher
 //pkg name
 //ad id manifest
