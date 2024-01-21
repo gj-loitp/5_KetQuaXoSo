@@ -8,6 +8,7 @@
 
 import 'package:audio_session/audio_session_web.dart';
 import 'package:connectivity_plus/src/connectivity_plus_web.dart';
+import 'package:flutter_native_splash/flutter_native_splash_web.dart';
 import 'package:just_audio_web/just_audio_web.dart';
 import 'package:package_info_plus/src/package_info_plus_web.dart';
 import 'package:restart_app/restart_web.dart';
@@ -22,6 +23,7 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   final Registrar registrar = pluginRegistrar ?? webPluginRegistrar;
   AudioSessionWeb.registerWith(registrar);
   ConnectivityPlusWebPlugin.registerWith(registrar);
+  FlutterNativeSplashWeb.registerWith(registrar);
   JustAudioPlugin.registerWith(registrar);
   PackageInfoPlusWebPlugin.registerWith(registrar);
   RestartWeb.registerWith(registrar);
