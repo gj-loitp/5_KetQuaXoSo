@@ -51,19 +51,19 @@
     },
     {
       "name": "cached_network_image",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cached_network_image-3.3.0",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cached_network_image-3.3.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "cached_network_image_platform_interface",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cached_network_image_platform_interface-3.0.0",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cached_network_image_platform_interface-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "cached_network_image_web",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cached_network_image_web-1.1.0",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cached_network_image_web-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -243,13 +243,13 @@
     },
     {
       "name": "flutter_widget_from_html",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.14.9",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.14.11",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "flutter_widget_from_html_core",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.14.9",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.14.11",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -273,7 +273,7 @@
     },
     {
       "name": "fwfh_svg",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fwfh_svg-0.8.0+4",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fwfh_svg-0.8.1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -908,7 +908,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-01-21T05:47:13.940401Z",
+  "generated": "2024-01-21T05:49:10.269161Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

@@ -47,7 +47,7 @@ dependencies:
   #https://pub.dev/packages/blur
 #  blur: ^3.1.0
   #https://pub.dev/packages/cached_network_image
-  cached_network_image: ^3.3.0
+  cached_network_image: ^3.3.1
   #https://pub.dev/packages/carousel_slider
 #  carousel_slider: ^4.2.1
   #https://pub.dev/packages/clipboard
@@ -81,12 +81,12 @@ dependencies:
 #  flutter_native_splash:
 
   #https://pub.dev/packages/flutter_widget_from_html
-  flutter_widget_from_html: ^0.14.9
+  flutter_widget_from_html: ^0.14.11
 #  flutter_widget_from_html_core: ^0.14.9
 #  flutter_widget_from_html_core: any
 #  fwfh_webview: ^0.14.8
 #  flutter_webview_plugin: ^0.4.0
-  webview_flutter: ^4.4.2
+  webview_flutter: ^4.4.4
 
   #https://pub.dev/packages/flutter_rounded_date_picker
 #  flutter_rounded_date_picker: ^3.0.4
