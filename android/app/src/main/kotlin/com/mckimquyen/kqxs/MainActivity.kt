@@ -1,4 +1,4 @@
-package com.roy93group.ketquaxoso
+package com.mckimquyen.kqxs
 
 import io.flutter.embedding.android.FlutterActivity
 

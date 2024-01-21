@@ -128,7 +128,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             child: Column(
                               children: [
                                 const Text(
-                                  "ⒸRoy93Group",
+                                  "Ⓒmckimquyen",
                                   style: TextStyle(
                                     fontWeight: FontWeight.w700,
                                     fontSize: 12,
@@ -200,7 +200,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
                                       () async {
                                     final result = await Share.shareWithResult(
-                                        'https://play.google.com/store/apps/details?id=com.roy93group.ketquaxoso');
+                                        'https://play.google.com/store/apps/details?id=com.mckimquyen.kqxs');
                                     if (result.status == ShareResultStatus.success) {
                                       showSnackBarFull("KQXS", "Cảm ơn bạn đã chia sẻ 👉👈");
                                     }
