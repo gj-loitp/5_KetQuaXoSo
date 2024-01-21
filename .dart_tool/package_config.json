@@ -729,7 +729,7 @@
     },
     {
       "name": "url_launcher",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher-6.2.2",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher-6.2.3",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
@@ -908,7 +908,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-01-06T08:39:14.209313Z",
+  "generated": "2024-01-21T05:47:13.940401Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }
