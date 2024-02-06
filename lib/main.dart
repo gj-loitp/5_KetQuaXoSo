@@ -8,8 +8,6 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
 //TODO notification reminder
 //TODO lich su ve so cua toi
-//TODO do ve so manually
-//TODO do ve so auto
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
 //TODO https://pub.dev/packages/super_tooltip
@@ -24,6 +22,8 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //share app
 //more app
 //policy
+//do ve so manually
+//do ve so auto
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
