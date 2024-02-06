@@ -67,19 +67,16 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               blur: 5,
             ),
             Obx(() {
-              return Column(
-                children: [
-                  Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.fromLTRB(16, MediaQuery.of(context).viewPadding.top, 16, 16),
-                    width: double.infinity,
-                  ),
-                  _buildCalendar(),
-                  _buildViewSearchMyLottery(),
-                  Expanded(
-                    child: _buildContentView(),
-                  ),
-                ],
+              return SafeArea(
+                child: Column(
+                  children: [
+                    _buildCalendar(),
+                    _buildViewSearchMyLottery(),
+                    Expanded(
+                      child: _buildContentView(),
+                    ),
+                  ],
+                ),
               );
             }),
           ],
