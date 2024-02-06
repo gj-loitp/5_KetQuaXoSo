@@ -609,7 +609,7 @@
     },
     {
       "name": "share_plus",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/share_plus-7.2.1",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/share_plus-7.2.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -932,7 +932,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-02-06T08:17:31.455256Z",
+  "generated": "2024-02-06T08:37:11.105036Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

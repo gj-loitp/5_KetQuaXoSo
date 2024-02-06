@@ -109,7 +109,7 @@ dependencies:
   #https://pub.dev/packages/scrollable_positioned_list
 #  scrollable_positioned_list: ^0.3.8
   #https://pub.dev/packages/share_plus
-  share_plus: ^7.2.1
+  share_plus: ^7.2.2
   #https://pub.dev/packages/marquee
   marquee: ^2.2.3
   #https://pub.dev/packages/rxdart
