@@ -34,6 +34,10 @@ class StringConstants {
     return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmt-mien-trung.json";
   }
 
+  static getApiXsmb(String buildId) {
+    return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmb-mien-bac.json";
+  }
+
   static getApiProvince(String buildId, String dateTime, String? slug) {
     // return "https://baomoi.com/_next/data/$buildId/utilities/lottery/xsmt-mien-trung.json";
     return "https://baomoi.com/_next/data/$buildId/utilities/lottery/$slug.json?date=$dateTime&slug=${slug ?? ""}";

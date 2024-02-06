@@ -564,6 +564,257 @@ class ControllerMain extends BaseController {
   ///END ZONE XSMT
 
   ///ZONE XSMB
+  var xsmbSelectedDateTime = DateTime.now().obs;
+  var xsmbWebViewController = WebViewController().obs;
+  var xsmbIsLoading = true.obs;
+  var xsmbKqxs = KQXS().obs;
+  var xsmbCurrentSearchNumber = "".obs;
+  var xsmbCurrentSearchDate = "".obs;
+
+  Future<void> setSelectedDateTimeXSMB(DateTime dateTime, bool isFirstInit) async {
+    if (xsmbSelectedDateTime.value.day == dateTime.day &&
+        xsmbSelectedDateTime.value.month == dateTime.month &&
+        xsmbSelectedDateTime.value.year == dateTime.year &&
+        !isFirstInit) {
+      return;
+    }
+
+    // debugPrint("setSelectedDateTime $dateTime");
+    xsmbIsLoading.value = true;
+    xsmbSelectedDateTime.value = dateTime;
+
+    var date = getSelectedDayInStringXSMB();
+    // debugPrint("date $date");
+
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
+        SharedPreferencesUtil.themeIndexNativeView;
+    //co 2 cach
+    //1 load bang web view
+    //2 call api va load custom view
+    if (index == SharedPreferencesUtil.themeIndexNativeView) {
+      Future<void> getDataXSMB(String dateTime) async {
+        if (kDebugMode) {
+          dio.interceptors.add(
+            PrettyDioLogger(
+              requestHeader: true,
+              queryParameters: true,
+              requestBody: true,
+              responseHeader: true,
+              responseBody: true,
+              error: true,
+              showProcessingTime: true,
+              showCUrl: true,
+              canShowLog: kDebugMode,
+              convertFormData: true,
+            ),
+          );
+        }
+
+        if (buildId.value.isEmpty) {
+          var responseGetBuildId = await dio.get('https://baomoi.com/');
+          if (responseGetBuildId.statusCode == 200) {
+            String htmlToParse = responseGetBuildId.data;
+            // debugPrint("responseGetBuildId $htmlToParse");
+            var arrParent = htmlToParse.split('''buildId''');
+            // debugPrint("arrParent ${arrParent.length}");
+            if (arrParent.isNotEmpty && arrParent.length >= 2) {
+              // debugPrint("0 ${arrParent[0]}");
+              // debugPrint("1 ${arrParent[1]}");
+
+              var sChild1 = arrParent[1];
+              var arrChild = sChild1.split('''","''');
+              // debugPrint("arrChild ${arrChild.length}");
+              if (arrChild.isNotEmpty) {
+                // debugPrint("arrChild 0 ${arrChild[0]}");
+                var sBuildId = arrChild[0].replaceAll('''":"''', '');
+                // debugPrint("~~~~~~~~~> sBuildId $sBuildId");
+                buildId.value = sBuildId;
+              }
+            }
+          }
+        }
+
+        // debugPrint(">>>dateTime $dateTime");
+        var response = await dio.get(
+          '${StringConstants.getApiXsmb(buildId.value)}?date=$dateTime&slug=xsmb-mien-bac',
+          // data: "ngay_quay=16-12-2023",
+          // options: Options(
+          //   headers: {
+          //     "x-requested-with": "XMLHttpRequest",
+          //   },
+          // ),
+        );
+        // debugPrint("response.data.toString() ${response.data.toString()}");
+        xsmbKqxs.value = KQXS.fromJson(response.data);
+        // kqxs.value = KQXS.fromJson(response.data);
+        // debugPrint("web ${web.toJson()}");
+        // debugPrint("web data ${web.pageProps?.resp?.data?.content?.entries}");
+        // kqxs.pageProps?.resp?.data?.content?.entries?.forEach((element) {
+        //   debugPrint("${element.displayName} ~ ${element.award} ~ ${element.value}");
+        // });
+        xsmbIsLoading.value = false;
+      }
+
+      isNativeMode.value = true;
+      getDataXSMB(date);
+    } else {
+      void loadWebXSMB(String date) {
+        var link = "${StringConstants.kqMienBac}#n$date";
+        debugPrint("roy93~ loadWebXSMB link $link");
+
+        xsmbWebViewController.value = WebViewController()
+          ..setJavaScriptMode(JavaScriptMode.unrestricted)
+          ..setBackgroundColor(Colors.white)
+          ..setNavigationDelegate(
+            NavigationDelegate(
+              onProgress: (int progress) {
+                // debugPrint("progress $progress");
+              },
+              onPageStarted: (String url) {
+                // debugPrint("onPageStarted url $url");
+              },
+              onPageFinished: (String url) async {
+                // debugPrint("onPageFinished url $url");
+
+                Future<void> addBottomSpace() async {
+                  xsmbIsLoading.value = true;
+                  const script = '''
+      var spaceDiv = document.createElement("div");
+      spaceDiv.style.height = "250px";
+      document.body.appendChild(spaceDiv);
+    ''';
+
+                  await xsmbWebViewController.value.runJavaScript(script);
+                }
+
+                addBottomSpace();
+                xsmbIsLoading.value = false;
+              },
+              onWebResourceError: (WebResourceError error) {
+                // debugPrint("onPageFinished url $error");
+              },
+              onNavigationRequest: (NavigationRequest request) {
+                // debugPrint("request ${request.url}");
+                if (request.url.contains(".html")) {
+                  return NavigationDecision.prevent;
+                }
+                return NavigationDecision.navigate;
+              },
+            ),
+          )
+          ..loadRequest(Uri.parse(link));
+      }
+
+      isNativeMode.value = false;
+      loadWebXSMB(date);
+    }
+  }
+
+  String getSelectedDayInStringXSMB() {
+    var dateTime = xsmbSelectedDateTime.value;
+    var day = "";
+    if (dateTime.day >= 10) {
+      day = "${dateTime.day}";
+    } else {
+      day = "0${dateTime.day}";
+    }
+    var month = "";
+    if (dateTime.month >= 10) {
+      month = "${dateTime.month}";
+    } else {
+      month = "0${dateTime.month}";
+    }
+    var date = "$day-$month-${dateTime.year}";
+    return date;
+  }
+
+  void setCurrentNumberXSMB(String s) {
+    xsmbCurrentSearchNumber.value = s;
+  }
+
+  void setCurrentDateXSMB(String s) {
+    xsmbCurrentSearchDate.value = s;
+  }
+
+  String msgInvalidCurrentSearchDateXSMB() {
+    try {
+      var currentYear = DateTime.now().year;
+      if (xsmbCurrentSearchDate.value.length != 10) {
+        return "Hãy nhập đúng định dạng dd/MM/$currentYear";
+      }
+      var arr = xsmbCurrentSearchDate.split("/");
+      int d = int.parse(arr[0]);
+      int m = int.parse(arr[1]);
+      int y = int.parse(arr[2]);
+      // debugPrint("isValidCurrentSearchDate $d/$m/$y");
+      if (d <= 0 || d >= 32) {
+        return "Ngày không hợp lệ (0<ngày<32)";
+      }
+      if (m <= 0 || m >= 13) {
+        return "Tháng không hợp lệ (0<tháng<13)";
+      }
+      if (y != currentYear && y != (currentYear - 1)) {
+        return "Năm không hợp lệ (Năm = $currentYear hoặc Năm = ${currentYear - 1})";
+      }
+      return "";
+    } catch (e) {
+      return "";
+    }
+  }
+
+  void applySearchXSMB() {
+    var sCurrentSearchNumber = xsmbCurrentSearchNumber.value;
+    var sCurrentSearchDate = xsmbCurrentSearchDate.value;
+    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("sCurrentSearchDate $sCurrentSearchDate");
+    var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
+    // debugPrint("dt $dt");
+    if (dt != null) {
+      setSelectedDateTimeXSMB(dt, false);
+    }
+  }
+
+  Map<String, HighlightedWord> getWordsHighlightXSMB(double fontSize) {
+    var myCurrentLottery = xsmbCurrentSearchNumber.value;
+    Map<String, HighlightedWord> words = {};
+    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var firstChar = _getFirstChars(myCurrentLottery, i + 1);
+      debugPrint("firstChar $firstChar");
+      if (firstChar.length > 1) {
+        words[firstChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
+      var lastChar = _getLastChars(myCurrentLottery, i + 1);
+      if (lastChar.length > 1) {
+        debugPrint("getWordsHighlightXSMB lastChar $lastChar");
+        words[lastChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
+    }
+    return words;
+  }
 
   ///END ZONE XSMB
 

@@ -9,12 +9,13 @@ import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMBScreen extends StatefulWidget {
+  static const path = "XSMBScreen";
+
   const XSMBScreen({
     super.key,
   });
@@ -91,7 +92,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
                 child: CalendarTimeline(
                   shrink: false,
                   showYears: false,
-                  initialDate: _controllerMain.xsmnSelectedDateTime.value,
+                  initialDate: _controllerMain.xsmbSelectedDateTime.value,
                   firstDate: DateTime.now().subtract(const Duration(days: 365)),
                   lastDate: DateTime.now().add(const Duration(days: 365)),
                   onDateSelected: (date) {
@@ -214,10 +215,10 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
   }
 
   Widget _buildContentView() {
-    var isLoading = _controllerMain.xsmnIsLoading.value;
+    var isLoading = _controllerMain.xsmbIsLoading.value;
     var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
-    var timeSelected = _controllerMain.xsmnSelectedDateTime.value.microsecondsSinceEpoch;
+    var timeSelected = _controllerMain.xsmbSelectedDateTime.value.microsecondsSinceEpoch;
     var isFuture = false;
     // debugPrint("timeNow $timeNow");
     // debugPrint("timeSelected $timeSelected");
@@ -294,7 +295,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           ),
           // const SizedBox(height: 16),
           Text(
-            "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringXSMN()}",
+            "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringXSMB()}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
@@ -350,7 +351,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
       return Container(
         padding: EdgeInsets.zero,
         // color: Colors.white,
-        child: WebViewWidget(controller: _controllerMain.xsmnWebViewController.value),
+        child: WebViewWidget(controller: _controllerMain.xsmbWebViewController.value),
       );
     }
   }
@@ -359,7 +360,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
     if (isFuture) {
       return _buildFutureView();
     } else {
-      var kqxs = _controllerMain.xsmnKqxs.value;
+      var kqxs = _controllerMain.xsmbKqxs.value;
       // var listEntries = kqxs.pageProps?.resp?.data?.content?.entries ?? List.empty();
       // if (listEntries.isEmpty) {
       //   return _buildFutureView();
@@ -406,8 +407,8 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
   }
 
   Widget _buildViewSearchMyLottery() {
-    var selectedDateTime = _controllerMain.xsmnSelectedDateTime.value;
-    var currentSearchNumber = _controllerMain.xsmnCurrentSearchNumber.value;
+    var selectedDateTime = _controllerMain.xsmbSelectedDateTime.value;
+    var currentSearchNumber = _controllerMain.xsmbCurrentSearchNumber.value;
     var sCurrentSearchNumber = "";
     var isNativeMode = _controllerMain.isNativeMode.value;
     if (currentSearchNumber.isEmpty) {
@@ -491,7 +492,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
                           onTap: () {
                             Get.to(() => const DlgInput(
                                   province: null,
-                                  callFromScreen: XSMNScreen.path,
+                                  callFromScreen: XSMBScreen.path,
                                 ));
                           },
                         ),
@@ -675,8 +676,8 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
     double widthItem,
     double heightItem,
   ) {
-    var wordsBlack = _controllerMain.getWordsHighlightXSMN(18);
-    var wordsRed = _controllerMain.getWordsHighlightXSMN(16);
+    var wordsBlack = _controllerMain.getWordsHighlightXSMB(18);
+    var wordsRed = _controllerMain.getWordsHighlightXSMB(16);
     return Column(
       children: [
         Container(
@@ -866,6 +867,6 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
   }
 
   void _selectDay(DateTime dateTime, bool isFirstInit) {
-    _controllerMain.setSelectedDateTimeXSMN(dateTime, isFirstInit);
+    _controllerMain.setSelectedDateTimeXSMB(dateTime, isFirstInit);
   }
 }
