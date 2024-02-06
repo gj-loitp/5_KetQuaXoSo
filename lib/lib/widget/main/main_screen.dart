@@ -41,8 +41,8 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   final List<Widget> bottomBarPages = [
     const KeepAlivePage(child: XSMNScreen()),
     const KeepAlivePage(child: XSMTScreen()),
-    const KeepAlivePage(child: XSMBScreen()),
     const KeepAlivePage(child: ProvinceListScreen()),
+    const KeepAlivePage(child: XSMBScreen()),
     const KeepAlivePage(child: VietlotScreen()),
   ];
 
@@ -123,17 +123,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
             ),
             BottomBarItem(
               inActiveItem: Icon(
-                Icons.looks_3,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.looks_3,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'XSMB',
-            ),
-            BottomBarItem(
-              inActiveItem: Icon(
                 Icons.location_city,
                 color: Colors.grey,
               ),
@@ -142,6 +131,17 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
                 color: ColorConstants.appColor,
               ),
               itemLabel: 'Dò theo đài',
+            ),
+            BottomBarItem(
+              inActiveItem: Icon(
+                Icons.looks_3,
+                color: Colors.grey,
+              ),
+              activeItem: Icon(
+                Icons.looks_3,
+                color: ColorConstants.appColor,
+              ),
+              itemLabel: 'XSMB',
             ),
             BottomBarItem(
               inActiveItem: Icon(
