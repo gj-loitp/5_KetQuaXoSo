@@ -52,7 +52,7 @@ class ControllerMain extends BaseController {
     return inputString.substring(0, count);
   }
 
-  //ZONE XSMN
+  ///ZONE XSMN
   var xsmnSelectedDateTime = DateTime.now().obs;
   var xsmnWebViewController = WebViewController().obs;
   var xsmnIsLoading = true.obs;
@@ -305,9 +305,9 @@ class ControllerMain extends BaseController {
     return words;
   }
 
-//END ZONE XSMN
+  ///END ZONE XSMN
 
-//ZONE XSMT
+  ///ZONE XSMT
   var xsmtSelectedDateTime = DateTime.now().obs;
   var xsmtWebViewController = WebViewController().obs;
   var xsmtIsLoading = true.obs;
@@ -561,15 +561,16 @@ class ControllerMain extends BaseController {
     return words;
   }
 
-//END ZONE XSMT
+  ///END ZONE XSMT
 
-//ZONE XSMB
-//END ZONE XSMB
+  ///ZONE XSMB
 
-//ZONE VIETLOT
-//END ZONE VIETLOT
+  ///END ZONE XSMB
 
-//ZONE PROVINCE
+  ///ZONE VIETLOT
+  ///END ZONE VIETLOT
+
+  ///ZONE PROVINCE
   var listProvince = <Province>[].obs;
 
   void genListProvince() {
@@ -878,5 +879,6 @@ class ControllerMain extends BaseController {
     }
     return false;
   }
-//END ZONE PROVINCE
+
+  ///END ZONE PROVINCE
 }
