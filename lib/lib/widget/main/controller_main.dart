@@ -634,7 +634,7 @@ class ControllerMain extends BaseController {
           }
         }
 
-        // debugPrint(">>>dateTime $dateTime");
+        debugPrint("roy93~ >>>dateTime $dateTime");
         var response = await dio.get(
           '${StringConstants.getApiXsmb(buildId.value)}?date=$dateTime&slug=xsmb-mien-bac',
           // data: "ngay_quay=16-12-2023",
@@ -644,7 +644,7 @@ class ControllerMain extends BaseController {
           //   },
           // ),
         );
-        // debugPrint("response.data.toString() ${response.data.toString()}");
+        debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
         xsmbKqxs.value = KQXS.fromJson(response.data);
         // kqxs.value = KQXS.fromJson(response.data);
         // debugPrint("web ${web.toJson()}");

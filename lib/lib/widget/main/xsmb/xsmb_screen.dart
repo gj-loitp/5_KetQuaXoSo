@@ -366,16 +366,16 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
       //   return _buildFutureView();
       // }
       var listDataWrapper = kqxs.getDataWrapper();
-      // debugPrint("listDataWrapper ${listDataWrapper.length}");
-      // for (var element in listDataWrapper) {
-      //   debugPrint("element ${element.toJson()}");
-      // }
+      debugPrint("roy93~ listDataWrapper ${listDataWrapper.length}");
+      for (var element in listDataWrapper) {
+        debugPrint("roy93~ element ${element.toJson()}");
+      }
 
       if (listDataWrapper.isEmpty) {
         return _buildFutureView();
       }
 
-      var widthItemTitleLabel = 30.0;
+      var widthItemTitleLabel = 70.0;
       var widthItemProvince = (Get.width - widthItemTitleLabel) / listDataWrapper.length;
       var heightItem = 50.0;
 
@@ -384,13 +384,13 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
         widthItemTitleLabel,
         heightItem,
       ));
-      for (var element in listDataWrapper) {
-        listWidget.add(_buildNativeProvinceView(
-          element,
-          widthItemProvince,
-          heightItem,
-        ));
-      }
+      // for (var element in listDataWrapper) {
+      //   listWidget.add(_buildNativeProvinceView(
+      //     element,
+      //     widthItemProvince,
+      //     heightItem,
+      //   ));
+      // }
 
       return SizedBox(
         width: double.infinity,
@@ -542,7 +542,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓼",
+            "Ký tự",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
           ),
         ),
@@ -557,7 +557,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓻",
+            "ĐB",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -572,7 +572,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓺",
+            "G1",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -587,7 +587,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓹",
+            "G2",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -602,7 +602,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓸",
+            "G3",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -617,7 +617,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓷",
+            "G4",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -632,7 +632,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓶",
+            "G5",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -647,7 +647,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "⓵",
+            "G6",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
@@ -662,7 +662,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
-            "🇻🇳",
+            "G7",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),
