@@ -660,7 +660,7 @@ class ControllerMain extends BaseController {
     } else {
       void loadWebXSMB(String date) {
         var link = "${StringConstants.kqMienBac}#n$date";
-        debugPrint("roy93~ loadWebXSMB link $link");
+        // debugPrint("loadWebXSMB link $link");
 
         xsmbWebViewController.value = WebViewController()
           ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -739,7 +739,7 @@ class ControllerMain extends BaseController {
   String msgInvalidCurrentSearchDateXSMB() {
     try {
       var currentYear = DateTime.now().year;
-      debugPrint("roy93~ msgInvalidCurrentSearchDateXSMB xsmbCurrentSearchDate ${xsmbCurrentSearchDate.value}");
+      // debugPrint("msgInvalidCurrentSearchDateXSMB xsmbCurrentSearchDate ${xsmbCurrentSearchDate.value}");
       if (xsmbCurrentSearchDate.value.length != 10) {
         return "Hãy nhập đúng định dạng dd/MM/$currentYear";
       }
@@ -766,8 +766,8 @@ class ControllerMain extends BaseController {
   void applySearchXSMB() {
     var sCurrentSearchNumber = xsmbCurrentSearchNumber.value;
     var sCurrentSearchDate = xsmbCurrentSearchDate.value;
-    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
-    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
+    // debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    // debugPrint("sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {

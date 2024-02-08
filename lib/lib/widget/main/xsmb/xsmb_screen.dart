@@ -366,10 +366,10 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
       //   return _buildFutureView();
       // }
       var listDataWrapper = kqxs.getDataWrapper();
-      debugPrint("roy93~ listDataWrapper ${listDataWrapper.length}");
-      for (var element in listDataWrapper) {
-        debugPrint("roy93~ element ${element.toJson()}");
-      }
+      // debugPrint("listDataWrapper ${listDataWrapper.length}");
+      // for (var element in listDataWrapper) {
+      //   debugPrint("element ${element.toJson()}");
+      // }
 
       if (listDataWrapper.isEmpty) {
         return _buildFutureView();
