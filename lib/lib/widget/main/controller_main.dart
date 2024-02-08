@@ -634,7 +634,7 @@ class ControllerMain extends BaseController {
           }
         }
 
-        debugPrint("roy93~ >>>dateTime $dateTime");
+        // debugPrint(">>>dateTime $dateTime");
         var response = await dio.get(
           '${StringConstants.getApiXsmb(buildId.value)}?date=$dateTime&slug=xsmb-mien-bac',
           // data: "ngay_quay=16-12-2023",
@@ -644,7 +644,7 @@ class ControllerMain extends BaseController {
           //   },
           // ),
         );
-        debugPrint("roy93~ response.data.toString() ${response.data.toString()}");
+        // debugPrint("response.data.toString() ${response.data.toString()}");
         xsmbKqxs.value = KQXS.fromJson(response.data);
         // kqxs.value = KQXS.fromJson(response.data);
         // debugPrint("web ${web.toJson()}");
@@ -739,6 +739,7 @@ class ControllerMain extends BaseController {
   String msgInvalidCurrentSearchDateXSMB() {
     try {
       var currentYear = DateTime.now().year;
+      debugPrint("roy93~ msgInvalidCurrentSearchDateXSMB xsmbCurrentSearchDate ${xsmbCurrentSearchDate.value}");
       if (xsmbCurrentSearchDate.value.length != 10) {
         return "Hãy nhập đúng định dạng dd/MM/$currentYear";
       }
@@ -765,8 +766,8 @@ class ControllerMain extends BaseController {
   void applySearchXSMB() {
     var sCurrentSearchNumber = xsmbCurrentSearchNumber.value;
     var sCurrentSearchDate = xsmbCurrentSearchDate.value;
-    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
-    debugPrint("sCurrentSearchDate $sCurrentSearchDate");
+    debugPrint("roy93~ sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("roy93~ sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {

@@ -7,6 +7,7 @@ import 'package:ketquaxoso/lib/model/province.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
 
@@ -30,14 +31,6 @@ class _DlgInputState extends State<DlgInput> {
   final TextEditingController _tecDate = TextEditingController();
   final FocusNode _focusNode = FocusNode();
 
-  /*
-  if(widget.callFromScreen == XSMNScreen.path){
-
-  }else if(widget.callFromScreen == XSMTScreen.path){
-
-  }
-  */
-
   @override
   void initState() {
     super.initState();
@@ -50,6 +43,8 @@ class _DlgInputState extends State<DlgInput> {
         _controllerMain.setCurrentNumberXSMT(text);
       } else if (widget.callFromScreen == ProvinceScreen.path) {
         _controllerMain.setCurrentNumberProvince(text);
+      } else if (widget.callFromScreen == XSMBScreen.path) {
+        _controllerMain.setCurrentNumberXSMB(text);
       }
     });
     _tecDate.addListener(() {
@@ -60,6 +55,8 @@ class _DlgInputState extends State<DlgInput> {
         _controllerMain.setCurrentDateXSMT(text);
       } else if (widget.callFromScreen == ProvinceScreen.path) {
         _controllerMain.setCurrentDateProvince(text);
+      } else if (widget.callFromScreen == XSMBScreen.path) {
+        _controllerMain.setCurrentDateXSMB(text);
       }
     });
     DateTime currentSelectedDateTime;
@@ -69,11 +66,14 @@ class _DlgInputState extends State<DlgInput> {
       currentSelectedDateTime = _controllerMain.xsmtSelectedDateTime.value;
     } else if (widget.callFromScreen == ProvinceScreen.path) {
       currentSelectedDateTime = _controllerMain.provinceSelectedDateTime.value;
+    } else if (widget.callFromScreen == XSMBScreen.path) {
+      currentSelectedDateTime = _controllerMain.xsmbSelectedDateTime.value;
     } else {
       currentSelectedDateTime = DateTime.now();
     }
 
     var sCurrentSelectedDateTime = DurationUtils.getFormattedDate(currentSelectedDateTime);
+    // debugPrint("initState sCurrentSelectedDateTime $sCurrentSelectedDateTime");
     _tecDate.text = sCurrentSelectedDateTime;
 
     var sCurrentSearchNumber = "";
@@ -83,6 +83,8 @@ class _DlgInputState extends State<DlgInput> {
       sCurrentSearchNumber = _controllerMain.xsmtCurrentSearchNumber.value;
     } else if (widget.callFromScreen == ProvinceScreen.path) {
       sCurrentSearchNumber = _controllerMain.provinceCurrentSearchNumber.value;
+    } else if (widget.callFromScreen == XSMBScreen.path) {
+      sCurrentSearchNumber = _controllerMain.xsmbCurrentSearchNumber.value;
     }
 
     if (sCurrentSearchNumber.isNotEmpty) {
@@ -192,6 +194,8 @@ class _DlgInputState extends State<DlgInput> {
       msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMT();
     } else if (widget.callFromScreen == ProvinceScreen.path) {
       msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateProvince();
+    } else if (widget.callFromScreen == XSMBScreen.path) {
+      msgInvalidCurrentSearchDate = _controllerMain.msgInvalidCurrentSearchDateXSMB();
     }
 
     return Column(
@@ -333,6 +337,8 @@ class _DlgInputState extends State<DlgInput> {
       if (widget.province != null) {
         _controllerMain.applySearchProvince(widget.province!, false, false);
       }
+    } else if (widget.callFromScreen == XSMBScreen.path) {
+      _controllerMain.applySearchXSMB();
     }
     Get.back();
   }
