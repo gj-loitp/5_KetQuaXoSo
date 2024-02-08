@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class KQXS {
   PageProps? pageProps;
 
@@ -782,16 +784,57 @@ class DataWrapper {
   }
 
   String getValueByAward(String award) {
-    var record = recordKQXS?.firstWhere((element) => element.award == award);
-    var text = record?.value ?? "";
+    try {
+      // debugPrint("getValueByAward award $award");
+      var record = recordKQXS?.firstWhere((element) {
+        // debugPrint(">>> ${element.award}~$award");
+        return element.award == award;
+      });
+      var text = record?.value ?? "";
 
-    var arr = text.split("-");
-    var s = "";
-    for (var element in arr) {
-      s += "${element.trim()}\n";
+      var arr = text.split("-");
+      var s = "";
+      for (var element in arr) {
+        s += "${element.trim()}\n";
+      }
+      // debugPrint("getValueByAward s $s");
+      return s.trim();
+    } catch (e) {
+      return "";
     }
-    // debugPrint("getValueByAward s $s");
-    return s.trim();
+  }
+
+  String getValueByAwardXSMBKyTu(String award) {
+    try {
+      // debugPrint("getValueByAward award $award");
+      var record = recordKQXS?.firstWhere((element) {
+        // debugPrint(">>> ${element.award}~$award");
+        return element.award == award;
+      });
+      var text = record?.value ?? "";
+
+      var arr = text.split("-");
+      var s = "";
+      // for (var element in arr) {
+      //   s += "${element.trim()}\n";
+      // }
+      for (int i = 0; i < arr.length; i++) {
+        var element = arr[i];
+        if (i == 2 || i == 5) {
+          s += "${element.trim()}\n";
+        } else {
+          if (i == arr.length - 1) {
+            s += element.trim();
+          } else {
+            s += "${element.trim()}       "; //do not delete the blank space
+          }
+        }
+      }
+      // debugPrint("getValueByAward s $s");
+      return s.trim();
+    } catch (e) {
+      return "";
+    }
   }
 }
 

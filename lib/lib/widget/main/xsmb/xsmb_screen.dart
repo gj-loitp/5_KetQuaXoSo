@@ -384,13 +384,13 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
         widthItemTitleLabel,
         heightItem,
       ));
-      // for (var element in listDataWrapper) {
-      //   listWidget.add(_buildNativeProvinceView(
-      //     element,
-      //     widthItemProvince,
-      //     heightItem,
-      //   ));
-      // }
+      for (var element in listDataWrapper) {
+        listWidget.add(_buildNativeProvinceView(
+          element,
+          widthItemProvince,
+          heightItem,
+        ));
+      }
 
       return SizedBox(
         width: double.infinity,
@@ -533,7 +533,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem,
+          height: heightItem * 2.5,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -702,7 +702,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
         ),
         Container(
           width: widthItem,
-          height: heightItem,
+          height: heightItem * 2.5,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
             color: ColorConstants.white,
@@ -712,156 +712,156 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextHighlight(
             binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("8"),
+            text: dataWrapper.getValueByAwardXSMBKyTu("Ký tự"),
             words: wordsRed,
             textStyle: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),
         ),
-        Container(
-          width: widthItem,
-          height: heightItem,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.gray,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("7"),
-            words: wordsBlack,
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          width: widthItem,
-          height: heightItem * 2,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.white,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("6"),
-            words: wordsBlack,
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          width: widthItem,
-          height: heightItem,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.gray,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("5"),
-            words: wordsBlack,
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          width: widthItem,
-          height: heightItem * 4.5,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.white,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("4"),
-            words: wordsBlack,
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          width: widthItem,
-          height: heightItem * 1.5,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.gray,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("3"),
-            words: wordsBlack,
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          width: widthItem,
-          height: heightItem,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.white,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("2"),
-            words: wordsBlack,
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          width: widthItem,
-          height: heightItem,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.gray,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            text: dataWrapper.getValueByAward("1"),
-            words: wordsBlack,
-            binding: HighlightBinding.last,
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          width: widthItem,
-          height: heightItem,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.white,
-            borderRadius: BorderRadius.circular(0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: TextHighlight(
-            binding: HighlightBinding.last,
-            text: dataWrapper.getValueByAward("ĐB"),
-            words: wordsRed,
-            textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.red),
-            textAlign: TextAlign.center,
-          ),
-        ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.gray,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     binding: HighlightBinding.last,
+        //     text: dataWrapper.getValueByAward("7"),
+        //     words: wordsBlack,
+        //     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem * 2,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.white,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     binding: HighlightBinding.last,
+        //     text: dataWrapper.getValueByAward("6"),
+        //     words: wordsBlack,
+        //     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.gray,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     binding: HighlightBinding.last,
+        //     text: dataWrapper.getValueByAward("5"),
+        //     words: wordsBlack,
+        //     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem * 4.5,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.white,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     binding: HighlightBinding.last,
+        //     text: dataWrapper.getValueByAward("4"),
+        //     words: wordsBlack,
+        //     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem * 1.5,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.gray,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     binding: HighlightBinding.last,
+        //     text: dataWrapper.getValueByAward("3"),
+        //     words: wordsBlack,
+        //     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.white,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     binding: HighlightBinding.last,
+        //     text: dataWrapper.getValueByAward("2"),
+        //     words: wordsBlack,
+        //     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.gray,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     text: dataWrapper.getValueByAward("1"),
+        //     words: wordsBlack,
+        //     binding: HighlightBinding.last,
+        //     textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
+        // Container(
+        //   width: widthItem,
+        //   height: heightItem,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.grey, width: 0.25),
+        //     color: ColorConstants.white,
+        //     borderRadius: BorderRadius.circular(0),
+        //   ),
+        //   alignment: Alignment.center,
+        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        //   child: TextHighlight(
+        //     binding: HighlightBinding.last,
+        //     text: dataWrapper.getValueByAward("ĐB"),
+        //     words: wordsRed,
+        //     textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.red),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
       ],
     );
   }
