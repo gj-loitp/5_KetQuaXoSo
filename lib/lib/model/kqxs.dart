@@ -815,18 +815,31 @@ class DataWrapper {
 
       var arr = text.split("-");
       var s = "";
-      // for (var element in arr) {
-      //   s += "${element.trim()}\n";
-      // }
-      for (int i = 0; i < arr.length; i++) {
-        var element = arr[i];
-        if (i == 2 || i == 5) {
-          s += "${element.trim()}\n";
-        } else {
-          if (i == arr.length - 1) {
-            s += element.trim();
+
+      if (arr.length == 2 || arr.length == 4) {
+        for (int i = 0; i < arr.length; i++) {
+          var element = arr[i];
+          if (i == 1) {
+            s += "${element.trim()}\n";
           } else {
-            s += "${element.trim()}       "; //do not delete the blank space
+            if (i == arr.length - 1) {
+              s += element.trim();
+            } else {
+              s += "${element.trim()}            "; //do not delete the blank space
+            }
+          }
+        }
+      } else {
+        for (int i = 0; i < arr.length; i++) {
+          var element = arr[i];
+          if (i == 2 || i == 5) {
+            s += "${element.trim()}\n";
+          } else {
+            if (i == arr.length - 1) {
+              s += element.trim();
+            } else {
+              s += "${element.trim()}       "; //do not delete the blank space
+            }
           }
         }
       }
