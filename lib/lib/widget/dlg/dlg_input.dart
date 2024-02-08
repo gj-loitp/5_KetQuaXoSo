@@ -226,11 +226,13 @@ class _DlgInputState extends State<DlgInput> {
               focusNode: _focusNode,
               controller: _tecNumber,
               textInputAction: TextInputAction.next,
-              inputFormatters: [
-                FilteringTextInputFormatter.digitsOnly,
-              ],
+              inputFormatters: widget.callFromScreen == XSMBScreen.path
+                  ? []
+                  : [
+                      FilteringTextInputFormatter.digitsOnly,
+                    ],
               maxLength: 6,
-              keyboardType: TextInputType.number,
+              keyboardType: widget.callFromScreen == XSMBScreen.path ? TextInputType.text : TextInputType.number,
               decoration: const InputDecoration(
                 icon: Icon(Icons.local_atm),
                 hintText: "Nhập đúng dãy số của bạn",
