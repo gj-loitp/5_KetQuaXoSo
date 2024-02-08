@@ -573,7 +573,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "G1",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -588,7 +588,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "G2",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -603,7 +603,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "G3",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -618,7 +618,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "G4",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -633,7 +633,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "G5",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -648,7 +648,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "G6",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Colors.grey),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.grey),
           ),
         ),
         Container(
@@ -663,7 +663,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "G7",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.red),
             textAlign: TextAlign.center,
           ),
         ),
