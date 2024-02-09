@@ -89,7 +89,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
             child: AnimatedSize(
               duration: const Duration(milliseconds: 300),
               child: SizedBox(
-                height: _controllerMain.isFullScreen.value ? 100 : 0,
+                height: 100,
                 child: CalendarTimeline(
                   shrink: false,
                   showYears: false,
@@ -119,7 +119,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                 duration: const Duration(milliseconds: 300),
                 child: SizedBox(
                   width: 40,
-                  height: _controllerMain.isFullScreen.value ? 40 : 0,
+                  height: 40,
                   child: MaterialButton(
                     onPressed: () {
                       Get.to(() => const HistoryScreen());
@@ -127,24 +127,24 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                     color: Colors.blueAccent,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
-                    child: Icon(
+                    child: const Icon(
                       Icons.history,
-                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
+                      color: Colors.white,
                     ),
                   ),
                 ),
               ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
+              const AnimatedSize(
+                duration: Duration(milliseconds: 300),
                 child: SizedBox(
-                  height: _controllerMain.isFullScreen.value ? 4 : 0,
+                  height: 4,
                 ),
               ),
               AnimatedSize(
                 duration: const Duration(milliseconds: 300),
                 child: SizedBox(
                   width: 40,
-                  height: _controllerMain.isFullScreen.value ? 40 : 0,
+                  height: 40,
                   child: MaterialButton(
                     onPressed: () {
                       _selectDay(DateTime.now(), false);
@@ -152,9 +152,9 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                     color: Colors.pink,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
-                    child: Icon(
+                    child: const Icon(
                       Icons.today,
-                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -170,29 +170,27 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                 width: 40,
                 height: 40,
                 child: MaterialButton(
-                  onPressed: () {
-                    _controllerMain.toggleFullScreen();
-                  },
+                  onPressed: () {},
                   color: Colors.green,
                   padding: const EdgeInsets.all(0),
                   shape: const CircleBorder(),
-                  child: Icon(
-                    _controllerMain.isFullScreen.value ? Icons.fullscreen_exit : Icons.fullscreen,
+                  child: const Icon(
+                    Icons.fullscreen_exit,
                     color: Colors.white,
                   ),
                 ),
               ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
+              const AnimatedSize(
+                duration: Duration(milliseconds: 300),
                 child: SizedBox(
-                  height: _controllerMain.isFullScreen.value ? 4 : 0,
+                  height: 4,
                 ),
               ),
               AnimatedSize(
                 duration: const Duration(milliseconds: 300),
                 child: SizedBox(
                   width: 40,
-                  height: _controllerMain.isFullScreen.value ? 40 : 0,
+                  height: 40,
                   child: MaterialButton(
                     onPressed: () {
                       Get.to(() => const ProfileScreen());
@@ -200,9 +198,9 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                     color: Colors.deepPurple,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
-                    child: Icon(
+                    child: const Icon(
                       Icons.settings,
-                      color: _controllerMain.isFullScreen.value ? Colors.white : Colors.transparent,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -434,7 +432,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                 border: Border.all(
                   color: Colors.white,
                 ),
-                borderRadius: BorderRadius.horizontal(right: Radius.circular(45)),
+                borderRadius: const BorderRadius.horizontal(right: Radius.circular(45)),
                 color: Colors.white,
               ),
               padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
@@ -470,7 +468,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                   border: Border.all(
                     color: Colors.red,
                   ),
-                  borderRadius: BorderRadius.horizontal(left: Radius.circular(45)),
+                  borderRadius: const BorderRadius.horizontal(left: Radius.circular(45)),
                   color: Colors.yellow,
                 ),
                 child: Row(

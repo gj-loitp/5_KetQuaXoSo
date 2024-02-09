@@ -15,16 +15,11 @@ import 'package:webview_flutter/webview_flutter.dart';
 class ControllerMain extends BaseController {
   final dio = Dio();
   var isNativeMode = true.obs;
-  var isFullScreen = true.obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
   var buildId = "".obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
-  }
-
-  void toggleFullScreen() {
-    isFullScreen.value = !isFullScreen.value;
   }
 
   Future<void> getThemeIndex() async {

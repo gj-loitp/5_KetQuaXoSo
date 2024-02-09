@@ -81,90 +81,84 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   Widget? _buildBottomBar() {
-    return Obx(() {
-      return Container(
-        color: Colors.transparent,
-        height: _controllerMain.isFullScreen.value ? 86 : 0,
-        child: AnimatedNotchBottomBar(
-          notchBottomBarController: _controllerBottomBar,
-          color: Colors.white,
-          showLabel: true,
-          itemLabelStyle: const TextStyle(
+    return AnimatedNotchBottomBar(
+      notchBottomBarController: _controllerBottomBar,
+      color: Colors.white,
+      showLabel: true,
+      itemLabelStyle: const TextStyle(
+        color: Colors.grey,
+        fontWeight: FontWeight.w700,
+        fontSize: 8,
+      ),
+      notchColor: Colors.white,
+      showBlurBottomBar: false,
+      removeMargins: true,
+      bottomBarWidth: 500,
+      durationInMilliSeconds: 300,
+      bottomBarItems: const [
+        BottomBarItem(
+          inActiveItem: Icon(
+            Icons.looks_one,
             color: Colors.grey,
-            fontWeight: FontWeight.w700,
-            fontSize: 8,
           ),
-          notchColor: Colors.white,
-          showBlurBottomBar: false,
-          removeMargins: true,
-          bottomBarWidth: 500,
-          durationInMilliSeconds: 300,
-          bottomBarItems: const [
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.looks_one,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.looks_one,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'XSMN',
-            ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.looks_two,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.looks_two,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'XSMT',
-            ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.location_city,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.location_city,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'Dò theo đài',
-            ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.looks_3,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.looks_3,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'XSMB',
-            ),
-            BottomBarItem(
-              inActiveItem: Icon(
-                Icons.monetization_on,
-                color: Colors.grey,
-              ),
-              activeItem: Icon(
-                Icons.monetization_on,
-                color: ColorConstants.appColor,
-              ),
-              itemLabel: 'Vietlot',
-            ),
-          ],
-          onTap: (index) {
-            _isTouchBottomBarItem = true;
-            _controllerPage.jumpToPage(index);
-            // debugPrint('current selected index $index');
-          },
-          kIconSize: 20,
-          kBottomRadius: 0,
+          activeItem: Icon(
+            Icons.looks_one,
+            color: ColorConstants.appColor,
+          ),
+          itemLabel: 'XSMN',
         ),
-      );
-    });
+        BottomBarItem(
+          inActiveItem: Icon(
+            Icons.looks_two,
+            color: Colors.grey,
+          ),
+          activeItem: Icon(
+            Icons.looks_two,
+            color: ColorConstants.appColor,
+          ),
+          itemLabel: 'XSMT',
+        ),
+        BottomBarItem(
+          inActiveItem: Icon(
+            Icons.location_city,
+            color: Colors.grey,
+          ),
+          activeItem: Icon(
+            Icons.location_city,
+            color: ColorConstants.appColor,
+          ),
+          itemLabel: 'Dò theo đài',
+        ),
+        BottomBarItem(
+          inActiveItem: Icon(
+            Icons.looks_3,
+            color: Colors.grey,
+          ),
+          activeItem: Icon(
+            Icons.looks_3,
+            color: ColorConstants.appColor,
+          ),
+          itemLabel: 'XSMB',
+        ),
+        BottomBarItem(
+          inActiveItem: Icon(
+            Icons.monetization_on,
+            color: Colors.grey,
+          ),
+          activeItem: Icon(
+            Icons.monetization_on,
+            color: ColorConstants.appColor,
+          ),
+          itemLabel: 'Vietlot',
+        ),
+      ],
+      onTap: (index) {
+        _isTouchBottomBarItem = true;
+        _controllerPage.jumpToPage(index);
+        // debugPrint('current selected index $index');
+      },
+      kIconSize: 20,
+      kBottomRadius: 0,
+    );
   }
 }
