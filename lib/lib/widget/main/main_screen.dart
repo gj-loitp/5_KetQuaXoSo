@@ -82,8 +82,9 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   Widget? _buildBottomBar() {
     return Obx(() {
-      return Visibility(
-        visible: _controllerMain.isFullScreen.value,
+      return Container(
+        color: Colors.transparent,
+        height: _controllerMain.isFullScreen.value ? 86 : 0,
         child: AnimatedNotchBottomBar(
           notchBottomBarController: _controllerBottomBar,
           color: Colors.white,

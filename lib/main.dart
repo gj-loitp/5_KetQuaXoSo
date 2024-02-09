@@ -12,6 +12,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO https://pub.dev/packages/animated_introduction
 //TODO https://pub.dev/packages/super_tooltip
 //TODO keystore mckimquyen
+//TODO double to exit
 
 //done mckimquyen
 //ic_launcher
