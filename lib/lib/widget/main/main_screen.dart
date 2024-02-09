@@ -10,6 +10,7 @@ import 'package:ketquaxoso/lib/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
+import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({
@@ -41,9 +42,9 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   final List<Widget> bottomBarPages = [
     const KeepAlivePage(child: XSMNScreen()),
     const KeepAlivePage(child: XSMTScreen()),
-    const KeepAlivePage(child: ProvinceListScreen()),
     const KeepAlivePage(child: XSMBScreen()),
     const KeepAlivePage(child: VietlotScreen()),
+    const KeepAlivePage(child: ProfileScreen()),
   ];
 
   @override
@@ -98,58 +99,58 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       bottomBarItems: const [
         BottomBarItem(
           inActiveItem: Icon(
-            Icons.looks_one,
+            Icons.looks_one_rounded,
             color: Colors.grey,
           ),
           activeItem: Icon(
-            Icons.looks_one,
+            Icons.looks_one_rounded,
             color: ColorConstants.appColor,
           ),
           itemLabel: 'XSMN',
         ),
         BottomBarItem(
           inActiveItem: Icon(
-            Icons.looks_two,
+            Icons.looks_two_rounded,
             color: Colors.grey,
           ),
           activeItem: Icon(
-            Icons.looks_two,
+            Icons.looks_two_rounded,
             color: ColorConstants.appColor,
           ),
           itemLabel: 'XSMT',
         ),
         BottomBarItem(
           inActiveItem: Icon(
-            Icons.location_city,
+            Icons.looks_3_rounded,
             color: Colors.grey,
           ),
           activeItem: Icon(
-            Icons.location_city,
-            color: ColorConstants.appColor,
-          ),
-          itemLabel: 'Dò theo đài',
-        ),
-        BottomBarItem(
-          inActiveItem: Icon(
-            Icons.looks_3,
-            color: Colors.grey,
-          ),
-          activeItem: Icon(
-            Icons.looks_3,
+            Icons.looks_3_rounded,
             color: ColorConstants.appColor,
           ),
           itemLabel: 'XSMB',
         ),
         BottomBarItem(
           inActiveItem: Icon(
-            Icons.monetization_on,
+            Icons.looks_4_rounded,
             color: Colors.grey,
           ),
           activeItem: Icon(
-            Icons.monetization_on,
+            Icons.looks_4_rounded,
             color: ColorConstants.appColor,
           ),
-          itemLabel: 'Vietlot',
+          itemLabel: 'Vietlott',
+        ),
+        BottomBarItem(
+          inActiveItem: Icon(
+            Icons.person,
+            color: Colors.grey,
+          ),
+          activeItem: Icon(
+            Icons.person,
+            color: ColorConstants.appColor,
+          ),
+          itemLabel: 'Cá nhân',
         ),
       ],
       onTap: (index) {
