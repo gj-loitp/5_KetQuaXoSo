@@ -48,56 +48,76 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
             ListView(
               physics: const NeverScrollableScrollPhysics(),
               children: [
-                Container(
-                  height: Get.height / 7,
-                  margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Image.asset(
-                    "assets/images/ic_mega.png",
-                    width: double.infinity,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                Container(
-                  height: Get.height / 7,
-                  margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Image.asset(
-                    "assets/images/ic_power.png",
-                    width: double.infinity,
-                    fit: BoxFit.contain,
+                InkWell(
+                  onTap: () {
+                    //TODO roy93~
+                  },
+                  child: Container(
+                    height: Get.height / 7,
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Image.asset(
+                      "assets/images/ic_mega.png",
+                      width: double.infinity,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
-                Container(
-                  height: Get.height / 7,
-                  margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Image.asset(
-                    "assets/images/ic_max.png",
-                    width: double.infinity,
-                    fit: BoxFit.contain,
+                InkWell(
+                  onTap: () {
+                    //TODO roy93~
+                  },
+                  child: Container(
+                    height: Get.height / 7,
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Image.asset(
+                      "assets/images/ic_power.png",
+                      width: double.infinity,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
-                Container(
-                  height: Get.height / 7,
-                  margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
+                InkWell(
+                  onTap: () {
+                    //TODO roy93~
+                  },
+                  child: Container(
+                    height: Get.height / 7,
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Image.asset(
+                      "assets/images/ic_max.png",
+                      width: double.infinity,
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                  child: Image.asset(
-                    "assets/images/ic_keno.png",
-                    width: double.infinity,
-                    fit: BoxFit.contain,
+                ),
+                InkWell(
+                  onTap: () {
+                    //TODO roy93~
+                  },
+                  child: Container(
+                    height: Get.height / 7,
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Image.asset(
+                      "assets/images/ic_keno.png",
+                      width: double.infinity,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ],
