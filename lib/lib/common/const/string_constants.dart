@@ -9,6 +9,7 @@ class StringConstants {
   static const String errorMsg = "Có lỗi xảy ra, vui lòng thử lại sau.";
   static const String cancel = "Hủy";
   static const String confirm = "Xác nhận";
+  static const String comingSoon = "Tính năng này đang được phát triển, sẽ được cập nhật ở phiên bản tiếp theo.";
 
   static const String URL_IMG_1 = "https://live.staticflickr.com/8381/28816409494_89aae208c3_b.jpg";
   static const String URL_IMG_2 = "https://live.staticflickr.com/8010/29360410281_fc971a298b_b.jpg";

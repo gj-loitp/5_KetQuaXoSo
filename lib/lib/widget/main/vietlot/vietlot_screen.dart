@@ -3,6 +3,7 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 
 class VietlotScreen extends StatefulWidget {
@@ -50,7 +51,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
               children: [
                 InkWell(
                   onTap: () {
-                    //TODO roy93~
+                    //TODO roy93~ iplm
                   },
                   child: Container(
                     height: Get.height / 7,
@@ -68,7 +69,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    //TODO roy93~
+                    //TODO roy93~ impl
                   },
                   child: Container(
                     height: Get.height / 7,
@@ -86,7 +87,8 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    //TODO roy93~
+                    //TODO roy93~ iplm
+                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
                   },
                   child: Container(
                     height: Get.height / 7,
@@ -104,7 +106,8 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    //TODO roy93~
+                    //TODO roy93~ iplm
+                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
                   },
                   child: Container(
                     height: Get.height / 7,
