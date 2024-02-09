@@ -63,13 +63,13 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     alignment: Alignment.center,
                     padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
                     width: double.infinity,
-                    child: Row(
+                    child: const Row(
                       children: [
-                        const SizedBox(
-                          width: 40,
-                          height: 40,
-                        ),
-                        const Expanded(
+                        // const SizedBox(
+                        //   width: 40,
+                        //   height: 40,
+                        // ),
+                        Expanded(
                           child: Text(
                             "Cá nhân",
                             style: TextStyle(
@@ -87,22 +87,22 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
+                        // SizedBox(
+                        //   width: 40,
+                        //   height: 40,
+                        //   child: MaterialButton(
+                        //     onPressed: () {
+                        //       Get.back();
+                        //     },
+                        //     color: Colors.white,
+                        //     padding: const EdgeInsets.all(0),
+                        //     shape: const CircleBorder(),
+                        //     child: const Icon(
+                        //       Icons.clear,
+                        //       color: Colors.black,
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),
@@ -110,7 +110,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     child: CupertinoScrollbar(
                       child: ListView(
                         physics: const BouncingScrollPhysics(),
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 120),
                         children: [
                           AvatarGlow(
                             glowColor: Colors.white,
