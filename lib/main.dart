@@ -19,6 +19,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO https://pub.dev/packages/super_tooltip
 //TODO keystore mckimquyen
 //TODO double to exit
+//TODO them vs infor o cac man hinh can thiet
 
 //done mckimquyen
 //ic_launcher
