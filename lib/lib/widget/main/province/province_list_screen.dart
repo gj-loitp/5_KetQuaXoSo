@@ -78,6 +78,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                             ),
                           ),
                         ),
+                        const SizedBox(width: 16),
                         const Expanded(
                           child: Text(
                             "Danh sách các đài",
@@ -93,12 +94,8 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                                 ),
                               ],
                             ),
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.start,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 40,
-                          height: 40,
                         ),
                       ],
                     ),
