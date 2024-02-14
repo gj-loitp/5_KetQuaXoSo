@@ -7,7 +7,6 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO firebase
 
 //nut lich su se thanh nut list province
-//today show 1 cai toast
 
 //TODO notification reminder
 //TODO lich su ve so cua toi
@@ -30,6 +29,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //do ve so manually
 //do ve so auto
 //chuyen xsmn, xsmt, xsmb cac button lich su -> profile
+//today show 1 cai toast
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi

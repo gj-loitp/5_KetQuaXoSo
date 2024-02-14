@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
@@ -148,6 +149,10 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   child: MaterialButton(
                     onPressed: () {
                       _selectDay(DateTime.now(), false);
+                      showSnackBarFull(
+                        StringConstants.warning,
+                        "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
+                      );
                     },
                     color: Colors.pink,
                     padding: const EdgeInsets.all(0),
