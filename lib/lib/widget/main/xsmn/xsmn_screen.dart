@@ -88,28 +88,25 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       child: Row(
         children: [
           Expanded(
-            child: AnimatedSize(
-              duration: const Duration(milliseconds: 300),
-              child: SizedBox(
-                height: 100,
-                child: CalendarTimeline(
-                  shrink: false,
-                  showYears: false,
-                  initialDate: _controllerMain.xsmnSelectedDateTime.value,
-                  firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                  lastDate: DateTime.now().add(const Duration(days: 365)),
-                  onDateSelected: (date) {
-                    _selectDay(date, false);
-                  },
-                  leftMargin: 0,
-                  monthColor: Colors.black,
-                  dayColor: Colors.black,
-                  activeDayColor: Colors.white,
-                  activeBackgroundDayColor: ColorConstants.appColor,
-                  dotsColor: Colors.white,
-                  // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-                  locale: 'vi',
-                ),
+            child: SizedBox(
+              height: 100,
+              child: CalendarTimeline(
+                shrink: false,
+                showYears: false,
+                initialDate: _controllerMain.xsmnSelectedDateTime.value,
+                firstDate: DateTime.now().subtract(const Duration(days: 365)),
+                lastDate: DateTime.now().add(const Duration(days: 365)),
+                onDateSelected: (date) {
+                  _selectDay(date, false);
+                },
+                leftMargin: 0,
+                monthColor: Colors.black,
+                dayColor: Colors.black,
+                activeDayColor: Colors.white,
+                activeBackgroundDayColor: ColorConstants.appColor,
+                dotsColor: Colors.white,
+                // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+                locale: 'vi',
               ),
             ),
           ),
@@ -117,51 +114,40 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           Column(
             children: [
               const SizedBox(height: 8),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.to(() => const ProvinceListScreen());
-                    },
-                    color: Colors.blueAccent,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: const Icon(
-                      Icons.location_city,
-                      color: Colors.white,
-                    ),
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    Get.to(() => const ProvinceListScreen());
+                  },
+                  color: Colors.blueAccent,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.location_city,
+                    color: Colors.white,
                   ),
                 ),
               ),
-              const AnimatedSize(
-                duration: Duration(milliseconds: 300),
-                child: SizedBox(
-                  height: 4,
-                ),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: MaterialButton(
-                    onPressed: () {
-                      _selectDay(DateTime.now(), false);
-                      showSnackBarFull(
-                        StringConstants.warning,
-                        "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
-                      );
-                    },
-                    color: Colors.pink,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: const Icon(
-                      Icons.today,
-                      color: Colors.white,
-                    ),
+              const SizedBox(height: 4),
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    _selectDay(DateTime.now(), false);
+                    showSnackBarFull(
+                      StringConstants.warning,
+                      "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
+                    );
+                  },
+                  color: Colors.pink,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.today,
+                    color: Colors.white,
                   ),
                 ),
               ),
