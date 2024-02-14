@@ -6,6 +6,12 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO ad
 //TODO firebase
 
+//nut lich su se thanh nut list province
+//xoa nut fullscreen
+//today show 1 cai toast
+//xoa nut setting
+
+
 //TODO notification reminder
 //TODO lich su ve so cua toi
 //TODO scan de do ve so
@@ -25,6 +31,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //policy
 //do ve so manually
 //do ve so auto
+//chuyen xsmn, xsmt, xsmb cac button lich su -> profile
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi

@@ -7,6 +7,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
+import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/information_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
@@ -173,6 +174,14 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   },
                                 ),
                                 const SizedBox(height: 32),
+                                UIUtils.getButton(
+                                  "Lịch sử dò vé số",
+                                  Icons.history,
+                                  description: "Tra cứu lịch sử dò vé số của bạn 😤",
+                                  () {
+                                    Get.to(() => const HistoryScreen());
+                                  },
+                                ),
                                 UIUtils.getButton(
                                   "Tin tức",
                                   Icons.info,
