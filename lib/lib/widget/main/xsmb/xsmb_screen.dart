@@ -85,54 +85,48 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
       child: Row(
         children: [
           Expanded(
-            child: AnimatedSize(
-              duration: const Duration(milliseconds: 300),
-              child: SizedBox(
-                height: 100,
-                child: CalendarTimeline(
-                  shrink: false,
-                  showYears: false,
-                  initialDate: _controllerMain.xsmbSelectedDateTime.value,
-                  firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                  lastDate: DateTime.now().add(const Duration(days: 365)),
-                  onDateSelected: (date) {
-                    _selectDay(date, false);
-                  },
-                  leftMargin: 0,
-                  monthColor: Colors.black,
-                  dayColor: Colors.black,
-                  activeDayColor: Colors.white,
-                  activeBackgroundDayColor: ColorConstants.appColor,
-                  dotsColor: Colors.white,
-                  // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-                  locale: 'vi',
-                ),
+            child: SizedBox(
+              height: 100,
+              child: CalendarTimeline(
+                shrink: false,
+                showYears: false,
+                initialDate: _controllerMain.xsmbSelectedDateTime.value,
+                firstDate: DateTime.now().subtract(const Duration(days: 365)),
+                lastDate: DateTime.now().add(const Duration(days: 365)),
+                onDateSelected: (date) {
+                  _selectDay(date, false);
+                },
+                leftMargin: 0,
+                monthColor: Colors.black,
+                dayColor: Colors.black,
+                activeDayColor: Colors.white,
+                activeBackgroundDayColor: ColorConstants.appColor,
+                dotsColor: Colors.white,
+                // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+                locale: 'vi',
               ),
             ),
           ),
           const SizedBox(width: 8),
           Column(
             children: [
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: MaterialButton(
-                    onPressed: () {
-                      _selectDay(DateTime.now(), false);
-                      showSnackBarFull(
-                        StringConstants.warning,
-                        "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
-                      );
-                    },
-                    color: Colors.pink,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: const Icon(
-                      Icons.today,
-                      color: Colors.white,
-                    ),
+              SizedBox(
+                width: 40,
+                height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    _selectDay(DateTime.now(), false);
+                    showSnackBarFull(
+                      StringConstants.warning,
+                      "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
+                    );
+                  },
+                  color: Colors.pink,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.today,
+                    color: Colors.white,
                   ),
                 ),
               ),
