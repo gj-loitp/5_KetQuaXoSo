@@ -54,7 +54,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                 children: [
                   Container(
                     width: double.infinity,
-                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                    margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                     padding: const EdgeInsets.all(0),
                     decoration: BoxDecoration(
                       color: Colors.transparent,
@@ -62,9 +62,21 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                     ),
                     child: Row(
                       children: [
-                        const SizedBox(
+                        SizedBox(
                           width: 40,
                           height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.back();
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.clear,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
                         const Expanded(
                           child: Text(
@@ -84,21 +96,9 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 40,
                           height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
-                            ),
-                          ),
                         ),
                       ],
                     ),

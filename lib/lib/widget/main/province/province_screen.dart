@@ -196,14 +196,26 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     return Container(
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+      padding: const EdgeInsets.fromLTRB(8, 2, 8, 0),
       child: Row(
         children: [
           Column(
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 40,
                 height: 40,
+                child: MaterialButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.clear,
+                    color: Colors.black,
+                  ),
+                ),
               ),
               const SizedBox(height: 8),
               SizedBox(
@@ -253,21 +265,9 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
           const SizedBox(width: 4),
           Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 40,
                 height: 40,
-                child: MaterialButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  color: ColorConstants.appColor,
-                  padding: const EdgeInsets.all(0),
-                  shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.clear,
-                    color: Colors.white,
-                  ),
-                ),
               ),
               const SizedBox(height: 8),
               SizedBox(
