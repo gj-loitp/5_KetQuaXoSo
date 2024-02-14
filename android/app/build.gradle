@@ -58,10 +58,11 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("keystores.jks")
-            storePassword "04021993"
-            keyAlias "loi"
-            keyPassword "04021993"
+            storeFile file("keystore.jks")
+            storePassword "27072000"
+            keyAlias "quyenkdt"
+            keyPassword "27072000"
+            //doan thi kim quyen
         }
     }
 

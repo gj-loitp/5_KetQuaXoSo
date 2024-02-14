@@ -11,7 +11,6 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
 //TODO https://pub.dev/packages/super_tooltip
-//TODO keystore mckimquyen
 //TODO them vs infor o cac man hinh can thiet
 
 //done mckimquyen
@@ -29,6 +28,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //today show 1 cai toast
 //nut lich su se thanh nut list province
 //double to exit
+//keystore mckimquyen
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
