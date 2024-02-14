@@ -49,35 +49,63 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
               borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
               blur: 5,
             ),
-            Column(
-              children: [
-                Container(
-                  width: double.infinity,
-                  margin: const EdgeInsets.fromLTRB(16, 48, 16, 16),
-                  padding: const EdgeInsets.all(0),
-                  decoration: BoxDecoration(
-                    color: Colors.transparent,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: const Text(
-                    "Danh sách các đài",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      color: Colors.white,
-                      fontSize: 24,
-                      shadows: [
-                        Shadow(
-                          blurRadius: 5.0,
-                          color: Colors.black,
-                          offset: Offset(2.0, 2.0),
+            SafeArea(
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                    padding: const EdgeInsets.all(0),
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 40,
+                          height: 40,
+                        ),
+                        const Expanded(
+                          child: Text(
+                            "Danh sách các đài",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              fontSize: 24,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0,
+                                  color: Colors.black,
+                                  offset: Offset(2.0, 2.0),
+                                ),
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.back();
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.clear,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ),
-                Expanded(child: _buildViewListProvince()),
-              ],
+                  Expanded(child: _buildViewListProvince()),
+                ],
+              ),
             ),
           ],
         ),
