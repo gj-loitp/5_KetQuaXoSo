@@ -159,7 +159,6 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 8),
             ],
           ),
         ],
