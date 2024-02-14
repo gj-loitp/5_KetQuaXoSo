@@ -2,6 +2,7 @@ import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_not
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
@@ -51,12 +52,28 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
     super.initState();
   }
 
+  DateTime _backPressTime = DateTime.now();
+
+  Future<bool> exitApp() {
+    DateTime now = DateTime.now();
+    if (now.difference(_backPressTime) < const Duration(seconds: 2)) {
+      return Future(() => true);
+    } else {
+      _backPressTime = DateTime.now();
+      showSnackBarFull(StringConstants.warning, "Press back again to exit");
+      return Future(() => false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildPageView(),
-      extendBody: true,
-      bottomNavigationBar: _buildBottomBar(),
+    return WillPopScope(
+      onWillPop: exitApp,
+      child: Scaffold(
+        body: _buildPageView(),
+        extendBody: true,
+        bottomNavigationBar: _buildBottomBar(),
+      ),
     );
   }
 
