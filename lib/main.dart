@@ -5,14 +5,13 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
 //TODO ad
 //TODO firebase
+//TODO lich su ve so cua toi
 
 //TODO notification reminder
-//TODO lich su ve so cua toi
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
 //TODO https://pub.dev/packages/super_tooltip
 //TODO keystore mckimquyen
-//TODO double to exit
 //TODO them vs infor o cac man hinh can thiet
 
 //done mckimquyen
@@ -29,6 +28,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //chuyen xsmn, xsmt, xsmb cac button lich su -> profile
 //today show 1 cai toast
 //nut lich su se thanh nut list province
+//double to exit
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
@@ -69,7 +69,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const SplashScreen(),
+      home: const Scaffold(
+        body: SplashScreen(),
+      ),
     );
   }
 }

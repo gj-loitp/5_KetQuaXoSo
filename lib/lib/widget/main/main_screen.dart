@@ -5,7 +5,6 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
@@ -55,29 +54,25 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: UIUtils.getAppBar(
-      //   "Kết quả xổ số",
-      //   () {
-      //     SystemNavigator.pop();
-      //   },
-      //   () {},
-      //   iconData: Icons.policy,
-      // ),
-      body: PageView(
-        controller: _controllerPage,
-        physics: const NeverScrollableScrollPhysics(), //disable horizontal swipe
-        children: List.generate(bottomBarPages.length, (index) => bottomBarPages[index]),
-        onPageChanged: (int page) {
-          // debugPrint("onPageChanged page $page");
-          if (_isTouchBottomBarItem) {
-            _isTouchBottomBarItem = false;
-          } else {
-            _controllerBottomBar.jumpTo(page);
-          }
-        },
-      ),
+      body: _buildPageView(),
       extendBody: true,
       bottomNavigationBar: _buildBottomBar(),
+    );
+  }
+
+  Widget _buildPageView() {
+    return PageView(
+      controller: _controllerPage,
+      physics: const NeverScrollableScrollPhysics(), //disable horizontal swipe
+      children: List.generate(bottomBarPages.length, (index) => bottomBarPages[index]),
+      onPageChanged: (int page) {
+        // debugPrint("onPageChanged page $page");
+        if (_isTouchBottomBarItem) {
+          _isTouchBottomBarItem = false;
+        } else {
+          _controllerBottomBar.jumpTo(page);
+        }
+      },
     );
   }
 

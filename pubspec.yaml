@@ -60,6 +60,10 @@ dependencies:
 #  device_info_plus: ^9.1.1
   #https://pub.dev/packages/dio
   dio: ^5.4.0
+  #https://pub.dev/packages/double_back_to_close_app
+#  double_back_to_close_app: ^2.1.0
+  #https://pub.dev/packages/double_tap_to_exit
+#  double_tap_to_exit: ^1.0.1
   flutter_pretty_dio_logger: ^3.0.0
   #https://pub.dev/packages/dotted_border
 #  dotted_border: ^2.1.0
