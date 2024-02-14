@@ -113,30 +113,6 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           const SizedBox(width: 8),
           Column(
             children: [
-              const SizedBox(height: 8),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.to(() => const HistoryScreen());
-                    },
-                    color: Colors.blueAccent,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: const Icon(
-                      Icons.history,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-              const AnimatedSize(
-                duration: Duration(milliseconds: 300),
-                child: SizedBox(height: 4),
-              ),
               AnimatedSize(
                 duration: const Duration(milliseconds: 300),
                 child: SizedBox(

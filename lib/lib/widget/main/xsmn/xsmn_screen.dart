@@ -10,6 +10,7 @@ import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -123,13 +124,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   height: 40,
                   child: MaterialButton(
                     onPressed: () {
-                      Get.to(() => const HistoryScreen());
+                      Get.to(() => const ProvinceListScreen());
                     },
                     color: Colors.blueAccent,
                     padding: const EdgeInsets.all(0),
                     shape: const CircleBorder(),
                     child: const Icon(
-                      Icons.history,
+                      Icons.location_city,
                       color: Colors.white,
                     ),
                   ),
