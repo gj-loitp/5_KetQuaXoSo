@@ -7,10 +7,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO firebase
 
 //nut lich su se thanh nut list province
-//xoa nut fullscreen
 //today show 1 cai toast
-//xoa nut setting
-
 
 //TODO notification reminder
 //TODO lich su ve so cua toi

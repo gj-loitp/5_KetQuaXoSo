@@ -162,52 +162,6 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               const SizedBox(height: 8),
             ],
           ),
-          const SizedBox(width: 8),
-          Column(
-            children: [
-              const SizedBox(height: 8),
-              SizedBox(
-                width: 40,
-                height: 40,
-                child: MaterialButton(
-                  onPressed: () {},
-                  color: Colors.green,
-                  padding: const EdgeInsets.all(0),
-                  shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.fullscreen_exit,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              const AnimatedSize(
-                duration: Duration(milliseconds: 300),
-                child: SizedBox(
-                  height: 4,
-                ),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 300),
-                child: SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.to(() => const ProfileScreen());
-                    },
-                    color: Colors.deepPurple,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: const Icon(
-                      Icons.settings,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 8),
-            ],
-          ),
         ],
       ),
     );
