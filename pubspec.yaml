@@ -28,7 +28,7 @@ dependencies:
   #https://pub.dev/packages/shimmer
   shimmer: ^3.0.0
   #https://pub.dev/packages/package_info_plus
-#  package_info_plus:
+  package_info_plus:
 
   #https://pub.dev/packages/avatar_glow
   avatar_glow: ^2.0.2

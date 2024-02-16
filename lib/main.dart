@@ -11,7 +11,6 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
 //TODO https://pub.dev/packages/super_tooltip
-//TODO them vs infor o cac man hinh can thiet
 
 //done mckimquyen
 //ic_launcher
@@ -29,6 +28,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //nut lich su se thanh nut list province
 //double to exit
 //keystore mckimquyen
+//them version infor o cac man hinh can thiet
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
@@ -37,6 +37,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     GetMaterialApp(
       enableLog: true,

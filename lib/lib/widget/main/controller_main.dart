@@ -10,6 +10,7 @@ import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/model/province.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ControllerMain extends BaseController {
@@ -17,9 +18,19 @@ class ControllerMain extends BaseController {
   var isNativeMode = true.obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
   var buildId = "".obs;
+  var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
+  }
+
+  Future<void> getPackageInfo() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    this.packageInfo.value = packageInfo;
+  }
+
+  String getAppVersion() {
+    return packageInfo.value.version;
   }
 
   Future<void> getThemeIndex() async {

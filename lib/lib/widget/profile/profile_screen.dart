@@ -141,6 +141,23 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                     color: Colors.grey,
                                   ),
                                 ),
+                                Text(
+                                  "Phiên bản ${_controllerMain.getAppVersion()}",
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                const Text(
+                                  "⇜-----------v-----------⇝",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                const SizedBox(height: 16),
                                 const Text(
                                   "Chọn giao diện",
                                   style: TextStyle(

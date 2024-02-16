@@ -50,6 +50,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   @override
   void initState() {
     super.initState();
+    _controllerMain.getPackageInfo();
   }
 
   DateTime _backPressTime = DateTime.now();
