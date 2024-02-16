@@ -290,6 +290,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     );
                                   },
                                 ),
+                                UIUtils.getButton(
+                                  "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
+                                  Icons.navigate_next,
+                                      () {
+                                    Get.to(
+                                          () => HtmlContentScreen(
+                                        titleAppBar: "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
+                                        htmlContent: ConstInformation.infor_15,
+                                      ),
+                                    );
+                                  },
+                                ),
                               ],
                             ),
                           ),

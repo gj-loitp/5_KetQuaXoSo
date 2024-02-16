@@ -2904,7 +2904,48 @@ class ConstInformation {
 <p><span style="font-size:16px;">Nằm mơ thấy người chết cho tiền:<strong>&nbsp;60 - 98</strong></span></p>
 <p><span style="font-size:16px;">Mơ thấy người chết ch&aacute;y đ&aacute;nh con g&igrave;: <strong>32 - 78 - 33 - 74</strong></span></p>
 <p><span style="font-size:16px;"><em><strong>Giấc mơ thấy người đ&atilde; chết l&agrave; một giấc mơ kh&ocirc;ng qu&aacute; đ&aacute;ng sợ, t&ugrave;y v&agrave;o từng giấc mơ cụ thể sẽ c&oacute; những c&aacute;ch giải th&iacute;ch kh&aacute;c nhau. Ch&uacute;c c&aacute;c bạn may mắn khi ngủ mơ thấy giấc mơ n&agrave;y nh&eacute;!</strong></em></span></p>''';
-  static String infor_15 = '''''';
+  static String infor_15 = '''<p><span style="font-size:16px;">Một ng&agrave;y mệt nhọc của bạn đều được giải tỏa bởi một giấc ngủ, tuy nhi&ecirc;n, trong khi ngủ n&atilde;o của ta vẫn hoạt động, bằng chứng l&agrave; những giấc mơ m&agrave; ta trải qua trong khi ngủ. Nhưng giấc mơ của mỗi người kh&ocirc;ng chỉ đơn giản như thế m&agrave; n&oacute; c&ograve;n l&agrave; một dự b&aacute;o từ tiềm thức của bạn đối với một tương lai gần.</span></p>
+<p><span style="font-size:16px;">Trong những giấc mơ đ&oacute;, th&igrave; thường những giấc mơ b&aacute;o điềm kh&ocirc;ng phải may mắn đ&oacute; l&agrave; mơ thấy m&aacute;u, người chết hay l&agrave; những giấc mơ thấy động vật như lo&agrave;i rắn đều được nhiều người nghĩ l&agrave; điềm dữ.</span></p>
+<p><span style="font-size:16px;">Nhưng thực tế c&oacute; phải như thế hay kh&ocirc;ng? T&ugrave;y theo từng nội dung giấc mơ về lo&agrave;i rắn, bạn sẽ c&oacute; những &yacute; nghĩa kh&aacute;c nhau.</span></p>
+<p><span style="font-size:16px;"><img alt="Mơ thấy rắn cắn" src="https://images.xoso.mobi/news_xosome/2016/06/30/Ku/mo-thay-ran-can.jpg" title="Mơ thấy rắn cắn"></span></p>
+<p><span style="font-size:16px;"><em>Mơ thấy rắn cắn</em></span></p>
+<p><span style="font-size:16px;"><strong>Dưới đ&acirc;y, <a href="https://xoso.mobi/so-mo-lo-de-mien-bac-so-mo-giai-mong.html" title="sổ mơ lô đề">sổ mơ l&ocirc; đề</a> sẽ gi&uacute;p bạ giải m&atilde; giấc mơ thấy rắn cắn b&aacute;o điềm g&igrave; với bạn, cụ thể:</strong></span></p>
+<p><span style="font-size:16px;">- Nằm mơ thấy rắn cắn m&igrave;nh: tuy nghe thấy bị rắn cắn c&oacute; vẻ rất nguy hiểm nhưng thực tế th&igrave; ho&agrave;n to&agrave;n ngược lại, giấc mơ n&agrave;y dự b&aacute;o rằng bạn sắp c&oacute; được một nguồn t&agrave;i lộc lớn.</span></p>
+<p><span style="font-size:16px;">- Nằm mơ thấy rắn cắn người kh&aacute;c: C&oacute; thể người đ&oacute; đối với bạn rất th&acirc;n thiết, h&atilde;y nhắc nhở họ, v&igrave; người bị cắn c&oacute; thể đang phải chịu đựng một điều g&igrave; đ&oacute;, c&oacute; thể l&agrave; vấn đề về sức khỏe hoặc l&agrave; t&agrave;i ch&iacute;nh.</span></p>
+<p><span style="font-size:16px;">- Nằm mơ thấy bị rắn cắn nhưng kh&ocirc;ng sao: Bạn c&oacute; thể bị thương nhưng kh&ocirc;ng bị độc chết, th&igrave; đ&acirc;y l&agrave; điềm b&aacute;o nếu bạn đang c&oacute; vấn đề kh&oacute; khăn n&agrave;o đ&oacute; th&igrave; sẽ được nhanh ch&oacute;ng giải quyết th&ocirc;i.</span></p>
+<p><span style="font-size:16px;">- Nằm mơ thấy rắn cắn động vật kh&aacute;c: Nếu bạn mơ thấy giấc mơ n&agrave;y th&igrave; chứng tỏ bạn c&oacute; thể sắp phải gặp một số chuyện buồn bực do người kh&aacute;c g&acirc;y ra kh&ocirc;ng đ&uacute;ng &yacute; m&igrave;nh.</span></p>
+<p><span style="font-size:16px;">- Nằm mơ thấy rắn cắn nhau: C&oacute; thể sắp tới bạn sẽ gặp một đối thủ đ&aacute;ng gờm, v&agrave; người đ&oacute; sẽ cạnh tranh g&acirc;y rất nhiều sức &eacute;p đối với bạn.</span></p>
+<p><span style="font-size:16px;">►►► Tham khảo &yacute; nghĩa c&aacute;c giấc mơ rắn kh&aacute;c tại: <strong><a href="https://xoso.mobi/mo-thay-con-ran-d378.html" title="Mơ thấy con rắn">Mơ thấy con rắn</a></strong></span></p>
+<p><span style="font-size:16px;"><strong>Từ những giải mộng chi&ecirc;m bao thấy rắn cắn tr&ecirc;n đ&acirc;y sẽ gi&uacute;p bạn hiểu được dự b&aacute;o từ giấc mơ của m&igrave;nh, từ đ&oacute; mơ thấy rắn cắn đ&aacute;nh cặp số:</strong></span></p>
+<p><span style="font-size:16px;"><strong>14 &ndash; 59 &ndash; 95</strong></span></p>
+<p><span style="font-size:16px;">Ch&uacute;c bạn may mắn với giấc mơ thấy rắn cắn!</span></p>
+<p><span style="font-size:16px;"><br></span></p>
+<p><span style="font-size:16px;"><strong>Gợi &yacute; mơ thấy</strong></span></p>
+<table>
+    <tbody>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://xoso.mobi/mo-thay-ran-boi-d960.html" title="rắn bơi"><strong>rắn bơi</strong></a></span></td>
+            <td><span style="font-size:16px;"><strong>21, 82</strong></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://xoso.mobi/mo-thay-ran-quan-d958.html" title="rắn quấn"><strong>rắn quấn</strong></a></span></td>
+            <td><span style="font-size:16px;"><strong>05, 15, 51</strong></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://xoso.mobi/mo-thay-quyen-vo-d956.html" title="quyển vở"><strong>quyển vở</strong></a></span></td>
+            <td><span style="font-size:16px;"><strong>18, 19</strong></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://xoso.mobi/mo-thay-quet-nha-d955.html" title="quét nhà"><strong>qu&eacute;t nh&agrave;</strong></a></span></td>
+            <td><span style="font-size:16px;"><strong>39, 43</strong></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://xoso.mobi/mo-thay-quat-tran-d954.html" title="quạt trần"><strong>quạt trần</strong></a></span></td>
+            <td><span style="font-size:16px;"><strong>82</strong></span></td>
+        </tr>
+    </tbody>
+</table>
+<div style="border: 0px;">&nbsp;</div>''';
   static String infor_16 = '''''';
   static String infor_17 = '''''';
   static String infor_18 = '''''';

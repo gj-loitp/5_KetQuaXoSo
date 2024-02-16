@@ -116,7 +116,10 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
                           fontWeight: FontWeight.w400,
                           color: Colors.black,
                         ),
-                        enableCaching: true,
+                        enableCaching: false,
+                        onTapUrl: (url) {
+                          return true;
+                        },
                       ),
                     ),
                   ),
