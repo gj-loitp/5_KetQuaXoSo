@@ -78,6 +78,7 @@ android {
             minifyEnabled false
             //used android.enableR8=true in gradle.properties
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
         }
     }
 
@@ -88,6 +89,8 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10"
+    //16.2.2024 da thu 1.8.20 -> 1.9.10 nhung k build qua wifi duoc nen phai downgrade
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20"
     implementation("androidx.multidex:multidex:2.0.1")
 }
