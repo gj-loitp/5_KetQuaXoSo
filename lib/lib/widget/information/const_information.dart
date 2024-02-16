@@ -1,3 +1,9 @@
+///huong dan cach tao content
+///copy bat ky content nao tren web
+///mo trang https://onlinehtmleditor.dev/ va paste content do vao day
+///sau do copy toan bo content moi va dan vao trang https://wordtohtml.net/
+///cuoi cung se duoc 1 content moi html hoan chinh
+
 class ConstInformation {
   static String infor_0 = '''<main id="main" class="site-main">
 
@@ -2810,4 +2816,98 @@ class ConstInformation {
     </p>
   </div>
 </div>''';
+
+  static String infor_14 = '''<h2><span style="font-size:16px;"><strong>Nằm mơ thấy người chết l&agrave; điềm l&agrave;nh hay dữ?</strong></span></h2>
+<p><span style="font-size:16px;">&nbsp;</span></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy người th&acirc;n chết l&agrave; điềm g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Đối với bất kỳ ai, sự ra đi của người th&acirc;n lu&ocirc;n l&agrave; một c&uacute; sốc lớn, kh&oacute; l&ograve;ng m&agrave; ngu&ocirc;i ngoai được. Thậm ch&iacute;, c&oacute; những người kh&ocirc;ng chịu nổi cảnh chứng kiến người th&acirc;n của m&igrave;nh ra đi v&agrave; sống trong nỗi &aacute;m ảnh đ&oacute; suốt cả cuộc đời.</span></p>
+<p><span style="font-size:16px;">Nhưng đừng qu&aacute; lo lắng, giấc mơ người th&acirc;n chết mang đến cho người mơ điềm b&aacute;o tốt l&agrave;nh. Điềm b&aacute;o n&agrave;y cho thấy bạn l&agrave; người c&oacute; đủ năng lực, sự tự tin để vượt qua tất cả thử th&aacute;ch, chướng ngại trong cuộc sống. Tuy nhi&ecirc;n nếu giấc mơ n&agrave;y lặp đi lặp lại th&igrave; sự b&aacute;o tương lai bạn sẽ phải chia ly với một người th&acirc;n trong gia đ&igrave;nh.&nbsp;</span></p>
+<p><span style="font-size:16px;">- Chi&ecirc;m bao thấy mẹ chết v&agrave; bạn v&ocirc; c&ugrave;ng đau thương l&agrave; điềm b&aacute;o tốt, cuộc sống ổn định cả về vật chất lẫn tinh thần. Nếu nằm mơ mẹ chết trong khi mẹ vẫn c&ograve;n sống, c&oacute; thể bạn đ&atilde; c&oacute; những quyết định sai lầm, bạn đang chạy trốn khỏi t&igrave;nh huống ti&ecirc;u cực v&agrave; những vấn đề c&ograve;n tồn đọng.</span></p>
+<p><span style="font-size:16px;">- Mộng thấy bố chết nhưng thực tế bố vẫn sống dự b&aacute;o tin vui sẽ tới với bạn trong thời gian tới, c&ocirc;ng việc rất tốt đẹp. Nếu chi&ecirc;m bao thấy người bố đ&atilde; khuất v&agrave; quay về kh&oacute;c l&oacute;c nức nở, bạn dễ gặp phải vận hạn, đen đủi cần đề ph&ograve;ng v&agrave; cẩn thận hơn.</span></p>
+<p><span style="font-size:16px;">- Trường hợp bố mẹ mơ thấy con chết, nếu l&agrave; con trai th&igrave; l&agrave; điềm b&aacute;o chẳng l&agrave;nh về đường c&ocirc;ng danh sự nghiệp, c&oacute; người sẽ c&oacute; t&igrave;nh g&acirc;y kh&oacute; dễ với c&ocirc;ng việc của bạn, nếu l&agrave; con g&aacute;i th&igrave; lại l&agrave; dấu hiệu rạn nứt về mặt t&igrave;nh cảm.</span></p>
+<p><br></p>
+<p><br></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy m&igrave;nh chết đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Nếu như người kh&aacute;c mơ thấy m&igrave;nh chết th&igrave; cho thấy điềm b&aacute;o kh&ocirc;ng tốt l&agrave;nh cho bạn trong thời gian sắp tới. Với giấc mơ n&agrave;y, c&oacute; thể bạn sẽ gặp một v&agrave;i rắc rối trong c&ocirc;ng việc kinh doanh c&oacute; thể mất một khoản tiền lớn để giải quyết vấn đề n&agrave;y.&nbsp;</span></p>
+<p><span style="font-size:16px;">Nằm mơ thấy người y&ecirc;u chết &nbsp;l&agrave; giấc mơ đại c&aacute;t, đ&acirc;y sẽ l&agrave; khởi đầu cho một mối quan hệ mới. Nếu mơ người y&ecirc;u chết kh&ocirc;ng to&agrave;n th&acirc;y th&igrave; nhắc nhở bạn n&ecirc;n chăm s&oacute;c, quan t&acirc;m tới người ấy nhiều hơn. Nếu x&aacute;c đ&atilde; bị thối rữa m&agrave; bạn kh&ocirc;ng ngần ngại đến b&ecirc;n v&agrave; &ocirc;m họ v&agrave;o l&ograve;ng th&igrave; chắc chắn bạn đ&atilde; y&ecirc;u người ấy rất nhiều.</span></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy nhiều người chết đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Mơ thấy rất nhiều người chết điều n&agrave;y b&aacute;o hiệu bạn t&agrave;i lộc đầy nh&agrave;, vận may k&eacute;o d&agrave;i. Hơn nữa nếu trong giấc mơ bạn c&ograve;n chủ động &ocirc;m x&aacute;c người chết bốc m&ugrave;i, thối rữa th&igrave; sắp tới sẽ thăng quan, ph&aacute;t t&agrave;i.</span></p>
+<p><span style="font-size:16px;">Nhưng nếu mơ thấy nhiều người chết trong đ&oacute; c&oacute; cả m&igrave;nh th&igrave; xin ch&uacute;c mừng v&igrave; bạn sắp gặp được nhiều may mắn, t&agrave;i vận đều hanh th&ocirc;ng v&agrave; con đường thăng quan tiến chức đang rất rộng mở.&nbsp;</span></p>
+<h3><span style="font-size:16px;"><strong>Mơ thấy người lạ chết đ&aacute;nh con g&igrave; ?</strong></span></h3>
+<p><span style="font-size:16px;">Nếu chi&ecirc;m bao thấy người đ&atilde; mất l&agrave; một người xa lạ th&igrave; tốt nhất l&agrave; n&ecirc;n tr&aacute;nh xa, bạn m&agrave; ngồi n&oacute;i chuyện với họ th&igrave; bằng một c&aacute;ch n&agrave;o đ&oacute; họ c&oacute; thể sẽ cướp đi thể x&aacute;c của bạn, vậy n&ecirc;n d&ugrave; c&oacute; ai gọi th&igrave; cũng kh&ocirc;ng được trả lời.</span></p>
+<h3><span style="font-size:16px;"><strong>Mơ thấy h&agrave;ng x&oacute;m chết đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Khi bạn mơ thấy người đ&atilde; chết l&agrave; người h&agrave;ng x&oacute;m của m&igrave;nh th&igrave; chứng tỏ mối quan hệ của bạn với những người xung quanh kh&ocirc;ng tốt. Bạn l&agrave; người trầm t&iacute;nh, &iacute;t n&oacute;i v&agrave; kh&ocirc;ng hay đưa ra những quan điểm c&aacute; nh&acirc;n, điều n&agrave;y khiến cho bạn bị c&ocirc; lập v&agrave; t&aacute;ch m&igrave;nh ra với mọi người.</span></p>
+<p><span style="font-size:16px;">Lời khuy&ecirc;n cho bạn l&agrave; n&ecirc;n cởi mở hơn với những người xung quanh v&agrave; chia sẻ nhiều hơn để mọi người c&oacute; thể thấu hiểu nhau.&nbsp;</span></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy x&aacute;c chết</strong></span></h3>
+<p><span style="font-size:16px;"><img alt="Điềm báo với giấc mơ thấy người đã chết" src="https://images.xoso.mobi/news_xosome/2016/06/23/bs/chiem-bao-thay-nguoi-chet.png" title="Điềm báo với giấc mơ thấy người đã chết"></span></p>
+<p><span style="font-size:16px;"><em>Điềm b&aacute;o với giấc mơ thấy người đ&atilde; chết</em></span></p>
+<p><span style="font-size:16px;">Những giấc mơ thấy x&aacute;c chết c&oacute; thể khiến mọi người kh&ocirc;ng khỏi lo lắng v&agrave; sợ h&atilde;i v&igrave; sự đ&aacute;ng sợ m&agrave; ch&uacute;ng mang lại. Nhưng bạn cũng đừng lo lắng qu&aacute;, v&igrave; giấc mơ n&agrave;y cũng sẽ mang đến cho ch&uacute;ng ta những điềm b&aacute;o tốt l&agrave;nh.&nbsp;</span></p>
+<p><br></p>
+<h3><span style="font-size:16px;"><strong>Mơ thấy người chết ch&aacute;y đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Nằm mơ thấy người chết ch&aacute;y m&agrave; l&agrave; nữ l&agrave; điềm b&aacute;o tương lai sắp c&oacute; tiểu nh&acirc;n h&atilde;m hại cả về sự nghiệp lẫn t&igrave;nh duy&ecirc;n, bạn n&ecirc;n d&agrave;nh nhiều thời gian hơn cho gia đ&igrave;nh m&igrave;nh. Nếu l&agrave; nam th&igrave; lại mang may mắn, mọi sự thuận buồm xu&ocirc;i gi&oacute;.</span></p>
+<p><span style="font-size:16px;">Lưu &yacute; trong một tuần tới tr&aacute;nh mặc đồ m&agrave;u trắng v&agrave;o buổi tối để kh&ocirc;ng vướng v&agrave;o những rắc rối, thị phi. Trường hợp bạn nằm mơ thấy lửa thi&ecirc;u thi thể l&agrave; điềm b&aacute;o bạn sắp nhận được tin tốt l&agrave;nh.</span></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy người chết đuối&nbsp;</strong></span></h3>
+<p><span style="font-size:16px;">Nằm chi&ecirc;m bao thấy người chết đuối ch&iacute;nh l&agrave; biểu hiện cho cảm x&uacute;c ti&ecirc;u cực trong bạn, tinh thần kh&ocirc;ng ổn định, những g&oacute;c khuất trong tận đ&aacute;y l&ograve;ng dồn n&eacute;n bấy l&acirc;u cũng tới ng&agrave;y b&ugrave;ng nổ.&nbsp;</span></p>
+<p><span style="font-size:16px;">Bạn sắp đạt tới giới hạn của bản th&acirc;n v&agrave; kh&ocirc;ng thể chịu đựng th&ecirc;m được nữa. Ngo&agrave;i ra, mơ người chết đuối c&ograve;n n&oacute;i n&ecirc;n sự bất lực của bạn trước một vấn đề n&agrave;o đ&oacute;, lu&ocirc;n c&oacute; những nh&acirc;n tố b&iacute; ẩn cản trở bạn.</span></p>
+<p><br></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy người chết sống lại đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Giấc mơ người chết sống lại thường đem đến may mắn, c&oacute; thể l&agrave; bắt đầu từ những thay đổi trong t&acirc;m hồn của bạn. Đ&acirc;y l&agrave; dấu hiệu tốt để bạn c&oacute; thể bu&ocirc;ng bỏ những hồi ức kh&ocirc;ng tốt trong qu&aacute; khứ.</span></p>
+<p><span style="font-size:16px;">Bạn đang muốn bu&ocirc;ng bỏ những c&aacute;i cũ kỹ để bắt đầu trải nghiệm một cuộc sống mới, th&agrave;nh c&ocirc;ng đang ở rất gần bạn rồi đấy. Nếu bạn chết rồi sống lại th&igrave; c&oacute; vẻ bạn sắp c&oacute; người y&ecirc;u rồi đấy v&agrave; họ cũng y&ecirc;u bạn rất nhiều.</span></p>
+<p><br></p>
+<h3><span style="font-size:16px;"><strong>Mơ thấy n&oacute;i chuyện với người đ&atilde; chết</strong></span></h3>
+<p><span style="font-size:16px;">Khi chứng kiến những người th&acirc;n đ&atilde; mất quay về v&agrave; n&oacute;i chuyện với bạn trong mơ th&igrave; đ&acirc;y l&agrave; một điềm b&aacute;o tốt l&agrave;nh, mang lại may mắn, đặc biệt trong c&ocirc;ng việc sẽ c&oacute; qu&yacute; nh&acirc;n tương trợ gi&uacute;p đỡ bạn hết m&igrave;nh. Trường hợp bạn kh&ocirc;ng quen người đ&atilde; chết đ&oacute; lại mang &yacute; nghĩa tr&aacute;i ngược, c&oacute; thể bạn sẽ gặp phải một số chuyện kh&ocirc;ng vui.</span></p>
+<p><br></p>
+<h3><span style="font-size:16px;"><strong>Mơ thấy ai chết kh&ocirc;ng r&otilde; đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Nằm mơ thấy người chết kh&ocirc;ng r&otilde; mặt l&agrave; điềm b&aacute;o c&oacute; người đang cố &yacute; g&acirc;y trở ngại, kh&oacute; khăn cho bạn trong sự thăng tiến trong c&ocirc;ng việc. Bạn n&ecirc;n đề ph&ograve;ng v&agrave; cẩn thận hơn để tr&aacute;nh rơi v&agrave;o bẫy của kẻ xấu ảnh hưởng đến sự nghiệp của m&igrave;nh.</span></p>
+<p><span style="font-size:16px;">C&ograve;n nếu mơ thấy ai chết kh&ocirc;ng r&otilde; ở b&ecirc;n đường th&igrave; đ&acirc;y l&agrave; điềm b&aacute;o bạn sẽ nhận được sự nể trọng của mọi người.</span></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy hồn người chết đ&aacute;nh con g&igrave;?&nbsp;</strong></span></h3>
+<p><span style="font-size:16px;"><img alt="Giải mã giấc mơ thấy người chết" src="https://images.xoso.mobi/news_xosome/2016/06/23/bs/mo-thay-nguoi-da-chet.png" title="Giải mã giấc mơ thấy người chết"></span></p>
+<p><span style="font-size:16px;"><em>Giải m&atilde; giấc mơ thấy người chết</em></span></p>
+<p><span style="font-size:16px;">Mơ thấy linh hồn người chết l&agrave; bạn hay b&agrave; con đang c&ograve;n sống cho thấy bạn đang rơi v&agrave;o v&ograve;ng nguy hiểm bởi những h&agrave;nh động của người đ&oacute;. Bạn h&atilde;y cẩn trọng hơn với giấc mơ n&agrave;y. C&ograve;n mơ thấy oan hồn của một người bạn hoặc một người b&agrave; con đ&atilde; chết &aacute;m chỉ tội lỗi v&agrave; sự &acirc;n hận li&ecirc;n quan tới mối quan hệ của người đ&oacute; trong qu&aacute; khứ.</span></p>
+<p><span style="font-size:16px;">C&ograve;n nếu mơ thấy hồn người chết đưa tay chạm v&agrave;o một h&ocirc;̀n ma nhưng n&oacute; lại tan biến đi biểu thị rằng bạn đang từng bước chấp nhận đ&ocirc;́i mặt với thực tại nhi&ecirc;̀u kh&ocirc;̉ đau của mình.</span></p>
+<h3><span style="font-size:16px;"><strong>Nằm mơ thấy người chết tai nạn giao th&ocirc;ng đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Nếu mơ thấy tai nạn giao th&ocirc;ng chết người m&agrave; bạn l&agrave; người ngo&agrave;i cuộc th&igrave; thực tại cho thấy bạn đang bị người kh&aacute;c t&aacute;c động tới ch&iacute;nh suy nghĩ v&agrave; h&agrave;nh động của bản th&acirc;n m&igrave;nh. V&agrave; hậu quả g&aacute;nh chịu kh&ocirc;ng ai kh&aacute;c ch&iacute;nh l&agrave; bạn.&nbsp;</span></p>
+<p><span style="font-size:16px;">Nhưng bạn l&agrave; người bị tai nạn v&agrave; chết th&igrave; khuy&ecirc;n bạn n&ecirc;n xem x&eacute;t lại c&aacute;c mục ti&ecirc;u hiện tại, c&oacute; vẻ ch&uacute;ng đang qu&aacute; sức của bạn rồi đấy. Bạn n&ecirc;n trau dồi kinh nghiệm v&agrave; học hỏi th&ecirc;m nhiều kỹ năng để ph&aacute;t triển to&agrave;n diện bản th&acirc;n.&nbsp;</span></p>
+<p><br></p>
+<h3><span style="font-size:16px;"><strong>Mơ thấy người chết quay về đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Ngủ mơ thấy người chết trở về l&agrave;nh lặn cho thấy bạn đang rất lo lắng v&agrave; sợ h&atilde;i một điều g&igrave; đ&oacute;. Đ&acirc;y c&oacute; thể l&agrave; một k&yacute; ức buồn, một tội lỗi hay những suy nghĩ đau khổ do k&igrave;m n&eacute;n t&igrave;nh cảm m&agrave; th&agrave;nh. Đó cũng có th&ecirc;̉ là n&ocirc;̃i lo sợ v&ecirc;̀ b&ecirc;̣nh t&acirc;̣t và cái ch&ecirc;́t.</span></p>
+<h3><span style="font-size:16px;"><strong>Mơ thấy người chết dưới giếng đ&aacute;nh con g&igrave;?</strong></span></h3>
+<p><span style="font-size:16px;">Khi bạn nằm mơ thấy người đ&atilde; chết ở dưới giếng th&igrave; cho thấy bạn đang tự t&aacute;ch m&igrave;nh ra khỏi cuộc sống. Giấc mơ n&agrave;y c&oacute; thể l&agrave; lời k&ecirc;u gọi bạn tiến l&ecirc;n phía trước, từ bỏ những thói quen x&acirc;́u hay kiểu suy nghĩ cũ mang tính ti&ecirc;u cực.</span></p>
+<h3><span style="font-size:16px;"><strong>C&aacute;c giấc chi&ecirc;m bao thấy người đ&atilde; chết kh&aacute;c</strong></span></h3>
+<p><span style="font-size:16px;">- Mơ thấy bạn b&egrave; chết nhiều &yacute; kiến cho rằng đ&acirc;y l&agrave; một điều b&aacute;o tốt. may mắn đang tới với bạn. Song cũng c&oacute; &yacute; kiến cho rằng t&iacute;nh c&aacute;ch của bạn c&oacute; vẻ đang bị tha h&oacute;a, mất dần đi những phẩm chất tốt đẹp.</span></p>
+<p><span style="font-size:16px;">- Mơ thấy người bị treo cổ, c&oacute; thể bạn đang gặp bế tắc, tinh thần v&agrave; trạng th&aacute;i bị dồn n&eacute;n, bạn tự ti v&agrave; trốn tr&aacute;nh ch&iacute;nh con người thật của m&igrave;nh.</span></p>
+<p><span style="font-size:16px;">- Mơ thấy &ocirc;m thi thể người chết, bởi đ&acirc;y l&agrave; dấu hiệu cho biết sự c&aacute;t lợi, t&agrave;i vận hanh th&ocirc;ng, h&atilde;y nắm bắt cơ hội, chắc chắn bạn sẽ sớm đạt được th&agrave;nh c&ocirc;ng. Nếu mơ thấy m&igrave;nh &ocirc;m khung xương người chết th&igrave; c&oacute; thể bạn sắp bị người kh&aacute;c n&oacute;i xấu hoặc lừa dối.</span></p>
+<p><span style="font-size:16px;">- Mơ thấy việc ch&ocirc;n cất người kh&aacute;c l&agrave; điềm b&aacute;o về sự thất tho&aacute;t tiền bạc. Tuy nhi&ecirc;n, nếu ch&ocirc;n cất ch&iacute;nh m&igrave;nh th&igrave; lại l&agrave; may mắn.</span></p>
+<p><span style="font-size:16px;">- Mơ thấy m&igrave;nh tham gia lễ truy điệu, nếu bạn mơ thấy giấc mơ n&agrave;y th&igrave; xin ch&uacute;c mừng bạn hoặc người th&acirc;n trong gia đ&igrave;nh sắp c&oacute; em b&eacute; rồi đ&oacute;.</span></p>
+<p><span style="font-size:16px;">- Nằm mơ thấy người chết đi v&agrave;o nh&agrave; m&igrave;nh l&agrave; điềm b&aacute;o may mắn đang đến gần, một v&agrave;i th&agrave;nh c&ocirc;ng trong c&ocirc;ng việc sẽ khiến bạn c&oacute; th&ecirc;m động lực để ph&aacute;t triển hơn.&nbsp;</span></p>
+<p><span style="font-size:16px;">- Mơ thấy cuộc kh&aacute;m nghiệm tử thi trong giấc mơ l&agrave; một th&ocirc;ng điệp tốt, bạn h&atilde;y chuẩn bị sẵn tinh thần để đ&oacute;n nhận những điều th&uacute; vị v&agrave; mới mẻ sắp diễn ra.</span></p>
+<h2><span style="font-size:16px;"><strong>2. Nằm mơ thấy người chết đ&aacute;nh số g&igrave; chuẩn nhất?</strong></span></h2>
+<p><span style="font-size:16px;">Mộng thấy người chết sống lại: <strong>62</strong></span></p>
+<p><span style="font-size:16px;">Chi&ecirc;m bao thấy người chết đuối: <strong>07 - 30 - 84</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy người chết do tai nạn giao th&ocirc;ng: <strong>07 - 70&nbsp;</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy người chết do tai nạn xe m&aacute;y: <strong>95&nbsp;</strong></span></p>
+<p><span style="font-size:16px;">Mộng&nbsp;thấy trẻ con chết:<strong>&nbsp;65 - 92&nbsp;</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy hồn người chết: <strong>04 - 40&nbsp;</strong></span></p>
+<p><span style="font-size:16px;">Nằm mơ thấy m&igrave;nh chết: <strong>86 - 87</strong></span></p>
+<p><span style="font-size:16px;">Ngủ mơ thấy nhiều người chết: <strong>20 - 90</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy m&igrave;nh chết sống lại: <strong>34 - 39</strong></span></p>
+<p><span style="font-size:16px;">Mộng thấy vợ chết: <strong>07 - 38 - 78</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy con g&aacute;i chết: <strong>35</strong>&nbsp;</span></p>
+<p><span style="font-size:16px;">Nằm mơ thấy n&oacute;i chuyện với người chết: <strong>75 - 76 - 90 - 92</strong></span></p>
+<p><span style="font-size:16px;">Mơ hai người đ&agrave;n &ocirc;ng chết đuối: <strong>04 - 06</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy ai đ&oacute; chết m&agrave; kh&ocirc;ng r&otilde;: <strong>03 - 08</strong></span></p>
+<p><span style="font-size:16px;">Mộng thấy mẹ chết m&agrave; mẹ chưa chết: <strong>24 - 26</strong></span></p>
+<p><span style="font-size:16px;">Chi&ecirc;m bao bố chết m&agrave; bố chưa chết: <strong>83 -75</strong></span></p>
+<p><span style="font-size:16px;">Nằm mộng thấy gặp thần chết: <strong>83 - 93</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy người lạ chết: &nbsp;<strong>04 - 60 - 12 - 52</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy quan t&agrave;i c&oacute; người chết: <strong>74 - 21</strong></span></p>
+<p><span style="font-size:16px;">Nằm mơ thấy người chết cho tiền:<strong>&nbsp;60 - 98</strong></span></p>
+<p><span style="font-size:16px;">Mơ thấy người chết ch&aacute;y đ&aacute;nh con g&igrave;: <strong>32 - 78 - 33 - 74</strong></span></p>
+<p><span style="font-size:16px;"><em><strong>Giấc mơ thấy người đ&atilde; chết l&agrave; một giấc mơ kh&ocirc;ng qu&aacute; đ&aacute;ng sợ, t&ugrave;y v&agrave;o từng giấc mơ cụ thể sẽ c&oacute; những c&aacute;ch giải th&iacute;ch kh&aacute;c nhau. Ch&uacute;c c&aacute;c bạn may mắn khi ngủ mơ thấy giấc mơ n&agrave;y nh&eacute;!</strong></em></span></p>''';
+  static String infor_15 = '''''';
+  static String infor_16 = '''''';
+  static String infor_17 = '''''';
+  static String infor_18 = '''''';
+  static String infor_19 = '''''';
+  static String infor_20 = '''''';
 }

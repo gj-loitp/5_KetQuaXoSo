@@ -278,6 +278,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     );
                                   },
                                 ),
+                                UIUtils.getButton(
+                                  "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
+                                  Icons.navigate_next,
+                                  () {
+                                    Get.to(
+                                      () => HtmlContentScreen(
+                                        titleAppBar: "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
+                                        htmlContent: ConstInformation.infor_14,
+                                      ),
+                                    );
+                                  },
+                                ),
                               ],
                             ),
                           ),
