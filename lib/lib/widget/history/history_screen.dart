@@ -43,84 +43,85 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
               borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
               blur: 5,
             ),
-            Column(
-              children: [
-                Container(
-                  padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: double.infinity,
-                    child: Row(
-                      children: [
-                        const SizedBox(
-                          width: 40,
-                          height: 40,
-                        ),
-                        const Expanded(
-                          child: Text(
-                            "Lịch sử",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
+            SafeArea(
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: double.infinity,
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: MaterialButton(
+                              onPressed: () {
+                                Get.back();
+                              },
                               color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
+                              padding: const EdgeInsets.all(0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.clear,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                          const SizedBox(
+                            width: 16,
+                          ),
+                          const Expanded(
+                            child: Text(
+                              "Lịch sử",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                                fontSize: 24,
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 5.0,
+                                    color: Colors.black,
+                                    offset: Offset(2.0, 2.0),
+                                  ),
+                                ],
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: CupertinoScrollbar(
-                    child: ListView(
-                      physics: const BouncingScrollPhysics(),
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: const Text(
-                            "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.black,
+                  Expanded(
+                    child: CupertinoScrollbar(
+                      child: ListView(
+                        physics: const BouncingScrollPhysics(),
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
                             ),
-                            textAlign: TextAlign.center,
+                            child: const Text(
+                              "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

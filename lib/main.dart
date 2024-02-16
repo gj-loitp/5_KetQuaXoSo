@@ -45,7 +45,8 @@ void main() {
       // defaultTransition: Transition.cupertino,
       defaultTransition: Transition.circularReveal,
       // defaultTransition: Transition.size,
-      transitionDuration: const Duration(milliseconds: 1000),
+      // transitionDuration: const Duration(milliseconds: 1000),
+      transitionDuration: const Duration(milliseconds: 700),
       home: const MyApp(),
       navigatorKey: navigatorKey,
       theme: ThemeData.light().copyWith(

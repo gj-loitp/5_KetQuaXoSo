@@ -48,79 +48,80 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
               borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
               blur: 5,
             ),
-            Column(
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
-                  width: double.infinity,
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 40,
-                        height: 40,
-                      ),
-                      Expanded(
-                        child: Text(
-                          widget.titleAppBar ?? "",
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            fontSize: 24,
-                            shadows: [
-                              Shadow(
-                                blurRadius: 5.0,
-                                color: Colors.black,
-                                offset: Offset(2.0, 2.0),
-                              ),
-                            ],
-                          ),
-                          textAlign: TextAlign.center,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 40,
-                        height: 40,
-                        child: MaterialButton(
-                          onPressed: () {
-                            Get.back();
-                          },
-                          color: Colors.white,
-                          padding: const EdgeInsets.all(0),
-                          shape: const CircleBorder(),
-                          child: const Icon(
-                            Icons.clear,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Container(
+            SafeArea(
+              child: Column(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                     width: double.infinity,
-                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                      color: Colors.white,
-                    ),
-                    child: HtmlWidget(
-                      widget.htmlContent ?? "",
-                      renderMode: RenderMode.listView,
-                      textStyle: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black,
-                      ),
-                      enableCaching: true,
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.back();
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.clear,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(
+                          child: Text(
+                            widget.titleAppBar ?? "",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              fontSize: 24,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0,
+                                  color: Colors.black,
+                                  offset: Offset(2.0, 2.0),
+                                ),
+                              ],
+                            ),
+                            textAlign: TextAlign.start,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                      margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                        color: Colors.white,
+                      ),
+                      child: HtmlWidget(
+                        widget.htmlContent ?? "",
+                        renderMode: RenderMode.listView,
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                        ),
+                        enableCaching: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
