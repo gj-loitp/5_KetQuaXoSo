@@ -71,11 +71,13 @@ class UIUtils {
   }) {
     return Container(
       margin: EdgeInsets.only(top: marginTop),
-      height: DimenConstants.buttonHeight * 1.5,
+      // height: DimenConstants.buttonHeight * 1.5,
+      // padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.black,
           backgroundColor: Colors.white,
+          minimumSize: const Size(double.infinity, DimenConstants.buttonHeight * 1.5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(DimenConstants.radiusRound),
             side: BorderSide(
@@ -92,6 +94,7 @@ class UIUtils {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(height: 8),
                   Text(
                     text,
                     style: const TextStyle(
@@ -108,7 +111,10 @@ class UIUtils {
                         color: Colors.grey,
                         fontSize: DimenConstants.txtSmall,
                       ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
+                  const SizedBox(height: 8),
                 ],
               ),
             ),

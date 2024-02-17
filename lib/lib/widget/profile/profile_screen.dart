@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
@@ -205,6 +206,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   description: "Các thông tin hữu ích 😘",
                                   () {
                                     Get.to(() => const InformationScreen());
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Xem tử vi trọn đời của 12 con giáp",
+                                  Icons.people_sharp,
+                                  description:
+                                      "Tử vi trọn đời cung cấp cho bạn thông tin tổng quát về tử vi phương đông của 12 con giáp.",
+                                  () {
+                                    //TODO roy93~ ref https://ngaydep.com/tu-vi-tron-doi-cua-12-con-giap.html
+                                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
                                   },
                                 ),
                                 UIUtils.getButton(
