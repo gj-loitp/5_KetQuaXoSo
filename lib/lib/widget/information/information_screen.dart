@@ -115,7 +115,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
-                                        htmlContent: ConstInformation.infor_0,
+                                        htmlContent: infor_0,
                                       ),
                                     );
                                   },
@@ -128,7 +128,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                       () => HtmlContentScreen(
                                         titleAppBar:
                                             "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
-                                        htmlContent: ConstInformation.infor_1,
+                                        htmlContent: infor_1,
                                       ),
                                     );
                                   },
@@ -140,7 +140,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
-                                        htmlContent: ConstInformation.infor_2,
+                                        htmlContent: infor_2,
                                       ),
                                     );
                                   },
@@ -153,7 +153,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                       () => HtmlContentScreen(
                                         titleAppBar:
                                             "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
-                                        htmlContent: ConstInformation.infor_3,
+                                        htmlContent: infor_3,
                                       ),
                                     );
                                   },
@@ -165,7 +165,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
-                                        htmlContent: ConstInformation.infor_4,
+                                        htmlContent: infor_4,
                                       ),
                                     );
                                   },
@@ -177,7 +177,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
-                                        htmlContent: ConstInformation.infor_5,
+                                        htmlContent: infor_5,
                                       ),
                                     );
                                   },
@@ -189,7 +189,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Khuyến cáo khi đổi số trúng",
-                                        htmlContent: ConstInformation.infor_6,
+                                        htmlContent: infor_6,
                                       ),
                                     );
                                   },
@@ -201,7 +201,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Mức chi hoa hồng đại lý của các loại hình xổ số",
-                                        htmlContent: ConstInformation.infor_7,
+                                        htmlContent: infor_7,
                                       ),
                                     );
                                   },
@@ -213,7 +213,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
-                                        htmlContent: ConstInformation.infor_8,
+                                        htmlContent: infor_8,
                                       ),
                                     );
                                   },
@@ -225,7 +225,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
-                                        htmlContent: ConstInformation.infor_9,
+                                        htmlContent: infor_9,
                                       ),
                                     );
                                   },
@@ -237,7 +237,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
-                                        htmlContent: ConstInformation.infor_10,
+                                        htmlContent: infor_10,
                                       ),
                                     );
                                   },
@@ -249,7 +249,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Câu chuyện chơi lô đề ở đâu cũng có",
-                                        htmlContent: ConstInformation.infor_11,
+                                        htmlContent: infor_11,
                                       ),
                                     );
                                   },
@@ -261,7 +261,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
-                                        htmlContent: ConstInformation.infor_12,
+                                        htmlContent: infor_12,
                                       ),
                                     );
                                   },
@@ -273,7 +273,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
-                                        htmlContent: ConstInformation.infor_13,
+                                        htmlContent: infor_13,
                                       ),
                                     );
                                   },
@@ -285,7 +285,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                       () => HtmlContentScreen(
                                         titleAppBar: "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
-                                        htmlContent: ConstInformation.infor_14,
+                                        htmlContent: infor_14,
                                       ),
                                     );
                                   },
@@ -297,7 +297,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     Get.to(
                                           () => HtmlContentScreen(
                                         titleAppBar: "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
-                                        htmlContent: ConstInformation.infor_15,
+                                        htmlContent: infor_15,
                                       ),
                                     );
                                   },

@@ -4,8 +4,7 @@
 ///sau do copy toan bo content moi va dan vao trang https://wordtohtml.net/
 ///cuoi cung se duoc 1 content moi html hoan chinh
 
-class ConstInformation {
-  static String infor_0 = '''<main id="main" class="site-main">
+ String infor_0 = '''<main id="main" class="site-main">
 
 			
 <article id="post-8220" class="post-8220 page type-page status-publish hentry">
@@ -180,7 +179,7 @@ class ConstInformation {
 	</article><!-- #post-## -->
 
 		</main>''';
-  static String infor_1 = '''<div class="entry-content no-share" style="transform: none;">
+ String infor_1 = '''<div class="entry-content no-share" style="transform: none;">
   <div class="jeg_share_button share-float jeg_sticky_share clearfix share-normal" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
     <div class="jegStickyHolder">
       <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; top: 71px; left: 157.5px;"></div>
@@ -309,7 +308,7 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_2 = '''<div class="body-r">
+ String infor_2 = '''<div class="body-r">
   <div>
     <div>
      
@@ -498,7 +497,7 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_3 = '''<div>
+ String infor_3 = '''<div>
   <div>
     <h1> Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số</h1>
     <p> &nbsp;</p>
@@ -533,7 +532,7 @@ class ConstInformation {
     <p> Nghị định 78/2012/NĐ-CP quy định về việc xử lý các hành vi sai phạm như sau: Các hành vi vi phạm, hình thức xử phạt, mức phạt, thẩm quyền xử phạt vi phạm hành chính về hoạt động kinh doanh xổ số được thực hiện theo quy định của pháp luật hiện hành về xử phạt vi phạm hành chính đối với hoạt động kinh doanh xổ số. Hình thức xử phạt và mức phạt đối với hành vi vi phạm được thực hiện theo quy định của pháp luật hiện hành đối với hành vi vi phạm quy định về sử dụng kết quả xổ số và thông tin kết quả trúng thưởng.</p>
   </div>
 </div>''';
-  static String infor_4 = '''<tbody>
+ String infor_4 = '''<tbody>
   <tr>
     <td class="main">
       <div class="mainbody">
@@ -587,7 +586,7 @@ class ConstInformation {
     </td>
   </tr>
 </tbody>''';
-  static String infor_5 = '''<div class="body-r">
+ String infor_5 = '''<div class="body-r">
   <div>
     <div>
       <div align="center">
@@ -817,7 +816,7 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_6 = '''<td class="main">
+ String infor_6 = '''<td class="main">
   <div class="mainbody">
     <div id="noidung">
       <div id="component">
@@ -974,7 +973,7 @@ class ConstInformation {
     </div>
   </div>
 </td>''';
-  static String infor_7 = '''<div class="body-r">
+ String infor_7 = '''<div class="body-r">
   <div>
     <div>
       <h3> &nbsp;</h3>
@@ -1055,7 +1054,7 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_8 = '''<article class="the-article">
+ String infor_8 = '''<article class="the-article">
   <header class="the-article-header">
     <h1 class="the-article-title">Hướng Dẫn Cách Chơi Xổ Số Kiến Thiết Miền Nam Mới Nhất</h1>
   </header>
@@ -1190,7 +1189,7 @@ class ConstInformation {
     </div>
   </div>
 </article>''';
-  static String infor_9 = '''<div class="contentPostSingle result margin-10">
+ String infor_9 = '''<div class="contentPostSingle result margin-10">
   <p>Có rất nhiều phương pháp đánh lô đề miền Nam khác nhau mà bạn có thể tham khảo và tìm hiểu thêm những cách đánh lô MN dễ nhất và hiệu quả nhất. Nhưng trước hết cần học cách tính số đề miền Nam như thế nào? Mời người chơi tham khảo ngay cách chơi <a href="https://xosoketqua.com/xsmn-xo-so-mien-nam.html">
       <strong>xổ số miền Nam</strong>
     </a> được <a href="https://xosoketqua.com/tin-xo-so.htm">Tin tức xổ số</a> của <strong>KETQUA.TV</strong> chia sẻ trong bài viết dưới đây! </p>
@@ -1252,7 +1251,7 @@ class ConstInformation {
     <span style="font-style: italic; color: red; font-size: 16px; line-height: 1.0; --darkreader-inline-color: #ff1a1a;" data-darkreader-inline-color="">Lưu ý:</span> Những thông tin trên chỉ mang tính chất tham khảo, giải trí. <strong>Xosoketqua.com</strong> không cổ suý cho các hoạt động chơi lô, đề bất hợp pháp. Các bạn chỉ nên chơi lô tô, xổ số của nhà nước phát hành tại các đại lý vé số.
   </p>
 </div>''';
-  static String infor_10 = '''<div class="block block_1">
+ String infor_10 = '''<div class="block block_1">
   <div class="block-main-heading">
     <h1>Số 0 Có Ý Nghĩa Gì? Luận Giải Chi Tiết Về Số 0 Bạn Nên Biết</h1>
   </div>
@@ -1791,7 +1790,7 @@ class ConstInformation {
     </p>
   </div>
 </div>''';
-  static String infor_11 = '''<div class="row">
+ String infor_11 = '''<div class="row">
   <div class="col-xs-12">
     <div class="block block_1">
       <div class="block-main-heading">
@@ -2154,7 +2153,7 @@ class ConstInformation {
     </div>
   </div>
 </div>''';
-  static String infor_12 = '''<div class="block block_1">
+ String infor_12 = '''<div class="block block_1">
   <div class="block-main-heading">
     <h1>Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn</h1>
   </div>
@@ -2499,7 +2498,7 @@ class ConstInformation {
     </p>
   </div>
 </div>''';
-  static String infor_13 = '''<div class="block block_1">
+ String infor_13 = '''<div class="block block_1">
   <div class="block-main-heading">
     <h1>Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất</h1>
   </div>
@@ -2816,8 +2815,7 @@ class ConstInformation {
     </p>
   </div>
 </div>''';
-
-  static String infor_14 = '''<h2><span style="font-size:16px;"><strong>Nằm mơ thấy người chết l&agrave; điềm l&agrave;nh hay dữ?</strong></span></h2>
+ String infor_14 = '''<h2><span style="font-size:16px;"><strong>Nằm mơ thấy người chết l&agrave; điềm l&agrave;nh hay dữ?</strong></span></h2>
 <p><span style="font-size:16px;">&nbsp;</span></p>
 <h3><span style="font-size:16px;"><strong>Nằm mơ thấy người th&acirc;n chết l&agrave; điềm g&igrave;?</strong></span></h3>
 <p><span style="font-size:16px;">Đối với bất kỳ ai, sự ra đi của người th&acirc;n lu&ocirc;n l&agrave; một c&uacute; sốc lớn, kh&oacute; l&ograve;ng m&agrave; ngu&ocirc;i ngoai được. Thậm ch&iacute;, c&oacute; những người kh&ocirc;ng chịu nổi cảnh chứng kiến người th&acirc;n của m&igrave;nh ra đi v&agrave; sống trong nỗi &aacute;m ảnh đ&oacute; suốt cả cuộc đời.</span></p>
@@ -2904,7 +2902,7 @@ class ConstInformation {
 <p><span style="font-size:16px;">Nằm mơ thấy người chết cho tiền:<strong>&nbsp;60 - 98</strong></span></p>
 <p><span style="font-size:16px;">Mơ thấy người chết ch&aacute;y đ&aacute;nh con g&igrave;: <strong>32 - 78 - 33 - 74</strong></span></p>
 <p><span style="font-size:16px;"><em><strong>Giấc mơ thấy người đ&atilde; chết l&agrave; một giấc mơ kh&ocirc;ng qu&aacute; đ&aacute;ng sợ, t&ugrave;y v&agrave;o từng giấc mơ cụ thể sẽ c&oacute; những c&aacute;ch giải th&iacute;ch kh&aacute;c nhau. Ch&uacute;c c&aacute;c bạn may mắn khi ngủ mơ thấy giấc mơ n&agrave;y nh&eacute;!</strong></em></span></p>''';
-  static String infor_15 = '''<p><span style="font-size:16px;">Một ng&agrave;y mệt nhọc của bạn đều được giải tỏa bởi một giấc ngủ, tuy nhi&ecirc;n, trong khi ngủ n&atilde;o của ta vẫn hoạt động, bằng chứng l&agrave; những giấc mơ m&agrave; ta trải qua trong khi ngủ. Nhưng giấc mơ của mỗi người kh&ocirc;ng chỉ đơn giản như thế m&agrave; n&oacute; c&ograve;n l&agrave; một dự b&aacute;o từ tiềm thức của bạn đối với một tương lai gần.</span></p>
+ String infor_15 = '''<p><span style="font-size:16px;">Một ng&agrave;y mệt nhọc của bạn đều được giải tỏa bởi một giấc ngủ, tuy nhi&ecirc;n, trong khi ngủ n&atilde;o của ta vẫn hoạt động, bằng chứng l&agrave; những giấc mơ m&agrave; ta trải qua trong khi ngủ. Nhưng giấc mơ của mỗi người kh&ocirc;ng chỉ đơn giản như thế m&agrave; n&oacute; c&ograve;n l&agrave; một dự b&aacute;o từ tiềm thức của bạn đối với một tương lai gần.</span></p>
 <p><span style="font-size:16px;">Trong những giấc mơ đ&oacute;, th&igrave; thường những giấc mơ b&aacute;o điềm kh&ocirc;ng phải may mắn đ&oacute; l&agrave; mơ thấy m&aacute;u, người chết hay l&agrave; những giấc mơ thấy động vật như lo&agrave;i rắn đều được nhiều người nghĩ l&agrave; điềm dữ.</span></p>
 <p><span style="font-size:16px;">Nhưng thực tế c&oacute; phải như thế hay kh&ocirc;ng? T&ugrave;y theo từng nội dung giấc mơ về lo&agrave;i rắn, bạn sẽ c&oacute; những &yacute; nghĩa kh&aacute;c nhau.</span></p>
 <p><span style="font-size:16px;"><img alt="Mơ thấy rắn cắn" src="https://images.xoso.mobi/news_xosome/2016/06/30/Ku/mo-thay-ran-can.jpg" title="Mơ thấy rắn cắn"></span></p>
@@ -2946,9 +2944,8 @@ class ConstInformation {
     </tbody>
 </table>
 <div style="border: 0px;">&nbsp;</div>''';
-  static String infor_16 = '''''';
-  static String infor_17 = '''''';
-  static String infor_18 = '''''';
-  static String infor_19 = '''''';
-  static String infor_20 = '''''';
-}
+ String infor_16 = '''''';
+ String infor_17 = '''''';
+ String infor_18 = '''''';
+ String infor_19 = '''''';
+ String infor_20 = '''''';
