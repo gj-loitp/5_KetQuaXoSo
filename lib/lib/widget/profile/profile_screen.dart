@@ -247,6 +247,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   },
                                 ),
                                 UIUtils.getButton(
+                                  "Phong thủy đời sống",
+                                  Icons.warehouse_outlined,
+                                  description:
+                                      "Trưng bày cây cảnh trong phòng khách hay trong không gian ngôi nhà vốn là một thói quen tốt được nhiều người ưa chuộng.",
+                                  () {
+                                    //TODO roy93~ ref https://ngaydep.com/phong-thuy.html
+                                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Đánh giá ứng dụng",
                                   Icons.hotel_class,
                                   description:
