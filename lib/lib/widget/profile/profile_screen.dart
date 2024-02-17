@@ -1,5 +1,6 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:blur/blur.dart';
+import 'package:el_tooltip/el_tooltip.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -30,7 +31,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   final ControllerMain _controllerMain = Get.find();
 
-  final _keyTooltipTheme = GlobalKey();
+  final _cTooltip = ElTooltipController();
 
   @override
   void initState() {
@@ -42,15 +43,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
     });
   }
 
-  void _showTooltip() {
+  Future<void> _showTooltip() async {
+    await Future.delayed(const Duration(milliseconds: 300));
     SharedPreferencesUtil.getBool(SharedPreferencesUtil.tooltipTheme).then((value) {
       if (value == true) {
         //do not show
       } else {
-        final dynamic tooltip = _keyTooltipTheme.currentState;
-        tooltip.ensureTooltipVisible();
+        _cTooltip.show();
       }
-      SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, true);
+      //TODO roy93~ iplm
+      // SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, true);
     });
   }
 
@@ -163,46 +165,57 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   ),
                                 ),
                                 const SizedBox(height: 16),
-                                const Text(
-                                  "Chọn giao diện",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 22,
-                                    color: Colors.black,
+                                Container(
+                                  width: double.infinity,
+                                  alignment: Alignment.center,
+                                  child: ElTooltip(
+                                    controller: _cTooltip,
+                                    showChildAboveOverlay: false,
+                                    position: ElTooltipPosition.bottomCenter,
+                                    appearAnimationDuration: const Duration(milliseconds: 300),
+                                    disappearAnimationDuration: const Duration(milliseconds: 300),
+                                    content: const Text(
+                                      'Bạn có thể lựa chọn giao diện tại đây\nChúng tôi khuyến cáo chọn Theme Tối Ưu sẽ cho trải nghiệm mượt mà hơn',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 12,
+                                        color: Colors.black,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    child: const Text(
+                                      "Chọn giao diện",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 22,
+                                        color: Colors.black,
+                                      ),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(height: 16),
-                                Tooltip(
-                                  key: _keyTooltipTheme,
-                                  margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                                  showDuration: const Duration(seconds: 60),
-                                  message:
-                                      'Bạn có thể lựa chọn giao diện tại đây, chúng tôi khuyến cáo chọn Theme Tối Ưu sẽ cho trải nghiệm mượt mà hơn',
-                                  preferBelow: true,
-                                  triggerMode: TooltipTriggerMode.longPress,
-                                  child: ToggleSwitch(
-                                    minWidth: Get.width / 3,
-                                    initialLabelIndex: _controllerMain.themeIndex.value,
-                                    cornerRadius: 45.0,
-                                    activeFgColor: Colors.white,
-                                    inactiveBgColor: Colors.grey,
-                                    inactiveFgColor: Colors.white,
-                                    totalSwitches: 2,
-                                    labels: const ['Theme Tối ưu', 'Theme Web'],
-                                    icons: const [
-                                      Icons.looks_one,
-                                      Icons.looks_two,
-                                    ],
-                                    activeBgColors: const [
-                                      [ColorConstants.appColor],
-                                      [ColorConstants.appColor]
-                                    ],
-                                    onToggle: (index) {
-                                      debugPrint('switched to: $index');
-                                      _controllerMain.setThemeIndex(index);
-                                      _showPopupRestart();
-                                    },
-                                  ),
+                                ToggleSwitch(
+                                  minWidth: Get.width / 3,
+                                  initialLabelIndex: _controllerMain.themeIndex.value,
+                                  cornerRadius: 45.0,
+                                  activeFgColor: Colors.white,
+                                  inactiveBgColor: Colors.grey,
+                                  inactiveFgColor: Colors.white,
+                                  totalSwitches: 2,
+                                  labels: const ['Theme Tối ưu', 'Theme Web'],
+                                  icons: const [
+                                    Icons.looks_one,
+                                    Icons.looks_two,
+                                  ],
+                                  activeBgColors: const [
+                                    [ColorConstants.appColor],
+                                    [ColorConstants.appColor]
+                                  ],
+                                  onToggle: (index) {
+                                    debugPrint('switched to: $index');
+                                    _controllerMain.setThemeIndex(index);
+                                    _showPopupRestart();
+                                  },
                                 ),
                                 const SizedBox(height: 32),
                                 UIUtils.getButton(
@@ -347,6 +360,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                         "Xoá dữ liệu tooltip thành công, bạn có thể sẽ cần khởi động lại để thấy kết quả");
                                     SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, false);
                                     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, false);
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, false);
                                   },
                                 ),
                               ],

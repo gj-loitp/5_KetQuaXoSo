@@ -29,6 +29,7 @@ class XSMNScreen extends StatefulWidget {
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   final ControllerMain _controllerMain = Get.find();
   final _keyTooltipCalendarXSMN = GlobalKey();
+  final _keyTooltipCityXSMN = GlobalKey();
 
   @override
   void initState() {
@@ -48,7 +49,17 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
         final dynamic tooltip = _keyTooltipCalendarXSMN.currentState;
         tooltip.ensureTooltipVisible();
       }
-      SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
+      // SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
+
+      // SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN).then((value) {
+      //   if (value == true) {
+      //     //do not show
+      //   } else {
+      //     final dynamic tooltip = _keyTooltipCityXSMN.currentState;
+      //     tooltip.ensureTooltipVisible();
+      //   }
+      //   SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
+      // });
     });
   }
 
@@ -141,16 +152,24 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               SizedBox(
                 width: 40,
                 height: 40,
-                child: MaterialButton(
-                  onPressed: () {
-                    Get.to(() => const ProvinceListScreen());
-                  },
-                  color: Colors.blueAccent,
-                  padding: const EdgeInsets.all(0),
-                  shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.location_city,
-                    color: Colors.white,
+                child: Tooltip(
+                  key: _keyTooltipCityXSMN,
+                  margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                  showDuration: const Duration(seconds: 60),
+                  message: 'Dò kết qủa theo các tỉnh thành tại ',
+                  preferBelow: true,
+                  triggerMode: TooltipTriggerMode.longPress,
+                  child: MaterialButton(
+                    onPressed: () {
+                      Get.to(() => const ProvinceListScreen());
+                    },
+                    color: Colors.blueAccent,
+                    padding: const EdgeInsets.all(0),
+                    shape: const CircleBorder(),
+                    child: const Icon(
+                      Icons.location_city,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
