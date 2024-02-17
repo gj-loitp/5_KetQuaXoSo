@@ -109,6 +109,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                             child: Column(
                               children: [
                                 UIUtils.getButton(
+                                  "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
+                                  Icons.navigate_next,
+                                      () {
+                                    Get.to(
+                                          () => HtmlContentScreen(
+                                        titleAppBar: "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
+                                        htmlContent: infor_18,
+                                      ),
+                                    );
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
                                   Icons.navigate_next,
                                   () {
