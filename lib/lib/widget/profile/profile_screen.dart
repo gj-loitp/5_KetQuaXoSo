@@ -237,6 +237,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   },
                                 ),
                                 UIUtils.getButton(
+                                  "Blog cuộc sống",
+                                  Icons.emoji_emotions,
+                                  description:
+                                      "Trong cuộc sống, chúng ta không thể tránh khỏi những phút giây mệt mỏi, áp lực hoặc những cảm xúc tiêu cực xảy đến mỗi ngày.",
+                                  () {
+                                    //TODO roy93~ ref https://ngaydep.com/blog-cuoc-song.html
+                                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Đánh giá ứng dụng",
                                   Icons.hotel_class,
                                   description:
