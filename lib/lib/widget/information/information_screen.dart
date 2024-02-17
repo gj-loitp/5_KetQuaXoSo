@@ -8,6 +8,8 @@ import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/widget/htmlContent/html_content_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/const_information.dart';
 
+import 'const_information_2.dart';
+
 class InformationScreen extends StatefulWidget {
   const InformationScreen({
     super.key,
@@ -361,6 +363,31 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                         titleAppBar:
                                             "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
                                         htmlContent: infor_17,
+                                      ),
+                                    );
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                  Icons.navigate_next,
+                                  () {
+                                    Get.to(
+                                      () => HtmlContentScreen(
+                                        titleAppBar:
+                                            "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                        htmlContent: infor_17,
+                                      ),
+                                    );
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
+                                  Icons.navigate_next,
+                                  () {
+                                    Get.to(
+                                      () => HtmlContentScreen(
+                                        titleAppBar: "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
+                                        htmlContent: infor_21,
                                       ),
                                     );
                                   },
