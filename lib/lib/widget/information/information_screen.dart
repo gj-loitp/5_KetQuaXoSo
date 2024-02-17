@@ -302,6 +302,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     );
                                   },
                                 ),
+                                UIUtils.getButton(
+                                  "Xổ số Vietlott có đáng tin hay không?",
+                                  Icons.navigate_next,
+                                      () {
+                                    Get.to(
+                                          () => HtmlContentScreen(
+                                        titleAppBar: "Xổ số Vietlott có đáng tin hay không?",
+                                        htmlContent: infor_16,
+                                      ),
+                                    );
+                                  },
+                                ),
                               ],
                             ),
                           ),
