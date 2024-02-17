@@ -337,6 +337,18 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                     UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
                                   },
                                 ),
+                                UIUtils.getButton(
+                                  "Xoá dữ liệu tooltip",
+                                  Icons.info,
+                                  description:
+                                      "Ứng dụng sẽ hiển thị lại các mục tooltip, giống như lần đầu tiên bạn tải ứng dụng này về",
+                                  () {
+                                    showSnackBarFull(StringConstants.warning,
+                                        "Xoá dữ liệu tooltip thành công, bạn có thể sẽ cần khởi động lại để thấy kết quả");
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, false);
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, false);
+                                  },
+                                ),
                               ],
                             ),
                           ),
