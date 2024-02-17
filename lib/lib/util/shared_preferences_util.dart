@@ -9,6 +9,7 @@ class SharedPreferencesUtil {
   static String themeIndex = "themeIndex";
   static String isShowedDialogHello = "isShowedDialogHello";
   static String tooltipTheme = "tooltipTheme";
+  static String keyTooltipCalendarXSMN = "_keyTooltipCalendarXSMN";
   static int themeIndexNativeView = 0;
   static int themeIndexWebView = 1;
 

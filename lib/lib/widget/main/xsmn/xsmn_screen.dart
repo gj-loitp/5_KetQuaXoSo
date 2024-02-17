@@ -1,17 +1,17 @@
 import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
+import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
-import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
-import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -28,12 +28,28 @@ class XSMNScreen extends StatefulWidget {
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   final ControllerMain _controllerMain = Get.find();
+  final _keyTooltipCalendarXSMN = GlobalKey();
 
   @override
   void initState() {
     super.initState();
     // debugPrint("initState");
     _selectDay(DateTime.now(), true);
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      _showTooltip();
+    });
+  }
+
+  void _showTooltip() {
+    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN).then((value) {
+      if (value == true) {
+        //do not show
+      } else {
+        final dynamic tooltip = _keyTooltipCalendarXSMN.currentState;
+        tooltip.ensureTooltipVisible();
+      }
+      SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
+    });
   }
 
   @override
@@ -90,23 +106,31 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           Expanded(
             child: SizedBox(
               height: 100,
-              child: CalendarTimeline(
-                shrink: false,
-                showYears: false,
-                initialDate: _controllerMain.xsmnSelectedDateTime.value,
-                firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                lastDate: DateTime.now().add(const Duration(days: 365)),
-                onDateSelected: (date) {
-                  _selectDay(date, false);
-                },
-                leftMargin: 0,
-                monthColor: Colors.black,
-                dayColor: Colors.black,
-                activeDayColor: Colors.white,
-                activeBackgroundDayColor: ColorConstants.appColor,
-                dotsColor: Colors.white,
-                // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-                locale: 'vi',
+              child: Tooltip(
+                key: _keyTooltipCalendarXSMN,
+                margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                showDuration: const Duration(seconds: 60),
+                message: 'Bạn có thể lựa chọn ngày tháng để tra cứu kết quả xổ số bằng cách nhấn vào đây',
+                preferBelow: true,
+                triggerMode: TooltipTriggerMode.longPress,
+                child: CalendarTimeline(
+                  shrink: false,
+                  showYears: false,
+                  initialDate: _controllerMain.xsmnSelectedDateTime.value,
+                  firstDate: DateTime.now().subtract(const Duration(days: 365)),
+                  lastDate: DateTime.now().add(const Duration(days: 365)),
+                  onDateSelected: (date) {
+                    _selectDay(date, false);
+                  },
+                  leftMargin: 0,
+                  monthColor: Colors.black,
+                  dayColor: Colors.black,
+                  activeDayColor: Colors.white,
+                  activeBackgroundDayColor: ColorConstants.appColor,
+                  dotsColor: Colors.white,
+                  // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+                  locale: 'vi',
+                ),
               ),
             ),
           ),

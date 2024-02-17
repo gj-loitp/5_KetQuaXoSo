@@ -109,22 +109,6 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        // SizedBox(
-                        //   width: 40,
-                        //   height: 40,
-                        //   child: MaterialButton(
-                        //     onPressed: () {
-                        //       Get.back();
-                        //     },
-                        //     color: Colors.white,
-                        //     padding: const EdgeInsets.all(0),
-                        //     shape: const CircleBorder(),
-                        //     child: const Icon(
-                        //       Icons.clear,
-                        //       color: Colors.black,
-                        //     ),
-                        //   ),
-                        // ),
                       ],
                     ),
                   ),
@@ -190,6 +174,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 const SizedBox(height: 16),
                                 Tooltip(
                                   key: _keyTooltipTheme,
+                                  margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                                  showDuration: const Duration(seconds: 60),
                                   message:
                                       'Bạn có thể lựa chọn giao diện tại đây, chúng tôi khuyến cáo chọn Theme Tối Ưu sẽ cho trải nghiệm mượt mà hơn',
                                   preferBelow: true,
