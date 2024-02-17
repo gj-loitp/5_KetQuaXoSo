@@ -2,10 +2,12 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
@@ -28,10 +30,28 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   final ControllerMain _controllerMain = Get.find();
 
+  final _keyTooltipTheme = GlobalKey();
+
   @override
   void initState() {
     super.initState();
     _controllerMain.getThemeIndex();
+
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      _showTooltip();
+    });
+  }
+
+  void _showTooltip() {
+    SharedPreferencesUtil.getBool(SharedPreferencesUtil.tooltipTheme).then((value) {
+      if (value == true) {
+        //do not show
+      } else {
+        final dynamic tooltip = _keyTooltipTheme.currentState;
+        tooltip.ensureTooltipVisible();
+      }
+      SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, true);
+    });
   }
 
   @override
@@ -168,28 +188,35 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   ),
                                 ),
                                 const SizedBox(height: 16),
-                                ToggleSwitch(
-                                  minWidth: Get.width / 3,
-                                  initialLabelIndex: _controllerMain.themeIndex.value,
-                                  cornerRadius: 45.0,
-                                  activeFgColor: Colors.white,
-                                  inactiveBgColor: Colors.grey,
-                                  inactiveFgColor: Colors.white,
-                                  totalSwitches: 2,
-                                  labels: const ['Theme Tối ưu', 'Theme Web'],
-                                  icons: const [
-                                    Icons.looks_one,
-                                    Icons.looks_two,
-                                  ],
-                                  activeBgColors: const [
-                                    [ColorConstants.appColor],
-                                    [ColorConstants.appColor]
-                                  ],
-                                  onToggle: (index) {
-                                    debugPrint('switched to: $index');
-                                    _controllerMain.setThemeIndex(index);
-                                    _showPopupRestart();
-                                  },
+                                Tooltip(
+                                  key: _keyTooltipTheme,
+                                  message:
+                                      'Bạn có thể lựa chọn giao diện tại đây, chúng tôi khuyến cáo chọn Theme Tối Ưu sẽ cho trải nghiệm mượt mà hơn',
+                                  preferBelow: true,
+                                  triggerMode: TooltipTriggerMode.longPress,
+                                  child: ToggleSwitch(
+                                    minWidth: Get.width / 3,
+                                    initialLabelIndex: _controllerMain.themeIndex.value,
+                                    cornerRadius: 45.0,
+                                    activeFgColor: Colors.white,
+                                    inactiveBgColor: Colors.grey,
+                                    inactiveFgColor: Colors.white,
+                                    totalSwitches: 2,
+                                    labels: const ['Theme Tối ưu', 'Theme Web'],
+                                    icons: const [
+                                      Icons.looks_one,
+                                      Icons.looks_two,
+                                    ],
+                                    activeBgColors: const [
+                                      [ColorConstants.appColor],
+                                      [ColorConstants.appColor]
+                                    ],
+                                    onToggle: (index) {
+                                      debugPrint('switched to: $index');
+                                      _controllerMain.setThemeIndex(index);
+                                      _showPopupRestart();
+                                    },
+                                  ),
                                 ),
                                 const SizedBox(height: 32),
                                 UIUtils.getButton(

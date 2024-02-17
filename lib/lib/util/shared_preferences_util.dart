@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SharedPreferencesUtil {
   static String themeIndex = "themeIndex";
   static String isShowedDialogHello = "isShowedDialogHello";
+  static String tooltipTheme = "tooltipTheme";
   static int themeIndexNativeView = 0;
   static int themeIndexWebView = 1;
 
