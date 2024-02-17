@@ -257,6 +257,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   },
                                 ),
                                 UIUtils.getButton(
+                                  "Nhân tướng học - Xem tướng, xem nốt ruồi, xem chỉ tay",
+                                  Icons.monetization_on_rounded,
+                                  description: "Trang thông tin ngày giờ và tử vi",
+                                  () {
+                                    //TODO roy93~ ref https://ngaydep.com/xem-tuong.html
+                                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Đánh giá ứng dụng",
                                   Icons.hotel_class,
                                   description:
