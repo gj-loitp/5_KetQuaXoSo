@@ -8622,5 +8622,1047 @@
     </tbody>
 </table>
 <div style="border: 0px;">&nbsp;</div>''';
- String infor_19 = '''''';
+ String infor_19 = '''<h1><span style="font-size:16px;">Xem mệnh, xem ngũ h&agrave;nh tương sinh v&agrave; tương khắc</span></h1>
+<p><span style="font-size:16px;"><br></span></p>
+<p><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-menh-ngu-hanh-tuong-sinh.html" href="https://ngaydep.com/xem-menh-ngu-hanh-tuong-sinh.html">Xem mệnh</a> l&agrave; tiện &iacute;ch gi&uacute;p bạn tra cứu nhanh ch&oacute;ng dễ d&agrave;ng tuổi của m&igrave;nh thuộc mệnh g&igrave;. Ngo&agrave;i ra bạn cũng c&oacute; thể xem được c&aacute;c th&ocirc;ng tin về <strong>ngũ h&agrave;nh tương sinh</strong>, <strong>tương khắc</strong> của m&igrave;nh.</span></p>
+<p><span style="font-size:16px;"><img data-cke-saved-src="https://ngaydep.com/files/tuvi/content/ngu-hanh-tuong-sinh.jpg" src="https://ngaydep.com/files/tuvi/content/ngu-hanh-tuong-sinh.jpg"></span></p>
+<h2><span style="font-size:16px;">&nbsp;Ngũ h&agrave;nh tương sinh</span></h2>
+<ul>
+    <li><span style="font-size:16px;"><strong>Kim</strong> sinh <strong>Thủy</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Thủy</strong> sinh <strong>Mộc</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Mộc</strong> sinh <strong>Hỏa</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Hỏa</strong> sinh <strong>Thổ</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Thổ</strong> sinh <strong>Kim</strong></span></li>
+</ul>
+<h2><span style="font-size:16px;">&nbsp;Ngũ h&agrave;nh tương khắc</span></h2>
+<ul>
+    <li><span style="font-size:16px;"><strong>Kim</strong> khắc <strong>Mộc</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Mộc</strong> khắc <strong>Thổ</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Thổ</strong> khắc <strong>Thủy</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Thủy</strong> khắc <strong>Hỏa</strong></span></li>
+    <li><span style="font-size:16px;"><strong>Hỏa</strong> khắc <strong>Kim</strong></span></li>
+    <li><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-menh-ngu-hanh-tuong-sinh.html" href="https://ngaydep.com/xem-menh-ngu-hanh-tuong-sinh.html" title="Bảng tra cứu mệnh niên và cung mệnh">Bảng tra cứu mệnh ni&ecirc;n v&agrave; cung mệnh</a></span></li>
+</ul>
+<table style="width:100%;" class=" cke_show_border">
+    <tbody>
+        <tr>
+            <td><span style="font-size:16px;">Năm sinh</span></td>
+            <td><span style="font-size:16px;">Tuổi</span></td>
+            <td><span style="font-size:16px;">Giải nghĩa</span></td>
+            <td><span style="font-size:16px;">Ngũ h&agrave;nh</span></td>
+            <td><span style="font-size:16px;">Giải nghĩa</span></td>
+            <td><span style="font-size:16px;">Cung Nam</span></td>
+            <td><span style="font-size:16px;">Cung Nữ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Giáp Tý sinh năm 1924">1924</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p T&yacute;</span></td>
+            <td><span style="font-size:16px;">Ốc Thượng Chi Thử_Chuột ở n&oacute;c nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Hải Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong biển</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Ất Sửu sinh năm 1925">1925</a></span></td>
+            <td><span style="font-size:16px;">Ất Sửu</span></td>
+            <td><span style="font-size:16px;">Hải Nội Chi Ngưu_Tr&acirc;u trong biển</span></td>
+            <td><span style="font-size:16px;">Hải Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong biển</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Bính Dần sinh năm 1926">1926</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Dần</span></td>
+            <td><span style="font-size:16px;">Sơn L&acirc;m Chi Hổ_Hổ trong rừng</span></td>
+            <td><span style="font-size:16px;">Lư Trung <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa trong l&ograve;</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Đinh Mão sinh năm 1927">1927</a></span></td>
+            <td><span style="font-size:16px;">Đinh M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Vọng Nguyệt Chi Thố_Thỏ ngắm trăng</span></td>
+            <td><span style="font-size:16px;">Lư Trung <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa trong l&ograve;</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Mậu Thìn sinh năm 1928">1928</a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thanh &Ocirc;n Chi Long_Rồng trong sạch, &ocirc;n ho&agrave;</span></td>
+            <td><span style="font-size:16px;">Đại L&acirc;m <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ rừng gi&agrave;</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Kỷ Tỵ sinh năm 1929">1929</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Tỵ</span></td>
+            <td><span style="font-size:16px;">Ph&uacute;c Kh&iacute; Chi X&agrave;_Rắn c&oacute; ph&uacute;c</span></td>
+            <td><span style="font-size:16px;">Đại L&acirc;m <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ rừng gi&agrave;</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-ngo-1930.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-ngo-1930.html" title="Xem tử vi trọn đời của tuổi Canh Ngọ sinh năm 1930">1930</a></span></td>
+            <td><span style="font-size:16px;">Canh Ngọ</span></td>
+            <td><span style="font-size:16px;">Thất L&yacute; Chi M&atilde;_Ngựa trong nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Lộ B&agrave;ng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất b&ecirc;n đường</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mui-1931.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mui-1931.html" title="Xem tử vi trọn đời của tuổi Tân Mùi sinh năm 1931">1931</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Đắc Lộc Chi Dương_D&ecirc; c&oacute; lộc</span></td>
+            <td><span style="font-size:16px;">Lộ B&agrave;ng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất b&ecirc;n đường</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-than-1932.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-than-1932.html" title="Xem tử vi trọn đời của tuổi Nhâm Thân sinh năm 1932">1932</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Thanh T&uacute; Chi Hầu_Khỉ thanh t&uacute;</span></td>
+            <td><span style="font-size:16px;">Kiếm Phong <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng chu&ocirc;i kiếm</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-dau-1933.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-dau-1933.html" title="Xem tử vi trọn đời của tuổi Quý Dậu sinh năm 1933">1933</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Dậu</span></td>
+            <td><span style="font-size:16px;">L&acirc;u T&uacute;c K&ecirc;_G&agrave; nh&agrave; g&aacute;c</span></td>
+            <td><span style="font-size:16px;">Kiếm Phong <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng chu&ocirc;i kiếm</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-tuat-1934.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-tuat-1934.html" title="Xem tử vi trọn đời của tuổi Giáp Tuất sinh năm 1934">1934</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Tuất</span></td>
+            <td><span style="font-size:16px;">Thủ Th&acirc;n Chi Cẩu_Ch&oacute; giữ m&igrave;nh</span></td>
+            <td><span style="font-size:16px;">Sơn Đầu <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-hoi-1935.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-hoi-1935.html" title="Xem tử vi trọn đời của tuổi Ất Hợi sinh năm 1935">1935</a></span></td>
+            <td><span style="font-size:16px;">Ất Hợi</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; V&atilde;ng Chi Trư_Lợn hay đi</span></td>
+            <td><span style="font-size:16px;">Sơn Đầu <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-ty-1936.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-ty-1936.html" title="Xem tử vi trọn đời của tuổi Bính Tý sinh năm 1936">1936</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Điền Nội Chi Thử_Chuột trong ruộng</span></td>
+            <td><span style="font-size:16px;">Giản Hạ <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước khe suối</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-suu-1937.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-suu-1937.html" title="Xem tử vi trọn đời của tuổi Đinh Sửu sinh năm 1937">1937</a></span></td>
+            <td><span style="font-size:16px;">Đinh Sửu</span></td>
+            <td><span style="font-size:16px;">Hồ Nội Chi Ngưu_Tr&acirc;u trong hồ nước</span></td>
+            <td><span style="font-size:16px;">Giản Hạ <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước khe suối</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-dan-1938.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-dan-1938.html" title="Xem tử vi trọn đời của tuổi Mậu Dần sinh năm 1938">1938</a></span></td>
+            <td><span style="font-size:16px;">Mậu Dần</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; Sơn Chi Hổ_Hổ qua rừng</span></td>
+            <td><span style="font-size:16px;">Th&agrave;nh Đầu <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất đắp th&agrave;nh</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-mao-1939.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-mao-1939.html" title="Xem tử vi trọn đời của tuổi Kỷ Mão sinh năm 1939">1939</a></span></td>
+            <td><span style="font-size:16px;">Kỷ M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Sơn L&acirc;m Chi Thố_Thỏ ở rừng</span></td>
+            <td><span style="font-size:16px;">Th&agrave;nh Đầu <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất đắp th&agrave;nh</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-thin-1940.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-thin-1940.html" title="Xem tử vi trọn đời của tuổi Canh Thìn sinh năm 1940">1940</a></span></td>
+            <td><span style="font-size:16px;">Canh Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thứ T&iacute;nh Chi Long_Rồng khoan dung</span></td>
+            <td><span style="font-size:16px;">Bạch Lạp <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng s&aacute;p ong</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-ty-1941.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-ty-1941.html" title="Xem tử vi trọn đời của tuổi Tân Tỵ sinh năm 1941">1941</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Tỵ</span></td>
+            <td><span style="font-size:16px;">Đ&ocirc;ng T&agrave;ng Chi X&agrave;_Rắn ngủ đ&ocirc;ng</span></td>
+            <td><span style="font-size:16px;">Bạch Lạp <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng s&aacute;p ong</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-ngo-1942.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-ngo-1942.html" title="Xem tử vi trọn đời của tuổi Nhâm Ngọ sinh năm 1942">1942</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Ngọ</span></td>
+            <td><span style="font-size:16px;">Qu&acirc;n Trung Chi M&atilde;_Ngựa chiến</span></td>
+            <td><span style="font-size:16px;">Dương Liễu <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y dương</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-mui-1943.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-mui-1943.html" title="Xem tử vi trọn đời của tuổi Quý Mùi sinh năm 1943">1943</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Quần Nội Chi Dương_D&ecirc; trong đ&agrave;n</span></td>
+            <td><span style="font-size:16px;">Dương Liễu <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y dương</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-than-1944.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-than-1944.html" title="Xem tử vi trọn đời của tuổi Giáp Thân sinh năm 1944">1944</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; Thụ Chi Hầu_Khỉ leo c&acirc;y</span></td>
+            <td><span style="font-size:16px;">Tuyền Trung <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước trong suối</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-dau-1945.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-dau-1945.html" title="Xem tử vi trọn đời của tuổi Ất Dậu sinh năm 1945">1945</a></span></td>
+            <td><span style="font-size:16px;">Ất Dậu</span></td>
+            <td><span style="font-size:16px;">Xướng Ngọ Chi K&ecirc;_G&agrave; g&aacute;y trưa</span></td>
+            <td><span style="font-size:16px;">Tuyền Trung <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước trong suối</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-tuat-1946.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-tuat-1946.html" title="Xem tử vi trọn đời của tuổi Bính Tuất sinh năm 1946">1946</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Tuất</span></td>
+            <td><span style="font-size:16px;">Tự Mi&ecirc;n Chi Cẩu_Ch&oacute; đang ngủ</span></td>
+            <td><span style="font-size:16px;">Ốc Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất n&oacute;c nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-hoi-1947.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-hoi-1947.html" title="Xem tử vi trọn đời của tuổi Đinh Hợi sinh năm 1947">1947</a></span></td>
+            <td><span style="font-size:16px;">Đinh Hợi</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; Sơn Chi Trư_Lợn qua n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Ốc Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất n&oacute;c nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-ty-1948.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-ty-1948.html" title="Xem tử vi trọn đời của tuổi Mậu Tý sinh năm 1948">1948</a></span></td>
+            <td><span style="font-size:16px;">Mậu T&yacute;</span></td>
+            <td><span style="font-size:16px;">Thương Nội Chi Trư_Chuột trong kho</span></td>
+            <td><span style="font-size:16px;">Th&iacute;ch Lịch <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa sấm s&eacute;t</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-suu-1949.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-suu-1949.html" title="Xem tử vi trọn đời của tuổi Kỷ Sửu sinh năm 1949">1949</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Sửu</span></td>
+            <td><span style="font-size:16px;">L&acirc;m Nội Chi Ngưu_Tr&acirc;u trong chuồng</span></td>
+            <td><span style="font-size:16px;">Th&iacute;ch Lịch <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa sấm s&eacute;t</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-dan-1950.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-dan-1950.html" title="Xem tử vi trọn đời của tuổi Canh Dần sinh năm 1950">1950</a></span></td>
+            <td><span style="font-size:16px;">Canh Dần</span></td>
+            <td><span style="font-size:16px;">Xuất Sơn Chi Hổ_Hổ xuống n&uacute;i</span></td>
+            <td><span style="font-size:16px;">T&ugrave;ng B&aacute;ch <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ t&ugrave;ng b&aacute;ch</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mao-1951.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mao-1951.html" title="Xem tử vi trọn đời của tuổi Tân Mão sinh năm 1951">1951</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Ẩn Huyệt Chi Thố_Thỏ trong hang</span></td>
+            <td><span style="font-size:16px;">T&ugrave;ng B&aacute;ch <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ t&ugrave;ng b&aacute;ch</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-thin-1952.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-thin-1952.html" title="Xem tử vi trọn đời của tuổi Nhâm Thìn sinh năm 1952">1952</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">H&agrave;nh Vũ Chi Long_Rồng phun mưa</span></td>
+            <td><span style="font-size:16px;">Trường Lưu <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước chảy mạnh</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-ty-1953.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-ty-1953.html" title="Xem tử vi trọn đời của tuổi Quý Tỵ sinh năm 1953">1953</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Tỵ</span></td>
+            <td><span style="font-size:16px;">Thảo Trung Chi X&agrave;_Rắn trong cỏ</span></td>
+            <td><span style="font-size:16px;">Trường Lưu <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước chảy mạnh</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-ngo-1954.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-ngo-1954.html" title="Xem tử vi trọn đời của tuổi Giáp Ngọ sinh năm 1954">1954</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Ngọ</span></td>
+            <td><span style="font-size:16px;">V&acirc;n Trung Chi M&atilde;_Ngựa trong m&acirc;y</span></td>
+            <td><span style="font-size:16px;">Sa Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong c&aacute;t</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-mui-1955.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-mui-1955.html" title="Xem tử vi trọn đời của tuổi Ất Mùi sinh năm 1955">1955</a></span></td>
+            <td><span style="font-size:16px;">Ất M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">K&iacute;nh Trọng Chi Dương_D&ecirc; được qu&yacute; mến</span></td>
+            <td><span style="font-size:16px;">Sa Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong c&aacute;t</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-than-1956.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-than-1956.html" title="Xem tử vi trọn đời của tuổi Bính Thân sinh năm 1956">1956</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Sơn Thượng Chi Hầu_Khỉ tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Sơn Hạ <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-dau-1957.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-dau-1957.html" title="Xem tử vi trọn đời của tuổi Đinh Dậu sinh năm 1957">1957</a></span></td>
+            <td><span style="font-size:16px;">Đinh Dậu</span></td>
+            <td><span style="font-size:16px;">Độc Lập Chi K&ecirc;_G&agrave; độc th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Sơn Hạ <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-tuat-1958.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-tuat-1958.html" title="Xem tử vi trọn đời của tuổi Mậu Tuất sinh năm 1958">1958</a></span></td>
+            <td><span style="font-size:16px;">Mậu Tuất</span></td>
+            <td><span style="font-size:16px;">Tiến Sơn Chi Cẩu_Ch&oacute; v&agrave;o n&uacute;i</span></td>
+            <td><span style="font-size:16px;">B&igrave;nh Địa <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ đồng bằng</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-hoi-1959.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-hoi-1959.html" title="Xem tử vi trọn đời của tuổi Kỷ Hợi sinh năm 1959">1959</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Hợi</span></td>
+            <td><span style="font-size:16px;">Đạo Viện Chi Trư_Lợn trong tu viện</span></td>
+            <td><span style="font-size:16px;">B&igrave;nh Địa <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ đồng bằng</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-ty-1960.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-ty-1960.html" title="Xem tử vi trọn đời của tuổi Canh Tý sinh năm 1960">1960</a></span></td>
+            <td><span style="font-size:16px;">Canh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Lương Thượng Chi Thử_Chuột tr&ecirc;n x&agrave;</span></td>
+            <td><span style="font-size:16px;">B&iacute;ch Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất t&ograve; v&ograve;</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-suu-1961.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-suu-1961.html" title="Xem tử vi trọn đời của tuổi Tân Sửu sinh năm 1961">1961</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Sửu</span></td>
+            <td><span style="font-size:16px;">Lộ Đồ Chi Ngưu_Tr&acirc;u tr&ecirc;n đường</span></td>
+            <td><span style="font-size:16px;">B&iacute;ch Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất t&ograve; v&ograve;</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-dan-1962.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-dan-1962.html" title="Xem tử vi trọn đời của tuổi Nhâm Dần sinh năm 1962">1962</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Dần</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; L&acirc;m Chi Hổ_Hổ qua rừng</span></td>
+            <td><span style="font-size:16px;">Kim Bạch <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng pha bạc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-mao-1963.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-mao-1963.html" title="Xem tử vi trọn đời của tuổi Quý Mão sinh năm 1963">1963</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; L&acirc;m Chi Thố_Thỏ qua rừng</span></td>
+            <td><span style="font-size:16px;">Kim Bạch <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng pha bạc</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-thin-1964.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-thin-1964.html" title="Xem tử vi trọn đời của tuổi Giáp Thìn sinh năm 1964">1964</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Phục Đầm Chi L&acirc;m_Rồng ẩn ở đầm</span></td>
+            <td><span style="font-size:16px;">Ph&uacute; Đăng <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa đ&egrave;n to</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-ty-1965.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-ty-1965.html" title="Xem tử vi trọn đời của tuổi Ất Tỵ sinh năm 1965">1965</a></span></td>
+            <td><span style="font-size:16px;">Ất Tỵ</span></td>
+            <td><span style="font-size:16px;">Xuất Huyệt Chi X&agrave;_Rắn rời hang</span></td>
+            <td><span style="font-size:16px;">Ph&uacute; Đăng <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa đ&egrave;n to</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-ngo-1966.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-ngo-1966.html" title="Xem tử vi trọn đời của tuổi Bính Ngọ sinh năm 1966">1966</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Ngọ</span></td>
+            <td><span style="font-size:16px;">H&agrave;nh Lộ Chi M&atilde;_Ngựa chạy tr&ecirc;n đường</span></td>
+            <td><span style="font-size:16px;">Thi&ecirc;n H&agrave; <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước tr&ecirc;n trời</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-mui-1967.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-mui-1967.html" title="Xem tử vi trọn đời của tuổi Đinh Mùi sinh năm 1967">1967</a></span></td>
+            <td><span style="font-size:16px;">Đinh M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Thất Quần Chi Dương_D&ecirc; lạc đ&agrave;n</span></td>
+            <td><span style="font-size:16px;">Thi&ecirc;n H&agrave; <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước tr&ecirc;n trời</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-than-1968.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-than-1968.html" title="Xem tử vi trọn đời của tuổi Mậu Thân sinh năm 1968">1968</a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Độc Lập Chi Hầu_Khỉ độc th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Đại Trạch <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất nền nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-dau-1969.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-dau-1969.html" title="Xem tử vi trọn đời của tuổi Kỷ Dậu sinh năm 1969">1969</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Dậu</span></td>
+            <td><span style="font-size:16px;">B&aacute;o Hiệu Chi K&ecirc;_G&agrave; g&aacute;y</span></td>
+            <td><span style="font-size:16px;">Đại Trạch <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất nền nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-tuat-1970.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-tuat-1970.html" title="Xem tử vi trọn đời của tuổi Canh Tuất sinh năm 1970">1970</a></span></td>
+            <td><span style="font-size:16px;">Canh Tuất</span></td>
+            <td><span style="font-size:16px;">Tự Quan Chi Cẩu_Ch&oacute; nh&agrave; ch&ugrave;a</span></td>
+            <td><span style="font-size:16px;">Thoa Xuyến <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trang sức</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-hoi-1971.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-hoi-1971.html" title="Xem tử vi trọn đời của tuổi Tân Hợi sinh năm 1971">1971</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Hợi</span></td>
+            <td><span style="font-size:16px;">Khuy&ecirc;n Dưỡng Chi Trư_Lợn nu&ocirc;i nhốt</span></td>
+            <td><span style="font-size:16px;">Thoa Xuyến <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trang sức</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-ty-1972.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-ty-1972.html" title="Xem tử vi trọn đời của tuổi Nhâm Tý sinh năm 1972">1972</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m T&yacute;</span></td>
+            <td><span style="font-size:16px;">Sơn Thượng Chi Thử_Chuột tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Tang Đố <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y d&acirc;u</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-suu-1973.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-suu-1973.html" title="Xem tử vi trọn đời của tuổi Quý Sửu sinh năm 1973">1973</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Sửu</span></td>
+            <td><span style="font-size:16px;">Lan Ngoại Chi Ngưu_Tr&acirc;u ngo&agrave;i chuồng</span></td>
+            <td><span style="font-size:16px;">Tang Đố <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y d&acirc;u</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-dan-1974.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-dan-1974.html" title="Xem tử vi trọn đời của tuổi Giáp Dần sinh năm 1974">1974</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Dần</span></td>
+            <td><span style="font-size:16px;">Lập Định Chi Hổ_Hổ tự lập</span></td>
+            <td><span style="font-size:16px;">Đại Khe <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước khe lớn</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-mao-1975.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-mao-1975.html" title="Xem tử vi trọn đời của tuổi Ất Mão sinh năm 1975">1975</a></span></td>
+            <td><span style="font-size:16px;">Ất M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Đắc Đạo Chi Thố_Thỏ đắc đạo</span></td>
+            <td><span style="font-size:16px;">Đại Khe <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước khe lớn</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-thin-1976.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-thin-1976.html" title="Xem tử vi trọn đời của tuổi Bính Thìn sinh năm 1976">1976</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thi&ecirc;n Thượng Chi Long_Rồng tr&ecirc;n trời</span></td>
+            <td><span style="font-size:16px;">Sa Trung <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất pha c&aacute;t</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-ty-1977.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-ty-1977.html" title="Xem tử vi trọn đời của tuổi Đinh Tỵ sinh năm 1977">1977</a></span></td>
+            <td><span style="font-size:16px;">Đinh Tỵ</span></td>
+            <td><span style="font-size:16px;">Đầm Nội Chi X&agrave;_Rắn trong đầm</span></td>
+            <td><span style="font-size:16px;">Sa Trung <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất pha c&aacute;t</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-ngo-1978.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-ngo-1978.html" title="Xem tử vi trọn đời của tuổi Mậu Ngọ sinh năm 1978">1978</a></span></td>
+            <td><span style="font-size:16px;">Mậu Ngọ</span></td>
+            <td><span style="font-size:16px;">Cứu Nội Chi M&atilde;_Ngựa trong chuồng</span></td>
+            <td><span style="font-size:16px;">Thi&ecirc;n Thượng <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n trời</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-mui-1979.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-mui-1979.html" title="Xem tử vi trọn đời của tuổi Kỷ Mùi sinh năm 1979">1979</a></span></td>
+            <td><span style="font-size:16px;">Kỷ M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Thảo D&atilde; Chi Dương_D&ecirc; đồng cỏ</span></td>
+            <td><span style="font-size:16px;">Thi&ecirc;n Thượng <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n trời</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-than-1980.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-than-1980.html" title="Xem tử vi trọn đời của tuổi Canh Thân sinh năm 1980">1980</a></span></td>
+            <td><span style="font-size:16px;">Canh Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Thực Quả Chi Hầu_Khỉ ăn hoa quả</span></td>
+            <td><span style="font-size:16px;">Thạch Lựu <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y lựu đ&aacute;</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-dau-1981.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-dau-1981.html" title="Xem tử vi trọn đời của tuổi Tân Dậu sinh năm 1981">1981</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Dậu</span></td>
+            <td><span style="font-size:16px;">Long T&agrave;ng Chi K&ecirc;_G&agrave; trong lồng</span></td>
+            <td><span style="font-size:16px;">Thạch Lựu <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y lựu đ&aacute;</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-tuat-1982.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-tuat-1982.html" title="Xem tử vi trọn đời của tuổi Nhâm Tuất sinh năm 1982">1982</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Tuất</span></td>
+            <td><span style="font-size:16px;">Cố Gia Chi Khuyển_Ch&oacute; về nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Đại Hải <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước biển lớn</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-hoi-1983.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-hoi-1983.html" title="Xem tử vi trọn đời của tuổi Quý Hợi sinh năm 1983">1983</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Hợi</span></td>
+            <td><span style="font-size:16px;">L&acirc;m Hạ Chi Trư_Lợn trong rừng</span></td>
+            <td><span style="font-size:16px;">Đại Hải <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước biển lớn</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-ty-1984.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-ty-1984.html" title="Xem tử vi trọn đời của tuổi Giáp Tý sinh năm 1984">1984</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p T&yacute;</span></td>
+            <td><span style="font-size:16px;">Ốc Thượng Chi Thử_Chuột ở n&oacute;c nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Hải Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong biển</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-suu-1985.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-suu-1985.html" title="Xem tử vi trọn đời của tuổi Ất Sửu sinh năm 1985">1985</a></span></td>
+            <td><span style="font-size:16px;">Ất Sửu</span></td>
+            <td><span style="font-size:16px;">Hải Nội Chi Ngưu_Tr&acirc;u trong biển</span></td>
+            <td><span style="font-size:16px;">Hải Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong biển</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-dan-1986.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-dan-1986.html" title="Xem tử vi trọn đời của tuổi Bính Dần sinh năm 1986">1986</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Dần</span></td>
+            <td><span style="font-size:16px;">Sơn L&acirc;m Chi Hổ_Hổ trong rừng</span></td>
+            <td><span style="font-size:16px;">Lư Trung <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa trong l&ograve;</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-mao-1987.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-mao-1987.html" title="Xem tử vi trọn đời của tuổi Đinh Mão sinh năm 1987">1987</a></span></td>
+            <td><span style="font-size:16px;">Đinh M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Vọng Nguyệt Chi Thố_Thỏ ngắm trăng</span></td>
+            <td><span style="font-size:16px;">Lư Trung <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa trong l&ograve;</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-thin-1988.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-thin-1988.html" title="Xem tử vi trọn đời của tuổi Mậu Thìn sinh năm 1988">1988</a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thanh &Ocirc;n Chi Long_Rồng trong sạch, &ocirc;n ho&agrave;</span></td>
+            <td><span style="font-size:16px;">Đại L&acirc;m <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ rừng gi&agrave;</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-ty-1989.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-ty-1989.html" title="Xem tử vi trọn đời của tuổi Kỷ Tỵ sinh năm 1989">1989</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Tỵ</span></td>
+            <td><span style="font-size:16px;">Ph&uacute;c Kh&iacute; Chi X&agrave;_Rắn c&oacute; ph&uacute;c</span></td>
+            <td><span style="font-size:16px;">Đại L&acirc;m <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ rừng gi&agrave;</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-ngo-1990.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-ngo-1990.html" title="Xem tử vi trọn đời của tuổi Canh Ngọ sinh năm 1990">1990</a></span></td>
+            <td><span style="font-size:16px;">Canh Ngọ</span></td>
+            <td><span style="font-size:16px;">Thất L&yacute; Chi M&atilde;_Ngựa trong nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Lộ B&agrave;ng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất đường đi</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mui-1991.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mui-1991.html" title="Xem tử vi trọn đời của tuổi Tân Mùi sinh năm 1991">1991</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Đắc Lộc Chi Dương_D&ecirc; c&oacute; lộc</span></td>
+            <td><span style="font-size:16px;">Lộ B&agrave;ng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất đường đi</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-than-1992.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-than-1992.html" title="Xem tử vi trọn đời của tuổi Nhâm Thân sinh năm 1992">1992</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Thanh T&uacute; Chi Hầu_Khỉ thanh t&uacute;</span></td>
+            <td><span style="font-size:16px;">Kiếm Phong <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng mũi kiếm</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-dau-1993.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-dau-1993.html" title="Xem tử vi trọn đời của tuổi Quý Dậu sinh năm 1993">1993</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Dậu</span></td>
+            <td><span style="font-size:16px;">L&acirc;u T&uacute;c K&ecirc;_G&agrave; nh&agrave; g&aacute;c</span></td>
+            <td><span style="font-size:16px;">Kiếm Phong <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng mũi kiếm</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-tuat-1994.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-tuat-1994.html" title="Xem tử vi trọn đời của tuổi Giáp Tuất sinh năm 1994">1994</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Tuất</span></td>
+            <td><span style="font-size:16px;">Thủ Th&acirc;n Chi Cẩu_Ch&oacute; giữ m&igrave;nh</span></td>
+            <td><span style="font-size:16px;">Sơn Đầu <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-hoi-1995.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-hoi-1995.html" title="Xem tử vi trọn đời của tuổi Ất Hợi sinh năm 1995">1995</a></span></td>
+            <td><span style="font-size:16px;">Ất Hợi</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; V&atilde;ng Chi Trư_Lợn hay đi</span></td>
+            <td><span style="font-size:16px;">Sơn Đầu <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-ty-1996.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-ty-1996.html" title="Xem tử vi trọn đời của tuổi Bính Tý sinh năm 1996">1996</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Điền Nội Chi Thử_Chuột trong ruộng</span></td>
+            <td><span style="font-size:16px;">Giảm Hạ <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước cuối nguồn</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-suu-1997.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-suu-1997.html" title="Xem tử vi trọn đời của tuổi Đinh Sửu sinh năm 1997">1997</a></span></td>
+            <td><span style="font-size:16px;">Đinh Sửu</span></td>
+            <td><span style="font-size:16px;">Hồ Nội Chi Ngưu_Tr&acirc;u trong hồ nước</span></td>
+            <td><span style="font-size:16px;">Giảm Hạ <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước cuối nguồn</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-dan-1998.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-dan-1998.html" title="Xem tử vi trọn đời của tuổi Mậu Dần sinh năm 1998">1998</a></span></td>
+            <td><span style="font-size:16px;">Mậu Dần</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; Sơn Chi Hổ_Hổ qua rừng</span></td>
+            <td><span style="font-size:16px;">Th&agrave;nh Đầu <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất tr&ecirc;n th&agrave;nh</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-mao-1999.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-mao-1999.html" title="Xem tử vi trọn đời của tuổi Kỷ Mão sinh năm 1999">1999</a></span></td>
+            <td><span style="font-size:16px;">Kỷ M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Sơn L&acirc;m Chi Thố_Thỏ ở rừng</span></td>
+            <td><span style="font-size:16px;">Th&agrave;nh Đầu <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất tr&ecirc;n th&agrave;nh</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-thin-2000.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-thin-2000.html" title="Xem tử vi trọn đời của tuổi Canh Thìn sinh năm 2000">2000</a></span></td>
+            <td><span style="font-size:16px;">Canh Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thứ T&iacute;nh Chi Long_Rồng khoan dung</span></td>
+            <td><span style="font-size:16px;">Bạch Lạp <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng ch&acirc;n đ&egrave;n</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-ty-2001.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-ty-2001.html" title="Xem tử vi trọn đời của tuổi Tân Tỵ sinh năm 2001">2001</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Tỵ</span></td>
+            <td><span style="font-size:16px;">Đ&ocirc;ng T&agrave;ng Chi X&agrave;_Rắn ngủ đ&ocirc;ng</span></td>
+            <td><span style="font-size:16px;">Bạch Lạp <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng ch&acirc;n đ&egrave;n</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-ngo-2002.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-ngo-2002.html" title="Xem tử vi trọn đời của tuổi Nhâm Ngọ sinh năm 2002">2002</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Ngọ</span></td>
+            <td><span style="font-size:16px;">Qu&acirc;n Trung Chi M&atilde;_Ngựa chiến</span></td>
+            <td><span style="font-size:16px;">Dương Liễu <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y dương</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-mui-2003.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-mui-2003.html" title="Xem tử vi trọn đời của tuổi Quý Mùi sinh năm 2003">2003</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Quần Nội Chi Dương_D&ecirc; trong đ&agrave;n</span></td>
+            <td><span style="font-size:16px;">Dương Liễu <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y dương</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-than-2004.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-than-2004.html" title="Xem tử vi trọn đời của tuổi Giáp Thân sinh năm 2004">2004</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; Thụ Chi Hầu_Khỉ leo c&acirc;y</span></td>
+            <td><span style="font-size:16px;">Tuyền Trung <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước trong suối</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-dau-2005.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-dau-2005.html" title="Xem tử vi trọn đời của tuổi Ất Dậu sinh năm 2005">2005</a></span></td>
+            <td><span style="font-size:16px;">Ất Dậu</span></td>
+            <td><span style="font-size:16px;">Xướng Ngọ Chi K&ecirc;_G&agrave; g&aacute;y trưa</span></td>
+            <td><span style="font-size:16px;">Tuyền Trung <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước trong suối</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-tuat-2006.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-tuat-2006.html" title="Xem tử vi trọn đời của tuổi Bính Tuất sinh năm 2006">2006</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Tuất</span></td>
+            <td><span style="font-size:16px;">Tự Mi&ecirc;n Chi Cẩu_Ch&oacute; đang ngủ</span></td>
+            <td><span style="font-size:16px;">Ốc Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất n&oacute;c nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-hoi-2007.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-hoi-2007.html" title="Xem tử vi trọn đời của tuổi Đinh Hợi sinh năm 2007">2007</a></span></td>
+            <td><span style="font-size:16px;">Đinh Hợi</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; Sơn Chi Trư_Lợn qua n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Ốc Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất n&oacute;c nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-ty-2008.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-ty-2008.html" title="Xem tử vi trọn đời của tuổi Mậu Tý sinh năm 2008">2008</a></span></td>
+            <td><span style="font-size:16px;">Mậu T&yacute;</span></td>
+            <td><span style="font-size:16px;">Thương Nội Chi Thư_Chuột trong kho</span></td>
+            <td><span style="font-size:16px;">Th&iacute;ch Lịch <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa sấm s&eacute;t</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-suu-2009.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-ky-suu-2009.html" title="Xem tử vi trọn đời của tuổi Kỷ Sửu sinh năm 2009">2009</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Sửu</span></td>
+            <td><span style="font-size:16px;">L&acirc;m Nội Chi Ngưu_Tr&acirc;u trong chuồng</span></td>
+            <td><span style="font-size:16px;">Th&iacute;ch Lịch <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa sấm s&eacute;t</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-dan-2010.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-canh-dan-2010.html" title="Xem tử vi trọn đời của tuổi Canh Dần sinh năm 2010">2010</a></span></td>
+            <td><span style="font-size:16px;">Canh Dần</span></td>
+            <td><span style="font-size:16px;">Xuất Sơn Chi Hổ_Hổ xuống n&uacute;i</span></td>
+            <td><span style="font-size:16px;">T&ugrave;ng B&aacute;ch <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ t&ugrave;ng b&aacute;ch</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mao-2011.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-tan-mao-2011.html" title="Xem tử vi trọn đời của tuổi Tân Mão sinh năm 2011">2011</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Ẩn Huyệt Chi Thố_Thỏ</span></td>
+            <td><span style="font-size:16px;">T&ugrave;ng B&aacute;ch <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ t&ugrave;ng b&aacute;ch</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-thin-2012.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-nham-thin-2012.html" title="Xem tử vi trọn đời của tuổi Nhâm Thìn sinh năm 2012">2012</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">H&agrave;nh Vũ Chi Long_Rồng phun mưa</span></td>
+            <td><span style="font-size:16px;">Trường Lưu <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước chảy mạnh</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-ty-2013.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-quy-ty-2013.html" title="Xem tử vi trọn đời của tuổi Quý Tỵ sinh năm 2013">2013</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Tỵ</span></td>
+            <td><span style="font-size:16px;">Thảo Trung Chi X&agrave;_Rắn trong cỏ</span></td>
+            <td><span style="font-size:16px;">Trường Lưu <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước chảy mạnh</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-ngo-2014.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-giap-ngo-2014.html" title="Xem tử vi trọn đời của tuổi Giáp Ngọ sinh năm 2014">2014</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Ngọ</span></td>
+            <td><span style="font-size:16px;">V&acirc;n Trung Chi M&atilde;_Ngựa trong m&acirc;y</span></td>
+            <td><span style="font-size:16px;">Sa Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong c&aacute;t</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-mui-2015.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-at-mui-2015.html" title="Xem tử vi trọn đời của tuổi Ất Mùi sinh năm 2015">2015</a></span></td>
+            <td><span style="font-size:16px;">Ất M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">K&iacute;nh Trọng Chi Dương_D&ecirc; được qu&yacute; mến</span></td>
+            <td><span style="font-size:16px;">Sa Trung <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trong c&aacute;t</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-than-2016.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-binh-than-2016.html" title="Xem tử vi trọn đời của tuổi Bính Thân sinh năm 2016">2016</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Sơn Thượng Chi Hầu_Khỉ tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Sơn Hạ <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-dau-2017.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-dinh-dau-2017.html" title="Xem tử vi trọn đời của tuổi Đinh Dậu sinh năm 2017">2017</a></span></td>
+            <td><span style="font-size:16px;">Đinh Dậu</span></td>
+            <td><span style="font-size:16px;">Độc Lập Chi K&ecirc;_G&agrave; độc th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Sơn Hạ <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-tuat-2018.html" href="https://ngaydep.com/xem-tu-vi-tron-doi-cua-tuoi-mau-tuat-2018.html" title="Xem tử vi trọn đời của tuổi Mậu Tuất sinh năm 2018">2018</a></span></td>
+            <td><span style="font-size:16px;">Mậu Tuất</span></td>
+            <td><span style="font-size:16px;">Tiến Sơn Chi Cẩu_Ch&oacute; v&agrave;o n&uacute;i</span></td>
+            <td><span style="font-size:16px;">B&igrave;nh Địa <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ đồng bằng</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Kỷ Hợi sinh năm 2019">2019</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Hợi</span></td>
+            <td><span style="font-size:16px;">Đạo Viện Chi Trư_Lợn trong tu viện</span></td>
+            <td><span style="font-size:16px;">B&igrave;nh Địa <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ đồng bằng</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Canh Tý sinh năm 2020">2020</a></span></td>
+            <td><span style="font-size:16px;">Canh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Lương Thượng Chi Thử_Chuột tr&ecirc;n x&agrave;</span></td>
+            <td><span style="font-size:16px;">B&iacute;ch Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất t&ograve; v&ograve;</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Tân Sửu sinh năm 2021">2021</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Sửu</span></td>
+            <td><span style="font-size:16px;">Lộ Đồ Chi Ngưu_Tr&acirc;u tr&ecirc;n đường</span></td>
+            <td><span style="font-size:16px;">B&iacute;ch Thượng <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất t&ograve; v&ograve;</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Nhâm Dần sinh năm 2022">2022</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Dần</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; L&acirc;m Chi Hổ_Hổ qua rừng</span></td>
+            <td><span style="font-size:16px;">Kim Bạch <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng pha bạc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Quý Mão sinh năm 2023">2023</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Qu&aacute; L&acirc;m Chi Thố_Thỏ qua rừng</span></td>
+            <td><span style="font-size:16px;">Kim Bạch <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng pha bạc</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Giáp Thìn sinh năm 2024">2024</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Phục Đầm Chi L&acirc;m_Rồng ẩn ở đầm</span></td>
+            <td><span style="font-size:16px;">Ph&uacute; Đăng <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa đ&egrave;n to</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Ất Tỵ sinh năm 2025">2025</a></span></td>
+            <td><span style="font-size:16px;">Ất Tỵ</span></td>
+            <td><span style="font-size:16px;">Xuất Huyệt Chi X&agrave;_Rắn rời hang</span></td>
+            <td><span style="font-size:16px;">Ph&uacute; Đăng <em>Hỏa</em></span></td>
+            <td><span style="font-size:16px;">Lửa đ&egrave;n to</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Bính Ngọ sinh năm 2026">2026</a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Ngọ</span></td>
+            <td><span style="font-size:16px;">H&agrave;nh Lộ Chi M&atilde;_Ngựa chạy tr&ecirc;n đường</span></td>
+            <td><span style="font-size:16px;">Thi&ecirc;n H&agrave; <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước tr&ecirc;n trời</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Đinh Mùi sinh năm 2027">2027</a></span></td>
+            <td><span style="font-size:16px;">Đinh M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Thất Quần Chi Dương_D&ecirc; lạc đ&agrave;n</span></td>
+            <td><span style="font-size:16px;">Thi&ecirc;n H&agrave; <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước tr&ecirc;n trời</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Mậu Thân sinh năm 2028">2028</a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Độc Lập Chi Hầu_Khỉ độc th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Đại Trạch <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất nền nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Kỷ Dậu sinh năm 2029">2029</a></span></td>
+            <td><span style="font-size:16px;">Kỷ Dậu</span></td>
+            <td><span style="font-size:16px;">B&aacute;o Hiệu Chi K&ecirc;_G&agrave; g&aacute;y</span></td>
+            <td><span style="font-size:16px;">Đại Trạch <em>Thổ</em></span></td>
+            <td><span style="font-size:16px;">Đất nền nh&agrave;</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Canh Tuất sinh năm 2030">2030</a></span></td>
+            <td><span style="font-size:16px;">Canh Tuất</span></td>
+            <td><span style="font-size:16px;">Tự Quan Chi Cẩu_Ch&oacute; nh&agrave; ch&ugrave;a</span></td>
+            <td><span style="font-size:16px;">Thoa Xuyến <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trang sức</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+            <td><span style="font-size:16px;">Chấn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Tân Hợi sinh năm 2031">2031</a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Hợi</span></td>
+            <td><span style="font-size:16px;">Khuy&ecirc;n Dưỡng Chi Trư_Lợn nu&ocirc;i nhốt</span></td>
+            <td><span style="font-size:16px;">Thoa Xuyến <em>Kim</em></span></td>
+            <td><span style="font-size:16px;">V&agrave;ng trang sức</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+            <td><span style="font-size:16px;">Tốn Mộc</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Nhâm Tý sinh năm 2032">2032</a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m T&yacute;</span></td>
+            <td><span style="font-size:16px;">Sơn Thượng Chi Thử_Chuột tr&ecirc;n n&uacute;i</span></td>
+            <td><span style="font-size:16px;">Tang Đố <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y d&acirc;u</span></td>
+            <td><span style="font-size:16px;">Khảm Thuỷ</span></td>
+            <td><span style="font-size:16px;">Kh&ocirc;n Thổ</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Quý Sửu sinh năm 2033">2033</a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Sửu</span></td>
+            <td><span style="font-size:16px;">Lan Ngoại Chi Ngưu_Tr&acirc;u ngo&agrave;i chuồng</span></td>
+            <td><span style="font-size:16px;">Tang Đố <em>Mộc</em></span></td>
+            <td><span style="font-size:16px;">Gỗ c&acirc;y d&acirc;u</span></td>
+            <td><span style="font-size:16px;">Ly Hoả</span></td>
+            <td><span style="font-size:16px;">C&agrave;n Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Giáp Dần sinh năm 2034">2034</a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Dần</span></td>
+            <td><span style="font-size:16px;">Lập Định Chi Hổ_Hổ tự lập</span></td>
+            <td><span style="font-size:16px;">Đại Khe <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước khe lớn</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a data-cke-saved-href="javascript:void(0);" href="javascript%3Avoid(0);" title="Xem tử vi trọn đời của tuổi Ất Mão sinh năm 2035">2035</a></span></td>
+            <td><span style="font-size:16px;">Ất M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Đắc Đạo Chi Thố_Thỏ đắc đạo</span></td>
+            <td><span style="font-size:16px;">Đại Khe <em>Thủy</em></span></td>
+            <td><span style="font-size:16px;">Nước khe lớn</span></td>
+            <td><span style="font-size:16px;">Đo&agrave;i Kim</span></td>
+            <td><span style="font-size:16px;">Cấn Thổ</span></td>
+        </tr>
+    </tbody>
+</table>
+<div data-cke-filler-webkit="end" data-cke-temp="1" style="display: block; width: 0px; height: 0px; padding: 0px; border: 0px; margin: 0px; position: absolute; top: 0px; left: -9999px; opacity: 0; overflow: hidden;">&nbsp;</div>''';
  String infor_20 = '''''';

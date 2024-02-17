@@ -121,6 +121,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                   },
                                 ),
                                 UIUtils.getButton(
+                                  "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
+                                  Icons.navigate_next,
+                                      () {
+                                    Get.to(
+                                          () => HtmlContentScreen(
+                                        titleAppBar: "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
+                                        htmlContent: infor_19,
+                                      ),
+                                    );
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
                                   Icons.navigate_next,
                                   () {
