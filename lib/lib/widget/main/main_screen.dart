@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/vietlot/vietlot_screen.dart';
@@ -52,23 +53,39 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   void initState() {
     super.initState();
     _controllerMain.getPackageInfo();
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      showDialogSuccess(
-        const Material(
-          child: Text(
-            "Xin chào\nCảm ơn bạn đã ủng hộ ứng dụng tra cứu KQXS 3 miền\nChúng tôi cam kết hỗ trợ ứng dụng lâu dài và luôn lắng nghe ý kiến đóng góp của các bạn để ứng dụng có thể mang lại trải nghiệm tốt nhất\nNếu bạn thấy ứng dụng bổ ích, hãy đánh giá ứng dụng 5✩ và chia sẻ cho người thân của bạn nhé!\nYêu các bạn!",
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: Colors.grey,
+    _checkToShowDialogHello();
+  }
+
+  void _checkToShowDialogHello() {
+    void showPopup() {
+      SchedulerBinding.instance.addPostFrameCallback((_) {
+        showDialogSuccess(
+          const Material(
+            child: Text(
+              "Xin chào\nCảm ơn bạn đã ủng hộ ứng dụng tra cứu KQXS 3 miền\nChúng tôi cam kết hỗ trợ ứng dụng lâu dài và luôn lắng nghe ý kiến đóng góp của các bạn để ứng dụng có thể mang lại trải nghiệm tốt nhất\nNếu bạn thấy ứng dụng bổ ích, hãy đánh giá ứng dụng 5✩ và chia sẻ cho người thân của bạn nhé!\nYêu các bạn!",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
           ),
-        ),
-        "Không hiển thị lại",
-        true,
-        () {},
-      );
+          "Không hiển thị lại",
+          true,
+          () {
+            SharedPreferencesUtil.setBool(SharedPreferencesUtil.isShowedDialogHello, true);
+          },
+        );
+      });
+    }
+
+    SharedPreferencesUtil.getBool(SharedPreferencesUtil.isShowedDialogHello).then((value) {
+      if (value == true) {
+        //do not show dialog hello again
+      } else {
+        showPopup();
+      }
     });
   }
 

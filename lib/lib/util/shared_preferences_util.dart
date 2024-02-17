@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// freuss47@gmail.com
 class SharedPreferencesUtil {
   static String themeIndex = "themeIndex";
+  static String isShowedDialogHello = "isShowedDialogHello";
   static int themeIndexNativeView = 0;
   static int themeIndexWebView = 1;
 
