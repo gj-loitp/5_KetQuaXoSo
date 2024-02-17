@@ -52,6 +52,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                 InkWell(
                   onTap: () {
                     //TODO roy93~ iplm
+                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
                   },
                   child: Container(
                     height: Get.height / 7,
@@ -70,6 +71,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                 InkWell(
                   onTap: () {
                     //TODO roy93~ impl
+                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
                   },
                   child: Container(
                     height: Get.height / 7,
