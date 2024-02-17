@@ -314,6 +314,18 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                     );
                                   },
                                 ),
+                                UIUtils.getButton(
+                                  "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                  Icons.navigate_next,
+                                      () {
+                                    Get.to(
+                                          () => HtmlContentScreen(
+                                        titleAppBar: "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                        htmlContent: infor_17,
+                                      ),
+                                    );
+                                  },
+                                ),
                               ],
                             ),
                           ),
