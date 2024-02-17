@@ -402,10 +402,12 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
 
   void showDialogSuccess(
     Widget textCenter,
+    String confirmText,
     bool barrierDismissible,
     Function onClickConfirm,
   ) {
     showGeneralDialog(
+      // barrierDismissible: barrierDismissible,
       barrierColor: Colors.black.withOpacity(0.5),
       context: context,
       pageBuilder: (_, __, ___) {
@@ -430,8 +432,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                 children: [
                   Image.asset(
                     "assets/images/ic_success.png",
-                    height: 45,
-                    width: 45,
+                    height: 155,
+                    width: 155,
                   ),
                   const SizedBox(height: DimenConstants.marginPaddingMedium),
                   textCenter,
@@ -448,8 +450,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                           0,
                         ),
                         textStyle: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
                         ),
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -460,8 +462,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                         Get.back();
                         onClickConfirm.call();
                       },
-                      child: const Text(
-                        "Đóng",
+                      child: Text(
+                        confirmText,
                       ),
                     ),
                   ),

@@ -1,5 +1,6 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
@@ -51,6 +52,24 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   void initState() {
     super.initState();
     _controllerMain.getPackageInfo();
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      showDialogSuccess(
+        const Material(
+          child: Text(
+            "Xin chào\nCảm ơn bạn đã ủng hộ ứng dụng tra cứu KQXS 3 miền\nChúng tôi cam kết hỗ trợ ứng dụng lâu dài và luôn lắng nghe ý kiến đóng góp của các bạn để ứng dụng có thể mang lại trải nghiệm tốt nhất\nNếu bạn thấy ứng dụng bổ ích, hãy đánh giá ứng dụng 5✩ và chia sẻ cho người thân của bạn nhé!\nYêu các bạn!",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        "Không hiển thị lại",
+        true,
+        () {},
+      );
+    });
   }
 
   DateTime _backPressTime = DateTime.now();
