@@ -71,7 +71,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 16,),
+                        const SizedBox(
+                          width: 16,
+                        ),
                         const Expanded(
                           child: Text(
                             "Thông tin hữu ích",
@@ -111,9 +113,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                 UIUtils.getButton(
                                   "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
                                   Icons.navigate_next,
-                                      () {
+                                  () {
                                     Get.to(
-                                          () => HtmlContentScreen(
+                                      () => HtmlContentScreen(
                                         titleAppBar: "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
                                         htmlContent: infor_18,
                                       ),
@@ -123,11 +125,23 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                 UIUtils.getButton(
                                   "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
                                   Icons.navigate_next,
-                                      () {
+                                  () {
                                     Get.to(
-                                          () => HtmlContentScreen(
+                                      () => HtmlContentScreen(
                                         titleAppBar: "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
                                         htmlContent: infor_19,
+                                      ),
+                                    );
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
+                                  Icons.navigate_next,
+                                  () {
+                                    Get.to(
+                                      () => HtmlContentScreen(
+                                        titleAppBar: "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
+                                        htmlContent: infor_20,
                                       ),
                                     );
                                   },
@@ -317,9 +331,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                 UIUtils.getButton(
                                   "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
                                   Icons.navigate_next,
-                                      () {
+                                  () {
                                     Get.to(
-                                          () => HtmlContentScreen(
+                                      () => HtmlContentScreen(
                                         titleAppBar: "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
                                         htmlContent: infor_15,
                                       ),
@@ -329,9 +343,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                 UIUtils.getButton(
                                   "Xổ số Vietlott có đáng tin hay không?",
                                   Icons.navigate_next,
-                                      () {
+                                  () {
                                     Get.to(
-                                          () => HtmlContentScreen(
+                                      () => HtmlContentScreen(
                                         titleAppBar: "Xổ số Vietlott có đáng tin hay không?",
                                         htmlContent: infor_16,
                                       ),
@@ -341,10 +355,11 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                                 UIUtils.getButton(
                                   "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
                                   Icons.navigate_next,
-                                      () {
+                                  () {
                                     Get.to(
-                                          () => HtmlContentScreen(
-                                        titleAppBar: "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                      () => HtmlContentScreen(
+                                        titleAppBar:
+                                            "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
                                         htmlContent: infor_17,
                                       ),
                                     );

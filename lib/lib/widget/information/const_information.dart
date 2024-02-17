@@ -9665,4 +9665,620 @@
     </tbody>
 </table>
 <div data-cke-filler-webkit="end" data-cke-temp="1" style="display: block; width: 0px; height: 0px; padding: 0px; border: 0px; margin: 0px; position: absolute; top: 0px; left: -9999px; opacity: 0; overflow: hidden;">&nbsp;</div>''';
- String infor_20 = '''''';
+ String infor_20 = '''<h1><span style="font-size:16px;">Xem m&agrave;u sắc hợp tuổi bản mệnh v&agrave; năm sinh của bạn</span></h1>
+<p><span style="font-size:16px;">Xem <a href="https://ngaydep.com/mau-sac-hop-tuoi.html"><strong>m&agrave;u sắc hợp tuổi</strong></a> l&agrave; một c&ocirc;ng cụ rất hữu &iacute;ch cho bạn trong việc tra cứu v&agrave; lựa chọn <em>m&agrave;u sắc hợp với tuổi v&agrave; bản mệnh</em> của bạn. Để xem th&ocirc;ng tin <a href="https://ngaydep.com/mau-sac-hop-tuoi.html"><strong>m&agrave;u sắc hợp tuổi</strong></a> mời bạn xem danh s&aacute;ch b&ecirc;n dưới rồi xem năm của m&igrave;nh v&agrave; click chọn để xem chi tiết nh&eacute;.</span></p>
+<ul>
+    <li>
+        <h2><span style="font-size:16px;"><a href="https://ngaydep.com/mau-sac-hop-tuoi.html" title="Xem màu sắc hợp tuổi và bản mệnh">Xem m&agrave;u sắc hợp tuổi v&agrave; bản mệnh</a></span></h2>
+    </li>
+</ul>
+<table>
+    <tbody>
+        <tr>
+            <td><span style="font-size:16px;">Năm sinh</span></td>
+            <td><span style="font-size:16px;">Tuổi</span></td>
+            <td><span style="font-size:16px;">H&agrave;nh</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1924-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1924 hợp màu gì, đeo đá phong thủy nào"><strong>1924</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p T&yacute;</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1925-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1925 hợp màu gì, đeo đá phong thủy nào"><strong>1925</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Sửu</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1926-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1926 hợp màu gì, đeo đá phong thủy nào"><strong>1926</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Dần</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1927-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1927 hợp màu gì, đeo đá phong thủy nào"><strong>1927</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1928-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1928 hợp màu gì, đeo đá phong thủy nào"><strong>1928</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1929-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1929 hợp màu gì, đeo đá phong thủy nào"><strong>1929</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Tỵ</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1930-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1930 hợp màu gì, đeo đá phong thủy nào"><strong>1930</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Ngọ</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1931-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1931 hợp màu gì, đeo đá phong thủy nào"><strong>1931</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1932-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1932 hợp màu gì, đeo đá phong thủy nào"><strong>1932</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1933-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1933 hợp màu gì, đeo đá phong thủy nào"><strong>1933</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Dậu</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1934-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1934 hợp màu gì, đeo đá phong thủy nào"><strong>1934</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Tuất</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1935-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1935 hợp màu gì, đeo đá phong thủy nào"><strong>1935</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Hợi</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1936-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1936 hợp màu gì, đeo đá phong thủy nào"><strong>1936</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1937-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1937 hợp màu gì, đeo đá phong thủy nào"><strong>1937</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh Sửu</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1938-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1938 hợp màu gì, đeo đá phong thủy nào"><strong>1938</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Dần</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1939-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1939 hợp màu gì, đeo đá phong thủy nào"><strong>1939</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1940-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1940 hợp màu gì, đeo đá phong thủy nào"><strong>1940</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1941-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1941 hợp màu gì, đeo đá phong thủy nào"><strong>1941</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Tỵ</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1942-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1942 hợp màu gì, đeo đá phong thủy nào"><strong>1942</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Ngọ</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1943-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1943 hợp màu gì, đeo đá phong thủy nào"><strong>1943</strong></a></span></td>
+            <td><span style="font-size:16px;">Q&uacute;y M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1944-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1944 hợp màu gì, đeo đá phong thủy nào"><strong>1944</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1945-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1945 hợp màu gì, đeo đá phong thủy nào"><strong>1945</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Dậu</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1946-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1946 hợp màu gì, đeo đá phong thủy nào"><strong>1946</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Tuất</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1947-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1947 hợp màu gì, đeo đá phong thủy nào"><strong>1947</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh hợi</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1948-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1948 hợp màu gì, đeo đá phong thủy nào"><strong>1948</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu T&yacute;</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1949-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1949 hợp màu gì, đeo đá phong thủy nào"><strong>1949</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Sửu</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1950-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1950 hợp màu gì, đeo đá phong thủy nào"><strong>1950</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Dần</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1951-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1951 hợp màu gì, đeo đá phong thủy nào"><strong>1951</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1952-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1952 hợp màu gì, đeo đá phong thủy nào"><strong>1952</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1953-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1953 hợp màu gì, đeo đá phong thủy nào"><strong>1953</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Tỵ</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1954-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1954 hợp màu gì, đeo đá phong thủy nào"><strong>1954</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Ngọ</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1955-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1955 hợp màu gì, đeo đá phong thủy nào"><strong>1955</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1956-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1956 hợp màu gì, đeo đá phong thủy nào"><strong>1956</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1957-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1957 hợp màu gì, đeo đá phong thủy nào"><strong>1957</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh Dậu</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1958-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1958 hợp màu gì, đeo đá phong thủy nào"><strong>1958</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Tuất</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1959-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1959 hợp màu gì, đeo đá phong thủy nào"><strong>1959</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Hợi</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1960-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1960 hợp màu gì, đeo đá phong thủy nào"><strong>1960</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1961-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1961 hợp màu gì, đeo đá phong thủy nào"><strong>1961</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Sửu</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1962-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1962 hợp màu gì, đeo đá phong thủy nào"><strong>1962</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Dần</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1963-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1963 hợp màu gì, đeo đá phong thủy nào"><strong>1963</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1964-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1964 hợp màu gì, đeo đá phong thủy nào"><strong>1964</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1965-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1965 hợp màu gì, đeo đá phong thủy nào"><strong>1965</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Tỵ</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1966-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1966 hợp màu gì, đeo đá phong thủy nào"><strong>1966</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Ngọ</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1967-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1967 hợp màu gì, đeo đá phong thủy nào"><strong>1967</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1968-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1968 hợp màu gì, đeo đá phong thủy nào"><strong>1968</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1969-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1969 hợp màu gì, đeo đá phong thủy nào"><strong>1969</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Dậu</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1970-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1970 hợp màu gì, đeo đá phong thủy nào"><strong>1970</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Tuất</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1971-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1971 hợp màu gì, đeo đá phong thủy nào"><strong>1971</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Hợi</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1972-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1972 hợp màu gì, đeo đá phong thủy nào"><strong>1972</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m T&yacute;</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1973-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1973 hợp màu gì, đeo đá phong thủy nào"><strong>1973</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Sửu</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1974-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1974 hợp màu gì, đeo đá phong thủy nào"><strong>1974</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Dần</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1975-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1975 hợp màu gì, đeo đá phong thủy nào"><strong>1975</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1976-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1976 hợp màu gì, đeo đá phong thủy nào"><strong>1976</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1977-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1977 hợp màu gì, đeo đá phong thủy nào"><strong>1977</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh Tỵ</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1978-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1978 hợp màu gì, đeo đá phong thủy nào"><strong>1978</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Ngọ</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1979-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1979 hợp màu gì, đeo đá phong thủy nào"><strong>1979</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1980-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1980 hợp màu gì, đeo đá phong thủy nào"><strong>1980</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1981-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1981 hợp màu gì, đeo đá phong thủy nào"><strong>1981</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Dậu</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1982-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1982 hợp màu gì, đeo đá phong thủy nào"><strong>1982</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Tuất</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1983-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1983 hợp màu gì, đeo đá phong thủy nào"><strong>1983</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Hợi</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1984-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1984 hợp màu gì, đeo đá phong thủy nào"><strong>1984</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p t&yacute;</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1985-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1985 hợp màu gì, đeo đá phong thủy nào"><strong>1985</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Sửu</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1986-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1986 hợp màu gì, đeo đá phong thủy nào"><strong>1986</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Dần</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1987-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1987 hợp màu gì, đeo đá phong thủy nào"><strong>1987</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1988-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1988 hợp màu gì, đeo đá phong thủy nào"><strong>1988</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1989-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1989 hợp màu gì, đeo đá phong thủy nào"><strong>1989</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Tỵ</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1990-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1990 hợp màu gì, đeo đá phong thủy nào"><strong>1990</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Ngọ</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1991-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1991 hợp màu gì, đeo đá phong thủy nào"><strong>1991</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1992-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1992 hợp màu gì, đeo đá phong thủy nào"><strong>1992</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1993-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1993 hợp màu gì, đeo đá phong thủy nào"><strong>1993</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Dậu</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1994-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1994 hợp màu gì, đeo đá phong thủy nào"><strong>1994</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Tuất</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1995-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1995 hợp màu gì, đeo đá phong thủy nào"><strong>1995</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Hợi</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1996-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1996 hợp màu gì, đeo đá phong thủy nào"><strong>1996</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1997-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1997 hợp màu gì, đeo đá phong thủy nào"><strong>1997</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh Sửu</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1998-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1998 hợp màu gì, đeo đá phong thủy nào"><strong>1998</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Dần</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-1999-hop-mau-gi-nhat-s.html" title="Xem năm sinh 1999 hợp màu gì, đeo đá phong thủy nào"><strong>1999</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2000-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2000 hợp màu gì, đeo đá phong thủy nào"><strong>2000</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2001-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2001 hợp màu gì, đeo đá phong thủy nào"><strong>2001</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Tỵ</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2002-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2002 hợp màu gì, đeo đá phong thủy nào"><strong>2002</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Ngọ</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2003-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2003 hợp màu gì, đeo đá phong thủy nào"><strong>2003</strong></a></span></td>
+            <td><span style="font-size:16px;">Q&uacute;y M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2004-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2004 hợp màu gì, đeo đá phong thủy nào"><strong>2004</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2005-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2005 hợp màu gì, đeo đá phong thủy nào"><strong>2005</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Dậu</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2006-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2006 hợp màu gì, đeo đá phong thủy nào"><strong>2006</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Tuất</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2007-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2007 hợp màu gì, đeo đá phong thủy nào"><strong>2007</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh hợi</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2008-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2008 hợp màu gì, đeo đá phong thủy nào"><strong>2008</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu T&yacute;</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2009-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2009 hợp màu gì, đeo đá phong thủy nào"><strong>2009</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Sửu</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2010-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2010 hợp màu gì, đeo đá phong thủy nào"><strong>2010</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Dần</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2011-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2011 hợp màu gì, đeo đá phong thủy nào"><strong>2011</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2012-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2012 hợp màu gì, đeo đá phong thủy nào"><strong>2012</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2013-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2013 hợp màu gì, đeo đá phong thủy nào"><strong>2013</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Tỵ</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2014-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2014 hợp màu gì, đeo đá phong thủy nào"><strong>2014</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Ngọ</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2015-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2015 hợp màu gì, đeo đá phong thủy nào"><strong>2015</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2016-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2016 hợp màu gì, đeo đá phong thủy nào"><strong>2016</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2017-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2017 hợp màu gì, đeo đá phong thủy nào"><strong>2017</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh Dậu</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2018-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2018 hợp màu gì, đeo đá phong thủy nào"><strong>2018</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Tuất</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2019-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2019 hợp màu gì, đeo đá phong thủy nào"><strong>2019</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Hợi</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2020-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2020 hợp màu gì, đeo đá phong thủy nào"><strong>2020</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh T&yacute;</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2021-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2021 hợp màu gì, đeo đá phong thủy nào"><strong>2021</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Sửu</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2022-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2022 hợp màu gì, đeo đá phong thủy nào"><strong>2022</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Dần</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2023-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2023 hợp màu gì, đeo đá phong thủy nào"><strong>2023</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2024-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2024 hợp màu gì, đeo đá phong thủy nào"><strong>2024</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2025-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2025 hợp màu gì, đeo đá phong thủy nào"><strong>2025</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất Tỵ</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2026-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2026 hợp màu gì, đeo đá phong thủy nào"><strong>2026</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Ngọ</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2027-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2027 hợp màu gì, đeo đá phong thủy nào"><strong>2027</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2028-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2028 hợp màu gì, đeo đá phong thủy nào"><strong>2028</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2029-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2029 hợp màu gì, đeo đá phong thủy nào"><strong>2029</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ Dậu</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2030-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2030 hợp màu gì, đeo đá phong thủy nào"><strong>2030</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Tuất</span></td>
+            <td><span style="font-size:16px;">Kim +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2031-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2031 hợp màu gì, đeo đá phong thủy nào"><strong>2031</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Hợi</span></td>
+            <td><span style="font-size:16px;">Kim &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2032-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2032 hợp màu gì, đeo đá phong thủy nào"><strong>2032</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m T&yacute;</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2033-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2033 hợp màu gì, đeo đá phong thủy nào"><strong>2033</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Sửu</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2034-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2034 hợp màu gì, đeo đá phong thủy nào"><strong>2034</strong></a></span></td>
+            <td><span style="font-size:16px;">Gi&aacute;p Dần</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2035-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2035 hợp màu gì, đeo đá phong thủy nào"><strong>2035</strong></a></span></td>
+            <td><span style="font-size:16px;">Ất M&atilde;o</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2036-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2036 hợp màu gì, đeo đá phong thủy nào"><strong>2036</strong></a></span></td>
+            <td><span style="font-size:16px;">B&iacute;nh Th&igrave;n</span></td>
+            <td><span style="font-size:16px;">Thổ +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2037-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2037 hợp màu gì, đeo đá phong thủy nào"><strong>2037</strong></a></span></td>
+            <td><span style="font-size:16px;">Đinh Tỵ</span></td>
+            <td><span style="font-size:16px;">Thổ &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2038-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2038 hợp màu gì, đeo đá phong thủy nào"><strong>2038</strong></a></span></td>
+            <td><span style="font-size:16px;">Mậu Ngọ</span></td>
+            <td><span style="font-size:16px;">Hỏa +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2039-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2039 hợp màu gì, đeo đá phong thủy nào"><strong>2039</strong></a></span></td>
+            <td><span style="font-size:16px;">Kỷ M&ugrave;i</span></td>
+            <td><span style="font-size:16px;">Hỏa &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2040-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2040 hợp màu gì, đeo đá phong thủy nào"><strong>2040</strong></a></span></td>
+            <td><span style="font-size:16px;">Canh Th&acirc;n</span></td>
+            <td><span style="font-size:16px;">Mộc +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2041-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2041 hợp màu gì, đeo đá phong thủy nào"><strong>2041</strong></a></span></td>
+            <td><span style="font-size:16px;">T&acirc;n Dậu</span></td>
+            <td><span style="font-size:16px;">Mộc &ndash;</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2042-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2042 hợp màu gì, đeo đá phong thủy nào"><strong>2042</strong></a></span></td>
+            <td><span style="font-size:16px;">Nh&acirc;m Tuất</span></td>
+            <td><span style="font-size:16px;">Thủy +</span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size:16px;"><a href="https://ngaydep.com/sinh-nam-2043-hop-mau-gi-nhat-s.html" title="Xem năm sinh 2043 hợp màu gì, đeo đá phong thủy nào"><strong>2043</strong></a></span></td>
+            <td><span style="font-size:16px;">Qu&yacute; Hợi</span></td>
+            <td><span style="font-size:16px;">Thủy &ndash;</span></td>
+        </tr>
+    </tbody>
+</table>
+<div style="border: 0px;">&nbsp;</div>''';
