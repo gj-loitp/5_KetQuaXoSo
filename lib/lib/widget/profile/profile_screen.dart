@@ -266,6 +266,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   },
                                 ),
                                 UIUtils.getButton(
+                                  "Bí mật về 12 cung hoàng đạo",
+                                  Icons.ac_unit_sharp,
+                                  description:
+                                      "Mỗi cung hoàng đạo đều có tính cách khác nhau, có người dễ tính, thoải mái nhưng cũng có người luôn muốn được phục tùng, chiều chuộng",
+                                  () {
+                                    //TODO roy93~ ref https://ngaydep.com/bi-mat-12-cung-hoang-dao.html
+                                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Đánh giá ứng dụng",
                                   Icons.hotel_class,
                                   description:
