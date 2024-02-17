@@ -219,6 +219,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   },
                                 ),
                                 UIUtils.getButton(
+                                  "Phong tục tập quán",
+                                  Icons.favorite,
+                                  description: "Phong tục tập quán - Phong tục ngày Tết Việt Nam",
+                                  () {
+                                    //TODO roy93~ ref https://ngaydep.com/phong-tuc-tap-quan.html
+                                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Đánh giá ứng dụng",
                                   Icons.hotel_class,
                                   description:
