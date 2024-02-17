@@ -228,6 +228,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   },
                                 ),
                                 UIUtils.getButton(
+                                  "Phật pháp tổng hợp",
+                                  Icons.family_restroom,
+                                  description: "Cha mẹ, gia đình là điều quan trọng nhất trong cuộc đời mỗi con người",
+                                  () {
+                                    //TODO roy93~ ref https://ngaydep.com/phat-phap-ung-dung.html
+                                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                                  },
+                                ),
+                                UIUtils.getButton(
                                   "Đánh giá ứng dụng",
                                   Icons.hotel_class,
                                   description:
