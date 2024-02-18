@@ -46,11 +46,11 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
     _cTooltipTheme.addListener(() {
       // debugPrint("addListener ${_cTooltipTheme.value}");
       if (_cTooltipTheme.value == ElTooltipStatus.hidden) {
-        SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, true);
+        SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, true);
       }
     });
     await Future.delayed(const Duration(milliseconds: 300));
-    SharedPreferencesUtil.getBool(SharedPreferencesUtil.tooltipTheme).then((value) {
+    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme).then((value) {
       if (value == true) {
         //do not show
       } else {
@@ -361,7 +361,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   () {
                                     showSnackBarFull(StringConstants.warning,
                                         "Xoá dữ liệu tooltip thành công, bạn có thể sẽ cần khởi động lại để thấy kết quả");
-                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, false);
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, false);
                                     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, false);
                                     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, false);
                                   },

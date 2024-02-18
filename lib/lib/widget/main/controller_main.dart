@@ -34,7 +34,7 @@ class ControllerMain extends BaseController {
   }
 
   Future<void> getThemeIndex() async {
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex);
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex);
     if (index != null) {
       themeIndex.value = index;
     }
@@ -43,7 +43,7 @@ class ControllerMain extends BaseController {
   void setThemeIndex(int? index) {
     if (index != null) {
       themeIndex.value = index;
-      SharedPreferencesUtil.setInt(SharedPreferencesUtil.themeIndex, index);
+      SharedPreferencesUtil.setInt(SharedPreferencesUtil.ketThemeIndex, index);
     }
   }
 
@@ -81,7 +81,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMN();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
     //co 2 cach
     //1 load bang web view
@@ -336,7 +336,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMT();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
 
     //co 2 cach
@@ -592,7 +592,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMB();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
     //co 2 cach
     //1 load bang web view
@@ -865,7 +865,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringProvince();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.themeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
     //co 2 cach
     //1 load bang web view

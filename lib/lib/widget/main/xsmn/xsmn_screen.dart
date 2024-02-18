@@ -29,8 +29,8 @@ class XSMNScreen extends StatefulWidget {
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   final ControllerMain _controllerMain = Get.find();
-  final _cTooltipCalendar = ElTooltipController();
-  final _cTooltipCity = ElTooltipController();
+  final ElTooltipController _cTooltipCalendar = ElTooltipController();
+  final ElTooltipController _cTooltipCity = ElTooltipController();
 
   @override
   void initState() {
@@ -50,13 +50,12 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       }
     });
     await Future.delayed(const Duration(milliseconds: 300));
-    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN).then((value) {
-      if (value == true) {
-        _showTooltipCity();
-      } else {
-        _cTooltipCalendar.show();
-      }
-    });
+    var keyTooltipCalendarXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN);
+    if (keyTooltipCalendarXSMN == true) {
+      _showTooltipCity();
+    } else {
+      _cTooltipCalendar.show();
+    }
   }
 
   Future<void> _showTooltipCity() async {
@@ -66,13 +65,12 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       }
     });
     await Future.delayed(const Duration(milliseconds: 300));
-    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN).then((value) {
-      if (value == true) {
-        //do not show
-      } else {
-        _cTooltipCity.show();
-      }
-    });
+    var keyTooltipCityXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN);
+    if (keyTooltipCityXSMN == true) {
+      //do not show
+    } else {
+      _cTooltipCity.show();
+    }
   }
 
   @override

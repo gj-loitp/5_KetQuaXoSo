@@ -6,11 +6,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// +840766040293
 /// freuss47@gmail.com
 class SharedPreferencesUtil {
-  static String themeIndex = "themeIndex";
-  static String isShowedDialogHello = "isShowedDialogHello";
-  static String tooltipTheme = "tooltipTheme";
-  static String keyTooltipCalendarXSMN = "_keyTooltipCalendarXSMN";
-  static String keyTooltipCityXSMN = "_keyTooltipCityXSMN";
+  static String ketThemeIndex = "ketThemeIndex";
+  static String keyIsShowedDialogHello = "keyIsShowedDialogHello";
+  static String keyTooltipTheme = "keyTooltipTheme";
+  static String keyTooltipCalendarXSMN = "keyTooltipCalendarXSMN";
+  static String keyTooltipCityXSMN = "keyTooltipCityXSMN";
   static int themeIndexNativeView = 0;
   static int themeIndexWebView = 1;
 

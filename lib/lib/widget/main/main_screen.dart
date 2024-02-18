@@ -56,7 +56,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
     _checkToShowDialogHello();
   }
 
-  void _checkToShowDialogHello() {
+  Future<void> _checkToShowDialogHello() async {
     void showPopup() {
       SchedulerBinding.instance.addPostFrameCallback((_) {
         showDialogSuccess(
@@ -74,13 +74,26 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
           "Không hiển thị lại",
           true,
           () {
-            SharedPreferencesUtil.setBool(SharedPreferencesUtil.isShowedDialogHello, true);
+            SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedDialogHello, true);
           },
         );
       });
     }
 
-    SharedPreferencesUtil.getBool(SharedPreferencesUtil.isShowedDialogHello).then((value) {
+    var keyTooltipTheme = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme);
+    if (keyTooltipTheme != true) {
+      return;
+    }
+    var keyTooltipCalendarXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN);
+    if (keyTooltipCalendarXSMN != true) {
+      return;
+    }
+    var keyTooltipCityXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN);
+    if (keyTooltipCityXSMN != true) {
+      return;
+    }
+
+    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedDialogHello).then((value) {
       if (value == true) {
         //do not show dialog hello again
       } else {
