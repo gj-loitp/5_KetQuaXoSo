@@ -182,12 +182,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "el_tooltip",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/el_tooltip-2.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.18"
-    },
-    {
       "name": "fading_edge_scrollview",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fading_edge_scrollview-3.0.0",
       "packageUri": "lib/",
@@ -944,7 +938,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-02-18T13:10:44.122205Z",
+  "generated": "2024-02-18T14:58:19.338998Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }
