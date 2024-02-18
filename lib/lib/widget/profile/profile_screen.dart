@@ -30,7 +30,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   final ControllerMain _controllerMain = Get.find();
-  GlobalKey key = GlobalKey(); // declare a global key
+  GlobalKey key = GlobalKey();
 
   @override
   void initState() {

@@ -1,6 +1,5 @@
 import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
-import 'package:el_tooltip/el_tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
@@ -9,11 +8,12 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
+import 'package:ketquaxoso/lib/util/duration_util.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
 import 'package:marquee/marquee.dart';
+import 'package:relative_dialog/relative_dialog.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMNScreen extends StatefulWidget {
@@ -29,8 +29,7 @@ class XSMNScreen extends StatefulWidget {
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   final ControllerMain _controllerMain = Get.find();
-  final ElTooltipController _cTooltipCalendar = ElTooltipController();
-  final ElTooltipController _cTooltipCity = ElTooltipController();
+  final GlobalKey _keyTooltipCalendar = GlobalKey();
 
   @override
   void initState() {
@@ -43,35 +42,43 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Future<void> _showTooltipCalendar() async {
-    _cTooltipCalendar.addListener(() {
-      if (_cTooltipCalendar.value == ElTooltipStatus.hidden) {
-        SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
-        _showTooltipCity();
-      }
-    });
-    await Future.delayed(const Duration(milliseconds: 300));
-    var keyTooltipCalendarXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN);
-    if (keyTooltipCalendarXSMN == true) {
-      _showTooltipCity();
-    } else {
-      _cTooltipCalendar.show();
+    await Future.delayed(const Duration(milliseconds: 500));
+    var keyTooltipCalendar = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN);
+    if (keyTooltipCalendar == true) {
+      _controllerMain.showTooltipCalendar(false);
+      return;
+    }
+    try {
+      RenderBox box = _keyTooltipCalendar.currentContext?.findRenderObject() as RenderBox;
+      Offset position = box.localToGlobal(Offset.zero);
+      debugPrint("roy93~ _showTooltipCalendar position $position");
+      WidgetsBinding.instance.handlePointerEvent(PointerDownEvent(
+        pointer: 0,
+        position: position,
+      ));
+      WidgetsBinding.instance.handlePointerEvent(PointerUpEvent(
+        pointer: 0,
+        position: position,
+      ));
+    } catch (e) {
+      debugPrint("roy93~ _showTooltipCalendar e $e");
     }
   }
 
-  Future<void> _showTooltipCity() async {
-    _cTooltipCity.addListener(() {
-      if (_cTooltipCity.value == ElTooltipStatus.hidden) {
-        SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
-      }
-    });
-    await Future.delayed(const Duration(milliseconds: 300));
-    var keyTooltipCityXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN);
-    if (keyTooltipCityXSMN == true) {
-      //do not show
-    } else {
-      _cTooltipCity.show();
-    }
-  }
+  // Future<void> _showTooltipCity() async {
+  //   _cTooltipCity.addListener(() {
+  //     if (_cTooltipCity.value == ElTooltipStatus.hidden) {
+  //       SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
+  //     }
+  //   });
+  //   await Future.delayed(const Duration(milliseconds: 300));
+  //   var keyTooltipCityXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN);
+  //   if (keyTooltipCityXSMN == true) {
+  //     //do not show
+  //   } else {
+  //     _cTooltipCity.show();
+  //   }
+  // }
 
   @override
   void dispose() {
@@ -127,39 +134,75 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           Expanded(
             child: SizedBox(
               height: 100,
-              child: ElTooltip(
-                controller: _cTooltipCalendar,
-                showChildAboveOverlay: false,
-                position: ElTooltipPosition.bottomCenter,
-                appearAnimationDuration: const Duration(milliseconds: 300),
-                disappearAnimationDuration: const Duration(milliseconds: 300),
-                content: const Text(
-                  'Bạn có thể lựa chọn ngày tháng để tra cứu kết quả xổ số bằng cách nhấn vào đây',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 12,
-                    color: Colors.black,
+              child: Stack(
+                key: _keyTooltipCalendar,
+                children: [
+                  CalendarTimeline(
+                    shrink: false,
+                    showYears: false,
+                    initialDate: _controllerMain.xsmnSelectedDateTime.value,
+                    firstDate: DateTime.now().subtract(const Duration(days: 365)),
+                    lastDate: DateTime.now().add(const Duration(days: 365)),
+                    onDateSelected: (date) {
+                      _selectDay(date, false);
+                    },
+                    leftMargin: 0,
+                    monthColor: Colors.black,
+                    dayColor: Colors.black,
+                    activeDayColor: Colors.white,
+                    activeBackgroundDayColor: ColorConstants.appColor,
+                    dotsColor: Colors.white,
+                    // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+                    locale: 'vi',
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                child: CalendarTimeline(
-                  shrink: false,
-                  showYears: false,
-                  initialDate: _controllerMain.xsmnSelectedDateTime.value,
-                  firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                  lastDate: DateTime.now().add(const Duration(days: 365)),
-                  onDateSelected: (date) {
-                    _selectDay(date, false);
-                  },
-                  leftMargin: 0,
-                  monthColor: Colors.black,
-                  dayColor: Colors.black,
-                  activeDayColor: Colors.white,
-                  activeBackgroundDayColor: ColorConstants.appColor,
-                  dotsColor: Colors.white,
-                  // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-                  locale: 'vi',
-                ),
+                  Visibility(
+                    visible: _controllerMain.isShowTooltipCalendar.value,
+                    child: Builder(builder: (context) {
+                      return InkWell(
+                        child: Container(
+                          width: double.infinity,
+                          height: double.infinity,
+                          color: Colors.transparent,
+                        ),
+                        onTap: () {
+                          debugPrint("roy93~ showRelativeDialog");
+                          showRelativeDialog(
+                              context: context,
+                              alignment: Alignment.centerLeft,
+                              builder: (context) {
+                                return WillPopScope(
+                                  onWillPop: () {
+                                    debugPrint("roy93~ WillPopScope");
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
+                                    _controllerMain.showTooltipCalendar(false);
+                                    return Future(() => true);
+                                  },
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                                        color: Colors.white,
+                                      ),
+                                      padding: const EdgeInsets.all(16),
+                                      child: const Text(
+                                        'Bạn có thể lựa chọn ngày tháng để tra cứu\nkết quả xổ số bằng cách nhấn vào đây',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 12,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              });
+                        },
+                      );
+                    }),
+                  ),
+                ],
               ),
             ),
           ),
@@ -170,34 +213,35 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               SizedBox(
                 width: 40,
                 height: 40,
-                child: ElTooltip(
-                  controller: _cTooltipCity,
-                  showChildAboveOverlay: false,
-                  position: ElTooltipPosition.bottomCenter,
-                  appearAnimationDuration: const Duration(milliseconds: 300),
-                  disappearAnimationDuration: const Duration(milliseconds: 300),
-                  content: const Text(
-                    'Dò kết qủa theo các tỉnh thành',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 12,
-                      color: Colors.black,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.to(() => const ProvinceListScreen());
-                    },
-                    color: Colors.blueAccent,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: const Icon(
-                      Icons.location_city,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+                //TODO roy93~
+                // child: ElTooltip(
+                //   controller: _cTooltipCity,
+                //   showChildAboveOverlay: false,
+                //   position: ElTooltipPosition.bottomCenter,
+                //   appearAnimationDuration: const Duration(milliseconds: 300),
+                //   disappearAnimationDuration: const Duration(milliseconds: 300),
+                //   content: const Text(
+                //     'Dò kết qủa theo các tỉnh thành',
+                //     style: TextStyle(
+                //       fontWeight: FontWeight.w700,
+                //       fontSize: 12,
+                //       color: Colors.black,
+                //     ),
+                //     textAlign: TextAlign.center,
+                //   ),
+                //   child: MaterialButton(
+                //     onPressed: () {
+                //       Get.to(() => const ProvinceListScreen());
+                //     },
+                //     color: Colors.blueAccent,
+                //     padding: const EdgeInsets.all(0),
+                //     shape: const CircleBorder(),
+                //     child: const Icon(
+                //       Icons.location_city,
+                //       color: Colors.white,
+                //     ),
+                //   ),
+                // ),
               ),
               const SizedBox(height: 4),
               SizedBox(
