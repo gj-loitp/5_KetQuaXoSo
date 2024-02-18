@@ -1,5 +1,6 @@
 import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
+import 'package:el_tooltip/el_tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
@@ -28,8 +29,8 @@ class XSMNScreen extends StatefulWidget {
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   final ControllerMain _controllerMain = Get.find();
-  final _keyTooltipCalendarXSMN = GlobalKey();
-  final _keyTooltipCityXSMN = GlobalKey();
+  final _cTooltipCalendar = ElTooltipController();
+  final _cTooltipCity = ElTooltipController();
 
   @override
   void initState() {
@@ -37,29 +38,40 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     // debugPrint("initState");
     _selectDay(DateTime.now(), true);
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      _showTooltip();
+      _showTooltipCalendar();
     });
   }
 
-  void _showTooltip() {
+  Future<void> _showTooltipCalendar() async {
+    _cTooltipCalendar.addListener(() {
+      if (_cTooltipCalendar.value == ElTooltipStatus.hidden) {
+        SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
+        _showTooltipCity();
+      }
+    });
+    await Future.delayed(const Duration(milliseconds: 300));
     SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN).then((value) {
+      if (value == true) {
+        _showTooltipCity();
+      } else {
+        _cTooltipCalendar.show();
+      }
+    });
+  }
+
+  Future<void> _showTooltipCity() async {
+    _cTooltipCity.addListener(() {
+      if (_cTooltipCity.value == ElTooltipStatus.hidden) {
+        SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
+      }
+    });
+    await Future.delayed(const Duration(milliseconds: 300));
+    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN).then((value) {
       if (value == true) {
         //do not show
       } else {
-        final dynamic tooltip = _keyTooltipCalendarXSMN.currentState;
-        tooltip.ensureTooltipVisible();
+        _cTooltipCity.show();
       }
-      // SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
-
-      // SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN).then((value) {
-      //   if (value == true) {
-      //     //do not show
-      //   } else {
-      //     final dynamic tooltip = _keyTooltipCityXSMN.currentState;
-      //     tooltip.ensureTooltipVisible();
-      //   }
-      //   SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
-      // });
     });
   }
 
@@ -117,13 +129,21 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           Expanded(
             child: SizedBox(
               height: 100,
-              child: Tooltip(
-                key: _keyTooltipCalendarXSMN,
-                margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                showDuration: const Duration(seconds: 60),
-                message: 'Bạn có thể lựa chọn ngày tháng để tra cứu kết quả xổ số bằng cách nhấn vào đây',
-                preferBelow: true,
-                triggerMode: TooltipTriggerMode.longPress,
+              child: ElTooltip(
+                controller: _cTooltipCalendar,
+                showChildAboveOverlay: false,
+                position: ElTooltipPosition.bottomCenter,
+                appearAnimationDuration: const Duration(milliseconds: 300),
+                disappearAnimationDuration: const Duration(milliseconds: 300),
+                content: const Text(
+                  'Bạn có thể lựa chọn ngày tháng để tra cứu kết quả xổ số bằng cách nhấn vào đây',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 12,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
                 child: CalendarTimeline(
                   shrink: false,
                   showYears: false,
@@ -152,13 +172,21 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               SizedBox(
                 width: 40,
                 height: 40,
-                child: Tooltip(
-                  key: _keyTooltipCityXSMN,
-                  margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                  showDuration: const Duration(seconds: 60),
-                  message: 'Dò kết qủa theo các tỉnh thành tại ',
-                  preferBelow: true,
-                  triggerMode: TooltipTriggerMode.longPress,
+                child: ElTooltip(
+                  controller: _cTooltipCity,
+                  showChildAboveOverlay: false,
+                  position: ElTooltipPosition.bottomCenter,
+                  appearAnimationDuration: const Duration(milliseconds: 300),
+                  disappearAnimationDuration: const Duration(milliseconds: 300),
+                  content: const Text(
+                    'Dò kết qủa theo các tỉnh thành',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 12,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                   child: MaterialButton(
                     onPressed: () {
                       Get.to(() => const ProvinceListScreen());
