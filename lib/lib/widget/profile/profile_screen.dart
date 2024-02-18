@@ -1,6 +1,5 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:blur/blur.dart';
-import 'package:el_tooltip/el_tooltip.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -15,6 +14,7 @@ import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/information_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
+import 'package:relative_dialog/relative_dialog.dart';
 import 'package:restart_app/restart_app.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:toggle_switch/toggle_switch.dart';
@@ -30,8 +30,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   final ControllerMain _controllerMain = Get.find();
-
-  final _cTooltipTheme = ElTooltipController();
+  GlobalKey key = GlobalKey(); // declare a global key
 
   @override
   void initState() {
@@ -43,25 +42,24 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   }
 
   Future<void> _showTooltip() async {
-    _cTooltipTheme.addListener(() {
-      // debugPrint("addListener ${_cTooltipTheme.value}");
-      if (_cTooltipTheme.value == ElTooltipStatus.hidden) {
-        SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, true);
-      }
-    });
-    await Future.delayed(const Duration(milliseconds: 300));
-    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme).then((value) {
-      if (value == true) {
-        //do not show
-      } else {
-        _cTooltipTheme.show();
-      }
-    });
+    var keyTooltipTheme = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme);
+    if (keyTooltipTheme == true) {
+      return;
+    }
+    RenderBox box = key.currentContext?.findRenderObject() as RenderBox;
+    Offset position = box.localToGlobal(Offset.zero);
+    WidgetsBinding.instance.handlePointerEvent(PointerDownEvent(
+      pointer: 0,
+      position: position,
+    ));
+    WidgetsBinding.instance.handlePointerEvent(PointerUpEvent(
+      pointer: 0,
+      position: position,
+    ));
   }
 
   @override
   void dispose() {
-    // _controllerMain.clearOnDispose();
     super.dispose();
   }
 
@@ -92,10 +90,6 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     width: double.infinity,
                     child: const Row(
                       children: [
-                        // const SizedBox(
-                        //   width: 40,
-                        //   height: 40,
-                        // ),
                         Expanded(
                           child: Text(
                             "Cá nhân",
@@ -168,24 +162,9 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   ),
                                 ),
                                 const SizedBox(height: 16),
-                                Container(
-                                  width: double.infinity,
-                                  alignment: Alignment.center,
-                                  child: ElTooltip(
-                                    controller: _cTooltipTheme,
-                                    showChildAboveOverlay: false,
-                                    position: ElTooltipPosition.bottomCenter,
-                                    appearAnimationDuration: const Duration(milliseconds: 300),
-                                    disappearAnimationDuration: const Duration(milliseconds: 300),
-                                    content: const Text(
-                                      'Bạn có thể lựa chọn giao diện tại đây\nChúng tôi khuyến cáo chọn Theme Tối Ưu sẽ cho trải nghiệm mượt mà hơn',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 12,
-                                        color: Colors.black,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
+                                Builder(builder: (context) {
+                                  return InkWell(
+                                    key: key,
                                     child: const Text(
                                       "Chọn giao diện",
                                       style: TextStyle(
@@ -194,8 +173,42 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                         color: Colors.black,
                                       ),
                                     ),
-                                  ),
-                                ),
+                                    onTap: () {
+                                      showRelativeDialog(
+                                          context: context,
+                                          alignment: Alignment.bottomCenter,
+                                          builder: (context) {
+                                            return WillPopScope(
+                                              onWillPop: () {
+                                                debugPrint("roy93~ WillPopScope");
+                                                SharedPreferencesUtil.setBool(
+                                                    SharedPreferencesUtil.keyTooltipTheme, true);
+                                                return Future(() => true);
+                                              },
+                                              child: Material(
+                                                color: Colors.transparent,
+                                                child: Container(
+                                                  decoration: const BoxDecoration(
+                                                    borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                                                    color: Colors.white,
+                                                  ),
+                                                  padding: const EdgeInsets.all(16),
+                                                  child: const Text(
+                                                    'Bạn có thể lựa chọn giao diện tại đây\nChúng tôi khuyến cáo chọn Theme Tối Ưu\nsẽ cho trải nghiệm mượt mà hơn',
+                                                    style: TextStyle(
+                                                      fontWeight: FontWeight.w700,
+                                                      fontSize: 12,
+                                                      color: Colors.black,
+                                                    ),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          });
+                                    },
+                                  );
+                                }),
                                 const SizedBox(height: 16),
                                 ToggleSwitch(
                                   minWidth: Get.width / 3,
@@ -215,7 +228,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                     [ColorConstants.appColor]
                                   ],
                                   onToggle: (index) {
-                                    debugPrint('switched to: $index');
+                                    // debugPrint('switched to: $index');
                                     _controllerMain.setThemeIndex(index);
                                     _showPopupRestart();
                                   },
