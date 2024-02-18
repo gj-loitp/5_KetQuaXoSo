@@ -31,28 +31,31 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   final ControllerMain _controllerMain = Get.find();
 
-  final _cTooltip = ElTooltipController();
+  final _cTooltipTheme = ElTooltipController();
 
   @override
   void initState() {
     super.initState();
     _controllerMain.getThemeIndex();
-
     SchedulerBinding.instance.addPostFrameCallback((_) {
       _showTooltip();
     });
   }
 
   Future<void> _showTooltip() async {
+    _cTooltipTheme.addListener(() {
+      // debugPrint("addListener ${_cTooltipTheme.value}");
+      if (_cTooltipTheme.value == ElTooltipStatus.hidden) {
+        SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, true);
+      }
+    });
     await Future.delayed(const Duration(milliseconds: 300));
     SharedPreferencesUtil.getBool(SharedPreferencesUtil.tooltipTheme).then((value) {
       if (value == true) {
         //do not show
       } else {
-        _cTooltip.show();
+        _cTooltipTheme.show();
       }
-      //TODO roy93~ iplm
-      // SharedPreferencesUtil.setBool(SharedPreferencesUtil.tooltipTheme, true);
     });
   }
 
@@ -169,7 +172,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   width: double.infinity,
                                   alignment: Alignment.center,
                                   child: ElTooltip(
-                                    controller: _cTooltip,
+                                    controller: _cTooltipTheme,
                                     showChildAboveOverlay: false,
                                     position: ElTooltipPosition.bottomCenter,
                                     appearAnimationDuration: const Duration(milliseconds: 300),
