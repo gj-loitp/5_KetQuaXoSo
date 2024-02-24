@@ -171,7 +171,7 @@
     },
     {
       "name": "dio",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/dio-5.4.0",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/dio-5.4.1",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
@@ -759,9 +759,9 @@
     },
     {
       "name": "url_launcher",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher-6.2.4",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher-6.2.5",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.2"
     },
     {
       "name": "url_launcher_android",
@@ -938,7 +938,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-02-18T14:58:19.338998Z",
+  "generated": "2024-02-24T12:54:54.869305Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

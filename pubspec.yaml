@@ -1,7 +1,7 @@
 name: ketquaxoso
 description: A new Flutter project.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 2024.02.06+20240206
+version: 2024.02.24+20240224
 
 environment:
   sdk: '>=2.19.6 <4.0.0'
@@ -35,7 +35,7 @@ dependencies:
   #https://pub.dev/packages/in_app_review
   in_app_review: ^2.0.8
   #https://pub.dev/packages/url_launcher
-  url_launcher: ^6.2.4
+  url_launcher: ^6.2.5
   #https://pub.dev/packages/animated_text_kit
   animated_text_kit: ^4.2.2
   #https://pub.dev/packages/animated_toggle_switch
@@ -59,7 +59,7 @@ dependencies:
   #https://pub.dev/packages/device_info_plus
 #  device_info_plus: ^9.1.1
   #https://pub.dev/packages/dio
-  dio: ^5.4.0
+  dio: ^5.4.1
   #https://pub.dev/packages/double_back_to_close_app
 #  double_back_to_close_app: ^2.1.0
   #https://pub.dev/packages/double_tap_to_exit
