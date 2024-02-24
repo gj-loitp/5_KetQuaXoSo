@@ -11,6 +11,7 @@ class SharedPreferencesUtil {
   static String keyTooltipTheme = "keyTooltipTheme";
   static String keyTooltipCalendarXSMN = "keyTooltipCalendarXSMN";
   static String keyTooltipCityXSMN = "keyTooltipCityXSMN";
+  static String keyTooltipTodayXSMN = "keyTooltipTodayXSMN";
   static int themeIndexNativeView = 0;
   static int themeIndexWebView = 1;
 

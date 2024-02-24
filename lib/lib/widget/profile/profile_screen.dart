@@ -180,7 +180,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                           builder: (context) {
                                             return WillPopScope(
                                               onWillPop: () {
-                                                debugPrint("roy93~ WillPopScope");
+                                                // debugPrint("WillPopScope");
                                                 SharedPreferencesUtil.setBool(
                                                     SharedPreferencesUtil.keyTooltipTheme, true);
                                                 return Future(() => true);
@@ -377,6 +377,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, false);
                                     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, false);
                                     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, false);
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, false);
                                   },
                                 ),
                               ],

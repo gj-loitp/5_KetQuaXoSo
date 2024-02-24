@@ -1142,6 +1142,7 @@ class ControllerMain extends BaseController {
 
   var isShowTooltipCalendar = true.obs;
   var isShowTooltipCity = true.obs;
+  var isShowTooltipToday = true.obs;
 
   void showTooltipCalendar(bool isShowTooltipCalendar) {
     this.isShowTooltipCalendar.value = isShowTooltipCalendar;
@@ -1149,5 +1150,9 @@ class ControllerMain extends BaseController {
 
   void showTooltipCity(bool isShowTooltipCity) {
     this.isShowTooltipCity.value = isShowTooltipCity;
+  }
+
+  void showTooltipToday(bool isShowTooltipToday) {
+    this.isShowTooltipToday.value = isShowTooltipToday;
   }
 }
