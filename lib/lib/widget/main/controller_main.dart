@@ -1141,8 +1141,13 @@ class ControllerMain extends BaseController {
   ///END ZONE PROVINCE
 
   var isShowTooltipCalendar = true.obs;
+  var isShowTooltipCity = true.obs;
 
   void showTooltipCalendar(bool isShowTooltipCalendar) {
     this.isShowTooltipCalendar.value = isShowTooltipCalendar;
+  }
+
+  void showTooltipCity(bool isShowTooltipCity) {
+    this.isShowTooltipCity.value = isShowTooltipCity;
   }
 }
