@@ -4,11 +4,7 @@ import 'package:get/get.dart';
 import '../common/const/dimen_constants.dart';
 import '../util/ui_utils.dart';
 
-/// Created by Loitp on 05,August,2022
-/// Galaxy One company,
-/// Vietnam
-/// +840766040293
-/// freuss47@gmail.com
+
 abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
   BaseStatefulState();
 

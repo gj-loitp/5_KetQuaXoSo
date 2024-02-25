@@ -363,7 +363,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   description:
                                       "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
                                   () {
-                                    UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
+                                    UrlLauncherUtils.launchInBrowser("https://github.com/gj-roy/KetQuaXoSo");
                                   },
                                 ),
                                 UIUtils.getButton(
