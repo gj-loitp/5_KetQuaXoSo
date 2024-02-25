@@ -10,8 +10,6 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO notification reminder
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
-//TODO https://pub.dev/packages/super_tooltip
-
 //done mckimquyen
 //ic_launcher
 //pkg name
