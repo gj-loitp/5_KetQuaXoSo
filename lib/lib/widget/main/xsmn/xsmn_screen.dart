@@ -242,6 +242,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 width: 40,
                 height: 40,
                 child: Stack(
+                  fit: StackFit.expand,
                   children: [
                     MaterialButton(
                       onPressed: () {
@@ -311,6 +312,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 width: 40,
                 height: 40,
                 child: Stack(
+                  fit: StackFit.expand,
                   children: [
                     MaterialButton(
                       onPressed: () {
