@@ -1,6 +1,8 @@
 import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
@@ -112,7 +114,8 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
           Column(
             children: [
               const SizedBox(height: 8),
-              SizedBox(
+              Container(
+                padding: const EdgeInsets.all(2),
                 width: 40,
                 height: 40,
                 child: MaterialButton(
@@ -129,7 +132,8 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                 ),
               ),
               const SizedBox(height: 4),
-              SizedBox(
+              Container(
+                padding: const EdgeInsets.all(2),
                 width: 40,
                 height: 40,
                 child: MaterialButton(

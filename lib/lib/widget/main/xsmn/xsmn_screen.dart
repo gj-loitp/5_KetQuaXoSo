@@ -242,7 +242,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 width: 40,
                 height: 40,
                 child: Stack(
-                  fit: StackFit.expand,
+                  // fit: StackFit.expand,
                   children: [
                     MaterialButton(
                       onPressed: () {
@@ -260,7 +260,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                       return InkWell(
                         onTap: _controllerMain.isShowTooltipCity.value
                             ? () {
-                                // debugPrint("showRelativeDialog isShowTooltipCity");
+                                debugPrint("roy93~ showRelativeDialog isShowTooltipCity");
                                 showRelativeDialog(
                                     context: context,
                                     alignment: Alignment.centerRight,
@@ -312,7 +312,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 width: 40,
                 height: 40,
                 child: Stack(
-                  fit: StackFit.expand,
+                  // fit: StackFit.expand,
                   children: [
                     MaterialButton(
                       onPressed: () {
