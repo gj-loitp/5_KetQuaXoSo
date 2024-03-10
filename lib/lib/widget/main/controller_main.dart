@@ -17,7 +17,7 @@ class ControllerMain extends BaseController {
   final dio = Dio();
   var isNativeMode = true.obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
-  var onOffTextOverflowIndex = 1.obs;
+  var onOffTextOverflowIndex = SharedPreferencesUtil.offTextOverflow.obs;
   var buildId = "".obs;
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
 

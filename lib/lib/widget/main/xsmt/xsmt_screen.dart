@@ -12,6 +12,7 @@ import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
+import 'package:ketquaxoso/lib/widget/text_marquee.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -426,14 +427,8 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                         color: Colors.transparent,
                         child: InkWell(
                           borderRadius: BorderRadius.circular(45),
-                          child: Marquee(
-                            text: sCurrentSearchNumber,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black87,
-                            ),
-                            blankSpace: 50.0,
+                          child: TextMarquee(
+                            sCurrentSearchNumber,
                           ),
                           onTap: () {
                             Get.to(() => const DlgInput(
@@ -636,14 +631,8 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: Marquee(
-            text: "${dataWrapper.displayName}",
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-            ),
-            blankSpace: 50.0,
+          child: TextMarquee(
+            "${dataWrapper.displayName}",
           ),
         ),
         Container(
