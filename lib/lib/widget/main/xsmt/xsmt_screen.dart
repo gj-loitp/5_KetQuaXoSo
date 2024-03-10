@@ -455,14 +455,18 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
           height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.appColor.withOpacity(0.3),
+            color: ColorConstants.white.withOpacity(0.5),
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: const Text(
             "╲",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Colors.white),
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+            ),
           ),
         ),
         Container(
