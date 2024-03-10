@@ -119,49 +119,51 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
   }
 
   Widget _buildBody() {
-    return Container(
-      margin: const EdgeInsets.all(16),
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(45.0)),
-        color: Colors.white,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "Bật/tắt tính năng chữ chạy khi nội dung Text không đủ khoảng trống",
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 16,
-              color: Colors.black,
+    return Obx(() {
+      return Container(
+        margin: const EdgeInsets.all(16),
+        width: double.infinity,
+        padding: const EdgeInsets.all(16),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(45.0)),
+          color: Colors.white,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Bật/tắt tính năng chữ chạy khi nội dung Text không đủ khoảng trống",
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
+                color: Colors.black,
+              ),
             ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(top: 16),
-            alignment: Alignment.center,
-            child: ToggleSwitch(
-              minWidth: 90.0,
-              cornerRadius: 45.0,
-              activeBgColors: const [
-                [ColorConstants.appColor],
-                [ColorConstants.appColor]
-              ],
-              activeFgColor: Colors.white,
-              inactiveBgColor: Colors.grey,
-              inactiveFgColor: Colors.white,
-              initialLabelIndex: 1,
-              totalSwitches: 2,
-              labels: ['Bật', 'Tắt'],
-              radiusStyle: true,
-              onToggle: (index) {
-                print('switched to: $index');
-              },
+            Container(
+              margin: const EdgeInsets.only(top: 16),
+              alignment: Alignment.center,
+              child: ToggleSwitch(
+                minWidth: 90.0,
+                cornerRadius: 45.0,
+                activeBgColors: const [
+                  [ColorConstants.appColor],
+                  [ColorConstants.appColor]
+                ],
+                activeFgColor: Colors.white,
+                inactiveBgColor: Colors.grey,
+                inactiveFgColor: Colors.white,
+                initialLabelIndex: _controllerMain.onOffTextOverflowIndex.value,
+                totalSwitches: 2,
+                labels: const ['Bật', 'Tắt'],
+                radiusStyle: true,
+                onToggle: (index) {
+                  _controllerMain.setOnOffTextOverflow(index);
+                },
+              ),
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
+    });
   }
 }

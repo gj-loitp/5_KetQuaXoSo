@@ -37,7 +37,6 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   @override
   void initState() {
     super.initState();
-    _controllerMain.getThemeIndex();
     SchedulerBinding.instance.addPostFrameCallback((_) {
       _showTooltip();
     });

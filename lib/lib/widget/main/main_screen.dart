@@ -53,6 +53,8 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   void initState() {
     super.initState();
     _controllerMain.getPackageInfo();
+    _controllerMain.getThemeIndex();
+    _controllerMain.getOnOffTextOverflow();
     _checkToShowDialogHello();
   }
 

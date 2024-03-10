@@ -17,6 +17,7 @@ class ControllerMain extends BaseController {
   final dio = Dio();
   var isNativeMode = true.obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
+  var onOffTextOverflowIndex = 1.obs;
   var buildId = "".obs;
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
 
@@ -34,7 +35,7 @@ class ControllerMain extends BaseController {
   }
 
   Future<void> getThemeIndex() async {
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex);
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyThemeIndex);
     if (index != null) {
       themeIndex.value = index;
     }
@@ -43,7 +44,21 @@ class ControllerMain extends BaseController {
   void setThemeIndex(int? index) {
     if (index != null) {
       themeIndex.value = index;
-      SharedPreferencesUtil.setInt(SharedPreferencesUtil.ketThemeIndex, index);
+      SharedPreferencesUtil.setInt(SharedPreferencesUtil.keyThemeIndex, index);
+    }
+  }
+
+  Future<void> getOnOffTextOverflow() async {
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyOnOffTextOverflow);
+    if (index != null) {
+      onOffTextOverflowIndex.value = index;
+    }
+  }
+
+  void setOnOffTextOverflow(int? index) {
+    if (index != null) {
+      onOffTextOverflowIndex.value = index;
+      SharedPreferencesUtil.setInt(SharedPreferencesUtil.keyOnOffTextOverflow, index);
     }
   }
 
@@ -81,7 +96,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMN();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
     //co 2 cach
     //1 load bang web view
@@ -336,7 +351,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMT();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
 
     //co 2 cach
@@ -592,7 +607,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringXSMB();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
     //co 2 cach
     //1 load bang web view
@@ -865,7 +880,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringProvince();
     // debugPrint("date $date");
 
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.ketThemeIndex) ??
+    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyThemeIndex) ??
         SharedPreferencesUtil.themeIndexNativeView;
     //co 2 cach
     //1 load bang web view
