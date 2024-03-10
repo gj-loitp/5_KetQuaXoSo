@@ -8,9 +8,9 @@ import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
-import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
+import 'package:ketquaxoso/lib/widget/search/search_screen.dart';
 import 'package:ketquaxoso/lib/widget/text_marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -425,7 +425,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                             sCurrentSearchNumber,
                           ),
                           onTap: () {
-                            Get.to(() => const DlgInput(
+                            Get.to(() => const SearchScreen(
                                   province: null,
                                   callFromScreen: XSMTScreen.path,
                                 ));

@@ -2,6 +2,7 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/formatter/date_text_formatter.dart';
 import 'package:ketquaxoso/lib/model/province.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
@@ -11,21 +12,21 @@ import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmt/xsmt_screen.dart';
 
-class DlgInput extends StatefulWidget {
+class SearchScreen extends StatefulWidget {
   final String callFromScreen;
   final Province? province;
 
-  const DlgInput({
+  const SearchScreen({
     super.key,
     required this.callFromScreen,
     required this.province,
   });
 
   @override
-  State<DlgInput> createState() => _DlgInputState();
+  State<SearchScreen> createState() => _SearchScreenState();
 }
 
-class _DlgInputState extends State<DlgInput> {
+class _SearchScreenState extends BaseStatefulState<SearchScreen> {
   final ControllerMain _controllerMain = Get.find();
   final TextEditingController _tecNumber = TextEditingController();
   final TextEditingController _tecDate = TextEditingController();
@@ -98,6 +99,11 @@ class _DlgInputState extends State<DlgInput> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -117,7 +123,8 @@ class _DlgInputState extends State<DlgInput> {
             blur: 5,
           ),
           Obx(() {
-            return SafeArea(child: Column(
+            return SafeArea(
+              child: Column(
                 children: [
                   Container(
                     alignment: Alignment.center,
@@ -130,7 +137,7 @@ class _DlgInputState extends State<DlgInput> {
                           height: 40,
                           child: MaterialButton(
                             onPressed: () {
-                              Get.back();
+                              _exitScreen();
                             },
                             color: Colors.white,
                             padding: const EdgeInsets.all(0),
@@ -339,6 +346,19 @@ class _DlgInputState extends State<DlgInput> {
     } else if (widget.callFromScreen == XSMBScreen.path) {
       _controllerMain.applySearchXSMB();
     }
-    Get.back();
+    _exitScreen();
+  }
+
+  void _exitScreen() {
+    _focusNode.unfocus();
+    final keyBoardVisible = MediaQuery.of(context).viewInsets.bottom != 0;
+    if (keyBoardVisible) {
+      ///need delay for beauty efx
+      DurationUtils.delay(200, () {
+        Get.back();
+      });
+    } else {
+      Get.back();
+    }
   }
 }

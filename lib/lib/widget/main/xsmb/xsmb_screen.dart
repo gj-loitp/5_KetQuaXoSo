@@ -1,6 +1,5 @@
 import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -8,10 +7,9 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
-import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:ketquaxoso/lib/widget/search/search_screen.dart';
 import 'package:ketquaxoso/lib/widget/text_marquee.dart';
-import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMBScreen extends StatefulWidget {
@@ -402,7 +400,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
                             sCurrentSearchNumber,
                           ),
                           onTap: () {
-                            Get.to(() => const DlgInput(
+                            Get.to(() => const SearchScreen(
                                   province: null,
                                   callFromScreen: XSMBScreen.path,
                                 ));

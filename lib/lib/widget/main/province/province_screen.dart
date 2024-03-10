@@ -8,8 +8,8 @@ import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/model/province.dart';
-import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:ketquaxoso/lib/widget/search/search_screen.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -73,7 +73,10 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                 child: Column(
                   children: [
                     _buildCalendar(),
-                    _buildViewSearchMyLottery(),
+                    Hero(
+                      tag: "${HeroConstants.itemProvince}${widget.index}",
+                      child: _buildViewSearchMyLottery(),
+                    ),
                     Expanded(
                       child: _buildContentView(),
                     ),
@@ -171,7 +174,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                             blankSpace: 50.0,
                           ),
                           onTap: () {
-                            Get.to(() => DlgInput(
+                            Get.to(() => SearchScreen(
                                   province: widget.province,
                                   callFromScreen: ProvinceScreen.path,
                                 ));
@@ -206,19 +209,16 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               SizedBox(
                 width: 40,
                 height: 40,
-                child: Hero(
-                  tag: "${HeroConstants.itemProvince}${widget.index}",
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.back();
-                    },
-                    color: Colors.white,
-                    padding: const EdgeInsets.all(0),
-                    shape: const CircleBorder(),
-                    child: const Icon(
-                      Icons.clear,
-                      color: Colors.black,
-                    ),
+                child: MaterialButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(0),
+                  shape: const CircleBorder(),
+                  child: const Icon(
+                    Icons.clear,
+                    color: Colors.black,
                   ),
                 ),
               ),
