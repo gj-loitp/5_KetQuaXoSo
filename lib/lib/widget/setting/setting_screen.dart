@@ -13,23 +13,22 @@ import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/information_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
-import 'package:ketquaxoso/lib/widget/setting/setting_screen.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:relative_dialog/relative_dialog.dart';
 import 'package:restart_app/restart_app.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({
+class SettingScreen extends StatefulWidget {
+  const SettingScreen({
     super.key,
   });
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<SettingScreen> createState() => _SettingScreenState();
 }
 
-class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
+class _SettingScreenState extends BaseStatefulState<SettingScreen> {
   final ControllerMain _controllerMain = Get.find();
   GlobalKey key = GlobalKey();
 
@@ -89,13 +88,9 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     alignment: Alignment.center,
                     padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
                     width: double.infinity,
-                    child: Row(
+                    child: const Row(
                       children: [
-                        const SizedBox(
-                          width: 40,
-                          height: 40,
-                        ),
-                        const Expanded(
+                        Expanded(
                           child: Text(
                             "Cá nhân",
                             style: TextStyle(
@@ -111,23 +106,6 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                               ],
                             ),
                             textAlign: TextAlign.center,
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(2),
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.to(() => const SettingScreen());
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.settings,
-                              color: Colors.black,
-                            ),
                           ),
                         ),
                       ],
