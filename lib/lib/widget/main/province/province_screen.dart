@@ -1,10 +1,10 @@
 import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
 import 'package:ketquaxoso/lib/model/province.dart';
@@ -16,10 +16,12 @@ import 'package:webview_flutter/webview_flutter.dart';
 class ProvinceScreen extends StatefulWidget {
   static const path = "ProvinceScreen";
   final Province province;
+  final int index;
 
   const ProvinceScreen({
     super.key,
     required this.province,
+    required this.index,
   });
 
   @override
@@ -204,16 +206,19 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
               SizedBox(
                 width: 40,
                 height: 40,
-                child: MaterialButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  color: Colors.white,
-                  padding: const EdgeInsets.all(0),
-                  shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.clear,
-                    color: Colors.black,
+                child: Hero(
+                  tag: "${HeroConstants.itemProvince}${widget.index}",
+                  child: MaterialButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    color: Colors.white,
+                    padding: const EdgeInsets.all(0),
+                    shape: const CircleBorder(),
+                    child: const Icon(
+                      Icons.clear,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),

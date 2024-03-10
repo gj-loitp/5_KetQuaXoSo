@@ -40,6 +40,7 @@ void main() {
     GetMaterialApp(
       enableLog: true,
       debugShowCheckedModeBanner: true,
+      // defaultTransition: Transition.noTransition,
       // defaultTransition: Transition.cupertino,
       defaultTransition: Transition.circularReveal,
       // defaultTransition: Transition.size,
