@@ -369,15 +369,8 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
                   color: Colors.black,
                 ),
                 textAlign: TextAlign.start,
-                child: Marquee(
-                  text:
-                      'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black87,
-                  ),
-                  blankSpace: 50.0,
+                child: TextMarquee(
+                  'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
                 ),
               ),
             ),

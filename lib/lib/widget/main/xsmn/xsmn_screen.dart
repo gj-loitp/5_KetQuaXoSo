@@ -13,7 +13,6 @@ import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/lib/widget/text_marquee.dart';
-import 'package:marquee/marquee.dart';
 import 'package:relative_dialog/relative_dialog.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -617,15 +616,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   color: Colors.black,
                 ),
                 textAlign: TextAlign.start,
-                child: Marquee(
-                  text:
-                      'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black87,
-                  ),
-                  blankSpace: 50.0,
+                child: TextMarquee(
+                  'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
                 ),
               ),
             ),

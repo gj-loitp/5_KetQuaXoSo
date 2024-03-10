@@ -36,19 +36,20 @@ class _TextMarqueeState extends BaseStatefulState<TextMarquee> {
         return Marquee(
           text: widget.text,
           style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-            color: Colors.black87,
+            fontSize: 14,
+            fontWeight: FontWeight.w900,
+            color: Colors.black,
           ),
           blankSpace: 50.0,
+          velocity: 5,
         );
       } else {
         return Text(
           widget.text,
           style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-            color: Colors.black87,
+            fontSize: 14,
+            fontWeight: FontWeight.w900,
+            color: Colors.black,
           ),
           overflow: TextOverflow.ellipsis,
         );
