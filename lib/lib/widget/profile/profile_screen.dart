@@ -98,21 +98,27 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                         height: 40,
                       ),
                       const Expanded(
-                        child: Text(
-                          "Cá nhân",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            fontSize: 24,
-                            shadows: [
-                              Shadow(
-                                blurRadius: 5.0,
-                                color: Colors.black,
-                                offset: Offset(2.0, 2.0),
+                        child: Hero(
+                          tag: HeroConstants.appBarTitle,
+                          child: Material(
+                            color: Colors.transparent,
+                            child: Text(
+                              "Cá nhân",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                                fontSize: 24,
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 5.0,
+                                    color: Colors.black,
+                                    offset: Offset(2.0, 2.0),
+                                  ),
+                                ],
                               ),
-                            ],
+                              textAlign: TextAlign.center,
+                            ),
                           ),
-                          textAlign: TextAlign.center,
                         ),
                       ),
                       Hero(

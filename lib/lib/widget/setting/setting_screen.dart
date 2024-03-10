@@ -81,21 +81,27 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                         ),
                         const SizedBox(width: 16),
                         const Expanded(
-                          child: Text(
-                            "Cài đặt",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
+                          child: Hero(
+                            tag: HeroConstants.appBarTitle,
+                            child: Material(
+                              color: Colors.transparent,
+                              child: Text(
+                                "Cài đặt",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  shadows: [
+                                    Shadow(
+                                      blurRadius: 5.0,
+                                      color: Colors.black,
+                                      offset: Offset(2.0, 2.0),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                                textAlign: TextAlign.start,
+                              ),
                             ),
-                            textAlign: TextAlign.start,
                           ),
                         ),
                       ],
