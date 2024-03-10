@@ -3,14 +3,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
 
 class ProvinceListScreen extends StatefulWidget {
-  const ProvinceListScreen({
+  const ProvinceListScreen(
+    this.from, {
     super.key,
   });
+
+  final String from;
 
   @override
   State<ProvinceListScreen> createState() => _ProvinceListScreenState();
@@ -52,52 +56,58 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
             SafeArea(
               child: Column(
                 children: [
-                  Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                    padding: const EdgeInsets.all(0),
-                    decoration: BoxDecoration(
+                  Hero(
+                    tag: "${widget.from}${HeroConstants.appBar}",
+                    child: Material(
                       color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
-                            ),
-                          ),
+                      child: Container(
+                        width: double.infinity,
+                        margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                        padding: const EdgeInsets.all(0),
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.circular(15),
                         ),
-                        const SizedBox(width: 16),
-                        const Expanded(
-                          child: Text(
-                            "Danh sách các đài",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 40,
+                              height: 40,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  Get.back();
+                                },
+                                color: Colors.white,
+                                padding: const EdgeInsets.all(0),
+                                shape: const CircleBorder(),
+                                child: const Icon(
+                                  Icons.clear,
                                   color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
                                 ),
-                              ],
+                              ),
                             ),
-                            textAlign: TextAlign.start,
-                          ),
+                            const SizedBox(width: 16),
+                            const Expanded(
+                              child: Text(
+                                "Danh sách các đài",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  shadows: [
+                                    Shadow(
+                                      blurRadius: 5.0,
+                                      color: Colors.black,
+                                      offset: Offset(2.0, 2.0),
+                                    ),
+                                  ],
+                                ),
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
                   Expanded(child: _buildViewListProvince()),

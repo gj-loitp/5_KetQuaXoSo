@@ -1,11 +1,10 @@
 import 'package:blur/blur.dart';
 import 'package:calendar_timeline_sbk/calendar_timeline.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
@@ -13,7 +12,6 @@ import 'package:ketquaxoso/lib/widget/dlg/dlg_input.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/lib/widget/text_marquee.dart';
-import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class XSMTScreen extends StatefulWidget {
@@ -119,16 +117,19 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                 padding: const EdgeInsets.all(2),
                 width: 40,
                 height: 40,
-                child: MaterialButton(
-                  onPressed: () {
-                    Get.to(() => const ProvinceListScreen());
-                  },
-                  color: Colors.blueAccent,
-                  padding: const EdgeInsets.all(0),
-                  shape: const CircleBorder(),
-                  child: const Icon(
-                    Icons.location_city,
-                    color: Colors.white,
+                child: Hero(
+                  tag: "${XSMTScreen.path}${HeroConstants.appBar}",
+                  child: MaterialButton(
+                    onPressed: () {
+                      Get.to(() => const ProvinceListScreen(XSMTScreen.path));
+                    },
+                    color: Colors.blueAccent,
+                    padding: const EdgeInsets.all(0),
+                    shape: const CircleBorder(),
+                    child: const Icon(
+                      Icons.location_city,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),

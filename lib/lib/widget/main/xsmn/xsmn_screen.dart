@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/model/kqxs.dart';
@@ -244,16 +245,19 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                 child: Stack(
                   // fit: StackFit.expand,
                   children: [
-                    MaterialButton(
-                      onPressed: () {
-                        Get.to(() => const ProvinceListScreen());
-                      },
-                      color: Colors.blueAccent,
-                      padding: const EdgeInsets.all(0),
-                      shape: const CircleBorder(),
-                      child: const Icon(
-                        Icons.location_city,
-                        color: Colors.white,
+                    Hero(
+                      tag: "${XSMNScreen.path}${HeroConstants.appBar}",
+                      child: MaterialButton(
+                        onPressed: () {
+                          Get.to(() => const ProvinceListScreen(XSMNScreen.path));
+                        },
+                        color: Colors.blueAccent,
+                        padding: const EdgeInsets.all(0),
+                        shape: const CircleBorder(),
+                        child: const Icon(
+                          Icons.location_city,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     Builder(builder: (context) {
