@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
@@ -114,20 +115,23 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.all(2),
-                        width: 40,
-                        height: 40,
-                        child: MaterialButton(
-                          onPressed: () {
-                            Get.to(() => const SettingScreen());
-                          },
-                          color: Colors.white,
-                          padding: const EdgeInsets.all(0),
-                          shape: const CircleBorder(),
-                          child: const Icon(
-                            Icons.settings,
-                            color: Colors.black,
+                      Hero(
+                        tag: HeroConstants.appBarRightIcon,
+                        child: Container(
+                          padding: const EdgeInsets.all(2),
+                          width: 40,
+                          height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.to(() => const SettingScreen());
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.settings,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),

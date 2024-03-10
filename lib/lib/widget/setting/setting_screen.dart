@@ -2,6 +2,7 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 
@@ -59,26 +60,29 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
+                        Hero(
+                          tag: HeroConstants.appBarRightIcon,
+                          child: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: MaterialButton(
+                              onPressed: () {
+                                Get.back();
+                              },
+                              color: Colors.white,
+                              padding: const EdgeInsets.all(0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.clear,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ),
                         const SizedBox(width: 16),
                         const Expanded(
                           child: Text(
-                            "Danh sách các đài",
+                            "Cài đặt",
                             style: TextStyle(
                               fontWeight: FontWeight.w900,
                               color: Colors.white,
@@ -97,7 +101,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                       ],
                     ),
                   ),
-                  Expanded(child: _buildBody()),
+                  _buildBody(),
                 ],
               ),
             ),
