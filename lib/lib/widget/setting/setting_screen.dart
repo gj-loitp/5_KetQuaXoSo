@@ -5,6 +5,7 @@ import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({
@@ -127,21 +128,36 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
         color: Colors.white,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Ⓒmckimquyen",
+            "Bật/tắt tính năng chữ chạy khi nội dung Text không đủ khoảng trống",
             style: TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 12,
-              color: Colors.grey,
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+              color: Colors.black,
             ),
           ),
-          Text(
-            "Phiên bản ${_controllerMain.getAppVersion()}",
-            style: const TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 12,
-              color: Colors.grey,
+          Container(
+            margin: const EdgeInsets.only(top: 16),
+            alignment: Alignment.center,
+            child: ToggleSwitch(
+              minWidth: 90.0,
+              cornerRadius: 45.0,
+              activeBgColors: const [
+                [ColorConstants.appColor],
+                [ColorConstants.appColor]
+              ],
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.grey,
+              inactiveFgColor: Colors.white,
+              initialLabelIndex: 1,
+              totalSwitches: 2,
+              labels: ['Bật', 'Tắt'],
+              radiusStyle: true,
+              onToggle: (index) {
+                print('switched to: $index');
+              },
             ),
           ),
         ],
