@@ -7,6 +7,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO firebase
 //TODO lich su ve so cua toi
 
+//TODO add hero efx
 //TODO notification reminder
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
