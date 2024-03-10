@@ -601,7 +601,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           height: heightItem,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 0.25),
-            color: ColorConstants.appColor.withOpacity(0.3),
+            color: ColorConstants.white.withOpacity(0.5),
             borderRadius: BorderRadius.circular(0),
           ),
           alignment: Alignment.center,
