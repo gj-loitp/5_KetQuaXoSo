@@ -1173,8 +1173,6 @@ class ControllerMain extends BaseController {
   var megaWebViewController = WebViewController().obs;
   var megaIsLoading = true.obs;
   var megaKqxs = KQXS().obs;
-  var megaCurrentSearchNumber = "".obs;
-  var megaCurrentSearchDate = "".obs;
 
   Future<void> setSelectedDateTimeMega(DateTime dateTime, bool isFirstInit) async {
     if (megaSelectedDateTime.value.day == dateTime.day &&
@@ -1259,92 +1257,5 @@ class ControllerMain extends BaseController {
     return date;
   }
 
-  void setCurrentNumberMega(String s) {
-    megaCurrentSearchNumber.value = s;
-  }
-
-  void setCurrentDateMega(String s) {
-    megaCurrentSearchDate.value = s;
-  }
-
-  String msgInvalidCurrentSearchDateMega() {
-    try {
-      var currentYear = DateTime.now().year;
-      if (megaCurrentSearchDate.value.length != 10) {
-        return "Hãy nhập đúng định dạng dd/MM/$currentYear";
-      }
-      var arr = megaCurrentSearchDate.split("/");
-      int d = int.parse(arr[0]);
-      int m = int.parse(arr[1]);
-      int y = int.parse(arr[2]);
-      // debugPrint("isValidCurrentSearchDate $d/$m/$y");
-      if (d <= 0 || d >= 32) {
-        return "Ngày không hợp lệ (0<ngày<32)";
-      }
-      if (m <= 0 || m >= 13) {
-        return "Tháng không hợp lệ (0<tháng<13)";
-      }
-      if (y != currentYear && y != (currentYear - 1)) {
-        return "Năm không hợp lệ (Năm = $currentYear hoặc Năm = ${currentYear - 1})";
-      }
-      return "";
-    } catch (e) {
-      return "";
-    }
-  }
-
-  void applySearchMega() {
-    var sCurrentSearchNumber = megaCurrentSearchNumber.value;
-    var sCurrentSearchDate = megaCurrentSearchDate.value;
-    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
-    debugPrint("sCurrentSearchDate $sCurrentSearchDate");
-    var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
-    // debugPrint("dt $dt");
-    if (dt != null) {
-      setSelectedDateTimeMega(dt, false);
-    }
-  }
-
-  Map<String, HighlightedWord> getWordsHighlightMega(double fontSize) {
-    var myCurrentLottery = megaCurrentSearchNumber.value;
-    Map<String, HighlightedWord> words = {};
-    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
-      var firstChar = _getFirstChars(myCurrentLottery, i + 1);
-      debugPrint("firstChar $firstChar");
-      if (firstChar.length > 1) {
-        words[firstChar] = HighlightedWord(
-          onTap: () {},
-          textStyle: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w700,
-            fontSize: fontSize,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.lightGreenAccent,
-            borderRadius: BorderRadius.circular(45),
-          ),
-          padding: const EdgeInsets.all(2),
-        );
-      }
-      var lastChar = _getLastChars(myCurrentLottery, i + 1);
-      if (lastChar.length > 1) {
-        debugPrint("getWordsHighlightXSMN lastChar $lastChar");
-        words[lastChar] = HighlightedWord(
-          onTap: () {},
-          textStyle: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w700,
-            fontSize: fontSize,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.lightGreenAccent,
-            borderRadius: BorderRadius.circular(45),
-          ),
-          padding: const EdgeInsets.all(2),
-        );
-      }
-    }
-    return words;
-  }
   ///END ZONE MEGA
 }
