@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/widget/main/vietlot/mega/mega_screen.dart';
 
 class VietlotScreen extends StatefulWidget {
   const VietlotScreen({
@@ -51,8 +52,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
               children: [
                 InkWell(
                   onTap: () {
-                    //TODO roy93~ iplm
-                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                    Get.to(() => const MegaScreen());
                   },
                   child: Container(
                     height: Get.height / 7,

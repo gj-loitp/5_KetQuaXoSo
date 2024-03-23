@@ -840,9 +840,6 @@ class ControllerMain extends BaseController {
 
   ///END ZONE XSMB
 
-  ///ZONE VIETLOT
-  ///END ZONE VIETLOT
-
   ///ZONE PROVINCE
   var listProvince = <Province>[].obs;
 
@@ -1170,4 +1167,184 @@ class ControllerMain extends BaseController {
   void showTooltipToday(bool isShowTooltipToday) {
     this.isShowTooltipToday.value = isShowTooltipToday;
   }
+
+  ///ZONE MEGA
+  var megaSelectedDateTime = DateTime.now().obs;
+  var megaWebViewController = WebViewController().obs;
+  var megaIsLoading = true.obs;
+  var megaKqxs = KQXS().obs;
+  var megaCurrentSearchNumber = "".obs;
+  var megaCurrentSearchDate = "".obs;
+
+  Future<void> setSelectedDateTimeMega(DateTime dateTime, bool isFirstInit) async {
+    if (megaSelectedDateTime.value.day == dateTime.day &&
+        megaSelectedDateTime.value.month == dateTime.month &&
+        megaSelectedDateTime.value.year == dateTime.year &&
+        !isFirstInit) {
+      return;
+    }
+
+    debugPrint("roy93~ setSelectedDateTime $dateTime");
+    megaIsLoading.value = true;
+    megaSelectedDateTime.value = dateTime;
+
+    var date = getSelectedDayInStringMega();
+    // debugPrint("date $date");
+
+    void loadWebMega(String date) {
+      var link = "${StringConstants.kqMega}#n$date";
+      debugPrint("roy93~ link $link");
+
+      megaWebViewController.value = WebViewController()
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+        ..setBackgroundColor(Colors.white)
+        ..setNavigationDelegate(
+          NavigationDelegate(
+            onProgress: (int progress) {
+              // debugPrint("progress $progress");
+            },
+            onPageStarted: (String url) {
+              // debugPrint("onPageStarted url $url");
+            },
+            onPageFinished: (String url) async {
+              // debugPrint("onPageFinished url $url");
+
+              Future<void> addBottomSpace() async {
+                megaIsLoading.value = true;
+                const script = '''
+      var spaceDiv = document.createElement("div");
+      spaceDiv.style.height = "250px";
+      document.body.appendChild(spaceDiv);
+    ''';
+
+                await megaWebViewController.value.runJavaScript(script);
+              }
+
+              addBottomSpace();
+              megaIsLoading.value = false;
+            },
+            onWebResourceError: (WebResourceError error) {
+              // debugPrint("onPageFinished url $error");
+            },
+            onNavigationRequest: (NavigationRequest request) {
+              // debugPrint("request ${request.url}");
+              if (request.url.contains(".html")) {
+                return NavigationDecision.prevent;
+              }
+              return NavigationDecision.navigate;
+            },
+          ),
+        )
+        ..loadRequest(Uri.parse(link));
+    }
+
+    loadWebMega(date);
+  }
+
+  String getSelectedDayInStringMega() {
+    var dateTime = megaSelectedDateTime.value;
+    var day = "";
+    if (dateTime.day >= 10) {
+      day = "${dateTime.day}";
+    } else {
+      day = "0${dateTime.day}";
+    }
+    var month = "";
+    if (dateTime.month >= 10) {
+      month = "${dateTime.month}";
+    } else {
+      month = "0${dateTime.month}";
+    }
+    var date = "$day-$month-${dateTime.year}";
+    return date;
+  }
+
+  void setCurrentNumberMega(String s) {
+    megaCurrentSearchNumber.value = s;
+  }
+
+  void setCurrentDateMega(String s) {
+    megaCurrentSearchDate.value = s;
+  }
+
+  String msgInvalidCurrentSearchDateMega() {
+    try {
+      var currentYear = DateTime.now().year;
+      if (megaCurrentSearchDate.value.length != 10) {
+        return "Hãy nhập đúng định dạng dd/MM/$currentYear";
+      }
+      var arr = megaCurrentSearchDate.split("/");
+      int d = int.parse(arr[0]);
+      int m = int.parse(arr[1]);
+      int y = int.parse(arr[2]);
+      // debugPrint("isValidCurrentSearchDate $d/$m/$y");
+      if (d <= 0 || d >= 32) {
+        return "Ngày không hợp lệ (0<ngày<32)";
+      }
+      if (m <= 0 || m >= 13) {
+        return "Tháng không hợp lệ (0<tháng<13)";
+      }
+      if (y != currentYear && y != (currentYear - 1)) {
+        return "Năm không hợp lệ (Năm = $currentYear hoặc Năm = ${currentYear - 1})";
+      }
+      return "";
+    } catch (e) {
+      return "";
+    }
+  }
+
+  void applySearchMega() {
+    var sCurrentSearchNumber = megaCurrentSearchNumber.value;
+    var sCurrentSearchDate = megaCurrentSearchDate.value;
+    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("sCurrentSearchDate $sCurrentSearchDate");
+    var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
+    // debugPrint("dt $dt");
+    if (dt != null) {
+      setSelectedDateTimeMega(dt, false);
+    }
+  }
+
+  Map<String, HighlightedWord> getWordsHighlightMega(double fontSize) {
+    var myCurrentLottery = megaCurrentSearchNumber.value;
+    Map<String, HighlightedWord> words = {};
+    for (int i = 0; i < myCurrentLottery.characters.length; i++) {
+      var firstChar = _getFirstChars(myCurrentLottery, i + 1);
+      debugPrint("firstChar $firstChar");
+      if (firstChar.length > 1) {
+        words[firstChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
+      var lastChar = _getLastChars(myCurrentLottery, i + 1);
+      if (lastChar.length > 1) {
+        debugPrint("getWordsHighlightXSMN lastChar $lastChar");
+        words[lastChar] = HighlightedWord(
+          onTap: () {},
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            fontSize: fontSize,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent,
+            borderRadius: BorderRadius.circular(45),
+          ),
+          padding: const EdgeInsets.all(2),
+        );
+      }
+    }
+    return words;
+  }
+  ///END ZONE MEGA
 }
