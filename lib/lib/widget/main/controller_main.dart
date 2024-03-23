@@ -1349,4 +1349,95 @@ class ControllerMain extends BaseController {
   }
 
   ///END ZONE POWER
+
+  ///ZONE MAX3D
+  var max3dSelectedDateTime = DateTime.now().obs;
+  var max3dWebViewController = WebViewController().obs;
+  var max3dIsLoading = true.obs;
+  var max3dKqxs = KQXS().obs;
+
+  Future<void> setSelectedDateTimeMax3d(DateTime dateTime, bool isFirstInit) async {
+    if (max3dSelectedDateTime.value.day == dateTime.day &&
+        max3dSelectedDateTime.value.month == dateTime.month &&
+        max3dSelectedDateTime.value.year == dateTime.year &&
+        !isFirstInit) {
+      return;
+    }
+
+    // debugPrint("setSelectedDateTime $dateTime");
+    max3dIsLoading.value = true;
+    max3dSelectedDateTime.value = dateTime;
+
+    var date = getSelectedDayInStringMax3d();
+    // debugPrint("roy93~ date $date");
+
+    void loadWebMax3d(String date) {
+      var link = "${StringConstants.kqMax3d}#n$date";
+      debugPrint("roy93~ link $link");
+
+      max3dWebViewController.value = WebViewController()
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+        ..setBackgroundColor(Colors.white)
+        ..setNavigationDelegate(
+          NavigationDelegate(
+            onProgress: (int progress) {
+              // debugPrint("progress $progress");
+            },
+            onPageStarted: (String url) {
+              // debugPrint("onPageStarted url $url");
+            },
+            onPageFinished: (String url) async {
+              // debugPrint("onPageFinished url $url");
+
+              Future<void> addBottomSpace() async {
+                max3dIsLoading.value = true;
+                const script = '''
+      var spaceDiv = document.createElement("div");
+      spaceDiv.style.height = "250px";
+      document.body.appendChild(spaceDiv);
+    ''';
+
+                await max3dWebViewController.value.runJavaScript(script);
+              }
+
+              addBottomSpace();
+              max3dIsLoading.value = false;
+            },
+            onWebResourceError: (WebResourceError error) {
+              // debugPrint("onPageFinished url $error");
+            },
+            onNavigationRequest: (NavigationRequest request) {
+              // debugPrint("request ${request.url}");
+              if (request.url.contains(".html")) {
+                return NavigationDecision.prevent;
+              }
+              return NavigationDecision.navigate;
+            },
+          ),
+        )
+        ..loadRequest(Uri.parse(link));
+    }
+
+    loadWebMax3d(date);
+  }
+
+  String getSelectedDayInStringMax3d() {
+    var dateTime = max3dSelectedDateTime.value;
+    var day = "";
+    if (dateTime.day >= 10) {
+      day = "${dateTime.day}";
+    } else {
+      day = "0${dateTime.day}";
+    }
+    var month = "";
+    if (dateTime.month >= 10) {
+      month = "${dateTime.month}";
+    } else {
+      month = "0${dateTime.month}";
+    }
+    var date = "$day-$month-${dateTime.year}";
+    return date;
+  }
+
+  ///END ZONE MAX3D
 }
