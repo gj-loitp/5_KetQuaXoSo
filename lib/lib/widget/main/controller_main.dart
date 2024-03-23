@@ -1182,7 +1182,7 @@ class ControllerMain extends BaseController {
       return;
     }
 
-    debugPrint("roy93~ setSelectedDateTime $dateTime");
+    // debugPrint("setSelectedDateTime $dateTime");
     megaIsLoading.value = true;
     megaSelectedDateTime.value = dateTime;
 
@@ -1191,7 +1191,7 @@ class ControllerMain extends BaseController {
 
     void loadWebMega(String date) {
       var link = "${StringConstants.kqMega}#n$date";
-      debugPrint("roy93~ link $link");
+      // debugPrint("link $link");
 
       megaWebViewController.value = WebViewController()
         ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -1258,4 +1258,95 @@ class ControllerMain extends BaseController {
   }
 
   ///END ZONE MEGA
+
+  ///ZONE POWER
+  var powerSelectedDateTime = DateTime.now().obs;
+  var powerWebViewController = WebViewController().obs;
+  var powerIsLoading = true.obs;
+  var powerKqxs = KQXS().obs;
+
+  Future<void> setSelectedDateTimePower(DateTime dateTime, bool isFirstInit) async {
+    if (powerSelectedDateTime.value.day == dateTime.day &&
+        powerSelectedDateTime.value.month == dateTime.month &&
+        powerSelectedDateTime.value.year == dateTime.year &&
+        !isFirstInit) {
+      return;
+    }
+
+    // debugPrint("setSelectedDateTime $dateTime");
+    powerIsLoading.value = true;
+    powerSelectedDateTime.value = dateTime;
+
+    var date = getSelectedDayInStringPower();
+    // debugPrint("date $date");
+
+    void loadWebPower(String date) {
+      var link = "${StringConstants.kqPower}#n$date";
+      // debugPrint("link $link");
+
+      powerWebViewController.value = WebViewController()
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+        ..setBackgroundColor(Colors.white)
+        ..setNavigationDelegate(
+          NavigationDelegate(
+            onProgress: (int progress) {
+              // debugPrint("progress $progress");
+            },
+            onPageStarted: (String url) {
+              // debugPrint("onPageStarted url $url");
+            },
+            onPageFinished: (String url) async {
+              // debugPrint("onPageFinished url $url");
+
+              Future<void> addBottomSpace() async {
+                powerIsLoading.value = true;
+                const script = '''
+      var spaceDiv = document.createElement("div");
+      spaceDiv.style.height = "250px";
+      document.body.appendChild(spaceDiv);
+    ''';
+
+                await powerWebViewController.value.runJavaScript(script);
+              }
+
+              addBottomSpace();
+              powerIsLoading.value = false;
+            },
+            onWebResourceError: (WebResourceError error) {
+              // debugPrint("onPageFinished url $error");
+            },
+            onNavigationRequest: (NavigationRequest request) {
+              // debugPrint("request ${request.url}");
+              if (request.url.contains(".html")) {
+                return NavigationDecision.prevent;
+              }
+              return NavigationDecision.navigate;
+            },
+          ),
+        )
+        ..loadRequest(Uri.parse(link));
+    }
+
+    loadWebPower(date);
+  }
+
+  String getSelectedDayInStringPower() {
+    var dateTime = powerSelectedDateTime.value;
+    var day = "";
+    if (dateTime.day >= 10) {
+      day = "${dateTime.day}";
+    } else {
+      day = "0${dateTime.day}";
+    }
+    var month = "";
+    if (dateTime.month >= 10) {
+      month = "${dateTime.month}";
+    } else {
+      month = "0${dateTime.month}";
+    }
+    var date = "$day-$month-${dateTime.year}";
+    return date;
+  }
+
+  ///END ZONE POWER
 }

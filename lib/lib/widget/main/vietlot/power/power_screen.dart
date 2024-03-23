@@ -125,7 +125,7 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
             child: CalendarTimeline(
               shrink: true,
               showYears: false,
-              initialDate: _controllerMain.megaSelectedDateTime.value,
+              initialDate: _controllerMain.powerSelectedDateTime.value,
               firstDate: DateTime.now().subtract(const Duration(days: 365)),
               lastDate: DateTime.now().add(const Duration(days: 365)),
               onDateSelected: (date) {
@@ -178,9 +178,9 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
   }
 
   Widget _buildContentView() {
-    var isLoading = _controllerMain.megaIsLoading.value;
+    var isLoading = _controllerMain.powerIsLoading.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
-    var timeSelected = _controllerMain.megaSelectedDateTime.value.microsecondsSinceEpoch;
+    var timeSelected = _controllerMain.powerSelectedDateTime.value.microsecondsSinceEpoch;
     var isFuture = false;
     // debugPrint("timeNow $timeNow");
     // debugPrint("timeSelected $timeSelected");
@@ -253,7 +253,7 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
           ),
           // const SizedBox(height: 16),
           Text(
-            "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringMega()}",
+            "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringPower()}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
@@ -284,7 +284,7 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
           SizedBox(
             height: 50,
             child: Visibility(
-              visible: _controllerMain.isPastDateTime(_controllerMain.megaSelectedDateTime.value),
+              visible: _controllerMain.isPastDateTime(_controllerMain.powerSelectedDateTime.value),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   textStyle: const TextStyle(
@@ -312,14 +312,14 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
       return Container(
         padding: EdgeInsets.zero,
         // color: Colors.white,
-        child: WebViewWidget(controller: _controllerMain.megaWebViewController.value),
+        child: WebViewWidget(controller: _controllerMain.powerWebViewController.value),
       );
     }
   }
 
   void _subtractDay() {
     _selectDay(
-      _controllerMain.megaSelectedDateTime.value.subtract(const Duration(days: 1)),
+      _controllerMain.powerSelectedDateTime.value.subtract(const Duration(days: 1)),
       false,
       true,
       false,
@@ -328,7 +328,7 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
 
   void _addDay() {
     _selectDay(
-      _controllerMain.megaSelectedDateTime.value.add(const Duration(days: 1)),
+      _controllerMain.powerSelectedDateTime.value.add(const Duration(days: 1)),
       false,
       false,
       true,
@@ -341,7 +341,7 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
     bool isForceGetDataPast,
     bool isForceGetDataFuture,
   ) {
-    _controllerMain.setSelectedDateTimeMega(
+    _controllerMain.setSelectedDateTimePower(
       dateTime,
       isFirstInit,
     );

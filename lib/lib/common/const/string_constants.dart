@@ -19,6 +19,7 @@ class StringConstants {
   static const String kqMienTrung = "$kqApiXoso/kq-mientrung";
   static const String kqMienBac = "$kqApiXoso/kq-mienbac";
   static const String kqMega = "$kqApiXoso/kq-mega";
+  static const String kqPower = "$kqApiXoso/kq-power";
   static const String kqProvince = "$kqApiXoso/kq-tinh?tinh=";
 
   // static const String apiXsmn = "https://baomoi.com/_next/data/qAJGq6pyG9k4QUEhaspKS/utilities/lottery/xsmn-mien-nam.json";
