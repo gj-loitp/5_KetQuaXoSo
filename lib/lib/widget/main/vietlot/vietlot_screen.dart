@@ -105,25 +105,24 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                     ),
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    //TODO roy93~ iplm
-                    showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
-                  },
-                  child: Container(
-                    height: Get.height / 7,
-                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Image.asset(
-                      "assets/images/ic_keno.png",
-                      width: double.infinity,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
+                // InkWell(
+                //   onTap: () {
+                //     showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                //   },
+                //   child: Container(
+                //     height: Get.height / 7,
+                //     margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                //     decoration: BoxDecoration(
+                //       color: Colors.white,
+                //       borderRadius: BorderRadius.circular(16),
+                //     ),
+                //     child: Image.asset(
+                //       "assets/images/ic_keno.png",
+                //       width: double.infinity,
+                //       fit: BoxFit.contain,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ],
