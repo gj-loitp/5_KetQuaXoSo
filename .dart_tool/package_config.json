@@ -218,6 +218,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_displaymode",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_launcher_icons",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
       "packageUri": "lib/",
@@ -962,7 +968,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-03-27T10:16:59.887329Z",
+  "generated": "2024-03-27T10:23:35.712519Z",
   "generator": "pub",
   "generatorVersion": "3.3.1"
 }
