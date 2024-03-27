@@ -411,6 +411,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           ],
                         ),
                       ),
+                      AvatarGlow(
+                        glowColor: Colors.white,
+                        endRadius: 60.0,
+                        showTwoGlows: true,
+                        child: Image.asset(
+                          'assets/images/anim_2.gif',
+                          width: 90,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ],
                   ),
                 ),
