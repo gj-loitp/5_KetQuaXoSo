@@ -112,7 +112,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       return Future(() => true);
     } else {
       _backPressTime = DateTime.now();
-      showSnackBarFull(StringConstants.warning, "Press back again to exit");
+      showSnackBarFull(StringConstants.warning, "Vui lòng nhấn thêm lần nữa để tắt ứng ");
       return Future(() => false);
     }
   }
