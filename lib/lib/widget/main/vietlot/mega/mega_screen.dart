@@ -63,6 +63,18 @@ class _MegaScreenState extends BaseStatefulState<MegaScreen> {
                 child: Column(
                   children: [
                     _buildCalendar(),
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      child: const Text(
+                        "Xổ số Mega từ 18h00 – 18h30 chiều các ngày thứ 4, thứ 6 và chủ nhật hàng tuần.",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                     Expanded(
                       child: _buildContentView(),
                     ),

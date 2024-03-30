@@ -63,6 +63,18 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
                 child: Column(
                   children: [
                     _buildCalendar(),
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      child: const Text(
+                        "Xổ số Power từ 18h00 – 18h30 chiều các ngày thứ 3, thứ 5 và thứ 7 hàng tuần.",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                     Expanded(
                       child: _buildContentView(),
                     ),

@@ -63,6 +63,18 @@ class _Max3dScreenState extends BaseStatefulState<Max3dScreen> {
                 child: Column(
                   children: [
                     _buildCalendar(),
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      child: const Text(
+                        "Xổ số Max3d từ 18h00 các ngày thứ 2, thứ 4 và thứ 6 hàng tuần",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                     Expanded(
                       child: _buildContentView(),
                     ),
