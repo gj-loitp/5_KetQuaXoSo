@@ -163,6 +163,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
   }
 
   Widget _buildContentView() {
+    var isValid = _controllerMain.xsmtIsValidData.value;
     var isLoading = _controllerMain.xsmtIsLoading.value;
     var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
@@ -172,7 +173,11 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
     // debugPrint("timeSelected $timeSelected");
     if (timeNow > timeSelected) {
       // debugPrint("if");
-      isFuture = false;
+      if (isValid) {
+        isFuture = false;
+      } else {
+        isFuture = true;
+      }
     } else {
       // debugPrint("else");
       isFuture = true;

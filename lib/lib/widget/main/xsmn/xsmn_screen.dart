@@ -264,7 +264,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                       return InkWell(
                         onTap: _controllerMain.isShowTooltipCity.value
                             ? () {
-                                debugPrint("roy93~ showRelativeDialog isShowTooltipCity");
+                                // debugPrint("showRelativeDialog isShowTooltipCity");
                                 showRelativeDialog(
                                     context: context,
                                     alignment: Alignment.centerRight,
@@ -391,6 +391,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   }
 
   Widget _buildContentView() {
+    var isValid = _controllerMain.xsmnIsValidData.value;
     var isLoading = _controllerMain.xsmnIsLoading.value;
     var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
@@ -400,7 +401,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     // debugPrint("timeSelected $timeSelected");
     if (timeNow > timeSelected) {
       // debugPrint("if");
-      isFuture = false;
+      if (isValid) {
+        isFuture = false;
+      } else {
+        isFuture = true;
+      }
     } else {
       // debugPrint("else");
       isFuture = true;

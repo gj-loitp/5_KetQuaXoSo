@@ -79,6 +79,7 @@ class ControllerMain extends BaseController {
   var xsmnSelectedDateTime = DateTime.now().obs;
   var xsmnWebViewController = WebViewController().obs;
   var xsmnIsLoading = true.obs;
+  var xsmnIsValidData = true.obs;
   var xsmnKqxs = KQXS().obs;
   var xsmnCurrentSearchNumber = "".obs;
   var xsmnCurrentSearchDate = "".obs;
@@ -187,20 +188,30 @@ class ControllerMain extends BaseController {
               },
               onPageFinished: (String url) async {
                 // debugPrint("onPageFinished url $url");
-
-                Future<void> addBottomSpace() async {
-                  xsmnIsLoading.value = true;
-                  const script = '''
+                var html = await xsmnWebViewController.value
+                    .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
+                // log("html $html");
+                if (html?.contains('imgloadig\\">') == true) {
+                  // debugPrint("contains");
+                  xsmnIsLoading.value = false;
+                  xsmnIsValidData.value = false;
+                } else {
+                  // debugPrint("!contains");
+                  Future<void> addBottomSpace() async {
+                    xsmnIsLoading.value = true;
+                    const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                  await xsmnWebViewController.value.runJavaScript(script);
-                }
+                    await xsmnWebViewController.value.runJavaScript(script);
+                  }
 
-                addBottomSpace();
-                xsmnIsLoading.value = false;
+                  addBottomSpace();
+                  xsmnIsLoading.value = false;
+                  xsmnIsValidData.value = true;
+                }
               },
               onWebResourceError: (WebResourceError error) {
                 // debugPrint("onPageFinished url $error");
@@ -334,6 +345,7 @@ class ControllerMain extends BaseController {
   var xsmtSelectedDateTime = DateTime.now().obs;
   var xsmtWebViewController = WebViewController().obs;
   var xsmtIsLoading = true.obs;
+  var xsmtIsValidData = true.obs;
   var xsmtKqxs = KQXS().obs;
   var xsmtCurrentSearchNumber = "".obs;
   var xsmtCurrentSearchDate = "".obs;
@@ -444,19 +456,31 @@ class ControllerMain extends BaseController {
               onPageFinished: (String url) async {
                 // debugPrint("onPageFinished url $url");
 
-                Future<void> addBottomSpace() async {
-                  xsmtIsLoading.value = true;
-                  const script = '''
+                // debugPrint("onPageFinished url $url");
+                var html = await xsmtWebViewController.value
+                    .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
+                // log("html $html");
+                if (html?.contains('imgloadig\\">') == true) {
+                  // debugPrint("contains");
+                  xsmtIsLoading.value = false;
+                  xsmtIsValidData.value = false;
+                } else {
+                  // debugPrint("!contains");
+                  Future<void> addBottomSpace() async {
+                    xsmtIsLoading.value = true;
+                    const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                  await xsmtWebViewController.value.runJavaScript(script);
-                }
+                    await xsmtWebViewController.value.runJavaScript(script);
+                  }
 
-                addBottomSpace();
-                xsmtIsLoading.value = false;
+                  addBottomSpace();
+                  xsmtIsLoading.value = false;
+                  xsmtIsValidData.value = true;
+                }
               },
               onWebResourceError: (WebResourceError error) {
                 // debugPrint("onPageFinished url $error");
@@ -698,25 +722,25 @@ class ControllerMain extends BaseController {
                 // debugPrint("onPageStarted url $url");
               },
               onPageFinished: (String url) async {
-                debugPrint("roy93~ onPageFinished url $url");
+                // debugPrint("onPageFinished url $url");
                 var html = await xsmbWebViewController.value
                     .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
-                log("roy93~ html $html");
+                // log("html $html");
                 if (html?.contains('imgloadig\\">') == true) {
-                  debugPrint("roy93~ contains");
+                  // debugPrint("contains");
                   xsmbIsLoading.value = false;
                   xsmbIsValidData.value = false;
                 } else {
-                  debugPrint("roy93~ !contains");
+                  // debugPrint("!contains");
                   Future<void> addBottomSpace() async {
-                    max3dIsLoading.value = true;
+                    xsmbIsLoading.value = true;
                     const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                    await max3dWebViewController.value.runJavaScript(script);
+                    await xsmbWebViewController.value.runJavaScript(script);
                   }
 
                   addBottomSpace();
@@ -1186,6 +1210,7 @@ class ControllerMain extends BaseController {
   var megaWebViewController = WebViewController().obs;
   var megaIsLoading = true.obs;
   var megaIsValidData = true.obs;
+
   // var megaKqxs = KQXS().obs;
 
   Future<void> setSelectedDateTimeMega(DateTime dateTime, bool isFirstInit) async {
@@ -1203,7 +1228,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringMega();
     // debugPrint("date $date");
 
-    Future<void> loadWebMega(String date) async{
+    Future<void> loadWebMega(String date) async {
       var link = "${StringConstants.kqMega}#n$date";
       // debugPrint("link $link");
 
@@ -1388,7 +1413,6 @@ class ControllerMain extends BaseController {
   var max3dIsLoading = true.obs;
   var max3dIsValidData = true.obs;
 
-
   // var max3dKqxs = KQXS().obs;
 
   Future<void> setSelectedDateTimeMax3d(DateTime dateTime, bool isFirstInit) async {
@@ -1404,11 +1428,11 @@ class ControllerMain extends BaseController {
     max3dSelectedDateTime.value = dateTime;
 
     var date = getSelectedDayInStringMax3d();
-    // debugPrint("roy93~ date $date");
+    // debugPrint("date $date");
 
-    Future<void>  loadWebMax3d(String date) async{
+    Future<void> loadWebMax3d(String date) async {
       var link = "${StringConstants.kqMax3d}#n$date";
-      debugPrint("roy93~ link $link");
+      // debugPrint("link $link");
 
       max3dWebViewController.value = WebViewController()
         ..setJavaScriptMode(JavaScriptMode.unrestricted)
