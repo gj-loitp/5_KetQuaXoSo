@@ -590,6 +590,7 @@ class ControllerMain extends BaseController {
   var xsmbSelectedDateTime = DateTime.now().obs;
   var xsmbWebViewController = WebViewController().obs;
   var xsmbIsLoading = true.obs;
+  var xsmbIsValidData = true.obs;
   var xsmbKqxs = KQXS().obs;
   var xsmbCurrentSearchNumber = "".obs;
   var xsmbCurrentSearchDate = "".obs;
@@ -697,21 +698,31 @@ class ControllerMain extends BaseController {
                 // debugPrint("onPageStarted url $url");
               },
               onPageFinished: (String url) async {
-                // debugPrint("onPageFinished url $url");
-
-                Future<void> addBottomSpace() async {
-                  xsmbIsLoading.value = true;
-                  const script = '''
+                debugPrint("roy93~ onPageFinished url $url");
+                var html = await xsmbWebViewController.value
+                    .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
+                log("roy93~ html $html");
+                if (html?.contains('imgloadig\\">') == true) {
+                  debugPrint("roy93~ contains");
+                  xsmbIsLoading.value = false;
+                  xsmbIsValidData.value = false;
+                } else {
+                  debugPrint("roy93~ !contains");
+                  Future<void> addBottomSpace() async {
+                    max3dIsLoading.value = true;
+                    const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                  await xsmbWebViewController.value.runJavaScript(script);
-                }
+                    await max3dWebViewController.value.runJavaScript(script);
+                  }
 
-                addBottomSpace();
-                xsmbIsLoading.value = false;
+                  addBottomSpace();
+                  xsmbIsLoading.value = false;
+                  xsmbIsValidData.value = true;
+                }
               },
               onWebResourceError: (WebResourceError error) {
                 // debugPrint("onPageFinished url $error");
