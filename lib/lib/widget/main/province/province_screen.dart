@@ -299,6 +299,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   }
 
   Widget _buildContentView() {
+    var isValid = _controllerMain.provinceIsValidData.value;
     var isLoading = _controllerMain.provinceIsLoading.value;
     var isNativeMode = _controllerMain.isNativeMode.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
@@ -308,7 +309,11 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     // debugPrint("timeSelected $timeSelected");
     if (timeNow > timeSelected) {
       // debugPrint("if");
-      isFuture = false;
+      if (isValid) {
+        isFuture = false;
+      } else {
+        isFuture = true;
+      }
     } else {
       // debugPrint("else");
       isFuture = true;

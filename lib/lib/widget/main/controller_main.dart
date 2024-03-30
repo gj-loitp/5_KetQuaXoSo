@@ -889,6 +889,7 @@ class ControllerMain extends BaseController {
   var provinceSelectedDateTime = DateTime.now().obs;
   var provinceWebViewController = WebViewController().obs;
   var provinceIsLoading = true.obs;
+  var provinceIsValidData = true.obs;
   var provinceKqxs = KQXS().obs;
   var provinceCurrentSearchNumber = "".obs;
   var provinceCurrentSearchDate = "".obs;
@@ -1025,21 +1026,30 @@ class ControllerMain extends BaseController {
                 // debugPrint("onPageStarted url $url");
               },
               onPageFinished: (String url) async {
-                // debugPrint("onPageFinished url $url");
-
-                Future<void> addBottomSpace() async {
-                  provinceIsLoading.value = true;
-                  const script = '''
+                var html = await provinceWebViewController.value
+                    .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
+                // log("html $html");
+                if (html?.contains('imgloadig\\">') == true) {
+                  // debugPrint("contains");
+                  provinceIsLoading.value = false;
+                  provinceIsValidData.value = false;
+                } else {
+                  // debugPrint("!contains");
+                  Future<void> addBottomSpace() async {
+                    provinceIsLoading.value = true;
+                    const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                  await provinceWebViewController.value.runJavaScript(script);
-                }
+                    await provinceWebViewController.value.runJavaScript(script);
+                  }
 
-                addBottomSpace();
-                provinceIsLoading.value = false;
+                  addBottomSpace();
+                  provinceIsLoading.value = false;
+                  provinceIsValidData.value = true;
+                }
               },
               onWebResourceError: (WebResourceError error) {
                 // debugPrint("onPageFinished url $error");
