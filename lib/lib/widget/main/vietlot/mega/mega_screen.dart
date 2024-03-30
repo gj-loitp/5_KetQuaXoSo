@@ -178,6 +178,7 @@ class _MegaScreenState extends BaseStatefulState<MegaScreen> {
   }
 
   Widget _buildContentView() {
+    var isValid = _controllerMain.megaIsValidData.value;
     var isLoading = _controllerMain.megaIsLoading.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
     var timeSelected = _controllerMain.megaSelectedDateTime.value.microsecondsSinceEpoch;
@@ -186,7 +187,11 @@ class _MegaScreenState extends BaseStatefulState<MegaScreen> {
     // debugPrint("timeSelected $timeSelected");
     if (timeNow > timeSelected) {
       // debugPrint("if");
-      isFuture = false;
+      if (isValid) {
+        isFuture = false;
+      } else {
+        isFuture = true;
+      }
     } else {
       // debugPrint("else");
       isFuture = true;

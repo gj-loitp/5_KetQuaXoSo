@@ -178,6 +178,7 @@ class _Max3dScreenState extends BaseStatefulState<Max3dScreen> {
   }
 
   Widget _buildContentView() {
+    var isValid = _controllerMain.max3dIsValidData.value;
     var isLoading = _controllerMain.max3dIsLoading.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
     var timeSelected = _controllerMain.max3dSelectedDateTime.value.microsecondsSinceEpoch;
@@ -186,7 +187,11 @@ class _Max3dScreenState extends BaseStatefulState<Max3dScreen> {
     // debugPrint("timeSelected $timeSelected");
     if (timeNow > timeSelected) {
       // debugPrint("if");
-      isFuture = false;
+      if (isValid) {
+        isFuture = false;
+      } else {
+        isFuture = true;
+      }
     } else {
       // debugPrint("else");
       isFuture = true;

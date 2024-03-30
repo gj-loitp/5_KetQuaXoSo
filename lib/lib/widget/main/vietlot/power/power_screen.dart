@@ -178,6 +178,7 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
   }
 
   Widget _buildContentView() {
+    var isValid = _controllerMain.powerIsValidData.value;
     var isLoading = _controllerMain.powerIsLoading.value;
     var timeNow = DateTime.now().microsecondsSinceEpoch;
     var timeSelected = _controllerMain.powerSelectedDateTime.value.microsecondsSinceEpoch;
@@ -186,7 +187,11 @@ class _PowerScreenState extends BaseStatefulState<PowerScreen> {
     // debugPrint("timeSelected $timeSelected");
     if (timeNow > timeSelected) {
       // debugPrint("if");
-      isFuture = false;
+      if (isValid) {
+        isFuture = false;
+      } else {
+        isFuture = true;
+      }
     } else {
       // debugPrint("else");
       isFuture = true;

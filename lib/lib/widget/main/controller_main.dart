@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -1172,7 +1174,8 @@ class ControllerMain extends BaseController {
   var megaSelectedDateTime = DateTime.now().obs;
   var megaWebViewController = WebViewController().obs;
   var megaIsLoading = true.obs;
-  var megaKqxs = KQXS().obs;
+  var megaIsValidData = true.obs;
+  // var megaKqxs = KQXS().obs;
 
   Future<void> setSelectedDateTimeMega(DateTime dateTime, bool isFirstInit) async {
     if (megaSelectedDateTime.value.day == dateTime.day &&
@@ -1189,7 +1192,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringMega();
     // debugPrint("date $date");
 
-    void loadWebMega(String date) {
+    Future<void> loadWebMega(String date) async{
       var link = "${StringConstants.kqMega}#n$date";
       // debugPrint("link $link");
 
@@ -1207,19 +1210,27 @@ class ControllerMain extends BaseController {
             onPageFinished: (String url) async {
               // debugPrint("onPageFinished url $url");
 
-              Future<void> addBottomSpace() async {
-                megaIsLoading.value = true;
-                const script = '''
+              var html = await megaWebViewController.value
+                  .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
+              if (html?.contains('class=\\"imgloadig\\">') == true) {
+                megaIsLoading.value = false;
+                megaIsValidData.value = false;
+              } else {
+                Future<void> addBottomSpace() async {
+                  megaIsLoading.value = true;
+                  const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                await megaWebViewController.value.runJavaScript(script);
-              }
+                  await megaWebViewController.value.runJavaScript(script);
+                }
 
-              addBottomSpace();
-              megaIsLoading.value = false;
+                addBottomSpace();
+                megaIsLoading.value = false;
+                megaIsValidData.value = true;
+              }
             },
             onWebResourceError: (WebResourceError error) {
               // debugPrint("onPageFinished url $error");
@@ -1263,7 +1274,9 @@ class ControllerMain extends BaseController {
   var powerSelectedDateTime = DateTime.now().obs;
   var powerWebViewController = WebViewController().obs;
   var powerIsLoading = true.obs;
-  var powerKqxs = KQXS().obs;
+  var powerIsValidData = true.obs;
+
+  // var powerKqxs = KQXS().obs;
 
   Future<void> setSelectedDateTimePower(DateTime dateTime, bool isFirstInit) async {
     if (powerSelectedDateTime.value.day == dateTime.day &&
@@ -1280,7 +1293,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringPower();
     // debugPrint("date $date");
 
-    void loadWebPower(String date) {
+    Future<void> loadWebPower(String date) async {
       var link = "${StringConstants.kqPower}#n$date";
       // debugPrint("link $link");
 
@@ -1298,19 +1311,27 @@ class ControllerMain extends BaseController {
             onPageFinished: (String url) async {
               // debugPrint("onPageFinished url $url");
 
-              Future<void> addBottomSpace() async {
-                powerIsLoading.value = true;
-                const script = '''
+              var html = await powerWebViewController.value
+                  .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
+              if (html?.contains('class=\\"imgloadig\\">') == true) {
+                powerIsLoading.value = false;
+                powerIsValidData.value = false;
+              } else {
+                Future<void> addBottomSpace() async {
+                  powerIsLoading.value = true;
+                  const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                await powerWebViewController.value.runJavaScript(script);
-              }
+                  await powerWebViewController.value.runJavaScript(script);
+                }
 
-              addBottomSpace();
-              powerIsLoading.value = false;
+                addBottomSpace();
+                powerIsLoading.value = false;
+                powerIsValidData.value = true;
+              }
             },
             onWebResourceError: (WebResourceError error) {
               // debugPrint("onPageFinished url $error");
@@ -1354,7 +1375,10 @@ class ControllerMain extends BaseController {
   var max3dSelectedDateTime = DateTime.now().obs;
   var max3dWebViewController = WebViewController().obs;
   var max3dIsLoading = true.obs;
-  var max3dKqxs = KQXS().obs;
+  var max3dIsValidData = true.obs;
+
+
+  // var max3dKqxs = KQXS().obs;
 
   Future<void> setSelectedDateTimeMax3d(DateTime dateTime, bool isFirstInit) async {
     if (max3dSelectedDateTime.value.day == dateTime.day &&
@@ -1371,7 +1395,7 @@ class ControllerMain extends BaseController {
     var date = getSelectedDayInStringMax3d();
     // debugPrint("roy93~ date $date");
 
-    void loadWebMax3d(String date) {
+    Future<void>  loadWebMax3d(String date) async{
       var link = "${StringConstants.kqMax3d}#n$date";
       debugPrint("roy93~ link $link");
 
@@ -1389,19 +1413,27 @@ class ControllerMain extends BaseController {
             onPageFinished: (String url) async {
               // debugPrint("onPageFinished url $url");
 
-              Future<void> addBottomSpace() async {
-                max3dIsLoading.value = true;
-                const script = '''
+              var html = await max3dWebViewController.value
+                  .runJavaScriptReturningResult("document.documentElement.outerHTML") as String?;
+              if (html?.contains('class=\\"imgloadig\\">') == true) {
+                max3dIsLoading.value = false;
+                max3dIsValidData.value = false;
+              } else {
+                Future<void> addBottomSpace() async {
+                  max3dIsLoading.value = true;
+                  const script = '''
       var spaceDiv = document.createElement("div");
       spaceDiv.style.height = "250px";
       document.body.appendChild(spaceDiv);
     ''';
 
-                await max3dWebViewController.value.runJavaScript(script);
-              }
+                  await max3dWebViewController.value.runJavaScript(script);
+                }
 
-              addBottomSpace();
-              max3dIsLoading.value = false;
+                addBottomSpace();
+                max3dIsLoading.value = false;
+                max3dIsValidData.value = true;
+              }
             },
             onWebResourceError: (WebResourceError error) {
               // debugPrint("onPageFinished url $error");

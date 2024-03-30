@@ -11,7 +11,7 @@ dependencies:
 
   ##a
   #https://pub.dev/packages/animated_notch_bottom_bar
-  animated_notch_bottom_bar: ^1.0.1
+  animated_notch_bottom_bar: ^1.0.2
 
   ##c
   #https://pub.dev/packages/calendar_timeline_sbk
@@ -33,7 +33,7 @@ dependencies:
   #https://pub.dev/packages/avatar_glow
   avatar_glow: ^2.0.2
   #https://pub.dev/packages/in_app_review
-  in_app_review: ^2.0.8
+  in_app_review: ^2.0.9
   #https://pub.dev/packages/url_launcher
   url_launcher: ^6.2.5
   #https://pub.dev/packages/animated_text_kit
@@ -55,11 +55,11 @@ dependencies:
   #https://pub.dev/packages/confetti
 #  confetti: ^0.7.0
   #https://pub.dev/packages/connectivity_plus
-  connectivity_plus: ^5.0.2
+  connectivity_plus: ^6.0.1
   #https://pub.dev/packages/device_info_plus
 #  device_info_plus: ^9.1.1
   #https://pub.dev/packages/dio
-  dio: ^5.4.1
+  dio: ^5.4.2+1
   #https://pub.dev/packages/double_back_to_close_app
 #  double_back_to_close_app: ^2.1.0
   #https://pub.dev/packages/double_tap_to_exit
@@ -110,11 +110,11 @@ dependencies:
   #https://pub.dev/packages/load_switch
 #  load_switch: ^2.0.8
   #https://pub.dev/packages/lottie
-  lottie: ^3.1.0
+  lottie: ^3.0.0
   #https://pub.dev/packages/scrollable_positioned_list
 #  scrollable_positioned_list: ^0.3.8
   #https://pub.dev/packages/share_plus
-  share_plus: ^7.2.2
+  share_plus: ^8.0.2
   #https://pub.dev/packages/marquee
   marquee: ^2.2.3
   #https://pub.dev/packages/rxdart
@@ -146,7 +146,7 @@ dependencies:
 #  timeago:
 
   ##t
-  toggle_switch: ^2.1.0
+  toggle_switch: ^2.3.0
 
   #https://pub.dev/packages/uuid
 #  uuid:
@@ -161,6 +161,7 @@ dependencies:
   highlight_text: ^1.7.0
 #  el_tooltip: ^2.0.0
   relative_dialog: ^0.2.1
+#  web_scraper: ^0.1.4
 
 dev_dependencies:
   flutter_test:
