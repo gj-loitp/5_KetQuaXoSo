@@ -51,7 +51,7 @@ class UrlLauncherUtils {
       );
 
   static void moreApp() {
-    UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/developer?id=mckimquyen");
+    UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/developer?id=McKimQuyen");
   }
 
   static void launchPolicy() {
