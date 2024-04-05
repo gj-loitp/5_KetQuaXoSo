@@ -110,7 +110,7 @@ dependencies:
   #https://pub.dev/packages/load_switch
 #  load_switch: ^2.0.8
   #https://pub.dev/packages/lottie
-  lottie: ^3.0.0
+  lottie: ^3.1.0
   #https://pub.dev/packages/scrollable_positioned_list
 #  scrollable_positioned_list: ^0.3.8
   #https://pub.dev/packages/share_plus
