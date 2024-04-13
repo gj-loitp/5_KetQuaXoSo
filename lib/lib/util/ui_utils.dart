@@ -275,93 +275,93 @@ class UIUtils {
     );
   }
 
-  static void showDialogSuccess(
-    BuildContext context,
-    String msg,
-    VoidCallback? onClickConfirm,
-  ) {
-    showGeneralDialog(
-      barrierDismissible: false,
-      barrierColor: Colors.black.withOpacity(0.5),
-      transitionDuration: const Duration(milliseconds: 500),
-      context: context,
-      pageBuilder: (_, __, ___) {
-        return Center(
-          child: Container(
-            width: 300,
-            margin: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(DimenConstants.radiusMedium),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const SizedBox(height: DimenConstants.marginPaddingMedium),
-                AvatarGlow(
-                  glowColor: Colors.green,
-                  duration: const Duration(milliseconds: 2000),
-                  repeat: true,
-                  child: Image.asset(
-                    "assets/images/ic_success.png",
-                    height: 60,
-                    width: 60,
-                  ),
-                ),
-                // SizedBox(height: DimenConstants.marginPaddingMedium),
-                Text(
-                  msg,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xff232426),
-                  ),
-                ),
-                const SizedBox(height: DimenConstants.radiusMedium),
-                const Divider(
-                  color: Color(0xffC8C8CA),
-                  height: 1,
-                ),
-                SizedBox(
-                  width: double.infinity,
-                  height: DimenConstants.heightButton,
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      foregroundColor: const Color(0xff0A79F8),
-                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-                      // backgroundColor: Colors.white,
-                      textStyle: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    onPressed: () {
-                      Get.back();
-                      onClickConfirm?.call();
-                    },
-                    child: const Text(
-                      "Đóng",
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-      transitionBuilder: (_, anim, __, child) {
-        return ScaleTransition(
-          scale: CurvedAnimation(
-            parent: anim,
-            curve: Curves.bounceIn,
-            reverseCurve: Curves.bounceIn,
-          ),
-          child: child,
-        );
-      },
-    );
-  }
+  // static void showDialogSuccess(
+  //   BuildContext context,
+  //   String msg,
+  //   VoidCallback? onClickConfirm,
+  // ) {
+  //   showGeneralDialog(
+  //     barrierDismissible: false,
+  //     barrierColor: Colors.black.withOpacity(0.5),
+  //     transitionDuration: const Duration(milliseconds: 500),
+  //     context: context,
+  //     pageBuilder: (_, __, ___) {
+  //       return Center(
+  //         child: Container(
+  //           width: 300,
+  //           margin: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
+  //           decoration: BoxDecoration(
+  //             color: Colors.white,
+  //             borderRadius: BorderRadius.circular(DimenConstants.radiusMedium),
+  //           ),
+  //           child: Column(
+  //             mainAxisSize: MainAxisSize.min,
+  //             children: [
+  //               const SizedBox(height: DimenConstants.marginPaddingMedium),
+  //               AvatarGlow(
+  //                 glowColor: Colors.green,
+  //                 duration: const Duration(milliseconds: 2000),
+  //                 repeat: true,
+  //                 child: Image.asset(
+  //                   "assets/images/ic_success.png",
+  //                   height: 60,
+  //                   width: 60,
+  //                 ),
+  //               ),
+  //               // SizedBox(height: DimenConstants.marginPaddingMedium),
+  //               Text(
+  //                 msg,
+  //                 textAlign: TextAlign.center,
+  //                 style: const TextStyle(
+  //                   fontSize: 16,
+  //                   fontWeight: FontWeight.w700,
+  //                   color: Color(0xff232426),
+  //                 ),
+  //               ),
+  //               const SizedBox(height: DimenConstants.radiusMedium),
+  //               const Divider(
+  //                 color: Color(0xffC8C8CA),
+  //                 height: 1,
+  //               ),
+  //               SizedBox(
+  //                 width: double.infinity,
+  //                 height: DimenConstants.heightButton,
+  //                 child: TextButton(
+  //                   style: TextButton.styleFrom(
+  //                     foregroundColor: const Color(0xff0A79F8),
+  //                     padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+  //                     // backgroundColor: Colors.white,
+  //                     textStyle: const TextStyle(
+  //                       fontSize: 16,
+  //                       fontWeight: FontWeight.w400,
+  //                     ),
+  //                   ),
+  //                   onPressed: () {
+  //                     Get.back();
+  //                     onClickConfirm?.call();
+  //                   },
+  //                   child: const Text(
+  //                     "Đóng",
+  //                   ),
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         ),
+  //       );
+  //     },
+  //     transitionBuilder: (_, anim, __, child) {
+  //       return ScaleTransition(
+  //         scale: CurvedAnimation(
+  //           parent: anim,
+  //           curve: Curves.bounceIn,
+  //           reverseCurve: Curves.bounceIn,
+  //         ),
+  //         child: child,
+  //       );
+  //     },
+  //   );
+  // }
 
   static Widget buildHorizontalDivider(Color color, double width, double height) {
     return Container(
