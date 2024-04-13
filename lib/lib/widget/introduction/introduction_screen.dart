@@ -16,19 +16,31 @@ class IntroductionScreen extends StatefulWidget {
 class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
   final List<SingleIntroScreen> pages = [
     const SingleIntroScreen(
-      title: 'Welcome to the Event Management App !',
-      description: 'You plans your Events, We\'ll do the rest and will be the best! Guaranteed!  ',
-      imageAsset: 'assets/onboard_one.png',
+      title: 'Chào mừng đến với ứng dụng "KQXS, XSMN, XSMB, XSMT"',
+      description: 'Ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!',
+      imageAsset: 'assets/images/anim_1.gif',
+      // headerBgColor: Colors.white,
+      sideDotsBgColor: Colors.yellow,
+      mainCircleBgColor: Colors.yellow,
+      imageWithBubble: true,
     ),
     const SingleIntroScreen(
-      title: 'Book tickets to cricket matches and events',
-      description: 'Tickets to the latest movies, crickets matches, concerts, comedy shows, plus lots more !',
-      imageAsset: 'assets/onboard_two.png',
+      title: 'Tra cứu kết quả siêu tốc:',
+      description: 'Cập nhật nhanh chóng kết quả xổ số 3 miền: miền nam, miền trung, miền bắc',
+      imageAsset: 'assets/images/anim_1.gif',
+      // headerBgColor: Colors.white,
+      sideDotsBgColor: Colors.yellow,
+      mainCircleBgColor: Colors.yellow,
+      imageWithBubble: true,
     ),
     const SingleIntroScreen(
-      title: 'Grabs all events now only in your hands',
-      description: 'All events are now in your hands, just a click away ! ',
-      imageAsset: 'assets/onboard_three.png',
+      title: 'Dễ dàng tìm kiếm thông tin xổ số Vietlot, Power, Mega',
+      description: 'Nhập con số vé số để kiểm tra kết quả một cách nhanh chóng và thuận tiện.',
+      imageAsset: 'assets/images/anim_1.gif',
+      // headerBgColor: Colors.white,
+      sideDotsBgColor: Colors.yellow,
+      mainCircleBgColor: Colors.yellow,
+      imageWithBubble: true,
     ),
   ];
 
@@ -47,6 +59,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
     return Scaffold(
       body: AnimatedIntroduction(
         slides: pages,
+        footerRadius: 45.0,
         containerBg: ColorConstants.white,
         // activeDotColor: Colors.white,
         // inactiveDotColor: Colors.grey,
