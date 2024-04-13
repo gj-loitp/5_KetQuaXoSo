@@ -1,11 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
+import 'package:ketquaxoso/lib/widget/introduction/introduction_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/main_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  static String screenName = "/SplashScreen";
+
   const SplashScreen({
     super.key,
   });
@@ -57,9 +60,13 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
     );
   }
 
-  void _goToMainScreen() {
-    Future.delayed(const Duration(milliseconds: 1500)).then((val) {
+  Future<void> _goToMainScreen() async {
+    await Future.delayed(const Duration(milliseconds: 1000));
+    var keyIsShowedIntroduction = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedIntroduction);
+    if (keyIsShowedIntroduction == true) {
       Get.off(() => const MainScreen());
-    });
+    } else {
+      Get.off(() => IntroductionScreen(SplashScreen.screenName));
+    }
   }
 }

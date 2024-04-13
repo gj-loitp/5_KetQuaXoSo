@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesUtil {
   static String keyThemeIndex = "keyThemeIndex";
+  static String keyIsShowedIntroduction = "_keyIsShowedIntroduction";
   static String keyOnOffTextOverflow = "_keyOnOffTextOverflow";
   static String keyOnOffResultVietlotMax3d= "_keyOnOffResultVietlotMax3d";
   static String keyIsShowedDialogHello = "keyIsShowedDialogHello";

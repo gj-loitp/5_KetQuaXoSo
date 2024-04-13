@@ -12,7 +12,6 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
 //TODO notification reminder
 //TODO scan de do ve so
-//TODO https://pub.dev/packages/animated_introduction
 //done mckimquyen
 //ic_launcher
 //pkg name
@@ -31,6 +30,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //keystore mckimquyen
 //them version infor o cac man hinh can thiet
 //add hero efx
+//https://pub.dev/packages/animated_introduction
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi

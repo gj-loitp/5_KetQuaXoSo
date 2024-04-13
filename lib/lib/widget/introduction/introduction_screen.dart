@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
+import 'package:ketquaxoso/lib/widget/main/main_screen.dart';
 import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
+import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
 class IntroductionScreen extends StatefulWidget {
   final String fromScreenName;
@@ -82,12 +85,18 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
           debugPrint("roy93~ onSkip widget.fromScreenName ${widget.fromScreenName}");
           if (widget.fromScreenName == ProfileScreen.screenName) {
             Get.back();
+          } else if (widget.fromScreenName == SplashScreen.screenName) {
+            SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedIntroduction, true);
+            Get.off(() => const MainScreen());
           }
         },
         onDone: () {
           debugPrint("roy93~ onDone widget.fromScreenName ${widget.fromScreenName}");
           if (widget.fromScreenName == ProfileScreen.screenName) {
             Get.back();
+          } else if (widget.fromScreenName == SplashScreen.screenName) {
+            SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedIntroduction, true);
+            Get.off(() => const MainScreen());
           }
         },
       ),
