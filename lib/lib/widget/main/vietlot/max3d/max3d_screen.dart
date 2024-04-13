@@ -62,6 +62,33 @@ class _Max3dScreenState extends BaseStatefulState<Max3dScreen> {
               return SafeArea(
                 child: Column(
                   children: [
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                      width: double.infinity,
+                      color: Colors.white,
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/images/ic_beta.png",
+                            width: 35,
+                            height: 35,
+                            fit: BoxFit.contain,
+                          ),
+                          const SizedBox(width: 4),
+                          const Expanded(
+                            child: Text(
+                              "Lưu ý: Tính đăng đang thử nghiệm, có thể gây lỗi",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.redAccent,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     _buildCalendar(),
                     Container(
                       padding: const EdgeInsets.all(16),
