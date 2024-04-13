@@ -13,6 +13,7 @@ import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/thontinhuuich/information_screen.dart';
+import 'package:ketquaxoso/lib/widget/information/tuvitrondoi/tuvitrondoi_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/setting/setting_screen.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
@@ -281,16 +282,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 Get.to(() => const InformationScreen());
                               },
                             ),
-                            UIUtils.getButton(
-                              "Xem tử vi trọn đời của 12 con giáp",
-                              Icons.people_sharp,
-                              description:
-                                  "Tử vi trọn đời cung cấp cho bạn thông tin tổng quát về tử vi phương đông của 12 con giáp.",
-                              () {
-                                //TODO roy93~ ref https://ngaydep.com/tu-vi-tron-doi-cua-12-con-giap.html
-                                showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
-                              },
-                            ),
+                            //TODO roy93~
+                            // UIUtils.getButton(
+                            //   "Xem tử vi trọn đời của 12 con giáp",
+                            //   Icons.people_sharp,
+                            //   description:
+                            //       "Tử vi trọn đời cung cấp cho bạn thông tin tổng quát về tử vi phương đông của 12 con giáp.",
+                            //   () {
+                            //     Get.to(() => const TuViTronDoiScreen());
+                            //   },
+                            // ),
                             // UIUtils.getButton(
                             //   "Phong tục tập quán",
                             //   Icons.favorite,
