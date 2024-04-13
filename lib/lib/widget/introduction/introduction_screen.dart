@@ -82,7 +82,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
         nextText: "Tiếp theo",
         doneText: "Hoàn thành",
         onSkip: () {
-          debugPrint("roy93~ onSkip widget.fromScreenName ${widget.fromScreenName}");
+          // debugPrint("onSkip widget.fromScreenName ${widget.fromScreenName}");
           if (widget.fromScreenName == ProfileScreen.screenName) {
             Get.back();
           } else if (widget.fromScreenName == SplashScreen.screenName) {
@@ -91,7 +91,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
           }
         },
         onDone: () {
-          debugPrint("roy93~ onDone widget.fromScreenName ${widget.fromScreenName}");
+          // debugPrint("onDone widget.fromScreenName ${widget.fromScreenName}");
           if (widget.fromScreenName == ProfileScreen.screenName) {
             Get.back();
           } else if (widget.fromScreenName == SplashScreen.screenName) {
