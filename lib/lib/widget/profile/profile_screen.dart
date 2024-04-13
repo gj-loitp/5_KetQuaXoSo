@@ -12,6 +12,7 @@ import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
+import 'package:ketquaxoso/lib/widget/information/phongtuctapquan/phongtuctapquan_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/thontinhuuich/information_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/tuvitrondoi/tuvitrondoi_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
@@ -282,7 +283,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 Get.to(() => const InformationScreen());
                               },
                             ),
-                            //TODO roy93~
+                            //TODO roy93~ impl
                             // UIUtils.getButton(
                             //   "Xem tử vi trọn đời của 12 con giáp",
                             //   Icons.people_sharp,
@@ -292,13 +293,13 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             //     Get.to(() => const TuViTronDoiScreen());
                             //   },
                             // ),
+                            //TODO roy93~ impl
                             // UIUtils.getButton(
                             //   "Phong tục tập quán",
                             //   Icons.favorite,
                             //   description: "Phong tục tập quán - Phong tục ngày Tết Việt Nam",
                             //   () {
-                            //     //TODO roy93~ ref https://ngaydep.com/phong-tuc-tap-quan.html
-                            //     showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                            //     Get.to(() => const PhongTucTapQuanScreen());
                             //   },
                             // ),
                             // UIUtils.getButton(
