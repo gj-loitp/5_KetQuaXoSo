@@ -12,7 +12,7 @@ import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
-import 'package:ketquaxoso/lib/widget/information/information_screen.dart';
+import 'package:ketquaxoso/lib/widget/information/thontinhuuich/information_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/setting/setting_screen.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
@@ -281,17 +281,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 Get.to(() => const InformationScreen());
                               },
                             ),
-                            //TODO roy93~ impl
-                            // UIUtils.getButton(
-                            //   "Xem tử vi trọn đời của 12 con giáp",
-                            //   Icons.people_sharp,
-                            //   description:
-                            //       "Tử vi trọn đời cung cấp cho bạn thông tin tổng quát về tử vi phương đông của 12 con giáp.",
-                            //   () {
-                            //     //TODO roy93~ ref https://ngaydep.com/tu-vi-tron-doi-cua-12-con-giap.html
-                            //     showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
-                            //   },
-                            // ),
+                            UIUtils.getButton(
+                              "Xem tử vi trọn đời của 12 con giáp",
+                              Icons.people_sharp,
+                              description:
+                                  "Tử vi trọn đời cung cấp cho bạn thông tin tổng quát về tử vi phương đông của 12 con giáp.",
+                              () {
+                                //TODO roy93~ ref https://ngaydep.com/tu-vi-tron-doi-cua-12-con-giap.html
+                                showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
+                              },
+                            ),
                             // UIUtils.getButton(
                             //   "Phong tục tập quán",
                             //   Icons.favorite,
@@ -393,7 +392,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                               description:
                                   "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
                               () {
-                                UrlLauncherUtils.launchInBrowser("https://github.com/gj-roy/KetQuaXoSo");
+                                UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
                               },
                             ),
                             UIUtils.getButton(
