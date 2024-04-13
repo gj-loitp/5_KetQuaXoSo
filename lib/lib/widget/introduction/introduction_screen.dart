@@ -3,9 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/widget/profile/profile_screen.dart';
 
 class IntroductionScreen extends StatefulWidget {
-  const IntroductionScreen({
+  final String fromScreenName;
+
+  const IntroductionScreen(
+    this.fromScreenName, {
     super.key,
   });
 
@@ -75,12 +79,16 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
         nextText: "Tiếp theo",
         doneText: "Hoàn thành",
         onSkip: () {
-          debugPrint("roy93~ onSkip");
-          Get.back();
+          debugPrint("roy93~ onSkip widget.fromScreenName ${widget.fromScreenName}");
+          if (widget.fromScreenName == ProfileScreen.screenName) {
+            Get.back();
+          }
         },
         onDone: () {
-          debugPrint("roy93~ onDone");
-          Get.back();
+          debugPrint("roy93~ onDone widget.fromScreenName ${widget.fromScreenName}");
+          if (widget.fromScreenName == ProfileScreen.screenName) {
+            Get.back();
+          }
         },
       ),
     );

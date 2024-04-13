@@ -25,6 +25,8 @@ import 'package:share_plus/share_plus.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class ProfileScreen extends StatefulWidget {
+  static String screenName = "/ProfileScreen";
+
   const ProfileScreen({
     super.key,
   });
@@ -357,7 +359,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                               description:
                                   "Chào mừng đến với ứng dụng KQXS, XSMN, XSMB, XSMT – ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!",
                               () {
-                                Get.to(() => const IntroductionScreen());
+                                Get.to(() => IntroductionScreen(ProfileScreen.screenName));
                               },
                             ),
                             UIUtils.getButton(
