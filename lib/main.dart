@@ -10,7 +10,6 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //TODO firebase
 //TODO lich su ve so cua toi
 
-//TODO add hero efx
 //TODO notification reminder
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/animated_introduction
@@ -31,6 +30,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //double to exit
 //keystore mckimquyen
 //them version infor o cac man hinh can thiet
+//add hero efx
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi

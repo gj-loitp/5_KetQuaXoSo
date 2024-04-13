@@ -1,4 +1,5 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
+import 'package:connection_notifier/connection_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
@@ -119,12 +120,30 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: exitApp,
-      child: Scaffold(
-        body: _buildPageView(),
-        extendBody: true,
-        bottomNavigationBar: _buildBottomBar(),
+    return ConnectionNotifier(
+      connectionNotificationOptions: const ConnectionNotificationOptions(
+        connectedText: "Đã có kết nối mạng",
+        disconnectedText: "Không có kết nối, đang cố gắng thử lại",
+        connectedBackgroundColor: Colors.blueAccent,
+        disconnectedBackgroundColor: Colors.black,
+        connectedTextStyle: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+        disconnectedTextStyle: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+      child: WillPopScope(
+        onWillPop: exitApp,
+        child: Scaffold(
+          body: _buildPageView(),
+          extendBody: true,
+          bottomNavigationBar: _buildBottomBar(),
+        ),
       ),
     );
   }

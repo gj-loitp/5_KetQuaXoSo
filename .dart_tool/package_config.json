@@ -122,6 +122,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "connection_notifier",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/connection_notifier-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "convert",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/convert-3.1.1",
       "packageUri": "lib/",
@@ -348,6 +354,12 @@
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/in_app_review_platform_interface-2.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "internet_connection_checker",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/internet_connection_checker-1.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "intl",
@@ -621,7 +633,7 @@
     },
     {
       "name": "share_plus",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/share_plus-8.0.2",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/share_plus-8.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -633,9 +645,9 @@
     },
     {
       "name": "shared_preferences",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/shared_preferences-2.2.2",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/shared_preferences-2.2.3",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.1"
     },
     {
       "name": "shared_preferences_android",
@@ -645,9 +657,9 @@
     },
     {
       "name": "shared_preferences_foundation",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.3.4",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.3.5",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "shared_preferences_linux",
@@ -765,7 +777,7 @@
     },
     {
       "name": "url_launcher",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher-6.2.5",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher-6.2.6",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -777,9 +789,9 @@
     },
     {
       "name": "url_launcher_ios",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher_ios-6.2.1",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/url_launcher_ios-6.2.5",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "url_launcher_linux",
@@ -950,7 +962,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-04-05T07:43:19.378313Z",
+  "generated": "2024-04-13T03:53:15.630671Z",
   "generator": "pub",
   "generatorVersion": "3.3.3"
 }
