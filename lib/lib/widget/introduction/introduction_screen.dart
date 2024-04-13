@@ -32,7 +32,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
       imageWithBubble: true,
     ),
     const SingleIntroScreen(
-      title: 'Tra cứu kết quả siêu tốc:',
+      title: 'Tra cứu kết quả siêu tốc',
       description: 'Cập nhật nhanh chóng kết quả xổ số 3 miền: miền nam, miền trung, miền bắc',
       imageAsset: 'assets/images/anim_2.gif',
       // headerBgColor: Colors.white,
