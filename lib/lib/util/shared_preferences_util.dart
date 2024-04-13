@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesUtil {
   static String keyThemeIndex = "keyThemeIndex";
-  static String keyOnOffTextOverflow = "keyOnOffTextOverflow";
+  static String keyOnOffTextOverflow = "_keyOnOffTextOverflow";
   static String keyIsShowedDialogHello = "keyIsShowedDialogHello";
   static String keyTooltipTheme = "keyTooltipTheme";
   static String keyTooltipCalendarXSMN = "keyTooltipCalendarXSMN";
@@ -11,8 +11,7 @@ class SharedPreferencesUtil {
   static String keyTooltipTodayXSMN = "keyTooltipTodayXSMN";
   static int themeIndexNativeView = 0;
   static int themeIndexWebView = 1;
-  static int onTextOverflow = 0;
-  static int offTextOverflow = 1;
+  // static bool onOffTextOverflow = false;
 
   static Future<void> setInt(String key, int value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

@@ -140,7 +140,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 16),
+              margin: const EdgeInsets.fromLTRB(0, 16, 0, 32),
               alignment: Alignment.center,
               child: ToggleSwitch(
                 minWidth: 90.0,
@@ -152,15 +152,45 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                 activeFgColor: Colors.white,
                 inactiveBgColor: Colors.grey,
                 inactiveFgColor: Colors.white,
-                initialLabelIndex: _controllerMain.onOffTextOverflowIndex.value,
+                initialLabelIndex: _controllerMain.onOffTextOverflowIndex.value ? 1 : 0,
                 totalSwitches: 2,
-                labels: const ['Bật', 'Tắt'],
+                labels: const ['Tắt', 'Bật'],
                 radiusStyle: true,
                 onToggle: (index) {
-                  _controllerMain.setOnOffTextOverflow(index);
+                  _controllerMain.setOnOffTextOverflow((index == 1) ? true : false);
                 },
               ),
             ),
+            const Text(
+              "Bật/tắt kết quả xổ số Vietlot Max3D (Beta)",
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
+                color: Colors.black,
+              ),
+            ),
+            // Container(
+            //   margin: const EdgeInsets.fromLTRB(0,16, 0, 32),
+            //   alignment: Alignment.center,
+            //   child: ToggleSwitch(
+            //     minWidth: 90.0,
+            //     cornerRadius: 45.0,
+            //     activeBgColors: const [
+            //       [ColorConstants.appColor],
+            //       [ColorConstants.appColor]
+            //     ],
+            //     activeFgColor: Colors.white,
+            //     inactiveBgColor: Colors.grey,
+            //     inactiveFgColor: Colors.white,
+            //     initialLabelIndex: _controllerMain.onOffTextOverflowIndex.value,
+            //     totalSwitches: 2,
+            //     labels: const ['Bật', 'Tắt'],
+            //     radiusStyle: true,
+            //     onToggle: (index) {
+            //       _controllerMain.setOnOffTextOverflow(index);
+            //     },
+            //   ),
+            // ),
           ],
         ),
       );

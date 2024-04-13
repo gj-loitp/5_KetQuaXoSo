@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +17,7 @@ class ControllerMain extends BaseController {
   final dio = Dio();
   var isNativeMode = true.obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
-  var onOffTextOverflowIndex = SharedPreferencesUtil.offTextOverflow.obs;
+  var onOffTextOverflowIndex = false.obs;
   var buildId = "".obs;
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
 
@@ -51,16 +49,16 @@ class ControllerMain extends BaseController {
   }
 
   Future<void> getOnOffTextOverflow() async {
-    var index = await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyOnOffTextOverflow);
+    var index = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyOnOffTextOverflow);
     if (index != null) {
       onOffTextOverflowIndex.value = index;
     }
   }
 
-  void setOnOffTextOverflow(int? index) {
-    if (index != null) {
-      onOffTextOverflowIndex.value = index;
-      SharedPreferencesUtil.setInt(SharedPreferencesUtil.keyOnOffTextOverflow, index);
+  void setOnOffTextOverflow(bool? isOn) {
+    if (isOn != null) {
+      onOffTextOverflowIndex.value = isOn;
+      SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyOnOffTextOverflow, isOn);
     }
   }
 

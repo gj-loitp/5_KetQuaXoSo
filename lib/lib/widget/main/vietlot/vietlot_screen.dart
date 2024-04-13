@@ -87,25 +87,24 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                     ),
                   ),
                 ),
-                //TODO roy93~ cai xo so max3d nay thuong xuyen bi loi o sv, can lam cai firebase config an hien
-                // InkWell(
-                //   onTap: () {
-                //     Get.to(() => const Max3dScreen());
-                //   },
-                //   child: Container(
-                //     height: Get.height / 7,
-                //     margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                //     decoration: BoxDecoration(
-                //       color: Colors.white,
-                //       borderRadius: BorderRadius.circular(16),
-                //     ),
-                //     child: Image.asset(
-                //       "assets/images/ic_max.png",
-                //       width: double.infinity,
-                //       fit: BoxFit.contain,
-                //     ),
-                //   ),
-                // ),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => const Max3dScreen());
+                  },
+                  child: Container(
+                    height: Get.height / 7,
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Image.asset(
+                      "assets/images/ic_max.png",
+                      width: double.infinity,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
                 // InkWell(
                 //   onTap: () {
                 //     showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
