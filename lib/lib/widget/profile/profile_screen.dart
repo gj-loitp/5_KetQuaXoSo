@@ -150,12 +150,12 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     children: [
                       AvatarGlow(
                         glowColor: Colors.white,
-                        endRadius: 60.0,
-                        showTwoGlows: true,
-                        child: Image.asset(
-                          'assets/images/anim_2.gif',
-                          width: 90,
-                          fit: BoxFit.cover,
+                        child: SizedBox(
+                          width: 120,
+                          height: 120,
+                          child: Image.asset(
+                            'assets/images/anim_2.gif',
+                          ),
                         ),
                       ),
                       Container(
@@ -415,12 +415,12 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                       ),
                       AvatarGlow(
                         glowColor: Colors.white,
-                        endRadius: 60.0,
-                        showTwoGlows: true,
-                        child: Image.asset(
-                          'assets/images/anim_2.gif',
-                          width: 90,
-                          fit: BoxFit.cover,
+                        child: SizedBox(
+                          width: 120,
+                          height: 120,
+                          child: Image.asset(
+                            'assets/images/anim_2.gif',
+                          ),
                         ),
                       ),
                     ],
