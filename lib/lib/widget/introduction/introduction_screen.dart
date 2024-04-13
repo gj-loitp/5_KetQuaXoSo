@@ -27,7 +27,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
     const SingleIntroScreen(
       title: 'Tra cứu kết quả siêu tốc:',
       description: 'Cập nhật nhanh chóng kết quả xổ số 3 miền: miền nam, miền trung, miền bắc',
-      imageAsset: 'assets/images/anim_1.gif',
+      imageAsset: 'assets/images/anim_2.gif',
       // headerBgColor: Colors.white,
       sideDotsBgColor: Colors.yellow,
       mainCircleBgColor: Colors.yellow,
@@ -36,7 +36,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
     const SingleIntroScreen(
       title: 'Dễ dàng tìm kiếm thông tin xổ số Vietlot, Power, Mega',
       description: 'Nhập con số vé số để kiểm tra kết quả một cách nhanh chóng và thuận tiện.',
-      imageAsset: 'assets/images/anim_1.gif',
+      imageAsset: 'assets/images/anim_3.gif',
       // headerBgColor: Colors.white,
       sideDotsBgColor: Colors.yellow,
       mainCircleBgColor: Colors.yellow,
