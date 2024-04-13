@@ -162,11 +162,21 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
               ),
             ),
             const Text(
-              "Bật/tắt kết quả xổ số Vietlot Max3D (Beta)",
+              "(Beta) Bật/tắt kết quả xổ số Vietlot Max3D",
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16,
                 color: Colors.black,
+              ),
+            ),
+            const Text(
+              "Lưu ý: Đây là tính năng đang trong quá trình thử nghiệm, có thể sẽ có lỗi không mong muốn sẽ xảy ra",
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 12,
+                color: Colors.redAccent,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.redAccent,
               ),
             ),
             Container(
