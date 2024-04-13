@@ -47,16 +47,15 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
     return Scaffold(
       body: AnimatedIntroduction(
         slides: pages,
-        containerBg: ColorConstants.appColor,
+        containerBg: ColorConstants.white,
         // activeDotColor: Colors.white,
         // inactiveDotColor: Colors.grey,
         // footerBgColor: Colors.white,
         isFullScreen: false,
         textColor: Colors.white,
         footerGradients: const [
+          ColorConstants.appColor,
           Colors.pink,
-          Colors.yellowAccent,
-          Colors.black,
         ],
         indicatorType: IndicatorType.diamond,
         skipText: "Bỏ qua",
