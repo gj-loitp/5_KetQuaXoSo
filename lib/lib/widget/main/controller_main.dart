@@ -17,7 +17,8 @@ class ControllerMain extends BaseController {
   final dio = Dio();
   var isNativeMode = true.obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;
-  var onOffTextOverflowIndex = false.obs;
+  var isSettingOnTextOverflow = false.obs;
+  var isSettingOnResultVietlotMax3d = false.obs;
   var buildId = "".obs;
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
 
@@ -48,17 +49,31 @@ class ControllerMain extends BaseController {
     }
   }
 
-  Future<void> getOnOffTextOverflow() async {
+  Future<void> getIsOnTextOverflow() async {
     var index = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyOnOffTextOverflow);
     if (index != null) {
-      onOffTextOverflowIndex.value = index;
+      isSettingOnTextOverflow.value = index;
     }
   }
 
-  void setOnOffTextOverflow(bool? isOn) {
+  void setIsOnTextOverflow(bool? isOn) {
     if (isOn != null) {
-      onOffTextOverflowIndex.value = isOn;
+      isSettingOnTextOverflow.value = isOn;
       SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyOnOffTextOverflow, isOn);
+    }
+  }
+
+  Future<void> getIsOnResultVietlotMax3d() async {
+    var index = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyOnOffResultVietlotMax3d);
+    if (index != null) {
+      isSettingOnResultVietlotMax3d.value = index;
+    }
+  }
+
+  void setIsOnResultVietlotMax3d(bool? isOn) {
+    if (isOn != null) {
+      isSettingOnResultVietlotMax3d.value = isOn;
+      SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyOnOffResultVietlotMax3d, isOn);
     }
   }
 

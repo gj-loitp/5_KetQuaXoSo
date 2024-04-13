@@ -55,7 +55,8 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
     super.initState();
     _controllerMain.getPackageInfo();
     _controllerMain.getThemeIndex();
-    _controllerMain.getOnOffTextOverflow();
+    _controllerMain.getIsOnTextOverflow();
+    _controllerMain.getIsOnResultVietlotMax3d();
     _checkToShowDialogHello();
   }
 

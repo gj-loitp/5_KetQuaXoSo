@@ -31,7 +31,7 @@ class _TextMarqueeState extends BaseStatefulState<TextMarquee> {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      var onOffTextOverflow = _controllerMain.onOffTextOverflowIndex.value;
+      var onOffTextOverflow = _controllerMain.isSettingOnTextOverflow.value;
       if (onOffTextOverflow == true) {
         return Marquee(
           text: widget.text,

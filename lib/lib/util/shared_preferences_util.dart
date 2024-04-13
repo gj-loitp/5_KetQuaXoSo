@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SharedPreferencesUtil {
   static String keyThemeIndex = "keyThemeIndex";
   static String keyOnOffTextOverflow = "_keyOnOffTextOverflow";
+  static String keyOnOffResultVietlotMax3d= "_keyOnOffResultVietlotMax3d";
   static String keyIsShowedDialogHello = "keyIsShowedDialogHello";
   static String keyTooltipTheme = "keyTooltipTheme";
   static String keyTooltipCalendarXSMN = "keyTooltipCalendarXSMN";

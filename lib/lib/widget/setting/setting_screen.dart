@@ -152,12 +152,12 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                 activeFgColor: Colors.white,
                 inactiveBgColor: Colors.grey,
                 inactiveFgColor: Colors.white,
-                initialLabelIndex: _controllerMain.onOffTextOverflowIndex.value ? 1 : 0,
+                initialLabelIndex: _controllerMain.isSettingOnTextOverflow.value ? 1 : 0,
                 totalSwitches: 2,
                 labels: const ['Tắt', 'Bật'],
                 radiusStyle: true,
                 onToggle: (index) {
-                  _controllerMain.setOnOffTextOverflow((index == 1) ? true : false);
+                  _controllerMain.setIsOnTextOverflow((index == 1) ? true : false);
                 },
               ),
             ),
@@ -169,28 +169,28 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                 color: Colors.black,
               ),
             ),
-            // Container(
-            //   margin: const EdgeInsets.fromLTRB(0,16, 0, 32),
-            //   alignment: Alignment.center,
-            //   child: ToggleSwitch(
-            //     minWidth: 90.0,
-            //     cornerRadius: 45.0,
-            //     activeBgColors: const [
-            //       [ColorConstants.appColor],
-            //       [ColorConstants.appColor]
-            //     ],
-            //     activeFgColor: Colors.white,
-            //     inactiveBgColor: Colors.grey,
-            //     inactiveFgColor: Colors.white,
-            //     initialLabelIndex: _controllerMain.onOffTextOverflowIndex.value,
-            //     totalSwitches: 2,
-            //     labels: const ['Bật', 'Tắt'],
-            //     radiusStyle: true,
-            //     onToggle: (index) {
-            //       _controllerMain.setOnOffTextOverflow(index);
-            //     },
-            //   ),
-            // ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
+              alignment: Alignment.center,
+              child: ToggleSwitch(
+                minWidth: 90.0,
+                cornerRadius: 45.0,
+                activeBgColors: const [
+                  [ColorConstants.appColor],
+                  [ColorConstants.appColor]
+                ],
+                activeFgColor: Colors.white,
+                inactiveBgColor: Colors.grey,
+                inactiveFgColor: Colors.white,
+                initialLabelIndex: _controllerMain.isSettingOnResultVietlotMax3d.value ? 1 : 0,
+                totalSwitches: 2,
+                labels: const ['Tắt', 'Bật'],
+                radiusStyle: true,
+                onToggle: (index) {
+                  _controllerMain.setIsOnResultVietlotMax3d((index == 1) ? true : false);
+                },
+              ),
+            ),
           ],
         ),
       );
