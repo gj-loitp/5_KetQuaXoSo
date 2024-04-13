@@ -15,6 +15,7 @@ import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/phongtuctapquan/phongtuctapquan_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/thontinhuuich/information_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/tuvitrondoi/tuvitrondoi_screen.dart';
+import 'package:ketquaxoso/lib/widget/introduction/introduction_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/setting/setting_screen.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
@@ -350,6 +351,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                             //     showSnackBarFull(StringConstants.warning, StringConstants.comingSoon);
                             //   },
                             // ),
+                            UIUtils.getButton(
+                              "Giới thiệu ứng dụng",
+                              Icons.hotel_class,
+                              description:
+                                  "Chào mừng đến với ứng dụng KQXS, XSMN, XSMB, XSMT – ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!",
+                              () {
+                                Get.to(() => const IntroductionScreen());
+                              },
+                            ),
                             UIUtils.getButton(
                               "Đánh giá ứng dụng",
                               Icons.hotel_class,
