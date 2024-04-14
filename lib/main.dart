@@ -8,10 +8,11 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
 //TODO ad
 //TODO firebase
-//TODO lich su ve so cua toi
 
+//TODO lich su ve so cua toi
 //TODO notification reminder
 //TODO scan de do ve so
+
 //done mckimquyen
 //ic_launcher
 //pkg name
