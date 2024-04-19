@@ -1,11 +1,14 @@
+import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/lib/common/const/dimen_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/formatter/date_text_formatter.dart';
 import 'package:ketquaxoso/lib/model/province.dart';
 import 'package:ketquaxoso/lib/util/duration_util.dart';
+import 'package:ketquaxoso/lib/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/xsmb/xsmb_screen.dart';
@@ -122,55 +125,56 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
             borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
             blur: 5,
           ),
-          Obx(() {
-            return SafeArea(
-              child: Column(
-                children: [
-                  Container(
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                    width: double.infinity,
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              _exitScreen();
-                            },
+          SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                  width: double.infinity,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 40,
+                        height: 40,
+                        child: MaterialButton(
+                          onPressed: () {
+                            _exitScreen();
+                          },
+                          color: Colors.white,
+                          padding: const EdgeInsets.all(0),
+                          shape: const CircleBorder(),
+                          child: const Icon(
+                            Icons.clear,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      const Expanded(
+                        child: Text(
+                          "Nhập vé số của tôi",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
                             color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
-                            ),
+                            fontSize: 24,
+                            shadows: [
+                              Shadow(
+                                blurRadius: 5.0,
+                                color: Colors.black,
+                                offset: Offset(2.0, 2.0),
+                              ),
+                            ],
                           ),
+                          textAlign: TextAlign.start,
                         ),
-                        const SizedBox(width: 16),
-                        const Expanded(
-                          child: Text(
-                            "Nhập vé số của tôi",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  Container(
+                ),
+                _buildBannerAd(),
+                Obx(() {
+                  return Container(
                     margin: const EdgeInsets.all(16),
                     padding: const EdgeInsets.all(16),
                     alignment: Alignment.center,
@@ -180,11 +184,11 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
                       color: Colors.white,
                     ),
                     child: _buildViewBody(),
-                  ),
-                ],
-              ),
-            );
-          }),
+                  );
+                }),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -360,5 +364,29 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
     } else {
       Get.back();
     }
+  }
+
+  Widget _buildBannerAd() {
+    return Container(
+      color: getBannerBackgroundColor(),
+      margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
+      child: MaxAdView(
+        adUnitId: getBannerAdUnitId(),
+        adFormat: AdFormat.banner,
+        listener: AdViewAdListener(onAdLoadedCallback: (ad) {
+          debugPrint('Banner widget ad loaded from ${ad.networkName}');
+        }, onAdLoadFailedCallback: (adUnitId, error) {
+          debugPrint('Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
+        }, onAdClickedCallback: (ad) {
+          debugPrint('Banner widget ad clicked');
+        }, onAdExpandedCallback: (ad) {
+          debugPrint('Banner widget ad expanded');
+        }, onAdCollapsedCallback: (ad) {
+          debugPrint('Banner widget ad collapsed');
+        }, onAdRevenuePaidCallback: (ad) {
+          debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
+        }),
+      ),
+    );
   }
 }
