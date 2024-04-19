@@ -123,7 +123,7 @@ class _ApplovinScreenState extends BaseStatefulState<ApplovinScreen> {
             ElevatedButton(
               onPressed: () {
                 void showInter() async {
-                  bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId()))!;
+                  bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
                   if (isReady) {
                     if (isApplovinDeviceTest()) {
                       showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
