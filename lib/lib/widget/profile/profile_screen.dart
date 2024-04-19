@@ -120,6 +120,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
 
   @override
   void dispose() {
+    _showInterAd();
     super.dispose();
   }
 
