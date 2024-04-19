@@ -1,11 +1,12 @@
+import 'package:applovin_max/applovin_max.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:blur/blur.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/dimen_constants.dart';
 import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
@@ -13,10 +14,7 @@ import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/lib/widget/applovin/applovin_screen.dart';
-import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
-import 'package:ketquaxoso/lib/widget/information/phongtuctapquan/phongtuctapquan_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/thontinhuuich/information_screen.dart';
-import 'package:ketquaxoso/lib/widget/information/tuvitrondoi/tuvitrondoi_screen.dart';
 import 'package:ketquaxoso/lib/widget/introduction/introduction_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/setting/setting_screen.dart';
@@ -150,6 +148,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     ],
                   ),
                 ),
+                _buildBannerAd(),
                 Expanded(
                   child: ListView(
                     physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
@@ -471,6 +470,30 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
       panaraDialogType: PanaraDialogType.custom,
       barrierDismissible: true,
       color: ColorConstants.appColor,
+    );
+  }
+
+  Widget _buildBannerAd() {
+    return Container(
+      color: getBannerBackgroundColor(),
+      margin: EdgeInsets.zero,
+      child: MaxAdView(
+        adUnitId: getBannerAdUnitId(),
+        adFormat: AdFormat.banner,
+        listener: AdViewAdListener(onAdLoadedCallback: (ad) {
+          debugPrint('Banner widget ad loaded from ${ad.networkName}');
+        }, onAdLoadFailedCallback: (adUnitId, error) {
+          debugPrint('Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
+        }, onAdClickedCallback: (ad) {
+          debugPrint('Banner widget ad clicked');
+        }, onAdExpandedCallback: (ad) {
+          debugPrint('Banner widget ad expanded');
+        }, onAdCollapsedCallback: (ad) {
+          debugPrint('Banner widget ad collapsed');
+        }, onAdRevenuePaidCallback: (ad) {
+          debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
+        }),
+      ),
     );
   }
 }
