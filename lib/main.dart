@@ -7,6 +7,7 @@ import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 
 import 'lib/widget/applovin/applovin_screen.dart';
 
@@ -74,6 +75,7 @@ Future<void> main() async {
 }
 
 Future<void> initializePlugin() async {
+  deviceId = await PlatformDeviceId.getDeviceId;
   var configuration = await AppLovinMAX.initialize(sdkKey);
   if (configuration != null) {
     debugPrint("roy93~ initializePlugin success");

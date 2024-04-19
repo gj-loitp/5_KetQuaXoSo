@@ -9,6 +9,7 @@ import 'package:ketquaxoso/lib/common/const/dimen_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 
 enum AdLoadState { notLoaded, loading, loaded }
 
@@ -16,9 +17,32 @@ const String sdkKey = "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5
 final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a" : "IOS_INTER_AD_UNIT_ID";
 final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb" : "IOS_BANNER_AD_UNIT_ID";
 
-final interstitialAdUnitId = (kDebugMode) ? ("${_interstitialAdUnitId}_debug") : _interstitialAdUnitId;
-final bannerAdUnitId = (kDebugMode) ? ("${_bannerAdUnitId}_debug") : _bannerAdUnitId;
+var _listMyDevice = [
+  "eeaaab5a1f0cf524", //poco f3
+  "f2b945dfa5e953cf", //mi pad 5
+  "05f26989e8ce5d06", //vsmart aris
+  "b09ab0a421fa04a4", //samsung a50s
+];
 
+String getInterstitialAdUnitId() {
+  debugPrint("roy93~ getInterstitialAdUnitId deviceId $deviceId");
+  if (kDebugMode || _listMyDevice.contains(deviceId)) {
+    return "${_interstitialAdUnitId}_debug";
+  } else {
+    return _interstitialAdUnitId;
+  }
+}
+
+String getBannerAdUnitId() {
+  debugPrint("roy93~ getBannerAdUnitId deviceId $deviceId");
+  if (kDebugMode || _listMyDevice.contains(deviceId)) {
+    return "${_bannerAdUnitId}_debug";
+  } else {
+    return _bannerAdUnitId;
+  }
+}
+
+String? deviceId;
 var _isInitialized = false;
 var _interstitialLoadState = AdLoadState.notLoaded;
 var _interstitialRetryAttempt = 0;
@@ -93,13 +117,13 @@ class _ApplovinScreenState extends BaseStatefulState<ApplovinScreen> {
             ElevatedButton(
               onPressed: () {
                 void showInter() async {
-                  bool isReady = (await AppLovinMAX.isInterstitialReady(interstitialAdUnitId))!;
+                  bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId()))!;
                   if (isReady) {
-                    AppLovinMAX.showInterstitial(interstitialAdUnitId);
+                    AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
                   } else {
                     logStatus('Loading interstitial ad...');
                     _interstitialLoadState = AdLoadState.loading;
-                    AppLovinMAX.loadInterstitial(interstitialAdUnitId);
+                    AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
                   }
                 }
 
@@ -113,21 +137,21 @@ class _ApplovinScreenState extends BaseStatefulState<ApplovinScreen> {
               onPressed: (_isInitialized && !_isWidgetBannerShowing)
                   ? () async {
                       if (_isProgrammaticBannerShowing) {
-                        AppLovinMAX.hideBanner(bannerAdUnitId);
+                        AppLovinMAX.hideBanner(getBannerAdUnitId());
                       } else {
                         if (!_isProgrammaticBannerCreated) {
                           //
                           // Programmatic banner creation - banners are automatically sized to 320x50 on phones and 728x90 on tablets
                           //
-                          AppLovinMAX.createBanner(bannerAdUnitId, AdViewPosition.bottomCenter);
+                          AppLovinMAX.createBanner(getBannerAdUnitId(), AdViewPosition.bottomCenter);
 
                           // Set banner background color to black - PLEASE USE HEX STRINGS ONLY
-                          AppLovinMAX.setBannerBackgroundColor(bannerAdUnitId, '#ff0000');
+                          AppLovinMAX.setBannerBackgroundColor(getBannerAdUnitId(), '#ff0000');
 
                           _isProgrammaticBannerCreated = true;
                         }
 
-                        AppLovinMAX.showBanner(bannerAdUnitId);
+                        AppLovinMAX.showBanner(getBannerAdUnitId());
                       }
 
                       setState(() {
@@ -187,7 +211,7 @@ Incomplete, if not for you.""",
                 color: Colors.transparent,
                 margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
                 child: MaxAdView(
-                  adUnitId: bannerAdUnitId,
+                  adUnitId: getBannerAdUnitId(),
                   adFormat: AdFormat.banner,
                   listener: AdViewAdListener(onAdLoadedCallback: (ad) {
                     logStatus('Banner widget ad loaded from ${ad.networkName}');
@@ -219,6 +243,7 @@ Incomplete, if not for you.""",
       _isInitialized = true;
       attachAdListeners();
     } else {
+      deviceId = await PlatformDeviceId.getDeviceId;
       var configuration = await AppLovinMAX.initialize(sdkKey);
       debugPrint("roy93~ configuration isTestModeEnabled ${configuration?.isTestModeEnabled}");
       if (configuration != null) {
@@ -252,7 +277,7 @@ Incomplete, if not for you.""",
         logStatus('Interstitial ad failed to load with code ${error.code} - retrying in ${retryDelay}s');
 
         Future.delayed(Duration(milliseconds: retryDelay * 1000), () {
-          AppLovinMAX.loadInterstitial(interstitialAdUnitId);
+          AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
         });
       },
       onAdDisplayedCallback: (ad) {

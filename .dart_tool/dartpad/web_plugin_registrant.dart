@@ -10,6 +10,7 @@ import 'package:audio_session/audio_session_web.dart';
 import 'package:flutter_native_splash/flutter_native_splash_web.dart';
 import 'package:just_audio_web/just_audio_web.dart';
 import 'package:package_info_plus/src/package_info_plus_web.dart';
+import 'package:platform_device_id_web/platform_device_id_web.dart';
 import 'package:restart_app/restart_web.dart';
 import 'package:share_plus/src/share_plus_web.dart';
 import 'package:shared_preferences_web/shared_preferences_web.dart';
@@ -24,6 +25,7 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   FlutterNativeSplashWeb.registerWith(registrar);
   JustAudioPlugin.registerWith(registrar);
   PackageInfoPlusWebPlugin.registerWith(registrar);
+  PlatformDeviceIdWebPlugin.registerWith(registrar);
   RestartWeb.registerWith(registrar);
   SharePlusWebPlugin.registerWith(registrar);
   SharedPreferencesPlugin.registerWith(registrar);
