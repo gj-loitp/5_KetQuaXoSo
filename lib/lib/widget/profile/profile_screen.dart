@@ -476,7 +476,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   Widget _buildBannerAd() {
     return Container(
       color: getBannerBackgroundColor(),
-      margin: EdgeInsets.zero,
+      margin: const EdgeInsets.fromLTRB(0, 0, 0, 8),
       child: MaxAdView(
         adUnitId: getBannerAdUnitId(),
         adFormat: AdFormat.banner,
