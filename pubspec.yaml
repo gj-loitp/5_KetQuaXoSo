@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+  applovin_max: ^3.9.2
   animated_introduction: ^1.0.4
   animated_notch_bottom_bar: ^1.0.2
   calendar_timeline_sbk: ^1.1.7

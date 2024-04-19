@@ -1,12 +1,15 @@
 import 'dart:io';
 
+import 'package:applovin_max/applovin_max.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
-//TODO ad
+import 'lib/widget/applovin/applovin_screen.dart';
+
 //TODO firebase
 
 //TODO lich su ve so cua toi
@@ -32,6 +35,7 @@ import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 //them version infor o cac man hinh can thiet
 //add hero efx
 //https://pub.dev/packages/animated_introduction
+//ad applovin
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
@@ -44,6 +48,7 @@ Future<void> main() async {
   if (Platform.isAndroid) {
     await FlutterDisplayMode.setHighRefreshRate();
   }
+  initializePlugin();
   runApp(
     GetMaterialApp(
       enableLog: true,
@@ -66,6 +71,16 @@ Future<void> main() async {
       themeMode: ThemeMode.light,
     ),
   );
+}
+
+Future<void> initializePlugin() async {
+  var configuration = await AppLovinMAX.initialize(sdkKey);
+  if (configuration != null) {
+    debugPrint("roy93~ initializePlugin success");
+    if (kDebugMode) {
+      Get.snackbar("Applovin", "initializePlugin success (only show this msg in debug mode)");
+    }
+  }
 }
 
 class MyApp extends StatelessWidget {

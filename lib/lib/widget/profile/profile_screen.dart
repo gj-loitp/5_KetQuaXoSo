@@ -1,6 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
@@ -11,6 +12,7 @@ import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
+import 'package:ketquaxoso/lib/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/lib/widget/history/history_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/phongtuctapquan/phongtuctapquan_screen.dart';
 import 'package:ketquaxoso/lib/widget/information/thontinhuuich/information_screen.dart';
@@ -423,6 +425,15 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, false);
                               },
                             ),
+                            if (kDebugMode)
+                              UIUtils.getButton(
+                                "Applovin (only in Debug mode)",
+                                Icons.ad_units,
+                                description: "",
+                                () {
+                                  Get.to(() => const ApplovinScreen());
+                                },
+                              ),
                           ],
                         ),
                       ),
