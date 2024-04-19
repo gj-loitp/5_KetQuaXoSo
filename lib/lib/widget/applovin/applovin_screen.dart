@@ -27,6 +27,10 @@ var _isProgrammaticBannerShowing = false;
 var _isWidgetBannerShowing = false;
 var _statusText = "";
 
+void main() {
+  runApp(const ApplovinScreen());
+}
+
 class ApplovinScreen extends StatefulWidget {
   const ApplovinScreen({super.key});
 
@@ -50,107 +54,108 @@ class _ApplovinScreenState extends BaseStatefulState<ApplovinScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: UIUtils.getAppBar(
-        "ApplovinScreen",
-        () {
-          Get.back();
-        },
-        () {
-          UrlLauncherUtils.launchInBrowser("https://pub.dev/packages/applovin_max");
-        },
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const SizedBox(height: 20),
-          Text(
-            '$_statusText\n',
-            style: const TextStyle(fontSize: 20),
-            textAlign: TextAlign.center,
-          ),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: UIUtils.getAppBar(
+          "ApplovinScreen",
+          () {
+            Get.back();
+          },
+          () {
+            UrlLauncherUtils.launchInBrowser("https://pub.dev/packages/applovin_max");
+          },
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const SizedBox(height: 20),
+            Text(
+              '$_statusText\n',
+              style: const TextStyle(fontSize: 20),
+              textAlign: TextAlign.center,
+            ),
 
-          //Mediation Debugger
-          ElevatedButton(
-            onPressed: _isInitialized
-                ? () {
-                    if (kDebugMode) {
-                      AppLovinMAX.showMediationDebugger();
-                    } else {
-                      showSnackBarFull("Applovin", "Only available in debug mode");
+            //Mediation Debugger
+            ElevatedButton(
+              onPressed: _isInitialized
+                  ? () {
+                      if (kDebugMode) {
+                        AppLovinMAX.showMediationDebugger();
+                      } else {
+                        showSnackBarFull("Applovin", "Only available in debug mode");
+                      }
                     }
+                  : null,
+              child: const Text("Mediation Debugger"),
+            ),
+
+            //Interstitial
+            ElevatedButton(
+              onPressed: () {
+                void showInter() async {
+                  bool isReady = (await AppLovinMAX.isInterstitialReady(interstitialAdUnitId))!;
+                  if (isReady) {
+                    AppLovinMAX.showInterstitial(interstitialAdUnitId);
+                  } else {
+                    logStatus('Loading interstitial ad...');
+                    _interstitialLoadState = AdLoadState.loading;
+                    AppLovinMAX.loadInterstitial(interstitialAdUnitId);
                   }
-                : null,
-            child: const Text("Mediation Debugger"),
-          ),
-
-          //Interstitial
-          ElevatedButton(
-            onPressed: () {
-              void showInter() async {
-                bool isReady = (await AppLovinMAX.isInterstitialReady(interstitialAdUnitId))!;
-                if (isReady) {
-                  AppLovinMAX.showInterstitial(interstitialAdUnitId);
-                } else {
-                  logStatus('Loading interstitial ad...');
-                  _interstitialLoadState = AdLoadState.loading;
-                  AppLovinMAX.loadInterstitial(interstitialAdUnitId);
                 }
-              }
 
-              if (_isInitialized && _interstitialLoadState != AdLoadState.loading) {
-                showInter();
-              }
-            },
-            child: Text(getInterstitialButtonTitle()),
-          ),
-          ElevatedButton(
-            onPressed: (_isInitialized && !_isWidgetBannerShowing)
-                ? () async {
-                    if (_isProgrammaticBannerShowing) {
-                      AppLovinMAX.hideBanner(bannerAdUnitId);
-                    } else {
-                      if (!_isProgrammaticBannerCreated) {
-                        //
-                        // Programmatic banner creation - banners are automatically sized to 320x50 on phones and 728x90 on tablets
-                        //
-                        AppLovinMAX.createBanner(bannerAdUnitId, AdViewPosition.bottomCenter);
+                if (_isInitialized && _interstitialLoadState != AdLoadState.loading) {
+                  showInter();
+                }
+              },
+              child: Text(getInterstitialButtonTitle()),
+            ),
+            ElevatedButton(
+              onPressed: (_isInitialized && !_isWidgetBannerShowing)
+                  ? () async {
+                      if (_isProgrammaticBannerShowing) {
+                        AppLovinMAX.hideBanner(bannerAdUnitId);
+                      } else {
+                        if (!_isProgrammaticBannerCreated) {
+                          //
+                          // Programmatic banner creation - banners are automatically sized to 320x50 on phones and 728x90 on tablets
+                          //
+                          AppLovinMAX.createBanner(bannerAdUnitId, AdViewPosition.bottomCenter);
 
-                        // Set banner background color to black - PLEASE USE HEX STRINGS ONLY
-                        AppLovinMAX.setBannerBackgroundColor(bannerAdUnitId, '#ff0000');
+                          // Set banner background color to black - PLEASE USE HEX STRINGS ONLY
+                          AppLovinMAX.setBannerBackgroundColor(bannerAdUnitId, '#ff0000');
 
-                        _isProgrammaticBannerCreated = true;
+                          _isProgrammaticBannerCreated = true;
+                        }
+
+                        AppLovinMAX.showBanner(bannerAdUnitId);
                       }
 
-                      AppLovinMAX.showBanner(bannerAdUnitId);
+                      setState(() {
+                        _isProgrammaticBannerShowing = !_isProgrammaticBannerShowing;
+                      });
                     }
+                  : null,
+              child: Text(getProgrammaticBannerButtonTitle()),
+            ),
 
-                    setState(() {
-                      _isProgrammaticBannerShowing = !_isProgrammaticBannerShowing;
-                    });
-                  }
-                : null,
-            child: Text(getProgrammaticBannerButtonTitle()),
-          ),
-
-          //widget banner
-          ElevatedButton(
-            onPressed: (_isInitialized && !_isProgrammaticBannerShowing)
-                ? () async {
-                    setState(() {
-                      _isWidgetBannerShowing = !_isWidgetBannerShowing;
-                    });
-                  }
-                : null,
-            child: Text(getWidgetBannerButtonTitle()),
-          ),
-          Expanded(
-            child: ListView(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-                  child: Text(
-                    """If not for you, I wouldn’t know
+            //widget banner
+            ElevatedButton(
+              onPressed: (_isInitialized && !_isProgrammaticBannerShowing)
+                  ? () async {
+                      setState(() {
+                        _isWidgetBannerShowing = !_isWidgetBannerShowing;
+                      });
+                    }
+                  : null,
+              child: Text(getWidgetBannerButtonTitle()),
+            ),
+            Expanded(
+              child: ListView(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+                    child: Text(
+                      """If not for you, I wouldn’t know
 What true love really meant.
 I’d never feel this inner peace;
 I couldn’t be content.
@@ -169,53 +174,58 @@ If not for you, I’d be adrift;
 I don’t know what I’d do;
 I’d be searching for my other half,
 Incomplete, if not for you.""",
-                    style: TextStyle(
-                      fontSize: 32,
+                      style: TextStyle(
+                        fontSize: 32,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          if (_isWidgetBannerShowing)
-            Container(
-              color: Colors.transparent,
-              margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
-              child: MaxAdView(
-                adUnitId: bannerAdUnitId,
-                adFormat: AdFormat.banner,
-                listener: AdViewAdListener(onAdLoadedCallback: (ad) {
-                  logStatus('Banner widget ad loaded from ${ad.networkName}');
-                }, onAdLoadFailedCallback: (adUnitId, error) {
-                  logStatus(
-                      'Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
-                }, onAdClickedCallback: (ad) {
-                  logStatus('Banner widget ad clicked');
-                }, onAdExpandedCallback: (ad) {
-                  logStatus('Banner widget ad expanded');
-                }, onAdCollapsedCallback: (ad) {
-                  logStatus('Banner widget ad collapsed');
-                }, onAdRevenuePaidCallback: (ad) {
-                  logStatus('Banner widget ad revenue paid: ${ad.revenue}');
-                }),
+                ],
               ),
             ),
-        ],
+            if (_isWidgetBannerShowing)
+              Container(
+                color: Colors.transparent,
+                margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
+                child: MaxAdView(
+                  adUnitId: bannerAdUnitId,
+                  adFormat: AdFormat.banner,
+                  listener: AdViewAdListener(onAdLoadedCallback: (ad) {
+                    logStatus('Banner widget ad loaded from ${ad.networkName}');
+                  }, onAdLoadFailedCallback: (adUnitId, error) {
+                    logStatus(
+                        'Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
+                  }, onAdClickedCallback: (ad) {
+                    logStatus('Banner widget ad clicked');
+                  }, onAdExpandedCallback: (ad) {
+                    logStatus('Banner widget ad expanded');
+                  }, onAdCollapsedCallback: (ad) {
+                    logStatus('Banner widget ad collapsed');
+                  }, onAdRevenuePaidCallback: (ad) {
+                    logStatus('Banner widget ad revenue paid: ${ad.revenue}');
+                  }),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
 
   // NOTE: Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initializePlugin() async {
-    logStatus("Initializing SDK...");
-
-    var configuration = await AppLovinMAX.initialize(sdkKey);
-    if (configuration != null) {
+    var isInitialized = await AppLovinMAX.isInitialized();
+    logStatus("Initializing SDK... isInitialized $isInitialized");
+    if (isInitialized == true) {
       _isInitialized = true;
-
-      logStatus("SDK Initialized: $configuration");
-
       attachAdListeners();
+    } else {
+      var configuration = await AppLovinMAX.initialize(sdkKey);
+      debugPrint("roy93~ configuration isTestModeEnabled ${configuration?.isTestModeEnabled}");
+      if (configuration != null) {
+        _isInitialized = true;
+        logStatus("SDK Initialized: $configuration");
+        attachAdListeners();
+      }
     }
   }
 
