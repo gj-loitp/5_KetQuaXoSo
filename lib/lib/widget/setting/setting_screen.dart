@@ -119,90 +119,94 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
   }
 
   Widget _buildBody() {
+    return Container(
+      margin: const EdgeInsets.all(16),
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(45.0)),
+        color: Colors.white,
+      ),
+      child: _buildColumn(),
+    );
+  }
+
+  Widget _buildColumn() {
     return Obx(() {
-      return Container(
-        margin: const EdgeInsets.all(16),
-        width: double.infinity,
-        padding: const EdgeInsets.all(16),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(45.0)),
-          color: Colors.white,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              "Bật/tắt tính năng chữ chạy khi nội dung Text không đủ khoảng trống",
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                color: Colors.black,
-              ),
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Bật/tắt tính năng chữ chạy khi nội dung Text không đủ khoảng trống",
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+              color: Colors.black,
             ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0, 16, 0, 32),
-              alignment: Alignment.center,
-              child: ToggleSwitch(
-                minWidth: 90.0,
-                cornerRadius: 45.0,
-                activeBgColors: const [
-                  [ColorConstants.appColor],
-                  [ColorConstants.appColor]
-                ],
-                activeFgColor: Colors.white,
-                inactiveBgColor: Colors.grey,
-                inactiveFgColor: Colors.white,
-                initialLabelIndex: _controllerMain.isSettingOnTextOverflow.value ? 1 : 0,
-                totalSwitches: 2,
-                labels: const ['Tắt', 'Bật'],
-                radiusStyle: true,
-                onToggle: (index) {
-                  _controllerMain.setIsOnTextOverflow((index == 1) ? true : false);
-                },
-              ),
+          ),
+          Container(
+            margin: const EdgeInsets.fromLTRB(0, 16, 0, 32),
+            alignment: Alignment.center,
+            child: ToggleSwitch(
+              minWidth: 90.0,
+              cornerRadius: 45.0,
+              activeBgColors: const [
+                [ColorConstants.appColor],
+                [ColorConstants.appColor]
+              ],
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.grey,
+              inactiveFgColor: Colors.white,
+              initialLabelIndex: _controllerMain.isSettingOnTextOverflow.value ? 1 : 0,
+              totalSwitches: 2,
+              labels: const ['Tắt', 'Bật'],
+              radiusStyle: true,
+              onToggle: (index) {
+                _controllerMain.setIsOnTextOverflow((index == 1) ? true : false);
+              },
             ),
-            const Text(
-              "(Beta) Bật/tắt kết quả xổ số Vietlot Max3D",
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                color: Colors.black,
-              ),
+          ),
+          const Text(
+            "(Beta) Bật/tắt kết quả xổ số Vietlot Max3D",
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+              color: Colors.black,
             ),
-            const Text(
-              "Lưu ý: Đây là tính năng đang trong quá trình thử nghiệm, có thể sẽ có lỗi không mong muốn sẽ xảy ra",
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 12,
-                color: Colors.redAccent,
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.redAccent,
-              ),
+          ),
+          const Text(
+            "Lưu ý: Đây là tính năng đang trong quá trình thử nghiệm, có thể sẽ có lỗi không mong muốn sẽ xảy ra",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 12,
+              color: Colors.redAccent,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.redAccent,
             ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
-              alignment: Alignment.center,
-              child: ToggleSwitch(
-                minWidth: 90.0,
-                cornerRadius: 45.0,
-                activeBgColors: const [
-                  [ColorConstants.appColor],
-                  [ColorConstants.appColor]
-                ],
-                activeFgColor: Colors.white,
-                inactiveBgColor: Colors.grey,
-                inactiveFgColor: Colors.white,
-                initialLabelIndex: _controllerMain.isSettingOnResultVietlotMax3d.value ? 1 : 0,
-                totalSwitches: 2,
-                labels: const ['Tắt', 'Bật'],
-                radiusStyle: true,
-                onToggle: (index) {
-                  _controllerMain.setIsOnResultVietlotMax3d((index == 1) ? true : false);
-                },
-              ),
+          ),
+          Container(
+            margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
+            alignment: Alignment.center,
+            child: ToggleSwitch(
+              minWidth: 90.0,
+              cornerRadius: 45.0,
+              activeBgColors: const [
+                [ColorConstants.appColor],
+                [ColorConstants.appColor]
+              ],
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.grey,
+              inactiveFgColor: Colors.white,
+              initialLabelIndex: _controllerMain.isSettingOnResultVietlotMax3d.value ? 1 : 0,
+              totalSwitches: 2,
+              labels: const ['Tắt', 'Bật'],
+              radiusStyle: true,
+              onToggle: (index) {
+                _controllerMain.setIsOnResultVietlotMax3d((index == 1) ? true : false);
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       );
     });
   }
