@@ -36,7 +36,7 @@ String getBannerAdUnitId() {
 }
 
 Color getBannerBackgroundColor() {
-  return isApplovinDeviceTest() ? Colors.red : Colors.transparent;
+  return isApplovinDeviceTest() ? Colors.yellowAccent : Colors.transparent;
 }
 
 bool isApplovinDeviceTest() {
