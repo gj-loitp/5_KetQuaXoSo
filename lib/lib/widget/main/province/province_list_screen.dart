@@ -1,10 +1,13 @@
+import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/dimen_constants.dart';
 import 'package:ketquaxoso/lib/common/const/hero_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/main/province/province_screen.dart';
 
@@ -111,6 +114,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                     ),
                   ),
                   Expanded(child: _buildViewListProvince()),
+                  _buildBannerAd(),
                 ],
               ),
             ),
@@ -178,5 +182,29 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
             }),
       );
     });
+  }
+
+  Widget _buildBannerAd() {
+    return Container(
+      color: getBannerBackgroundColor(),
+      margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
+      child: MaxAdView(
+        adUnitId: getBannerAdUnitId(),
+        adFormat: AdFormat.banner,
+        listener: AdViewAdListener(onAdLoadedCallback: (ad) {
+          debugPrint('Banner widget ad loaded from ${ad.networkName}');
+        }, onAdLoadFailedCallback: (adUnitId, error) {
+          debugPrint('Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
+        }, onAdClickedCallback: (ad) {
+          debugPrint('Banner widget ad clicked');
+        }, onAdExpandedCallback: (ad) {
+          debugPrint('Banner widget ad expanded');
+        }, onAdCollapsedCallback: (ad) {
+          debugPrint('Banner widget ad collapsed');
+        }, onAdRevenuePaidCallback: (ad) {
+          debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
+        }),
+      ),
+    );
   }
 }
