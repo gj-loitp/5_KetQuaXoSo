@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/dimen_constants.dart';
+import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/ui_utils.dart';
 import 'package:ketquaxoso/lib/util/url_launcher_utils.dart';
@@ -26,23 +27,28 @@ var _listMyDevice = [
 
 String getInterstitialAdUnitId() {
   debugPrint("roy93~ getInterstitialAdUnitId deviceId $deviceId");
-  if (kDebugMode || _listMyDevice.contains(deviceId)) {
-    return "${_interstitialAdUnitId}_debug";
-  } else {
-    return _interstitialAdUnitId;
-  }
+  return isApplovinDeviceTest() ? "${_interstitialAdUnitId}_debug" : _interstitialAdUnitId;
 }
 
 String getBannerAdUnitId() {
   debugPrint("roy93~ getBannerAdUnitId deviceId $deviceId");
+  return isApplovinDeviceTest() ? "${_bannerAdUnitId}_debug" : _bannerAdUnitId;
+}
+
+Color getBannerBackgroundColor() {
+  return isApplovinDeviceTest() ? Colors.red : Colors.transparent;
+}
+
+bool isApplovinDeviceTest() {
   if (kDebugMode || _listMyDevice.contains(deviceId)) {
-    return "${_bannerAdUnitId}_debug";
+    return true;
   } else {
-    return _bannerAdUnitId;
+    return false;
   }
 }
 
 String? deviceId;
+
 var _isInitialized = false;
 var _interstitialLoadState = AdLoadState.notLoaded;
 var _interstitialRetryAttempt = 0;
@@ -119,7 +125,11 @@ class _ApplovinScreenState extends BaseStatefulState<ApplovinScreen> {
                 void showInter() async {
                   bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId()))!;
                   if (isReady) {
-                    AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
+                    if (isApplovinDeviceTest()) {
+                      showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
+                    } else {
+                      AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
+                    }
                   } else {
                     logStatus('Loading interstitial ad...');
                     _interstitialLoadState = AdLoadState.loading;
@@ -208,7 +218,7 @@ Incomplete, if not for you.""",
             ),
             if (_isWidgetBannerShowing)
               Container(
-                color: Colors.transparent,
+                color: getBannerBackgroundColor(),
                 margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
                 child: MaxAdView(
                   adUnitId: getBannerAdUnitId(),
