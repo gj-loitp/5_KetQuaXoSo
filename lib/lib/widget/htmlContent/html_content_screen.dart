@@ -1,9 +1,12 @@
+import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
+import 'package:ketquaxoso/lib/common/const/dimen_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
+import 'package:ketquaxoso/lib/widget/applovin/applovin_screen.dart';
 
 class HtmlContentScreen extends StatefulWidget {
   final String? titleAppBar;
@@ -103,7 +106,7 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
                     child: Container(
                       width: double.infinity,
                       padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-                      margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(45.0)),
                         color: Colors.white,
@@ -123,11 +126,36 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
                       ),
                     ),
                   ),
+                  _buildBannerAd(),
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildBannerAd() {
+    return Container(
+      color: getBannerBackgroundColor(),
+      margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
+      child: MaxAdView(
+        adUnitId: getBannerAdUnitId(),
+        adFormat: AdFormat.banner,
+        listener: AdViewAdListener(onAdLoadedCallback: (ad) {
+          debugPrint('Banner widget ad loaded from ${ad.networkName}');
+        }, onAdLoadFailedCallback: (adUnitId, error) {
+          debugPrint('Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
+        }, onAdClickedCallback: (ad) {
+          debugPrint('Banner widget ad clicked');
+        }, onAdExpandedCallback: (ad) {
+          debugPrint('Banner widget ad expanded');
+        }, onAdCollapsedCallback: (ad) {
+          debugPrint('Banner widget ad collapsed');
+        }, onAdRevenuePaidCallback: (ad) {
+          debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
+        }),
       ),
     );
   }
