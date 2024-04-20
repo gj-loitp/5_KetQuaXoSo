@@ -15,15 +15,18 @@ import 'package:platform_device_id/platform_device_id.dart';
 enum AdLoadState { notLoaded, loading, loaded }
 
 const String sdkKey = "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt";
-final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a" : "IOS_INTER_AD_UNIT_ID";
-final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb" : "IOS_BANNER_AD_UNIT_ID";
+final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a_" : "IOS_INTER_AD_UNIT_ID";
+final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb_" : "IOS_BANNER_AD_UNIT_ID";
 
 var _listMyDevice = [
   "eeaaab5a1f0cf524", //poco f3 debug
   "14ba851bdbeea403", //poco f3 release
-  "f2b945dfa5e953cf", //mi pad 5
-  "05f26989e8ce5d06", //vsmart aris
-  "b09ab0a421fa04a4", //samsung a50s
+  "f2b945dfa5e953cf", //mi pad 5 debug
+  "", //mi pad 5 release
+  "05f26989e8ce5d06", //vsmart aris debug
+  "69ed2d36ce2ac078", //vsmart aris release
+  "b09ab0a421fa04a4", //samsung a50s debug
+  "", //samsung a50s release
 ];
 
 String getInterstitialAdUnitId() {
