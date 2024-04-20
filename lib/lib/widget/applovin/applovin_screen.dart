@@ -26,7 +26,7 @@ var _listMyDevice = [
   "05f26989e8ce5d06", //vsmart aris debug
   "69ed2d36ce2ac078", //vsmart aris release
   "b09ab0a421fa04a4", //samsung a50s debug
-  "", //samsung a50s release
+  "001b36fb160413f2", //samsung a50s release
 ];
 
 String getInterstitialAdUnitId() {
