@@ -19,19 +19,20 @@ final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a" : "
 final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb" : "IOS_BANNER_AD_UNIT_ID";
 
 var _listMyDevice = [
-  "eeaaab5a1f0cf524", //poco f3
+  "eeaaab5a1f0cf524", //poco f3 debug
+  "14ba851bdbeea403", //poco f3 release
   "f2b945dfa5e953cf", //mi pad 5
   "05f26989e8ce5d06", //vsmart aris
   "b09ab0a421fa04a4", //samsung a50s
 ];
 
 String getInterstitialAdUnitId() {
-  debugPrint("roy93~ getInterstitialAdUnitId deviceId $deviceId");
+  print("roy93~ getInterstitialAdUnitId deviceId $deviceId");
   return isApplovinDeviceTest() ? "${_interstitialAdUnitId}_debug" : _interstitialAdUnitId;
 }
 
 String getBannerAdUnitId() {
-  debugPrint("roy93~ getBannerAdUnitId deviceId $deviceId");
+  print("roy93~ getBannerAdUnitId deviceId $deviceId");
   return isApplovinDeviceTest() ? "${_bannerAdUnitId}_debug" : _bannerAdUnitId;
 }
 
@@ -40,11 +41,12 @@ Color getBannerBackgroundColor() {
 }
 
 bool isApplovinDeviceTest() {
-  if (kDebugMode || _listMyDevice.contains(deviceId)) {
+  if (kDebugMode) {
     return true;
-  } else {
-    return false;
   }
+  var isDeviceTest = _listMyDevice.contains(deviceId);
+  print("roy93~ isDeviceTest $isDeviceTest");
+  return isDeviceTest;
 }
 
 String? deviceId;
