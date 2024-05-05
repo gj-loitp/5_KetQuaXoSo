@@ -324,6 +324,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_udid">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_udid-3.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_web_plugins">
           <value>
             <list>
@@ -1232,6 +1239,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_native_splash-2.3.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_pretty_dio_logger-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_udid-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.14.11/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.14.11/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_cached_network_image-0.14.2/lib" />

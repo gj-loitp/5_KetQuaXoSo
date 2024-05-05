@@ -44,6 +44,7 @@ dependencies:
   toggle_switch: ^2.3.0
   highlight_text: ^1.7.0
   relative_dialog: ^0.2.1
+  flutter_udid: ^3.0.0
 
 dev_dependencies:
   flutter_test:

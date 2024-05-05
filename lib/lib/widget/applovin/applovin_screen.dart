@@ -19,6 +19,7 @@ final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a_" : 
 final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb_" : "IOS_BANNER_AD_UNIT_ID";
 
 var _listMyDevice = [
+  //~~~~platform_device_id
   "eeaaab5a1f0cf524", //poco f3 debug
   "14ba851bdbeea403", //poco f3 release
   "f2b945dfa5e953cf", //mi pad 5 debug
@@ -27,6 +28,11 @@ var _listMyDevice = [
   "69ed2d36ce2ac078", //vsmart aris release
   "b09ab0a421fa04a4", //samsung a50s debug
   "001b36fb160413f2", //samsung a50s release
+  //~~~~flutter_udid
+  "798a2c5f7fb63f9c6ccb38e5120cee7ac14dc5e75e16fd4361d159408b711766",//poco f3 debug + release
+  "4ad566d6ac781a4f37ac34a83c459530eb702e64df7d6d1d3747f33446dcea87", //mi pad 5 debug + release
+  "068dfca3d91074f174e4161d02cd0f09cb93f502164bafcc016153841076e1b6", //vsmart aris debug + release
+  "184b74248f05d8c3b50c69832216a1b8415557a132c6cef33af8a3baba081eca", //samsung a50s debug + release
 ];
 
 String getInterstitialAdUnitId() {

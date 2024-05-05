@@ -278,6 +278,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "flutter_udid",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_udid-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "flutter_web_plugins",
       "rootUri": "file:///Users/loitran/development/flutter_sdk/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
@@ -1022,7 +1028,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-04-19T08:33:08.755166Z",
+  "generated": "2024-05-05T06:00:17.552382Z",
   "generator": "pub",
-  "generatorVersion": "3.3.3"
+  "generatorVersion": "3.3.4"
 }
