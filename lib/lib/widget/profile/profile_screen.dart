@@ -442,7 +442,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                               Icons.ios_share,
                               description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
                               () async {
-                                final result = await Share.shareWithResult(
+                                final result = await Share.share(
                                     'https://play.google.com/store/apps/details?id=com.mckimquyen.kqxs');
                                 if (result.status == ShareResultStatus.success) {
                                   showSnackBarFull("KQXS", "Cảm ơn bạn đã chia sẻ 👉👈");
