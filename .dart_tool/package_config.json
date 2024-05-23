@@ -9,7 +9,7 @@
     },
     {
       "name": "animated_notch_bottom_bar",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/animated_notch_bottom_bar-1.0.2",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/animated_notch_bottom_bar-1.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -165,9 +165,9 @@
     },
     {
       "name": "cupertino_icons",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.6",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.1"
     },
     {
       "name": "dbus",
@@ -189,7 +189,7 @@
     },
     {
       "name": "dio",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/dio-5.4.2+1",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/dio-5.4.3+1",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
@@ -291,13 +291,13 @@
     },
     {
       "name": "flutter_widget_from_html",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.14.11",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.15.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.2"
     },
     {
       "name": "flutter_widget_from_html_core",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.14.11",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.14.12",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -315,7 +315,7 @@
     },
     {
       "name": "fwfh_just_audio",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fwfh_just_audio-0.14.2",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fwfh_just_audio-0.14.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -333,9 +333,9 @@
     },
     {
       "name": "fwfh_webview",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fwfh_webview-0.14.8",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fwfh_webview-0.15.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.2"
     },
     {
       "name": "get",
@@ -1028,7 +1028,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-05-23T11:20:20.916347Z",
+  "generated": "2024-05-23T11:24:29.447546Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

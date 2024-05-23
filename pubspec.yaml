@@ -25,13 +25,13 @@ dependencies:
   blur: ^3.1.0
   cached_network_image: ^3.3.1
   connection_notifier: ^2.0.1
-  dio: ^5.4.2+1
+  dio: ^5.4.3+1
   flutter_pretty_dio_logger: ^3.0.0
   easy_debounce: ^2.0.3
 #  flutter_local_notifications: ^17.0.1
   flutter_displaymode: ^0.6.0
   flutter_native_splash:
-  flutter_widget_from_html: ^0.14.11
+  flutter_widget_from_html: ^0.15.0
   webview_flutter: ^4.7.0
   restart_app: ^1.2.1
   panara_dialogs: ^0.1.4
