@@ -13,10 +13,10 @@ packages:
     dependency: "direct main"
     description:
       name: animated_notch_bottom_bar
-      sha256: d3ac33a14c7f6031e1270779595252e31474b644bf691fc2fc58c75b68e0e82c
+      sha256: adc389a39e7b015883bba22de57e691eb6445c98c055b2438d6593a7f68017fe
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3"
   animated_text_kit:
     dependency: "direct main"
     description:
@@ -221,10 +221,10 @@ packages:
     dependency: "direct main"
     description:
       name: cupertino_icons
-      sha256: d57953e10f9f8327ce64a508a355f0b1ec902193f66288e8cb5070e7c47eeb2d
+      sha256: ba631d1c7f7bef6b729a622b7b752645a2d076dba9976925b8f25725a30e1ee6
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.6"
+    version: "1.0.8"
   dbus:
     dependency: transitive
     description:
