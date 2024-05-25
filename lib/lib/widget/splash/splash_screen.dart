@@ -64,6 +64,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
 
   Future<void> _showInterAd() async {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
+    debugPrint('roy93~ _showInterAd isReady $isReady');
     if (isReady) {
       if (isApplovinDeviceTest()) {
         showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
@@ -120,13 +121,13 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   }
 
   Future<void> _goToMainScreen() async {
-    await Future.delayed(const Duration(milliseconds: 1500));
+    await Future.delayed(const Duration(milliseconds: 2500));
     var keyIsShowedIntroduction = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedIntroduction);
     if (keyIsShowedIntroduction == true) {
       Get.off(() => const MainScreen());
     } else {
       Get.off(() => IntroductionScreen(SplashScreen.screenName));
-      _showInterAd();
     }
+    _showInterAd();
   }
 }
