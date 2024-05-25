@@ -2,11 +2,14 @@ import 'dart:math';
 
 import 'package:applovin_max/applovin_max.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/widget/applovin/applovin_screen.dart';
+import 'package:ketquaxoso/lib/widget/introduction/introduction_screen.dart';
+import 'package:ketquaxoso/lib/widget/main/main_screen.dart';
 import 'package:lunar/calendar/Lunar.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -156,9 +159,9 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
     await Future.delayed(const Duration(milliseconds: 2500));
     var keyIsShowedIntroduction = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedIntroduction);
     if (keyIsShowedIntroduction == true) {
-      // Get.off(() => const MainScreen());
+      Get.off(() => const MainScreen());
     } else {
-      // Get.off(() => IntroductionScreen(SplashScreen.screenName));
+      Get.off(() => IntroductionScreen(SplashScreen.screenName));
     }
     _showInterAd();
   }
