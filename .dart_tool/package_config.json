@@ -470,6 +470,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "lunar",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/lunar-1.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "marquee",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/marquee-2.2.3",
       "packageUri": "lib/",
@@ -1028,7 +1034,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-05-25T12:12:01.604685Z",
+  "generated": "2024-05-25T12:54:47.687321Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

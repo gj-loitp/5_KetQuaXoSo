@@ -2,14 +2,12 @@ import 'dart:math';
 
 import 'package:applovin_max/applovin_max.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
 import 'package:ketquaxoso/lib/common/const/string_constants.dart';
 import 'package:ketquaxoso/lib/core/base_stateful_state.dart';
 import 'package:ketquaxoso/lib/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/lib/widget/applovin/applovin_screen.dart';
-import 'package:ketquaxoso/lib/widget/introduction/introduction_screen.dart';
-import 'package:ketquaxoso/lib/widget/main/main_screen.dart';
+import 'package:lunar/calendar/Lunar.dart';
 
 class SplashScreen extends StatefulWidget {
   static String screenName = "/SplashScreen";
@@ -23,7 +21,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends BaseStatefulState<SplashScreen> {
-
   var _interstitialRetryAttempt = 0;
 
   void _initializeInterstitialAds() {
@@ -39,7 +36,8 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
         // We recommend retrying with exponentially higher delays up to a maximum delay (in this case 64 seconds)
         _interstitialRetryAttempt = _interstitialRetryAttempt + 1;
         int retryDelay = pow(2, min(6, _interstitialRetryAttempt)).toInt();
-        debugPrint('roy93~ onAdLoadFailedCallback ad failed to load with code ${error.code} - retrying in ${retryDelay}s');
+        debugPrint(
+            'roy93~ onAdLoadFailedCallback ad failed to load with code ${error.code} - retrying in ${retryDelay}s');
         Future.delayed(Duration(milliseconds: retryDelay * 1000), () {
           AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
         });
@@ -104,6 +102,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
+            _buildClock(),
             Container(
               padding: const EdgeInsets.all(32),
               width: 124,
@@ -120,13 +119,46 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
     );
   }
 
+  Widget _buildClock() {
+    final day = DateTime.now().day;
+    final month = DateTime.now().month;
+    final year = DateTime.now().year;
+    Lunar date = Lunar.fromDate(DateTime.now());
+
+    return SafeArea(
+      child: Container(
+        padding: const EdgeInsets.all(4),
+        child: Column(
+          children: [
+            Text(
+              "Hôm nay ngày $day/$month/$year",
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              "(ngày âm lịch ${date.getDay()}/${date.getMonth()}/${date.getYear()})",
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   Future<void> _goToMainScreen() async {
     await Future.delayed(const Duration(milliseconds: 2500));
     var keyIsShowedIntroduction = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedIntroduction);
     if (keyIsShowedIntroduction == true) {
-      Get.off(() => const MainScreen());
+      // Get.off(() => const MainScreen());
     } else {
-      Get.off(() => IntroductionScreen(SplashScreen.screenName));
+      // Get.off(() => IntroductionScreen(SplashScreen.screenName));
     }
     _showInterAd();
   }
