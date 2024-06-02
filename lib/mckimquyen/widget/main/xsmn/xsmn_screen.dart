@@ -9,7 +9,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import '../../../common/const/color_constants.dart';
 import '../../../common/const/hero_constants.dart';
 import '../../../common/const/string_constants.dart';
-import '../../../common/v/src/calendar_timeline.dart';
+import '../../../common/v/calendar_timeline_sbk/src/calendar_timeline.dart';
 import '../../../core/base_stateful_state.dart';
 import '../../../model/kqxs.dart';
 import '../../../util/shared_preferences_util.dart';

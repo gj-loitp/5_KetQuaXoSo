@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../../common/const/color_constants.dart';
-import '../../../../common/v/src/calendar_timeline.dart';
+import '../../../../common/v/calendar_timeline_sbk/src/calendar_timeline.dart';
 import '../../../../core/base_stateful_state.dart';
 import '../../controller_main.dart';
 
