@@ -157,12 +157,13 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
       // color: ColorConstants.bkgYellow,
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
+      height: 90,
       padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
       child: Row(
         children: [
           Expanded(
             child: SizedBox(
-              height: 100,
+              height: double.infinity,
               child: Stack(
                 key: _keyTooltipCalendar,
                 children: [
@@ -237,8 +238,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
           ),
           const SizedBox(width: 8),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 8),
               SizedBox(
                 key: _keyTooltipCity,
                 width: 40,
@@ -311,7 +312,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 2),
               SizedBox(
                 key: _keyTooltipToday,
                 width: 40,

@@ -79,6 +79,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
   Widget _buildCalendar() {
     return Container(
       // color: ColorConstants.bkgYellow,
+      height: 90,
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
@@ -86,7 +87,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
         children: [
           Expanded(
             child: SizedBox(
-              height: 100,
+              height: double.infinity,
               child: CalendarTimeline(
                 shrink: false,
                 showYears: false,
@@ -109,6 +110,7 @@ class _XSMBScreenState extends BaseStatefulState<XSMBScreen> {
           ),
           const SizedBox(width: 8),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 padding: const EdgeInsets.all(2),

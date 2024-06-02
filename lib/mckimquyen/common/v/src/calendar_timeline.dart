@@ -355,7 +355,8 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
   /// it will only show the months allowed in the selected year. By default it will show all
   /// months in the calendar and the small version of [YearItem] for each year in between
   Widget _buildMonthList() {
-    return SizedBox(
+    return Container(
+      color: Colors.transparent,
       height: 30,
       child: ScrollablePositionedList.builder(
         initialScrollIndex: _monthSelectedIndex ?? 0,
@@ -409,9 +410,10 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
   /// [selectedDate.year] && [selectedDate.month] is the [widget.firstDate] or [widget.lastDate]
   /// the days show will be the available
   Widget _buildDayList() {
-    return SizedBox(
+    return Container(
+      color: Colors.transparent,
       key: const Key('ScrollableDayList'),
-      height: 70,
+      height: 60,
       child: ScrollablePositionedList.builder(
         itemScrollController: _controllerDay,
         initialScrollIndex: _daySelectedIndex ?? 0,

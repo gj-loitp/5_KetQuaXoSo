@@ -83,12 +83,13 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
       // color: ColorConstants.bkgYellow,
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
+      height: 90,
       padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
       child: Row(
         children: [
           Expanded(
             child: SizedBox(
-              height: 100,
+              height: 90,
               child: CalendarTimeline(
                 shrink: false,
                 showYears: false,
@@ -111,8 +112,8 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
           ),
           const SizedBox(width: 8),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 8),
               Container(
                 padding: const EdgeInsets.all(2),
                 width: 40,
@@ -133,7 +134,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 2),
               Container(
                 padding: const EdgeInsets.all(2),
                 width: 40,

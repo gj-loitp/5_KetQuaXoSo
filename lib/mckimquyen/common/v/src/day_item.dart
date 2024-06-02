@@ -55,16 +55,17 @@ class DayItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               )
             : const BoxDecoration(color: Colors.transparent),
-        height: shrink ? 40 : 70,
+        // height: shrink ? 40 : 70,
+        height: shrink ? 40 : 60,
         width: shrink ? 33 : 60,
         child: Column(
           children: <Widget>[
             if (isSelected) ...[
-              SizedBox(height: shrink ? 6 : 7),
+              SizedBox(height: shrink ? 6 : 6),
               if (!shrink) _buildDots(),
-              SizedBox(height: shrink ? 2 : 5),
+              SizedBox(height: shrink ? 2 : 2),
             ] else
-              SizedBox(height: shrink ? 9 : 16),
+              SizedBox(height: shrink ? 9 : 12),
             Text(
               dayNumber.toString(),
               style: isSelected ? selectedStyle : textStyle,
