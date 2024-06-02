@@ -167,6 +167,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
 
   Widget? _buildBottomBar() {
     return AnimatedNotchBottomBar(
+      showShadow: true,
       notchBottomBarController: _controllerBottomBar,
       color: Colors.white,
       showLabel: true,
@@ -244,6 +245,10 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       },
       kIconSize: 20,
       kBottomRadius: 0,
+      showTopRadius: true,
+      showBottomRadius: true,
+      bottomBarHeight: 62,
+      topMargin: 10,
     );
   }
 }
