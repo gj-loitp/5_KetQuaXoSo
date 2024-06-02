@@ -8,12 +8,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "animated_notch_bottom_bar",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/animated_notch_bottom_bar-1.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
       "name": "animated_text_kit",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/animated_text_kit-4.2.2",
       "packageUri": "lib/",
@@ -1022,7 +1016,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-06-02T12:12:26.211839Z",
+  "generated": "2024-06-02T13:15:48.092233Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
