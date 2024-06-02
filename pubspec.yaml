@@ -46,7 +46,7 @@ dependencies:
   relative_dialog: ^0.2.1
   flutter_udid: ^3.0.0
   lunar: ^1.7.0
-  intl:
+#  intl:
 
 dev_dependencies:
   flutter_test:

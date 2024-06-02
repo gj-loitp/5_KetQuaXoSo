@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_udid/flutter_udid.dart';
 import 'package:get/get.dart';
-import 'package:ketquaxoso/lib/common/const/color_constants.dart';
-import 'package:ketquaxoso/lib/widget/splash/splash_screen.dart';
 
-import 'lib/widget/applovin/applovin_screen.dart';
+import 'mckimquyen/common/const/color_constants.dart';
+import 'mckimquyen/widget/applovin/applovin_screen.dart';
+import 'mckimquyen/widget/splash/splash_screen.dart';
 
 //TODO firebase
 
