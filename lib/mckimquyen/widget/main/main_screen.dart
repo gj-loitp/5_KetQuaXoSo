@@ -1,3 +1,4 @@
+import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:connection_notifier/connection_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -8,9 +9,6 @@ import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
 import '../../common/const/color_constants.dart';
 import '../../common/const/string_constants.dart';
-import '../../common/v/animated_notch_bottom_bar/src/models/bottom_bar_item_model.dart';
-import '../../common/v/animated_notch_bottom_bar/src/notch_bottom_bar.dart';
-import '../../common/v/animated_notch_bottom_bar/src/notch_bottom_bar_controller.dart';
 import '../../core/base_stateful_state.dart';
 import '../../util/shared_preferences_util.dart';
 import '../keep_alive_age.dart';
@@ -181,7 +179,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       notchColor: Colors.white,
       showBlurBottomBar: false,
       removeMargins: true,
-      bottomBarWidth: 500,
+      // bottomBarWidth: 500,
       durationInMilliSeconds: 300,
       bottomBarItems: const [
         BottomBarItem(
@@ -249,8 +247,9 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
       kBottomRadius: 0,
       showTopRadius: true,
       showBottomRadius: true,
-      bottomBarHeight: 62,
-      topMargin: 10,
+      // bottomBarHeight: 62,
+      // topMargin: 10,
+      shadowElevation: 15.0,
     );
   }
 }
