@@ -202,6 +202,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
     return Container(
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
+      height: 92,
       padding: const EdgeInsets.fromLTRB(8, 2, 8, 0),
       child: Row(
         children: [

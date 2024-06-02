@@ -64,15 +64,15 @@ class _Max3dScreenState extends BaseStatefulState<Max3dScreen> {
                 child: Column(
                   children: [
                     Container(
-                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                      padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
                       width: double.infinity,
                       color: Colors.white,
                       child: Row(
                         children: [
                           Image.asset(
                             "assets/images/ic_beta.png",
-                            width: 35,
-                            height: 35,
+                            width: 25,
+                            height: 25,
                             fit: BoxFit.contain,
                           ),
                           const SizedBox(width: 4),
@@ -80,7 +80,7 @@ class _Max3dScreenState extends BaseStatefulState<Max3dScreen> {
                             child: Text(
                               "Lưu ý: Tính đăng đang thử nghiệm, có thể gây lỗi",
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.redAccent,
                               ),
