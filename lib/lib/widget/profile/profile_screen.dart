@@ -19,6 +19,7 @@ import 'package:ketquaxoso/lib/widget/information/thontinhuuich/information_scre
 import 'package:ketquaxoso/lib/widget/introduction/introduction_screen.dart';
 import 'package:ketquaxoso/lib/widget/main/controller_main.dart';
 import 'package:ketquaxoso/lib/widget/setting/setting_screen.dart';
+import 'package:lunar/calendar/Lunar.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:relative_dialog/relative_dialog.dart';
 import 'package:restart_app/restart_app.dart';
@@ -230,6 +231,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                         ),
                         child: Column(
                           children: [
+                            _buildClock(),
                             const Text(
                               "Ⓒmckimquyen",
                               style: TextStyle(
@@ -550,6 +552,37 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
         }, onAdRevenuePaidCallback: (ad) {
           debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
         }),
+      ),
+    );
+  }
+
+  Widget _buildClock() {
+    final day = DateTime.now().day;
+    final month = DateTime.now().month;
+    final year = DateTime.now().year;
+    Lunar date = Lunar.fromDate(DateTime.now());
+
+    return Container(
+      padding: const EdgeInsets.all(4),
+      child: Column(
+        children: [
+          Text(
+            "Hôm nay ngày $day/$month/$year",
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+              color: Colors.black,
+            ),
+          ),
+          Text(
+            "(ngày âm lịch ${date.getDay()}/${date.getMonth()}/${date.getYear()})",
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.black,
+            ),
+          ),
+        ],
       ),
     );
   }
