@@ -314,6 +314,7 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
       key: const Key('ScrollableYearList'),
       height: 40,
       child: ScrollablePositionedList.builder(
+        physics: const BouncingScrollPhysics(),
         initialScrollIndex: _yearSelectedIndex ?? 0,
         initialAlignment: _scrollAlignment,
         itemScrollController: _controllerYear,
@@ -338,11 +339,11 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
                   small: false,
                   shrink: widget.shrink,
                 ),
-                if (index == _years.length - 1)
-                  // Last element to take space to do scroll to left side
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width - widget.leftMargin - (yearName.length * 10),
-                  )
+                // if (index == _years.length - 1)
+                //   // Last element to take space to do scroll to left side
+                //   SizedBox(
+                //     width: MediaQuery.of(context).size.width - widget.leftMargin - (yearName.length * 10),
+                //   )
               ],
             ),
           );
@@ -359,6 +360,7 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
       color: Colors.transparent,
       height: 30,
       child: ScrollablePositionedList.builder(
+        physics: const BouncingScrollPhysics(),
         initialScrollIndex: _monthSelectedIndex ?? 0,
         initialAlignment: _scrollAlignment,
         itemScrollController: _controllerMonth,
@@ -393,11 +395,11 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
                   shrink: widget.shrink,
                   activeColor: widget.activeBackgroundDayColor,
                 ),
-                if (index == _months.length - 1)
-                  // Last element to take space to do scroll to left side
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width - widget.leftMargin - (monthName.length * 10),
-                  )
+                // if (index == _months.length - 1)
+                //   // Last element to take space to do scroll to left side
+                //   SizedBox(
+                //     width: MediaQuery.of(context).size.width - widget.leftMargin - (monthName.length * 10),
+                //   )
               ],
             ),
           );
@@ -415,6 +417,7 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
       key: const Key('ScrollableDayList'),
       height: 60,
       child: ScrollablePositionedList.builder(
+        physics: const BouncingScrollPhysics(),
         itemScrollController: _controllerDay,
         initialScrollIndex: _daySelectedIndex ?? 0,
         initialAlignment: _scrollAlignment,
@@ -441,11 +444,11 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
                 dayNameColor: widget.dayNameColor,
                 shrink: widget.shrink,
               ),
-              if (index == _days.length - 1)
-                // Last element to take space to do scroll to left side
-                SizedBox(
-                  width: MediaQuery.of(context).size.width - widget.leftMargin - 65,
-                )
+              // if (index == _days.length - 1)
+              //   // Last element to take space to do scroll to left side
+              //   SizedBox(
+              //     width: MediaQuery.of(context).size.width - widget.leftMargin - 65,
+              //   )
             ],
           );
         },
