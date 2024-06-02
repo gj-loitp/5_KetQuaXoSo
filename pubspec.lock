@@ -121,14 +121,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  calendar_timeline_sbk:
-    dependency: "direct main"
-    description:
-      name: calendar_timeline_sbk
-      sha256: "0badaa4423b34cea6aec9808b742e1eef026fd2807c70fd74df51864edffbcdd"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.7"
   characters:
     dependency: transitive
     description:
@@ -513,13 +505,13 @@ packages:
     source: hosted
     version: "1.0.0+1"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
-      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
       url: "https://pub.dev"
     source: hosted
-    version: "0.18.1"
+    version: "0.19.0"
   json_annotation:
     dependency: transitive
     description:
@@ -913,7 +905,7 @@ packages:
     source: hosted
     version: "0.27.7"
   scrollable_positioned_list:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: scrollable_positioned_list
       sha256: "1b54d5f1329a1e263269abc9e2543d90806131aa14fe7c6062a8054d57249287"

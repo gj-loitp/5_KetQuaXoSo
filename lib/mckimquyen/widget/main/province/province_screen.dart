@@ -1,5 +1,4 @@
 import 'package:blur/blur.dart';
-import 'package:calendar_timeline_sbk/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -8,6 +7,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../common/const/color_constants.dart';
 import '../../../common/const/hero_constants.dart';
+import '../../../common/v/src/calendar_timeline.dart';
 import '../../../core/base_stateful_state.dart';
 import '../../../model/kqxs.dart';
 import '../../../model/province.dart';
