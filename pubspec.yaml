@@ -28,7 +28,7 @@ dependencies:
   dio: ^5.4.3+1
   flutter_pretty_dio_logger: ^3.0.0
   easy_debounce: ^2.0.3
-#  flutter_local_notifications: ^17.0.1
+  #  flutter_local_notifications: ^17.0.1
   flutter_displaymode: ^0.6.0
   flutter_native_splash:
   flutter_widget_from_html: ^0.15.0
@@ -46,6 +46,7 @@ dependencies:
   relative_dialog: ^0.2.1
   flutter_udid: ^3.0.0
   lunar: ^1.7.0
+  intl:
 
 dev_dependencies:
   flutter_test:
@@ -56,7 +57,7 @@ dev_dependencies:
   #flutter_app_name: ^0.1.1
   #name: "Flutter tutorials"
 
-#  change_app_package_name: ^1.1.0
+  #  change_app_package_name: ^1.1.0
 
   #https://pub.dev/packages/flutter_launcher_icons
   flutter_launcher_icons:
