@@ -1,4 +1,5 @@
 import 'package:animated_introduction/animated_introduction.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/lib/common/const/color_constants.dart';
@@ -23,31 +24,44 @@ class IntroductionScreen extends StatefulWidget {
 class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
   final List<SingleIntroScreen> pages = [
     const SingleIntroScreen(
-      title: 'Chào mừng đến với ứng dụng "KQXS, XSMN, XSMB, XSMT"',
-      description: 'Ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!',
+      title: 'Chào mừng',
+      description: 'Ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng',
       imageAsset: 'assets/images/anim_1.gif',
       // headerBgColor: Colors.white,
       sideDotsBgColor: Colors.yellow,
       mainCircleBgColor: Colors.yellow,
       imageWithBubble: true,
+      textStyle: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+      ),
+      slidePagePadding: EdgeInsets.all(4),
     ),
     const SingleIntroScreen(
       title: 'Tra cứu kết quả siêu tốc',
-      description: 'Cập nhật nhanh chóng kết quả xổ số 3 miền: miền nam, miền trung, miền bắc',
+      description: 'Cập nhật nhanh chóng kết quả xổ số 3 miền',
       imageAsset: 'assets/images/anim_2.gif',
       // headerBgColor: Colors.white,
       sideDotsBgColor: Colors.yellow,
       mainCircleBgColor: Colors.yellow,
       imageWithBubble: true,
+      textStyle: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+      ),
     ),
     const SingleIntroScreen(
-      title: 'Dễ dàng tìm kiếm thông tin xổ số Vietlot, Power, Mega',
-      description: 'Nhập con số vé số để kiểm tra kết quả một cách nhanh chóng và thuận tiện.',
+      title: 'Dễ dàng tìm kiếm',
+      description: 'Nhập vé số để kiểm tra kết quả nhanh chóng',
       imageAsset: 'assets/images/anim_3.gif',
       // headerBgColor: Colors.white,
       sideDotsBgColor: Colors.yellow,
       mainCircleBgColor: Colors.yellow,
       imageWithBubble: true,
+      textStyle: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+      ),
     ),
   ];
 
