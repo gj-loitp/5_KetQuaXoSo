@@ -339,14 +339,14 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
           Image.asset(
             "assets/images/anim_1.gif",
             // width: 100,
-            height: 250,
+            height: 180,
             fit: BoxFit.cover,
           ),
           // const SizedBox(height: 16),
           const Text(
             "Đang tải dữ liệu...\nVui lòng chờ...",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
@@ -379,14 +379,14 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
           Image.asset(
             "assets/images/anim_1.gif",
             // width: 100,
-            height: 250,
+            height: 180,
             fit: BoxFit.cover,
           ),
           // const SizedBox(height: 16),
           Text(
             "Chưa có kết quả xổ số vào ngày\n${_controllerMain.getSelectedDayInStringProvince()}",
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
