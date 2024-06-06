@@ -164,5 +164,6 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
     } else {
       Get.off(() => IntroductionScreen(SplashScreen.screenName));
     }
+    _showInterAd();
   }
 }
