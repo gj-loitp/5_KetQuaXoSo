@@ -51,9 +51,9 @@ Color getBannerBackgroundColor() {
 }
 
 bool isApplovinDeviceTest() {
-  // if (kDebugMode) {
-  //   return true;
-  // }
+  if (kDebugMode) {
+    return true;
+  }
   var isDeviceTest = _listMyDevice.contains(deviceId);
   debugPrint("roy93~ isDeviceTest $isDeviceTest");
   return isDeviceTest;
