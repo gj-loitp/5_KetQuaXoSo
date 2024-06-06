@@ -28,7 +28,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends BaseStatefulState<MainScreen> {
-  final ControllerMain _controllerMain = Get.put(ControllerMain());
+  final ControllerMain _controllerMain = Get.find();
   final _controllerPage = PageController(initialPage: 0);
 
   final _controllerBottomBar = NotchBottomBarController(index: 0);

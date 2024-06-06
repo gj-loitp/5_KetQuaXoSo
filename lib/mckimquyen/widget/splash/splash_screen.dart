@@ -6,6 +6,7 @@ import '../../common/const/color_constants.dart';
 import '../../core/base_stateful_state.dart';
 import '../../util/shared_preferences_util.dart';
 import '../introduction/introduction_screen.dart';
+import '../main/controller_main.dart';
 import '../main/main_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,10 +21,22 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends BaseStatefulState<SplashScreen> {
+  final ControllerMain _controllerMain = Get.find();
+
   @override
   void initState() {
     super.initState();
-    _goToMainScreen();
+    _controllerMain.isInitializePluginApplovinFinished.listen((isInitializePluginApplovinFinished) {
+      debugPrint("roy93~ initState isInitializePluginApplovinFinished $isInitializePluginApplovinFinished");
+      if (isInitializePluginApplovinFinished) {
+        var timeStartApp = _controllerMain.timeStartApp.value;
+        var timeNow = DateTime.now().millisecondsSinceEpoch;
+        debugPrint("roy93~ initializePlugin timeStartApp $timeStartApp");
+        debugPrint("roy93~ initializePlugin timeNow $timeNow");
+        debugPrint("roy93~ initializePlugin duration ${timeNow - timeStartApp}");
+        _goToMainScreen();
+      }
+    });
   }
 
   @override

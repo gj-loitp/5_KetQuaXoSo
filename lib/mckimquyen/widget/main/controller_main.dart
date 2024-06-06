@@ -15,6 +15,8 @@ import '../../util/duration_util.dart';
 import '../../util/shared_preferences_util.dart';
 
 class ControllerMain extends BaseController {
+  var timeStartApp = 0.obs;
+  var isInitializePluginApplovinFinished = false.obs;
   final dio = Dio();
   var isNativeMode = true.obs;
   var themeIndex = SharedPreferencesUtil.themeIndexNativeView.obs;

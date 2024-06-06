@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 
 import 'mckimquyen/common/const/color_constants.dart';
 import 'mckimquyen/widget/applovin/applovin_screen.dart';
+import 'mckimquyen/widget/main/controller_main.dart';
 import 'mckimquyen/widget/splash/splash_screen.dart';
 
 //TODO firebase
@@ -77,12 +78,16 @@ Future<void> main() async {
 Future<void> initializePlugin() async {
   deviceId = await FlutterUdid.consistentUdid;
   var configuration = await AppLovinMAX.initialize(sdkKey);
-  if (configuration != null) {
+  if (configuration == null) {
+    debugPrint("roy93~ initializePlugin !success");
+  } else {
     debugPrint("roy93~ initializePlugin success");
     if (kDebugMode) {
       Get.snackbar("Applovin", "initializePlugin success (only show this msg in debug mode)");
     }
   }
+  ControllerMain controllerMain = Get.find();
+  controllerMain.isInitializePluginApplovinFinished.value = true;
 }
 
 class MyApp extends StatelessWidget {
@@ -90,6 +95,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ControllerMain controllerMain = Get.put(ControllerMain());
+    controllerMain.timeStartApp.value = DateTime.now().millisecondsSinceEpoch;
     return MaterialApp(
       title: 'KQXS',
       theme: ThemeData(
