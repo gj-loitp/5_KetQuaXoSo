@@ -1,10 +1,13 @@
+import 'package:applovin_max/applovin_max.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lunar/calendar/Lunar.dart';
 
 import '../../common/const/color_constants.dart';
+import '../../common/const/string_constants.dart';
 import '../../core/base_stateful_state.dart';
 import '../../util/shared_preferences_util.dart';
+import '../applovin/applovin_screen.dart';
 import '../introduction/introduction_screen.dart';
 import '../main/controller_main.dart';
 import '../main/main_screen.dart';
@@ -23,6 +26,50 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   final ControllerMain _controllerMain = Get.find();
 
+  void _initializeInterstitialAds() {
+    AppLovinMAX.setInterstitialListener(InterstitialListener(
+      onAdLoadedCallback: (ad) {
+        // Interstitial ad is ready to be shown. AppLovinMAX.isInterstitialReady(_interstitial_ad_unit_id) will now return 'true'
+        debugPrint('roy93~ Interstitial ad loaded from ${ad.networkName}');
+        _goToMainScreen();
+      },
+      onAdLoadFailedCallback: (adUnitId, error) {
+        // Interstitial ad failed to load
+        debugPrint('roy93~ Interstitial onAdLoadFailedCallback error $error');
+        _goToMainScreen();
+      },
+      onAdDisplayedCallback: (ad) {
+        debugPrint("roy93~ Interstitial onAdDisplayedCallback");
+      },
+      onAdDisplayFailedCallback: (ad, error) {
+        debugPrint("roy93~ Interstitial onAdDisplayFailedCallback");
+      },
+      onAdClickedCallback: (ad) {
+        debugPrint("roy93~ Interstitial onAdClickedCallback");
+      },
+      onAdHiddenCallback: (ad) {
+        debugPrint("roy93~ Interstitial onAdHiddenCallback");
+      },
+    ));
+
+    // Load the first interstitial
+    AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
+  }
+
+  Future<void> _showInterAd() async {
+    bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
+    if (isReady) {
+      if (isApplovinDeviceTest()) {
+        showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
+      } else {
+        AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
+      }
+    } else {
+      debugPrint('roy93~ Loading interstitial ad...');
+      AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -34,7 +81,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
         debugPrint("roy93~ initializePlugin timeStartApp $timeStartApp");
         debugPrint("roy93~ initializePlugin timeNow $timeNow");
         debugPrint("roy93~ initializePlugin duration ${timeNow - timeStartApp}");
-        _goToMainScreen();
+        _initializeInterstitialAds();
       }
     });
   }
