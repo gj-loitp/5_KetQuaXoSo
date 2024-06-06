@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:applovin_max/applovin_max.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,6 +27,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   final ControllerMain _controllerMain = Get.find();
+  Timer? _timer;
 
   void _initializeInterstitialAds() {
     AppLovinMAX.setInterstitialListener(InterstitialListener(
@@ -58,6 +61,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
 
   Future<void> _showInterAd() async {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
+    debugPrint('roy93~ _showInterAd isReady $isReady');
     if (isReady) {
       if (isApplovinDeviceTest()) {
         showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
@@ -82,12 +86,16 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
         debugPrint("roy93~ initializePlugin timeNow $timeNow");
         debugPrint("roy93~ initializePlugin duration ${timeNow - timeStartApp}");
         _initializeInterstitialAds();
+        _timer = Timer(const Duration(seconds: 10), () {
+          _goToMainScreen();
+        });
       }
     });
   }
 
   @override
   void dispose() {
+    _timer?.cancel();
     super.dispose();
   }
 
@@ -157,7 +165,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   }
 
   Future<void> _goToMainScreen() async {
-    await Future.delayed(const Duration(milliseconds: 1500));
+    _timer?.cancel();
     var keyIsShowedIntroduction = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedIntroduction);
     if (keyIsShowedIntroduction == true) {
       Get.off(() => const MainScreen());
