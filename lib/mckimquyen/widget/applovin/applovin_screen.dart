@@ -16,8 +16,8 @@ import '../../util/url_launcher_utils.dart';
 enum AdLoadState { notLoaded, loading, loaded }
 
 const String sdkKey = "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt";
-final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a_" : "IOS_INTER_AD_UNIT_ID";
-final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb_" : "IOS_BANNER_AD_UNIT_ID";
+final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a" : "IOS_INTER_AD_UNIT_ID";
+final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb" : "IOS_BANNER_AD_UNIT_ID";
 
 var _listMyDevice = [
   "798a2c5f7fb63f9c6ccb38e5120cee7ac14dc5e75e16fd4361d159408b711766", //poco f3 debug + release
