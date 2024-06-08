@@ -2,17 +2,18 @@ import 'package:connection_notifier/connection_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
+
 import '../../common/const/color_constants.dart';
 import '../../common/const/string_constants.dart';
 import '../../core/base_stateful_state.dart';
 import '../../util/shared_preferences_util.dart';
 import '../keep_alive_age.dart';
-import '../profile/profile_screen.dart';
 import 'controller_main.dart';
 
 class MainScreen extends StatefulWidget {
@@ -38,7 +39,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
     const KeepAlivePage(child: XSMTScreen()),
     const KeepAlivePage(child: XSMBScreen()),
     const KeepAlivePage(child: VietlotScreen()),
-    const KeepAlivePage(child: ProfileScreen()),
+    const KeepAlivePage(child: InfoScreen()),
     const KeepAlivePage(child: ProfileScreen()),
   ];
 
@@ -198,7 +199,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
             ),
             Tab(
               icon: Icon(Icons.location_city),
-              text: "",
+              text: "Phụ lục",
             ),
             Tab(
               icon: Icon(Icons.person),

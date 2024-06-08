@@ -1,12 +1,12 @@
 import 'package:animated_introduction/animated_introduction.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
 
 import '../../common/const/color_constants.dart';
 import '../../core/base_stateful_state.dart';
 import '../../util/shared_preferences_util.dart';
 import '../main/main_screen.dart';
-import '../profile/profile_screen.dart';
 import '../splash/splash_screen.dart';
 
 class IntroductionScreen extends StatefulWidget {
