@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:applovin_max/applovin_max.dart';
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lunar/calendar/Lunar.dart';
@@ -27,6 +28,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   final ControllerMain _controllerMain = Get.find();
+  final int durationCountdown = 10;
 
   void _initializeInterstitialAds() {
     AppLovinMAX.setInterstitialListener(InterstitialListener(
@@ -130,6 +132,71 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
                       ),
                     ),
                   ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Hoặc tự động vào trang chủ sau ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.white,
+                      ),
+                    ),
+                    CircularCountDownTimer(
+                      duration: durationCountdown,
+                      initialDuration: 0,
+                      controller: CountDownController(),
+                      width: 38,
+                      height: 38,
+                      ringColor: Colors.transparent,
+                      ringGradient: null,
+                      fillColor: Colors.white,
+                      fillGradient: null,
+                      backgroundColor: Colors.white.withOpacity(0.8),
+                      backgroundGradient: null,
+                      strokeWidth: 2.0,
+                      strokeCap: StrokeCap.round,
+                      textStyle: const TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textFormat: CountdownTextFormat.S,
+                      isReverse: true,
+                      isReverseAnimation: false,
+                      isTimerTextShown: true,
+                      autoStart: true,
+                      onStart: () {
+                        debugPrint('roy93~ Countdown Started');
+                      },
+                      onComplete: () {
+                        debugPrint('roy93~ Countdown Ended');
+                        _goToMainScreen();
+                      },
+                      onChange: (String timeStamp) {
+                        debugPrint('roy93~ Countdown Changed $timeStamp');
+                      },
+                      timeFormatterFunction: (defaultFormatterFunction, duration) {
+                        return Function.apply(defaultFormatterFunction, [duration]);
+                        // if (duration.inSeconds == 0) {
+                        //   return "0";
+                        // } else {
+                        //   return Function.apply(defaultFormatterFunction, [duration]);
+                        // }
+                      },
+                    ),
+                    const Text(
+                      " giây.",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 32),
               ],
