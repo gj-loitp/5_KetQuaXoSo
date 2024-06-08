@@ -1,8 +1,8 @@
-import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:connection_notifier/connection_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
@@ -27,26 +27,18 @@ class MainScreen extends StatefulWidget {
   State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MainScreenState extends BaseStatefulState<MainScreen> {
+class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerProviderStateMixin {
   final ControllerMain _controllerMain = Get.find();
   final _controllerPage = PageController(initialPage: 0);
 
-  final _controllerBottomBar = NotchBottomBarController(index: 0);
-
-  var _isTouchBottomBarItem = false;
-
-  @override
-  void dispose() {
-    _controllerMain.clearOnDispose();
-    _controllerPage.dispose();
-    super.dispose();
-  }
+  TabController? _tabController;
 
   final List<Widget> bottomBarPages = [
     const KeepAlivePage(child: XSMNScreen()),
     const KeepAlivePage(child: XSMTScreen()),
     const KeepAlivePage(child: XSMBScreen()),
     const KeepAlivePage(child: VietlotScreen()),
+    const KeepAlivePage(child: ProfileScreen()),
     const KeepAlivePage(child: ProfileScreen()),
   ];
 
@@ -58,6 +50,15 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
     _controllerMain.getIsOnTextOverflow();
     _controllerMain.getIsOnResultVietlotMax3d();
     _checkToShowDialogHello();
+    _tabController = TabController(length: bottomBarPages.length, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _controllerMain.clearOnDispose();
+    _controllerPage.dispose();
+    _tabController?.dispose();
+    super.dispose();
   }
 
   Future<void> _checkToShowDialogHello() async {
@@ -150,106 +151,64 @@ class _MainScreenState extends BaseStatefulState<MainScreen> {
   }
 
   Widget _buildPageView() {
-    return PageView(
-      controller: _controllerPage,
-      physics: const NeverScrollableScrollPhysics(), //disable horizontal swipe
-      children: List.generate(bottomBarPages.length, (index) => bottomBarPages[index]),
-      onPageChanged: (int page) {
-        // debugPrint("onPageChanged page $page");
-        if (_isTouchBottomBarItem) {
-          _isTouchBottomBarItem = false;
-        } else {
-          _controllerBottomBar.jumpTo(page);
-        }
-      },
+    return TabBarView(
+      controller: _tabController,
+      children: bottomBarPages,
     );
   }
 
   Widget? _buildBottomBar() {
-    return AnimatedNotchBottomBar(
-      showShadow: true,
-      notchBottomBarController: _controllerBottomBar,
+    return Material(
       color: Colors.white,
-      showLabel: true,
-      itemLabelStyle: const TextStyle(
-        color: Colors.grey,
-        fontWeight: FontWeight.w700,
-        fontSize: 8,
+      child: SafeArea(
+        child: TabBar(
+          indicatorColor: ColorConstants.appColor,
+          labelColor: ColorConstants.appColor,
+          unselectedLabelColor: Colors.grey,
+          labelStyle: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 10,
+          ),
+          unselectedLabelStyle: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 10,
+          ),
+          labelPadding: EdgeInsets.zero,
+          // dividerColor: ColorConstants.appColor,
+          // dividerHeight: 0.0,
+          // physics: const BouncingScrollPhysics(),
+          splashBorderRadius: const BorderRadius.all(Radius.circular(0)),
+          tabAlignment: TabAlignment.fill,
+          tabs: const <Tab>[
+            Tab(
+              icon: Icon(Icons.looks_one_outlined),
+              text: "XSMN",
+            ),
+            Tab(
+              icon: Icon(Icons.looks_two_outlined),
+              text: "XSMT",
+            ),
+            Tab(
+              icon: Icon(Icons.looks_3_outlined),
+              text: "XSMB",
+            ),
+            Tab(
+              icon: Icon(Icons.looks_4_outlined),
+              text: "Vietlot",
+            ),
+            Tab(
+              icon: Icon(Icons.location_city),
+              text: "",
+            ),
+            Tab(
+              icon: Icon(Icons.person),
+              text: "Cá nhân",
+            ),
+          ],
+          // setup the controller
+          controller: _tabController,
+        ),
       ),
-      notchColor: Colors.white,
-      showBlurBottomBar: false,
-      removeMargins: true,
-      // bottomBarWidth: 500,
-      durationInMilliSeconds: 300,
-      bottomBarItems: const [
-        BottomBarItem(
-          inActiveItem: Icon(
-            Icons.looks_one_rounded,
-            color: Colors.grey,
-          ),
-          activeItem: Icon(
-            Icons.looks_one_rounded,
-            color: ColorConstants.appColor,
-          ),
-          itemLabel: 'XSMN',
-        ),
-        BottomBarItem(
-          inActiveItem: Icon(
-            Icons.looks_two_rounded,
-            color: Colors.grey,
-          ),
-          activeItem: Icon(
-            Icons.looks_two_rounded,
-            color: ColorConstants.appColor,
-          ),
-          itemLabel: 'XSMT',
-        ),
-        BottomBarItem(
-          inActiveItem: Icon(
-            Icons.looks_3_rounded,
-            color: Colors.grey,
-          ),
-          activeItem: Icon(
-            Icons.looks_3_rounded,
-            color: ColorConstants.appColor,
-          ),
-          itemLabel: 'XSMB',
-        ),
-        BottomBarItem(
-          inActiveItem: Icon(
-            Icons.looks_4_rounded,
-            color: Colors.grey,
-          ),
-          activeItem: Icon(
-            Icons.looks_4_rounded,
-            color: ColorConstants.appColor,
-          ),
-          itemLabel: 'Vietlott',
-        ),
-        BottomBarItem(
-          inActiveItem: Icon(
-            Icons.person,
-            color: Colors.grey,
-          ),
-          activeItem: Icon(
-            Icons.person,
-            color: ColorConstants.appColor,
-          ),
-          itemLabel: 'Cá nhân',
-        ),
-      ],
-      onTap: (index) {
-        _isTouchBottomBarItem = true;
-        _controllerPage.jumpToPage(index);
-        // debugPrint('current selected index $index');
-      },
-      kIconSize: 20,
-      kBottomRadius: 0,
-      showTopRadius: true,
-      showBottomRadius: true,
-      // bottomBarHeight: 62,
-      // topMargin: 10,
-      shadowElevation: 15.0,
     );
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
@@ -176,7 +174,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
       var listProvince = _controllerMain.listProvince;
       return CupertinoScrollbar(
         child: ListView.builder(
-            padding: const EdgeInsets.fromLTRB(0, 0, 0, 150),
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
             physics: const BouncingScrollPhysics(),
             itemCount: listProvince.length,
             itemBuilder: (BuildContext context, int index) {
