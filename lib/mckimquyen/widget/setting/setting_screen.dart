@@ -219,7 +219,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
 
   Widget _buildBannerAd() {
     return Container(
-      color: getBannerBackgroundColor(),
+      color: Colors.transparent,
       margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
       child: MaxAdView(
         adUnitId: getBannerAdUnitId(),

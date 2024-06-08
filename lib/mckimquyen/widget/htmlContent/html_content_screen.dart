@@ -139,7 +139,7 @@ class _HtmlContentScreenState extends BaseStatefulState<HtmlContentScreen> {
 
   Widget _buildBannerAd() {
     return Container(
-      color: getBannerBackgroundColor(),
+      color: Colors.transparent,
       margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
       child: MaxAdView(
         adUnitId: getBannerAdUnitId(),

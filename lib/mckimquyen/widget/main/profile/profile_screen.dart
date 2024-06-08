@@ -13,7 +13,6 @@ import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/information/thontinhuuich/information_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/introduction/introduction_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/setting/setting_screen.dart';
@@ -70,11 +69,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   Future<void> _showInterAd() async {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
     if (isReady) {
-      if (isApplovinDeviceTest()) {
-        showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
-      } else {
-        AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
-      }
+      AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
       debugPrint('roy93~ Loading interstitial ad...');
       AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
@@ -436,7 +431,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
 
   Widget _buildBannerAd() {
     return Container(
-      color: getBannerBackgroundColor(),
+      color: Colors.transparent,
       margin: const EdgeInsets.fromLTRB(0, 0, 0, 4),
       child: MaxAdView(
         adUnitId: getBannerAdUnitId(),

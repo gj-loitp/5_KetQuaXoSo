@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:lunar/calendar/Lunar.dart';
 
 import '../../common/const/color_constants.dart';
-import '../../common/const/string_constants.dart';
 import '../../core/base_stateful_state.dart';
 import '../../util/shared_preferences_util.dart';
 import '../applovin/applovin_screen.dart';
@@ -63,11 +62,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
     debugPrint('roy93~ _showInterAd isReady $isReady');
     if (isReady) {
-      if (isApplovinDeviceTest()) {
-        showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
-      } else {
-        AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
-      }
+      AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
       debugPrint('roy93~ Loading interstitial ad...');
       AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());

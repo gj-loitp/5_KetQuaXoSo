@@ -3,6 +3,7 @@ import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../../../common/const/color_constants.dart';
 import '../../../common/const/dimen_constants.dart';
 import '../../../core/base_stateful_state.dart';
@@ -413,7 +414,7 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
 
   Widget _buildBannerAd() {
     return Container(
-      color: getBannerBackgroundColor(),
+      color: Colors.transparent,
       margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
       child: MaxAdView(
         adUnitId: getBannerAdUnitId(),

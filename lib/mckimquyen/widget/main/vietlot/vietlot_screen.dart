@@ -190,7 +190,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
 
   Widget _buildBannerAd() {
     return Container(
-      color: getBannerBackgroundColor(),
+      color: Colors.transparent,
       margin: const EdgeInsets.fromLTRB(0, DimenConstants.marginPaddingSmall, 0, 0),
       child: MaxAdView(
         adUnitId: getBannerAdUnitId(),

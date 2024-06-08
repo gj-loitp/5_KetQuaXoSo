@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:platform_device_id/platform_device_id.dart';
 
 import '../../common/const/dimen_constants.dart';
-import '../../common/const/string_constants.dart';
 import '../../core/base_stateful_state.dart';
 import '../../util/ui_utils.dart';
 import '../../util/url_launcher_utils.dart';
@@ -19,36 +18,32 @@ const String sdkKey = "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5
 final String _interstitialAdUnitId = Platform.isAndroid ? "fb1d2b140e8b9f8a" : "IOS_INTER_AD_UNIT_ID";
 final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb" : "IOS_BANNER_AD_UNIT_ID";
 
-var _listMyDevice = [
-  "798a2c5f7fb63f9c6ccb38e5120cee7ac14dc5e75e16fd4361d159408b711766", //poco f3 debug + release
-  "4ad566d6ac781a4f37ac34a83c459530eb702e64df7d6d1d3747f33446dcea87", //mi pad 5 debug + release
-  "068dfca3d91074f174e4161d02cd0f09cb93f502164bafcc016153841076e1b6", //vsmart aris debug + release
-  "184b74248f05d8c3b50c69832216a1b8415557a132c6cef33af8a3baba081eca", //samsung a50s debug + release
-  "5b5ee71720af3e4dd6356a915d323522a415723e158f39e9240f6846c214382a", //tecno spark 20 pro plus debug + release
-];
+// var _listMyDevice = [
+//   "798a2c5f7fb63f9c6ccb38e5120cee7ac14dc5e75e16fd4361d159408b711766", //poco f3 debug + release
+//   "4ad566d6ac781a4f37ac34a83c459530eb702e64df7d6d1d3747f33446dcea87", //mi pad 5 debug + release
+//   "068dfca3d91074f174e4161d02cd0f09cb93f502164bafcc016153841076e1b6", //vsmart aris debug + release
+//   "184b74248f05d8c3b50c69832216a1b8415557a132c6cef33af8a3baba081eca", //samsung a50s debug + release
+//   "5b5ee71720af3e4dd6356a915d323522a415723e158f39e9240f6846c214382a", //tecno spark 20 pro plus debug + release
+// ];
 
 String getInterstitialAdUnitId() {
   print("roy93~ getInterstitialAdUnitId deviceId $deviceId");
-  return isApplovinDeviceTest() ? "${_interstitialAdUnitId}_debug" : _interstitialAdUnitId;
+  return _interstitialAdUnitId;
 }
 
 String getBannerAdUnitId() {
   print("roy93~ getBannerAdUnitId deviceId $deviceId");
-  return isApplovinDeviceTest() ? "${_bannerAdUnitId}_debug" : _bannerAdUnitId;
+  return _bannerAdUnitId;
 }
 
-Color getBannerBackgroundColor() {
-  return isApplovinDeviceTest() ? Colors.yellowAccent : Colors.transparent;
-}
-
-bool isApplovinDeviceTest() {
-  if (kDebugMode) {
-    return true;
-  }
-  var isDeviceTest = _listMyDevice.contains(deviceId);
-  debugPrint("roy93~ isDeviceTest $isDeviceTest");
-  return isDeviceTest;
-}
+// bool isApplovinDeviceTest() {
+//   if (kDebugMode) {
+//     return true;
+//   }
+//   var isDeviceTest = _listMyDevice.contains(deviceId);
+//   debugPrint("roy93~ isDeviceTest $isDeviceTest");
+//   return isDeviceTest;
+// }
 
 String? deviceId;
 
@@ -128,11 +123,7 @@ class _ApplovinScreenState extends BaseStatefulState<ApplovinScreen> {
                 void showInter() async {
                   bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
                   if (isReady) {
-                    if (isApplovinDeviceTest()) {
-                      showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
-                    } else {
-                      AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
-                    }
+                    AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
                   } else {
                     logStatus('Loading interstitial ad...');
                     _interstitialLoadState = AdLoadState.loading;
@@ -221,7 +212,7 @@ Incomplete, if not for you.""",
             ),
             if (_isWidgetBannerShowing)
               Container(
-                color: getBannerBackgroundColor(),
+                color: Colors.transparent,
                 margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
                 child: MaxAdView(
                   adUnitId: getBannerAdUnitId(),

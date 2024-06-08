@@ -8,7 +8,6 @@ import 'package:ketquaxoso/mckimquyen/widget/main/province/province_screen.dart'
 import '../../../common/const/color_constants.dart';
 import '../../../common/const/dimen_constants.dart';
 import '../../../common/const/hero_constants.dart';
-import '../../../common/const/string_constants.dart';
 import '../../../core/base_stateful_state.dart';
 import '../../applovin/applovin_screen.dart';
 import '../controller_main.dart';
@@ -59,11 +58,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
   Future<void> _showInterAd() async {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
     if (isReady) {
-      if (isApplovinDeviceTest()) {
-        showSnackBarFull(StringConstants.warning, "showInterstitial successfully in test device");
-      } else {
-        AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
-      }
+      AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
       debugPrint('roy93~ Loading interstitial ad...');
       AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
@@ -232,7 +227,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
 
   Widget _buildBannerAd() {
     return Container(
-      color: getBannerBackgroundColor(),
+      color: Colors.transparent,
       margin: const EdgeInsets.only(top: DimenConstants.marginPaddingSmall),
       child: MaxAdView(
         adUnitId: getBannerAdUnitId(),
