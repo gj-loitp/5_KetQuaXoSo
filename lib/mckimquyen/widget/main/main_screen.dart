@@ -160,9 +160,12 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
   }
 
   Widget? _buildBottomBar() {
-    return Material(
-      color: Colors.white,
-      child: SafeArea(
+    return Container(
+      color: Colors.grey,
+      padding: const EdgeInsets.only(top: 1),
+      child: Container(
+        color: Colors.white,
+        height: 48,
         child: TabBar(
           indicatorColor: ColorConstants.appColor,
           labelColor: ColorConstants.appColor,
@@ -185,26 +188,32 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
             Tab(
               icon: Icon(Icons.looks_one_outlined),
               text: "XSMN",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
             Tab(
               icon: Icon(Icons.looks_two_outlined),
               text: "XSMT",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
             Tab(
               icon: Icon(Icons.looks_3_outlined),
               text: "XSMB",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
             Tab(
               icon: Icon(Icons.looks_4_outlined),
               text: "Vietlot",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
             Tab(
               icon: Icon(Icons.location_city),
               text: "Phụ lục",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
             Tab(
               icon: Icon(Icons.person),
               text: "Cá nhân",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
           ],
           // setup the controller
