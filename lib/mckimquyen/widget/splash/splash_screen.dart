@@ -138,10 +138,10 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Hoặc tự động vào trang chủ sau ",
+                      "Tự động vào trang chủ sau ",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 14,
+                        fontSize: 16,
                         color: Colors.white,
                       ),
                     ),
@@ -192,13 +192,14 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
                       " giây.",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 14,
+                        fontSize: 16,
                         color: Colors.white,
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 32),
+                _buildBannerAd(),
               ],
             ),
           ],
@@ -236,6 +237,30 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildBannerAd() {
+    return Container(
+      color: Colors.transparent,
+      margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+      child: MaxAdView(
+        adUnitId: getBannerAdUnitId(),
+        adFormat: AdFormat.banner,
+        listener: AdViewAdListener(onAdLoadedCallback: (ad) {
+          debugPrint('Banner widget ad loaded from ${ad.networkName}');
+        }, onAdLoadFailedCallback: (adUnitId, error) {
+          debugPrint('Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
+        }, onAdClickedCallback: (ad) {
+          debugPrint('Banner widget ad clicked');
+        }, onAdExpandedCallback: (ad) {
+          debugPrint('Banner widget ad expanded');
+        }, onAdCollapsedCallback: (ad) {
+          debugPrint('Banner widget ad collapsed');
+        }, onAdRevenuePaidCallback: (ad) {
+          debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
+        }),
       ),
     );
   }
