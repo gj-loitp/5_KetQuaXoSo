@@ -114,6 +114,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
                     height: 180,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white.withOpacity(0.8),
                         minimumSize: const Size(180, 180),
                       ),
                       onPressed: () {
@@ -173,12 +174,12 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   }
 
   Future<void> _goToMainScreen() async {
+    _showInterAd();
     var keyIsShowedIntroduction = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedIntroduction);
     if (keyIsShowedIntroduction == true) {
       Get.off(() => const MainScreen());
     } else {
       Get.off(() => IntroductionScreen(SplashScreen.screenName));
     }
-    _showInterAd();
   }
 }
