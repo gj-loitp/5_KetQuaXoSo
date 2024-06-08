@@ -118,7 +118,7 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
       children: [
         _buildViewItem(
           "Tin tức",
-          "assets/images/ic_beta.png",
+          "assets/images/ic_info.png",
           () {
             debugPrint("roy93~ onTap");
             Get.to(() => const InformationScreen());
