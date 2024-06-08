@@ -153,6 +153,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
 
   Widget _buildPageView() {
     return TabBarView(
+      // physics: const NeverScrollableScrollPhysics(),
       controller: _tabController,
       children: bottomBarPages,
     );
