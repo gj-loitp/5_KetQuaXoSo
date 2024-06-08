@@ -6,6 +6,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/information/thontinhuuich/information_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
 
 class InfoScreen extends StatefulWidget {
   static String screenName = "/InfoScreen";
@@ -117,11 +118,24 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         _buildViewItem(
-          "Tin tức",
+          "Thông tin\nhữu ích",
           "assets/images/ic_info.png",
           () {
-            debugPrint("roy93~ onTap");
             Get.to(() => const InformationScreen());
+          },
+        ),
+        _buildViewItem(
+          "Dò theo\ntỉnh thành",
+          "assets/images/ic_city.png",
+          () {
+            Get.to(() => ProvinceListScreen(InfoScreen.screenName));
+          },
+        ),
+        _buildViewItem(
+          "Cộng đồng\ntest app",
+          "assets/images/ic_testing.png",
+          () {
+
           },
         ),
       ],
@@ -143,7 +157,7 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
         ),
         width: Get.width / 3.7,
         height: Get.width / 3.7,
-        padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
+        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
         child: Column(
           children: [
             Expanded(
@@ -152,12 +166,13 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
             Text(
               text,
               style: const TextStyle(
-                fontSize: 16,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
-              maxLines: 1,
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
             )
           ],
         ),
