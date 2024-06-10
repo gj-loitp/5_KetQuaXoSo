@@ -161,7 +161,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
       width: Get.width,
       height: Get.height,
       child: ListView.builder(
-        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         itemCount: listHistory.length,
         itemBuilder: (context, i) {
@@ -174,9 +174,10 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
   Widget _buildItemView(History history) {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+      margin: const EdgeInsets.fromLTRB(0, 8, 0, 8),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.white),
-        borderRadius: const BorderRadius.all(Radius.circular(16)),
+        borderRadius: const BorderRadius.all(Radius.circular(25)),
         color: Colors.white.withOpacity(0.9),
       ),
       child: Column(
@@ -239,29 +240,30 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                "Đài:",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14,
-                  color: Colors.black,
+          if (history.province?.name?.isNotEmpty == true)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Đài:",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-              const Spacer(),
-              Text(
-                history.province?.name ?? "",
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                  color: Colors.black,
+                const Spacer(),
+                Text(
+                  history.province?.name ?? "",
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.end,
                 ),
-                textAlign: TextAlign.end,
-              ),
-            ],
-          ),
+              ],
+            ),
         ],
       ),
     );
