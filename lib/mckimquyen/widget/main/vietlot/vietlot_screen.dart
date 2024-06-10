@@ -3,8 +3,8 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/power/power_screen.dart';
+
 import '../../../common/const/color_constants.dart';
-import '../../../common/const/dimen_constants.dart';
 import '../../../core/base_stateful_state.dart';
 import '../../applovin/applovin_screen.dart';
 import '../../setting/setting_screen.dart';
