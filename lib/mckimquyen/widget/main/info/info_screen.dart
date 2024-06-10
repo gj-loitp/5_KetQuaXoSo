@@ -137,14 +137,10 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
             Get.to(() => ProvinceListScreen(InfoScreen.screenName));
           },
         ),
-        //TODO roy93~ impl 20 tester close beta
-        Opacity(
-          opacity: 0.0,
-          child: _buildViewItem(
-            "Cộng đồng\ntest app",
-            "assets/images/ic_testing.png",
-            () {},
-          ),
+        _buildViewItem(
+          "Cộng đồng\ntest app",
+          "assets/images/ic_testing.png",
+              () {},
         ),
       ],
     );
