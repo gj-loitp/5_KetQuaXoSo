@@ -560,7 +560,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
       var widthItemTitleLabel = 30.0;
       var widthItemProvince = (Get.width - widthItemTitleLabel) / listDataWrapper.length;
-      var heightItem = 50.0;
+      var heightItem = 42.0;
 
       var listWidget = <Widget>[];
       listWidget.add(_buildNativeTitleView(

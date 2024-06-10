@@ -467,7 +467,7 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
 
       var widthItemTitleLabel = 30.0;
       var widthItemProvince = (Get.width - widthItemTitleLabel) / listDataWrapper.length;
-      var heightItem = 50.0;
+      var heightItem = 42.0;
 
       var listWidget = <Widget>[];
       listWidget.add(_buildNativeTitleView(
