@@ -96,29 +96,27 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                     ),
                   ),
                   Expanded(
-                    child: CupertinoScrollbar(
-                      child: ListView(
-                        physics: const BouncingScrollPhysics(),
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                            padding: const EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Text(
-                              "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
+                    child: ListView(
+                      physics: const BouncingScrollPhysics(),
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                        ],
-                      ),
+                          child: const Text(
+                            "Chức năng này sẽ được cập nhật ở phiên bản tiếp theo :)~",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

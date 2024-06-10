@@ -167,61 +167,59 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
   Widget _buildViewListProvince() {
     return Obx(() {
       var listProvince = _controllerMain.listProvince;
-      return CupertinoScrollbar(
-        child: ListView.builder(
-            padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-            physics: const BouncingScrollPhysics(),
-            itemCount: listProvince.length,
-            itemBuilder: (BuildContext context, int index) {
-              var province = listProvince[index];
-              return Hero(
-                tag: "${HeroConstants.itemProvince}$index",
-                child: Material(
-                  color: Colors.transparent,
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    child: Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.9),
-                        borderRadius: BorderRadius.circular(45),
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              "${province.name}",
-                              style: const TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                          const Icon(
-                            Icons.navigate_next,
-                            color: Colors.black,
-                          ),
-                        ],
-                      ),
+      return ListView.builder(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+          physics: const BouncingScrollPhysics(),
+          itemCount: listProvince.length,
+          itemBuilder: (BuildContext context, int index) {
+            var province = listProvince[index];
+            return Hero(
+              tag: "${HeroConstants.itemProvince}$index",
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  child: Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.9),
+                      borderRadius: BorderRadius.circular(45),
                     ),
-                    onTap: () {
-                      Get.to(
-                        () => ProvinceScreen(
-                          province: province,
-                          index: index,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            "${province.name}",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
                         ),
-                      );
-                      _showInterAd();
-                    },
+                        const Icon(
+                          Icons.navigate_next,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
                   ),
+                  onTap: () {
+                    Get.to(
+                          () => ProvinceScreen(
+                        province: province,
+                        index: index,
+                      ),
+                    );
+                    _showInterAd();
+                  },
                 ),
-              );
-            }),
-      );
+              ),
+            );
+          });
     });
   }
 

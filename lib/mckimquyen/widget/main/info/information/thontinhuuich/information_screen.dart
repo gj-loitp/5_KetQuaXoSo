@@ -100,305 +100,303 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                     ),
                   ),
                   Expanded(
-                    child: CupertinoScrollbar(
-                      child: ListView(
-                        physics: const BouncingScrollPhysics(),
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                              color: Colors.white,
-                            ),
-                            child: Column(
-                              children: [
-                                UIUtils.getButton(
-                                  "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
-                                        htmlContent: infor_18,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
-                                        htmlContent: infor_19,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
-                                        htmlContent: infor_20,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
-                                        htmlContent: infor_0,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar:
-                                            "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
-                                        htmlContent: infor_1,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
-                                        htmlContent: infor_2,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar:
-                                            "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
-                                        htmlContent: infor_3,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
-                                        htmlContent: infor_4,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
-                                        htmlContent: infor_5,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Khuyến cáo khi đổi số trúng",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Khuyến cáo khi đổi số trúng",
-                                        htmlContent: infor_6,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Mức chi hoa hồng đại lý của các loại hình xổ số",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Mức chi hoa hồng đại lý của các loại hình xổ số",
-                                        htmlContent: infor_7,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
-                                        htmlContent: infor_8,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
-                                        htmlContent: infor_9,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
-                                        htmlContent: infor_10,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Câu chuyện chơi lô đề ở đâu cũng có",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Câu chuyện chơi lô đề ở đâu cũng có",
-                                        htmlContent: infor_11,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
-                                        htmlContent: infor_12,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
-                                        htmlContent: infor_13,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
-                                        htmlContent: infor_14,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
-                                        htmlContent: infor_15,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Xổ số Vietlott có đáng tin hay không?",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Xổ số Vietlott có đáng tin hay không?",
-                                        htmlContent: infor_16,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar:
-                                            "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
-                                        htmlContent: infor_17,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar:
-                                            "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
-                                        htmlContent: infor_17,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                UIUtils.getButton(
-                                  "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
-                                        htmlContent: infor_21,
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ],
-                            ),
+                    child: ListView(
+                      physics: const BouncingScrollPhysics(),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                            color: Colors.white,
                           ),
-                        ],
-                      ),
+                          child: Column(
+                            children: [
+                              UIUtils.getButton(
+                                "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
+                                      htmlContent: infor_18,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
+                                      htmlContent: infor_19,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
+                                      htmlContent: infor_20,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
+                                      htmlContent: infor_0,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar:
+                                      "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
+                                      htmlContent: infor_1,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
+                                      htmlContent: infor_2,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar:
+                                      "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
+                                      htmlContent: infor_3,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
+                                      htmlContent: infor_4,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
+                                      htmlContent: infor_5,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Khuyến cáo khi đổi số trúng",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Khuyến cáo khi đổi số trúng",
+                                      htmlContent: infor_6,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Mức chi hoa hồng đại lý của các loại hình xổ số",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Mức chi hoa hồng đại lý của các loại hình xổ số",
+                                      htmlContent: infor_7,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
+                                      htmlContent: infor_8,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
+                                      htmlContent: infor_9,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
+                                      htmlContent: infor_10,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Câu chuyện chơi lô đề ở đâu cũng có",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Câu chuyện chơi lô đề ở đâu cũng có",
+                                      htmlContent: infor_11,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
+                                      htmlContent: infor_12,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
+                                      htmlContent: infor_13,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
+                                      htmlContent: infor_14,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
+                                      htmlContent: infor_15,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Xổ số Vietlott có đáng tin hay không?",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Xổ số Vietlott có đáng tin hay không?",
+                                      htmlContent: infor_16,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar:
+                                      "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                      htmlContent: infor_17,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar:
+                                      "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                      htmlContent: infor_17,
+                                    ),
+                                  );
+                                },
+                              ),
+                              UIUtils.getButton(
+                                "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
+                                      htmlContent: infor_21,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   _buildBannerAd(),

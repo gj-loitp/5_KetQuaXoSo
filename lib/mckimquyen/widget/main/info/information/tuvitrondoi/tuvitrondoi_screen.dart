@@ -97,37 +97,35 @@ class _TuViTronDoiScreenState extends BaseStatefulState<TuViTronDoiScreen> {
                     ),
                   ),
                   Expanded(
-                    child: CupertinoScrollbar(
-                      child: ListView(
-                        physics: const BouncingScrollPhysics(),
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                              color: Colors.white,
-                            ),
-                            child: Column(
-                              children: [
-                                UIUtils.getButton(
-                                  "Text",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Text",
-                                        htmlContent: ConstTuViTronDoi.text0,
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ],
-                            ),
+                    child: ListView(
+                      physics: const BouncingScrollPhysics(),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                            color: Colors.white,
                           ),
-                        ],
-                      ),
+                          child: Column(
+                            children: [
+                              UIUtils.getButton(
+                                "Text",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Text",
+                                      htmlContent: ConstTuViTronDoi.text0,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

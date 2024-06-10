@@ -97,37 +97,35 @@ class _PhongTucTapQuanScreenState extends BaseStatefulState<PhongTucTapQuanScree
                     ),
                   ),
                   Expanded(
-                    child: CupertinoScrollbar(
-                      child: ListView(
-                        physics: const BouncingScrollPhysics(),
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                              color: Colors.white,
-                            ),
-                            child: Column(
-                              children: [
-                                UIUtils.getButton(
-                                  "Một số lưu ý khi đi tảo mộ trong dịp tết thanh minh",
-                                  Icons.navigate_next,
-                                  () {
-                                    Get.to(
-                                      () => HtmlContentScreen(
-                                        titleAppBar: "Một số lưu ý khi đi tảo mộ trong dịp tết thanh minh",
-                                        htmlContent: ConstPhongTucTapQuan.text0,
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ],
-                            ),
+                    child: ListView(
+                      physics: const BouncingScrollPhysics(),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                            color: Colors.white,
                           ),
-                        ],
-                      ),
+                          child: Column(
+                            children: [
+                              UIUtils.getButton(
+                                "Một số lưu ý khi đi tảo mộ trong dịp tết thanh minh",
+                                Icons.navigate_next,
+                                    () {
+                                  Get.to(
+                                        () => HtmlContentScreen(
+                                      titleAppBar: "Một số lưu ý khi đi tảo mộ trong dịp tết thanh minh",
+                                      htmlContent: ConstPhongTucTapQuan.text0,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
