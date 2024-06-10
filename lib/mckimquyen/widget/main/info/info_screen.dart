@@ -7,6 +7,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/history/history_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/testApp/test_app_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
 
@@ -107,6 +108,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
                       padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                       children: [
                         _buildViewRow1(),
+                        const SizedBox(height: 16),
+                        _buildViewRow2(),
                       ],
                     ),
                   ),
@@ -125,6 +128,13 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         _buildViewItem(
+          "Dò theo\ntỉnh thành",
+          "assets/images/ic_city.png",
+          () {
+            Get.to(() => ProvinceListScreen(InfoScreen.screenName));
+          },
+        ),
+        _buildViewItem(
           "Thông tin\nhữu ích",
           "assets/images/ic_info.png",
           () {
@@ -132,12 +142,20 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           },
         ),
         _buildViewItem(
-          "Dò theo\ntỉnh thành",
-          "assets/images/ic_city.png",
+          "Lịch sử\ndò nhanh",
+          "assets/images/ic_history.png",
           () {
-            Get.to(() => ProvinceListScreen(InfoScreen.screenName));
+            Get.to(() => const HistoryScreen());
           },
         ),
+      ],
+    );
+  }
+
+  Widget _buildViewRow2() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
         _buildViewItem(
           "Cộng đồng\ntest app",
           "assets/images/ic_testing.png",
