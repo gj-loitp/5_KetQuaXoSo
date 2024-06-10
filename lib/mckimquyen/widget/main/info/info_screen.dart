@@ -7,6 +7,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/testApp/test_app_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
 
 import 'information/thontinhuuich/information_screen.dart';
@@ -140,7 +141,9 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
         _buildViewItem(
           "Cộng đồng\ntest app",
           "assets/images/ic_testing.png",
-              () {},
+          () {
+            Get.to(() => const TestAppScreen());
+          },
         ),
       ],
     );
