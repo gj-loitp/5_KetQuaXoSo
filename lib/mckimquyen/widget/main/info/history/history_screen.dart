@@ -173,25 +173,24 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
 
   Widget _buildItemView(History history) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.white),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(45),
-        ),
-        color: Colors.white,
+        borderRadius: const BorderRadius.all(Radius.circular(16)),
+        color: Colors.white.withOpacity(0.9),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
                 "Dò số:",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   fontSize: 14,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
               ),
               const Spacer(),
@@ -218,13 +217,14 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
                 "Ngày:",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   fontSize: 14,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
               ),
               const Spacer(),
@@ -233,12 +233,35 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
                 textAlign: TextAlign.end,
               ),
             ],
-          )
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "Đài:",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 14,
+                  color: Colors.black,
+                ),
+              ),
+              const Spacer(),
+              Text(
+                history.province?.name ?? "",
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.end,
+              ),
+            ],
+          ),
         ],
       ),
     );
