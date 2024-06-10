@@ -8,6 +8,7 @@ import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:slider_button/slider_button.dart';
 
+//TODO roy93~ empty state
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({
     super.key,

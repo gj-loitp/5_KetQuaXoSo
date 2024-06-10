@@ -77,9 +77,9 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
       if (isInitializePluginApplovinFinished) {
         var timeStartApp = _controllerMain.timeStartApp.value;
         var timeNow = DateTime.now().millisecondsSinceEpoch;
-        debugPrint("roy93~ initializePlugin timeStartApp $timeStartApp");
-        debugPrint("roy93~ initializePlugin timeNow $timeNow");
-        debugPrint("roy93~ initializePlugin duration ${timeNow - timeStartApp}");
+        // debugPrint("initializePlugin timeStartApp $timeStartApp");
+        // debugPrint("initializePlugin timeNow $timeNow");
+        // debugPrint("initializePlugin duration ${timeNow - timeStartApp}");
         _initializeInterstitialAds();
       }
     });

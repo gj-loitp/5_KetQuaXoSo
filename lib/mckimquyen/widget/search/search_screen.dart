@@ -49,16 +49,16 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
         debugPrint('roy93~ Interstitial onAdLoadFailedCallback error $error');
       },
       onAdDisplayedCallback: (ad) {
-        debugPrint("roy93~ onAdDisplayedCallback");
+        debugPrint("onAdDisplayedCallback");
       },
       onAdDisplayFailedCallback: (ad, error) {
-        debugPrint("roy93~ onAdDisplayFailedCallback");
+        debugPrint("onAdDisplayFailedCallback");
       },
       onAdClickedCallback: (ad) {
-        debugPrint("roy93~ onAdClickedCallback");
+        debugPrint("onAdClickedCallback");
       },
       onAdHiddenCallback: (ad) {
-        debugPrint("roy93~ onAdHiddenCallback");
+        debugPrint("onAdHiddenCallback");
       },
     ));
 
@@ -396,6 +396,8 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
     _controllerMain.insertHistory(
       History(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
+        number: _tecNumber.text,
+        datetime: _tecDate.text,
         callFromScreen: widget.callFromScreen,
         province: widget.province,
       ),

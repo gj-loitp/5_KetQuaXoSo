@@ -30,7 +30,7 @@ class DatabaseHelper {
 
   Future<void> _onCreate(Database db, int version) async {
     await db.execute(
-      'CREATE TABLE $table(id TEXT PRIMARY KEY, callFromScreen TEXT, provinceName TEXT, provinceSlug TEXT, provinceUrl TEXT)',
+      'CREATE TABLE $table(id TEXT PRIMARY KEY, number TEXT, datetime TEXT, callFromScreen TEXT, provinceName TEXT, provinceSlug TEXT, provinceUrl TEXT)',
     );
   }
 
@@ -40,6 +40,8 @@ class DatabaseHelper {
       table,
       {
         'id': history.id,
+        'number': history.number,
+        'datetime': history.datetime,
         'callFromScreen': history.callFromScreen,
         'provinceName': history.province?.name,
         'provinceSlug': history.province?.slug,
@@ -56,6 +58,8 @@ class DatabaseHelper {
     return List.generate(maps.length, (i) {
       return History(
         id: maps[i]['id'],
+        number: maps[i]['number'],
+        datetime: maps[i]['datetime'],
         callFromScreen: maps[i]['callFromScreen'],
         province: Province(
           name: maps[i]['provinceName'],

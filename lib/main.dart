@@ -79,9 +79,9 @@ Future<void> initializePlugin() async {
   deviceId = await FlutterUdid.consistentUdid;
   var configuration = await AppLovinMAX.initialize(sdkKey);
   if (configuration == null) {
-    debugPrint("roy93~ initializePlugin !success");
+    debugPrint("initializePlugin !success");
   } else {
-    debugPrint("roy93~ initializePlugin success");
+    debugPrint("initializePlugin success");
     if (kDebugMode) {
       Get.snackbar("Applovin", "initializePlugin success (only show this msg in debug mode)");
     }
