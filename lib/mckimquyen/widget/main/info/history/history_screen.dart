@@ -11,6 +11,7 @@ import 'package:slider_button/slider_button.dart';
 
 //TODO roy93~ xoa tat ca
 //TODO roy93~ xoa tung item
+//TODO roy93~ click vao item se qua trang do so luon
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({
     super.key,
