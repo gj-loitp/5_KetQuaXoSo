@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
+import 'package:slider_button/slider_button.dart';
 
 class TestAppScreen extends StatefulWidget {
   const TestAppScreen({
@@ -73,7 +75,7 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        Material(
+                        const Material(
                           color: Colors.transparent,
                           child: Text(
                             "Cộng đồng test app",
@@ -95,7 +97,9 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
                       ],
                     ),
                   ),
-                  _buildBody(),
+                  Expanded(
+                    child: _buildBody(),
+                  ),
                 ],
               ),
             ),
@@ -109,10 +113,75 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
     return Container(
       margin: const EdgeInsets.all(16),
       width: double.infinity,
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(45.0)),
         color: Colors.white,
+      ),
+      child: ListView(
+        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        children: [
+          _buildTextHeader("Giới thiệu về Cộng đồng test app"),
+          _buildTextBody(
+              "Hoan nghênh bạn đến với Cộng đồng test app. Đây là nơi mà bạn sẽ được trải nghiệm những ứng dụng đầu tiên từ nhà phát triển, trước khi các ứng dụng này được xuất bản công khai ra thị trường."),
+          _buildTextHeader("Quyền lợi"),
+          _buildTextBody(
+              "Khi đăng ký thành công Cộng đồng test app, bạn sẽ được trải nghiệm ứng dụng đầu tiên. Bạn sẽ là người tiên phong và có quyền yêu cầu nhà phát triển chỉnh sửa phần mềm này theo nhu cầu của bạn."),
+          _buildTextHeader("Cách đăng ký"),
+          _buildTextBody(
+              "Bằng cách nhấn vào nút Đăng Ký ở bên dưới. Bạn sẽ được điều hướng tham gia nhóm Tester của chúng tôi, sau đó bạn sẽ nhận được màn hình xác nhận tham gia nhóm. Nhấn nút Tham Gia/Join để hoàn tất quá trình đăng kí."),
+          const SizedBox(height: 16),
+          SliderButton(
+            vibrationFlag: true,
+            action: () async {
+              return false;
+            },
+            label: const Text(
+              "Trượt sang phải để đăng ký",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            icon: const Text(
+              "➤",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 28,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            buttonColor: ColorConstants.appColor.withOpacity(0.8),
+            backgroundColor: Colors.blue.withOpacity(0.5),
+            highlightedColor: Colors.white,
+            baseColor: ColorConstants.appColor,
+          ),
+          const SizedBox(height: 16),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTextHeader(String s) {
+    return Text(
+      s,
+      style: const TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 16,
+        color: Colors.black,
+      ),
+    );
+  }
+
+  Widget _buildTextBody(String s) {
+    return Text(
+      s,
+      style: TextStyle(
+        fontWeight: FontWeight.normal,
+        fontSize: 14,
+        color: Colors.black.withOpacity(0.8),
       ),
     );
   }

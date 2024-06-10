@@ -18,6 +18,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:url_launcher_ios/url_launcher_ios.dart';
 import 'package:video_player_avfoundation/video_player_avfoundation.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider_linux/path_provider_linux.dart';
 import 'package:share_plus/share_plus.dart';
@@ -30,6 +31,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:url_launcher_macos/url_launcher_macos.dart';
 import 'package:video_player_avfoundation/video_player_avfoundation.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider_windows/path_provider_windows.dart';
 import 'package:share_plus/share_plus.dart';
@@ -154,6 +156,15 @@ class _PluginRegistrant {
 
     } else if (Platform.isLinux) {
       try {
+        DeviceInfoPlusLinuxPlugin.registerWith();
+      } catch (err) {
+        print(
+          '`device_info_plus` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
         PackageInfoPlusLinuxPlugin.registerWith();
       } catch (err) {
         print(
@@ -263,6 +274,15 @@ class _PluginRegistrant {
       }
 
     } else if (Platform.isWindows) {
+      try {
+        DeviceInfoPlusWindowsPlugin.registerWith();
+      } catch (err) {
+        print(
+          '`device_info_plus` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
       try {
         PackageInfoPlusWindowsPlugin.registerWith();
       } catch (err) {

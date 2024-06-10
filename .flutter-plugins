@@ -2,6 +2,7 @@
 applovin_max=/Users/loitran/.pub-cache/hosted/pub.dev/applovin_max-3.10.0/
 audio_session=/Users/loitran/.pub-cache/hosted/pub.dev/audio_session-0.1.19/
 device_info=/Users/loitran/.pub-cache/hosted/pub.dev/device_info-2.0.3/
+device_info_plus=/Users/loitran/.pub-cache/hosted/pub.dev/device_info_plus-10.1.0/
 flutter_displaymode=/Users/loitran/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0/
 flutter_native_splash=/Users/loitran/.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.0/
 flutter_udid=/Users/loitran/.pub-cache/hosted/pub.dev/flutter_udid-3.0.0/
@@ -40,6 +41,7 @@ url_launcher_linux=/Users/loitran/.pub-cache/hosted/pub.dev/url_launcher_linux-3
 url_launcher_macos=/Users/loitran/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.0/
 url_launcher_web=/Users/loitran/.pub-cache/hosted/pub.dev/url_launcher_web-2.3.1/
 url_launcher_windows=/Users/loitran/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.1/
+vibration=/Users/loitran/.pub-cache/hosted/pub.dev/vibration-1.9.0/
 video_player=/Users/loitran/.pub-cache/hosted/pub.dev/video_player-2.8.6/
 video_player_android=/Users/loitran/.pub-cache/hosted/pub.dev/video_player_android-2.4.14/
 video_player_avfoundation=/Users/loitran/.pub-cache/hosted/pub.dev/video_player_avfoundation-2.6.1/

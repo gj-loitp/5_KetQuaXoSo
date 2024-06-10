@@ -52,6 +52,7 @@ dependencies:
 #  askai_animation_button: ^0.0.1+2
 #  flutter_screenutil: ^5.0.0+2
   circular_countdown_timer: ^0.2.3
+  slider_button: ^2.1.0
 
 dev_dependencies:
   flutter_test:
