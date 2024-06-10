@@ -201,6 +201,10 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
                   "https://play.google.com/store/apps/details?id=com.mckimquyen.catweatherforecast");
             },
           ),
+          const SizedBox(height: 16),
+          _buildTextHeader(
+              "Cám ơn bạn đã dành thời gian để đăng ký và trải nghiệm, kính chúc bạn nhiều sức khoẻ và gặp nhiều may mắn."),
+          _buildTextBody("Lời biết ơn chân thành từ đội ngũ phát triển ứng dụng."),
         ],
       ),
     );
