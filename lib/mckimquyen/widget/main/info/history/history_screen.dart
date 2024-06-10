@@ -1,16 +1,13 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dismissible_tile/flutter_dismissible_tile.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
-import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
-import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
-import 'package:slider_button/slider_button.dart';
 
 //TODO roy93~ xoa tat ca
-//TODO roy93~ xoa tung item
 //TODO roy93~ click vao item se qua trang do so luon
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({
@@ -173,80 +170,92 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
   }
 
   Widget _buildItemView(History history) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-      margin: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.white),
-        borderRadius: const BorderRadius.all(Radius.circular(25)),
-        color: Colors.white.withOpacity(0.9),
+    return DismissibleTile(
+      key: UniqueKey(),
+      padding: EdgeInsets.zero,
+      borderRadius: const BorderRadius.all(Radius.circular(16)),
+      delayBeforeResize: const Duration(milliseconds: 300),
+      ltrBackground: const ColoredBox(color: Colors.transparent),
+      rtlBackground: const ColoredBox(color: Colors.transparent),
+      ltrDismissedColor: Colors.green,
+      rtlDismissedColor: Colors.green,
+      ltrOverlay: const Text(
+        'Xoá',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, color: Colors.white),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                "Dò số:",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14,
-                  color: Colors.black,
-                ),
-              ),
-              const Spacer(),
-              Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.yellow),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(45),
-                  ),
-                  color: Colors.yellow,
-                ),
-                child: Text(
-                  history.number ?? "",
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                "Ngày:",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14,
-                  color: Colors.black,
-                ),
-              ),
-              const Spacer(),
-              Text(
-                history.datetime ?? "",
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.end,
-              ),
-            ],
-          ),
-          if (history.province?.name?.isNotEmpty == true)
+      ltrOverlayDismissed: const Text(
+        'Đã xoá thành công',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, color: Colors.white),
+      ),
+      rtlOverlay: const Text(
+        'Xoá',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, color: Colors.white),
+      ),
+      rtlOverlayDismissed: const Text(
+        'Đã xoá thành công',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, color: Colors.white),
+      ),
+      direction: DismissibleTileDirection.horizontal,
+      confirmDismiss: (direction) async {
+        return true;
+      },
+      onDismissed: (DismissibleTileDirection direction) {
+        debugPrint("roy93~ onDismissed direction $direction");
+        //TODO roy93~
+      },
+      onDismissConfirmed: () {
+        debugPrint("roy93~ onDismissConfirmed");
+      },
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+        margin: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.white),
+          borderRadius: const BorderRadius.all(Radius.circular(25)),
+          color: Colors.white.withOpacity(0.9),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Đài:",
+                  "Dò số:",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
+                ),
+                const Spacer(),
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.yellow),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(45),
+                    ),
+                    color: Colors.yellow,
+                  ),
+                  child: Text(
+                    history.number ?? "",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Ngày:",
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontSize: 14,
@@ -255,7 +264,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                 ),
                 const Spacer(),
                 Text(
-                  history.province?.name ?? "",
+                  history.datetime ?? "",
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
@@ -265,7 +274,32 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                 ),
               ],
             ),
-        ],
+            if (history.province?.name?.isNotEmpty == true)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Đài:",
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                  ),
+                  const Spacer(),
+                  Text(
+                    history.province?.name ?? "",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.end,
+                  ),
+                ],
+              ),
+          ],
+        ),
       ),
     );
   }

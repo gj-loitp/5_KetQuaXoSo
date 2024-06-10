@@ -242,6 +242,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_dismissible_tile",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_dismissible_tile-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "flutter_displaymode",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0",
       "packageUri": "lib/",
@@ -1058,7 +1064,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-06-10T09:32:14.595061Z",
+  "generated": "2024-06-10T16:43:51.381396Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

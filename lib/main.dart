@@ -17,6 +17,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //TODO lich su ve so cua toi
 //TODO notification reminder
 //TODO scan de do ve so
+//TODO https://pub.dev/packages/slide_countdown -> thoi gian cho den quay so
 
 //done mckimquyen
 //ic_launcher

@@ -53,8 +53,9 @@ dependencies:
 #  flutter_screenutil: ^5.0.0+2
   circular_countdown_timer: ^0.2.3
   slider_button: ^2.1.0
-  sqflite: ^2.0.0+4
-  path: ^1.8.1
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+  flutter_dismissible_tile: ^1.0.3
 
 dev_dependencies:
   flutter_test:

@@ -318,6 +318,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.2"
+  flutter_dismissible_tile:
+    dependency: "direct main"
+    description:
+      name: flutter_dismissible_tile
+      sha256: "37795139ad3bd7127ac92cf787ac454f80f9bddce3dbe792951850917b461f3d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
   flutter_displaymode:
     dependency: "direct main"
     description:
