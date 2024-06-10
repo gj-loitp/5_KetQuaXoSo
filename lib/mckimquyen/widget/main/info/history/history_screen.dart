@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
@@ -122,7 +123,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
       if (listHistory.isEmpty) {
         return _buildEmptyView();
       } else {
-        return _buildListView();
+        return _buildListView(listHistory);
       }
     });
   }
@@ -154,11 +155,92 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
     );
   }
 
-  Widget _buildListView() {
+  Widget _buildListView(List<History> listHistory) {
     return Container(
       color: Colors.transparent,
       width: Get.width,
       height: Get.height,
+      child: ListView.builder(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        itemCount: listHistory.length,
+        itemBuilder: (context, i) {
+          return _buildItemView(listHistory[i]);
+        },
+      ),
+    );
+  }
+
+  Widget _buildItemView(History history) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(45),
+        ),
+        color: Colors.white,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Text(
+                "Dò số:",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+              ),
+              const Spacer(),
+              Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.yellow),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(45),
+                  ),
+                  color: Colors.yellow,
+                ),
+                child: Text(
+                  history.number ?? "",
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              const Text(
+                "Ngày:",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+              ),
+              const Spacer(),
+              Text(
+                history.datetime ?? "",
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+                textAlign: TextAlign.end,
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
