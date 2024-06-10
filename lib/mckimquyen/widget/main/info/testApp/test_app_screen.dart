@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
+import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:slider_button/slider_button.dart';
 
 class TestAppScreen extends StatefulWidget {
@@ -134,6 +135,7 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
           SliderButton(
             vibrationFlag: true,
             action: () async {
+              _goToGroupTester();
               return false;
             },
             label: const Text(
@@ -184,5 +186,10 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
         color: Colors.black.withOpacity(0.8),
       ),
     );
+  }
+
+  void _goToGroupTester() {
+    debugPrint("roy93~ _goToGroupTester");
+    UrlLauncherUtils.launchGroupTester();
   }
 }

@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class UrlLauncherUtils {
   static String getLinkGit(String path) {
     return "https://github.com/tplloi/fullter_tutorial/tree/master/$path";
@@ -58,5 +57,10 @@ class UrlLauncherUtils {
     // launchInWebViewWithJavaScript("https://loitp.wordpress.com/2018/06/10/privacy-policy/");
     launchInBrowser("https://loitp.notion.site/loitp/Privacy-Policy-319b1cd8783942fa8923d2a3c9bce60f/");
     // launchInWebViewWithJavaScript("https://loitp.notion.site/loitp/Privacy-Policy-319b1cd8783942fa8923d2a3c9bce60f/");
+  }
+
+  static void launchGroupTester() {
+    launchInBrowser("https://groups.google.com/g/20testersforclosedtesting");
+    // launchInWebViewWithJavaScript("https://groups.google.com/g/20testersforclosedtesting");
   }
 }
