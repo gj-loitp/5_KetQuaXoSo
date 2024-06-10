@@ -120,6 +120,7 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
         color: Colors.white,
       ),
       child: ListView(
+        padding: const EdgeInsets.only(bottom: 16),
         physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         children: [
           _buildTextHeader("Giới thiệu về Cộng đồng test app"),
@@ -161,6 +162,45 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
             baseColor: ColorConstants.appColor,
           ),
           const SizedBox(height: 16),
+          _buildTextBody(
+              "Sau khi đã hoàn tất đăng ký vào Cộng đồng tester, bạn có thể click vào các nút bên dưới để trải nghịệm những ứng dụng mới nhất, sớm nhất từ chúng tôi."),
+          UIUtils.getButton(
+            "Cat Gallery",
+            Icons.navigate_next,
+            () {
+              UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.gallery");
+            },
+          ),
+          UIUtils.getButton(
+            "Cat Scanner with history",
+            Icons.navigate_next,
+            () {
+              UrlLauncherUtils.launchInBrowser(
+                  "https://play.google.com/store/apps/details?id=com.mckimquyen.binaryeye");
+            },
+          ),
+          UIUtils.getButton(
+            "RSS Cat hub",
+            Icons.navigate_next,
+            () {
+              UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.reader");
+            },
+          ),
+          UIUtils.getButton(
+            "Cat compass",
+            Icons.navigate_next,
+            () {
+              UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.compass");
+            },
+          ),
+          UIUtils.getButton(
+            "Cute Cat Weather",
+            Icons.navigate_next,
+            () {
+              UrlLauncherUtils.launchInBrowser(
+                  "https://play.google.com/store/apps/details?id=com.mckimquyen.catweatherforecast");
+            },
+          ),
         ],
       ),
     );
