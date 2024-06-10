@@ -59,7 +59,8 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                 children: [
                   Expanded(
                     child: Obx(() {
-                      return Column(
+                      return ListView(
+                        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                         children: [
                           InkWell(
                             onTap: () {
