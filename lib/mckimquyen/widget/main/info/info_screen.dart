@@ -1,9 +1,11 @@
+import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
 
@@ -46,67 +48,70 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           children: [
             Image.asset(
               "assets/images/bkg_3.jpg",
-              height: double.infinity,
-              width: double.infinity,
+              height: Get.height,
+              width: Get.width,
               fit: BoxFit.cover,
             ).blurred(
               colorOpacity: 0.0,
               borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
               blur: 5,
             ),
-            Column(
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.fromLTRB(8, 42, 8, 8),
-                  width: double.infinity,
-                  child: const Row(
-                    children: [
-                      SizedBox(
-                        width: 40,
-                        height: 40,
-                      ),
-                      Expanded(
-                        child: Hero(
-                          tag: HeroConstants.appBarTitle,
-                          child: Material(
-                            color: Colors.transparent,
-                            child: Text(
-                              "Phụ lục",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w900,
-                                color: Colors.white,
-                                fontSize: 24,
-                                shadows: [
-                                  Shadow(
-                                    blurRadius: 5.0,
-                                    color: Colors.black,
-                                    offset: Offset(2.0, 2.0),
-                                  ),
-                                ],
+            SafeArea(
+              child: Column(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                    width: double.infinity,
+                    child: const Row(
+                      children: [
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                        ),
+                        Expanded(
+                          child: Hero(
+                            tag: HeroConstants.appBarTitle,
+                            child: Material(
+                              color: Colors.transparent,
+                              child: Text(
+                                "Phụ lục",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  shadows: [
+                                    Shadow(
+                                      blurRadius: 5.0,
+                                      color: Colors.black,
+                                      offset: Offset(2.0, 2.0),
+                                    ),
+                                  ],
+                                ),
+                                textAlign: TextAlign.center,
                               ),
-                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 40,
-                        height: 40,
-                      ),
-                    ],
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: ListView(
-                    physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                    children: [
-                      _buildViewRow1(),
-                    ],
+                  Expanded(
+                    child: ListView(
+                      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      children: [
+                        _buildViewRow1(),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  _buildBannerAd(),
+                ],
+              ),
             ),
           ],
         ),
@@ -179,6 +184,30 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildBannerAd() {
+    return Container(
+      color: Colors.transparent,
+      margin: const EdgeInsets.fromLTRB(0, 2, 0, 2),
+      child: MaxAdView(
+        adUnitId: getBannerAdUnitId(),
+        adFormat: AdFormat.banner,
+        listener: AdViewAdListener(onAdLoadedCallback: (ad) {
+          debugPrint('Banner widget ad loaded from ${ad.networkName}');
+        }, onAdLoadFailedCallback: (adUnitId, error) {
+          debugPrint('Banner widget ad failed to load with error code ${error.code} and message: ${error.message}');
+        }, onAdClickedCallback: (ad) {
+          debugPrint('Banner widget ad clicked');
+        }, onAdExpandedCallback: (ad) {
+          debugPrint('Banner widget ad expanded');
+        }, onAdCollapsedCallback: (ad) {
+          debugPrint('Banner widget ad collapsed');
+        }, onAdRevenuePaidCallback: (ad) {
+          debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
+        }),
       ),
     );
   }
