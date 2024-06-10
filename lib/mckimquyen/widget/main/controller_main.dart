@@ -27,6 +27,7 @@ class ControllerMain extends BaseController {
   var buildId = "".obs;
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
   final _dbHelper = DatabaseHelper();
+  var listHistory = <History>[].obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1546,8 +1547,10 @@ class ControllerMain extends BaseController {
   Future<void> getListHistory() async {
     var list = await _dbHelper.getHistories();
     debugPrint("roy93~ getListHistory ${list.length}");
-    for (var element in list) {
-      debugPrint("roy93~ element ${element.toJson()}");
-    }
+    // for (var element in list) {
+    //   debugPrint("roy93~ element ${element.toJson()}");
+    // }
+    listHistory.value = list;
+    listHistory.refresh();
   }
 }

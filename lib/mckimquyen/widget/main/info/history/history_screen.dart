@@ -8,7 +8,8 @@ import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:slider_button/slider_button.dart';
 
-//TODO roy93~ empty state
+//TODO roy93~ xoa tat ca
+//TODO roy93~ xoa tung item
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({
     super.key,
@@ -20,6 +21,7 @@ class HistoryScreen extends StatefulWidget {
 
 class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
   final ControllerMain _controllerMain = Get.find();
+
   @override
   void initState() {
     super.initState();
@@ -115,6 +117,48 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
   }
 
   Widget _buildBody() {
-    return Container();
+    return Obx(() {
+      var listHistory = _controllerMain.listHistory;
+      if (listHistory.isEmpty) {
+        return _buildEmptyView();
+      } else {
+        return _buildListView();
+      }
+    });
+  }
+
+  Widget _buildEmptyView() {
+    return Container(
+      color: Colors.transparent,
+      width: Get.width,
+      height: Get.height,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/anim_1.gif",
+            height: 250,
+            fit: BoxFit.cover,
+          ),
+          const Text(
+            "Chưa có lịch sử dò nhanh",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildListView() {
+    return Container(
+      color: Colors.transparent,
+      width: Get.width,
+      height: Get.height,
+    );
   }
 }
