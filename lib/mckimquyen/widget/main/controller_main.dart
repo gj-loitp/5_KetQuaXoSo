@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pretty_dio_logger/flutter_pretty_dio_logger.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
+import 'package:ketquaxoso/mckimquyen/db/database_helper.dart';
+import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -24,6 +26,7 @@ class ControllerMain extends BaseController {
   var isSettingOnResultVietlotMax3d = false.obs;
   var buildId = "".obs;
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
+  final _dbHelper = DatabaseHelper();
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1533,4 +1536,18 @@ class ControllerMain extends BaseController {
   }
 
   ///END ZONE MAX3D
+
+  ///LICH SU DO NHANH
+  Future<void> insertHistory(History history) async {
+    debugPrint("roy93~ insertHistory ${history.toJson()}");
+    await _dbHelper.insertHistory(history);
+  }
+
+  Future<void> getListHistory() async {
+    var list = await _dbHelper.getHistories();
+    debugPrint("roy93~ getListHistory ${list.length}");
+    for (var element in list) {
+      debugPrint("roy93~ element ${element.toJson()}");
+    }
+  }
 }

@@ -3,6 +3,7 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/db/history.dart';
 
 import '../../common/const/dimen_constants.dart';
 import '../../core/base_stateful_state.dart';
@@ -392,6 +393,13 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
     } else if (widget.callFromScreen == XSMBScreen.path) {
       _controllerMain.applySearchXSMB();
     }
+    _controllerMain.insertHistory(
+      History(
+        id: DateTime.now().millisecondsSinceEpoch.toString(),
+        callFromScreen: widget.callFromScreen,
+        province: widget.province,
+      ),
+    );
     _exitScreen();
   }
 

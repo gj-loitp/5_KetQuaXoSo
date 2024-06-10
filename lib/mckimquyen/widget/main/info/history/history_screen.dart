@@ -5,6 +5,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:slider_button/slider_button.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -17,9 +18,11 @@ class HistoryScreen extends StatefulWidget {
 }
 
 class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
+  final ControllerMain _controllerMain = Get.find();
   @override
   void initState() {
     super.initState();
+    _controllerMain.getListHistory();
   }
 
   @override
