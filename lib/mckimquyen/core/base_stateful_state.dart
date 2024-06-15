@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import '../common/const/dimen_constants.dart';
 import '../util/ui_utils.dart';
 
-
 abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
   BaseStatefulState();
 
@@ -427,6 +426,25 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.grey,
+                        radius: 45,
+                        child: IconButton(
+                          padding: EdgeInsets.zero,
+                          icon: const Icon(Icons.close),
+                          color: Colors.white,
+                          onPressed: () {
+                            Get.back();
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
                   Image.asset(
                     imgPath,
                     height: 155,
