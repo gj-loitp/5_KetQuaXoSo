@@ -1540,7 +1540,7 @@ class ControllerMain extends BaseController {
 
   ///LICH SU DO NHANH
   Future<void> insertHistory(History history) async {
-    debugPrint("roy93~ insertHistory ${history.toJson()}");
+    // debugPrint("insertHistory ${history.toJson()}");
     await _dbHelper.insertHistory(history);
   }
 
@@ -1554,8 +1554,10 @@ class ControllerMain extends BaseController {
     listHistory.refresh();
   }
 
-  void deleteHistory(History history, int index){
+  Future<void> deleteHistory(History history, int index) async {
+    var idDeleted = await _dbHelper.deleteHistory(history.id ?? "");
+    // debugPrint("idDeleted $idDeleted");
     var itemDeleted = listHistory.removeAt(index);
-    debugPrint("roy93~ itemDeleted ${itemDeleted.toJson()}");
+    // debugPrint("itemDeleted ${itemDeleted.toJson()}");
   }
 }

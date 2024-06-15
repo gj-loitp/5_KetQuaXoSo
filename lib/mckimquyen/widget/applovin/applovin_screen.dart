@@ -41,7 +41,7 @@ String getBannerAdUnitId() {
 //     return true;
 //   }
 //   var isDeviceTest = _listMyDevice.contains(deviceId);
-//   debugPrint("roy93~ isDeviceTest $isDeviceTest");
+//   debugPrint("isDeviceTest $isDeviceTest");
 //   return isDeviceTest;
 // }
 

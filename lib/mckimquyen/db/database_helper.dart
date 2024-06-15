@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:ketquaxoso/mckimquyen/model/province.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -48,6 +49,15 @@ class DatabaseHelper {
         'provinceUrl': history.province?.url,
       },
       conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  Future<int> deleteHistory(String id) async {
+    final db = await database;
+    return await db.delete(
+      table,
+      where: 'id = ?',
+      whereArgs: [id],
     );
   }
 
