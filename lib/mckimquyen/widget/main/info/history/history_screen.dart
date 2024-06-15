@@ -105,22 +105,28 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              _showBottomSheetMenu();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.menu,
-                              color: Colors.black,
+                        Obx(() {
+                          var visible = _controllerMain.listHistory.isNotEmpty;
+                          return Visibility(
+                            visible: visible,
+                            child: SizedBox(
+                              width: 40,
+                              height: 40,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  _showBottomSheetMenu();
+                                },
+                                color: Colors.white,
+                                padding: const EdgeInsets.all(0),
+                                shape: const CircleBorder(),
+                                child: const Icon(
+                                  Icons.menu,
+                                  color: Colors.black,
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
+                          );
+                        }),
                       ],
                     ),
                   ),
