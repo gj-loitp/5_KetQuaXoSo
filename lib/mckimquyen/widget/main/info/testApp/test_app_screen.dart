@@ -163,7 +163,7 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
           ),
           const SizedBox(height: 16),
           _buildTextBody(
-              "Sau khi đã hoàn tất đăng ký vào Cộng đồng tester, bạn có thể click vào các nút bên dưới để trải nghịệm những ứng dụng mới nhất, sớm nhất từ chúng tôi."),
+              "Sau khi đã hoàn tất đăng ký vào Cộng đồng tester, bạn có thể click vào các nút bên dưới để trải nghiệm những ứng dụng mới nhất, sớm nhất từ chúng tôi."),
           UIUtils.getButton(
             "Cat Gallery",
             Icons.navigate_next,
