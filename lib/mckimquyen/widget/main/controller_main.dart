@@ -1553,4 +1553,9 @@ class ControllerMain extends BaseController {
     listHistory.value = list;
     listHistory.refresh();
   }
+
+  void deleteHistory(History history, int index){
+    var itemDeleted = listHistory.removeAt(index);
+    debugPrint("roy93~ itemDeleted ${itemDeleted.toJson()}");
+  }
 }

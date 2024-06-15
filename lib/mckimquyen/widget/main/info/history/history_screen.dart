@@ -163,13 +163,13 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
         physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         itemCount: listHistory.length,
         itemBuilder: (context, i) {
-          return _buildItemView(listHistory[i]);
+          return _buildItemView(listHistory[i], i);
         },
       ),
     );
   }
 
-  Widget _buildItemView(History history) {
+  Widget _buildItemView(History history, int index) {
     return DismissibleTile(
       key: UniqueKey(),
       padding: EdgeInsets.zero,
@@ -200,11 +200,11 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
         return true;
       },
       onDismissed: (DismissibleTileDirection direction) {
-        debugPrint("roy93~ onDismissed direction $direction");
-        //TODO roy93~
+        // debugPrint("onDismissed direction $direction");
+        _deleteHistory(history, index);
       },
       onDismissConfirmed: () {
-        debugPrint("roy93~ onDismissConfirmed");
+        //do nothing
       },
       child: Container(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
@@ -302,5 +302,10 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
         ),
       ),
     );
+  }
+
+  void _deleteHistory(History history, int index){
+    debugPrint("roy93~ _deleteHistory index $index");
+    _controllerMain.deleteHistory(history, index);
   }
 }
