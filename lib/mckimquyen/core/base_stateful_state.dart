@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 import '../common/const/dimen_constants.dart';
 import '../util/ui_utils.dart';
@@ -398,7 +399,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
   void showDialogSuccess(
     Widget textCenter,
     String confirmText,
-    String imgPath,
+    String lottiePath,
     bool barrierDismissible,
     Function onClickConfirm,
   ) {
@@ -445,10 +446,10 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                       ),
                     ),
                   ),
-                  Image.asset(
-                    imgPath,
-                    height: 135,
+                  Lottie.asset(
+                    lottiePath,
                     width: 135,
+                    height: 135,
                   ),
                   const SizedBox(height: DimenConstants.marginPaddingMedium),
                   textCenter,
