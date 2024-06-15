@@ -9,7 +9,6 @@ import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
-//TODO roy93~ xoa tat ca
 //TODO roy93~ click vao item se qua trang do so luon
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({
