@@ -254,6 +254,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_email_sender",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_email_sender-6.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_launcher_icons",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
       "packageUri": "lib/",
@@ -1064,7 +1070,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-06-10T16:43:51.381396Z",
+  "generated": "2024-06-15T15:19:28.335071Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

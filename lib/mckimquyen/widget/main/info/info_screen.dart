@@ -1,8 +1,8 @@
 import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
@@ -263,8 +263,20 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
         "Gửi email ngay",
         "assets/images/ic_support.png",
         true,
-        () {},
+        () {
+          _sendEmail();
+        },
       );
     });
+  }
+
+  Future<void> _sendEmail() async {
+    final Email email = Email(
+      body: 'Nhập phản hồi của bạn ở bên dưới nhé:',
+      subject: '[V/v] Hỗ trợ cho ứng dụng KQXS',
+      recipients: ['roy.mobile.dev@gmail.com'],
+      isHTML: false,
+    );
+    await FlutterEmailSender.send(email);
   }
 }

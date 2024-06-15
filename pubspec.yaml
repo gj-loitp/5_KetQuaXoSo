@@ -56,6 +56,7 @@ dependencies:
   sqflite: ^2.3.3+1
   path: ^1.9.0
   flutter_dismissible_tile: ^1.0.3
+  flutter_email_sender: ^6.0.3
 
 dev_dependencies:
   flutter_test:
