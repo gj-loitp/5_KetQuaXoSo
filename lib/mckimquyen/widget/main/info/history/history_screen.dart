@@ -377,9 +377,11 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
         ),
       ),
       "Xoá",
-      "assets/images/ic_delete.png",
+      "assets/images/ic_delete.gif",
       true,
-      () {},
+      () {
+        //TODO roy93~
+      },
     );
   }
 }
