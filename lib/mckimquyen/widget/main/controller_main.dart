@@ -28,6 +28,7 @@ class ControllerMain extends BaseController {
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
   final _dbHelper = DatabaseHelper();
   var listHistory = <History>[].obs;
+  var isGoToGroupTester = false.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();

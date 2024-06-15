@@ -5,6 +5,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:slider_button/slider_button.dart';
 
 class TestAppScreen extends StatefulWidget {
@@ -17,6 +18,8 @@ class TestAppScreen extends StatefulWidget {
 }
 
 class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
+  final ControllerMain _controllerMain = Get.find();
+
   @override
   void initState() {
     super.initState();
@@ -24,6 +27,7 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
 
   @override
   void dispose() {
+    _controllerMain.isGoToGroupTester.value = false;
     super.dispose();
   }
 
@@ -119,94 +123,99 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
         borderRadius: BorderRadius.all(Radius.circular(45.0)),
         color: Colors.white,
       ),
-      child: ListView(
-        padding: const EdgeInsets.only(bottom: 16),
-        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-        children: [
-          _buildTextHeader("Giới thiệu về Cộng đồng test app"),
-          _buildTextBody(
-              "Hoan nghênh bạn đến với Cộng đồng test app. Đây là nơi mà bạn sẽ được trải nghiệm những ứng dụng đầu tiên từ nhà phát triển, trước khi các ứng dụng này được xuất bản công khai ra thị trường."),
-          _buildTextHeader("Quyền lợi"),
-          _buildTextBody(
-              "Khi đăng ký thành công Cộng đồng test app, bạn sẽ được trải nghiệm ứng dụng đầu tiên. Bạn sẽ là người tiên phong và có quyền yêu cầu nhà phát triển chỉnh sửa phần mềm này theo nhu cầu của bạn."),
-          _buildTextHeader("Cách đăng ký"),
-          _buildTextBody(
-              "Bằng cách nhấn vào nút Đăng Ký ở bên dưới. Bạn sẽ được điều hướng tham gia nhóm Tester của chúng tôi, sau đó bạn sẽ nhận được màn hình xác nhận tham gia nhóm. Nhấn nút Tham Gia/Join để hoàn tất quá trình đăng kí."),
-          const SizedBox(height: 16),
-          SliderButton(
-            vibrationFlag: true,
-            action: () async {
-              _goToGroupTester();
-              return false;
-            },
-            label: const Text(
-              "Trượt sang phải để đăng ký",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
+      child: Obx((){
+        var isGoToGroupTester = _controllerMain.isGoToGroupTester.value;
+        return ListView(
+          padding: const EdgeInsets.only(bottom: 16),
+          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+          children: [
+            _buildTextHeader("Giới thiệu về Cộng đồng test app"),
+            _buildTextBody(
+                "Hoan nghênh bạn đến với Cộng đồng test app. Đây là nơi mà bạn sẽ được trải nghiệm những ứng dụng đầu tiên từ nhà phát triển, trước khi các ứng dụng này được xuất bản công khai ra thị trường."),
+            _buildTextHeader("Quyền lợi"),
+            _buildTextBody(
+                "Khi đăng ký thành công Cộng đồng test app, bạn sẽ được trải nghiệm ứng dụng đầu tiên. Bạn sẽ là người tiên phong và có quyền yêu cầu nhà phát triển chỉnh sửa phần mềm này theo nhu cầu của bạn."),
+            _buildTextHeader("Cách đăng ký"),
+            _buildTextBody(
+                "Bằng cách nhấn vào nút Đăng Ký ở bên dưới. Bạn sẽ được điều hướng tham gia nhóm Tester của chúng tôi, sau đó bạn sẽ nhận được màn hình xác nhận tham gia nhóm. Nhấn nút Tham Gia/Join để hoàn tất quá trình đăng kí."),
+            const SizedBox(height: 16),
+            SliderButton(
+              vibrationFlag: true,
+              action: () async {
+                _goToGroupTester();
+                return false;
+              },
+              label: const Text(
+                "Trượt sang phải để đăng ký",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
               ),
-            ),
-            icon: const Text(
-              "➤",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 28,
+              icon: const Text(
+                "➤",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 28,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
+              buttonColor: ColorConstants.appColor.withOpacity(0.8),
+              backgroundColor: Colors.blue.withOpacity(0.5),
+              highlightedColor: Colors.white,
+              baseColor: ColorConstants.appColor,
             ),
-            buttonColor: ColorConstants.appColor.withOpacity(0.8),
-            backgroundColor: Colors.blue.withOpacity(0.5),
-            highlightedColor: Colors.white,
-            baseColor: ColorConstants.appColor,
-          ),
-          const SizedBox(height: 16),
-          _buildTextBody(
-              "Sau khi đã hoàn tất đăng ký vào Cộng đồng tester, bạn có thể click vào các nút bên dưới để trải nghiệm những ứng dụng mới nhất, sớm nhất từ chúng tôi."),
-          UIUtils.getButton(
-            "Cat Gallery",
-            Icons.navigate_next,
-            () {
-              UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.gallery");
-            },
-          ),
-          UIUtils.getButton(
-            "Cat Scanner with history",
-            Icons.navigate_next,
-            () {
-              UrlLauncherUtils.launchInBrowser(
-                  "https://play.google.com/store/apps/details?id=com.mckimquyen.binaryeye");
-            },
-          ),
-          UIUtils.getButton(
-            "RSS Cat hub",
-            Icons.navigate_next,
-            () {
-              UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.reader");
-            },
-          ),
-          UIUtils.getButton(
-            "Cat compass",
-            Icons.navigate_next,
-            () {
-              UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.compass");
-            },
-          ),
-          UIUtils.getButton(
-            "Cute Cat Weather",
-            Icons.navigate_next,
-            () {
-              UrlLauncherUtils.launchInBrowser(
-                  "https://play.google.com/store/apps/details?id=com.mckimquyen.catweatherforecast");
-            },
-          ),
-          const SizedBox(height: 16),
-          _buildTextHeader(
-              "Cám ơn bạn đã dành thời gian để đăng ký và trải nghiệm, kính chúc bạn nhiều sức khoẻ và gặp nhiều may mắn."),
-          _buildTextBody("Lời biết ơn chân thành từ đội ngũ phát triển ứng dụng."),
-        ],
-      ),
+            const SizedBox(height: 16),
+            if(isGoToGroupTester)...[
+              _buildTextBody(
+                  "Sau khi đã hoàn tất đăng ký vào Cộng đồng tester, bạn có thể click vào các nút bên dưới để trải nghiệm những ứng dụng mới nhất, sớm nhất từ chúng tôi."),
+              UIUtils.getButton(
+                "Cat Gallery",
+                Icons.navigate_next,
+                    () {
+                  UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.gallery");
+                },
+              ),
+              UIUtils.getButton(
+                "Cat Scanner with history",
+                Icons.navigate_next,
+                    () {
+                  UrlLauncherUtils.launchInBrowser(
+                      "https://play.google.com/store/apps/details?id=com.mckimquyen.binaryeye");
+                },
+              ),
+              UIUtils.getButton(
+                "RSS Cat hub",
+                Icons.navigate_next,
+                    () {
+                  UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.reader");
+                },
+              ),
+              UIUtils.getButton(
+                "Cat compass",
+                Icons.navigate_next,
+                    () {
+                  UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.compass");
+                },
+              ),
+              UIUtils.getButton(
+                "Cute Cat Weather",
+                Icons.navigate_next,
+                    () {
+                  UrlLauncherUtils.launchInBrowser(
+                      "https://play.google.com/store/apps/details?id=com.mckimquyen.catweatherforecast");
+                },
+              ),
+              const SizedBox(height: 16),
+            ],
+            _buildTextHeader(
+                "Cám ơn bạn đã dành thời gian để đăng ký và trải nghiệm, kính chúc bạn nhiều sức khoẻ và gặp nhiều may mắn."),
+            _buildTextBody("Lời biết ơn chân thành từ đội ngũ phát triển ứng dụng."),
+          ],
+        );
+      }),
     );
   }
 
@@ -233,7 +242,8 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
   }
 
   void _goToGroupTester() {
-    debugPrint("roy93~ _goToGroupTester");
+    // debugPrint("_goToGroupTester");
     UrlLauncherUtils.launchGroupTester();
+    _controllerMain.isGoToGroupTester.value = true;
   }
 }
