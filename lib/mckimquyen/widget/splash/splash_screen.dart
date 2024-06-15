@@ -34,23 +34,23 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
     AppLovinMAX.setInterstitialListener(InterstitialListener(
       onAdLoadedCallback: (ad) {
         // Interstitial ad is ready to be shown. AppLovinMAX.isInterstitialReady(_interstitial_ad_unit_id) will now return 'true'
-        debugPrint('roy93~ Interstitial ad loaded from ${ad.networkName}');
+        // debugPrint('Interstitial ad loaded from ${ad.networkName}');
       },
       onAdLoadFailedCallback: (adUnitId, error) {
         // Interstitial ad failed to load
-        debugPrint('roy93~ Interstitial onAdLoadFailedCallback error $error');
+        // debugPrint('Interstitial onAdLoadFailedCallback error $error');
       },
       onAdDisplayedCallback: (ad) {
-        debugPrint("roy93~ Interstitial onAdDisplayedCallback");
+        // debugPrint("Interstitial onAdDisplayedCallback");
       },
       onAdDisplayFailedCallback: (ad, error) {
-        debugPrint("roy93~ Interstitial onAdDisplayFailedCallback");
+        // debugPrint("Interstitial onAdDisplayFailedCallback");
       },
       onAdClickedCallback: (ad) {
-        debugPrint("roy93~ Interstitial onAdClickedCallback");
+        // debugPrint("Interstitial onAdClickedCallback");
       },
       onAdHiddenCallback: (ad) {
-        debugPrint("roy93~ Interstitial onAdHiddenCallback");
+        // debugPrint("Interstitial onAdHiddenCallback");
       },
     ));
 
@@ -60,11 +60,11 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
 
   Future<void> _showInterAd() async {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
-    debugPrint('roy93~ _showInterAd isReady $isReady');
+    // debugPrint('_showInterAd isReady $isReady');
     if (isReady) {
       AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
-      debugPrint('roy93~ Loading interstitial ad...');
+      // debugPrint('Loading interstitial ad...');
       AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
     }
   }
@@ -73,7 +73,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   void initState() {
     super.initState();
     _controllerMain.isInitializePluginApplovinFinished.listen((isInitializePluginApplovinFinished) {
-      debugPrint("roy93~ initState isInitializePluginApplovinFinished $isInitializePluginApplovinFinished");
+      // debugPrint("initState isInitializePluginApplovinFinished $isInitializePluginApplovinFinished");
       if (isInitializePluginApplovinFinished) {
         var timeStartApp = _controllerMain.timeStartApp.value;
         var timeNow = DateTime.now().millisecondsSinceEpoch;
@@ -170,14 +170,14 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
                       isTimerTextShown: true,
                       autoStart: true,
                       onStart: () {
-                        debugPrint('roy93~ Countdown Started');
+                        // debugPrint('Countdown Started');
                       },
                       onComplete: () {
-                        debugPrint('roy93~ Countdown Ended');
+                        // debugPrint('Countdown Ended');
                         _goToMainScreen();
                       },
                       onChange: (String timeStamp) {
-                        debugPrint('roy93~ Countdown Changed $timeStamp');
+                        // debugPrint('Countdown Changed $timeStamp');
                       },
                       timeFormatterFunction: (defaultFormatterFunction, duration) {
                         return Function.apply(defaultFormatterFunction, [duration]);

@@ -27,12 +27,12 @@ final String _bannerAdUnitId = Platform.isAndroid ? "6c6774508ca9bebb" : "IOS_BA
 // ];
 
 String getInterstitialAdUnitId() {
-  print("roy93~ getInterstitialAdUnitId deviceId $deviceId");
+  debugPrint("getInterstitialAdUnitId deviceId $deviceId");
   return _interstitialAdUnitId;
 }
 
 String getBannerAdUnitId() {
-  print("roy93~ getBannerAdUnitId deviceId $deviceId");
+  debugPrint("getBannerAdUnitId deviceId $deviceId");
   return _bannerAdUnitId;
 }
 
