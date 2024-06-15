@@ -78,7 +78,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
             ),
           ),
           "Không hiển thị lại",
-          "assets/images/ic_success.png",
+          "assets/files/love.json",
           true,
           () {
             SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedDialogHello, true);
@@ -86,7 +86,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
         );
       });
     }
-
     var keyTooltipTheme = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme);
     if (keyTooltipTheme != true) {
       return;

@@ -448,8 +448,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                   ),
                   Lottie.asset(
                     lottiePath,
-                    width: 135,
-                    height: 135,
+                    width: 155,
+                    height: 155,
                   ),
                   const SizedBox(height: DimenConstants.marginPaddingMedium),
                   textCenter,
