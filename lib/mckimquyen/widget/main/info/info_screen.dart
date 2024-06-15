@@ -1,6 +1,8 @@
 import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
@@ -163,6 +165,21 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
             Get.to(() => const TestAppScreen());
           },
         ),
+        _buildViewItem(
+          "Hỗ trợ\nPhản hồi",
+          "assets/images/ic_support.png",
+          () {
+            _showDialogSupport();
+          },
+        ),
+        Opacity(
+          opacity: 0.0,
+          child: _buildViewItem(
+            "",
+            "assets/images/ic_testing.png",
+            () {},
+          ),
+        ),
       ],
     );
   }
@@ -227,5 +244,27 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
         }),
       ),
     );
+  }
+
+  Future<void> _showDialogSupport() async {
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      showDialogSuccess(
+        const Material(
+          child: Text(
+            "Chào bạn :)\nNếu bạn gặp bất kỳ sự cố nào khi sử dụng ứng dụng hoặc cần hỗ trợ.\nHãy gửi email cho chúng tôi để nhận được giải đáp nhanh nhất trong vòng 24h.",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        "Gửi email ngay",
+        "assets/images/ic_support.png",
+        true,
+        () {},
+      );
+    });
   }
 }

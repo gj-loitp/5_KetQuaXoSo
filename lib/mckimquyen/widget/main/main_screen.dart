@@ -78,6 +78,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
             ),
           ),
           "Không hiển thị lại",
+          "assets/images/ic_success.png",
           true,
           () {
             SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedDialogHello, true);

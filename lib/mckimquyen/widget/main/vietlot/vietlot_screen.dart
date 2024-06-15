@@ -116,6 +116,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                                     ),
                                   ),
                                   "Cài đặt",
+                                  "assets/images/ic_success.png",
                                   true,
                                   () {
                                     Get.to(() => const SettingScreen());

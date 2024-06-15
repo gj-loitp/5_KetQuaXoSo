@@ -399,6 +399,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
   void showDialogSuccess(
     Widget textCenter,
     String confirmText,
+    String imgPath,
     bool barrierDismissible,
     Function onClickConfirm,
   ) {
@@ -427,7 +428,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Image.asset(
-                    "assets/images/ic_success.png",
+                    imgPath,
                     height: 155,
                     width: 155,
                   ),
