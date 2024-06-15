@@ -6,6 +6,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 //TODO roy93~ xoa tat ca
 //TODO roy93~ click vao item se qua trang do so luon
@@ -81,23 +82,42 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        const Material(
-                          color: Colors.transparent,
-                          child: Text(
-                            "Lịch sử dò nhanh",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
-                                ),
-                              ],
+                        const Expanded(
+                          child: Material(
+                            color: Colors.transparent,
+                            child: Text(
+                              "Lịch sử dò nhanh",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                                fontSize: 24,
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 5.0,
+                                    color: Colors.black,
+                                    offset: Offset(2.0, 2.0),
+                                  ),
+                                ],
+                              ),
+                              textAlign: TextAlign.start,
                             ),
-                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: MaterialButton(
+                            onPressed: () {
+                              _showBottomSheetMenu();
+                            },
+                            color: Colors.white,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.menu,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ],
@@ -304,8 +324,33 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
     );
   }
 
-  void _deleteHistory(History history, int index){
-    debugPrint("roy93~ _deleteHistory index $index");
+  void _deleteHistory(History history, int index) {
+    // debugPrint("_deleteHistory index $index");
     _controllerMain.deleteHistory(history, index);
+  }
+
+  void _showBottomSheetMenu() {
+    showBarModalBottomSheet(
+      context: context,
+      builder: (context) => Container(
+        width: Get.width,
+        padding: const EdgeInsets.all(16),
+        height: Get.height / 2,
+        color: Colors.white,
+        child: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Mục lục",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

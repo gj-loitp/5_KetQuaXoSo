@@ -17,7 +17,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
     VoidCallback okAction,
   ) {
     showGeneralDialog(
-      barrierColor: Colors.black.withOpacity(0.5),
+      barrierColor: Colors.black.withOpacity(0.7),
       context: context,
       pageBuilder: (_, __, ___) {
         return WillPopScope(
@@ -185,7 +185,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
     showGeneralDialog(
       barrierDismissible: barrierDismissible,
       barrierLabel: "",
-      barrierColor: Colors.black.withOpacity(0.5),
+      barrierColor: Colors.black.withOpacity(0.7),
       context: context,
       pageBuilder: (_, __, ___) {
         return Center(
@@ -404,7 +404,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
   ) {
     showGeneralDialog(
       // barrierDismissible: barrierDismissible,
-      barrierColor: Colors.black.withOpacity(0.5),
+      barrierColor: Colors.black.withOpacity(0.7),
       context: context,
       pageBuilder: (_, __, ___) {
         return WillPopScope(

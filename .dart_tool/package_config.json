@@ -518,6 +518,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "modal_bottom_sheet",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/modal_bottom_sheet-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "nested",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/nested-1.0.0",
       "packageUri": "lib/",
@@ -1070,7 +1076,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-06-15T15:19:28.335071Z",
+  "generated": "2024-06-15T15:46:25.546678Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
