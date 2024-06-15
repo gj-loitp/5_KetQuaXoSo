@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
+import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
@@ -335,12 +336,12 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
       builder: (context) => Container(
         width: Get.width,
         padding: const EdgeInsets.all(16),
-        height: Get.height / 2,
+        height: 180,
         color: Colors.white,
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Mục lục",
               style: TextStyle(
                 fontSize: 22,
@@ -348,9 +349,37 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                 color: Colors.black,
               ),
             ),
+            UIUtils.getButton(
+              "Xoá tất cả dữ liệu",
+              Icons.navigate_next,
+              () {
+                Get.back();
+                _deleteAllDb();
+              },
+            ),
           ],
         ),
       ),
+    );
+  }
+
+  void _deleteAllDb() {
+    showDialogSuccess(
+      const Material(
+        child: Text(
+          "Bạn có chắc chắn muốn xoá toàn bộ lịch sử dò nhanh?\nThao tác này sẽ không thể khôi phục lại.",
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
+      "Xoá",
+      "assets/images/ic_delete.png",
+      true,
+      () {},
     );
   }
 }

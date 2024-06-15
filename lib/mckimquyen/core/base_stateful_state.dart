@@ -347,39 +347,39 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
     );
   }
 
-  void showErrorDialog(
-    String title,
-    String message,
-    String cancelTitle,
-    VoidCallback cancelCallback,
-  ) {
-    showAlertDialog(
-      false,
-      title,
-      message,
-      cancelTitle,
-      cancelCallback,
-      null,
-      null,
-    );
-  }
-
-  void showConfirmDialog(
-    String title,
-    String message,
-    String okTitle,
-    VoidCallback okCallback,
-  ) {
-    showAlertDialog(
-      true,
-      title,
-      message,
-      null,
-      null,
-      okTitle,
-      okCallback,
-    );
-  }
+  // void showErrorDialog(
+  //   String title,
+  //   String message,
+  //   String cancelTitle,
+  //   VoidCallback cancelCallback,
+  // ) {
+  //   showAlertDialog(
+  //     false,
+  //     title,
+  //     message,
+  //     cancelTitle,
+  //     cancelCallback,
+  //     null,
+  //     null,
+  //   );
+  // }
+  //
+  // void showConfirmDialog(
+  //   String title,
+  //   String message,
+  //   String okTitle,
+  //   VoidCallback okCallback,
+  // ) {
+  //   showAlertDialog(
+  //     true,
+  //     title,
+  //     message,
+  //     null,
+  //     null,
+  //     okTitle,
+  //     okCallback,
+  //   );
+  // }
 
   void showSnackBarFull(
     String title,
@@ -447,8 +447,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                   ),
                   Image.asset(
                     imgPath,
-                    height: 155,
-                    width: 155,
+                    height: 135,
+                    width: 135,
                   ),
                   const SizedBox(height: DimenConstants.marginPaddingMedium),
                   textCenter,
