@@ -12,6 +12,7 @@ import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/history/history_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/testApp/test_app_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/setting/setting_screen.dart';
 
 import 'information/thontinhuuich/information_screen.dart';
 
@@ -172,13 +173,12 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
             _showDialogSupport();
           },
         ),
-        Opacity(
-          opacity: 0.0,
-          child: _buildViewItem(
-            "",
-            "assets/images/ic_testing.png",
-            () {},
-          ),
+        _buildViewItem(
+          "Cài đặt\nứng dụng",
+          "assets/images/ic_settings.png",
+              () {
+            Get.to(() => const SettingScreen());
+          },
         ),
       ],
     );
