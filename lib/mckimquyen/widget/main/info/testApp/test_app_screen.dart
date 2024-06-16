@@ -123,7 +123,7 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
         borderRadius: BorderRadius.all(Radius.circular(45.0)),
         color: Colors.white,
       ),
-      child: Obx((){
+      child: Obx(() {
         var isGoToGroupTester = _controllerMain.isGoToGroupTester.value;
         return ListView(
           padding: const EdgeInsets.only(bottom: 16),
@@ -136,6 +136,10 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
             _buildTextBody(
                 "Khi đăng ký thành công Cộng đồng test app, bạn sẽ được trải nghiệm ứng dụng đầu tiên. Bạn sẽ là người tiên phong và có quyền yêu cầu nhà phát triển chỉnh sửa phần mềm này theo nhu cầu của bạn."),
             _buildTextHeader("Cách đăng ký"),
+            _buildTextBody(
+                "Có 2 cách:\nCách 1: Bạn gửi mail cho chúng tôi, chúng tôi sẽ gửi lại link truy cập ứng dụng cho bạn\nCách 2: Bạn nhấn nút đăng ký tham gia và sẽ có các nút truy cập ứng dụng Beta ở bên dưới."),
+            _buildTextHeader("Cách 1"),
+            _buildTextHeader("Cách 2"),
             _buildTextBody(
                 "Bằng cách nhấn vào nút Đăng Ký ở bên dưới. Bạn sẽ được điều hướng tham gia nhóm Tester của chúng tôi, sau đó bạn sẽ nhận được màn hình xác nhận tham gia nhóm. Nhấn nút Tham Gia/Join để hoàn tất quá trình đăng kí."),
             const SizedBox(height: 16),
@@ -168,20 +172,21 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
               baseColor: ColorConstants.appColor,
             ),
             const SizedBox(height: 16),
-            if(isGoToGroupTester)...[
+            if (isGoToGroupTester) ...[
               _buildTextBody(
                   "Sau khi đã hoàn tất đăng ký vào Cộng đồng tester, bạn có thể click vào các nút bên dưới để trải nghiệm những ứng dụng mới nhất, sớm nhất từ chúng tôi."),
               UIUtils.getButton(
                 "Cat Gallery",
                 Icons.navigate_next,
-                    () {
-                  UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.gallery");
+                () {
+                  UrlLauncherUtils.launchInBrowser(
+                      "https://play.google.com/store/apps/details?id=com.mckimquyen.gallery");
                 },
               ),
               UIUtils.getButton(
                 "Cat Scanner with history",
                 Icons.navigate_next,
-                    () {
+                () {
                   UrlLauncherUtils.launchInBrowser(
                       "https://play.google.com/store/apps/details?id=com.mckimquyen.binaryeye");
                 },
@@ -189,21 +194,23 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
               UIUtils.getButton(
                 "RSS Cat hub",
                 Icons.navigate_next,
-                    () {
-                  UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.reader");
+                () {
+                  UrlLauncherUtils.launchInBrowser(
+                      "https://play.google.com/store/apps/details?id=com.mckimquyen.reader");
                 },
               ),
               UIUtils.getButton(
                 "Cat compass",
                 Icons.navigate_next,
-                    () {
-                  UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.compass");
+                () {
+                  UrlLauncherUtils.launchInBrowser(
+                      "https://play.google.com/store/apps/details?id=com.mckimquyen.compass");
                 },
               ),
               UIUtils.getButton(
                 "Cute Cat Weather",
                 Icons.navigate_next,
-                    () {
+                () {
                   UrlLauncherUtils.launchInBrowser(
                       "https://play.google.com/store/apps/details?id=com.mckimquyen.catweatherforecast");
                 },
@@ -220,12 +227,15 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
   }
 
   Widget _buildTextHeader(String s) {
-    return Text(
-      s,
-      style: const TextStyle(
-        fontWeight: FontWeight.bold,
-        fontSize: 16,
-        color: Colors.black,
+    return Container(
+      padding: EdgeInsets.only(top: 16),
+      child: Text(
+        s,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 16,
+          color: Colors.black,
+        ),
       ),
     );
   }
