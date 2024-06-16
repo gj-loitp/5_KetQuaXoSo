@@ -385,7 +385,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
       "assets/files/delete.json",
       true,
       () {
-        //TODO roy93~
+        _controllerMain.deleteAllHistory();
       },
     );
   }

@@ -1556,9 +1556,16 @@ class ControllerMain extends BaseController {
   }
 
   Future<void> deleteHistory(History history, int index) async {
-    var idDeleted = await _dbHelper.deleteHistory(history.id ?? "");
-    // debugPrint("idDeleted $idDeleted");
+    var countDeleted = await _dbHelper.deleteHistory(history.id ?? "");
+    debugPrint("countDeleted $countDeleted");
     var itemDeleted = listHistory.removeAt(index);
-    // debugPrint("itemDeleted ${itemDeleted.toJson()}");
+    debugPrint("itemDeleted ${itemDeleted.toJson()}");
+  }
+
+  Future<void> deleteAllHistory() async {
+    var countDeleted = await _dbHelper.deleteAllHistory();
+    // debugPrint("countDeleted $countDeleted");
+    listHistory.clear();
+    listHistory.refresh();
   }
 }

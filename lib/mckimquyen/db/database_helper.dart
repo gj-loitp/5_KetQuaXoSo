@@ -61,6 +61,13 @@ class DatabaseHelper {
     );
   }
 
+  Future<int> deleteAllHistory() async {
+    final db = await database;
+    return await db.delete(
+      table,
+    );
+  }
+
   Future<List<History>> getHistories() async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(table);
