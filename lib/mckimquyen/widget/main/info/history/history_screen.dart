@@ -408,8 +408,14 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
       _controllerMain.applySearchXSMN();
     } else if (history.callFromScreen == XSMTScreen.path) {
       _controllerMain.goToPageMainByPathScreen(XSMTScreen.path);
+      _controllerMain.setCurrentDateXSMT(history.datetime ?? "");
+      _controllerMain.setCurrentNumberXSMT(history.number ?? "");
+      _controllerMain.applySearchXSMT();
     } else if (history.callFromScreen == XSMBScreen.path) {
       _controllerMain.goToPageMainByPathScreen(XSMBScreen.path);
+      _controllerMain.setCurrentDateXSMB(history.datetime ?? "");
+      _controllerMain.setCurrentNumberXSMB(history.number ?? "");
+      _controllerMain.applySearchXSMB();
     } else if (history.callFromScreen == ProvinceScreen.path) {
       //TODO
     }
