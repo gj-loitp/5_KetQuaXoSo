@@ -70,7 +70,7 @@ class DatabaseHelper {
 
   Future<List<History>> getHistories() async {
     final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query(table);
+    final List<Map<String, dynamic>> maps = await db.query(table, orderBy: "id DESC");
 
     return List.generate(maps.length, (i) {
       return History(
