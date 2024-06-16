@@ -403,6 +403,9 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
     Get.back();
     if (history.callFromScreen == XSMNScreen.path) {
       _controllerMain.goToPageMainByPathScreen(XSMNScreen.path);
+      _controllerMain.setCurrentDateXSMN(history.datetime ?? "");
+      _controllerMain.setCurrentNumberXSMN(history.number ?? "");
+      _controllerMain.applySearchXSMN();
     } else if (history.callFromScreen == XSMTScreen.path) {
       _controllerMain.goToPageMainByPathScreen(XSMTScreen.path);
     } else if (history.callFromScreen == XSMBScreen.path) {
