@@ -1,5 +1,6 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
@@ -138,8 +139,15 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
             _buildTextHeader("Cách đăng ký"),
             _buildTextBody(
                 "Có 2 cách:\nCách 1: Bạn gửi mail cho chúng tôi, chúng tôi sẽ gửi lại link truy cập ứng dụng cho bạn\nCách 2: Bạn nhấn nút đăng ký tham gia và sẽ có các nút truy cập ứng dụng Beta ở bên dưới."),
-            _buildTextHeader("Cách 1"),
-            _buildTextHeader("Cách 2"),
+            _buildTextHeader("Cách 1:"),
+            UIUtils.getButton(
+              "Gửi mail đăng ký",
+              Icons.mail,
+              () {
+                _sendEmailRegisterBeta();
+              },
+            ),
+            _buildTextHeader("Cách 2:"),
             _buildTextBody(
                 "Bằng cách nhấn vào nút Đăng Ký ở bên dưới. Bạn sẽ được điều hướng tham gia nhóm Tester của chúng tôi, sau đó bạn sẽ nhận được màn hình xác nhận tham gia nhóm. Nhấn nút Tham Gia/Join để hoàn tất quá trình đăng kí."),
             const SizedBox(height: 16),
@@ -255,5 +263,16 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
     // debugPrint("_goToGroupTester");
     UrlLauncherUtils.launchGroupTester();
     _controllerMain.isGoToGroupTester.value = true;
+  }
+
+  Future<void> _sendEmailRegisterBeta() async {
+    final Email email = Email(
+      body:
+          'Xin chào, tôi muốn đăng ký tham gia cộng đồng test app. Hãy gửi lại link truy cập ứng dụng cho tôi ngay nhé.\n',
+      subject: '[V/v] Đăng ký tham gia Cộng đồng test app',
+      recipients: ['roy.mobile.dev@gmail.com'],
+      isHTML: false,
+    );
+    await FlutterEmailSender.send(email);
   }
 }
