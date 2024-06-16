@@ -388,7 +388,12 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
       _controllerMain.applySearchXSMT();
     } else if (widget.callFromScreen == ProvinceScreen.path) {
       if (widget.province != null) {
-        _controllerMain.applySearchProvince(widget.province!, false, false);
+        _controllerMain.applySearchProvince(
+          widget.province!,
+          false,
+          false,
+          false,
+        );
       }
     } else if (widget.callFromScreen == XSMBScreen.path) {
       _controllerMain.applySearchXSMB();

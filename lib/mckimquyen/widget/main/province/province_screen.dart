@@ -2,6 +2,7 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
+import 'package:ketquaxoso/mckimquyen/util/duration_util.dart';
 import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -17,11 +18,13 @@ import '../controller_main.dart';
 class ProvinceScreen extends StatefulWidget {
   static const path = "ProvinceScreen";
   final Province province;
+  final String? datetime;
   final int index;
 
   const ProvinceScreen({
     super.key,
     required this.province,
+    required this.datetime,
     required this.index,
   });
 
@@ -36,8 +39,14 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
   void initState() {
     super.initState();
     // debugPrint("initState");
+    DateTime dt;
+    if (widget.datetime == null || widget.datetime?.isEmpty == true) {
+      dt = DateTime.now();
+    } else {
+      dt = DurationUtils.stringToDateTime(widget.datetime ?? "", DurationUtils.FORMAT_3) ?? DateTime.now();
+    }
     _selectDay(
-      DateTime.now(),
+      dt,
       true,
       false,
       false,

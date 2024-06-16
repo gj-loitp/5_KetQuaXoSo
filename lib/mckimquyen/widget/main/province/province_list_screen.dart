@@ -211,6 +211,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                     Get.to(
                           () => ProvinceScreen(
                         province: province,
+                        datetime: null,
                         index: index,
                       ),
                     );

@@ -953,6 +953,7 @@ class ControllerMain extends BaseController {
         provinceSelectedDateTime.value.month == dateTime.month &&
         provinceSelectedDateTime.value.year == dateTime.year &&
         !isFirstInit) {
+      debugPrint("return");
       return;
     }
 
@@ -1171,7 +1172,12 @@ class ControllerMain extends BaseController {
     }
   }
 
-  void applySearchProvince(Province province, bool isForceGetDataPast, bool isForceGetDataFuture) {
+  void applySearchProvince(
+    Province province,
+    bool isFirstInit,
+    bool isForceGetDataPast,
+    bool isForceGetDataFuture,
+  ) {
     var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
     var sCurrentSearchDate = provinceCurrentSearchDate.value;
     // debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
@@ -1179,7 +1185,7 @@ class ControllerMain extends BaseController {
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
     if (dt != null) {
-      setSelectedDateTimeProvince(province, dt, false, isForceGetDataPast, isForceGetDataFuture);
+      setSelectedDateTimeProvince(province, dt, isFirstInit, isForceGetDataPast, isForceGetDataFuture);
     }
   }
 

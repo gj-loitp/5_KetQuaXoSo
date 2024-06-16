@@ -399,7 +399,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
   }
 
   void _onClickHistory(History history, int index) {
-    debugPrint("roy93~ _onClickHistory $index -> ${history.toJson()}");
+    // debugPrint("_onClickHistory $index -> ${history.toJson()}");
     Get.back();
     if (history.callFromScreen == XSMNScreen.path) {
       _controllerMain.goToPageMainByPathScreen(XSMNScreen.path);
@@ -417,7 +417,25 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
       _controllerMain.setCurrentNumberXSMB(history.number ?? "");
       _controllerMain.applySearchXSMB();
     } else if (history.callFromScreen == ProvinceScreen.path) {
-      //TODO
+      if (history.province == null) {
+        //do nothing
+      } else {
+        Get.to(
+          () => ProvinceScreen(
+            province: history.province!,
+            datetime: history.datetime,
+            index: index,
+          ),
+        );
+        _controllerMain.setCurrentDateProvince(history.datetime ?? "");
+        _controllerMain.setCurrentNumberProvince(history.number ?? "");
+        _controllerMain.applySearchProvince(
+          history.province!,
+          false,
+          false,
+          false,
+        );
+      }
     }
   }
 }
