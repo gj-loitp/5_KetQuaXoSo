@@ -362,56 +362,56 @@
         <entry key="flutter_widget_from_html">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.15.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.15.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_widget_from_html_core">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.14.12/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.15.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="fwfh_cached_network_image">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_cached_network_image-0.14.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_cached_network_image-0.14.3/lib" />
             </list>
           </value>
         </entry>
         <entry key="fwfh_chewie">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_chewie-0.14.7/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_chewie-0.14.8/lib" />
             </list>
           </value>
         </entry>
         <entry key="fwfh_just_audio">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_just_audio-0.14.3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_just_audio-0.15.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="fwfh_svg">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_svg-0.8.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_svg-0.8.2/lib" />
             </list>
           </value>
         </entry>
         <entry key="fwfh_url_launcher">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_url_launcher-0.9.0+4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_url_launcher-0.9.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="fwfh_webview">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_webview-0.15.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_webview-0.15.1/lib" />
             </list>
           </value>
         </entry>
@@ -1299,14 +1299,14 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_pretty_dio_logger-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.10+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_udid-3.0.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.15.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.14.12/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_cached_network_image-0.14.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_chewie-0.14.7/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_just_audio-0.14.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_svg-0.8.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_url_launcher-0.9.0+4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_webview-0.15.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.15.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.15.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_cached_network_image-0.14.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_chewie-0.14.8/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_just_audio-0.15.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_svg-0.8.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_url_launcher-0.9.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fwfh_webview-0.15.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/get-4.6.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/highlight_text-1.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/html-0.15.4/lib" />
