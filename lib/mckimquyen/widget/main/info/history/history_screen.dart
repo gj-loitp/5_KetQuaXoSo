@@ -400,17 +400,19 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
 
   void _onClickHistory(History history, int index) {
     // debugPrint("_onClickHistory $index -> ${history.toJson()}");
-    Get.back();
     if (history.callFromScreen == XSMNScreen.path) {
+      Get.back();
       _controllerMain.goToPageMainByPathScreen(XSMNScreen.path);
       _controllerMain.setCurrentDateXSMN(history.datetime ?? "");
       _controllerMain.setCurrentNumberXSMN(history.number ?? "");
       _controllerMain.applySearchXSMN();
     } else if (history.callFromScreen == XSMTScreen.path) {
+      Get.back();
       _controllerMain.goToPageMainByPathScreen(XSMTScreen.path);
       _controllerMain.setCurrentDateXSMT(history.datetime ?? "");
       _controllerMain.setCurrentNumberXSMT(history.number ?? "");
       _controllerMain.applySearchXSMT();
+      Get.back();
     } else if (history.callFromScreen == XSMBScreen.path) {
       _controllerMain.goToPageMainByPathScreen(XSMBScreen.path);
       _controllerMain.setCurrentDateXSMB(history.datetime ?? "");

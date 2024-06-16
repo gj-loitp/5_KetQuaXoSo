@@ -261,7 +261,7 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           ),
         ),
         "Gửi email ngay",
-        "assets/images/ic_support.png",
+        "assets/files/support.json",
         true,
         () {
           _sendEmail();
