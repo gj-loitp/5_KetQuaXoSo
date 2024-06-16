@@ -7,9 +7,12 @@ import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/province/province_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
-//TODO roy93~ click vao item se qua trang do so luon
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({
     super.key,
@@ -232,80 +235,57 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
       onDismissConfirmed: () {
         //do nothing
       },
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-        margin: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.white),
-          borderRadius: const BorderRadius.all(Radius.circular(25)),
-          color: Colors.white.withOpacity(0.9),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "Dò số:",
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.yellow),
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(45),
-                    ),
-                    color: Colors.yellow,
-                  ),
-                  child: Text(
-                    history.number ?? "",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
-                      color: Colors.black,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "Ngày:",
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
-                ),
-                const Spacer(),
-                Text(
-                  history.datetime ?? "",
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.end,
-                ),
-              ],
-            ),
-            if (history.province?.name?.isNotEmpty == true)
+      child: InkWell(
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+          margin: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.white),
+            borderRadius: const BorderRadius.all(Radius.circular(25)),
+            color: Colors.white.withOpacity(0.9),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Đài:",
+                    "Dò số:",
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                  ),
+                  const Spacer(),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.yellow),
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(45),
+                      ),
+                      color: Colors.yellow,
+                    ),
+                    child: Text(
+                      history.number ?? "",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Ngày:",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
                       fontSize: 14,
@@ -314,7 +294,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                   ),
                   const Spacer(),
                   Text(
-                    history.province?.name ?? "",
+                    history.datetime ?? "",
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 14,
@@ -324,8 +304,36 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                   ),
                 ],
               ),
-          ],
+              if (history.province?.name?.isNotEmpty == true)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Đài:",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 14,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const Spacer(),
+                    Text(
+                      history.province?.name ?? "",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                ),
+            ],
+          ),
         ),
+        onTap: () {
+          _onClickHistory(history, index);
+        },
       ),
     );
   }
@@ -388,5 +396,19 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
         _controllerMain.deleteAllHistory();
       },
     );
+  }
+
+  void _onClickHistory(History history, int index) {
+    debugPrint("roy93~ _onClickHistory $index -> ${history.toJson()}");
+    Get.back();
+    if (history.callFromScreen == XSMNScreen.path) {
+      _controllerMain.goToPageMainByPathScreen(XSMNScreen.path);
+    } else if (history.callFromScreen == XSMTScreen.path) {
+      _controllerMain.goToPageMainByPathScreen(XSMTScreen.path);
+    } else if (history.callFromScreen == XSMBScreen.path) {
+      _controllerMain.goToPageMainByPathScreen(XSMBScreen.path);
+    } else if (history.callFromScreen == ProvinceScreen.path) {
+      //TODO
+    }
   }
 }

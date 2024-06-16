@@ -16,7 +16,7 @@ import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.
 import 'information/thontinhuuich/information_screen.dart';
 
 class InfoScreen extends StatefulWidget {
-  static String screenName = "/InfoScreen";
+  static String path = "InfoScreen";
 
   const InfoScreen({
     super.key,
@@ -27,7 +27,7 @@ class InfoScreen extends StatefulWidget {
 }
 
 class _InfoScreenState extends BaseStatefulState<InfoScreen> {
-  final ControllerMain _controllerMain = Get.find();
+  // final ControllerMain _controllerMain = Get.find();
   GlobalKey key = GlobalKey();
 
   @override
@@ -133,7 +133,7 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "Dò theo\ntỉnh thành",
           "assets/images/ic_city.png",
           () {
-            Get.to(() => ProvinceListScreen(InfoScreen.screenName));
+            Get.to(() => ProvinceListScreen(InfoScreen.path));
           },
         ),
         _buildViewItem(

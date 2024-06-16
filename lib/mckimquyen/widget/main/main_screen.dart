@@ -31,9 +31,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerProviderStateMixin {
   final ControllerMain _controllerMain = Get.find();
   final _controllerPage = PageController(initialPage: 0);
-
-  TabController? _tabController;
-
   final List<Widget> bottomBarPages = [
     const KeepAlivePage(child: XSMNScreen()),
     const KeepAlivePage(child: XSMTScreen()),
@@ -51,14 +48,14 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
     _controllerMain.getIsOnTextOverflow();
     _controllerMain.getIsOnResultVietlotMax3d();
     _checkToShowDialogHello();
-    _tabController = TabController(length: bottomBarPages.length, vsync: this);
+    _controllerMain.tabControllerMain = TabController(length: bottomBarPages.length, vsync: this);
   }
 
   @override
   void dispose() {
     _controllerMain.clearOnDispose();
     _controllerPage.dispose();
-    _tabController?.dispose();
+    _controllerMain.tabControllerMain?.dispose();
     super.dispose();
   }
 
@@ -154,7 +151,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
   Widget _buildPageView() {
     return TabBarView(
       // physics: const NeverScrollableScrollPhysics(),
-      controller: _tabController,
+      controller: _controllerMain.tabControllerMain,
       children: bottomBarPages,
     );
   }
@@ -217,7 +214,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
             ),
           ],
           // setup the controller
-          controller: _tabController,
+          controller: _controllerMain.tabControllerMain,
         ),
       ),
     );

@@ -13,6 +13,7 @@ import 'max3d/max3d_screen.dart';
 import 'mega/mega_screen.dart';
 
 class VietlotScreen extends StatefulWidget {
+  static const path = "VietlotScreen";
   const VietlotScreen({
     super.key,
   });

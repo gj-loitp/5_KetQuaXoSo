@@ -97,7 +97,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
         doneText: "Hoàn thành",
         onSkip: () {
           // debugPrint("onSkip widget.fromScreenName ${widget.fromScreenName}");
-          if (widget.fromScreenName == ProfileScreen.screenName) {
+          if (widget.fromScreenName == ProfileScreen.path) {
             Get.back();
           } else if (widget.fromScreenName == SplashScreen.screenName) {
             SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedIntroduction, true);
@@ -106,7 +106,7 @@ class _IntroductionScreenState extends BaseStatefulState<IntroductionScreen> {
         },
         onDone: () {
           // debugPrint("onDone widget.fromScreenName ${widget.fromScreenName}");
-          if (widget.fromScreenName == ProfileScreen.screenName) {
+          if (widget.fromScreenName == ProfileScreen.path) {
             Get.back();
           } else if (widget.fromScreenName == SplashScreen.screenName) {
             SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedIntroduction, true);

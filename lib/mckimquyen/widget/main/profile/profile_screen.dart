@@ -24,7 +24,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class ProfileScreen extends StatefulWidget {
-  static String screenName = "/ProfileScreen";
+  static String path = "ProfileScreen";
 
   const ProfileScreen({
     super.key,
@@ -258,7 +258,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                           return WillPopScope(
                                             onWillPop: () {
                                               // debugPrint("WillPopScope");
-                                              SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, true);
+                                              SharedPreferencesUtil.setBool(
+                                                  SharedPreferencesUtil.keyTooltipTheme, true);
                                               return Future(() => true);
                                             },
                                             child: Material(
@@ -314,16 +315,16 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 "Giới thiệu ứng dụng",
                                 Icons.hotel_class,
                                 description:
-                                "Chào mừng đến với ứng dụng KQXS, XSMN, XSMB, XSMT – ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!",
-                                    () {
-                                  Get.to(() => IntroductionScreen(ProfileScreen.screenName));
+                                    "Chào mừng đến với ứng dụng KQXS, XSMN, XSMB, XSMT – ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!",
+                                () {
+                                  Get.to(() => IntroductionScreen(ProfileScreen.path));
                                 },
                               ),
                               UIUtils.getButton(
                                 "Đánh giá ứng dụng",
                                 Icons.hotel_class,
                                 description: "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐bạn nhé!Tks bạn nhiều 😘",
-                                    () {
+                                () {
                                   UrlLauncherUtils.rateApp(null, null);
                                 },
                               ),
@@ -331,8 +332,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 "Thêm ứng dụng",
                                 Icons.card_giftcard,
                                 description:
-                                "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
-                                    () {
+                                    "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
+                                () {
                                   UrlLauncherUtils.moreApp();
                                 },
                               ),
@@ -340,7 +341,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 "Chia sẻ ứng dụng",
                                 Icons.ios_share,
                                 description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
-                                    () async {
+                                () async {
                                   final result = await Share.share(
                                       'https://play.google.com/store/apps/details?id=com.mckimquyen.kqxs');
                                   if (result.status == ShareResultStatus.success) {
@@ -352,8 +353,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 "Chính sách bảo mật",
                                 Icons.local_police,
                                 description:
-                                "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
-                                    () {
+                                    "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
+                                () {
                                   UrlLauncherUtils.launchPolicy();
                                 },
                               ),
@@ -361,8 +362,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 "Source code ở Github",
                                 Icons.data_object,
                                 description:
-                                "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
-                                    () {
+                                    "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
+                                () {
                                   UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
                                 },
                               ),
@@ -370,8 +371,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                 "Xoá dữ liệu tooltip",
                                 Icons.info,
                                 description:
-                                "Ứng dụng sẽ hiển thị lại các mục tooltip, giống như lần đầu tiên bạn tải ứng dụng này về",
-                                    () {
+                                    "Ứng dụng sẽ hiển thị lại các mục tooltip, giống như lần đầu tiên bạn tải ứng dụng này về",
+                                () {
                                   showSnackBarFull(StringConstants.warning,
                                       "Xoá dữ liệu tooltip thành công, bạn có thể sẽ cần khởi động lại để thấy kết quả");
                                   SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, false);
@@ -385,7 +386,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   "Applovin (only in Debug mode)",
                                   Icons.ad_units,
                                   description: "",
-                                      () {
+                                  () {
                                     Get.to(() => const ApplovinScreen());
                                   },
                                 ),

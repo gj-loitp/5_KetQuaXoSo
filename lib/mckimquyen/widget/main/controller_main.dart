@@ -6,6 +6,12 @@ import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/mckimquyen/db/database_helper.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -29,6 +35,7 @@ class ControllerMain extends BaseController {
   final _dbHelper = DatabaseHelper();
   var listHistory = <History>[].obs;
   var isGoToGroupTester = false.obs;
+  TabController? tabControllerMain;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -94,6 +101,26 @@ class ControllerMain extends BaseController {
 
   String _getFirstChars(String inputString, int count) {
     return inputString.substring(0, count);
+  }
+
+  void goToPageMainByIndex(int index) {
+    tabControllerMain?.index = index;
+  }
+
+  void goToPageMainByPathScreen(String pathScreen) {
+    if (pathScreen == XSMNScreen.path) {
+      goToPageMainByIndex(0);
+    } else if (pathScreen == XSMTScreen.path) {
+      goToPageMainByIndex(1);
+    } else if (pathScreen == XSMBScreen.path) {
+      goToPageMainByIndex(2);
+    } else if (pathScreen == VietlotScreen.path) {
+      goToPageMainByIndex(3);
+    } else if (pathScreen == InfoScreen.path) {
+      goToPageMainByIndex(4);
+    } else if (pathScreen == ProfileScreen.path) {
+      goToPageMainByIndex(5);
+    }
   }
 
   ///ZONE XSMN
