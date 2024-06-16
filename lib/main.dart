@@ -14,6 +14,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 
 //TODO firebase
 
+//TODO multi language
 //TODO quan ly ve so
 //TODO notification reminder
 //TODO scan de do ve so
