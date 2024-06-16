@@ -31,23 +31,23 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
     AppLovinMAX.setInterstitialListener(InterstitialListener(
       onAdLoadedCallback: (ad) {
         // Interstitial ad is ready to be shown. AppLovinMAX.isInterstitialReady(_interstitial_ad_unit_id) will now return 'true'
-        debugPrint('roy93~ Interstitial ad loaded from ${ad.networkName}');
+        // debugPrint('Interstitial ad loaded from ${ad.networkName}');
       },
       onAdLoadFailedCallback: (adUnitId, error) {
         // Interstitial ad failed to load
-        debugPrint('roy93~ Interstitial onAdLoadFailedCallback error $error');
+        // debugPrint('Interstitial onAdLoadFailedCallback error $error');
       },
       onAdDisplayedCallback: (ad) {
-        debugPrint("roy93~ onAdDisplayedCallback");
+        // debugPrint("onAdDisplayedCallback");
       },
       onAdDisplayFailedCallback: (ad, error) {
-        debugPrint("roy93~ onAdDisplayFailedCallback");
+        // debugPrint("onAdDisplayFailedCallback");
       },
       onAdClickedCallback: (ad) {
-        debugPrint("roy93~ onAdClickedCallback");
+        // debugPrint("onAdClickedCallback");
       },
       onAdHiddenCallback: (ad) {
-        debugPrint("roy93~ onAdHiddenCallback");
+        // debugPrint("onAdHiddenCallback");
       },
     ));
 
@@ -60,7 +60,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
     if (isReady) {
       AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
-      debugPrint('roy93~ Loading interstitial ad...');
+      // debugPrint('Loading interstitial ad...');
       AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
     }
   }

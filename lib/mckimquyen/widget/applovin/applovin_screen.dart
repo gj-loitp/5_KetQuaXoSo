@@ -251,7 +251,7 @@ Incomplete, if not for you.""",
     } else {
       deviceId = await PlatformDeviceId.getDeviceId;
       var configuration = await AppLovinMAX.initialize(sdkKey);
-      debugPrint("roy93~ configuration isTestModeEnabled ${configuration?.isTestModeEnabled}");
+      // debugPrint("configuration isTestModeEnabled ${configuration?.isTestModeEnabled}");
       if (configuration != null) {
         _isInitialized = true;
         logStatus("SDK Initialized: $configuration");
@@ -341,7 +341,7 @@ Incomplete, if not for you.""",
 
   void logStatus(String status) {
     /// ignore: avoid_print
-    debugPrint("roy93~ $status");
+    // debugPrint("$status");
 
     setState(() {
       _statusText = status;

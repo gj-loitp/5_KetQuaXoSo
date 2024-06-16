@@ -1547,9 +1547,9 @@ class ControllerMain extends BaseController {
 
   Future<void> getListHistory() async {
     var list = await _dbHelper.getHistories();
-    debugPrint("roy93~ getListHistory ${list.length}");
+    // debugPrint("getListHistory ${list.length}");
     // for (var element in list) {
-    //   debugPrint("roy93~ element ${element.toJson()}");
+    //   debugPrint("element ${element.toJson()}");
     // }
     listHistory.value = list;
     listHistory.refresh();

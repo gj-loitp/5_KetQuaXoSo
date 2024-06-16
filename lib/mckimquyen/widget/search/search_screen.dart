@@ -71,7 +71,7 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
     if (isReady) {
       AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
-      debugPrint('roy93~ Loading interstitial ad...');
+      // debugPrint('Loading interstitial ad...');
       AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
     }
   }
