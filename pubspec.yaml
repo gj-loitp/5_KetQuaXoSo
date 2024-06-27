@@ -1,7 +1,7 @@
 name: ketquaxoso
 description: A new Flutter project.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 2024.06.16+20240616
+version: 2024.06.27+20240627
 
 environment:
   sdk: '>=2.19.6 <4.0.0'

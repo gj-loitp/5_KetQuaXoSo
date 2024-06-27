@@ -40,6 +40,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //add hero efx
 //https://pub.dev/packages/animated_introduction
 //ad applovin
+//20 tester
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
