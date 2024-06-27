@@ -724,10 +724,10 @@ packages:
     dependency: "direct main"
     description:
       name: panara_dialogs
-      sha256: "0260305ffecc4c7e00655dd8824aa9ad4dc3fcb6ec9fcd97cd9fcf303db8205c"
+      sha256: "43047f996ae8b16130879da4e67f03b5b3df3071b879efe32667d139bc35b35f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.4"
+    version: "0.1.5"
   path:
     dependency: "direct main"
     description:
