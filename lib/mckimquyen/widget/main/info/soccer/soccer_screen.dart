@@ -1,13 +1,9 @@
-import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
-import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
-import 'package:slider_button/slider_button.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/tab1.dart';
 
 class SoccerScreen extends StatefulWidget {
   const SoccerScreen({
@@ -18,110 +14,85 @@ class SoccerScreen extends StatefulWidget {
   State<SoccerScreen> createState() => _SoccerScreenState();
 }
 
-class _SoccerScreenState extends BaseStatefulState<SoccerScreen> {
+class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTickerProviderStateMixin {
+  TabController? _tabController;
+
   @override
   void initState() {
     super.initState();
+    _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
   void dispose() {
+    _tabController?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        color: ColorConstants.bkg,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Image.asset(
-              "assets/images/bkg_3.jpg",
-              height: double.infinity,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ).blurred(
-              colorOpacity: 0.0,
-              borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
-              blur: 5,
-            ),
-            SafeArea(
-              child: Column(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
-                    padding: const EdgeInsets.all(0),
-                    decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 16),
-                        const Material(
-                          color: Colors.transparent,
-                          child: Text(
-                            "Yêu bóng đá",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: _buildBody(),
-                  ),
-                ],
+      appBar: UIUtils.getAppBar(
+        "Câu lạc bộ bóng đá",
+        () => Get.back(),
+        null,
+        backgroundColor: ColorConstants.appColor,
+      ),
+      body: TabBarView(
+        controller: _tabController,
+        children: <Widget>[
+          Tab1(),
+          Tab1(),
+          Tab1(),
+          Tab1(),
+        ],
+      ),
+      bottomNavigationBar: Material(
+        color: Colors.white,
+        child: SizedBox(
+          height: 48,
+          child: TabBar(
+            tabs: const <Tab>[
+              Tab(
+                icon: Icon(Icons.add_chart),
+                text: "Kết quả",
+                iconMargin: EdgeInsets.only(bottom: 2.0),
               ),
+              Tab(
+                icon: Icon(Icons.calendar_month),
+                text: "Lịch",
+                iconMargin: EdgeInsets.only(bottom: 2.0),
+              ),
+              Tab(
+                icon: Icon(Icons.live_tv),
+                text: "Trực tiếp",
+                iconMargin: EdgeInsets.only(bottom: 2.0),
+              ),
+              Tab(
+                icon: Icon(Icons.image_aspect_ratio),
+                text: "Xem tỉ lệ",
+                iconMargin: EdgeInsets.only(bottom: 2.0),
+              ),
+            ],
+            // setup the controller
+            controller: _tabController,
+            indicatorColor: ColorConstants.appColor,
+            labelColor: ColorConstants.appColor,
+            unselectedLabelColor: Colors.grey,
+            labelStyle: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 10,
             ),
-          ],
+            unselectedLabelStyle: const TextStyle(
+              fontWeight: FontWeight.normal,
+              fontSize: 10,
+            ),
+            labelPadding: EdgeInsets.zero,
+            splashBorderRadius: const BorderRadius.all(Radius.circular(0)),
+            tabAlignment: TabAlignment.fill,
+          ),
         ),
       ),
-    );
-  }
-
-  Widget _buildBody() {
-    return Container(
-      margin: const EdgeInsets.all(16),
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(45.0)),
-        color: Colors.white,
-      ),
-      child: Text("1"),
     );
   }
 }
