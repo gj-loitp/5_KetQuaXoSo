@@ -36,7 +36,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/video_player-2.8.6" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.0" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/applovin_max-3.10.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/just_audio-0.9.38" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/platform_device_id_linux-1.0.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/platform_device_id_web-1.0.0" />
@@ -49,6 +48,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.2.2" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher-6.3.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/applovin_max-3.10.1" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
