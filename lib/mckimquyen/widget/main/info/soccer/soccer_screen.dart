@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/tab1.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/tab_soccer.dart';
 
 class SoccerScreen extends StatefulWidget {
   const SoccerScreen({
@@ -40,11 +40,11 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
       ),
       body: TabBarView(
         controller: _tabController,
-        children: <Widget>[
-          Tab1(),
-          Tab1(),
-          Tab1(),
-          Tab1(),
+        children: const <Widget>[
+          TabSoccer(),
+          TabSoccer(),
+          TabSoccer(),
+          TabSoccer(),
         ],
       ),
       bottomNavigationBar: Material(
