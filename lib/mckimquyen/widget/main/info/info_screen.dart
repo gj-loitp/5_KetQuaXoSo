@@ -10,6 +10,7 @@ import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/history/history_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/soccer_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/testApp/test_app_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/setting/setting_screen.dart';
@@ -113,6 +114,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
                         _buildViewRow1(),
                         const SizedBox(height: 16),
                         _buildViewRow2(),
+                        const SizedBox(height: 16),
+                        _buildViewRow3(),
                       ],
                     ),
                   ),
@@ -176,10 +179,35 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
         _buildViewItem(
           "Cài đặt\nứng dụng",
           "assets/images/ic_settings.png",
-              () {
+          () {
             Get.to(() => const SettingScreen());
           },
         ),
+      ],
+    );
+  }
+
+  Widget _buildViewRow3() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        _buildViewItem(
+          "CLB\nbóng đá",
+          "assets/images/ic_ball.png",
+          () {
+            Get.to(() => const SoccerScreen());
+          },
+        ),
+        // _buildViewItem(
+        //   "",
+        //   "assets/images/ic_support.png",
+        //   () {},
+        // ),
+        // _buildViewItem(
+        //   "",
+        //   "assets/images/ic_settings.png",
+        //   () {},
+        // ),
       ],
     );
   }

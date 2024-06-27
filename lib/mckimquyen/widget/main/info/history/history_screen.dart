@@ -60,7 +60,7 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                 children: [
                   Container(
                     width: double.infinity,
-                    margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                    margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
                     padding: const EdgeInsets.all(0),
                     decoration: BoxDecoration(
                       color: Colors.transparent,

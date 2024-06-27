@@ -172,7 +172,7 @@ class _SearchScreenState extends BaseStatefulState<SearchScreen> {
               children: [
                 Container(
                   alignment: Alignment.center,
-                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+                  padding: const EdgeInsets.fromLTRB(8, 2, 8, 8),
                   width: double.infinity,
                   child: Row(
                     children: [
