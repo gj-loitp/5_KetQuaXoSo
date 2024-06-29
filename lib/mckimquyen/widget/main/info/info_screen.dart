@@ -195,7 +195,7 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "CLB\nbóng đá",
           "assets/images/ic_ball.png",
           () {
-            Get.to(() => const SoccerScreen());
+            Get.to(() => SoccerScreen(InfoScreen.path));
           },
         ),
         // _buildViewItem(

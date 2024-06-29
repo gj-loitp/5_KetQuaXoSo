@@ -219,9 +219,9 @@
     },
     {
       "name": "file",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/file-7.0.0",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/file-6.1.4",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "fixnum",
@@ -237,7 +237,7 @@
     },
     {
       "name": "flutter_cache_manager",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_cache_manager-3.3.2",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/flutter_cache_manager-3.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -692,6 +692,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "process",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/process-4.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "provider",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/provider-6.1.2",
       "packageUri": "lib/",
@@ -1053,9 +1059,9 @@
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/xdg_directories-1.0.4",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/xdg_directories-0.2.0+3",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "xml",
@@ -1076,7 +1082,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-06-27T10:11:06.734867Z",
+  "generated": "2024-06-29T14:44:04.404349Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
