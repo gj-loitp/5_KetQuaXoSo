@@ -173,7 +173,7 @@
         <entry key="csslib">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/csslib-1.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/csslib-0.17.3/lib" />
             </list>
           </value>
         </entry>
@@ -1282,7 +1282,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/connection_notifier-2.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cross_file-0.3.4+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/csslib-1.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/csslib-0.17.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dbus-0.7.10/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/device_info-2.0.3/lib" />

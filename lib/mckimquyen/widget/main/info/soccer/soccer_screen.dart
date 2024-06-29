@@ -1,9 +1,10 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:html/parser.dart' show parse;
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
-import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/kq1.dart';
 
 class SoccerScreen extends StatefulWidget {
   const SoccerScreen(
@@ -112,6 +113,11 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> {
   }
 
   Widget _buildBodyView() {
-    return Container();
+    return ListView(
+      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+      children: [
+        KQ1Widget(),
+      ],
+    );
   }
 }

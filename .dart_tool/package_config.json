@@ -147,7 +147,7 @@
     },
     {
       "name": "csslib",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/csslib-1.0.0",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/csslib-0.17.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -1082,7 +1082,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-06-29T14:44:04.404349Z",
+  "generated": "2024-06-29T15:59:44.373979Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
