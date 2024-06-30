@@ -1,20 +1,10 @@
-import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:html/parser.dart' show parse;
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
-import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/keep_alive_age.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/team_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/upcoming_match_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/league_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/team/team_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/upcoming/upcoming_match_screen.dart';
 
 class SoccerScreen extends StatefulWidget {
   const SoccerScreen(
