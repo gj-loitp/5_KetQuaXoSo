@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +9,7 @@ import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/mckimquyen/db/database_helper.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/list_league.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
@@ -1602,7 +1605,15 @@ class ControllerMain extends BaseController {
     listHistory.refresh();
   }
 
-  void searchLeague(String keyword) {
+  Future<void> searchLeague(String keyword) async {
     SharedPreferencesUtil.setString(SharedPreferencesUtil.keySearchLeague, keyword);
+    var path = 'https://footystats.org/vn/e/leagues?id=$keyword';
+    debugPrint("roy93~ path $path");
+    var response = await dio.get(path);
+    String data = response.data;
+    debugPrint("roy93~ data $data");
+    Map<String, dynamic> valueMap = json.decode(data);
+    var listLeague = ListLeague.fromJson(valueMap);
+    debugPrint("roy93~ listLeague ${listLeague.toJson()}");
   }
 }
