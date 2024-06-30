@@ -113,11 +113,16 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> {
   }
 
   Widget _buildBodyView() {
-    return ListView(
-      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-      children: [
-        KQ1Widget(),
-      ],
+    return Container(
+      color: Colors.transparent,
+      width: Get.width,
+      child: ListView(
+        shrinkWrap: true,
+        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        children: const [
+          KQ1Widget(),
+        ],
+      ),
     );
   }
 }
