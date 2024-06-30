@@ -17,3 +17,24 @@ class ListLeague {
   }
 }
 
+class League {
+  String? id;
+  String? name;
+  String? src;
+
+  League({this.id, this.name, this.src});
+
+  League.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    src = json['src'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['src'] = src;
+    return data;
+  }
+}

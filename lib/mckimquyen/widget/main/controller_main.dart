@@ -1,12 +1,12 @@
 import 'dart:convert';
-import 'package:html/parser.dart' as html_parser;
-import 'package:html/dom.dart' as dom;
+
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pretty_dio_logger/flutter_pretty_dio_logger.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
+import 'package:html/parser.dart' as html_parser;
 import 'package:ketquaxoso/mckimquyen/db/database_helper.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
@@ -40,6 +40,7 @@ class ControllerMain extends BaseController {
   var listHistory = <History>[].obs;
   var isGoToGroupTester = false.obs;
   TabController? tabControllerMain;
+  var listLeague = <League>[].obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1614,15 +1615,21 @@ class ControllerMain extends BaseController {
     String data = response.data;
     // debugPrint("data $data");
     Map<String, dynamic> valueMap = json.decode(data);
-    var listLeague = ListLeague.fromJson(valueMap);
-    debugPrint("roy93~ listLeague ${listLeague.toJson()}");
-    debugPrint("roy93~ first ${listLeague.leagues?.first}");
-    var document = html_parser.parse(listLeague.leagues?.first);
-    var name = document.querySelector('li.team div');
-    debugPrint("roy93~ name ${name?.text}");
-    var id = document.querySelector('li.team')?.attributes['data-uid'];
-    debugPrint("roy93~ id $id");
-    var src = document.querySelector('li.team img.badge')?.attributes['src'];
-    debugPrint("roy93~ src $src");
+    var listLeagueData = ListLeague.fromJson(valueMap);
+    // debugPrint("listLeague ${listLeague.toJson()}");
+    listLeague.clear();
+    listLeagueData.leagues?.forEach((element) {
+      var document = html_parser.parse(element);
+      var name = document.querySelector('li.team div')?.text;
+      var id = document.querySelector('li.team')?.attributes['data-uid'];
+      var src = document.querySelector('li.team img.badge')?.attributes['src'];
+      listLeague.add(League(
+        name: name,
+        id: id,
+        src: src,
+      ));
+    });
+    listLeague.refresh();
+    // debugPrint("listLeague ${listLeague.first.toJson()}");
   }
 }
