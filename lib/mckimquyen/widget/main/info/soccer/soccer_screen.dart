@@ -4,7 +4,14 @@ import 'package:get/get.dart';
 import 'package:html/parser.dart' show parse;
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/widget/keep_alive_age.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/kq1.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
 
 class SoccerScreen extends StatefulWidget {
   const SoccerScreen(
@@ -18,110 +25,83 @@ class SoccerScreen extends StatefulWidget {
   State<SoccerScreen> createState() => _SoccerScreenState();
 }
 
-class _SoccerScreenState extends BaseStatefulState<SoccerScreen> {
+class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTickerProviderStateMixin {
+  TabController? tabControllerMain;
+
+  final List<Widget> bottomBarPages = [
+    const KeepAlivePage(child: KQ1Widget()),
+    const KeepAlivePage(child: KQ1Widget()),
+    const KeepAlivePage(child: KQ1Widget()),
+  ];
+
   @override
   void initState() {
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
+    tabControllerMain = TabController(length: bottomBarPages.length, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        color: ColorConstants.bkg,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Image.asset(
-              "assets/images/bkg_3.jpg",
-              height: double.infinity,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ).blurred(
-              colorOpacity: 0.0,
-              borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
-              blur: 5,
-            ),
-            SafeArea(
-              child: Column(
-                children: [
-                  Material(
-                    color: Colors.transparent,
-                    child: Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
-                      padding: const EdgeInsets.all(0),
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 40,
-                            height: 40,
-                            child: MaterialButton(
-                              onPressed: () {
-                                Get.back();
-                              },
-                              color: Colors.white,
-                              padding: const EdgeInsets.all(0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.clear,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 16),
-                          const Expanded(
-                            child: Text(
-                              "CLB bóng đá",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w900,
-                                color: Colors.white,
-                                fontSize: 24,
-                                shadows: [
-                                  Shadow(
-                                    blurRadius: 5.0,
-                                    color: Colors.black,
-                                    offset: Offset(2.0, 2.0),
-                                  ),
-                                ],
-                              ),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Expanded(child: _buildBodyView()),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: _buildPageView(),
+      extendBody: true,
+      bottomNavigationBar: _buildBottomBar(),
     );
   }
 
-  Widget _buildBodyView() {
+  Widget _buildPageView() {
+    return TabBarView(
+      // physics: const NeverScrollableScrollPhysics(),
+      controller: tabControllerMain,
+      children: bottomBarPages,
+    );
+  }
+
+  Widget? _buildBottomBar() {
     return Container(
-      color: Colors.transparent,
-      width: Get.width,
-      child: ListView(
-        shrinkWrap: true,
-        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-        children: const [
-          KQ1Widget(),
-        ],
+      color: Colors.grey,
+      padding: const EdgeInsets.only(top: 1),
+      child: Container(
+        color: Colors.white,
+        height: 48,
+        child: TabBar(
+          indicatorColor: ColorConstants.appColor,
+          labelColor: ColorConstants.appColor,
+          unselectedLabelColor: Colors.grey,
+          labelStyle: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 10,
+          ),
+          unselectedLabelStyle: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 10,
+          ),
+          labelPadding: EdgeInsets.zero,
+          // dividerColor: ColorConstants.appColor,
+          // dividerHeight: 0.0,
+          // physics: const BouncingScrollPhysics(),
+          splashBorderRadius: const BorderRadius.all(Radius.circular(0)),
+          tabAlignment: TabAlignment.fill,
+          tabs: const <Tab>[
+            Tab(
+              icon: Icon(Icons.looks_one_outlined),
+              text: "XSMN",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
+            ),
+            Tab(
+              icon: Icon(Icons.looks_two_outlined),
+              text: "XSMT",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
+            ),
+            Tab(
+              icon: Icon(Icons.looks_3_outlined),
+              text: "XSMB",
+              iconMargin: EdgeInsets.only(bottom: 2.0),
+            ),
+          ],
+          // setup the controller
+          controller: tabControllerMain,
+        ),
       ),
     );
   }
