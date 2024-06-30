@@ -14,7 +14,7 @@ class LeagueWidget extends StatefulWidget {
 }
 
 class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
-  var webViewController = WebViewController();
+  var _webViewController = WebViewController();
 
   @override
   void initState() {
@@ -32,28 +32,25 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
       </body>
     </html>""";
 
-    webViewController = WebViewController()
+    _webViewController = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(Colors.white)
       ..setNavigationDelegate(
         NavigationDelegate(
           onProgress: (int progress) {
-            debugPrint("roy93~ progress $progress");
+            // debugPrint("progress $progress");
           },
           onPageStarted: (String url) {
-            debugPrint("roy93~ onPageStarted url $url");
+            // debugPrint("onPageStarted url $url");
           },
           onPageFinished: (String url) async {
-            debugPrint("roy93~ onPageFinished url $url");
+            // debugPrint("onPageFinished url $url");
           },
           onWebResourceError: (WebResourceError error) {
-            debugPrint("roy93~ onPageFinished url $error");
+            // debugPrint("onPageFinished url $error");
           },
           onNavigationRequest: (NavigationRequest request) {
-            debugPrint("roy93~ request ${request.url}");
-            // if (request.url.contains(".html")) {
-            //   return NavigationDecision.prevent;
-            // }
+            // debugPrint("request ${request.url}");
             return NavigationDecision.prevent;
           },
         ),
@@ -82,7 +79,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
           ),
           const SizedBox(height: 8),
           Expanded(
-            child: WebViewWidget(controller: webViewController),
+            child: WebViewWidget(controller: _webViewController),
           ),
         ],
       ),
