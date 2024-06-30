@@ -118,7 +118,7 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
                     ),
                   ),
                   _buildSearchView(),
-                  // Expanded(child: child),
+                  Expanded(child: _buildListView()),
                 ],
               ),
             ),
@@ -166,5 +166,30 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
         textAlign: TextAlign.start,
       ),
     );
+  }
+
+  Widget _buildListView() {
+    return Obx(() {
+      var list = _controllerMain.listLeague;
+      return Container(
+        color: Colors.red,
+        child: ListView.builder(
+          padding: EdgeInsets.zero,
+          physics: const BouncingScrollPhysics(),
+          itemCount: list.length,
+          itemBuilder: (context, i) {
+            var league = list[i];
+            return Container(
+              color: Colors.grey,
+              child: Row(
+                children: [
+                  Text(league.name ?? ""),
+                ],
+              ),
+            );
+          },
+        ),
+      );
+    });
   }
 }
