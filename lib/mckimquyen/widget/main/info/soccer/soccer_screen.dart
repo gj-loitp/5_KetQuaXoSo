@@ -84,18 +84,18 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
           tabAlignment: TabAlignment.fill,
           tabs: const <Tab>[
             Tab(
-              icon: Icon(Icons.looks_one_outlined),
-              text: "XSMN",
+              icon: Icon(Icons.gradient),
+              text: "Giải đấu",
               iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
             Tab(
-              icon: Icon(Icons.looks_two_outlined),
-              text: "XSMT",
+              icon: Icon(Icons.access_time_outlined),
+              text: "Trận đấu sắp tới",
               iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
             Tab(
-              icon: Icon(Icons.looks_3_outlined),
-              text: "XSMB",
+              icon: Icon(Icons.favorite_outlined),
+              text: "Đội của tôi",
               iconMargin: EdgeInsets.only(bottom: 2.0),
             ),
           ],
