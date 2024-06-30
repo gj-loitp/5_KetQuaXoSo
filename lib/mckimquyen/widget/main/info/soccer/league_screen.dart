@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class LeagueWidget extends StatefulWidget {
@@ -15,13 +16,12 @@ class LeagueWidget extends StatefulWidget {
 }
 
 class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
+  final ControllerMain _controllerMain = Get.find();
   var _webViewController = WebViewController();
 
-  @override
-  void initState() {
-    super.initState();
+  void _loadData(String leagueID) {
     var htmlString = ''''
-<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: 93 }); </script>
+<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: $leagueID }); </script>
     ''';
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
@@ -57,6 +57,12 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
         ),
       )
       ..loadHtmlString(htmlWithStyle);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadData("12325");
   }
 
   @override
