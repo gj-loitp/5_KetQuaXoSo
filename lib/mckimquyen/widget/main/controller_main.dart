@@ -40,6 +40,7 @@ class ControllerMain extends BaseController {
   var listHistory = <History>[].obs;
   var isGoToGroupTester = false.obs;
   TabController? tabControllerMain;
+  var isLoadingListLeague = true.obs;
   var listLeague = <League>[].obs;
 
   void clearOnDispose() {
@@ -1608,6 +1609,7 @@ class ControllerMain extends BaseController {
   }
 
   Future<void> searchLeague(String keyword) async {
+    isLoadingListLeague.value = true;
     SharedPreferencesUtil.setString(SharedPreferencesUtil.keySearchLeague, keyword);
     var path = 'https://footystats.org/vn/e/leagues?id=$keyword';
     // debugPrint("path $path");
@@ -1631,5 +1633,6 @@ class ControllerMain extends BaseController {
     });
     listLeague.refresh();
     // debugPrint("listLeague ${listLeague.first.toJson()}");
+    isLoadingListLeague.value = false;
   }
 }

@@ -121,6 +121,7 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
                     ),
                   ),
                   _buildSearchView(),
+                  _buildLoadingView(),
                   Expanded(child: _buildListView()),
                 ],
               ),
@@ -171,9 +172,30 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
     );
   }
 
+  Widget _buildLoadingView() {
+    return Obx(() {
+      var isLoadingListLeague = _controllerMain.isLoadingListLeague.value;
+      if (isLoadingListLeague) {
+        return Container(
+          padding: const EdgeInsets.fromLTRB(0, 16, 0, 8),
+          width: 50,
+          height: 74,
+          child: const CircularProgressIndicator(
+            color: Colors.white,
+            strokeWidth: 6.0,
+            strokeCap: StrokeCap.round,
+          ),
+        );
+      } else {
+        return const SizedBox.shrink();
+      }
+    });
+  }
+
   Widget _buildListView() {
     return Obx(() {
       var list = _controllerMain.listLeague;
+
       return Container(
         margin: const EdgeInsets.only(top: 0),
         color: Colors.transparent,
