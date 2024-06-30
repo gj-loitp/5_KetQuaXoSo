@@ -4,16 +4,16 @@ import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class KQ1Widget extends StatefulWidget {
-  const KQ1Widget({
+class TeamScreen extends StatefulWidget {
+  const TeamScreen({
     super.key,
   });
 
   @override
-  State<KQ1Widget> createState() => _KQ1WidgetState();
+  State<TeamScreen> createState() => _TeamScreenState();
 }
 
-class _KQ1WidgetState extends BaseStatefulState<KQ1Widget> {
+class _TeamScreenState extends BaseStatefulState<TeamScreen> {
   var webViewController = WebViewController();
 
   @override

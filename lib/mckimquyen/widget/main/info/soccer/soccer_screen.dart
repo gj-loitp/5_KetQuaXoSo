@@ -4,9 +4,12 @@ import 'package:get/get.dart';
 import 'package:html/parser.dart' show parse;
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/kq1.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/team_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/upcoming_match_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
@@ -29,9 +32,9 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
   TabController? tabControllerMain;
 
   final List<Widget> bottomBarPages = [
-    const KeepAlivePage(child: KQ1Widget()),
-    const KeepAlivePage(child: KQ1Widget()),
-    const KeepAlivePage(child: KQ1Widget()),
+    const KeepAlivePage(child: LeagueWidget()),
+    const KeepAlivePage(child: UpcomingMatchScreen()),
+    const KeepAlivePage(child: TeamScreen()),
   ];
 
   @override
@@ -43,6 +46,13 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "Câu lạc bộ bóng đá",
+        () {
+          Get.back();
+        },
+        null,
+      ),
       body: _buildPageView(),
       extendBody: true,
       bottomNavigationBar: _buildBottomBar(),
