@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class LeagueWidget extends StatefulWidget {
@@ -16,7 +15,6 @@ class LeagueWidget extends StatefulWidget {
 }
 
 class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
-  final ControllerMain _controllerMain = Get.find();
   var _webViewController = WebViewController();
 
   void _loadData(String leagueID) {
@@ -139,11 +137,14 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
                     ],
                   ),
                 ),
-                UIUtils.getButton(
-                  "Tìm kiếm giải đấu",
-                  description: "Hãy chọn giải đấu yêu thích của bạn",
-                  Icons.search,
-                  () {},
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+                  child: UIUtils.getButton(
+                    "Tìm kiếm giải đấu",
+                    description: "Hãy chọn giải đấu yêu thích của bạn",
+                    Icons.search,
+                    () {},
+                  ),
                 ),
                 const SizedBox(height: 8),
                 Expanded(
