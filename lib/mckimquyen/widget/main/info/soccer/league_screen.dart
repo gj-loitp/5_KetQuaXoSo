@@ -72,38 +72,18 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: Get.width,
-      color: Colors.red,
+      color: Colors.white,
       padding: const EdgeInsets.only(bottom: 16),
-      child: Wrap(
+      child: Column(
         children: [
           UIUtils.getButton(
             "Tìm kiếm hàng ngàn giải đấu",
             Icons.navigate_next,
             () {},
           ),
-          Container(
-            height: 500,
+          Expanded(
             child: WebViewWidget(controller: webViewController),
           ),
-          // Container(
-          //   height: 500,
-          //   color: Colors.red,
-          //   child: HtmlWidget(
-          //     '''
-          // <iframe src="https://footystats.org/vn/api/club?id=5" height="100%" width="100%" style="height:420px; width:100%;" frameborder="0"></iframe>
-          // ''',
-          //     renderMode: RenderMode.listView,
-          //     textStyle: const TextStyle(
-          //       fontSize: 22,
-          //       fontWeight: FontWeight.w400,
-          //       color: Colors.black,
-          //     ),
-          //     enableCaching: true,
-          //     onTapUrl: (url) {
-          //       return true;
-          //     },
-          //   ),
-          // ),
         ],
       ),
     );
