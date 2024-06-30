@@ -1618,7 +1618,11 @@ class ControllerMain extends BaseController {
     debugPrint("roy93~ listLeague ${listLeague.toJson()}");
     debugPrint("roy93~ first ${listLeague.leagues?.first}");
     var document = html_parser.parse(listLeague.leagues?.first);
-    var divElement = document.querySelector('li.team div');
-    debugPrint("roy93~ divElement ${divElement?.text}");
+    var name = document.querySelector('li.team div');
+    debugPrint("roy93~ name ${name?.text}");
+    var id = document.querySelector('li.team')?.attributes['data-uid'];
+    debugPrint("roy93~ id $id");
+    var src = document.querySelector('li.team img.badge')?.attributes['src'];
+    debugPrint("roy93~ src $src");
   }
 }

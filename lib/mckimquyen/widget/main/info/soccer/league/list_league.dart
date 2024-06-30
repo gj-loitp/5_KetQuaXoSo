@@ -16,3 +16,4 @@ class ListLeague {
     return data;
   }
 }
+
