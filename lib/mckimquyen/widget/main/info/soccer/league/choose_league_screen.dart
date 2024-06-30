@@ -1,7 +1,9 @@
 import 'package:blur/blur.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 
 class ChooseLeagueWidget extends StatefulWidget {
@@ -21,8 +23,24 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
   void initState() {
     super.initState();
     _tecSearch.addListener(() {
-      var text = _tecSearch.text.toString();
+      EasyDebounce.debounce(
+        'searchLeague',
+        const Duration(milliseconds: 500),
+        () {
+          var text = _tecSearch.text.toString();
+          debugPrint("roy93~ text $text");
+          _controllerMain.searchLeague(text);
+        },
+      );
     });
+    _setupData();
+  }
+
+  Future<void> _setupData() async {
+    var keyword = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keySearchLeague);
+    if (keyword != null) {
+      _tecSearch.text = keyword;
+    }
   }
 
   @override
@@ -122,7 +140,7 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
       child: TextField(
         controller: _tecSearch,
         autofocus: true,
-        textInputAction: TextInputAction.next,
+        textInputAction: TextInputAction.search,
         maxLength: 50,
         keyboardType: TextInputType.text,
         decoration: const InputDecoration(

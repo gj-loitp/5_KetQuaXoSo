@@ -1601,4 +1601,8 @@ class ControllerMain extends BaseController {
     listHistory.clear();
     listHistory.refresh();
   }
+
+  void searchLeague(String keyword) {
+    SharedPreferencesUtil.setString(SharedPreferencesUtil.keySearchLeague, keyword);
+  }
 }
