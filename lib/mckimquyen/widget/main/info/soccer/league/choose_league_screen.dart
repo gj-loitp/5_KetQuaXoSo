@@ -1,9 +1,12 @@
 import 'package:blur/blur.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
+import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 
 class ChooseLeagueWidget extends StatefulWidget {
@@ -172,18 +175,51 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
     return Obx(() {
       var list = _controllerMain.listLeague;
       return Container(
-        color: Colors.red,
+        margin: const EdgeInsets.only(top: 0),
+        color: Colors.transparent,
         child: ListView.builder(
-          padding: EdgeInsets.zero,
+          padding: const EdgeInsets.only(top: 8),
           physics: const BouncingScrollPhysics(),
           itemCount: list.length,
           itemBuilder: (context, i) {
             var league = list[i];
             return Container(
-              color: Colors.grey,
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+              margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(45)),
+                color: Colors.white.withOpacity(0.8),
+              ),
               child: Row(
                 children: [
-                  Text(league.name ?? ""),
+                  CachedNetworkImage(
+                    imageUrl: league.src ?? "",
+                    imageBuilder: (context, imageProvider) => Container(
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.all(Radius.circular(50)),
+                        image: DecorationImage(
+                          image: imageProvider,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    placeholder: (context, url) => const CupertinoActivityIndicator(),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      league.name ?? "",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  const Icon(Icons.navigate_next),
                 ],
               ),
             );
