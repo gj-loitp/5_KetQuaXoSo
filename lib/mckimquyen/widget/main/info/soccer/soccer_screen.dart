@@ -46,13 +46,6 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils.getAppBar(
-        "Câu lạc bộ bóng đá",
-        () {
-          Get.back();
-        },
-        null,
-      ),
       body: _buildPageView(),
       extendBody: true,
       bottomNavigationBar: _buildBottomBar(),
