@@ -75,10 +75,12 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
       child: Column(
         children: [
           UIUtils.getButton(
-            "Tìm kiếm hàng ngàn giải đấu",
-            Icons.navigate_next,
+            "Tìm kiếm giải đấu",
+            description: "Hãy chọn giải đấu yêu thích của bạn",
+            Icons.search,
             () {},
           ),
+          const SizedBox(height: 8),
           Expanded(
             child: WebViewWidget(controller: webViewController),
           ),
