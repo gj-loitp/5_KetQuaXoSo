@@ -195,7 +195,30 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
   Widget _buildListView() {
     return Obx(() {
       var list = _controllerMain.listLeague;
-
+      if (list.isEmpty) {
+        return Container(
+          child: Column(
+            children: [
+              Image.asset(
+                "assets/images/anim_1.gif",
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+              const Text(
+                "Không tìm thấy giải đấu này",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ),
+        );
+      }
       return Container(
         margin: const EdgeInsets.only(top: 0),
         color: Colors.transparent,
