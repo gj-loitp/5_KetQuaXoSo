@@ -51,15 +51,13 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
           },
           onNavigationRequest: (NavigationRequest request) {
             debugPrint("roy93~ request ${request.url}");
-            if (request.url.contains(".html")) {
-              return NavigationDecision.prevent;
-            }
-            return NavigationDecision.navigate;
+            // if (request.url.contains(".html")) {
+            //   return NavigationDecision.prevent;
+            // }
+            return NavigationDecision.prevent;
           },
         ),
       )
-      // ..loadRequest(Uri.parse("https://baomoi.com/tien-ich/lich-van-nien.epi"));
-      // ..loadHtmlString("""<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings-loc.js')); mw('params', { leagueID: 2012, lang: 'vn' }); </script>""");
       ..loadHtmlString(htmlWithStyle);
   }
 
