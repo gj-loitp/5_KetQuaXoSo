@@ -243,6 +243,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
 
   Future<void> _handleChooseLeague(League league) async {
     // debugPrint("onTap league ${league.toJson()}");
+    _controllerMain.setSelectedLeagueQuick(null);
     var leagueId = league.id ?? League.leagueIdDefault;
     await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
     if (leagueId.isEmpty) {

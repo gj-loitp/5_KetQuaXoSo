@@ -1704,11 +1704,13 @@ class ControllerMain extends BaseController {
     listLeagueQuick.refresh();
   }
 
-  void setSelectedLeagueQuick(int index) {
+  void setSelectedLeagueQuick(int? index) {
     for (var element in listLeagueQuick) {
       element.isSelected = false;
     }
-    listLeagueQuick[index].isSelected = true;
+    if (index != null) {
+      listLeagueQuick[index].isSelected = true;
+    }
     listLeagueQuick.refresh();
   }
 }
