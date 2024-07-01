@@ -1703,4 +1703,12 @@ class ControllerMain extends BaseController {
     listLeagueQuick.addAll(list);
     listLeagueQuick.refresh();
   }
+
+  void setSelectedLeagueQuick(int index) {
+    for (var element in listLeagueQuick) {
+      element.isSelected = false;
+    }
+    listLeagueQuick[index].isSelected = true;
+    listLeagueQuick.refresh();
+  }
 }

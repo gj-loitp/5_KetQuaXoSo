@@ -208,22 +208,32 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
           itemCount: list.length,
           itemBuilder: (context, i) {
             var league = list[i];
-            return Container(
-              margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(40.0),
-                    bottomRight: Radius.circular(40.0),
-                    topLeft: Radius.circular(40.0),
-                    bottomLeft: Radius.circular(40.0)),
-                color: (league.isSelected == true) ? Colors.white : Colors.grey,
+            return InkWell(
+              child: Container(
+                margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(45.0),
+                      bottomRight: Radius.circular(45.0),
+                      topLeft: Radius.circular(45.0),
+                      bottomLeft: Radius.circular(45.0)),
+                  color: (league.isSelected == true) ? Colors.yellow : Colors.white.withOpacity(0.8),
+                ),
+                padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+                child: Text(
+                  league.name ?? "",
+                  style: const TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
               ),
-              padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
-              child: Text(
-                league.name ?? "",
-                style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),
-              ),
+              onTap: () {
+                _controllerMain.setSelectedLeagueQuick(i);
+                _loadData(league.id, false);
+              },
             );
           },
         ),
