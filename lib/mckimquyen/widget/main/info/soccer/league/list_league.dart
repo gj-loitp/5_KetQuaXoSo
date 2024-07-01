@@ -18,6 +18,7 @@ class ListLeague {
 }
 
 class League {
+  static String leagueIdDefault = "12325";
   String? id;
   String? name;
   String? src;

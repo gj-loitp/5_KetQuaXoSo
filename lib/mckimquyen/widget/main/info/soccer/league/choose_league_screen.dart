@@ -6,11 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
-import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/list_league.dart';
 
 class ChooseLeagueWidget extends StatefulWidget {
-  const ChooseLeagueWidget({
+  final Function(League league)? onTap;
+
+  const ChooseLeagueWidget(
+    this.onTap, {
     super.key,
   });
 
@@ -31,7 +34,7 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
         const Duration(milliseconds: 500),
         () {
           var text = _tecSearch.text.toString();
-          debugPrint("roy93~ text $text");
+          // debugPrint("text $text");
           _controllerMain.searchLeague(text);
         },
       );
@@ -41,6 +44,7 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
 
   Future<void> _setupData() async {
     var keyword = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keySearchLeague);
+    // debugPrint("_setupData keyword $keyword");
     if (keyword != null) {
       _tecSearch.text = keyword;
     }
@@ -228,44 +232,50 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
           itemCount: list.length,
           itemBuilder: (context, i) {
             var league = list[i];
-            return Container(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-              margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(Radius.circular(45)),
-                color: Colors.white.withOpacity(0.8),
-              ),
-              child: Row(
-                children: [
-                  CachedNetworkImage(
-                    imageUrl: league.src ?? "",
-                    imageBuilder: (context, imageProvider) => Container(
-                      height: 45,
-                      width: 45,
-                      decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(Radius.circular(50)),
-                        image: DecorationImage(
-                          image: imageProvider,
-                          fit: BoxFit.cover,
+            return InkWell(
+              onTap: () {
+                widget.onTap?.call(league);
+                Get.back();
+              },
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(45)),
+                  color: Colors.white.withOpacity(0.8),
+                ),
+                child: Row(
+                  children: [
+                    CachedNetworkImage(
+                      imageUrl: league.src ?? "",
+                      imageBuilder: (context, imageProvider) => Container(
+                        height: 45,
+                        width: 45,
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(Radius.circular(50)),
+                          image: DecorationImage(
+                            image: imageProvider,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      placeholder: (context, url) => const CupertinoActivityIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        league.name ?? "",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Colors.black,
                         ),
                       ),
                     ),
-                    placeholder: (context, url) => const CupertinoActivityIndicator(),
-                    errorWidget: (context, url, error) => const Icon(Icons.error),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      league.name ?? "",
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  const Icon(Icons.navigate_next),
-                ],
+                    const Icon(Icons.navigate_next),
+                  ],
+                ),
               ),
             );
           },

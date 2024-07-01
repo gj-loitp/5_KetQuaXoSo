@@ -2,10 +2,12 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/choose_league_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+
+import 'list_league.dart';
 
 class LeagueWidget extends StatefulWidget {
   const LeagueWidget({
@@ -17,12 +19,19 @@ class LeagueWidget extends StatefulWidget {
 }
 
 class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
-  final ControllerMain _controllerMain = Get.find();
-  var _webViewController = WebViewController();
+  // final ControllerMain _controllerMain = Get.find();
+  final WebViewController _webViewController = WebViewController();
+  String? _leagueId;
 
-  void _loadData(String leagueID) {
+  void _loadData(String? leagueID, bool needInitWebViewController) {
+    var mLeagueId = leagueID;
+    if (mLeagueId == null || mLeagueId.isEmpty) {
+      mLeagueId = League.leagueIdDefault;
+    }
+    debugPrint(
+        "_loadData leagueID $leagueID => _mLeagueId $mLeagueId, needInitWebViewController $needInitWebViewController");
     var htmlString = ''''
-<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: $leagueID }); </script>
+<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: $mLeagueId }); </script>
     ''';
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
@@ -34,36 +43,50 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
       </body>
     </html>""";
 
-    _webViewController = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(Colors.transparent)
-      ..setNavigationDelegate(
-        NavigationDelegate(
-          onProgress: (int progress) {
-            // debugPrint("progress $progress");
-          },
-          onPageStarted: (String url) {
-            // debugPrint("onPageStarted url $url");
-          },
-          onPageFinished: (String url) async {
-            // debugPrint("onPageFinished url $url");
-          },
-          onWebResourceError: (WebResourceError error) {
-            // debugPrint("onPageFinished url $error");
-          },
-          onNavigationRequest: (NavigationRequest request) {
-            // debugPrint("request ${request.url}");
-            return NavigationDecision.prevent;
-          },
-        ),
-      )
-      ..loadHtmlString(htmlWithStyle);
+    if (needInitWebViewController) {
+      _webViewController
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+        ..setBackgroundColor(Colors.transparent)
+        ..setNavigationDelegate(
+          NavigationDelegate(
+            onProgress: (int progress) {
+              // debugPrint("progress $progress");
+            },
+            onPageStarted: (String url) {
+              // debugPrint("onPageStarted url $url");
+            },
+            onPageFinished: (String url) async {
+              // debugPrint("onPageFinished url $url");
+            },
+            onWebResourceError: (WebResourceError error) {
+              // debugPrint("onPageFinished url $error");
+            },
+            onNavigationRequest: (NavigationRequest request) {
+              // debugPrint("request ${request.url}");
+              return NavigationDecision.prevent;
+            },
+          ),
+        );
+    }
+    // debugPrint(">>>>>>>> loadHtmlString htmlWithStyle $htmlWithStyle");
+    _webViewController.loadHtmlString(htmlWithStyle);
+  }
+
+  Future<void> _getLeagueId() async {
+    //default id 12325 -> ngoai hang anh
+    _leagueId = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keyLeagueId);
+    // debugPrint("_getLeagueId _leagueId $_leagueId");
   }
 
   @override
   void initState() {
     super.initState();
-    _loadData("12325");
+    _initData();
+  }
+
+  Future<void> _initData() async {
+    await _getLeagueId();
+    _loadData(_leagueId, true);
   }
 
   @override
@@ -147,7 +170,13 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
                     description: "Hãy chọn giải đấu yêu thích của bạn",
                     Icons.search,
                     () {
-                      Get.to(() => const ChooseLeagueWidget());
+                      Get.to(
+                        () => ChooseLeagueWidget(
+                          (League league) {
+                            _handleChooseLeague(league);
+                          },
+                        ),
+                      );
                     },
                   ),
                 ),
@@ -161,5 +190,16 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
         ],
       ),
     );
+  }
+
+  Future<void> _handleChooseLeague(League league) async {
+    // debugPrint("onTap league ${league.toJson()}");
+    var leagueId = league.id ?? League.leagueIdDefault;
+    await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
+    if (leagueId.isEmpty) {
+      //do nothing
+    } else {
+      _loadData(leagueId, false);
+    }
   }
 }

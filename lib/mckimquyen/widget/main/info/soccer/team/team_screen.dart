@@ -38,19 +38,19 @@ class _TeamScreenState extends BaseStatefulState<TeamScreen> {
       ..setNavigationDelegate(
         NavigationDelegate(
           onProgress: (int progress) {
-            debugPrint("roy93~ progress $progress");
+            // debugPrint("progress $progress");
           },
           onPageStarted: (String url) {
-            debugPrint("roy93~ onPageStarted url $url");
+            // debugPrint("onPageStarted url $url");
           },
           onPageFinished: (String url) async {
-            debugPrint("roy93~ onPageFinished url $url");
+            // debugPrint("onPageFinished url $url");
           },
           onWebResourceError: (WebResourceError error) {
-            debugPrint("roy93~ onPageFinished url $error");
+            // debugPrint("onPageFinished url $error");
           },
           onNavigationRequest: (NavigationRequest request) {
-            debugPrint("roy93~ request ${request.url}");
+            // debugPrint("request ${request.url}");
             if (request.url.contains(".html")) {
               return NavigationDecision.prevent;
             }

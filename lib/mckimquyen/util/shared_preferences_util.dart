@@ -12,7 +12,8 @@ class SharedPreferencesUtil {
   static String keyTooltipTodayXSMN = "keyTooltipTodayXSMN";
   static int themeIndexNativeView = 0;
   static int themeIndexWebView = 1;
-  static String keySearchLeague = "";
+  static String keySearchLeague = "keySearchLeague";
+  static String keyLeagueId = "keyLeagueId";
 
   // static bool onOffTextOverflow = false;
 
