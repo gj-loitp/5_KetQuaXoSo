@@ -44,7 +44,7 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
 
   Widget _buildPageView() {
     return TabBarView(
-      // physics: const NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       controller: tabControllerMain,
       children: bottomBarPages,
     );
