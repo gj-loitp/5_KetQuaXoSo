@@ -259,7 +259,11 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
                           ),
                         ),
                       ),
-                      placeholder: (context, url) => const CupertinoActivityIndicator(),
+                      placeholder: (context, url) => const SizedBox(
+                        width: 45,
+                        height: 45,
+                        child: CupertinoActivityIndicator(),
+                      ),
                       errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                     const SizedBox(width: 8),
