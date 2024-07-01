@@ -58,6 +58,31 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
             },
             onPageFinished: (String url) async {
               // debugPrint("onPageFinished url $url");
+              _webViewController.runJavaScript('''
+          (function() {
+            // Remove inline styles
+            var elements = document.querySelectorAll('*[style*="max-height"]');
+            for (var i = 0; i < elements.length; i++) {
+              elements[i].style.maxHeight = null;
+            }
+            // Remove styles from stylesheets
+            for (var j = 0; j < document.styleSheets.length; j++) {
+              var styleSheet = document.styleSheets[j];
+              try {
+                if (styleSheet.cssRules) {
+                  for (var k = 0; k < styleSheet.cssRules.length; k++) {
+                    var rule = styleSheet.cssRules[k];
+                    if (rule.style && rule.style.maxHeight) {
+                      rule.style.maxHeight = null;
+                    }
+                  }
+                }
+              } catch (e) {
+                console.log('Could not access stylesheet: ', e);
+              }
+            }
+          })();
+        ''');
             },
             onWebResourceError: (WebResourceError error) {
               // debugPrint("onPageFinished url $error");
