@@ -42,6 +42,7 @@ class ControllerMain extends BaseController {
   TabController? tabControllerMain;
   var isLoadingListLeague = true.obs;
   var listLeague = <League>[].obs;
+  var listLeagueQuick = <League>[].obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1634,5 +1635,72 @@ class ControllerMain extends BaseController {
     listLeague.refresh();
     // debugPrint("listLeague ${listLeague.first.toJson()}");
     isLoadingListLeague.value = false;
+  }
+
+  void getListLeagueQuick() {
+    var list = <League>[];
+    list.add(League(
+      id: "12325",
+      name: "Premier League",
+      src: "",
+    ));
+    list.add(League(
+      id: "9655",
+      name: "Bundesliga",
+      src: "",
+    ));
+    list.add(League(
+      id: "9697",
+      name: "Serie A",
+      src: "",
+    ));
+    list.add(League(
+      id: "12316",
+      name: "La Liga",
+      src: "",
+    ));
+    list.add(League(
+      id: "12337",
+      name: "Ligue 1",
+      src: "",
+    ));
+    list.add(League(
+      id: "12451",
+      name: "Championship",
+      src: "",
+    ));
+    list.add(League(
+      id: "12446",
+      name: "League One",
+      src: "",
+    ));
+    list.add(League(
+      id: "12422",
+      name: "League Two",
+      src: "",
+    ));
+    list.add(League(
+      id: "10994",
+      name: "J1 League",
+      src: "",
+    ));
+    list.add(League(
+      id: "12455",
+      name: "Premiership",
+      src: "",
+    ));
+    list.add(League(
+      id: "11217",
+      name: "Super League",
+      src: "",
+    ));
+    list.add(League(
+      id: "10976",
+      name: "Eliteserien",
+      src: "",
+    ));
+    listLeagueQuick.clear();
+    listLeagueQuick.addAll(list);
+    listLeagueQuick.refresh();
   }
 }

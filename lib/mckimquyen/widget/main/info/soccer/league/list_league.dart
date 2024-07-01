@@ -22,13 +22,20 @@ class League {
   String? id;
   String? name;
   String? src;
+  bool? isSelected;
 
-  League({this.id, this.name, this.src});
+  League({
+    this.id,
+    this.name,
+    this.src,
+    this.isSelected,
+  });
 
   League.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
     src = json['src'];
+    isSelected = json['isSelected'];
   }
 
   Map<String, dynamic> toJson() {
@@ -36,6 +43,7 @@ class League {
     data['id'] = id;
     data['name'] = name;
     data['src'] = src;
+    data['isSelected'] = isSelected;
     return data;
   }
 }

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/choose_league_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -19,7 +20,7 @@ class LeagueWidget extends StatefulWidget {
 }
 
 class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
-  // final ControllerMain _controllerMain = Get.find();
+  final ControllerMain _controllerMain = Get.find();
   final WebViewController _webViewController = WebViewController();
   String? _leagueId;
 
@@ -87,6 +88,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
   Future<void> _initData() async {
     await _getLeagueId();
     _loadData(_leagueId, true);
+    _controllerMain.getListLeagueQuick();
   }
 
   @override
@@ -117,7 +119,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
               children: [
                 Container(
                   width: double.infinity,
-                  margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
+                  margin: const EdgeInsets.fromLTRB(8, 2, 8, 0),
                   padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
                     color: Colors.transparent,
@@ -180,7 +182,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
                     },
                   ),
                 ),
-                const SizedBox(height: 8),
+                _buildQuickLeagueView(),
                 Expanded(
                   child: WebViewWidget(controller: _webViewController),
                 ),
@@ -190,6 +192,43 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
         ],
       ),
     );
+  }
+
+  Widget _buildQuickLeagueView() {
+    return Obx(() {
+      var list = _controllerMain.listLeagueQuick;
+      return Container(
+        color: Colors.transparent,
+        height: 30,
+        margin: const EdgeInsets.only(top: 4),
+        alignment: Alignment.center,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
+          itemCount: list.length,
+          itemBuilder: (context, i) {
+            var league = list[i];
+            return Container(
+              margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(40.0),
+                    bottomRight: Radius.circular(40.0),
+                    topLeft: Radius.circular(40.0),
+                    bottomLeft: Radius.circular(40.0)),
+                color: (league.isSelected == true) ? Colors.white : Colors.grey,
+              ),
+              padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+              child: Text(
+                league.name ?? "",
+                style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),
+              ),
+            );
+          },
+        ),
+      );
+    });
   }
 
   Future<void> _handleChooseLeague(League league) async {
