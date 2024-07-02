@@ -14,6 +14,7 @@ class SharedPreferencesUtil {
   static int themeIndexWebView = 1;
   static String keySearchLeague = "keySearchLeague";
   static String keyLeagueId = "keyLeagueId";
+  static String keySearchTeam = "keySearchTeam";
 
   // static bool onOffTextOverflow = false;
 

@@ -43,6 +43,7 @@ class ControllerMain extends BaseController {
   var isLoadingListLeague = true.obs;
   var listLeague = <League>[].obs;
   var listLeagueQuick = <League>[].obs;
+  var isLoadingListTeam = true.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1712,5 +1713,48 @@ class ControllerMain extends BaseController {
       listLeagueQuick[index].isSelected = true;
     }
     listLeagueQuick.refresh();
+  }
+
+  Future<void> searchTeam(String keyword) async {
+    isLoadingListTeam.value = true;
+    SharedPreferencesUtil.setString(SharedPreferencesUtil.keySearchTeam, keyword);
+    var path = 'https://footystats.org/vn/embeds/ajax-search-clubs.php?term=$keyword';
+    debugPrint("roy93~ path $path");
+    var response = await dio.get(path);
+    String htmlString = response.data;
+    debugPrint("roy93~ htmlString $htmlString");
+    var document = html_parser.parse(htmlString);
+    var anchors = document.querySelectorAll('a.changeEmbed');
+    // for (var element in anchors) {
+    //   debugPrint("element $element");
+    // }
+    var teams = anchors.map((element) {
+      var dataTeam = element.attributes['data-team'];
+      var name = element.text.trim();
+      return Team(id: dataTeam, name: name);
+    }).toList();
+    // for (var team in teams) {
+    //   debugPrint("roy93~ team ${team.toJson()}");
+    // }
+    //TODO roy93~ impl tiep
+
+    // Map<String, dynamic> valueMap = json.decode(data);
+    // var listLeagueData = ListLeague.fromJson(valueMap);
+    // // debugPrint("listLeague ${listLeague.toJson()}");
+    // listLeague.clear();
+    // listLeagueData.leagues?.forEach((element) {
+    //   var document = html_parser.parse(element);
+    //   var name = document.querySelector('li.team div')?.text;
+    //   var id = document.querySelector('li.team')?.attributes['data-uid'];
+    //   var src = document.querySelector('li.team img.badge')?.attributes['src'];
+    //   listLeague.add(League(
+    //     name: name,
+    //     id: id,
+    //     src: src,
+    //   ));
+    // });
+    // listLeague.refresh();
+    // // debugPrint("listLeague ${listLeague.first.toJson()}");
+    // isLoadingListLeague.value = false;
   }
 }

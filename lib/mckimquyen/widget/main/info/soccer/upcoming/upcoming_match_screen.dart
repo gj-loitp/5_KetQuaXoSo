@@ -170,7 +170,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
                       const SizedBox(width: 16),
                       const Expanded(
                         child: Text(
-                          "Giải đấu",
+                          "Trận đấu sắp tới",
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             color: Colors.white,

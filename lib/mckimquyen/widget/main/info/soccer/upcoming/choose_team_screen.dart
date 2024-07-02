@@ -30,12 +30,12 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
     super.initState();
     _tecSearch.addListener(() {
       EasyDebounce.debounce(
-        'searchLeague',
+        'searchTeam',
         const Duration(milliseconds: 500),
         () {
           var text = _tecSearch.text.toString();
           // debugPrint("text $text");
-          _controllerMain.searchLeague(text);
+          _controllerMain.searchTeam(text);
         },
       );
     });
@@ -43,7 +43,7 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
   }
 
   Future<void> _setupData() async {
-    var keyword = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keySearchLeague);
+    var keyword = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keySearchTeam);
     // debugPrint("_setupData keyword $keyword");
     if (keyword != null) {
       _tecSearch.text = keyword;
@@ -105,7 +105,7 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
                         const SizedBox(width: 16),
                         const Expanded(
                           child: Text(
-                            "Tìm kiếm giải đấu",
+                            "Tìm kiếm đội bóng",
                             style: TextStyle(
                               fontWeight: FontWeight.w900,
                               color: Colors.white,
@@ -156,7 +156,7 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
             Icons.search,
             color: Colors.black,
           ),
-          hintText: "Nhập giải đấu",
+          hintText: "Nhập tên đội bóng",
           hintStyle: TextStyle(
             fontWeight: FontWeight.w700,
             color: Colors.grey,
@@ -178,8 +178,8 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
 
   Widget _buildLoadingView() {
     return Obx(() {
-      var isLoadingListLeague = _controllerMain.isLoadingListLeague.value;
-      if (isLoadingListLeague) {
+      var isLoadingListTeam = _controllerMain.isLoadingListTeam.value;
+      if (isLoadingListTeam) {
         return Container(
           padding: const EdgeInsets.fromLTRB(0, 16, 0, 8),
           width: 50,
@@ -200,7 +200,8 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
     return Obx(() {
       var list = _controllerMain.listLeague;
       if (list.isEmpty) {
-        return Container(
+        return SizedBox(
+          width: Get.width,
           child: Column(
             children: [
               Image.asset(
@@ -209,7 +210,7 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
                 fit: BoxFit.cover,
               ),
               const Text(
-                "Không tìm thấy giải đấu này",
+                "Không tìm thấy đội bóng này",
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,

@@ -200,7 +200,8 @@ class _ChooseLeagueWidgetState extends BaseStatefulState<ChooseLeagueWidget> {
     return Obx(() {
       var list = _controllerMain.listLeague;
       if (list.isEmpty) {
-        return Container(
+        return SizedBox(
+          width: Get.width,
           child: Column(
             children: [
               Image.asset(
