@@ -10,7 +10,7 @@ import 'package:html/parser.dart' as html_parser;
 import 'package:ketquaxoso/mckimquyen/db/database_helper.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/list_league.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/list_league.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/vietlot/vietlot_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';

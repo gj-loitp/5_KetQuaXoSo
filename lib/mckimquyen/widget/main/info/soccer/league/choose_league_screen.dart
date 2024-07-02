@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/list_league.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/list_league.dart';
 
 class ChooseLeagueWidget extends StatefulWidget {
   final Function(League league)? onTap;

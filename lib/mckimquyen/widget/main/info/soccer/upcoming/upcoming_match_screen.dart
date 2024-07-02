@@ -1,26 +1,37 @@
+import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
+import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/choose_league_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/list_league.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class UpcomingMatchScreen extends StatefulWidget {
-  const UpcomingMatchScreen({
+class UpcomingMatchWidget extends StatefulWidget {
+  const UpcomingMatchWidget({
     super.key,
   });
 
   @override
-  State<UpcomingMatchScreen> createState() => _UpcomingMatchScreenState();
+  State<UpcomingMatchWidget> createState() => _UpcomingMatchWidgetState();
 }
 
-class _UpcomingMatchScreenState extends BaseStatefulState<UpcomingMatchScreen> {
-  var webViewController = WebViewController();
+class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
+  final ControllerMain _controllerMain = Get.find();
+  final WebViewController _webViewController = WebViewController();
+  String? _leagueId;
 
-  @override
-  void initState() {
-    super.initState();
+  void _loadData(String? leagueID, bool needInitWebViewController) {
+    var mLeagueId = leagueID;
+    if (mLeagueId == null || mLeagueId.isEmpty) {
+      mLeagueId = League.leagueIdDefault;
+    }
+    debugPrint(
+        "_loadData leagueID $leagueID => _mLeagueId $mLeagueId, needInitWebViewController $needInitWebViewController");
     var htmlString = ''''
-<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: 93 }); </script>
+<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: $mLeagueId }); </script>
     ''';
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
@@ -32,35 +43,76 @@ class _UpcomingMatchScreenState extends BaseStatefulState<UpcomingMatchScreen> {
       </body>
     </html>""";
 
-    webViewController = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(Colors.white)
-      ..setNavigationDelegate(
-        NavigationDelegate(
-          onProgress: (int progress) {
-            // debugPrint("progress $progress");
-          },
-          onPageStarted: (String url) {
-            // debugPrint("onPageStarted url $url");
-          },
-          onPageFinished: (String url) async {
-            // debugPrint("onPageFinished url $url");
-          },
-          onWebResourceError: (WebResourceError error) {
-            // debugPrint("onPageFinished url $error");
-          },
-          onNavigationRequest: (NavigationRequest request) {
-            // debugPrint("request ${request.url}");
-            if (request.url.contains(".html")) {
-              return NavigationDecision.prevent;
+    if (needInitWebViewController) {
+      _webViewController
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+        ..setBackgroundColor(Colors.transparent)
+        ..setNavigationDelegate(
+          NavigationDelegate(
+            onProgress: (int progress) {
+              // debugPrint("progress $progress");
+            },
+            onPageStarted: (String url) {
+              // debugPrint("onPageStarted url $url");
+            },
+            onPageFinished: (String url) async {
+              // debugPrint("onPageFinished url $url");
+              _webViewController.runJavaScript('''
+          (function() {
+            // Remove inline styles
+            var elements = document.querySelectorAll('*[style*="max-height"]');
+            for (var i = 0; i < elements.length; i++) {
+              elements[i].style.maxHeight = null;
             }
-            return NavigationDecision.navigate;
-          },
-        ),
-      )
-      // ..loadRequest(Uri.parse("https://baomoi.com/tien-ich/lich-van-nien.epi"));
-      // ..loadHtmlString("""<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings-loc.js')); mw('params', { leagueID: 2012, lang: 'vn' }); </script>""");
-      ..loadHtmlString(htmlWithStyle);
+            // Remove styles from stylesheets
+            for (var j = 0; j < document.styleSheets.length; j++) {
+              var styleSheet = document.styleSheets[j];
+              try {x
+                if (styleSheet.cssRules) {
+                  for (var k = 0; k < styleSheet.cssRules.length; k++) {
+                    var rule = styleSheet.cssRules[k];
+                    if (rule.style && rule.style.maxHeight) {
+                      rule.style.maxHeight = null;
+                    }
+                  }
+                }
+              } catch (e) {
+                console.log('Could not access stylesheet: ', e);
+              }
+            }
+          })();
+        ''');
+            },
+            onWebResourceError: (WebResourceError error) {
+              // debugPrint("onPageFinished url $error");
+            },
+            onNavigationRequest: (NavigationRequest request) {
+              // debugPrint("request ${request.url}");
+              return NavigationDecision.prevent;
+            },
+          ),
+        );
+    }
+    // debugPrint(">>>>>>>> loadHtmlString htmlWithStyle $htmlWithStyle");
+    _webViewController.loadHtmlString(htmlWithStyle);
+  }
+
+  Future<void> _getLeagueId() async {
+    //default id 12325 -> ngoai hang anh
+    _leagueId = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keyLeagueId);
+    // debugPrint("_getLeagueId _leagueId $_leagueId");
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initData();
+  }
+
+  Future<void> _initData() async {
+    await _getLeagueId();
+    _loadData(_leagueId, true);
+    _controllerMain.getListLeagueQuick();
   }
 
   @override
@@ -72,40 +124,157 @@ class _UpcomingMatchScreenState extends BaseStatefulState<UpcomingMatchScreen> {
   Widget build(BuildContext context) {
     return Container(
       width: Get.width,
-      color: Colors.red,
+      color: Colors.transparent,
       padding: const EdgeInsets.only(bottom: 16),
-      child: Wrap(
+      child: Stack(
         children: [
-          UIUtils.getButton(
-            "Tìm kiếm hàng ngàn giải đấu",
-            Icons.navigate_next,
-            () {},
+          Image.asset(
+            "assets/images/bkg_3.jpg",
+            height: double.infinity,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ).blurred(
+            colorOpacity: 0.0,
+            borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
+            blur: 5,
           ),
-          Container(
-            height: 500,
-            child: WebViewWidget(controller: webViewController),
+          SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.fromLTRB(8, 2, 8, 0),
+                  padding: const EdgeInsets.all(0),
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 40,
+                        height: 40,
+                        child: MaterialButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          color: Colors.white,
+                          padding: const EdgeInsets.all(0),
+                          shape: const CircleBorder(),
+                          child: const Icon(
+                            Icons.clear,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      const Expanded(
+                        child: Text(
+                          "Giải đấu",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                            fontSize: 24,
+                            shadows: [
+                              Shadow(
+                                blurRadius: 5.0,
+                                color: Colors.black,
+                                offset: Offset(2.0, 2.0),
+                              ),
+                            ],
+                          ),
+                          textAlign: TextAlign.start,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+                  child: UIUtils.getButton(
+                    "Tìm kiếm giải đấu",
+                    description: "Hãy chọn giải đấu yêu thích của bạn",
+                    Icons.search,
+                    () {
+                      Get.to(
+                        () => ChooseLeagueWidget(
+                          (League league) {
+                            _handleChooseLeague(league);
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                _buildQuickLeagueView(),
+                Expanded(
+                  child: WebViewWidget(controller: _webViewController),
+                ),
+              ],
+            ),
           ),
-          // Container(
-          //   height: 500,
-          //   color: Colors.red,
-          //   child: HtmlWidget(
-          //     '''
-          // <iframe src="https://footystats.org/vn/api/club?id=5" height="100%" width="100%" style="height:420px; width:100%;" frameborder="0"></iframe>
-          // ''',
-          //     renderMode: RenderMode.listView,
-          //     textStyle: const TextStyle(
-          //       fontSize: 22,
-          //       fontWeight: FontWeight.w400,
-          //       color: Colors.black,
-          //     ),
-          //     enableCaching: true,
-          //     onTapUrl: (url) {
-          //       return true;
-          //     },
-          //   ),
-          // ),
         ],
       ),
     );
+  }
+
+  Widget _buildQuickLeagueView() {
+    return Obx(() {
+      var list = _controllerMain.listLeagueQuick;
+      return Container(
+        color: Colors.transparent,
+        height: 30,
+        margin: const EdgeInsets.only(top: 4),
+        alignment: Alignment.center,
+        child: ListView.builder(
+          padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+          scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
+          itemCount: list.length,
+          itemBuilder: (context, i) {
+            var league = list[i];
+            return InkWell(
+              child: Container(
+                margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(45.0),
+                      bottomRight: Radius.circular(45.0),
+                      topLeft: Radius.circular(45.0),
+                      bottomLeft: Radius.circular(45.0)),
+                  color: (league.isSelected == true) ? Colors.yellow : Colors.white.withOpacity(0.8),
+                ),
+                padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+                child: Text(
+                  league.name ?? "",
+                  style: const TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              onTap: () {
+                _controllerMain.setSelectedLeagueQuick(i);
+                _loadData(league.id, false);
+              },
+            );
+          },
+        ),
+      );
+    });
+  }
+
+  Future<void> _handleChooseLeague(League league) async {
+    // debugPrint("onTap league ${league.toJson()}");
+    _controllerMain.setSelectedLeagueQuick(null);
+    var leagueId = league.id ?? League.leagueIdDefault;
+    await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
+    if (leagueId.isEmpty) {
+      //do nothing
+    } else {
+      _loadData(leagueId, false);
+    }
   }
 }

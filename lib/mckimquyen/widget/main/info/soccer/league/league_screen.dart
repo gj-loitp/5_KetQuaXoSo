@@ -8,7 +8,7 @@ import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/choose_league_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'list_league.dart';
+import '../list_league.dart';
 
 class LeagueWidget extends StatefulWidget {
   const LeagueWidget({
@@ -57,7 +57,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
               // debugPrint("onPageStarted url $url");
             },
             onPageFinished: (String url) async {
-              // debugPrint("onPageFinished url $url");
+              debugPrint("roy93~ onPageFinished url $url");
               _webViewController.runJavaScript('''
           (function() {
             // Remove inline styles
@@ -78,7 +78,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
                   }
                 }
               } catch (e) {
-                console.log('Could not access stylesheet: ', e);
+                console.log('roy93~ Could not access stylesheet: ', e);
               }
             }
           })();

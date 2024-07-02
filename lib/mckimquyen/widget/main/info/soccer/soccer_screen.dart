@@ -23,7 +23,7 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
 
   final List<Widget> bottomBarPages = [
     const KeepAlivePage(child: LeagueWidget()),
-    const KeepAlivePage(child: UpcomingMatchScreen()),
+    const KeepAlivePage(child: UpcomingMatchWidget()),
     const KeepAlivePage(child: TeamScreen()),
   ];
 
