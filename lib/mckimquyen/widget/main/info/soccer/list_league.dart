@@ -47,3 +47,33 @@ class League {
     return data;
   }
 }
+
+class Team {
+  String? id;
+  String? name;
+  String? src;
+  bool? isSelected;
+
+  Team({
+    this.id,
+    this.name,
+    this.src,
+    this.isSelected,
+  });
+
+  Team.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    src = json['src'];
+    isSelected = json['isSelected'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['src'] = src;
+    data['isSelected'] = isSelected;
+    return data;
+  }
+}

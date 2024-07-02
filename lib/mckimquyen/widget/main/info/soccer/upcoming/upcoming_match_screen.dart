@@ -5,8 +5,8 @@ import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/choose_league_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/list_league.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/upcoming/choose_team_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class UpcomingMatchWidget extends StatefulWidget {
@@ -192,14 +192,14 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                   child: UIUtils.getButton(
-                    "Tìm kiếm giải đấu",
-                    description: "Hãy chọn giải đấu yêu thích của bạn",
+                    "Tìm kiếm tên đội bóng",
+                    description: "Hãy chọn đội bóng yêu thích của bạn",
                     Icons.search,
                     () {
                       Get.to(
-                        () => ChooseLeagueWidget(
-                          (League league) {
-                            _handleChooseLeague(league);
+                        () => ChooseTeamWidget(
+                          (Team team) {
+                            _handleChooseTeam(team);
                           },
                         ),
                       );
@@ -266,15 +266,15 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
     });
   }
 
-  Future<void> _handleChooseLeague(League league) async {
+  Future<void> _handleChooseTeam(Team team) async {
     // debugPrint("onTap league ${league.toJson()}");
-    _controllerMain.setSelectedLeagueQuick(null);
-    var leagueId = league.id ?? League.leagueIdDefault;
-    await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
-    if (leagueId.isEmpty) {
-      //do nothing
-    } else {
-      _loadData(leagueId, false);
-    }
+    // _controllerMain.setSelectedLeagueQuick(null);
+    // var leagueId = league.id ?? League.leagueIdDefault;
+    // await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
+    // if (leagueId.isEmpty) {
+    //   //do nothing
+    // } else {
+    //   _loadData(leagueId, false);
+    // }
   }
 }
