@@ -68,7 +68,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
             // Remove styles from stylesheets
             for (var j = 0; j < document.styleSheets.length; j++) {
               var styleSheet = document.styleSheets[j];
-              try {
+              try {x
                 if (styleSheet.cssRules) {
                   for (var k = 0; k < styleSheet.cssRules.length; k++) {
                     var rule = styleSheet.cssRules[k];
@@ -228,6 +228,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
         margin: const EdgeInsets.only(top: 4),
         alignment: Alignment.center,
         child: ListView.builder(
+          padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
           itemCount: list.length,
