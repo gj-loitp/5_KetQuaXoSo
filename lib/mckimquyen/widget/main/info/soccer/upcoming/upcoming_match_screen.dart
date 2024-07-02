@@ -67,7 +67,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
             // Remove styles from stylesheets
             for (var j = 0; j < document.styleSheets.length; j++) {
               var styleSheet = document.styleSheets[j];
-              try {x
+              try {
                 if (styleSheet.cssRules) {
                   for (var k = 0; k < styleSheet.cssRules.length; k++) {
                     var rule = styleSheet.cssRules[k];

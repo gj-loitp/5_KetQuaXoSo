@@ -60,15 +60,13 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
               debugPrint("roy93~ onPageFinished url $url");
               _webViewController.runJavaScript('''
           (function() {
-            // Remove inline styles
             var elements = document.querySelectorAll('*[style*="max-height"]');
             for (var i = 0; i < elements.length; i++) {
               elements[i].style.maxHeight = null;
             }
-            // Remove styles from stylesheets
             for (var j = 0; j < document.styleSheets.length; j++) {
               var styleSheet = document.styleSheets[j];
-              try {x
+              try {
                 if (styleSheet.cssRules) {
                   for (var k = 0; k < styleSheet.cssRules.length; k++) {
                     var rule = styleSheet.cssRules[k];
@@ -78,7 +76,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
                   }
                 }
               } catch (e) {
-                console.log('roy93~ Could not access stylesheet: ', e);
+                console.log('Could not access stylesheet: ', e);
               }
             }
           })();
