@@ -57,7 +57,7 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
               // debugPrint("onPageStarted url $url");
             },
             onPageFinished: (String url) async {
-              debugPrint("roy93~ onPageFinished url $url");
+              // debugPrint("onPageFinished url $url");
               _webViewController.runJavaScript('''
           (function() {
             var elements = document.querySelectorAll('*[style*="max-height"]');

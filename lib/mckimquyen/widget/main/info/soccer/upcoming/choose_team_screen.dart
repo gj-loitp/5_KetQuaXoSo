@@ -1,13 +1,12 @@
 import 'package:blur/blur.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/list_league.dart';
+
+import '../list_league.dart';
 
 class ChooseTeamWidget extends StatefulWidget {
   final Function(Team team)? onTap;
@@ -198,7 +197,7 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
 
   Widget _buildListView() {
     return Obx(() {
-      var list = _controllerMain.listLeague;
+      var list = _controllerMain.listTeam;
       if (list.isEmpty) {
         return SizedBox(
           width: Get.width,
@@ -232,11 +231,11 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
           physics: const BouncingScrollPhysics(),
           itemCount: list.length,
           itemBuilder: (context, i) {
-            var league = list[i];
+            var team = list[i];
             return InkWell(
               onTap: () {
-                // widget.onTap?.call(league);
-                // Get.back();
+                widget.onTap?.call(team);
+                Get.back();
               },
               child: Container(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
@@ -247,30 +246,35 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
                 ),
                 child: Row(
                   children: [
-                    CachedNetworkImage(
-                      imageUrl: league.src ?? "",
-                      imageBuilder: (context, imageProvider) => Container(
-                        height: 45,
-                        width: 45,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(Radius.circular(50)),
-                          image: DecorationImage(
-                            image: imageProvider,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      placeholder: (context, url) => const SizedBox(
-                        width: 45,
-                        height: 45,
-                        child: CupertinoActivityIndicator(),
-                      ),
-                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    Image.asset(
+                      "assets/images/ic_ball_2.png",
+                      width: 45,
+                      height: 45,
                     ),
+                    // CachedNetworkImage(
+                    //   imageUrl: team.src ?? "",
+                    //   imageBuilder: (context, imageProvider) => Container(
+                    //     height: 45,
+                    //     width: 45,
+                    //     decoration: BoxDecoration(
+                    //       borderRadius: const BorderRadius.all(Radius.circular(50)),
+                    //       image: DecorationImage(
+                    //         image: imageProvider,
+                    //         fit: BoxFit.cover,
+                    //       ),
+                    //     ),
+                    //   ),
+                    //   placeholder: (context, url) => const SizedBox(
+                    //     width: 45,
+                    //     height: 45,
+                    //     child: CupertinoActivityIndicator(),
+                    //   ),
+                    //   errorWidget: (context, url, error) => const Icon(Icons.error),
+                    // ),
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        league.name ?? "",
+                        team.name ?? "",
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
