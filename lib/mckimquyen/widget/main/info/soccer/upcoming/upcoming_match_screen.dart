@@ -267,7 +267,8 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
   }
 
   Future<void> _handleChooseTeam(Team team) async {
-    // debugPrint("onTap league ${league.toJson()}");
+    debugPrint("roy93~ _handleChooseTeam ${team.toJson()}");
+    //TODO roy93~
     // _controllerMain.setSelectedLeagueQuick(null);
     // var leagueId = league.id ?? League.leagueIdDefault;
     // await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
