@@ -44,6 +44,7 @@ class ControllerMain extends BaseController {
   var listLeague = <League>[].obs;
   var listLeagueQuick = <League>[].obs;
   var isLoadingListTeam = true.obs;
+  var listTeam = <Team>[].obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1736,25 +1737,10 @@ class ControllerMain extends BaseController {
     // for (var team in teams) {
     //   debugPrint("roy93~ team ${team.toJson()}");
     // }
-    //TODO roy93~ impl tiep
-
-    // Map<String, dynamic> valueMap = json.decode(data);
-    // var listLeagueData = ListLeague.fromJson(valueMap);
-    // // debugPrint("listLeague ${listLeague.toJson()}");
-    // listLeague.clear();
-    // listLeagueData.leagues?.forEach((element) {
-    //   var document = html_parser.parse(element);
-    //   var name = document.querySelector('li.team div')?.text;
-    //   var id = document.querySelector('li.team')?.attributes['data-uid'];
-    //   var src = document.querySelector('li.team img.badge')?.attributes['src'];
-    //   listLeague.add(League(
-    //     name: name,
-    //     id: id,
-    //     src: src,
-    //   ));
-    // });
-    // listLeague.refresh();
-    // // debugPrint("listLeague ${listLeague.first.toJson()}");
-    // isLoadingListLeague.value = false;
+    listTeam.clear();
+    listTeam.addAll(teams);
+    listTeam.refresh();
+    // debugPrint("listTeam ${listTeam.first.toJson()}");
+    isLoadingListTeam.value = false;
   }
 }
