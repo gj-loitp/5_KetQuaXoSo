@@ -1,7 +1,7 @@
 name: ketquaxoso
 description: A new Flutter project.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 2024.06.29+20240629
+version: 2024.07.04+20240704
 
 environment:
   sdk: '>=2.19.6 <4.0.0'
@@ -28,7 +28,7 @@ dependencies:
   dio: ^5.4.3+1
   flutter_pretty_dio_logger: ^3.0.0
   easy_debounce: ^2.0.3
-  #  flutter_local_notifications: ^17.0.1
+  flutter_local_notifications: ^17.2.1
   flutter_displaymode: ^0.6.0
   flutter_native_splash:
   flutter_widget_from_html: ^0.15.1
