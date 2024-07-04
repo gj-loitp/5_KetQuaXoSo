@@ -10,6 +10,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import '../list_league.dart';
 
+//TODO roy93~ them xoa sua league yeu thich -> them nhanh vao list listLeagueQuick
 class LeagueWidget extends StatefulWidget {
   const LeagueWidget({
     super.key,
