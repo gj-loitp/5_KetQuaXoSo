@@ -94,7 +94,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                             child: const Material(
                               color: Colors.transparent,
                               child: Text(
-                                "Cài đặt",
+                                "Cài đặt ứng dụng",
                                 style: TextStyle(
                                   fontWeight: FontWeight.w900,
                                   color: Colors.white,
