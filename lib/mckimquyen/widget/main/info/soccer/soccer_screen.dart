@@ -5,6 +5,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/keep_alive_age.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/league_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/team/team_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/upcoming/upcoming_match_screen.dart';
@@ -22,6 +23,7 @@ class SoccerScreen extends StatefulWidget {
 }
 
 class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTickerProviderStateMixin {
+  final ControllerMain _controllerMain = Get.find();
   TabController? tabControllerMain;
 
   final List<Widget> bottomBarPages = [
@@ -34,6 +36,9 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
   void initState() {
     super.initState();
     tabControllerMain = TabController(length: bottomBarPages.length, vsync: this);
+    tabControllerMain?.addListener(() {
+      _controllerMain.setIndexBottomBarSoccer(tabControllerMain?.index ?? 0);
+    });
   }
 
   @override
@@ -94,24 +99,26 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
                     Expanded(
                       child: Hero(
                         tag: "${widget.from}${HeroConstants.appBarTitle}",
-                        child: const Material(
+                        child: Material(
                           color: Colors.transparent,
-                          child: Text(
-                            "CLB bóng đá",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
+                          child: Obx(() {
+                            return Text(
+                              _controllerMain.getLabelBottomBarSoccer(),
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                                fontSize: 24,
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 5.0,
+                                    color: Colors.black,
+                                    offset: Offset(2.0, 2.0),
+                                  ),
+                                ],
+                              ),
+                              textAlign: TextAlign.start,
+                            );
+                          }),
                         ),
                       ),
                     ),

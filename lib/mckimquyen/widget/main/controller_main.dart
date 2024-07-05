@@ -45,6 +45,7 @@ class ControllerMain extends BaseController {
   var listLeagueQuick = <League>[].obs;
   var isLoadingListTeam = true.obs;
   var listTeam = <Team>[].obs;
+  var _indexBottomBarSoccer = 0.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1742,5 +1743,19 @@ class ControllerMain extends BaseController {
     listTeam.refresh();
     // debugPrint("listTeam ${listTeam.first.toJson()}");
     isLoadingListTeam.value = false;
+  }
+
+  void setIndexBottomBarSoccer(int index) {
+    _indexBottomBarSoccer.value = index;
+  }
+
+  String getLabelBottomBarSoccer() {
+    if (_indexBottomBarSoccer.value == 0) {
+      return "Giải đấu";
+    } else if (_indexBottomBarSoccer.value == 1) {
+      return "Trận đấu sắp tới";
+    } else {
+      return "Đội của tôi";
+    }
   }
 }
