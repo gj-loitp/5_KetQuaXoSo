@@ -5,10 +5,8 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
-import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
-import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/history/history_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/soccer_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/testApp/test_app_screen.dart';
@@ -76,26 +74,23 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
                           height: 40,
                         ),
                         Expanded(
-                          child: Hero(
-                            tag: HeroConstants.appBarTitle,
-                            child: Material(
-                              color: Colors.transparent,
-                              child: Text(
-                                "Phụ lục",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  shadows: [
-                                    Shadow(
-                                      blurRadius: 5.0,
-                                      color: Colors.black,
-                                      offset: Offset(2.0, 2.0),
-                                    ),
-                                  ],
-                                ),
-                                textAlign: TextAlign.center,
+                          child: Material(
+                            color: Colors.transparent,
+                            child: Text(
+                              "Phụ lục",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                                fontSize: 24,
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 5.0,
+                                    color: Colors.black,
+                                    offset: Offset(2.0, 2.0),
+                                  ),
+                                ],
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -180,7 +175,7 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "Cài đặt\nứng dụng",
           "assets/images/ic_settings.png",
           () {
-            Get.to(() => const SettingScreen());
+            Get.to(() => SettingScreen(InfoScreen.path));
           },
         ),
       ],

@@ -28,7 +28,7 @@ dependencies:
   dio: ^5.4.3+1
   flutter_pretty_dio_logger: ^3.0.0
   easy_debounce: ^2.0.3
-  flutter_local_notifications: ^17.2.1
+#  flutter_local_notifications: ^17.2.1
   flutter_displaymode: ^0.6.0
   flutter_native_splash:
   flutter_widget_from_html: ^0.15.1

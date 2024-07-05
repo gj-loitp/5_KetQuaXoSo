@@ -12,7 +12,10 @@ import '../applovin/applovin_screen.dart';
 import '../main/controller_main.dart';
 
 class SettingScreen extends StatefulWidget {
-  const SettingScreen({
+  final String from;
+
+  const SettingScreen(
+    this.from, {
     super.key,
   });
 
@@ -66,7 +69,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                     child: Row(
                       children: [
                         Hero(
-                          tag: HeroConstants.appBarRightIcon,
+                          tag: "${HeroConstants.appBarRightIcon}${widget.from}",
                           child: SizedBox(
                             width: 40,
                             height: 40,
@@ -85,10 +88,10 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        const Expanded(
+                        Expanded(
                           child: Hero(
-                            tag: HeroConstants.appBarTitle,
-                            child: Material(
+                            tag: "${HeroConstants.appBarTitle}${widget.from}",
+                            child: const Material(
                               color: Colors.transparent,
                               child: Text(
                                 "Cài đặt",

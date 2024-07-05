@@ -14,6 +14,7 @@ import 'mega/mega_screen.dart';
 
 class VietlotScreen extends StatefulWidget {
   static const path = "VietlotScreen";
+
   const VietlotScreen({
     super.key,
   });
@@ -120,7 +121,7 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                                   "assets/files/test.json",
                                   true,
                                   () {
-                                    Get.to(() => const SettingScreen());
+                                    Get.to(() => const SettingScreen(VietlotScreen.path));
                                   },
                                 );
                               }

@@ -140,10 +140,10 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           width: 40,
                           height: 40,
                         ),
-                        const Expanded(
+                        Expanded(
                           child: Hero(
-                            tag: HeroConstants.appBarTitle,
-                            child: Material(
+                            tag: "${HeroConstants.appBarTitle}${ProfileScreen.path}",
+                            child: const Material(
                               color: Colors.transparent,
                               child: Text(
                                 "Cá nhân",
@@ -165,14 +165,14 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           ),
                         ),
                         Hero(
-                          tag: HeroConstants.appBarRightIcon,
+                          tag: "${HeroConstants.appBarRightIcon}${ProfileScreen.path}",
                           child: Container(
                             padding: const EdgeInsets.all(2),
                             width: 40,
                             height: 40,
                             child: MaterialButton(
                               onPressed: () {
-                                Get.to(() => const SettingScreen());
+                                Get.to(() => SettingScreen(ProfileScreen.path));
                                 _showInterAd();
                               },
                               color: Colors.white,
