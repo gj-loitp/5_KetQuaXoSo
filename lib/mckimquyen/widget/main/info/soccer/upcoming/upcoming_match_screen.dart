@@ -1,6 +1,7 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
@@ -10,6 +11,8 @@ import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/upcoming/choose_te
 import 'package:webview_flutter/webview_flutter.dart';
 
 class UpcomingMatchWidget extends StatefulWidget {
+  static String path = "UpcomingMatchWidget";
+
   const UpcomingMatchWidget({
     super.key,
   });
@@ -128,21 +131,25 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
       padding: const EdgeInsets.only(bottom: 16),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-            child: UIUtils.getButton(
-              "Tìm kiếm tên đội bóng",
-              description: "Hãy chọn đội bóng yêu thích của bạn",
-              Icons.search,
-              () {
-                Get.to(
-                  () => ChooseTeamWidget(
-                    (Team team) {
-                      _handleChooseTeam(team);
-                    },
-                  ),
-                );
-              },
+          Hero(
+            tag: "${UpcomingMatchWidget.path}${HeroConstants.searchView}",
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+              child: UIUtils.getButton(
+                "Tìm kiếm tên đội bóng",
+                description: "Hãy chọn đội bóng yêu thích của bạn",
+                Icons.search,
+                () {
+                  Get.to(
+                    () => ChooseTeamWidget(
+                      UpcomingMatchWidget.path,
+                      (Team team) {
+                        _handleChooseTeam(team);
+                      },
+                    ),
+                  );
+                },
+              ),
             ),
           ),
           _buildQuickLeagueView(),

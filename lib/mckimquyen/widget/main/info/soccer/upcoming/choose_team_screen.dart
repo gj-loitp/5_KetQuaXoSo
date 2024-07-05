@@ -2,6 +2,7 @@ import 'package:blur/blur.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
@@ -9,9 +10,11 @@ import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import '../list_league.dart';
 
 class ChooseTeamWidget extends StatefulWidget {
+  final String from;
   final Function(Team team)? onTap;
 
   const ChooseTeamWidget(
+    this.from,
     this.onTap, {
     super.key,
   });
@@ -136,41 +139,47 @@ class _ChooseTeamWidgetState extends BaseStatefulState<ChooseTeamWidget> {
   }
 
   Widget _buildSearchView() {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.white),
-        borderRadius: const BorderRadius.all(Radius.circular(45)),
-        color: Colors.white,
-      ),
-      padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-      child: TextField(
-        controller: _tecSearch,
-        autofocus: true,
-        textInputAction: TextInputAction.search,
-        maxLength: 50,
-        keyboardType: TextInputType.text,
-        decoration: const InputDecoration(
-          icon: Icon(
-            Icons.search,
-            color: Colors.black,
-          ),
-          hintText: "Nhập tên đội bóng",
-          hintStyle: TextStyle(
-            fontWeight: FontWeight.w700,
-            color: Colors.grey,
-            fontSize: 22,
-          ),
-          counterText: "",
-          border: InputBorder.none,
-          contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+    return Hero(
+      tag: "${widget.from}${HeroConstants.searchView}",
+      child: Container(
+        margin: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.white),
+          borderRadius: const BorderRadius.all(Radius.circular(45)),
+          color: Colors.white,
         ),
-        style: const TextStyle(
-          fontWeight: FontWeight.w700,
-          color: Colors.black,
-          fontSize: 22,
+        padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+        child: Material(
+          color: Colors.transparent,
+          child: TextField(
+            controller: _tecSearch,
+            autofocus: true,
+            textInputAction: TextInputAction.search,
+            maxLength: 50,
+            keyboardType: TextInputType.text,
+            decoration: const InputDecoration(
+              icon: Icon(
+                Icons.search,
+                color: Colors.black,
+              ),
+              hintText: "Nhập tên đội bóng",
+              hintStyle: TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.grey,
+                fontSize: 22,
+              ),
+              counterText: "",
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+            ),
+            style: const TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+              fontSize: 22,
+            ),
+            textAlign: TextAlign.start,
+          ),
         ),
-        textAlign: TextAlign.start,
       ),
     );
   }
