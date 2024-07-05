@@ -126,94 +126,80 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
       width: Get.width,
       color: Colors.transparent,
       padding: const EdgeInsets.only(bottom: 16),
-      child: Stack(
-        children: [
-          Image.asset(
-            "assets/images/bkg_3.jpg",
-            height: double.infinity,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ).blurred(
-            colorOpacity: 0.0,
-            borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
-            blur: 5,
-          ),
-          SafeArea(
-            child: Column(
-              children: [
-                Container(
-                  width: double.infinity,
-                  margin: const EdgeInsets.fromLTRB(8, 2, 8, 0),
-                  padding: const EdgeInsets.all(0),
-                  decoration: BoxDecoration(
-                    color: Colors.transparent,
-                    borderRadius: BorderRadius.circular(15),
+      child: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.fromLTRB(8, 2, 8, 0),
+              padding: const EdgeInsets.all(0),
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: MaterialButton(
+                      onPressed: () {
+                        Get.back();
+                      },
+                      color: Colors.white,
+                      padding: const EdgeInsets.all(0),
+                      shape: const CircleBorder(),
+                      child: const Icon(
+                        Icons.clear,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 40,
-                        height: 40,
-                        child: MaterialButton(
-                          onPressed: () {
-                            Get.back();
-                          },
-                          color: Colors.white,
-                          padding: const EdgeInsets.all(0),
-                          shape: const CircleBorder(),
-                          child: const Icon(
-                            Icons.clear,
+                  const SizedBox(width: 16),
+                  const Expanded(
+                    child: Text(
+                      "Giải đấu",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                        fontSize: 24,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 5.0,
                             color: Colors.black,
+                            offset: Offset(2.0, 2.0),
                           ),
-                        ),
+                        ],
                       ),
-                      const SizedBox(width: 16),
-                      const Expanded(
-                        child: Text(
-                          "Giải đấu",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            fontSize: 24,
-                            shadows: [
-                              Shadow(
-                                blurRadius: 5.0,
-                                color: Colors.black,
-                                offset: Offset(2.0, 2.0),
-                              ),
-                            ],
-                          ),
-                          textAlign: TextAlign.start,
-                        ),
-                      ),
-                    ],
+                      textAlign: TextAlign.start,
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-                  child: UIUtils.getButton(
-                    "Tìm kiếm giải đấu",
-                    description: "Hãy chọn giải đấu yêu thích của bạn",
-                    Icons.search,
-                    () {
-                      Get.to(
-                        () => ChooseLeagueWidget(
-                          (League league) {
-                            _handleChooseLeague(league);
-                          },
-                        ),
-                      );
-                    },
-                  ),
-                ),
-                _buildQuickLeagueView(),
-                Expanded(
-                  child: WebViewWidget(controller: _webViewController),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+              child: UIUtils.getButton(
+                "Tìm kiếm giải đấu",
+                description: "Hãy chọn giải đấu yêu thích của bạn",
+                Icons.search,
+                () {
+                  Get.to(
+                    () => ChooseLeagueWidget(
+                      (League league) {
+                        _handleChooseLeague(league);
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
+            _buildQuickLeagueView(),
+            Expanded(
+              child: WebViewWidget(controller: _webViewController),
+            ),
+          ],
+        ),
       ),
     );
   }
