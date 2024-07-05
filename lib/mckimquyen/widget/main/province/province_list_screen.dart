@@ -1,6 +1,5 @@
 import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/province/province_screen.dart';
@@ -99,38 +98,41 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
             SafeArea(
               child: Column(
                 children: [
-                  Hero(
-                    tag: "${widget.from}${HeroConstants.appBar}",
-                    child: Material(
+                  Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
+                    padding: const EdgeInsets.all(0),
+                    decoration: BoxDecoration(
                       color: Colors.transparent,
-                      child: Container(
-                        width: double.infinity,
-                        margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
-                        padding: const EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 40,
-                              height: 40,
-                              child: MaterialButton(
-                                onPressed: () {
-                                  Get.back();
-                                },
-                                color: Colors.white,
-                                padding: const EdgeInsets.all(0),
-                                shape: const CircleBorder(),
-                                child: const Icon(
-                                  Icons.clear,
-                                  color: Colors.black,
-                                ),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Row(
+                      children: [
+                        Hero(
+                          tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
+                          child: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: MaterialButton(
+                              onPressed: () {
+                                Get.back();
+                              },
+                              color: Colors.white,
+                              padding: const EdgeInsets.all(0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.clear,
+                                color: Colors.black,
                               ),
                             ),
-                            const SizedBox(width: 16),
-                            const Expanded(
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: Hero(
+                            tag: "${widget.from}${HeroConstants.appBarTitle}",
+                            child: const Material(
+                              color: Colors.transparent,
                               child: Text(
                                 "Danh sách các đài",
                                 style: TextStyle(
@@ -148,9 +150,9 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                                 textAlign: TextAlign.start,
                               ),
                             ),
-                          ],
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                   Expanded(child: _buildViewListProvince()),
@@ -209,7 +211,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                   ),
                   onTap: () {
                     Get.to(
-                          () => ProvinceScreen(
+                      () => ProvinceScreen(
                         province: province,
                         datetime: null,
                         index: index,

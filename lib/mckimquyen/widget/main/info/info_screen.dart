@@ -135,8 +135,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             Get.to(() => ProvinceListScreen(InfoScreen.path));
           },
-          "1icon",
-          "1title",
+          "${InfoScreen.path}${HeroConstants.appBarLeftIcon}",
+          "${InfoScreen.path}${HeroConstants.appBarTitle}",
         ),
         _buildViewItem(
           "Thông tin\nhữu ích",
