@@ -30,10 +30,12 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
     if (mTeamId == null || mTeamId.isEmpty) {
       mTeamId = Team.teamIdDefault;
     }
-    debugPrint("roy93~ _loadData teamID $teamID => mTeamId $mTeamId, needInitWebViewController $needInitWebViewController");
-    var htmlString = ''''
-<div id="fs-upcoming"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming-loc.js')); fsUpcoming('params', { teamID: $_teamId, lang: 'vn' }); </script>
+    debugPrint(
+        "roy93~ _loadData teamID $teamID => mTeamId $mTeamId, needInitWebViewController $needInitWebViewController");
+    var htmlString = '''
+<div id="fs-upcoming"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming-loc.js')); fsUpcoming('params', { teamID: $mTeamId, lang: 'vn' }); </script>
     ''';
+    debugPrint("roy93~ htmlString $htmlString");
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
       <head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -58,31 +60,6 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
             },
             onPageFinished: (String url) async {
               // debugPrint("onPageFinished url $url");
-              _webViewController.runJavaScript('''
-          (function() {
-            // Remove inline styles
-            var elements = document.querySelectorAll('*[style*="max-height"]');
-            for (var i = 0; i < elements.length; i++) {
-              elements[i].style.maxHeight = null;
-            }
-            // Remove styles from stylesheets
-            for (var j = 0; j < document.styleSheets.length; j++) {
-              var styleSheet = document.styleSheets[j];
-              try {
-                if (styleSheet.cssRules) {
-                  for (var k = 0; k < styleSheet.cssRules.length; k++) {
-                    var rule = styleSheet.cssRules[k];
-                    if (rule.style && rule.style.maxHeight) {
-                      rule.style.maxHeight = null;
-                    }
-                  }
-                }
-              } catch (e) {
-                console.log('Could not access stylesheet: ', e);
-              }
-            }
-          })();
-        ''');
             },
             onWebResourceError: (WebResourceError error) {
               // debugPrint("onPageFinished url $error");
