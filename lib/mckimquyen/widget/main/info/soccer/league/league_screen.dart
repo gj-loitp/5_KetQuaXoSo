@@ -1,6 +1,7 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
@@ -12,6 +13,8 @@ import '../list_league.dart';
 
 //TODO roy93~ them xoa sua league yeu thich -> them nhanh vao list listLeagueQuick
 class LeagueWidget extends StatefulWidget {
+  static String path = "LeagueWidget";
+
   const LeagueWidget({
     super.key,
   });
@@ -128,21 +131,25 @@ class _LeagueWidgetState extends BaseStatefulState<LeagueWidget> {
       padding: const EdgeInsets.only(bottom: 16),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-            child: UIUtils.getButton(
-              "Tìm kiếm giải đấu",
-              description: "Hãy chọn giải đấu yêu thích của bạn",
-              Icons.search,
-              () {
-                Get.to(
-                  () => ChooseLeagueWidget(
-                    (League league) {
-                      _handleChooseLeague(league);
-                    },
-                  ),
-                );
-              },
+          Hero(
+            tag: "${LeagueWidget.path}${HeroConstants.searchView}",
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+              child: UIUtils.getButton(
+                "Tìm kiếm giải đấu",
+                description: "Hãy chọn giải đấu yêu thích của bạn",
+                Icons.search,
+                () {
+                  Get.to(
+                    () => ChooseLeagueWidget(
+                      LeagueWidget.path,
+                      (League league) {
+                        _handleChooseLeague(league);
+                      },
+                    ),
+                  );
+                },
+              ),
             ),
           ),
           _buildQuickLeagueView(),
