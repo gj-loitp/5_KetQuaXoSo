@@ -1,21 +1,25 @@
 import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/dimen_constants.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
+
 import '../../htmlContent/html_content_screen.dart';
 import 'const_information.dart';
 import 'const_information_2.dart';
 
 class InformationScreen extends StatefulWidget {
-  const InformationScreen({
+  const InformationScreen(
+    this.from, {
     super.key,
   });
+
+  final String from;
 
   @override
   State<InformationScreen> createState() => _InformationScreenState();
@@ -59,41 +63,50 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                     width: double.infinity,
                     child: Row(
                       children: [
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
+                        Hero(
+                          tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
+                          child: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: MaterialButton(
+                              onPressed: () {
+                                Get.back();
+                              },
+                              color: Colors.white,
+                              padding: const EdgeInsets.all(0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.clear,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ),
                         const SizedBox(
                           width: 16,
                         ),
-                        const Expanded(
-                          child: Text(
-                            "Thông tin hữu ích",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
+                        Expanded(
+                          child: Hero(
+                            tag: "${widget.from}${HeroConstants.appBarTitle}",
+                            child: const Material(
+                              color: Colors.transparent,
+                              child: Text(
+                                "Thông tin hữu ích",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  shadows: [
+                                    Shadow(
+                                      blurRadius: 5.0,
+                                      color: Colors.black,
+                                      offset: Offset(2.0, 2.0),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                                textAlign: TextAlign.start,
+                              ),
                             ),
-                            textAlign: TextAlign.start,
                           ),
                         ),
                       ],
@@ -116,9 +129,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Giải mã giấc mơ lô đề, sổ mơ lô đề đầy đủ và chính xác nhất",
                                       htmlContent: infor_18,
                                     ),
@@ -128,9 +141,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Xem mệnh, xem ngũ hành tương sinh và tương khắc",
                                       htmlContent: infor_19,
                                     ),
@@ -140,9 +153,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Xem màu sắc hợp tuổi bản mệnh và năm sinh của bạn",
                                       htmlContent: infor_20,
                                     ),
@@ -152,9 +165,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Hướng dẫn cách chơi xổ số miền bắc cho người mới chơi",
                                       htmlContent: infor_0,
                                     ),
@@ -164,11 +177,10 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
-                                      titleAppBar:
-                                      "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
+                                    () => HtmlContentScreen(
+                                      titleAppBar: "Cách chơi xổ số truyền thống miền Bắc khác gì với 2 miền còn lại?",
                                       htmlContent: infor_1,
                                     ),
                                   );
@@ -177,9 +189,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Thuế thu nhập trúng xổ số bao nhiêu phần trăm?",
                                       htmlContent: infor_2,
                                     ),
@@ -189,11 +201,11 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar:
-                                      "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
+                                          "Nghị định 78/2012/NĐ-CP: Hiệu lực quản lý mới với hoạt động kinh doanh xổ số",
                                       htmlContent: infor_3,
                                     ),
                                   );
@@ -202,9 +214,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Thay đổi giờ mở thưởng Xổ số Miền Bắc",
                                       htmlContent: infor_4,
                                     ),
@@ -214,9 +226,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Đổi số trúng đặc biệt ở đâu và thủ tục như thế nào?",
                                       htmlContent: infor_5,
                                     ),
@@ -226,9 +238,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Khuyến cáo khi đổi số trúng",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Khuyến cáo khi đổi số trúng",
                                       htmlContent: infor_6,
                                     ),
@@ -238,9 +250,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Mức chi hoa hồng đại lý của các loại hình xổ số",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Mức chi hoa hồng đại lý của các loại hình xổ số",
                                       htmlContent: infor_7,
                                     ),
@@ -250,9 +262,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Hướng dẫn cách chơi xổ số kiến thiết miền Nam mới nhất",
                                       htmlContent: infor_8,
                                     ),
@@ -262,9 +274,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Bật mí 5+ cách tính lô đề miền Nam của các chuyên gia",
                                       htmlContent: infor_9,
                                     ),
@@ -274,9 +286,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Số 0 có ý nghĩa gì? Luận giải chi tiết về số 0 bạn nên biết",
                                       htmlContent: infor_10,
                                     ),
@@ -286,9 +298,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Câu chuyện chơi lô đề ở đâu cũng có",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Câu chuyện chơi lô đề ở đâu cũng có",
                                       htmlContent: infor_11,
                                     ),
@@ -298,9 +310,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Dở khóc dở cười với 4 tuyệt chiêu bán vé số ở Sài Gòn",
                                       htmlContent: infor_12,
                                     ),
@@ -310,9 +322,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Chia sẻ kinh nghiệm chơi vietlott mega dễ ăn dễ trúng nhất",
                                       htmlContent: infor_13,
                                     ),
@@ -322,9 +334,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Mơ thấy người chết - Chiêm bao thấy người chết đánh con gì?",
                                       htmlContent: infor_14,
                                     ),
@@ -334,9 +346,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Mơ thấy rắn cắn – Chiêm bao thấy rắn cắn đánh con gì?",
                                       htmlContent: infor_15,
                                     ),
@@ -346,9 +358,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Xổ số Vietlott có đáng tin hay không?",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Xổ số Vietlott có đáng tin hay không?",
                                       htmlContent: infor_16,
                                     ),
@@ -358,11 +370,11 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar:
-                                      "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                          "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
                                       htmlContent: infor_17,
                                     ),
                                   );
@@ -371,11 +383,11 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar:
-                                      "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
+                                          "Làm sao để trúng số? Hướng dẫn 9 cách mua vé số trúng độc đắc vô cùng dễ dàng",
                                       htmlContent: infor_17,
                                     ),
                                   );
@@ -384,9 +396,9 @@ class _InformationScreenState extends BaseStatefulState<InformationScreen> {
                               UIUtils.getButton(
                                 "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
                                 Icons.navigate_next,
-                                    () {
+                                () {
                                   Get.to(
-                                        () => HtmlContentScreen(
+                                    () => HtmlContentScreen(
                                       titleAppBar: "Lịch nghỉ lễ âm lịch và dương lịch năm 2024",
                                       htmlContent: infor_21,
                                     ),

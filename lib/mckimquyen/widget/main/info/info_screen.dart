@@ -126,6 +126,9 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
   }
 
   Widget _buildViewRow1() {
+    var tag1 = "${InfoScreen.path}1";
+    var tag2 = "${InfoScreen.path}2";
+    var tag3 = "${InfoScreen.path}3";
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -133,19 +136,19 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "Dò theo\ntỉnh thành",
           "assets/images/ic_city.png",
           () {
-            Get.to(() => ProvinceListScreen(InfoScreen.path));
+            Get.to(() => ProvinceListScreen(tag1));
           },
-          "${InfoScreen.path}${HeroConstants.appBarLeftIcon}",
-          "${InfoScreen.path}${HeroConstants.appBarTitle}",
+          "$tag1${HeroConstants.appBarLeftIcon}",
+          "$tag1${HeroConstants.appBarTitle}",
         ),
         _buildViewItem(
           "Thông tin\nhữu ích",
           "assets/images/ic_info.png",
           () {
-            Get.to(() => const InformationScreen());
+            Get.to(() => InformationScreen(tag2));
           },
-          "2icon",
-          "2title",
+          "$tag2${HeroConstants.appBarLeftIcon}",
+          "$tag2${HeroConstants.appBarTitle}",
         ),
         _buildViewItem(
           "Lịch sử\ndò nhanh",
