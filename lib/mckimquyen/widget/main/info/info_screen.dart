@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/history/history_screen.dart';
@@ -134,6 +135,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             Get.to(() => ProvinceListScreen(InfoScreen.path));
           },
+          "1icon",
+          "1title",
         ),
         _buildViewItem(
           "Thông tin\nhữu ích",
@@ -141,6 +144,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             Get.to(() => const InformationScreen());
           },
+          "2icon",
+          "2title",
         ),
         _buildViewItem(
           "Lịch sử\ndò nhanh",
@@ -148,6 +153,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             Get.to(() => const HistoryScreen());
           },
+          "3icon",
+          "3title",
         ),
       ],
     );
@@ -163,6 +170,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             Get.to(() => const TestAppScreen());
           },
+          "4icon",
+          "4title",
         ),
         _buildViewItem(
           "Hỗ trợ\nPhản hồi",
@@ -170,6 +179,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             _showDialogSupport();
           },
+          "5icon",
+          "5title",
         ),
         _buildViewItem(
           "Cài đặt\nứng dụng",
@@ -177,6 +188,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             Get.to(() => SettingScreen(InfoScreen.path));
           },
+          "${HeroConstants.appBarRightIcon}${InfoScreen.path}",
+          "${HeroConstants.appBarTitle}${InfoScreen.path}",
         ),
       ],
     );
@@ -192,6 +205,8 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             Get.to(() => SoccerScreen(InfoScreen.path));
           },
+          "7icon",
+          "7title",
         ),
         // _buildViewItem(
         //   "",
@@ -207,7 +222,13 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
     );
   }
 
-  Widget _buildViewItem(String text, String imgPath, GestureTapCallback onTap) {
+  Widget _buildViewItem(
+    String text,
+    String imgPath,
+    GestureTapCallback onTap,
+    String tagIcon,
+    String tagTitle,
+  ) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -226,19 +247,28 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
         child: Column(
           children: [
             Expanded(
-              child: Image.asset(imgPath),
-            ),
-            Text(
-              text,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
+              child: Hero(
+                tag: tagIcon,
+                child: Image.asset(imgPath),
               ),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.center,
-            )
+            ),
+            Hero(
+              tag: tagTitle,
+              child: Material(
+                color: Colors.transparent,
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
           ],
         ),
       ),
