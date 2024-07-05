@@ -126,80 +126,30 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
       width: Get.width,
       color: Colors.transparent,
       padding: const EdgeInsets.only(bottom: 16),
-      child: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              margin: const EdgeInsets.fromLTRB(8, 2, 8, 0),
-              padding: const EdgeInsets.all(0),
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 40,
-                    height: 40,
-                    child: MaterialButton(
-                      onPressed: () {
-                        Get.back();
-                      },
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(0),
-                      shape: const CircleBorder(),
-                      child: const Icon(
-                        Icons.clear,
-                        color: Colors.black,
-                      ),
-                    ),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+            child: UIUtils.getButton(
+              "Tìm kiếm tên đội bóng",
+              description: "Hãy chọn đội bóng yêu thích của bạn",
+              Icons.search,
+              () {
+                Get.to(
+                  () => ChooseTeamWidget(
+                    (Team team) {
+                      _handleChooseTeam(team);
+                    },
                   ),
-                  const SizedBox(width: 16),
-                  const Expanded(
-                    child: Text(
-                      "Trận đấu sắp tới",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
-                        fontSize: 24,
-                        shadows: [
-                          Shadow(
-                            blurRadius: 5.0,
-                            color: Colors.black,
-                            offset: Offset(2.0, 2.0),
-                          ),
-                        ],
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
-                  ),
-                ],
-              ),
+                );
+              },
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-              child: UIUtils.getButton(
-                "Tìm kiếm tên đội bóng",
-                description: "Hãy chọn đội bóng yêu thích của bạn",
-                Icons.search,
-                    () {
-                  Get.to(
-                        () => ChooseTeamWidget(
-                          (Team team) {
-                        _handleChooseTeam(team);
-                      },
-                    ),
-                  );
-                },
-              ),
-            ),
-            _buildQuickLeagueView(),
-            Expanded(
-              child: WebViewWidget(controller: _webViewController),
-            ),
-          ],
-        ),
+          ),
+          _buildQuickLeagueView(),
+          Expanded(
+            child: WebViewWidget(controller: _webViewController),
+          ),
+        ],
       ),
     );
   }
