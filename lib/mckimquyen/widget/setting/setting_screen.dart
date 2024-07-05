@@ -69,7 +69,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                     child: Row(
                       children: [
                         Hero(
-                          tag: "${HeroConstants.appBarRightIcon}${widget.from}",
+                          tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
                           child: SizedBox(
                             width: 40,
                             height: 40,
@@ -90,7 +90,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                         const SizedBox(width: 16),
                         Expanded(
                           child: Hero(
-                            tag: "${HeroConstants.appBarTitle}${widget.from}",
+                            tag: "${widget.from}${HeroConstants.appBarTitle}",
                             child: const Material(
                               color: Colors.transparent,
                               child: Text(

@@ -142,7 +142,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                         ),
                         Expanded(
                           child: Hero(
-                            tag: "${HeroConstants.appBarTitle}${ProfileScreen.path}",
+                            tag: "${ProfileScreen.path}${HeroConstants.appBarTitle}",
                             child: const Material(
                               color: Colors.transparent,
                               child: Text(
@@ -165,7 +165,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                           ),
                         ),
                         Hero(
-                          tag: "${HeroConstants.appBarRightIcon}${ProfileScreen.path}",
+                          tag: "${ProfileScreen.path}${HeroConstants.appBarLeftIcon}",
                           child: Container(
                             padding: const EdgeInsets.all(2),
                             width: 40,

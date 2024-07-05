@@ -185,23 +185,26 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           () {
             _showDialogSupport();
           },
-          "5icon",
-          "5title",
+          "$tag5${HeroConstants.appBarLeftIcon}",
+          "$tag5${HeroConstants.appBarTitle}",
         ),
         _buildViewItem(
           "Cài đặt\nứng dụng",
           "assets/images/ic_settings.png",
           () {
-            Get.to(() => SettingScreen(InfoScreen.path));
+            Get.to(() => SettingScreen(tag6));
           },
-          "${HeroConstants.appBarRightIcon}${InfoScreen.path}",
-          "${HeroConstants.appBarTitle}${InfoScreen.path}",
+          "$tag6${HeroConstants.appBarLeftIcon}",
+          "$tag6${HeroConstants.appBarTitle}",
         ),
       ],
     );
   }
 
   Widget _buildViewRow3() {
+    var tag7 = "${InfoScreen.path}7";
+    var tag8 = "${InfoScreen.path}8";
+    var tag9 = "${InfoScreen.path}9";
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -209,10 +212,10 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "CLB\nbóng đá",
           "assets/images/ic_ball.png",
           () {
-            Get.to(() => SoccerScreen(InfoScreen.path));
+            Get.to(() => SoccerScreen(tag7));
           },
-          "7icon",
-          "7title",
+          "$tag7${HeroConstants.appBarLeftIcon}",
+          "$tag7${HeroConstants.appBarTitle}",
         ),
         // _buildViewItem(
         //   "",
