@@ -1,4 +1,3 @@
-import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
@@ -24,17 +23,16 @@ class UpcomingMatchWidget extends StatefulWidget {
 class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
   final ControllerMain _controllerMain = Get.find();
   final WebViewController _webViewController = WebViewController();
-  String? _leagueId;
+  String? _teamId;
 
-  void _loadData(String? leagueID, bool needInitWebViewController) {
-    var mLeagueId = leagueID;
-    if (mLeagueId == null || mLeagueId.isEmpty) {
-      mLeagueId = League.leagueIdDefault;
+  void _loadData(String? teamID, bool needInitWebViewController) {
+    var mTeamId = teamID;
+    if (mTeamId == null || mTeamId.isEmpty) {
+      mTeamId = Team.teamIdDefault;
     }
-    debugPrint(
-        "_loadData leagueID $leagueID => _mLeagueId $mLeagueId, needInitWebViewController $needInitWebViewController");
+    debugPrint("roy93~ _loadData teamID $teamID => mTeamId $mTeamId, needInitWebViewController $needInitWebViewController");
     var htmlString = ''''
-<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: $mLeagueId }); </script>
+<div id="fs-upcoming"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming-loc.js')); fsUpcoming('params', { teamID: $_teamId, lang: 'vn' }); </script>
     ''';
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
@@ -100,10 +98,9 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
     _webViewController.loadHtmlString(htmlWithStyle);
   }
 
-  Future<void> _getLeagueId() async {
-    //default id 12325 -> ngoai hang anh
-    _leagueId = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keyLeagueId);
-    // debugPrint("_getLeagueId _leagueId $_leagueId");
+  Future<void> _getTeamId() async {
+    _teamId = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keyTeamId);
+    debugPrint("roy93~ _getTeamId _teamId $_teamId");
   }
 
   @override
@@ -113,8 +110,8 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
   }
 
   Future<void> _initData() async {
-    await _getLeagueId();
-    _loadData(_leagueId, true);
+    await _getTeamId();
+    _loadData(_teamId, true);
     _controllerMain.getListTeamQuick();
   }
 
@@ -211,13 +208,13 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
 
   Future<void> _handleChooseTeam(Team team) async {
     debugPrint("roy93~ _handleChooseTeam ${team.toJson()}");
-    _controllerMain.setSelectedLeagueQuick(null);
+    _controllerMain.setSelectedTeamQuick(null);
     var teamId = team.id ?? Team.teamIdDefault;
-    // await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
-    // if (leagueId.isEmpty) {
-    //   //do nothing
-    // } else {
-    //   _loadData(leagueId, false);
-    // }
+    await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyTeamId, teamId);
+    if (teamId.isEmpty) {
+      //do nothing
+    } else {
+      _loadData(teamId, false);
+    }
   }
 }

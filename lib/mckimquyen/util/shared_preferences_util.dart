@@ -15,6 +15,7 @@ class SharedPreferencesUtil {
   static String keySearchLeague = "keySearchLeague";
   static String keyLeagueId = "keyLeagueId";
   static String keySearchTeam = "keySearchTeam";
+  static String keyTeamId = "keyTeamId";
 
   // static bool onOffTextOverflow = false;
 
