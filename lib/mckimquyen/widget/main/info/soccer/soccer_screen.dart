@@ -43,12 +43,24 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
     tabControllerMain?.index = currentIndex;
   }
 
+  void _onBackPress(){
+    // debugPrint("_onBackPress");
+    _controllerMain.setIsShowWebViewSoccer(false);
+    Get.back();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildPageView(),
-      extendBody: true,
-      bottomNavigationBar: _buildBottomBar(),
+    return WillPopScope(
+      onWillPop: () async {
+        _onBackPress();
+        return true;
+      },
+      child:Scaffold(
+        body: _buildPageView(),
+        extendBody: true,
+        bottomNavigationBar: _buildBottomBar(),
+      ),
     );
   }
 
@@ -85,7 +97,7 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
                         height: 40,
                         child: MaterialButton(
                           onPressed: () {
-                            Get.back();
+                            _onBackPress();
                           },
                           color: Colors.white,
                           padding: const EdgeInsets.all(0),

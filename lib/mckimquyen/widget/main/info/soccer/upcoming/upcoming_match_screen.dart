@@ -26,6 +26,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
   String? _teamId;
 
   void _loadData(String? teamID, bool needInitWebViewController) {
+    _controllerMain.setIsShowWebViewSoccer(false);
     var mTeamId = teamID;
     if (mTeamId == null || mTeamId.isEmpty) {
       mTeamId = Team.teamIdDefault;
@@ -60,6 +61,8 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
             },
             onPageFinished: (String url) async {
               // debugPrint("onPageFinished url $url");
+              await Future.delayed(const Duration(milliseconds: 1000));
+              _controllerMain.setIsShowWebViewSoccer(true);
             },
             onWebResourceError: (WebResourceError error) {
               // debugPrint("onPageFinished url $error");
@@ -128,7 +131,55 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
           ),
           _buildQuickTeamView(),
           Expanded(
-            child: WebViewWidget(controller: _webViewController),
+            child: Obx(() {
+              var visible = _controllerMain.isShowWebViewSoccer.value;
+              if (visible) {
+                return WebViewWidget(controller: _webViewController);
+              } else {
+                return _buildLoadingView();
+              }
+            }),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildLoadingView() {
+    var quote = _controllerMain.quoteSoccer.value;
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/anim_1.gif",
+            // width: 100,
+            height: 180,
+            fit: BoxFit.cover,
+          ),
+          // const SizedBox(height: 16),
+          Text(
+            quote,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          Container(
+            padding: const EdgeInsets.all(32),
+            width: 124,
+            height: 124,
+            child: const CircularProgressIndicator(
+              color: Colors.white,
+              strokeWidth: 6.0,
+              strokeCap: StrokeCap.round,
+            ),
           ),
         ],
       ),
@@ -141,7 +192,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
       return Container(
         color: Colors.transparent,
         height: 30,
-        margin: const EdgeInsets.only(top: 4),
+        margin: const EdgeInsets.fromLTRB(0, 4, 0, 4),
         alignment: Alignment.center,
         child: ListView.builder(
           padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),

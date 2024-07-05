@@ -320,12 +320,6 @@
       "languageVersion": "2.19"
     },
     {
-      "name": "focus_detector_v2",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/focus_detector_v2-3.1.0+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "fwfh_cached_network_image",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/fwfh_cached_network_image-0.14.3",
       "packageUri": "lib/",
@@ -1004,12 +998,6 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "visibility_detector",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/visibility_detector-0.4.0+2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "vm_service",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/vm_service-13.0.0",
       "packageUri": "lib/",
@@ -1094,7 +1082,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-07-05T14:05:31.827981Z",
+  "generated": "2024-07-05T14:09:06.929996Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

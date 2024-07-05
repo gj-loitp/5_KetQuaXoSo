@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -40,6 +41,7 @@ class ControllerMain extends BaseController {
   var listHistory = <History>[].obs;
   var isGoToGroupTester = false.obs;
   TabController? tabControllerMain;
+  var isShowWebViewSoccer = true.obs;
   var isLoadingListLeague = true.obs;
   var listLeague = <League>[].obs;
   var listLeagueQuick = <League>[].obs;
@@ -47,6 +49,7 @@ class ControllerMain extends BaseController {
   var listTeam = <Team>[].obs;
   var listTeamQuick = <Team>[].obs;
   final indexBottomBarSoccer = 0.obs;
+  var quoteSoccer = "".obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1792,5 +1795,62 @@ class ControllerMain extends BaseController {
     } else {
       return "Đội của tôi";
     }
+  }
+
+  void setIsShowWebViewSoccer(bool isShow) {
+    isShowWebViewSoccer.value = isShow;
+    final List<String> quotes = [
+      "Bóng đá không chỉ là một trò chơi, đó là cuộc sống. - Unknown",
+      "Bóng đá là ngôn ngữ toàn cầu. - Pelé",
+      "Bóng đá là sân khấu lớn nhất của cảm xúc. - Sepp Blatter",
+      "Thành công là sự kiên nhẫn và nỗ lực không ngừng nghỉ. - Lionel Messi",
+      "Không có đam mê, không có sự hoàn hảo. - Neymar Jr.",
+      "Bóng đá không chỉ là chiến thắng, mà còn là niềm vui và sự kết nối. - Jurgen Klopp",
+      "Bóng đá là cuộc chiến không bao giờ ngừng nghỉ. - Sir Alex Ferguson",
+      "Bạn chỉ có thể chiến thắng khi bạn tin rằng mình có thể. - Cristiano Ronaldo",
+      "Trên sân cỏ, mọi thứ đều có thể xảy ra. - Johan Cruyff",
+      "Sự nỗ lực hôm nay là thành công của ngày mai. - Zinedine Zidane",
+      "Bóng đá là một môn nghệ thuật. - Arsène Wenger",
+      "Bóng đá là môn thể thao tuyệt vời nhất thế giới. - David Beckham",
+      "Bóng đá là cách tốt nhất để thoát khỏi mọi lo toan. - George Best",
+      "Bóng đá là cuộc sống, phần còn lại chỉ là chi tiết. - Bill Shankly",
+      "Bóng đá là trò chơi của những sai lầm. - Alfredo Di Stéfano",
+      "Sự vĩ đại không đến từ chiến thắng mà đến từ hành trình. - Marcelo Bielsa",
+      "Không có giới hạn cho sự nỗ lực và cống hiến. - Paolo Maldini",
+      "Bóng đá là môn thể thao của những người dũng cảm. - Fabio Cannavaro",
+      "Bóng đá là nghệ thuật của những khoảnh khắc không thể quên. - Eric Cantona",
+      "Bóng đá là cuộc sống, và bóng đá không có giới hạn. - Didier Drogba",
+      "Bóng đá là môn thể thao của những giấc mơ. - Ronaldinho",
+      "Bóng đá là sân khấu cho những huyền thoại. - Zlatan Ibrahimović",
+      "Bóng đá là sân khấu của cảm xúc không thể diễn tả. - Andrés Iniesta",
+      "Bóng đá là cách tốt nhất để thể hiện bản thân. - Paul Pogba",
+      "Bóng đá là cuộc hành trình không ngừng nghỉ. - Gianluigi Buffon",
+      "Bóng đá là ngôn ngữ của hòa bình. - Samuel Eto'o",
+      "Bóng đá là nơi mọi thứ đều có thể xảy ra. - Fernando Torres",
+      "Bóng đá là cuộc sống, và cuộc sống là bóng đá. - Robbie Fowler",
+      "Bóng đá là sự kết nối của cả một cộng đồng. - Alan Shearer",
+      "Bóng đá là nơi mọi giới hạn đều bị phá vỡ. - Kylian Mbappé",
+      "Bóng đá là nơi mọi người đều có thể trở thành anh hùng. - Frank Lampard",
+      "Bóng đá là sân khấu của những khoảnh khắc kỳ diệu. - Steven Gerrard",
+      "Bóng đá là nơi mọi thứ đều trở nên có ý nghĩa. - Thierry Henry",
+      "Bóng đá là nơi mọi giấc mơ đều trở thành hiện thực. - Wayne Rooney",
+      "Bóng đá là nơi mọi điều kỳ diệu đều có thể xảy ra. - Luka Modrić",
+      "Bóng đá là môn thể thao của sự hy sinh và đam mê. - Sergio Ramos",
+      "Bóng đá là nơi mọi người đều có thể trở thành người hùng. - Xavi Hernández",
+      "Bóng đá là cách tốt nhất để thể hiện lòng yêu nước. - Didier Deschamps",
+      "Bóng đá là môn thể thao của sự sáng tạo và tinh thần chiến đấu. - Arjen Robben",
+      "Bóng đá là môn thể thao của sự khéo léo và tinh tế. - Mesut Özil",
+      "Bóng đá là nơi mọi giới hạn đều có thể bị phá vỡ. - Kevin De Bruyne",
+      "Bóng đá là cách tốt nhất để thể hiện tình yêu và sự đam mê. - Philippe Coutinho",
+      "Bóng đá là nơi mọi người đều có thể trở thành huyền thoại. - Mohamed Salah",
+      "Bóng đá là nơi mọi thứ đều trở nên có ý nghĩa hơn. - Virgil van Dijk",
+      "Bóng đá là sân khấu của những khoảnh khắc không thể quên. - Raheem Sterling",
+      "Bóng đá là môn thể thao của sự nỗ lực và cống hiến. - Robert Lewandowski",
+      "Bóng đá là nơi mọi người đều có thể trở thành huyền thoại. - Antoine Griezmann",
+      "Bóng đá là cách tốt nhất để thể hiện lòng yêu nghề. - Son Heung-min",
+      "Bóng đá là sân khấu của những điều kỳ diệu. - Eden Hazard",
+      "Bóng đá là nơi mọi người đều có thể trở thành người hùng. - Harry Kane"
+    ];
+    quoteSoccer.value = quotes[Random().nextInt(quotes.length)];
   }
 }
