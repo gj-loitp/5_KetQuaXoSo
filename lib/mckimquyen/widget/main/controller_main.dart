@@ -46,7 +46,7 @@ class ControllerMain extends BaseController {
   var isLoadingListTeam = true.obs;
   var listTeam = <Team>[].obs;
   var listTeamQuick = <Team>[].obs;
-  final _indexBottomBarSoccer = 0.obs;
+  final indexBottomBarSoccer = 0.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1781,13 +1781,13 @@ class ControllerMain extends BaseController {
   }
 
   void setIndexBottomBarSoccer(int index) {
-    _indexBottomBarSoccer.value = index;
+    indexBottomBarSoccer.value = index;
   }
 
   String getLabelBottomBarSoccer() {
-    if (_indexBottomBarSoccer.value == 0) {
+    if (indexBottomBarSoccer.value == 0) {
       return "Giải đấu";
-    } else if (_indexBottomBarSoccer.value == 1) {
+    } else if (indexBottomBarSoccer.value == 1) {
       return "Trận đấu sắp tới";
     } else {
       return "Đội của tôi";

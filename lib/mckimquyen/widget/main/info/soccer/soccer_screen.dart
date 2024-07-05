@@ -39,6 +39,8 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
     tabControllerMain?.addListener(() {
       _controllerMain.setIndexBottomBarSoccer(tabControllerMain?.index ?? 0);
     });
+    var currentIndex = _controllerMain.indexBottomBarSoccer.value;
+    tabControllerMain?.index = currentIndex;
   }
 
   @override
