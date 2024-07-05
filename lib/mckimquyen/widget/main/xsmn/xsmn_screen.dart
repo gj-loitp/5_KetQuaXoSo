@@ -248,7 +248,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   // fit: StackFit.expand,
                   children: [
                     Hero(
-                      tag: "${XSMNScreen.path}${HeroConstants.appBar}",
+                      tag: "${XSMNScreen.path}${HeroConstants.appBarLeftIcon}",
                       child: MaterialButton(
                         onPressed: () {
                           Get.to(() => const ProvinceListScreen(XSMNScreen.path));

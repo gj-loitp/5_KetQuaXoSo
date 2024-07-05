@@ -120,7 +120,7 @@ class _XSMTScreenState extends BaseStatefulState<XSMTScreen> {
                 width: 40,
                 height: 40,
                 child: Hero(
-                  tag: "${XSMTScreen.path}${HeroConstants.appBar}",
+                  tag: "${XSMTScreen.path}${HeroConstants.appBarLeftIcon}",
                   child: MaterialButton(
                     onPressed: () {
                       Get.to(() => const ProvinceListScreen(XSMTScreen.path));
