@@ -49,6 +49,7 @@ class League {
 }
 
 class Team {
+  static String teamIdDefault = "461";
   String? id;
   String? name;
   String? src;

@@ -200,7 +200,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
               ),
               onTap: () {
                 _controllerMain.setSelectedTeamQuick(i);
-                // _loadData(league.id, false);
+                _loadData(team.id, false);
               },
             );
           },
@@ -212,7 +212,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
   Future<void> _handleChooseTeam(Team team) async {
     debugPrint("roy93~ _handleChooseTeam ${team.toJson()}");
     _controllerMain.setSelectedLeagueQuick(null);
-    // var leagueId = league.id ?? League.leagueIdDefault;
+    var teamId = team.id ?? Team.teamIdDefault;
     // await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
     // if (leagueId.isEmpty) {
     //   //do nothing
