@@ -164,6 +164,9 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
   }
 
   Widget _buildViewRow2() {
+    var tag4 = "${InfoScreen.path}4";
+    var tag5 = "${InfoScreen.path}5";
+    var tag6 = "${InfoScreen.path}6";
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -171,10 +174,10 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "Cộng đồng\ntest app",
           "assets/images/ic_testing.png",
           () {
-            Get.to(() => const TestAppScreen());
+            Get.to(() => TestAppScreen(tag4));
           },
-          "4icon",
-          "4title",
+          "$tag4${HeroConstants.appBarLeftIcon}",
+          "$tag4${HeroConstants.appBarTitle}",
         ),
         _buildViewItem(
           "Hỗ trợ\nPhản hồi",

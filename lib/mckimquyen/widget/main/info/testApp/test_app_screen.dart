@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
@@ -10,9 +11,12 @@ import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:slider_button/slider_button.dart';
 
 class TestAppScreen extends StatefulWidget {
-  const TestAppScreen({
+  const TestAppScreen(
+    this.from, {
     super.key,
   });
+
+  final String from;
 
   @override
   State<TestAppScreen> createState() => _TestAppScreenState();
@@ -64,40 +68,48 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
+                        Hero(
+                          tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
+                          child: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: MaterialButton(
+                              onPressed: () {
+                                Get.back();
+                              },
+                              color: Colors.white,
+                              padding: const EdgeInsets.all(0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.clear,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ),
                         const SizedBox(width: 16),
-                        const Material(
-                          color: Colors.transparent,
-                          child: Text(
-                            "Cộng đồng test app",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              fontSize: 24,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 5.0,
-                                  color: Colors.black,
-                                  offset: Offset(2.0, 2.0),
+                        Expanded(
+                          child: Hero(
+                            tag: "${widget.from}${HeroConstants.appBarTitle}",
+                            child: const Material(
+                              color: Colors.transparent,
+                              child: Text(
+                                "Cộng đồng test app",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  shadows: [
+                                    Shadow(
+                                      blurRadius: 5.0,
+                                      color: Colors.black,
+                                      offset: Offset(2.0, 2.0),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                                textAlign: TextAlign.start,
+                              ),
                             ),
-                            textAlign: TextAlign.start,
                           ),
                         ),
                       ],
@@ -236,7 +248,7 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
 
   Widget _buildTextHeader(String s) {
     return Container(
-      padding: EdgeInsets.only(top: 16),
+      padding: const EdgeInsets.only(top: 16),
       child: Text(
         s,
         style: const TextStyle(
