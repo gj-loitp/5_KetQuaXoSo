@@ -2,6 +2,7 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/widget/keep_alive_age.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/league_screen.dart';
@@ -70,39 +71,48 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
                 ),
                 child: Row(
                   children: [
-                    SizedBox(
-                      width: 40,
-                      height: 40,
-                      child: MaterialButton(
-                        onPressed: () {
-                          Get.back();
-                        },
-                        color: Colors.white,
-                        padding: const EdgeInsets.all(0),
-                        shape: const CircleBorder(),
-                        child: const Icon(
-                          Icons.clear,
-                          color: Colors.black,
+                    Hero(
+                      tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
+                      child: SizedBox(
+                        width: 40,
+                        height: 40,
+                        child: MaterialButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          color: Colors.white,
+                          padding: const EdgeInsets.all(0),
+                          shape: const CircleBorder(),
+                          child: const Icon(
+                            Icons.clear,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(width: 16),
-                    const Expanded(
-                      child: Text(
-                        "CLB bóng đá",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          color: Colors.white,
-                          fontSize: 24,
-                          shadows: [
-                            Shadow(
-                              blurRadius: 5.0,
-                              color: Colors.black,
-                              offset: Offset(2.0, 2.0),
+                    Expanded(
+                      child: Hero(
+                        tag: "${widget.from}${HeroConstants.appBarTitle}",
+                        child: const Material(
+                          color: Colors.transparent,
+                          child: Text(
+                            "CLB bóng đá",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              fontSize: 24,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0,
+                                  color: Colors.black,
+                                  offset: Offset(2.0, 2.0),
+                                ),
+                              ],
                             ),
-                          ],
+                            textAlign: TextAlign.start,
+                          ),
                         ),
-                        textAlign: TextAlign.start,
                       ),
                     ),
                   ],
