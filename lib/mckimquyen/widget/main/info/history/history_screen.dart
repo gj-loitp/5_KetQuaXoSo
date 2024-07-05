@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dismissible_tile/flutter_dismissible_tile.dart';
 import 'package:get/get.dart';
 import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
+import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
@@ -14,9 +15,12 @@ import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class HistoryScreen extends StatefulWidget {
-  const HistoryScreen({
+  const HistoryScreen(
+    this.from, {
     super.key,
   });
+
+  final String from;
 
   @override
   State<HistoryScreen> createState() => _HistoryScreenState();
@@ -68,41 +72,47 @@ class _HistoryScreenState extends BaseStatefulState<HistoryScreen> {
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: MaterialButton(
-                            onPressed: () {
-                              Get.back();
-                            },
-                            color: Colors.white,
-                            padding: const EdgeInsets.all(0),
-                            shape: const CircleBorder(),
-                            child: const Icon(
-                              Icons.clear,
-                              color: Colors.black,
+                        Hero(
+                          tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
+                          child: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: MaterialButton(
+                              onPressed: () {
+                                Get.back();
+                              },
+                              color: Colors.white,
+                              padding: const EdgeInsets.all(0),
+                              shape: const CircleBorder(),
+                              child: const Icon(
+                                Icons.clear,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ),
                         const SizedBox(width: 16),
-                        const Expanded(
-                          child: Material(
-                            color: Colors.transparent,
-                            child: Text(
-                              "Lịch sử dò nhanh",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w900,
-                                color: Colors.white,
-                                fontSize: 24,
-                                shadows: [
-                                  Shadow(
-                                    blurRadius: 5.0,
-                                    color: Colors.black,
-                                    offset: Offset(2.0, 2.0),
-                                  ),
-                                ],
+                        Expanded(
+                          child: Hero(
+                            tag: "${widget.from}${HeroConstants.appBarTitle}",
+                            child: const Material(
+                              color: Colors.transparent,
+                              child: Text(
+                                "Lịch sử dò nhanh",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  shadows: [
+                                    Shadow(
+                                      blurRadius: 5.0,
+                                      color: Colors.black,
+                                      offset: Offset(2.0, 2.0),
+                                    ),
+                                  ],
+                                ),
+                                textAlign: TextAlign.start,
                               ),
-                              textAlign: TextAlign.start,
                             ),
                           ),
                         ),

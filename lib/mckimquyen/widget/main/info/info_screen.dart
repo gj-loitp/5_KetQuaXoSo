@@ -154,10 +154,10 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "Lịch sử\ndò nhanh",
           "assets/images/ic_history.png",
           () {
-            Get.to(() => const HistoryScreen());
+            Get.to(() => HistoryScreen(tag3));
           },
-          "3icon",
-          "3title",
+          "$tag3${HeroConstants.appBarLeftIcon}",
+          "$tag3${HeroConstants.appBarTitle}",
         ),
       ],
     );
