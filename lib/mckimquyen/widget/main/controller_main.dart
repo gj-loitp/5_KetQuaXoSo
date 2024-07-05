@@ -45,7 +45,8 @@ class ControllerMain extends BaseController {
   var listLeagueQuick = <League>[].obs;
   var isLoadingListTeam = true.obs;
   var listTeam = <Team>[].obs;
-  var _indexBottomBarSoccer = 0.obs;
+  var listTeamQuick = <Team>[].obs;
+  final _indexBottomBarSoccer = 0.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1743,6 +1744,40 @@ class ControllerMain extends BaseController {
     listTeam.refresh();
     // debugPrint("listTeam ${listTeam.first.toJson()}");
     isLoadingListTeam.value = false;
+  }
+
+  void getListTeamQuick() {
+    var list = <Team>[];
+    list.add(Team(id: "93", name: "Manchester City", src: ""));
+    list.add(Team(id: "149", name: "Manchester United", src: ""));
+    list.add(Team(id: "59", name: "Arsenal", src: ""));
+    list.add(Team(id: "151", name: "Liverpool", src: ""));
+    list.add(Team(id: "92", name: "Tottenham", src: ""));
+    list.add(Team(id: "152", name: "Chelsea", src: ""));
+    list.add(Team(id: "461", name: "AC Milan", src: ""));
+    list.add(Team(id: "470", name: "Inter Milano", src: ""));
+    list.add(Team(id: "90", name: "Juventus", src: ""));
+    list.add(Team(id: "113", name: "AS Roma", src: ""));
+    list.add(Team(id: "74", name: "SSC Napoli", src: ""));
+    list.add(Team(id: "84", name: "Real Madrid", src: ""));
+    list.add(Team(id: "83", name: "Barcelona", src: ""));
+    list.add(Team(id: "117", name: "Atlético de Madrid", src: ""));
+    list.add(Team(id: "68", name: "Paris Saint-Germain", src: ""));
+    list.add(Team(id: "38", name: "Bayern München", src: ""));
+    list.add(Team(id: "33", name: "Borussia Dortmund", src: ""));
+    listTeamQuick.clear();
+    listTeamQuick.addAll(list);
+    listTeamQuick.refresh();
+  }
+
+  void setSelectedTeamQuick(int? index) {
+    for (var element in listTeamQuick) {
+      element.isSelected = false;
+    }
+    if (index != null) {
+      listTeamQuick[index].isSelected = true;
+    }
+    listTeamQuick.refresh();
   }
 
   void setIndexBottomBarSoccer(int index) {

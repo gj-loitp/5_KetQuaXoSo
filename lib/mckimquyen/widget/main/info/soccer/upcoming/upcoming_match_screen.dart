@@ -115,7 +115,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
   Future<void> _initData() async {
     await _getLeagueId();
     _loadData(_leagueId, true);
-    _controllerMain.getListLeagueQuick();
+    _controllerMain.getListTeamQuick();
   }
 
   @override
@@ -152,7 +152,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
               ),
             ),
           ),
-          _buildQuickLeagueView(),
+          _buildQuickTeamView(),
           Expanded(
             child: WebViewWidget(controller: _webViewController),
           ),
@@ -161,9 +161,9 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
     );
   }
 
-  Widget _buildQuickLeagueView() {
+  Widget _buildQuickTeamView() {
     return Obx(() {
-      var list = _controllerMain.listLeagueQuick;
+      var list = _controllerMain.listTeamQuick;
       return Container(
         color: Colors.transparent,
         height: 30,
@@ -175,7 +175,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
           physics: const BouncingScrollPhysics(),
           itemCount: list.length,
           itemBuilder: (context, i) {
-            var league = list[i];
+            var team = list[i];
             return InkWell(
               child: Container(
                 margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -186,11 +186,11 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
                       bottomRight: Radius.circular(45.0),
                       topLeft: Radius.circular(45.0),
                       bottomLeft: Radius.circular(45.0)),
-                  color: (league.isSelected == true) ? Colors.yellow : Colors.white.withOpacity(0.8),
+                  color: (team.isSelected == true) ? Colors.yellow : Colors.white.withOpacity(0.8),
                 ),
                 padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
                 child: Text(
-                  league.name ?? "",
+                  team.name ?? "",
                   style: const TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
@@ -199,8 +199,8 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
                 ),
               ),
               onTap: () {
-                _controllerMain.setSelectedLeagueQuick(i);
-                _loadData(league.id, false);
+                _controllerMain.setSelectedTeamQuick(i);
+                // _loadData(league.id, false);
               },
             );
           },
@@ -211,8 +211,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
 
   Future<void> _handleChooseTeam(Team team) async {
     debugPrint("roy93~ _handleChooseTeam ${team.toJson()}");
-    //TODO roy93~
-    // _controllerMain.setSelectedLeagueQuick(null);
+    _controllerMain.setSelectedLeagueQuick(null);
     // var leagueId = league.id ?? League.leagueIdDefault;
     // await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyLeagueId, leagueId);
     // if (leagueId.isEmpty) {
