@@ -2,6 +2,11 @@ import 'package:applovin_max/applovin_max.dart';
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/daily_local_notifications.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/utils/daily_local_notifications_config.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/utils/notification_config.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/utils/styling_config.dart';
+import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../common/const/color_constants.dart';
@@ -194,7 +199,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
             ),
           ),
           Container(
-            margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 16, 0, 16),
             alignment: Alignment.center,
             child: ToggleSwitch(
               minWidth: 90.0,
@@ -214,6 +219,21 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
                 _controllerMain.setIsOnResultVietlotMax3d((index == 1) ? true : false);
               },
             ),
+          ),
+          const Text(
+            "Cài đặt thông báo",
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+              color: Colors.black,
+            ),
+          ),
+          UIUtils.getButton(
+            "Gửi thông báo nhắc giờ mở xổ số",
+            Icons.timer,
+            () {
+              UIUtils.showBottomSheetNotification(context);
+            },
           ),
         ],
       );
@@ -241,6 +261,39 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
           debugPrint('Banner widget ad revenue paid: ${ad.revenue}');
         }),
       ),
+    );
+  }
+
+  Widget _buildDailyLocalNotifications() {
+    return DailyLocalNotifications(
+      notificationConfig: const NotificationConfig(),
+      config: const DailyLocalNotificationsConfig(),
+      stylingConfig: StylingConfig(
+        activeColor: Theme.of(context).primaryColor,
+        inactiveColor: Theme.of(context).primaryColor.withOpacity(0.3),
+        backgroundColor: Theme.of(context).colorScheme.background,
+      ),
+      reminderTitleText: Text(
+        'Reminder Title',
+        style: Theme.of(context).textTheme.bodyLarge,
+      ),
+      reminderRepeatText: Text(
+        'Repeat',
+        style: Theme.of(context).textTheme.bodyMedium,
+      ),
+      reminderDailyText: Text(
+        'Daily',
+        style: Theme.of(context).textTheme.bodyMedium,
+      ),
+      timeNormalTextStyle: const TextStyle(fontSize: 24, color: Colors.grey),
+      timeSelectedTextStyle: TextStyle(
+        fontSize: 24,
+        color: Theme.of(context).primaryColor,
+        fontWeight: FontWeight.bold,
+      ),
+      onNotificationsUpdated: () {
+        debugPrint("roy93~ Notifications updated");
+      },
     );
   }
 }

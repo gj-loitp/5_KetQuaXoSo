@@ -1,8 +1,12 @@
-import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/daily_local_notifications.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/utils/daily_local_notifications_config.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/utils/notification_config.dart';
+import 'package:ketquaxoso/mckimquyen/lib/daily_local_notification/utils/styling_config.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import '../common/const/color_constants.dart';
 import '../common/const/dimen_constants.dart';
@@ -635,4 +639,85 @@ class UIUtils {
 //     },
 //   );
 // }
+
+  static void showBottomSheetNotification(BuildContext context) {
+    showBarModalBottomSheet(
+      context: context,
+      builder: (context) => Container(
+        width: Get.width,
+        padding: const EdgeInsets.all(16),
+        height: Get.height * 65 / 100,
+        color: Colors.white,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Cài đặt thông báo",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                physics: const BouncingScrollPhysics(),
+                children: [
+                  DailyLocalNotifications(
+                    notificationConfig: const NotificationConfig(
+                      title: "KQXS cảm thấy nhớ bạn",
+                      description: "Hôm nay bạn đã mở ứng dụng KQXS để xem kết quả mới nhất chưa? Mở ngay nhé <3",
+                    ),
+                    config: const DailyLocalNotificationsConfig(),
+                    stylingConfig: StylingConfig(
+                      activeColor: Theme.of(context).primaryColor,
+                      inactiveColor: Theme.of(context).primaryColor.withOpacity(0.3),
+                      backgroundColor: Theme.of(context).colorScheme.background,
+                    ),
+                    reminderTitleText: const Text(
+                      'Bật/tắt thông báo',
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                    ),
+                    reminderRepeatText: const Text(
+                      'Lặp lại thông báo',
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                    ),
+                    reminderDailyText: const Text(
+                      'Hằng ngày',
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                    ),
+                    timeNormalTextStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.grey,
+                    ),
+                    timeSelectedTextStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: ColorConstants.appColor,
+                    ),
+                    onNotificationsUpdated: () {
+                      debugPrint("roy93~ Notifications updated");
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
