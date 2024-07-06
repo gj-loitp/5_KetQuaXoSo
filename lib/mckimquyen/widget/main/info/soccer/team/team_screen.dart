@@ -34,7 +34,7 @@ class _TeamScreenState extends BaseStatefulState<TeamScreen> {
     debugPrint(
         "roy93~ _loadData teamID $teamID => mTeamId $mTeamId, needInitWebViewController $needInitWebViewController");
     var htmlString = '''
-<div id="fs-upcoming"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming-loc.js')); fsUpcoming('params', { teamID: $mTeamId, lang: 'vn' }); </script>
+  <iframe src="https://footystats.org/vn/api/club?id=$mTeamId" height="100%" width="100%" style="height:420px; width:100%;" frameborder="0"></iframe>  
     ''';
     debugPrint("roy93~ htmlString $htmlString");
     var htmlWithStyle = """<!DOCTYPE html>
