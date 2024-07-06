@@ -10,6 +10,7 @@ import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/league/league_scre
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/team/team_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/upcoming/upcoming_match_screen.dart';
 
+//ref https://footystats.org/vn/embeds/
 class SoccerScreen extends StatefulWidget {
   const SoccerScreen(
     this.from, {
