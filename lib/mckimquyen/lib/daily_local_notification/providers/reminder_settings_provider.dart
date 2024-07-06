@@ -25,16 +25,16 @@ class ReminderSettingsProvider extends ChangeNotifier {
 
   /// Initially sets reminder settings saved in sharedPrefs
   Future<void> init() async {
-    debugPrint("roy93~ init 1");
+    // debugPrint("init 1");
     await reminderRepository.init();
-    debugPrint("roy93~ init 2");
+    // debugPrint("init 2");
     reminderTime = sharedPrefsRepository.getReminderTime();
     isReminderEnabled = sharedPrefsRepository.isReminderEnabled();
     reminderDays = sharedPrefsRepository.getReminderDays(config.weekDayTranslations);
 
-    debugPrint("roy93~ reminderTime $reminderTime");
-    debugPrint("roy93~ isReminderEnabled $isReminderEnabled");
-    debugPrint("roy93~ reminderDays $reminderDays");
+    // debugPrint("reminderTime $reminderTime");
+    // debugPrint("isReminderEnabled $isReminderEnabled");
+    // debugPrint("reminderDays $reminderDays");
 
     checkIfDailyReminderChecked();
 

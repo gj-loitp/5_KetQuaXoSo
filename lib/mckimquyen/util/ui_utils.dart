@@ -709,7 +709,7 @@ class UIUtils {
                       color: ColorConstants.appColor,
                     ),
                     onNotificationsUpdated: () {
-                      debugPrint("roy93~ Notifications updated");
+                      // debugPrint("Notifications updated");
                     },
                   ),
                 ],

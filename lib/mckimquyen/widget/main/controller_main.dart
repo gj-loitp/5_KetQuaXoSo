@@ -1725,10 +1725,10 @@ class ControllerMain extends BaseController {
     isLoadingListTeam.value = true;
     SharedPreferencesUtil.setString(SharedPreferencesUtil.keySearchTeam, keyword);
     var path = 'https://footystats.org/vn/embeds/ajax-search-clubs.php?term=$keyword';
-    debugPrint("roy93~ path $path");
+    // debugPrint("path $path");
     var response = await dio.get(path);
     String htmlString = response.data;
-    debugPrint("roy93~ htmlString $htmlString");
+    // debugPrint("htmlString $htmlString");
     var document = html_parser.parse(htmlString);
     var anchors = document.querySelectorAll('a.changeEmbed');
     // for (var element in anchors) {
@@ -1740,7 +1740,7 @@ class ControllerMain extends BaseController {
       return Team(id: dataTeam, name: name);
     }).toList();
     // for (var team in teams) {
-    //   debugPrint("roy93~ team ${team.toJson()}");
+    //   debugPrint("team ${team.toJson()}");
     // }
     listTeam.clear();
     listTeam.addAll(teams);

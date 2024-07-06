@@ -292,7 +292,7 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
         fontWeight: FontWeight.bold,
       ),
       onNotificationsUpdated: () {
-        debugPrint("roy93~ Notifications updated");
+        // debugPrint("Notifications updated");
       },
     );
   }

@@ -32,11 +32,11 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
       mTeamId = Team.teamIdDefault;
     }
     debugPrint(
-        "roy93~ _loadData teamID $teamID => mTeamId $mTeamId, needInitWebViewController $needInitWebViewController");
+        "_loadData teamID $teamID => mTeamId $mTeamId, needInitWebViewController $needInitWebViewController");
     var htmlString = '''
 <div id="fs-upcoming"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming-loc.js')); fsUpcoming('params', { teamID: $mTeamId, lang: 'vn' }); </script>
     ''';
-    debugPrint("roy93~ htmlString $htmlString");
+    debugPrint("htmlString $htmlString");
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
       <head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -80,7 +80,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
 
   Future<void> _getTeamId() async {
     _teamId = await SharedPreferencesUtil.getString(SharedPreferencesUtil.keyTeamId);
-    debugPrint("roy93~ _getTeamId _teamId $_teamId");
+    debugPrint("_getTeamId _teamId $_teamId");
   }
 
   @override
@@ -235,7 +235,7 @@ class _UpcomingMatchWidgetState extends BaseStatefulState<UpcomingMatchWidget> {
   }
 
   Future<void> _handleChooseTeam(Team team) async {
-    debugPrint("roy93~ _handleChooseTeam ${team.toJson()}");
+    // debugPrint("_handleChooseTeam ${team.toJson()}");
     _controllerMain.setSelectedTeamQuick(null);
     var teamId = team.id ?? Team.teamIdDefault;
     await SharedPreferencesUtil.setString(SharedPreferencesUtil.keyTeamId, teamId);

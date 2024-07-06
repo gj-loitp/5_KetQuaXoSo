@@ -25,24 +25,24 @@ class ReminderRepository {
 
   /// Initialize the flutter_local_notification plugin
   Future<void> init() async {
-    debugPrint("roy93~ init 1");
+    // debugPrint("init 1");
     await _configureLocalTimeZone();
-    debugPrint("roy93~ init 2");
+    // debugPrint("init 2");
     // app_icon needs to be a added as a drawable resource
     // to the Android head project
     final initializationSettingsAndroid = AndroidInitializationSettings(notificationConfig.iconName);
-    debugPrint("roy93~ init 3");
+    // debugPrint("init 3");
 
     /// The DarwinInitializationSettings class provides default settings on how the notification be presented when it is triggered and the application is in the foreground on iOS/macOS. There are optional named parameters that can be modified to suit your application's purposes. Here, it is omitted and the default values for these named properties is set such that all presentation options (alert, sound, badge) are enabled.
     final initializationSettingsDarwin = DarwinInitializationSettings(
       onDidReceiveLocalNotification: onDidReceiveLocalNotification,
     );
-    debugPrint("roy93~ init 4");
+    // debugPrint("init 4");
     final initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid,
       iOS: initializationSettingsDarwin,
     );
-    debugPrint("roy93~ init 5 $initializationSettings");
+    // debugPrint("init 5 $initializationSettings");
     try {
       var result = await flutterLocalNotificationsPlugin.initialize(
         initializationSettings,
@@ -52,9 +52,9 @@ class ReminderRepository {
         // ),
         onDidReceiveNotificationResponse: onDidReceiveNotificationResponse,
       );
-      debugPrint("roy93~ init result $result");
+      // debugPrint("init result $result");
     } catch (e) {
-      debugPrint("roy93~ e $e");
+      debugPrint("e $e");
     }
     // REQUEST PERMISSION
     await requestPermissions();

@@ -61,27 +61,27 @@ class _DailyLocalNotificationsState extends State<DailyLocalNotifications> {
 
   /// Creates a [DailyLocalNotifications] widget.
   Future<ReminderSettingsProvider> init() async {
-    debugPrint("roy93~ init");
+    // debugPrint("init");
     final reminderRepository = ReminderRepository(
       flutterLocalNotificationsPlugin: FlutterLocalNotificationsPlugin(),
       notificationConfig: widget.notificationConfig,
     );
-    debugPrint("roy93~ 1");
+    // debugPrint("1");
     final sharedPrefs = await SharedPreferences.getInstance();
     final sharedPrefsRepository = SharedPrefsRepository(
       sharedPrefs: sharedPrefs,
     );
-    debugPrint("roy93~ 2");
+    // debugPrint("2");
     final reminderSettingsProvider = ReminderSettingsProvider(
       reminderRepository: reminderRepository,
       sharedPrefsRepository: sharedPrefsRepository,
       config: widget.config,
       onNotificationsUpdated: widget.onNotificationsUpdated,
     );
-    debugPrint("roy93~ 3");
+    // debugPrint("3");
     await reminderSettingsProvider.init();
-    debugPrint("roy93~ 4");
-    debugPrint("roy93~ reminderSettingsProvider $reminderSettingsProvider");
+    // debugPrint("4");
+    // debugPrint("reminderSettingsProvider $reminderSettingsProvider");
     return reminderSettingsProvider;
   }
 
@@ -93,8 +93,8 @@ class _DailyLocalNotificationsState extends State<DailyLocalNotifications> {
         BuildContext context,
         AsyncSnapshot<ReminderSettingsProvider> snapshot,
       ) {
-        debugPrint("roy93~ snapshot.connectionState ${snapshot.connectionState}");
-        debugPrint("roy93~ snapshot ${snapshot.hasData}");
+        // debugPrint("snapshot.connectionState ${snapshot.connectionState}");
+        // debugPrint("snapshot ${snapshot.hasData}");
         if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
           return ChangeNotifierProvider<ReminderSettingsProvider>.value(
             value: snapshot.data!,
