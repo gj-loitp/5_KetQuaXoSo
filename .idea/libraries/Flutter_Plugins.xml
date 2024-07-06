@@ -49,6 +49,8 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/device_info_plus-10.1.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.2.2" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications-16.3.3" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_timezone-1.0.8" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

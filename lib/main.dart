@@ -16,7 +16,6 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 
 //TODO multi language
 //TODO quan ly ve so
-//TODO notification reminder
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/slide_countdown -> thoi gian cho den quay so
 
@@ -41,6 +40,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //https://pub.dev/packages/animated_introduction
 //ad applovin
 //20 tester
+//notification reminder
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi

@@ -39,7 +39,7 @@ class ControllerMain extends BaseController {
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
   final _dbHelper = DatabaseHelper();
   var listHistory = <History>[].obs;
-  var isGoToGroupTester = false.obs;
+  // var isGoToGroupTester = false.obs;
   TabController? tabControllerMain;
   var isShowWebViewSoccer = true.obs;
   var isLoadingListLeague = true.obs;
@@ -886,7 +886,7 @@ class ControllerMain extends BaseController {
   void applySearchXSMB() {
     var sCurrentSearchNumber = xsmbCurrentSearchNumber.value;
     var sCurrentSearchDate = xsmbCurrentSearchDate.value;
-    // debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
     // debugPrint("sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
@@ -1194,7 +1194,7 @@ class ControllerMain extends BaseController {
   ) {
     var sCurrentSearchNumber = provinceCurrentSearchNumber.value;
     var sCurrentSearchDate = provinceCurrentSearchDate.value;
-    // debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
+    debugPrint("sCurrentSearchNumber $sCurrentSearchNumber");
     // debugPrint("sCurrentSearchDate $sCurrentSearchDate");
     var dt = DurationUtils.stringToDateTime(sCurrentSearchDate, DurationUtils.FORMAT_3);
     // debugPrint("dt $dt");
@@ -1611,7 +1611,7 @@ class ControllerMain extends BaseController {
 
   Future<void> deleteAllHistory() async {
     var countDeleted = await _dbHelper.deleteAllHistory();
-    // debugPrint("countDeleted $countDeleted");
+    debugPrint("countDeleted $countDeleted");
     listHistory.clear();
     listHistory.refresh();
   }
