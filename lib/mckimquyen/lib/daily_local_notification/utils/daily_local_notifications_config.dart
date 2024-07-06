@@ -9,13 +9,13 @@ class DailyLocalNotificationsConfig {
   /// Constructor for [DailyLocalNotificationsConfig]
   const DailyLocalNotificationsConfig({
     this.weekDayTranslations = const [
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-      'Sunday',
+      'Thứ 2',
+      'Thứ 3',
+      'Thứ 4',
+      'Thứ 5',
+      'Thứ 6',
+      'Thứ 7',
+      'CN',
     ],
     this.use24HourFormat = true,
     this.useCupertinoSwitch = true,

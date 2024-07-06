@@ -39,31 +39,36 @@ class DailyToggleButtons extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
+              padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: List.generate(
                   provider.reminderDays.length,
                   (index) => Expanded(
                     child: GestureDetector(
-                      onTap: () => provider.toggleDay(provider.reminderDays[index]),
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 4),
+                      onTap: () {
+                        debugPrint("roy93~ onTap index $index");
+                        provider.toggleDay(provider.reminderDays[index]);
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.all(1),
+                        padding: const EdgeInsets.all(1),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             color: provider.reminderDays[index].isActive ? activeColor : inactiveColor,
                           ),
-                          height: 45,
-                          width: 45,
+                          height: 55,
+                          width: 55,
                           child: Center(
                             child: Text(
-                              provider.reminderDays[index].firstLetter,
+                              provider.reminderDays[index].name,
                               style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),

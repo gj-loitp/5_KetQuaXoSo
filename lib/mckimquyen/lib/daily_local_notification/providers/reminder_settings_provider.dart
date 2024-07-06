@@ -87,7 +87,7 @@ class ReminderSettingsProvider extends ChangeNotifier {
   Future<void> toggleDay(WeekDay day) async {
     final updatedReminderDays = reminderDays.toList();
     final index = updatedReminderDays.indexWhere(
-      (element) => element.shortName == day.shortName,
+      (element) => element.name == day.name,
     );
 
     updatedReminderDays[index] = updatedReminderDays[index].copyWith(
