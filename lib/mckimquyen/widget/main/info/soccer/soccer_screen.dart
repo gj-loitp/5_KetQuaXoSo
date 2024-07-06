@@ -43,7 +43,7 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
     tabControllerMain?.index = currentIndex;
   }
 
-  void _onBackPress(){
+  void _onBackPress() {
     // debugPrint("_onBackPress");
     _controllerMain.setIsShowWebViewSoccer(false);
     Get.back();
@@ -56,7 +56,7 @@ class _SoccerScreenState extends BaseStatefulState<SoccerScreen> with SingleTick
         _onBackPress();
         return true;
       },
-      child:Scaffold(
+      child: Scaffold(
         body: _buildPageView(),
         extendBody: true,
         bottomNavigationBar: _buildBottomBar(),
