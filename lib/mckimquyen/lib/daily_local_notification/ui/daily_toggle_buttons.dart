@@ -47,7 +47,7 @@ class DailyToggleButtons extends StatelessWidget {
                   (index) => Expanded(
                     child: GestureDetector(
                       onTap: () {
-                        debugPrint("roy93~ onTap index $index");
+                        // debugPrint("onTap index $index");
                         provider.toggleDay(provider.reminderDays[index]);
                       },
                       child: Container(

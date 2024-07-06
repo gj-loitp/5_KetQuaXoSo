@@ -72,8 +72,10 @@ class ReminderRepository {
     } else {
       final plugin = flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
-
-      if (plugin != null) {
+      if (plugin == null) {
+        debugPrint("roy93 requestPermissions null");
+      } else {
+        debugPrint("roy93 requestPermissions !=null");
         await plugin.requestNotificationsPermission();
         // deprecated
         // await plugin.requestPermission();
