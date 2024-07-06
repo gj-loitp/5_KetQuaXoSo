@@ -57,7 +57,14 @@ class DailyToggleButtons extends StatelessWidget {
                           height: 45,
                           width: 45,
                           child: Center(
-                            child: Text(provider.reminderDays[index].firstLetter),
+                            child: Text(
+                              provider.reminderDays[index].firstLetter,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ),
