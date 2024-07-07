@@ -77,6 +77,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
   @override
   void initState() {
     super.initState();
+    _controllerMain.getIsShowKeyTooltipTheme();
     _initializeInterstitialAds();
   }
 
@@ -167,190 +168,199 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                     ),
                   ),
                   Expanded(
-                    child: ListView(
-                      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-                      padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
-                      children: [
-                        AvatarGlow(
-                          glowColor: Colors.white,
-                          child: SizedBox(
-                            width: 120,
-                            height: 120,
-                            child: Image.asset(
-                              'assets/images/anim_2.gif',
+                    child: Obx(() {
+                      return ListView(
+                        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                        padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
+                        children: [
+                          AvatarGlow(
+                            glowColor: Colors.white,
+                            child: SizedBox(
+                              width: 120,
+                              height: 120,
+                              child: Image.asset(
+                                'assets/images/anim_2.gif',
+                              ),
                             ),
                           ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 16),
-                          width: double.infinity,
-                          padding: const EdgeInsets.all(16),
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                            color: Colors.white,
-                          ),
-                          child: Column(
-                            children: [
-                              _buildClock(),
-                              const Text(
-                                "Ⓒmckimquyen",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                              Text(
-                                "Phiên bản ${_controllerMain.getAppVersion()}",
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                              const Text(
-                                "⇜-----------v-----------⇝",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                              const SizedBox(height: 16),
-                              Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  ToggleSwitch(
-                                    minWidth: Get.width / 3,
-                                    initialLabelIndex: _controllerMain.themeIndex.value,
-                                    cornerRadius: 45.0,
-                                    activeFgColor: Colors.white,
-                                    inactiveBgColor: Colors.grey,
-                                    inactiveFgColor: Colors.white,
-                                    totalSwitches: 2,
-                                    labels: const ['Theme Tối ưu', 'Theme Web'],
-                                    icons: const [
-                                      Icons.looks_one,
-                                      Icons.looks_two,
-                                    ],
-                                    activeBgColors: const [
-                                      [ColorConstants.appColor],
-                                      [ColorConstants.appColor]
-                                    ],
-                                    onToggle: (index) {
-                                      // debugPrint('switched to: $index');
-                                      _controllerMain.setThemeIndex(index);
-                                      _showPopupRestart();
-                                    },
+                          Container(
+                            margin: const EdgeInsets.only(top: 16),
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(16),
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              children: [
+                                _buildClock(),
+                                const Text(
+                                  "Ⓒmckimquyen",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: Colors.grey,
                                   ),
-                                  const PulseContainer(
-                                    child: Text(
-                                      'Bạn có thể lựa chọn giao diện tại đây\nChúng tôi khuyến cáo chọn Theme Tối Ưu\nsẽ cho trải nghiệm mượt mà hơn',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 12,
-                                        color: Colors.white,
-                                      ),
-                                      textAlign: TextAlign.center,
+                                ),
+                                Text(
+                                  "Phiên bản ${_controllerMain.getAppVersion()}",
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                const Text(
+                                  "⇜-----------v-----------⇝",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                const SizedBox(height: 16),
+                                Stack(
+                                  alignment: Alignment.center,
+                                  children: [
+                                    ToggleSwitch(
+                                      minWidth: Get.width / 3,
+                                      initialLabelIndex: _controllerMain.themeIndex.value,
+                                      cornerRadius: 45.0,
+                                      activeFgColor: Colors.white,
+                                      inactiveBgColor: Colors.grey,
+                                      inactiveFgColor: Colors.white,
+                                      totalSwitches: 2,
+                                      labels: const ['Theme Tối ưu', 'Theme Web'],
+                                      icons: const [
+                                        Icons.looks_one,
+                                        Icons.looks_two,
+                                      ],
+                                      activeBgColors: const [
+                                        [ColorConstants.appColor],
+                                        [ColorConstants.appColor]
+                                      ],
+                                      onToggle: (index) {
+                                        // debugPrint('switched to: $index');
+                                        _controllerMain.setThemeIndex(index);
+                                        _showPopupRestart();
+                                      },
                                     ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 16),
-                              UIUtils.getButton(
-                                "Giới thiệu ứng dụng",
-                                Icons.hotel_class,
-                                description:
-                                    "Chào mừng đến với ứng dụng KQXS, XSMN, XSMB, XSMT – ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!",
-                                () {
-                                  Get.to(() => IntroductionScreen(ProfileScreen.path));
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Đánh giá ứng dụng",
-                                Icons.hotel_class,
-                                description: "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐bạn nhé!Tks bạn nhiều 😘",
-                                () {
-                                  UrlLauncherUtils.rateApp(null, null);
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Thêm ứng dụng",
-                                Icons.card_giftcard,
-                                description:
-                                    "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
-                                () {
-                                  UrlLauncherUtils.moreApp();
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Chia sẻ ứng dụng",
-                                Icons.ios_share,
-                                description: "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
-                                () async {
-                                  final result = await Share.share(
-                                      'https://play.google.com/store/apps/details?id=com.mckimquyen.kqxs');
-                                  if (result.status == ShareResultStatus.success) {
-                                    showSnackBarFull("KQXS", "Cảm ơn bạn đã chia sẻ 👉👈");
-                                  }
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Chính sách bảo mật",
-                                Icons.local_police,
-                                description:
-                                    "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
-                                () {
-                                  UrlLauncherUtils.launchPolicy();
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Source code ở Github",
-                                Icons.data_object,
-                                description:
-                                    "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
-                                () {
-                                  UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
-                                },
-                              ),
-                              UIUtils.getButton(
-                                "Xoá dữ liệu tooltip",
-                                Icons.info,
-                                description:
-                                    "Ứng dụng sẽ hiển thị lại các mục tooltip, giống như lần đầu tiên bạn tải ứng dụng này về",
-                                () {
-                                  showSnackBarFull(StringConstants.warning,
-                                      "Xoá dữ liệu tooltip thành công, bạn có thể sẽ cần khởi động lại để thấy kết quả");
-                                  SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, false);
-                                  SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, false);
-                                  SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, false);
-                                  SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, false);
-                                },
-                              ),
-                              if (kDebugMode)
+                                    if (_controllerMain.isShowKeyTooltipTheme.value != true)
+                                      PulseContainer(
+                                        child: const Text(
+                                          'Bạn có thể lựa chọn giao diện tại đây\nChúng tôi khuyến cáo chọn Theme Tối Ưu\nsẽ cho trải nghiệm mượt mà hơn',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12,
+                                            color: Colors.white,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        onTapRoot: () {
+                                          debugPrint("roy93~ onTapRoot");
+                                          _controllerMain.setIsShowKeyTooltipTheme();
+                                        },
+                                      ),
+                                  ],
+                                ),
+                                const SizedBox(height: 16),
                                 UIUtils.getButton(
-                                  "Applovin (only in Debug mode)",
-                                  Icons.ad_units,
-                                  description: "",
+                                  "Giới thiệu ứng dụng",
+                                  Icons.hotel_class,
+                                  description:
+                                      "Chào mừng đến với ứng dụng KQXS, XSMN, XSMB, XSMT – ứng dụng tra cứu kết quả xổ số tiện lợi và đầy đủ tính năng dành cho cộng đồng yêu thích xổ số!",
                                   () {
-                                    Get.to(() => const ApplovinScreen());
+                                    Get.to(() => IntroductionScreen(ProfileScreen.path));
                                   },
                                 ),
-                            ],
-                          ),
-                        ),
-                        AvatarGlow(
-                          glowColor: Colors.white,
-                          child: SizedBox(
-                            width: 120,
-                            height: 120,
-                            child: Image.asset(
-                              'assets/images/anim_2.gif',
+                                UIUtils.getButton(
+                                  "Đánh giá ứng dụng",
+                                  Icons.hotel_class,
+                                  description:
+                                      "Ứng dụng này hoàn toàn miễn phí, hãy đánh giá 5⭐bạn nhé!Tks bạn nhiều 😘",
+                                  () {
+                                    UrlLauncherUtils.rateApp(null, null);
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Thêm ứng dụng",
+                                  Icons.card_giftcard,
+                                  description:
+                                      "Có rất nhiều ứng dụng bổ ích khác nữa. Dĩ nhiên là cũng miễn phí. Bạn hãy tải về trải nghiệm nhé! 👉👈",
+                                  () {
+                                    UrlLauncherUtils.moreApp();
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Chia sẻ ứng dụng",
+                                  Icons.ios_share,
+                                  description:
+                                      "Nhấn vào đây để chia sẻ ứng dụng bổ ích này cho người thân của bạn 👉👈",
+                                  () async {
+                                    final result = await Share.share(
+                                        'https://play.google.com/store/apps/details?id=com.mckimquyen.kqxs');
+                                    if (result.status == ShareResultStatus.success) {
+                                      showSnackBarFull("KQXS", "Cảm ơn bạn đã chia sẻ 👉👈");
+                                    }
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Chính sách bảo mật",
+                                  Icons.local_police,
+                                  description:
+                                      "Nhấn vào đây để đọc chi tiết toàn bộ nội dung của chính sách bảo mật và quyền riêng tư ✍️",
+                                  () {
+                                    UrlLauncherUtils.launchPolicy();
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Source code ở Github",
+                                  Icons.data_object,
+                                  description:
+                                      "Nếu bạn là nhà phát triển và muốn đóng góp một chút công sức vào dự án. Hãy nhấn vào đây nhé 😇",
+                                  () {
+                                    UrlLauncherUtils.launchInBrowser("https://github.com/gj-loitp/KetQuaXoSo");
+                                  },
+                                ),
+                                UIUtils.getButton(
+                                  "Xoá dữ liệu tooltip",
+                                  Icons.info,
+                                  description:
+                                      "Ứng dụng sẽ hiển thị lại các mục tooltip, giống như lần đầu tiên bạn tải ứng dụng này về",
+                                  () {
+                                    showSnackBarFull(StringConstants.warning,
+                                        "Xoá dữ liệu tooltip thành công, bạn có thể sẽ cần khởi động lại để thấy kết quả");
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, false);
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, false);
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, false);
+                                    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, false);
+                                  },
+                                ),
+                                if (kDebugMode)
+                                  UIUtils.getButton(
+                                    "Applovin (only in Debug mode)",
+                                    Icons.ad_units,
+                                    description: "",
+                                    () {
+                                      Get.to(() => const ApplovinScreen());
+                                    },
+                                  ),
+                              ],
                             ),
                           ),
-                        ),
-                      ],
-                    ),
+                          AvatarGlow(
+                            glowColor: Colors.white,
+                            child: SizedBox(
+                              width: 120,
+                              height: 120,
+                              child: Image.asset(
+                                'assets/images/anim_2.gif',
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    }),
                   ),
                   _buildBannerAd(),
                 ],

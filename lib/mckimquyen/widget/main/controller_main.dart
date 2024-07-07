@@ -39,6 +39,7 @@ class ControllerMain extends BaseController {
   var packageInfo = PackageInfo(appName: '', packageName: '', version: '', buildNumber: '').obs;
   final _dbHelper = DatabaseHelper();
   var listHistory = <History>[].obs;
+
   // var isGoToGroupTester = false.obs;
   TabController? tabControllerMain;
   var isShowWebViewSoccer = true.obs;
@@ -50,6 +51,7 @@ class ControllerMain extends BaseController {
   var listTeamQuick = <Team>[].obs;
   final indexBottomBarSoccer = 0.obs;
   var quoteSoccer = "".obs;
+  var isShowKeyTooltipTheme = false.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1854,7 +1856,12 @@ class ControllerMain extends BaseController {
     quoteSoccer.value = quotes[Random().nextInt(quotes.length)];
   }
 
-  //var keyTooltipTheme = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme);
-//SharedPreferencesUtil.setBool(
-//                                                   SharedPreferencesUtil.keyTooltipTheme, true);
+  Future<void> getIsShowKeyTooltipTheme() async {
+    isShowKeyTooltipTheme.value = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme) ?? false;
+  }
+
+  void setIsShowKeyTooltipTheme() {
+    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, true);
+    isShowKeyTooltipTheme.value = true;
+  }
 }

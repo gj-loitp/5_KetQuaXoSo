@@ -1,10 +1,15 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:ketquaxoso/mckimquyen/common/const/color_constants.dart';
 
 class PulseContainer extends StatefulWidget {
   final Widget child;
+  final Function onTapRoot;
 
-  const PulseContainer({super.key, required this.child});
+  const PulseContainer({
+    super.key,
+    required this.child,
+    required this.onTapRoot,
+  });
 
   @override
   State<PulseContainer> createState() => _PulseContainerState();
@@ -35,33 +40,36 @@ class _PulseContainerState extends State<PulseContainer> with SingleTickerProvid
     return AnimatedBuilder(
       animation: _animation,
       builder: (context, child) {
-        return Transform.scale(
-          scale: _animation.value,
-          child: Stack(
-            alignment: Alignment.topCenter,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(45.0)),
-                  color: ColorConstants.appColor.withOpacity(0.8),
+        return InkWell(
+          child: Transform.scale(
+            scale: _animation.value,
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(45.0)),
+                    color: Colors.blue.withOpacity(0.8),
+                  ),
+                  padding: const EdgeInsets.all(16),
+                  child: widget.child,
                 ),
-                padding: const EdgeInsets.all(16),
-                child: widget.child,
-              ),
-              Container(
-                alignment: Alignment.topRight,
-                child: InkWell(
-                  customBorder: const CircleBorder(),
-                  splashColor: Colors.red,
-                  onTap: () {},
-                  child: const Icon(
-                    Icons.clear,
-                    color: Colors.black,
+                Container(
+                  alignment: Alignment.topRight,
+                  child: AvatarGlow(
+                    glowColor: Colors.blue,
+                    child: const Icon(
+                      Icons.clear,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+          onTap: () {
+            widget.onTapRoot.call();
+          },
         );
       },
     );
