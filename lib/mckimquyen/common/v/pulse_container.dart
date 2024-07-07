@@ -27,7 +27,7 @@ class _PulseContainerState extends State<PulseContainer> with SingleTickerProvid
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 500),
     )..repeat(reverse: true);
     _animation = Tween<double>(begin: 1.0, end: 1.2).animate(_controller);
   }

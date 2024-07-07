@@ -223,7 +223,8 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                   alignment: Alignment.center,
                                   children: [
                                     ToggleSwitch(
-                                      minWidth: Get.width / 3,
+                                      minWidth: Get.width,
+                                      minHeight: 50,
                                       initialLabelIndex: _controllerMain.themeIndex.value,
                                       cornerRadius: 45.0,
                                       activeFgColor: Colors.white,
