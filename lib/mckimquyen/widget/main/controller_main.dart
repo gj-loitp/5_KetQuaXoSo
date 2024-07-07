@@ -1855,6 +1855,9 @@ class ControllerMain extends BaseController {
   Future<void> getIsShowKeyTooltipCalendar() async {
     isShowKeyTooltipCalendar.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN) ?? false;
+    if (isShowKeyTooltipCalendar.value == true) {
+      getIsShowKeyTooltipProvince();
+    }
   }
 
   void setIsShowKeyTooltipCalendar() {
