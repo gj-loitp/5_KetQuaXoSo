@@ -17,6 +17,7 @@ class SharedPreferencesUtil {
   static String keySearchTeam = "keySearchTeam";
   static String keyTeamId = "keyTeamId";
   static String keyTimestampDismissBottomSheetNotification = "keyTimestampDismissBottomSheetNotification";
+  static String keyHasConfigNotificationForAndroidBelow33 = "keyHasConfigNotificationForAndroidBelow33";
 
   // static bool onOffTextOverflow = false;
 

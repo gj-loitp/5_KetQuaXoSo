@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -1885,7 +1887,7 @@ class ControllerMain extends BaseController {
     isShowKeyTooltipToday.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN) ?? false;
     if (isShowKeyTooltipToday.value == true) {
-      // debugPrint("getIsShowKeyTooltipToday");
+      debugPrint("roy93~ getIsShowKeyTooltipToday");
       _showBottomSheetNotification();
     }
   }
@@ -1893,32 +1895,58 @@ class ControllerMain extends BaseController {
   void setIsShowKeyTooltipToday() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, true);
     isShowKeyTooltipToday.value = true;
-    // debugPrint("setIsShowKeyTooltipToday");
+    debugPrint("roy93~ setIsShowKeyTooltipToday");
     _showBottomSheetNotification();
   }
 
   void _showBottomSheetNotification() {
-    Permission.notification.isGranted.then((isGrantedPermissionNotification) {
-      // debugPrint("_showBottomSheetNotification $isGrantedPermissionNotification");
+    Permission.notification.isGranted.then((isGrantedPermissionNotification) async {
+      debugPrint("roy93~ _showBottomSheetNotification $isGrantedPermissionNotification");
       if (isGrantedPermissionNotification == true) {
-        isDismissBottomSheetNotification.value = true;
-      } else {
-        UIUtils.showBottomSheetNotification(() async {
-          // debugPrint("showBottomSheetNotification onDismiss");
-          var timestampPast =
-              await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification) ?? 0;
-          debugPrint("roy93~ _showBottomSheetNotification timestampPast $timestampPast");
-          if (timestampPast == 0) {
-            var timestampNow = DateTime.now().millisecondsSinceEpoch;
-            debugPrint("roy93~ save timestampNow $timestampNow");
-            SharedPreferencesUtil.setInt(
-                SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification, timestampNow);
+        if (Platform.isAndroid) {
+          DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+          AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
+          int sdkInt = androidInfo.version.sdkInt;
+          debugPrint("roy93~ sdkInt $sdkInt");
+          if (sdkInt >= 33) {
+            isDismissBottomSheetNotification.value = true;
           } else {
-            debugPrint("roy93~ !save");
+            var keyHasConfigNotificationForAndroidBelow33 =
+                await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyHasConfigNotificationForAndroidBelow33);
+            debugPrint("roy93~ keyHasConfigNotificationForAndroidBelow33 $keyHasConfigNotificationForAndroidBelow33");
+            if (keyHasConfigNotificationForAndroidBelow33 == true) {
+              debugPrint("roy93~ keyHasConfigNotificationForAndroidBelow33 == true");
+              isDismissBottomSheetNotification.value = true;
+            } else {
+              debugPrint("roy93~ keyHasConfigNotificationForAndroidBelow33 != true");
+              await SharedPreferencesUtil.setBool(
+                  SharedPreferencesUtil.keyHasConfigNotificationForAndroidBelow33, true);
+              _checkLogicNotification();
+            }
           }
+        } else {
           isDismissBottomSheetNotification.value = true;
-        });
+        }
+      } else {
+        _checkLogicNotification();
       }
+    });
+  }
+
+  void _checkLogicNotification() {
+    UIUtils.showBottomSheetNotification(() async {
+      debugPrint("roy93~ showBottomSheetNotification onDismiss");
+      var timestampPast =
+          await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification) ?? 0;
+      debugPrint("roy93~ _showBottomSheetNotification timestampPast $timestampPast");
+      if (timestampPast == 0) {
+        var timestampNow = DateTime.now().millisecondsSinceEpoch;
+        debugPrint("roy93~ save timestampNow $timestampNow");
+        SharedPreferencesUtil.setInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification, timestampNow);
+      } else {
+        debugPrint("roy93~ !save");
+      }
+      isDismissBottomSheetNotification.value = true;
     });
   }
 }
