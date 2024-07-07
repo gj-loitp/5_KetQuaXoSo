@@ -22,9 +22,11 @@ class SharedPrefsRepository {
 
       return TimeOfDay(hour: hour, minute: minute);
     }
-
-    //TODO roy93~
-    return TimeOfDay.now();
+    // return TimeOfDay.now();
+    var dt = DateTime.now();
+    dt = DateTime(dt.year, dt.month, dt.day, 16, 30);
+    var timeOfDay = TimeOfDay.fromDateTime(dt);
+    return timeOfDay;
   }
 
   Future<void> setReminderTime(TimeOfDay time) async {
