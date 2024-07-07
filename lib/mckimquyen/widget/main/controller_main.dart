@@ -4,7 +4,6 @@ import 'dart:math';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_pretty_dio_logger/flutter_pretty_dio_logger.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -20,6 +19,7 @@ import 'package:ketquaxoso/mckimquyen/widget/main/xsmb/xsmb_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmn/xsmn_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/xsmt/xsmt_screen.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../common/const/string_constants.dart';
@@ -1885,6 +1885,7 @@ class ControllerMain extends BaseController {
     isShowKeyTooltipToday.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN) ?? false;
     if (isShowKeyTooltipToday.value == true) {
+      debugPrint("roy93~ getIsShowKeyTooltipToday");
       _showBottomSheetNotification();
     }
   }
@@ -1892,13 +1893,21 @@ class ControllerMain extends BaseController {
   void setIsShowKeyTooltipToday() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, true);
     isShowKeyTooltipToday.value = true;
+    debugPrint("roy93~ setIsShowKeyTooltipToday");
     _showBottomSheetNotification();
   }
 
   void _showBottomSheetNotification() {
-    UIUtils.showBottomSheetNotification(() {
-      debugPrint("roy93~ showBottomSheetNotification onDismiss");
-      isDismissBottomSheetNotification.value = true;
+    Permission.notification.isGranted.then((isGrantedPermissionNotification) {
+      debugPrint("roy93~  _showBottomSheetNotification $isGrantedPermissionNotification");
+      if (isGrantedPermissionNotification == true) {
+        //do nothing
+      } else {
+        UIUtils.showBottomSheetNotification(() {
+          debugPrint("roy93~ showBottomSheetNotification onDismiss");
+          isDismissBottomSheetNotification.value = true;
+        });
+      }
     });
   }
 }
