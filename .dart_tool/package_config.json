@@ -20,6 +20,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "app_settings",
+      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/app_settings-5.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "applovin_max",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/applovin_max-3.10.1",
       "packageUri": "lib/",
@@ -1124,7 +1130,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-07-06T16:56:02.643390Z",
+  "generated": "2024-07-07T05:38:37.709806Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
