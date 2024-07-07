@@ -642,7 +642,7 @@ class UIUtils {
 //   );
 // }
 
-  static showBottomSheetNotification() {
+  static showBottomSheetNotification(Function onDismiss) {
     Permission.notification.isGranted.then((isGrantedPermissionNotification) {
       debugPrint("roy93~ isGrantedPermissionNotification $isGrantedPermissionNotification");
 
@@ -746,7 +746,10 @@ class UIUtils {
               ],
             ),
           ),
-        );
+        ).then((value) {
+          debugPrint("roy93~ then value $value");
+          onDismiss.call();
+        });
       }
 
       if (isGrantedPermissionNotification == true) {

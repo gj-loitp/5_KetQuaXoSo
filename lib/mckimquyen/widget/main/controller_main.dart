@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_pretty_dio_logger/flutter_pretty_dio_logger.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -56,6 +57,7 @@ class ControllerMain extends BaseController {
   var isShowKeyTooltipCalendar = true.obs;
   var isShowKeyTooltipProvince = true.obs;
   var isShowKeyTooltipToday = true.obs;
+  var isDismissBottomSheetNotification = false.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1883,17 +1885,20 @@ class ControllerMain extends BaseController {
     isShowKeyTooltipToday.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN) ?? false;
     if (isShowKeyTooltipToday.value == true) {
-      showBottomSheetNotification();
+      _showBottomSheetNotification();
     }
   }
 
   void setIsShowKeyTooltipToday() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, true);
     isShowKeyTooltipToday.value = true;
-    showBottomSheetNotification();
+    _showBottomSheetNotification();
   }
 
-  void showBottomSheetNotification() {
-    UIUtils.showBottomSheetNotification();
+  void _showBottomSheetNotification() {
+    UIUtils.showBottomSheetNotification(() {
+      debugPrint("roy93~ showBottomSheetNotification onDismiss");
+      isDismissBottomSheetNotification.value = true;
+    });
   }
 }

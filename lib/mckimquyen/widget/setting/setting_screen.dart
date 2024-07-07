@@ -232,7 +232,9 @@ class _SettingScreenState extends BaseStatefulState<SettingScreen> {
             "Gửi thông báo nhắc giờ mở xổ số",
             Icons.timer,
             () {
-              UIUtils.showBottomSheetNotification();
+              UIUtils.showBottomSheetNotification(() {
+                //do nothing
+              });
             },
           ),
         ],

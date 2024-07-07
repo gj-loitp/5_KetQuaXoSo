@@ -47,7 +47,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
     _controllerMain.getThemeIndex();
     _controllerMain.getIsOnTextOverflow();
     _controllerMain.getIsOnResultVietlotMax3d();
-    _checkToShowDialogHello();
     _controllerMain.tabControllerMain = TabController(length: bottomBarPages.length, vsync: this);
   }
 
@@ -57,52 +56,6 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
     _controllerPage.dispose();
     _controllerMain.tabControllerMain?.dispose();
     super.dispose();
-  }
-
-  Future<void> _checkToShowDialogHello() async {
-    void showPopup() {
-      SchedulerBinding.instance.addPostFrameCallback((_) {
-        showDialogSuccess(
-          const Material(
-            child: Text(
-              "Xin chào\nCảm ơn bạn đã ủng hộ ứng dụng tra cứu KQXS 3 miền\nChúng tôi cam kết hỗ trợ ứng dụng lâu dài và luôn lắng nghe ý kiến đóng góp của các bạn để ứng dụng có thể mang lại trải nghiệm tốt nhất\nNếu bạn thấy ứng dụng bổ ích, hãy đánh giá ứng dụng 5✩ và chia sẻ cho người thân của bạn nhé!\nYêu các bạn!",
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: Colors.grey,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          "Không hiển thị lại",
-          "assets/files/love.json",
-          true,
-          () {
-            SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedDialogHello, true);
-          },
-        );
-      });
-    }
-    var keyTooltipTheme = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme);
-    if (keyTooltipTheme != true) {
-      return;
-    }
-    var keyTooltipCalendarXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN);
-    if (keyTooltipCalendarXSMN != true) {
-      return;
-    }
-    var keyTooltipCityXSMN = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN);
-    if (keyTooltipCityXSMN != true) {
-      return;
-    }
-
-    SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedDialogHello).then((value) {
-      if (value == true) {
-        //do not show dialog hello again
-      } else {
-        showPopup();
-      }
-    });
   }
 
   DateTime _backPressTime = DateTime.now();

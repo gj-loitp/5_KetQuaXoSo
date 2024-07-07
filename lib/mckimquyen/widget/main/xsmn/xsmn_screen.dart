@@ -1,9 +1,11 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:ketquaxoso/mckimquyen/common/v/pulse_container.dart';
+import 'package:ketquaxoso/mckimquyen/util/shared_preferences_util.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../common/const/color_constants.dart';
@@ -37,6 +39,12 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     // debugPrint("initState");
     _selectDay(DateTime.now(), true);
     _controllerMain.getIsShowKeyTooltipCalendar();
+    ever(_controllerMain.isDismissBottomSheetNotification, (value) {
+      debugPrint("roy93~ has been changed value $value");
+      if (value) {
+        _checkToShowDialogHello();
+      }
+    });
   }
 
   @override
@@ -914,5 +922,38 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   void _selectDay(DateTime dateTime, bool isFirstInit) {
     _controllerMain.setSelectedDateTimeXSMN(dateTime, isFirstInit);
+  }
+
+  Future<void> _checkToShowDialogHello() async {
+    void showPopup() {
+      SchedulerBinding.instance.addPostFrameCallback((_) {
+        showDialogSuccess(
+          const Material(
+            child: Text(
+              "Xin chào\nCảm ơn bạn đã ủng hộ ứng dụng tra cứu KQXS 3 miền\nChúng tôi cam kết hỗ trợ ứng dụng lâu dài và luôn lắng nghe ý kiến đóng góp của các bạn để ứng dụng có thể mang lại trải nghiệm tốt nhất\nNếu bạn thấy ứng dụng bổ ích, hãy đánh giá ứng dụng 5✩ và chia sẻ cho người thân của bạn nhé!\nYêu các bạn!",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          "Không hiển thị lại",
+          "assets/files/love.json",
+          true,
+          () {
+            SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyIsShowedDialogHello, true);
+          },
+        );
+      });
+    }
+
+    var value = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedDialogHello);
+    if (value == true) {
+      //do not show dialog hello again
+    } else {
+      showPopup();
+    }
   }
 }
