@@ -199,14 +199,14 @@ class _TestAppScreenState extends BaseStatefulState<TestAppScreen> {
               UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/details?id=com.mckimquyen.gallery");
             },
           ),
-          UIUtils.getButton(
-            "Cat Scanner with history",
-            Icons.navigate_next,
-            () {
-              UrlLauncherUtils.launchInBrowser(
-                  "https://play.google.com/store/apps/details?id=com.mckimquyen.binaryeye");
-            },
-          ),
+          // UIUtils.getButton(
+          //   "Cat Scanner with history",
+          //   Icons.navigate_next,
+          //   () {
+          //     UrlLauncherUtils.launchInBrowser(
+          //         "https://play.google.com/store/apps/details?id=com.mckimquyen.binaryeye");
+          //   },
+          // ),
           UIUtils.getButton(
             "RSS Cat hub",
             Icons.navigate_next,

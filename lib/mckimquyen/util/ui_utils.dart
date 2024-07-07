@@ -642,14 +642,18 @@ class UIUtils {
 //   );
 // }
 
-  static showBottomSheetNotification(BuildContext context) {
+  static showBottomSheetNotification() {
     Permission.notification.isGranted.then((isGrantedPermissionNotification) {
       debugPrint("roy93~ isGrantedPermissionNotification $isGrantedPermissionNotification");
 
       void show() {
+        var c = Get.context;
+        if (c == null) {
+          return;
+        }
         showBarModalBottomSheet(
           enableDrag: false,
-          context: context,
+          context: c,
           builder: (context) => Container(
             width: Get.width,
             padding: const EdgeInsets.all(16),
@@ -749,7 +753,7 @@ class UIUtils {
         show();
       } else {
         Permission.notification.request().then((value) {
-          debugPrint("roy93~ request value $value");
+          // debugPrint("request value $value");
           if (value == PermissionStatus.granted) {
             show();
           } else if (value == PermissionStatus.permanentlyDenied) {
