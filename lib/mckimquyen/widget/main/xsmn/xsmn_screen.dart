@@ -137,101 +137,122 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             ),
           ),
           const SizedBox(width: 8),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 200,
-                height: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 40,
-                child: Stack(
-                  // fit: StackFit.expand,
-                  // alignment: Alignment.centerRight,
-                  children: [
-                    if (_controllerMain.isShowKeyTooltipProvince.value == true)
-                      Hero(
-                        tag: "${XSMNScreen.path}${HeroConstants.appBarLeftIcon}",
+          Container(
+            color: Colors.transparent,
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  alignment: Alignment.centerRight,
+                  color: Colors.transparent,
+                  width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 200,
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Visibility(
+                        visible: _controllerMain.isShowKeyTooltipProvince.value != true,
+                        child: Expanded(
+                          child: PulseContainer(
+                            color: Colors.blueAccent.withOpacity(0.9),
+                            onTapRoot: () {
+                              debugPrint("roy93~ onTapRoot");
+                              _controllerMain.setIsShowKeyTooltipProvince();
+                              _controllerMain.getIsShowKeyTooltipToday();
+                            },
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Dò theo tỉnh thành',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 40,
+                        height: 40,
+                        color: Colors.transparent,
+                        child: Hero(
+                          tag: "${XSMNScreen.path}${HeroConstants.appBarLeftIcon}",
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.to(() => const ProvinceListScreen(XSMNScreen.path));
+                            },
+                            color: Colors.blueAccent,
+                            padding: const EdgeInsets.all(0),
+                            shape: const CircleBorder(),
+                            child: const Icon(
+                              Icons.location_city,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Container(
+                  alignment: Alignment.centerRight,
+                  color: Colors.transparent,
+                  width: _controllerMain.isShowKeyTooltipToday.value ? 40 : 200,
+                  height: 40,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Visibility(
+                          visible: _controllerMain.isShowKeyTooltipToday.value != true,
+                          child: PulseContainer(
+                            color: Colors.pink.withOpacity(0.9),
+                            onTapRoot: () {
+                              debugPrint("roy93~ onTapRoot");
+                              _controllerMain.setIsShowKeyTooltipToday();
+                            },
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Kết qủa hôm nay',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 40,
+                        height: 40,
+                        color: Colors.transparent,
                         child: MaterialButton(
                           onPressed: () {
-                            Get.to(() => const ProvinceListScreen(XSMNScreen.path));
+                            _selectDay(DateTime.now(), false);
+                            showSnackBarFull(
+                              StringConstants.warning,
+                              "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
+                            );
                           },
-                          color: Colors.blueAccent,
+                          color: Colors.pink,
                           padding: const EdgeInsets.all(0),
                           shape: const CircleBorder(),
                           child: const Icon(
-                            Icons.location_city,
+                            Icons.today,
                             color: Colors.white,
                           ),
                         ),
                       ),
-                    if (_controllerMain.isShowKeyTooltipProvince.value != true)
-                      PulseContainer(
-                        color: Colors.black.withOpacity(0.9),
-                        onTapRoot: () {
-                          debugPrint("roy93~ onTapRoot");
-                          _controllerMain.setIsShowKeyTooltipProvince();
-                          _controllerMain.getIsShowKeyTooltipToday();
-                        },
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Dò kết qủa theo các tỉnh thành',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(height: 2),
-              SizedBox(
-                width: _controllerMain.isShowKeyTooltipToday.value ? 40 : 200,
-                height: _controllerMain.isShowKeyTooltipToday.value ? 40 : 40,
-                child: Stack(
-                  // fit: StackFit.expand,
-                  alignment: Alignment.centerRight,
-                  children: [
-                    if (_controllerMain.isShowKeyTooltipToday.value == true)
-                      MaterialButton(
-                        onPressed: () {
-                          _selectDay(DateTime.now(), false);
-                          showSnackBarFull(
-                            StringConstants.warning,
-                            "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
-                          );
-                        },
-                        color: Colors.pink,
-                        padding: const EdgeInsets.all(0),
-                        shape: const CircleBorder(),
-                        child: const Icon(
-                          Icons.today,
-                          color: Colors.white,
-                        ),
-                      ),
-                    if (_controllerMain.isShowKeyTooltipToday.value != true)
-                      PulseContainer(
-                        color: Colors.black.withOpacity(0.9),
-                        onTapRoot: () {
-                          debugPrint("roy93~ onTapRoot");
-                          _controllerMain.setIsShowKeyTooltipToday();
-                        },
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Dò kết qủa ngày hôm nay',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

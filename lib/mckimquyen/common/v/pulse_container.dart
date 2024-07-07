@@ -54,7 +54,7 @@ class _PulseContainerState extends State<PulseContainer> with SingleTickerProvid
                     borderRadius: const BorderRadius.all(Radius.circular(45.0)),
                     color: widget.color,
                   ),
-                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                   child: widget.child,
                 ),
                 // Container(
