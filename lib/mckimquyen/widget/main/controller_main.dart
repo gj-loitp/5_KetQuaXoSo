@@ -1853,4 +1853,8 @@ class ControllerMain extends BaseController {
     ];
     quoteSoccer.value = quotes[Random().nextInt(quotes.length)];
   }
+
+  //var keyTooltipTheme = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTheme);
+//SharedPreferencesUtil.setBool(
+//                                                   SharedPreferencesUtil.keyTooltipTheme, true);
 }
