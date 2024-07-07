@@ -142,7 +142,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             alignment: Alignment.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
                   alignment: Alignment.centerRight,
@@ -150,6 +150,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 200,
                   height: 40,
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Visibility(
                         visible: _controllerMain.isShowKeyTooltipProvince.value != true,
@@ -204,6 +206,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   width: _controllerMain.isShowKeyTooltipToday.value ? 40 : 200,
                   height: 40,
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Expanded(
                         child: Visibility(
