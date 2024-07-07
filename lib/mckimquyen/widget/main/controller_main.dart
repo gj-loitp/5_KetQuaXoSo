@@ -1868,6 +1868,9 @@ class ControllerMain extends BaseController {
   Future<void> getIsShowKeyTooltipProvince() async {
     isShowKeyTooltipProvince.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN) ?? false;
+    if (isShowKeyTooltipProvince.value == true) {
+      getIsShowKeyTooltipToday();
+    }
   }
 
   void setIsShowKeyTooltipProvince() {
