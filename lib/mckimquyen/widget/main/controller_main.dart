@@ -54,6 +54,7 @@ class ControllerMain extends BaseController {
   var isShowKeyTooltipTheme = true.obs;
   var isShowKeyTooltipCalendar = true.obs;
   var isShowKeyTooltipProvince = true.obs;
+  var isShowKeyTooltipToday = true.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1869,5 +1870,15 @@ class ControllerMain extends BaseController {
   void setIsShowKeyTooltipProvince() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
     isShowKeyTooltipProvince.value = true;
+  }
+
+  Future<void> getIsShowKeyTooltipToday() async {
+    isShowKeyTooltipToday.value =
+        await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN) ?? false;
+  }
+
+  void setIsShowKeyTooltipToday() {
+    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, true);
+    isShowKeyTooltipToday.value = true;
   }
 }

@@ -141,32 +141,35 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 140,
-                height: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 140,
+                width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 200,
+                height: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 40,
                 child: Stack(
                   // fit: StackFit.expand,
+                  // alignment: Alignment.centerRight,
                   children: [
-                    Hero(
-                      tag: "${XSMNScreen.path}${HeroConstants.appBarLeftIcon}",
-                      child: MaterialButton(
-                        onPressed: () {
-                          Get.to(() => const ProvinceListScreen(XSMNScreen.path));
-                        },
-                        color: Colors.blueAccent,
-                        padding: const EdgeInsets.all(0),
-                        shape: const CircleBorder(),
-                        child: const Icon(
-                          Icons.location_city,
-                          color: Colors.white,
+                    if (_controllerMain.isShowKeyTooltipProvince.value == true)
+                      Hero(
+                        tag: "${XSMNScreen.path}${HeroConstants.appBarLeftIcon}",
+                        child: MaterialButton(
+                          onPressed: () {
+                            Get.to(() => const ProvinceListScreen(XSMNScreen.path));
+                          },
+                          color: Colors.blueAccent,
+                          padding: const EdgeInsets.all(0),
+                          shape: const CircleBorder(),
+                          child: const Icon(
+                            Icons.location_city,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
-                    ),
                     if (_controllerMain.isShowKeyTooltipProvince.value != true)
                       PulseContainer(
                         color: Colors.black.withOpacity(0.9),
                         onTapRoot: () {
                           debugPrint("roy93~ onTapRoot");
                           _controllerMain.setIsShowKeyTooltipProvince();
+                          _controllerMain.getIsShowKeyTooltipToday();
                         },
                         alignment: Alignment.center,
                         child: const Text(
@@ -184,73 +187,47 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
               ),
               const SizedBox(height: 2),
               SizedBox(
-                width: 40,
-                height: 40,
+                width: _controllerMain.isShowKeyTooltipToday.value ? 40 : 200,
+                height: _controllerMain.isShowKeyTooltipToday.value ? 40 : 40,
                 child: Stack(
                   // fit: StackFit.expand,
+                  alignment: Alignment.centerRight,
                   children: [
-                    MaterialButton(
-                      onPressed: () {
-                        _selectDay(DateTime.now(), false);
-                        showSnackBarFull(
-                          StringConstants.warning,
-                          "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
-                        );
-                      },
-                      color: Colors.pink,
-                      padding: const EdgeInsets.all(0),
-                      shape: const CircleBorder(),
-                      child: const Icon(
-                        Icons.today,
-                        color: Colors.white,
+                    if (_controllerMain.isShowKeyTooltipToday.value == true)
+                      MaterialButton(
+                        onPressed: () {
+                          _selectDay(DateTime.now(), false);
+                          showSnackBarFull(
+                            StringConstants.warning,
+                            "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
+                          );
+                        },
+                        color: Colors.pink,
+                        padding: const EdgeInsets.all(0),
+                        shape: const CircleBorder(),
+                        child: const Icon(
+                          Icons.today,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    // Builder(builder: (context) {
-                    //   return InkWell(
-                    //     onTap: _controllerMain.isShowTooltipToday.value
-                    //         ? () {
-                    //             showRelativeDialog(
-                    //                 context: context,
-                    //                 alignment: Alignment.centerRight,
-                    //                 builder: (context) {
-                    //                   return WillPopScope(
-                    //                     onWillPop: () {
-                    //                       // debugPrint("WillPopScope isShowTooltipToday");
-                    //                       SharedPreferencesUtil.setBool(
-                    //                           SharedPreferencesUtil.keyTooltipTodayXSMN, true);
-                    //                       _controllerMain.showTooltipToday(false);
-                    //                       return Future(() => true);
-                    //                     },
-                    //                     child: Material(
-                    //                       color: Colors.transparent,
-                    //                       child: Container(
-                    //                         decoration: const BoxDecoration(
-                    //                           borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                    //                           color: Colors.white,
-                    //                         ),
-                    //                         padding: const EdgeInsets.all(16),
-                    //                         child: const Text(
-                    //                           'Dò kết qủa ngày hôm nay',
-                    //                           style: TextStyle(
-                    //                             fontWeight: FontWeight.w700,
-                    //                             fontSize: 12,
-                    //                             color: Colors.black,
-                    //                           ),
-                    //                           textAlign: TextAlign.center,
-                    //                         ),
-                    //                       ),
-                    //                     ),
-                    //                   );
-                    //                 });
-                    //           }
-                    //         : null,
-                    //     child: Container(
-                    //       width: 1,
-                    //       height: double.infinity,
-                    //       color: Colors.transparent,
-                    //     ),
-                    //   );
-                    // }),
+                    if (_controllerMain.isShowKeyTooltipToday.value != true)
+                      PulseContainer(
+                        color: Colors.black.withOpacity(0.9),
+                        onTapRoot: () {
+                          debugPrint("roy93~ onTapRoot");
+                          _controllerMain.setIsShowKeyTooltipToday();
+                        },
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Dò kết qủa ngày hôm nay',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
                   ],
                 ),
               ),
