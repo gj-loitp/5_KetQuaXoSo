@@ -10,6 +10,7 @@ import 'package:highlight_text/highlight_text.dart';
 import 'package:html/parser.dart' as html_parser;
 import 'package:ketquaxoso/mckimquyen/db/database_helper.dart';
 import 'package:ketquaxoso/mckimquyen/db/history.dart';
+import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/info_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/list_league.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/profile/profile_screen.dart';
@@ -1881,10 +1882,18 @@ class ControllerMain extends BaseController {
   Future<void> getIsShowKeyTooltipToday() async {
     isShowKeyTooltipToday.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN) ?? false;
+    if (isShowKeyTooltipToday.value == true) {
+      showBottomSheetNotification();
+    }
   }
 
   void setIsShowKeyTooltipToday() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, true);
     isShowKeyTooltipToday.value = true;
+    showBottomSheetNotification();
+  }
+
+  void showBottomSheetNotification() {
+    UIUtils.showBottomSheetNotification();
   }
 }
