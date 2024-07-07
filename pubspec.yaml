@@ -64,7 +64,7 @@ dependencies:
   html:
 
   #zone daily_local_notification
-  flutter_local_notifications: ^16.1.0
+  flutter_local_notifications: ^17.2.0
   flutter_time_picker_spinner:
     git: https://github.com/novas1r1/flutter_time_picker_spinner.git
   flutter_timezone: ^1.0.8
