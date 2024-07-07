@@ -1885,7 +1885,7 @@ class ControllerMain extends BaseController {
     isShowKeyTooltipToday.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN) ?? false;
     if (isShowKeyTooltipToday.value == true) {
-      debugPrint("roy93~ getIsShowKeyTooltipToday");
+      // debugPrint("getIsShowKeyTooltipToday");
       _showBottomSheetNotification();
     }
   }
@@ -1893,18 +1893,29 @@ class ControllerMain extends BaseController {
   void setIsShowKeyTooltipToday() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, true);
     isShowKeyTooltipToday.value = true;
-    debugPrint("roy93~ setIsShowKeyTooltipToday");
+    // debugPrint("setIsShowKeyTooltipToday");
     _showBottomSheetNotification();
   }
 
   void _showBottomSheetNotification() {
     Permission.notification.isGranted.then((isGrantedPermissionNotification) {
-      debugPrint("roy93~  _showBottomSheetNotification $isGrantedPermissionNotification");
+      // debugPrint("_showBottomSheetNotification $isGrantedPermissionNotification");
       if (isGrantedPermissionNotification == true) {
-        //do nothing
+        isDismissBottomSheetNotification.value = true;
       } else {
-        UIUtils.showBottomSheetNotification(() {
-          debugPrint("roy93~ showBottomSheetNotification onDismiss");
+        UIUtils.showBottomSheetNotification(() async {
+          // debugPrint("showBottomSheetNotification onDismiss");
+          var timestampPast =
+              await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification) ?? 0;
+          debugPrint("roy93~ _showBottomSheetNotification timestampPast $timestampPast");
+          if (timestampPast == 0) {
+            var timestampNow = DateTime.now().millisecondsSinceEpoch;
+            debugPrint("roy93~ save timestampNow $timestampNow");
+            SharedPreferencesUtil.setInt(
+                SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification, timestampNow);
+          } else {
+            debugPrint("roy93~ !save");
+          }
           isDismissBottomSheetNotification.value = true;
         });
       }

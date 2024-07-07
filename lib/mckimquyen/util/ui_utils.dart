@@ -644,7 +644,7 @@ class UIUtils {
 
   static showBottomSheetNotification(Function onDismiss) {
     Permission.notification.isGranted.then((isGrantedPermissionNotification) {
-      debugPrint("roy93~ isGrantedPermissionNotification $isGrantedPermissionNotification");
+      // debugPrint("isGrantedPermissionNotification $isGrantedPermissionNotification");
 
       void show() {
         var c = Get.context;
@@ -747,7 +747,7 @@ class UIUtils {
             ),
           ),
         ).then((value) {
-          debugPrint("roy93~ then value $value");
+          // debugPrint("then value $value");
           onDismiss.call();
         });
       }

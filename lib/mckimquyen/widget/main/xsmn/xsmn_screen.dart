@@ -40,7 +40,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
     _selectDay(DateTime.now(), true);
     _controllerMain.getIsShowKeyTooltipCalendar();
     ever(_controllerMain.isDismissBottomSheetNotification, (value) {
-      debugPrint("roy93~ has been changed value $value");
+      // debugPrint("has been changed value $value");
       if (value) {
         _checkToShowDialogHello();
       }
@@ -951,9 +951,18 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
     var value = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedDialogHello);
     if (value == true) {
-      //do not show dialog hello again
+      debugPrint("roy93~ do not show dialog hello again");
     } else {
-      showPopup();
+      var timestampPast =
+          await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification) ?? 0;
+      debugPrint("roy93~ timestampPast $timestampPast");
+      var timestampNow = DateTime.now().millisecondsSinceEpoch;
+      debugPrint("roy93~ timestampNow $timestampNow");
+      var diff = timestampNow - timestampPast;
+      debugPrint("roy93~ diff $diff");
+      if (diff > 24 * 60 * 60 * 1000) {
+        showPopup();
+      }
     }
   }
 }

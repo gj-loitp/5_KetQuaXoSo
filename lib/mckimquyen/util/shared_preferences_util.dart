@@ -16,6 +16,7 @@ class SharedPreferencesUtil {
   static String keyLeagueId = "keyLeagueId";
   static String keySearchTeam = "keySearchTeam";
   static String keyTeamId = "keyTeamId";
+  static String keyTimestampDismissBottomSheetNotification = "keyTimestampDismissBottomSheetNotification";
 
   // static bool onOffTextOverflow = false;
 
