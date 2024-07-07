@@ -52,6 +52,7 @@ class ControllerMain extends BaseController {
   final indexBottomBarSoccer = 0.obs;
   var quoteSoccer = "".obs;
   var isShowKeyTooltipTheme = false.obs;
+  var isShowKeyTooltipCalendar = false.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1269,22 +1270,6 @@ class ControllerMain extends BaseController {
 
   ///END ZONE PROVINCE
 
-  var isShowTooltipCalendar = true.obs;
-  var isShowTooltipCity = true.obs;
-  var isShowTooltipToday = true.obs;
-
-  void showTooltipCalendar(bool isShowTooltipCalendar) {
-    this.isShowTooltipCalendar.value = isShowTooltipCalendar;
-  }
-
-  void showTooltipCity(bool isShowTooltipCity) {
-    this.isShowTooltipCity.value = isShowTooltipCity;
-  }
-
-  void showTooltipToday(bool isShowTooltipToday) {
-    this.isShowTooltipToday.value = isShowTooltipToday;
-  }
-
   ///ZONE MEGA
   var megaSelectedDateTime = DateTime.now().obs;
   var megaWebViewController = WebViewController().obs;
@@ -1863,5 +1848,15 @@ class ControllerMain extends BaseController {
   void setIsShowKeyTooltipTheme() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTheme, true);
     isShowKeyTooltipTheme.value = true;
+  }
+
+  Future<void> getIsShowKeyTooltipCalendar() async {
+    isShowKeyTooltipCalendar.value =
+        await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN) ?? false;
+  }
+
+  void setIsShowKeyTooltipCalendar() {
+    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
+    isShowKeyTooltipCalendar.value = true;
   }
 }

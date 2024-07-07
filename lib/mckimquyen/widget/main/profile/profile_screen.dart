@@ -247,6 +247,12 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                     ),
                                     if (_controllerMain.isShowKeyTooltipTheme.value != true)
                                       PulseContainer(
+                                        onTapRoot: () {
+                                          debugPrint("roy93~ onTapRoot");
+                                          _controllerMain.setIsShowKeyTooltipTheme();
+                                        },
+                                        color: Colors.blue,
+                                        alignment: Alignment.topCenter,
                                         child: const Text(
                                           'Bạn có thể lựa chọn giao diện tại đây\nChúng tôi khuyến cáo chọn Theme Tối Ưu\nsẽ cho trải nghiệm mượt mà hơn',
                                           style: TextStyle(
@@ -256,10 +262,6 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
-                                        onTapRoot: () {
-                                          debugPrint("roy93~ onTapRoot");
-                                          _controllerMain.setIsShowKeyTooltipTheme();
-                                        },
                                       ),
                                   ],
                                 ),

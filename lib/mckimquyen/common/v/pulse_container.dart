@@ -4,11 +4,15 @@ import 'package:flutter/material.dart';
 class PulseContainer extends StatefulWidget {
   final Widget child;
   final Function onTapRoot;
+  final Color color;
+  final AlignmentGeometry alignment;
 
   const PulseContainer({
     super.key,
     required this.child,
     required this.onTapRoot,
+    required this.color,
+    required this.alignment,
   });
 
   @override
@@ -44,12 +48,12 @@ class _PulseContainerState extends State<PulseContainer> with SingleTickerProvid
           child: Transform.scale(
             scale: _animation.value,
             child: Stack(
-              alignment: Alignment.topCenter,
+              alignment: widget.alignment,
               children: [
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(45.0)),
-                    color: Colors.blue.withOpacity(0.8),
+                    color: widget.color,
                   ),
                   padding: const EdgeInsets.all(16),
                   child: widget.child,
@@ -57,7 +61,7 @@ class _PulseContainerState extends State<PulseContainer> with SingleTickerProvid
                 Container(
                   alignment: Alignment.topRight,
                   child: AvatarGlow(
-                    glowColor: Colors.blue,
+                    glowColor: widget.color,
                     child: const Icon(
                       Icons.clear,
                       color: Colors.black,

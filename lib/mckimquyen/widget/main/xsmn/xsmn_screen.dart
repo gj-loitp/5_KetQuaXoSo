@@ -1,9 +1,8 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
-import 'package:relative_dialog/relative_dialog.dart';
+import 'package:ketquaxoso/mckimquyen/common/v/pulse_container.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../common/const/color_constants.dart';
@@ -12,7 +11,6 @@ import '../../../common/const/string_constants.dart';
 import '../../../common/v/calendar_timeline_sbk/src/calendar_timeline.dart';
 import '../../../core/base_stateful_state.dart';
 import '../../../model/kqxs.dart';
-import '../../../util/shared_preferences_util.dart';
 import '../../search/search_screen.dart';
 import '../../text_marquee.dart';
 import '../controller_main.dart';
@@ -31,82 +29,13 @@ class XSMNScreen extends StatefulWidget {
 
 class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
   final ControllerMain _controllerMain = Get.find();
-  final GlobalKey _keyTooltipCalendar = GlobalKey();
-  final GlobalKey _keyTooltipCity = GlobalKey();
-  final GlobalKey _keyTooltipToday = GlobalKey();
 
   @override
   void initState() {
     super.initState();
     // debugPrint("initState");
     _selectDay(DateTime.now(), true);
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      _showTooltipCalendar();
-    });
-  }
-
-  Future<void> _showTooltipCalendar() async {
-    await Future.delayed(const Duration(milliseconds: 500));
-    var keyTooltipCalendar = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCalendarXSMN);
-    if (keyTooltipCalendar == true) {
-      _controllerMain.showTooltipCalendar(false);
-      return;
-    }
-    RenderBox box = _keyTooltipCalendar.currentContext?.findRenderObject() as RenderBox;
-    Offset position = box.localToGlobal(Offset.zero);
-    // debugPrint("_showTooltipCalendar position $position");
-    WidgetsBinding.instance.handlePointerEvent(PointerDownEvent(
-      pointer: 0,
-      position: position,
-    ));
-    WidgetsBinding.instance.handlePointerEvent(PointerUpEvent(
-      pointer: 0,
-      position: position,
-    ));
-  }
-
-  Future<void> _showTooltipCity() async {
-    await Future.delayed(const Duration(milliseconds: 300));
-    var keyTooltipCity = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN);
-    // debugPrint("_showTooltipCity keyTooltipCity $keyTooltipCity");
-    if (keyTooltipCity == true) {
-      _controllerMain.showTooltipCity(false);
-      return;
-    }
-    _controllerMain.showTooltipCity(true);
-    RenderBox box = _keyTooltipCity.currentContext?.findRenderObject() as RenderBox;
-    Offset position = box.localToGlobal(Offset.zero);
-    // debugPrint("_showTooltipCity position $position");
-    WidgetsBinding.instance.handlePointerEvent(PointerDownEvent(
-      pointer: 0,
-      position: position,
-    ));
-    WidgetsBinding.instance.handlePointerEvent(PointerUpEvent(
-      pointer: 0,
-      position: position,
-    ));
-  }
-
-  Future<void> _showTooltipToday() async {
-    await Future.delayed(const Duration(milliseconds: 300));
-    var keyTooltipToday = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN);
-    // debugPrint("_showTooltipToday keyTooltipToday $keyTooltipToday");
-    if (keyTooltipToday == true) {
-      _controllerMain.showTooltipCity(false);
-      return;
-    }
-    _controllerMain.showTooltipToday(true);
-    RenderBox box = _keyTooltipToday.currentContext?.findRenderObject() as RenderBox;
-    Offset position = box.localToGlobal(Offset.zero);
-    // debugPrint("_showTooltipToday position $position");
-    WidgetsBinding.instance.handlePointerEvent(PointerDownEvent(
-      pointer: 0,
-      position: position,
-    ));
-    WidgetsBinding.instance.handlePointerEvent(PointerUpEvent(
-      pointer: 0,
-      position: position,
-    ));
+    _controllerMain.getIsShowKeyTooltipCalendar();
   }
 
   @override
@@ -154,7 +83,6 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   Widget _buildCalendar() {
     return Container(
-      // color: ColorConstants.bkgYellow,
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
       height: 90,
@@ -165,7 +93,7 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             child: SizedBox(
               height: double.infinity,
               child: Stack(
-                key: _keyTooltipCalendar,
+                alignment: Alignment.center,
                 children: [
                   CalendarTimeline(
                     shrink: false,
@@ -185,53 +113,24 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                     // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
                     locale: 'vi',
                   ),
-                  Builder(builder: (context) {
-                    return InkWell(
-                      onTap: _controllerMain.isShowTooltipCalendar.value
-                          ? () {
-                              showRelativeDialog(
-                                  context: context,
-                                  alignment: Alignment.centerLeft,
-                                  builder: (context) {
-                                    return WillPopScope(
-                                      onWillPop: () {
-                                        // debugPrint("WillPopScope isShowTooltipCalendar");
-                                        SharedPreferencesUtil.setBool(
-                                            SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
-                                        _controllerMain.showTooltipCalendar(false);
-                                        _showTooltipCity();
-                                        return Future(() => true);
-                                      },
-                                      child: Material(
-                                        color: Colors.transparent,
-                                        child: Container(
-                                          decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                                            color: Colors.white,
-                                          ),
-                                          padding: const EdgeInsets.all(16),
-                                          child: const Text(
-                                            'Bạn có thể lựa chọn ngày tháng để tra cứu\nkết quả xổ số bằng cách nhấn vào đây',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 12,
-                                              color: Colors.black,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                        ),
-                                      ),
-                                    );
-                                  });
-                            }
-                          : null,
-                      child: Container(
-                        width: 1,
-                        height: double.infinity,
-                        color: Colors.transparent,
+                  if (_controllerMain.isShowKeyTooltipCalendar.value != true)
+                    PulseContainer(
+                      color: Colors.indigo,
+                      onTapRoot: () {
+                        debugPrint("roy93~ onTapRoot");
+                        _controllerMain.setIsShowKeyTooltipCalendar();
+                      },
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Bạn có thể lựa chọn ngày tháng để tra cứu\nkết quả xổ số bằng cách nhấn vào đây',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                    );
-                  }),
+                    ),
                 ],
               ),
             ),
@@ -241,7 +140,6 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                key: _keyTooltipCity,
                 width: 40,
                 height: 40,
                 child: Stack(
@@ -262,59 +160,58 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                         ),
                       ),
                     ),
-                    Builder(builder: (context) {
-                      return InkWell(
-                        onTap: _controllerMain.isShowTooltipCity.value
-                            ? () {
-                                // debugPrint("showRelativeDialog isShowTooltipCity");
-                                showRelativeDialog(
-                                    context: context,
-                                    alignment: Alignment.centerRight,
-                                    builder: (context) {
-                                      return WillPopScope(
-                                        onWillPop: () {
-                                          // debugPrint("WillPopScope isShowTooltipCity");
-                                          SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
-                                          _controllerMain.showTooltipCity(false);
-                                          _showTooltipToday();
-                                          return Future(() => true);
-                                        },
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          child: Container(
-                                            decoration: const BoxDecoration(
-                                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                                              color: Colors.white,
-                                            ),
-                                            padding: const EdgeInsets.all(16),
-                                            child: const Text(
-                                              'Dò kết qủa theo các tỉnh thành',
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 12,
-                                                color: Colors.black,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    });
-                              }
-                            : null,
-                        child: Container(
-                          width: 1,
-                          height: double.infinity,
-                          color: Colors.transparent,
-                        ),
-                      );
-                    }),
+                    // Builder(builder: (context) {
+                    //   return InkWell(
+                    //     onTap: _controllerMain.isShowTooltipCity.value
+                    //         ? () {
+                    //             // debugPrint("showRelativeDialog isShowTooltipCity");
+                    //             showRelativeDialog(
+                    //                 context: context,
+                    //                 alignment: Alignment.centerRight,
+                    //                 builder: (context) {
+                    //                   return WillPopScope(
+                    //                     onWillPop: () {
+                    //                       // debugPrint("WillPopScope isShowTooltipCity");
+                    //                       SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
+                    //                       _controllerMain.showTooltipCity(false);
+                    //                       _showTooltipToday();
+                    //                       return Future(() => true);
+                    //                     },
+                    //                     child: Material(
+                    //                       color: Colors.transparent,
+                    //                       child: Container(
+                    //                         decoration: const BoxDecoration(
+                    //                           borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                    //                           color: Colors.white,
+                    //                         ),
+                    //                         padding: const EdgeInsets.all(16),
+                    //                         child: const Text(
+                    //                           'Dò kết qủa theo các tỉnh thành',
+                    //                           style: TextStyle(
+                    //                             fontWeight: FontWeight.w700,
+                    //                             fontSize: 12,
+                    //                             color: Colors.black,
+                    //                           ),
+                    //                           textAlign: TextAlign.center,
+                    //                         ),
+                    //                       ),
+                    //                     ),
+                    //                   );
+                    //                 });
+                    //           }
+                    //         : null,
+                    //     child: Container(
+                    //       width: 1,
+                    //       height: double.infinity,
+                    //       color: Colors.transparent,
+                    //     ),
+                    //   );
+                    // }),
                   ],
                 ),
               ),
               const SizedBox(height: 2),
               SizedBox(
-                key: _keyTooltipToday,
                 width: 40,
                 height: 40,
                 child: Stack(
@@ -336,52 +233,52 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                         color: Colors.white,
                       ),
                     ),
-                    Builder(builder: (context) {
-                      return InkWell(
-                        onTap: _controllerMain.isShowTooltipToday.value
-                            ? () {
-                                showRelativeDialog(
-                                    context: context,
-                                    alignment: Alignment.centerRight,
-                                    builder: (context) {
-                                      return WillPopScope(
-                                        onWillPop: () {
-                                          // debugPrint("WillPopScope isShowTooltipToday");
-                                          SharedPreferencesUtil.setBool(
-                                              SharedPreferencesUtil.keyTooltipTodayXSMN, true);
-                                          _controllerMain.showTooltipToday(false);
-                                          return Future(() => true);
-                                        },
-                                        child: Material(
-                                          color: Colors.transparent,
-                                          child: Container(
-                                            decoration: const BoxDecoration(
-                                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                                              color: Colors.white,
-                                            ),
-                                            padding: const EdgeInsets.all(16),
-                                            child: const Text(
-                                              'Dò kết qủa ngày hôm nay',
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 12,
-                                                color: Colors.black,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    });
-                              }
-                            : null,
-                        child: Container(
-                          width: 1,
-                          height: double.infinity,
-                          color: Colors.transparent,
-                        ),
-                      );
-                    }),
+                    // Builder(builder: (context) {
+                    //   return InkWell(
+                    //     onTap: _controllerMain.isShowTooltipToday.value
+                    //         ? () {
+                    //             showRelativeDialog(
+                    //                 context: context,
+                    //                 alignment: Alignment.centerRight,
+                    //                 builder: (context) {
+                    //                   return WillPopScope(
+                    //                     onWillPop: () {
+                    //                       // debugPrint("WillPopScope isShowTooltipToday");
+                    //                       SharedPreferencesUtil.setBool(
+                    //                           SharedPreferencesUtil.keyTooltipTodayXSMN, true);
+                    //                       _controllerMain.showTooltipToday(false);
+                    //                       return Future(() => true);
+                    //                     },
+                    //                     child: Material(
+                    //                       color: Colors.transparent,
+                    //                       child: Container(
+                    //                         decoration: const BoxDecoration(
+                    //                           borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                    //                           color: Colors.white,
+                    //                         ),
+                    //                         padding: const EdgeInsets.all(16),
+                    //                         child: const Text(
+                    //                           'Dò kết qủa ngày hôm nay',
+                    //                           style: TextStyle(
+                    //                             fontWeight: FontWeight.w700,
+                    //                             fontSize: 12,
+                    //                             color: Colors.black,
+                    //                           ),
+                    //                           textAlign: TextAlign.center,
+                    //                         ),
+                    //                       ),
+                    //                     ),
+                    //                   );
+                    //                 });
+                    //           }
+                    //         : null,
+                    //     child: Container(
+                    //       width: 1,
+                    //       height: double.infinity,
+                    //       color: Colors.transparent,
+                    //     ),
+                    //   );
+                    // }),
                   ],
                 ),
               ),
