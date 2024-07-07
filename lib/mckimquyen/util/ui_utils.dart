@@ -645,8 +645,10 @@ class UIUtils {
   static showBottomSheetNotification(BuildContext context) {
     Permission.notification.isGranted.then((isGrantedPermissionNotification) {
       debugPrint("roy93~ isGrantedPermissionNotification $isGrantedPermissionNotification");
-      if (isGrantedPermissionNotification == true) {
+
+      void show() {
         showBarModalBottomSheet(
+          enableDrag: false,
           context: context,
           builder: (context) => Container(
             width: Get.width,
@@ -656,13 +658,30 @@ class UIUtils {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Cài đặt thông báo",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
+                Row(
+                  children: [
+                    const Expanded(
+                      child: Text(
+                        "Cài đặt thông báo",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      customBorder: const CircleBorder(),
+                      splashColor: Colors.red,
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: const Icon(
+                        Icons.clear,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
                 Expanded(
                   child: ListView(
@@ -724,10 +743,16 @@ class UIUtils {
             ),
           ),
         );
+      }
+
+      if (isGrantedPermissionNotification == true) {
+        show();
       } else {
         Permission.notification.request().then((value) {
           debugPrint("roy93~ request value $value");
-          if (value == PermissionStatus.permanentlyDenied) {
+          if (value == PermissionStatus.granted) {
+            show();
+          } else if (value == PermissionStatus.permanentlyDenied) {
             AppSettings.openAppSettings(type: AppSettingsType.notification);
           }
         });
