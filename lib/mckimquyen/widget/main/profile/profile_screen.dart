@@ -249,7 +249,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                     if (_controllerMain.isShowKeyTooltipTheme.value != true)
                                       PulseContainer(
                                         onTapRoot: () {
-                                          debugPrint("roy93~ onTapRoot");
+                                          // debugPrint("onTapRoot");
                                           _controllerMain.setIsShowKeyTooltipTheme();
                                         },
                                         color: Colors.black.withOpacity(0.7),
