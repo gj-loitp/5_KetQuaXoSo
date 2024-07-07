@@ -38,7 +38,7 @@ class SharedPrefsRepository {
   bool isReminderEnabled() {
     final reminderTime = sharedPrefs.getBool(SP_REMINDER_ENABLED_KEY);
 
-    return reminderTime ?? false;
+    return reminderTime ?? true;
   }
 
   Future<void> setReminderEnabled(bool isEnabled) => sharedPrefs.setBool(SP_REMINDER_ENABLED_KEY, isEnabled);

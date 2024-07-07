@@ -111,7 +111,6 @@ class _DailyLocalNotificationsState extends State<DailyLocalNotifications> {
             ),
           );
         }
-
         return const SizedBox.shrink();
         // return const Center(
         //   child: CircularProgressIndicator(),
