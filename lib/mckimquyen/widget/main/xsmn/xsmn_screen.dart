@@ -115,10 +115,11 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                   ),
                   if (_controllerMain.isShowKeyTooltipCalendar.value != true)
                     PulseContainer(
-                      color: Colors.indigo,
+                      color: Colors.black.withOpacity(0.9),
                       onTapRoot: () {
-                        debugPrint("roy93~ onTapRoot");
+                        debugPrint("onTapRoot");
                         _controllerMain.setIsShowKeyTooltipCalendar();
+                        _controllerMain.getIsShowKeyTooltipProvince();
                       },
                       alignment: Alignment.center,
                       child: const Text(
@@ -140,8 +141,8 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 40,
-                height: 40,
+                width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 140,
+                height: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 140,
                 child: Stack(
                   // fit: StackFit.expand,
                   children: [
@@ -160,53 +161,24 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
                         ),
                       ),
                     ),
-                    // Builder(builder: (context) {
-                    //   return InkWell(
-                    //     onTap: _controllerMain.isShowTooltipCity.value
-                    //         ? () {
-                    //             // debugPrint("showRelativeDialog isShowTooltipCity");
-                    //             showRelativeDialog(
-                    //                 context: context,
-                    //                 alignment: Alignment.centerRight,
-                    //                 builder: (context) {
-                    //                   return WillPopScope(
-                    //                     onWillPop: () {
-                    //                       // debugPrint("WillPopScope isShowTooltipCity");
-                    //                       SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
-                    //                       _controllerMain.showTooltipCity(false);
-                    //                       _showTooltipToday();
-                    //                       return Future(() => true);
-                    //                     },
-                    //                     child: Material(
-                    //                       color: Colors.transparent,
-                    //                       child: Container(
-                    //                         decoration: const BoxDecoration(
-                    //                           borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                    //                           color: Colors.white,
-                    //                         ),
-                    //                         padding: const EdgeInsets.all(16),
-                    //                         child: const Text(
-                    //                           'Dò kết qủa theo các tỉnh thành',
-                    //                           style: TextStyle(
-                    //                             fontWeight: FontWeight.w700,
-                    //                             fontSize: 12,
-                    //                             color: Colors.black,
-                    //                           ),
-                    //                           textAlign: TextAlign.center,
-                    //                         ),
-                    //                       ),
-                    //                     ),
-                    //                   );
-                    //                 });
-                    //           }
-                    //         : null,
-                    //     child: Container(
-                    //       width: 1,
-                    //       height: double.infinity,
-                    //       color: Colors.transparent,
-                    //     ),
-                    //   );
-                    // }),
+                    if (_controllerMain.isShowKeyTooltipProvince.value != true)
+                      PulseContainer(
+                        color: Colors.black.withOpacity(0.9),
+                        onTapRoot: () {
+                          debugPrint("roy93~ onTapRoot");
+                          _controllerMain.setIsShowKeyTooltipProvince();
+                        },
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Dò kết qủa theo các tỉnh thành',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
                   ],
                 ),
               ),

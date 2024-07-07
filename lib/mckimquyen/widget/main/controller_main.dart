@@ -51,8 +51,9 @@ class ControllerMain extends BaseController {
   var listTeamQuick = <Team>[].obs;
   final indexBottomBarSoccer = 0.obs;
   var quoteSoccer = "".obs;
-  var isShowKeyTooltipTheme = false.obs;
-  var isShowKeyTooltipCalendar = false.obs;
+  var isShowKeyTooltipTheme = true.obs;
+  var isShowKeyTooltipCalendar = true.obs;
+  var isShowKeyTooltipProvince = true.obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1858,5 +1859,15 @@ class ControllerMain extends BaseController {
   void setIsShowKeyTooltipCalendar() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCalendarXSMN, true);
     isShowKeyTooltipCalendar.value = true;
+  }
+
+  Future<void> getIsShowKeyTooltipProvince() async {
+    isShowKeyTooltipProvince.value =
+        await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipCityXSMN) ?? false;
+  }
+
+  void setIsShowKeyTooltipProvince() {
+    SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipCityXSMN, true);
+    isShowKeyTooltipProvince.value = true;
   }
 }

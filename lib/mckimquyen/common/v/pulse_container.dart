@@ -1,4 +1,3 @@
-import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 
 class PulseContainer extends StatefulWidget {
@@ -28,9 +27,9 @@ class _PulseContainerState extends State<PulseContainer> with SingleTickerProvid
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 1000),
     )..repeat(reverse: true);
-    _animation = Tween<double>(begin: 0.9, end: 1.1).animate(_controller);
+    _animation = Tween<double>(begin: 1.0, end: 1.2).animate(_controller);
   }
 
   @override
@@ -58,16 +57,16 @@ class _PulseContainerState extends State<PulseContainer> with SingleTickerProvid
                   padding: const EdgeInsets.all(16),
                   child: widget.child,
                 ),
-                Container(
-                  alignment: Alignment.topRight,
-                  child: AvatarGlow(
-                    glowColor: widget.color,
-                    child: const Icon(
-                      Icons.clear,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
+                // Container(
+                //   alignment: Alignment.topRight,
+                //   child: AvatarGlow(
+                //     glowColor: widget.color,
+                //     child: const Icon(
+                //       Icons.clear,
+                //       color: Colors.black,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

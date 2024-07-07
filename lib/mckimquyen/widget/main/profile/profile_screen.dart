@@ -251,7 +251,7 @@ class _ProfileScreenState extends BaseStatefulState<ProfileScreen> {
                                           debugPrint("roy93~ onTapRoot");
                                           _controllerMain.setIsShowKeyTooltipTheme();
                                         },
-                                        color: Colors.blue,
+                                        color: Colors.black.withOpacity(0.7),
                                         alignment: Alignment.topCenter,
                                         child: const Text(
                                           'Bạn có thể lựa chọn giao diện tại đây\nChúng tôi khuyến cáo chọn Theme Tối Ưu\nsẽ cho trải nghiệm mượt mà hơn',
