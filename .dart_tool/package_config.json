@@ -746,12 +746,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "relative_dialog",
-      "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/relative_dialog-0.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.18"
-    },
-    {
       "name": "restart_app",
       "rootUri": "file:///Users/loitran/.pub-cache/hosted/pub.dev/restart_app-1.2.1",
       "packageUri": "lib/",
@@ -1130,7 +1124,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-07-08T07:25:49.432393Z",
+  "generated": "2024-07-08T07:28:49.256487Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

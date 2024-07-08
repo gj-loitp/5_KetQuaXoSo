@@ -9,13 +9,6 @@
             </list>
           </value>
         </entry>
-        <entry key="animated_text_kit">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/animated_text_kit-4.2.2/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="ansicolor">
           <value>
             <list>
@@ -877,13 +870,6 @@
             </list>
           </value>
         </entry>
-        <entry key="relative_dialog">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/relative_dialog-0.2.1/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="restart_app">
           <value>
             <list>
@@ -1323,7 +1309,6 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.pub-cache/git/flutter_time_picker_spinner-5aa0bea2d05dd45a1d3bc36a3a021343ffa28284//lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/animated_introduction-1.0.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/animated_text_kit-4.2.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/ansicolor-2.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/app_settings-5.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/applovin_max-3.10.1/lib" />
@@ -1443,7 +1428,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/process-4.2.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/provider-6.1.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/relative_dialog-0.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/restart_app-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.27.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8/lib" />
