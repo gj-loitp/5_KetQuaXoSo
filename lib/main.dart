@@ -20,7 +20,13 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //TODO quan ly ve so
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/slide_countdown -> thoi gian cho den quay so
-//TODO fb analytics https://console.firebase.google.com/u/0/project/com-mckimquyen-kqxs/crashlytics/app/android:com.mckimquyen.kqxs/issues
+//TODO lich van nien https://baomoi.com/tien-ich/lich-van-nien.epi
+//TODO du bao thoi tiet https://baomoi.com/tien-ich/thoi-tiet.epi
+//TODO gia vang https://baomoi.com/tien-ich/gia-vang.epi
+//TODO kqxs bao moi https://baomoi.com/tien-ich/ket-qua-xo-so.epi
+//TODO rss feed https://elfsight.com/rss-feed-widget/html/
+//TODO widget weather https://elfsight.com/weather-widget/html/
+//TODO corona https://elfsight.com/coronavirus-stats-widget/html/
 
 //done mckimquyen
 //ic_launcher
@@ -44,6 +50,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //ad applovin
 //20 tester
 //notification reminder
+//fb analytics https://console.firebase.google.com/u/0/project/com-mckimquyen-kqxs/crashlytics/app/android:com.mckimquyen.kqxs/issues
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
