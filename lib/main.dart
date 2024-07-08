@@ -18,6 +18,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //TODO quan ly ve so
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/slide_countdown -> thoi gian cho den quay so
+//TODO fb analytics
 
 //done mckimquyen
 //ic_launcher

@@ -21,7 +21,7 @@ dependencies:
   avatar_glow: ^3.0.1
   in_app_review: ^2.0.9
   url_launcher: ^6.3.0
-  animated_text_kit: ^4.2.2
+#  animated_text_kit: ^4.2.2
   blur:
   cached_network_image: ^3.3.1
   connection_notifier: ^2.0.1
