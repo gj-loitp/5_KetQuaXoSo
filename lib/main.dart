@@ -27,6 +27,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //TODO rss feed https://elfsight.com/rss-feed-widget/html/
 //TODO widget weather https://elfsight.com/weather-widget/html/
 //TODO corona https://elfsight.com/coronavirus-stats-widget/html/
+//TODO rss 24h https://bongda24h.vn/RSS.html
 
 //done mckimquyen
 //ic_launcher
