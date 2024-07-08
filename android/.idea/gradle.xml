@@ -13,9 +13,12 @@
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/audio_session-0.1.19/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/device_info-2.0.3/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/device_info_plus-10.1.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/firebase_analytics-11.1.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/firebase_core-3.1.1/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/firebase_crashlytics-4.0.2/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_email_sender-6.0.3/android" />
-            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications-17.2.1/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications-17.2.1+1/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.0/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_timezone-1.0.8/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_udid-3.0.0/android" />
