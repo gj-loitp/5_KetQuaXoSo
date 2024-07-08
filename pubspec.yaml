@@ -70,7 +70,7 @@ dependencies:
     git: https://github.com/novas1r1/flutter_time_picker_spinner.git
   flutter_timezone: ^1.0.8
   provider: ^6.1.2
-  timezone: ^0.9.3
+  timezone: ^0.9.4
   app_settings: ^5.1.1
   #end zone daily_local_notification
 
