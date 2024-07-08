@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:applovin_max/applovin_max.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -18,7 +20,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //TODO quan ly ve so
 //TODO scan de do ve so
 //TODO https://pub.dev/packages/slide_countdown -> thoi gian cho den quay so
-//TODO fb analytics
+//TODO fb analytics https://console.firebase.google.com/u/0/project/com-mckimquyen-kqxs/crashlytics/app/android:com.mckimquyen.kqxs/issues
 
 //done mckimquyen
 //ic_launcher
@@ -51,10 +53,21 @@ final navigatorKey = GlobalKey<NavigatorState>();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp();
+  FlutterError.onError = (errorDetails) {
+    FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
+  };
+  // Pass all uncaught asynchronous errors that aren't handled by the Flutter framework to Crashlytics
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
+
   if (Platform.isAndroid) {
     await FlutterDisplayMode.setHighRefreshRate();
   }
-  initializePlugin();
+  await initializePlugin();
   runApp(
     GetMaterialApp(
       enableLog: true,
@@ -90,7 +103,8 @@ Future<void> initializePlugin() async {
       Get.snackbar("Applovin", "initializePlugin success (only show this msg in debug mode)");
     }
   }
-  ControllerMain controllerMain = Get.find();
+  // ControllerMain controllerMain = Get.find();
+  final ControllerMain controllerMain = Get.put(ControllerMain());
   controllerMain.isInitializePluginApplovinFinished.value = true;
 }
 
@@ -99,7 +113,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ControllerMain controllerMain = Get.put(ControllerMain());
+    // final ControllerMain controllerMain = Get.put(ControllerMain());
+    final ControllerMain controllerMain = Get.find();
     controllerMain.timeStartApp.value = DateTime.now().millisecondsSinceEpoch;
     return MaterialApp(
       title: 'KQXS',

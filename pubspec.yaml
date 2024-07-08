@@ -74,6 +74,10 @@ dependencies:
   app_settings: ^5.1.1
   #end zone daily_local_notification
 
+  firebase_core: ^3.1.1
+  firebase_analytics: ^11.1.0
+  firebase_crashlytics: ^4.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "772846252316",
+    "project_id": "com-mckimquyen-kqxs",
+    "storage_bucket": "com-mckimquyen-kqxs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772846252316:android:781929f0090b7d1e190ad9",
+        "android_client_info": {
+          "package_name": "com.mckimquyen.kqxs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArYDtvADYfFDl4OI8h9K7kSVhI7wrU9nY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
