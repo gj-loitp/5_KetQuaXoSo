@@ -14,8 +14,6 @@ import 'mckimquyen/widget/applovin/applovin_screen.dart';
 import 'mckimquyen/widget/main/controller_main.dart';
 import 'mckimquyen/widget/splash/splash_screen.dart';
 
-//TODO firebase
-
 //TODO multi language
 //TODO quan ly ve so
 //TODO scan de do ve so
@@ -52,6 +50,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //20 tester
 //notification reminder
 //fb analytics https://console.firebase.google.com/u/0/project/com-mckimquyen-kqxs/crashlytics/app/android:com.mckimquyen.kqxs/issues
+//firebase
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
