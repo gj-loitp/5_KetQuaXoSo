@@ -8,6 +8,7 @@ import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:slider_button/slider_button.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen(
@@ -23,10 +24,12 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
   // final ControllerMain _controllerMain = Get.find();
+  final WebViewController _webViewController = WebViewController();
 
   @override
   void initState() {
     super.initState();
+    _loadData();
   }
 
   @override
@@ -131,6 +134,49 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
       margin: const EdgeInsets.all(16),
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+      child: WebViewWidget(controller: _webViewController),
     );
+  }
+
+  void _loadData() {
+    var htmlString = ''''
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-dbac16ac-0b02-4d3d-bedc-ccc1f1bf2fca" data-elfsight-app-lazy></div>
+    ''';
+    var htmlWithStyle = """<!DOCTYPE html>
+    <html>
+      <head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+      <body style='"margin: 0; padding: 0;'>
+        <div>
+          $htmlString
+        </div>
+      </body>
+    </html>""";
+
+    _webViewController
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(Colors.transparent)
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            // debugPrint("progress $progress");
+          },
+          onPageStarted: (String url) {
+            // debugPrint("onPageStarted url $url");
+          },
+          onPageFinished: (String url) async {
+            // debugPrint("onPageFinished url $url");
+          },
+          onWebResourceError: (WebResourceError error) {
+            // debugPrint("onPageFinished url $error");
+          },
+          onNavigationRequest: (NavigationRequest request) {
+            // debugPrint("request ${request.url}");
+            return NavigationDecision.prevent;
+          },
+        ),
+      );
+    // debugPrint(">>>>>>>> loadHtmlString htmlWithStyle $htmlWithStyle");
+    _webViewController.loadHtmlString(htmlWithStyle);
   }
 }

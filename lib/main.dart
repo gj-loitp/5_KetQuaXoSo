@@ -23,11 +23,11 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 //TODO gia vang https://baomoi.com/tien-ich/gia-vang.epi
 //TODO kqxs bao moi https://baomoi.com/tien-ich/ket-qua-xo-so.epi
 //TODO rss feed https://elfsight.com/rss-feed-widget/html/
-//TODO widget weather https://elfsight.com/weather-widget/html/
 //TODO corona https://elfsight.com/coronavirus-stats-widget/html/
 //TODO rss 24h https://bongda24h.vn/RSS.html
 
 //done mckimquyen
+//widget weather https://elfsight.com/weather-widget/html/
 //ic_launcher
 //pkg name
 //ad id manifest
