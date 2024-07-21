@@ -10,8 +10,8 @@ import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:slider_button/slider_button.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-//https://dash.elfsight.com/widget/dbac16ac-0b02-4d3d-bedc-ccc1f1bf2fca
-//https://weatherwidget.org/
+// https://sharpweather.com/widgets/b/#sl=slmw=360&sl=slbr=8&sl=slfs=26&c=cbkg=rgb(194,24,91)
+
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen(
     this.from, {
@@ -171,10 +171,7 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
   void _loadData() {
     var htmlString = ''''
     
-<a class="weatherwidget-io" href="https://forecast7.com/en/10d82106d63/ho-chi-minh-city/" data-label_1="HO CHI MINH" data-label_2="WEATHER" data-theme="original" >HO CHI MINH WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+<div id="idc948673ba211a" a='{"t":"b","v":"1.2","lang":"en","locs":[203,202,826,198,3072,196,194,3060,193,3066,3077,3062,201,1117,1878,1451,1027,1453,997],"ssot":"c","sics":"ds","cbkg":"#455A64","cfnt":"#FFFFFF","ceb":"#FFFFFF","cef":"#000000","slmw":400,"slbr":15,"slfs":18,"sfnt":"a"}'><a href="https://sharpweather.com/widgets/">Weather widget html for website by sharpweather.com</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=idc948673ba211a"></script>
 
  ''';
     var htmlWithStyle = """<!DOCTYPE html>
@@ -195,6 +192,7 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
           }
           div {
             width: 100%;
+            justify-content: center;
             text-align: center;
           }
         </style>
