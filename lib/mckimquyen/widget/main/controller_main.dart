@@ -60,6 +60,8 @@ class ControllerMain extends BaseController {
   var isShowKeyTooltipProvince = true.obs;
   var isShowKeyTooltipToday = true.obs;
   var isDismissBottomSheetNotification = false.obs;
+  var isShowWebViewWeather = true.obs;
+  var quoteWeather = "".obs;
 
   void clearOnDispose() {
     Get.delete<ControllerMain>();
@@ -1948,5 +1950,62 @@ class ControllerMain extends BaseController {
       }
       isDismissBottomSheetNotification.value = true;
     });
+  }
+
+  void setIsShowWebViewWeather(bool isShow) {
+    isShowWebViewWeather.value = isShow;
+    final List<String> list = [
+      "Thời tiết có thể làm cho một ngày đẹp hơn, nhưng có thể cũng làm cho nó tồi tệ hơn.",
+      "Dự đoán thời tiết không phải là khoa học chính xác, mà là nghệ thuật tiên đoán.",
+      "Tôi yêu mùa đông vì nó không gây đổ mồ hôi như mùa hè.",
+      "Mùa xuân là khi bạn cảm thấy rằng mùa đông đã đi xa hơn là sự thực.",
+      "Nếu bạn muốn dự đoán thời tiết, hãy nhìn vào bầu trời.",
+      "Thời tiết không thể làm bạn buồn, chỉ có bạn mới có thể làm điều đó.",
+      "Có hai mùa trong năm: mùa mưa và mùa không mưa.",
+      "Nói chuyện với người khác về thời tiết là cách dễ nhất để bắt đầu một cuộc trò chuyện.",
+      "Mỗi mùa có cách riêng của nó để nói lời tạm biệt.",
+      "Mưa làm cho đất đai xanh tươi, nhưng đôi khi nó làm cho chúng ta cảm thấy u sầu.",
+      "Có hai loại người: những người yêu mưa và những người yêu nắng.",
+      "Dự báo thời tiết tốt hơn là không nên tin vào dự đoán.",
+      "Mùa hè là mùa của những cuộc phiêu lưu và mùa đông là mùa của những câu chuyện.",
+      "Thời tiết xấu là cơ hội để thưởng thức một ly cà phê nóng.",
+      "Những ngày mưa là thời điểm tốt để đọc sách và xem phim.",
+      "Thời tiết luôn thay đổi, nhưng tâm trạng của bạn có thể được giữ vững.",
+      "Một ngày nắng là một món quà từ thiên nhiên.",
+      "Mưa không bao giờ làm giảm sự vui vẻ nếu bạn biết cách tận hưởng nó.",
+      "Thời tiết là một trong những chủ đề dễ nhất để bắt đầu một cuộc trò chuyện.",
+      "Có những ngày mà trời không trong xanh, nhưng tâm hồn vẫn sáng lấp lánh.",
+      "Sự thay đổi thời tiết là một phần không thể thiếu trong cuộc sống.",
+      "Thời tiết đẹp là lý do để ra ngoài và tận hưởng cuộc sống.",
+      "Một ngày mưa là cơ hội để khám phá những điều mới mẻ trong sự bình yên.",
+      "Nắng nóng chỉ làm cho một ngày dài hơn và tồi tệ hơn nếu bạn không chuẩn bị.",
+      "Có những lúc mưa là lời nhắc nhở để yêu quý những ngày nắng.",
+      "Mùa hè có thể nắng gắt, nhưng mùa đông có thể lạnh lẽo hơn bạn tưởng.",
+      "Câu chuyện hay nhất thường xảy ra trong những ngày mưa.",
+      "Sự thay đổi thời tiết có thể làm mới cuộc sống của bạn.",
+      "Một chút mưa có thể làm cho ngày của bạn trở nên đặc biệt hơn.",
+      "Thời tiết có thể thay đổi, nhưng cách bạn đối diện với nó là điều quan trọng.",
+      "Khi trời mưa, hãy tìm niềm vui trong việc tạo ra những kỷ niệm đẹp.",
+      "Cảm giác của bạn về thời tiết phụ thuộc vào cách bạn cảm nhận nó.",
+      "Mùa hè mang đến sự tự do, nhưng mùa đông mang đến sự ấm áp của gia đình.",
+      "Thời tiết xấu chỉ là một phần của cuộc sống, đừng để nó làm bạn cảm thấy tồi tệ.",
+      "Mỗi mùa có một cách để làm bạn cảm thấy sống động.",
+      "Thời tiết có thể khiến bạn phải thay đổi kế hoạch, nhưng không thể thay đổi cách bạn cảm nhận.",
+      "Một ngày trời mưa là cơ hội để cảm nhận sự bình yên của thiên nhiên.",
+      "Mùa đông có thể lạnh lẽo, nhưng trái tim bạn luôn có thể ấm áp.",
+      "Hãy luôn sẵn sàng cho bất kỳ thời tiết nào, bởi vì cuộc sống không thể đoán trước.",
+      "Một ngày mưa là cơ hội để nghỉ ngơi và thư giãn.",
+      "Nắng nóng có thể làm bạn cảm thấy không thoải mái, nhưng nó cũng có thể là một trải nghiệm mới.",
+      "Sự thay đổi thời tiết có thể làm cho một ngày trở nên đặc biệt hơn.",
+      "Mùa xuân là thời điểm lý tưởng để bắt đầu những điều mới.",
+      "Có những ngày mà trời không mưa, nhưng tâm trạng của bạn vẫn có thể có mưa.",
+      "Một ngày mưa là một cơ hội để tận hưởng sự yên tĩnh và bình yên.",
+      "Thời tiết xấu không thể làm giảm niềm vui của bạn nếu bạn biết cách tận hưởng cuộc sống.",
+      "Mùa hè mang đến những kỷ niệm vui vẻ, còn mùa đông mang đến những khoảnh khắc ấm áp.",
+      "Thời tiết đẹp nhất là thời tiết khi bạn cảm thấy hạnh phúc.",
+      "Mùa hè và mùa đông đều có sự quyến rũ riêng của chúng.",
+      "Khi trời mưa, hãy nhớ rằng những ngày nắng đang đến gần.",
+    ];
+    quoteWeather.value = list[Random().nextInt(list.length)];
   }
 }

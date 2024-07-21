@@ -7,6 +7,7 @@ import 'package:ketquaxoso/mckimquyen/common/const/hero_constants.dart';
 import 'package:ketquaxoso/mckimquyen/core/base_stateful_state.dart';
 import 'package:ketquaxoso/mckimquyen/util/ui_utils.dart';
 import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/controller_main.dart';
 import 'package:slider_button/slider_button.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -25,7 +26,7 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
-  // final ControllerMain _controllerMain = Get.find();
+  final ControllerMain _controllerMain = Get.find();
   final WebViewController _webViewController = WebViewController();
 
   @override
@@ -164,11 +165,60 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
       alignment: Alignment.topCenter,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-      child: WebViewWidget(controller: _webViewController),
+      child: Obx(() {
+        var visible = _controllerMain.isShowWebViewWeather.value;
+        if (visible) {
+          return WebViewWidget(controller: _webViewController);
+        } else {
+          return _buildLoadingView();
+        }
+      }),
+    );
+  }
+
+  Widget _buildLoadingView() {
+    var quote = _controllerMain.quoteWeather.value;
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/images/anim_1.gif",
+            // width: 100,
+            height: 180,
+            fit: BoxFit.cover,
+          ),
+          // const SizedBox(height: 16),
+          Text(
+            quote,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          Container(
+            padding: const EdgeInsets.all(32),
+            width: 124,
+            height: 124,
+            child: const CircularProgressIndicator(
+              color: Colors.white,
+              strokeWidth: 6.0,
+              strokeCap: StrokeCap.round,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
   void _loadData() {
+    _controllerMain.setIsShowWebViewWeather(false);
     var htmlString = ''''
     
 <div id="idc948673ba211a" a='{"t":"b","v":"1.2","lang":"en","locs":[203,202,826,198,3072,196,194,3060,193,3066,3077,3062,201,1117,1878],"ssot":"c","sics":"ds","cbkg":"#455A64","cfnt":"#FFFFFF","ceb":"#FFFFFF","cef":"#000000","slmw":400,"slbr":15,"slfs":18,"sfnt":"a"}'><a href="https://sharpweather.com/widgets/">Weather widget html for website by sharpweather.com</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=idc948673ba211a"></script>
@@ -216,6 +266,8 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
           },
           onPageFinished: (String url) async {
             debugPrint("roy93~ onPageFinished url $url");
+            await Future.delayed(const Duration(milliseconds: 1000));
+            _controllerMain.setIsShowWebViewWeather(true);
           },
           onWebResourceError: (WebResourceError error) {
             // debugPrint("onPageFinished url $error");
