@@ -10,6 +10,7 @@ import 'package:ketquaxoso/mckimquyen/util/url_launcher_utils.dart';
 import 'package:slider_button/slider_button.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+//https://dash.elfsight.com/widget/dbac16ac-0b02-4d3d-bedc-ccc1f1bf2fca
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen(
     this.from, {
@@ -117,6 +118,33 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
                       ],
                     ),
                   ),
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+                    width: double.infinity,
+                    color: Colors.white,
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          "assets/images/ic_beta.png",
+                          width: 25,
+                          height: 25,
+                          fit: BoxFit.contain,
+                        ),
+                        const SizedBox(width: 4),
+                        const Expanded(
+                          child: Text(
+                            "Lưu ý: Tính đăng đang thử nghiệm, có thể gây lỗi",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.redAccent,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   Expanded(
                     child: _buildBody(),
                   ),
@@ -131,21 +159,39 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
 
   Widget _buildBody() {
     return Container(
-      margin: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(2),
+      alignment: Alignment.topCenter,
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
       child: WebViewWidget(controller: _webViewController),
     );
   }
 
   void _loadData() {
     var htmlString = ''''
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-dbac16ac-0b02-4d3d-bedc-ccc1f1bf2fca" data-elfsight-app-lazy></div>
+<div id="ww_919bd78628997" v='1.3' loc='auto' a='{"t":"responsive","lang":"vi","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"7"}'><a href="https://weatherwidget.org/" id="ww_919bd78628997_u" target="_blank">Weather Widget</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_919bd78628997"></script>
     ''';
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
       <head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+      <style>
+          body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+          }
+          body {
+            box-sizing: border-box;
+          }
+          div {
+            width: 100%;
+            text-align: center;
+          }
+        </style>
       <body style='"margin: 0; padding: 0;'>
         <div>
           $htmlString
@@ -165,7 +211,7 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
             // debugPrint("onPageStarted url $url");
           },
           onPageFinished: (String url) async {
-            // debugPrint("onPageFinished url $url");
+            debugPrint("roy93~ onPageFinished url $url");
           },
           onWebResourceError: (WebResourceError error) {
             // debugPrint("onPageFinished url $error");
