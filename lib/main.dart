@@ -107,8 +107,7 @@ Future<void> initializePlugin() async {
   } else {
     debugPrint("initializePlugin success");
   }
-  final ControllerMain controllerMain = Get.put(ControllerMain());
-  controllerMain.isInitializePluginApplovinFinished.value = true;
+  Get.put(ControllerMain());
 }
 
 class MyApp extends StatelessWidget {
@@ -116,8 +115,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ControllerMain controllerMain = Get.find();
-    controllerMain.timeStartApp.value = DateTime.now().millisecondsSinceEpoch;
+    // final ControllerMain controllerMain = Get.find();
+    // controllerMain.timeStartApp.value = DateTime.now().millisecondsSinceEpoch;
     return MaterialApp(
       title: 'KQXS',
       theme: ThemeData(

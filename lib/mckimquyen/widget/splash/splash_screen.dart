@@ -60,7 +60,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
 
   Future<void> _showInterAd() async {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
-    // debugPrint('_showInterAd isReady $isReady');
+    debugPrint('roy93~ _showInterAd isReady $isReady');
     if (isReady) {
       AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
@@ -72,17 +72,13 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _controllerMain.isInitializePluginApplovinFinished.listen((isInitializePluginApplovinFinished) {
-      // debugPrint("initState isInitializePluginApplovinFinished $isInitializePluginApplovinFinished");
-      if (isInitializePluginApplovinFinished) {
-        var timeStartApp = _controllerMain.timeStartApp.value;
-        var timeNow = DateTime.now().millisecondsSinceEpoch;
-        // debugPrint("initializePlugin timeStartApp $timeStartApp");
-        // debugPrint("initializePlugin timeNow $timeNow");
-        // debugPrint("initializePlugin duration ${timeNow - timeStartApp}");
-        _initializeInterstitialAds();
-      }
-    });
+    debugPrint("roy93~ initState");
+    // var timeStartApp = _controllerMain.timeStartApp.value;
+    // var timeNow = DateTime.now().millisecondsSinceEpoch;
+    // debugPrint("roy93~ initializePlugin timeStartApp $timeStartApp");
+    // debugPrint("roy93~ initializePlugin timeNow $timeNow");
+    // debugPrint("roy93~ initializePlugin duration ${timeNow - timeStartApp}");
+    _initializeInterstitialAds();
   }
 
   @override
@@ -266,12 +262,12 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
   }
 
   Future<void> _goToMainScreen() async {
-    _showInterAd();
     var keyIsShowedIntroduction = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedIntroduction);
     if (keyIsShowedIntroduction == true) {
       Get.off(() => const MainScreen());
     } else {
       Get.off(() => IntroductionScreen(SplashScreen.screenName));
     }
+    _showInterAd();
   }
 }
