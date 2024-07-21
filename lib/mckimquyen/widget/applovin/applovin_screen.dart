@@ -51,7 +51,7 @@ String? deviceId;
 
 var _isInitialized = false;
 var _interstitialLoadState = AdLoadState.notLoaded;
-var _interstitialRetryAttempt = 0;
+// var _interstitialRetryAttempt = 0;
 var _isProgrammaticBannerCreated = false;
 var _isProgrammaticBannerShowing = false;
 var _isWidgetBannerShowing = false;
@@ -270,21 +270,21 @@ Incomplete, if not for you.""",
         logStatus('Interstitial ad loaded from ${ad.networkName}');
 
         // Reset retry attempt
-        _interstitialRetryAttempt = 0;
+        // _interstitialRetryAttempt = 0;
       },
       onAdLoadFailedCallback: (adUnitId, error) {
         _interstitialLoadState = AdLoadState.notLoaded;
 
         // Interstitial ad failed to load
         // We recommend retrying with exponentially higher delays up to a maximum delay (in this case 64 seconds)
-        _interstitialRetryAttempt = _interstitialRetryAttempt + 1;
+        // _interstitialRetryAttempt = _interstitialRetryAttempt + 1;
 
-        int retryDelay = pow(2, min(6, _interstitialRetryAttempt)).toInt();
-        logStatus('Interstitial ad failed to load with code ${error.code} - retrying in ${retryDelay}s');
+        // int retryDelay = pow(2, min(6, _interstitialRetryAttempt)).toInt();
+        // logStatus('Interstitial ad failed to load with code ${error.code} - retrying in ${retryDelay}s');
 
-        Future.delayed(Duration(milliseconds: retryDelay * 1000), () {
-          AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
-        });
+        // Future.delayed(Duration(milliseconds: retryDelay * 1000), () {
+        //   AppLovinMAX.loadInterstitial(getInterstitialAdUnitId());
+        // });
       },
       onAdDisplayedCallback: (ad) {
         logStatus('Interstitial ad displayed');
