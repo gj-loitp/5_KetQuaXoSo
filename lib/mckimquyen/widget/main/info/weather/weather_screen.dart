@@ -171,7 +171,7 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
   void _loadData() {
     var htmlString = ''''
     
-<div id="idc948673ba211a" a='{"t":"b","v":"1.2","lang":"en","locs":[203,202,826,198,3072,196,194,3060,193,3066,3077,3062,201,1117,1878,1451,1027,1453,997],"ssot":"c","sics":"ds","cbkg":"#455A64","cfnt":"#FFFFFF","ceb":"#FFFFFF","cef":"#000000","slmw":400,"slbr":15,"slfs":18,"sfnt":"a"}'><a href="https://sharpweather.com/widgets/">Weather widget html for website by sharpweather.com</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=idc948673ba211a"></script>
+<div id="idc948673ba211a" a='{"t":"b","v":"1.2","lang":"en","locs":[203,202,826,198,3072,196,194,3060,193,3066,3077,3062,201,1117,1878],"ssot":"c","sics":"ds","cbkg":"#455A64","cfnt":"#FFFFFF","ceb":"#FFFFFF","cef":"#000000","slmw":400,"slbr":15,"slfs":18,"sfnt":"a"}'><a href="https://sharpweather.com/widgets/">Weather widget html for website by sharpweather.com</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=idc948673ba211a"></script>
 
  ''';
     var htmlWithStyle = """<!DOCTYPE html>
