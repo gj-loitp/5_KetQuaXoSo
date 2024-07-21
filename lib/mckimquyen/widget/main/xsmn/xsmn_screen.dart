@@ -92,183 +92,191 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
   Widget _buildCalendar() {
     var listWidget = <Widget>[];
-    listWidget.add(
-      Container(
-        color: Colors.transparent,
-        alignment: Alignment.centerRight,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Container(
-              alignment: Alignment.centerRight,
-              color: Colors.transparent,
-              width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 200,
-              height: 40,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Visibility(
-                    visible: _controllerMain.isShowKeyTooltipProvince.value != true,
-                    child: Expanded(
-                      child: PulseContainer(
-                        color: Colors.blueAccent.withOpacity(0.9),
-                        onTapRoot: () {
-                          // debugPrint("onTapRoot");
-                          _controllerMain.setIsShowKeyTooltipProvince();
-                          _controllerMain.getIsShowKeyTooltipToday();
-                        },
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Dò theo tỉnh thành',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 40,
-                    height: 40,
-                    color: Colors.transparent,
-                    child: Hero(
-                      tag: "${XSMNScreen.path}${HeroConstants.appBarLeftIcon}",
-                      child: MaterialButton(
-                        onPressed: () {
-                          Get.to(() => const ProvinceListScreen(XSMNScreen.path));
-                        },
-                        color: Colors.blueAccent,
-                        padding: const EdgeInsets.all(0),
-                        shape: const CircleBorder(),
-                        child: const Icon(
-                          Icons.location_city,
+    var widgetLeft = Container(
+      color: Colors.transparent,
+      alignment: Alignment.centerRight,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Container(
+            alignment: Alignment.centerRight,
+            color: Colors.transparent,
+            width: _controllerMain.isShowKeyTooltipProvince.value ? 40 : 200,
+            height: 40,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Visibility(
+                  visible: _controllerMain.isShowKeyTooltipProvince.value != true,
+                  child: Expanded(
+                    child: PulseContainer(
+                      color: Colors.blueAccent.withOpacity(0.9),
+                      onTapRoot: () {
+                        // debugPrint("onTapRoot");
+                        _controllerMain.setIsShowKeyTooltipProvince();
+                        _controllerMain.getIsShowKeyTooltipToday();
+                      },
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Dò theo tỉnh thành',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
                           color: Colors.white,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 2),
-            Container(
-              alignment: Alignment.centerRight,
-              color: Colors.transparent,
-              width: _controllerMain.isShowKeyTooltipToday.value ? 40 : 200,
-              height: 40,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Expanded(
-                    child: Visibility(
-                      visible: _controllerMain.isShowKeyTooltipToday.value != true,
-                      child: PulseContainer(
-                        color: Colors.pink.withOpacity(0.9),
-                        onTapRoot: () {
-                          // debugPrint("onTapRoot");
-                          _controllerMain.setIsShowKeyTooltipToday();
-                        },
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'Kết qủa hôm nay',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 40,
-                    height: 40,
-                    color: Colors.transparent,
+                ),
+                Container(
+                  width: 40,
+                  height: 40,
+                  color: Colors.transparent,
+                  child: Hero(
+                    tag: "${XSMNScreen.path}${HeroConstants.appBarLeftIcon}",
                     child: MaterialButton(
                       onPressed: () {
-                        _selectDay(DateTime.now(), false);
-                        showSnackBarFull(
-                          StringConstants.warning,
-                          "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
-                        );
+                        Get.to(() => const ProvinceListScreen(XSMNScreen.path));
                       },
-                      color: Colors.pink,
+                      color: Colors.blueAccent,
                       padding: const EdgeInsets.all(0),
                       shape: const CircleBorder(),
                       child: const Icon(
-                        Icons.today,
+                        Icons.location_city,
                         color: Colors.white,
                       ),
                     ),
                   ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-    listWidget.add(
-      Container(
-        margin: const EdgeInsets.only(right: 42),
-        color: Colors.transparent,
-        height: double.infinity,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            CalendarTimeline(
-              shrink: false,
-              showYears: false,
-              initialDate: _controllerMain.xsmnSelectedDateTime.value,
-              firstDate: DateTime.now().subtract(const Duration(days: 365)),
-              lastDate: DateTime.now().add(const Duration(days: 365)),
-              onDateSelected: (date) {
-                _selectDay(date, false);
-              },
-              leftMargin: 0,
-              monthColor: Colors.black,
-              dayColor: Colors.black,
-              activeDayColor: Colors.white,
-              activeBackgroundDayColor: ColorConstants.appColor,
-              dotsColor: Colors.white,
-              // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
-              locale: 'vi',
-            ),
-            if (_controllerMain.isShowKeyTooltipCalendar.value != true)
-              PulseContainer(
-                color: Colors.black.withOpacity(0.9),
-                onTapRoot: () {
-                  debugPrint("onTapRoot");
-                  _controllerMain.setIsShowKeyTooltipCalendar();
-                  _controllerMain.getIsShowKeyTooltipProvince();
-                },
-                alignment: Alignment.center,
-                child: const Text(
-                  'Bạn có thể lựa chọn ngày tháng để tra cứu\nkết quả xổ số bằng cách nhấn vào đây',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
                 ),
-              ),
-          ],
-        ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 2),
+          Container(
+            alignment: Alignment.centerRight,
+            color: Colors.transparent,
+            width: _controllerMain.isShowKeyTooltipToday.value ? 40 : 200,
+            height: 40,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Expanded(
+                  child: Visibility(
+                    visible: _controllerMain.isShowKeyTooltipToday.value != true,
+                    child: PulseContainer(
+                      color: Colors.pink.withOpacity(0.9),
+                      onTapRoot: () {
+                        // debugPrint("onTapRoot");
+                        _controllerMain.setIsShowKeyTooltipToday();
+                      },
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Kết qủa hôm nay',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 40,
+                  height: 40,
+                  color: Colors.transparent,
+                  child: MaterialButton(
+                    onPressed: () {
+                      _selectDay(DateTime.now(), false);
+                      showSnackBarFull(
+                        StringConstants.warning,
+                        "Đang xem kết quả của ngày hôm nay\n${_controllerMain.getSelectedDayInStringXSMB()}",
+                      );
+                    },
+                    color: Colors.pink,
+                    padding: const EdgeInsets.all(0),
+                    shape: const CircleBorder(),
+                    child: const Icon(
+                      Icons.today,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
+    var widgetRight = Container(
+      margin: const EdgeInsets.only(right: 42),
+      color: Colors.transparent,
+      height: double.infinity,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          CalendarTimeline(
+            shrink: false,
+            showYears: false,
+            initialDate: _controllerMain.xsmnSelectedDateTime.value,
+            firstDate: DateTime.now().subtract(const Duration(days: 365)),
+            lastDate: DateTime.now().add(const Duration(days: 365)),
+            onDateSelected: (date) {
+              // debugPrint("onDateSelected date $date");
+              _selectDay(date, false);
+            },
+            leftMargin: 0,
+            monthColor: Colors.black,
+            dayColor: Colors.black,
+            activeDayColor: Colors.white,
+            activeBackgroundDayColor: ColorConstants.appColor,
+            dotsColor: Colors.white,
+            // selectableDayPredicate: (date) => date.millisecond < DateTime.now().millisecond,
+            locale: 'vi',
+          ),
+          if (_controllerMain.isShowKeyTooltipCalendar.value != true)
+            PulseContainer(
+              color: Colors.black.withOpacity(0.9),
+              onTapRoot: () {
+                // debugPrint("PulseContainer onTapRoot");
+                _controllerMain.setIsShowKeyTooltipCalendar();
+                _controllerMain.getIsShowKeyTooltipProvince();
+              },
+              alignment: Alignment.center,
+              child: const Text(
+                'Bạn có thể lựa chọn ngày tháng để tra cứu\nkết quả xổ số bằng cách nhấn vào đây',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+        ],
+      ),
+    );
+    listWidget.add(widgetLeft);
+    listWidget.add(widgetRight);
     var isShowKeyTooltipCalendar = _controllerMain.isShowKeyTooltipCalendar.value;
-    // debugPrint("isShowKeyTooltipCalendar $isShowKeyTooltipCalendar");
+    var isShowKeyTooltipProvince = _controllerMain.isShowKeyTooltipProvince.value;
+    var isShowKeyTooltipToday = _controllerMain.isShowKeyTooltipToday.value;
+    // debugPrint("_controllerMain isShowKey... $isShowKeyTooltipCalendar, $isShowKeyTooltipProvince, $isShowKeyTooltipToday");
+
     if (isShowKeyTooltipCalendar) {
-      listWidget = listWidget.reversed.toList();
+      // listWidget = listWidget.reversed.toList();
     }
+    if (!isShowKeyTooltipProvince || !isShowKeyTooltipToday) {
+      listWidget.clear();
+      listWidget.add(widgetRight);
+      listWidget.add(widgetLeft);
+    }
+
     return Container(
       color: Colors.white.withOpacity(0.9),
       width: double.infinity,
@@ -951,15 +959,15 @@ class _XSMNScreenState extends BaseStatefulState<XSMNScreen> {
 
     var value = await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyIsShowedDialogHello);
     if (value == true) {
-      debugPrint("roy93~ do not show dialog hello again");
+      debugPrint("do not show dialog hello again");
     } else {
       var timestampPast =
           await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification) ?? 0;
-      debugPrint("roy93~ timestampPast $timestampPast");
+      debugPrint("timestampPast $timestampPast");
       var timestampNow = DateTime.now().millisecondsSinceEpoch;
-      debugPrint("roy93~ timestampNow $timestampNow");
+      debugPrint("timestampNow $timestampNow");
       var diff = timestampNow - timestampPast;
-      debugPrint("roy93~ diff $diff");
+      debugPrint("diff $diff");
       if (diff > 24 * 60 * 60 * 1000) {
         showPopup();
       }

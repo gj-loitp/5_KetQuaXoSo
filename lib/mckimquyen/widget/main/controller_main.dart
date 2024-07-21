@@ -1889,7 +1889,7 @@ class ControllerMain extends BaseController {
     isShowKeyTooltipToday.value =
         await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyTooltipTodayXSMN) ?? false;
     if (isShowKeyTooltipToday.value == true) {
-      debugPrint("roy93~ getIsShowKeyTooltipToday");
+      // debugPrint("getIsShowKeyTooltipToday");
       _showBottomSheetNotification();
     }
   }
@@ -1897,30 +1897,30 @@ class ControllerMain extends BaseController {
   void setIsShowKeyTooltipToday() {
     SharedPreferencesUtil.setBool(SharedPreferencesUtil.keyTooltipTodayXSMN, true);
     isShowKeyTooltipToday.value = true;
-    debugPrint("roy93~ setIsShowKeyTooltipToday");
+    // debugPrint("setIsShowKeyTooltipToday");
     _showBottomSheetNotification();
   }
 
   void _showBottomSheetNotification() {
     Permission.notification.isGranted.then((isGrantedPermissionNotification) async {
-      debugPrint("roy93~ _showBottomSheetNotification $isGrantedPermissionNotification");
+      debugPrint("_showBottomSheetNotification $isGrantedPermissionNotification");
       if (isGrantedPermissionNotification == true) {
         if (Platform.isAndroid) {
           DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
           AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
           int sdkInt = androidInfo.version.sdkInt;
-          debugPrint("roy93~ sdkInt $sdkInt");
+          debugPrint("sdkInt $sdkInt");
           if (sdkInt >= 33) {
             isDismissBottomSheetNotification.value = true;
           } else {
             var keyHasConfigNotificationForAndroidBelow33 =
                 await SharedPreferencesUtil.getBool(SharedPreferencesUtil.keyHasConfigNotificationForAndroidBelow33);
-            debugPrint("roy93~ keyHasConfigNotificationForAndroidBelow33 $keyHasConfigNotificationForAndroidBelow33");
+            // debugPrint("keyHasConfigNotificationForAndroidBelow33 $keyHasConfigNotificationForAndroidBelow33");
             if (keyHasConfigNotificationForAndroidBelow33 == true) {
-              debugPrint("roy93~ keyHasConfigNotificationForAndroidBelow33 == true");
+              // debugPrint("keyHasConfigNotificationForAndroidBelow33 == true");
               isDismissBottomSheetNotification.value = true;
             } else {
-              debugPrint("roy93~ keyHasConfigNotificationForAndroidBelow33 != true");
+              // debugPrint("keyHasConfigNotificationForAndroidBelow33 != true");
               await SharedPreferencesUtil.setBool(
                   SharedPreferencesUtil.keyHasConfigNotificationForAndroidBelow33, true);
               _checkLogicNotification();
@@ -1937,16 +1937,16 @@ class ControllerMain extends BaseController {
 
   void _checkLogicNotification() {
     UIUtils.showBottomSheetNotification(() async {
-      debugPrint("roy93~ showBottomSheetNotification onDismiss");
+      // debugPrint("showBottomSheetNotification onDismiss");
       var timestampPast =
           await SharedPreferencesUtil.getInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification) ?? 0;
-      debugPrint("roy93~ _showBottomSheetNotification timestampPast $timestampPast");
+      // debugPrint("_showBottomSheetNotification timestampPast $timestampPast");
       if (timestampPast == 0) {
         var timestampNow = DateTime.now().millisecondsSinceEpoch;
-        debugPrint("roy93~ save timestampNow $timestampNow");
+        // debugPrint("save timestampNow $timestampNow");
         SharedPreferencesUtil.setInt(SharedPreferencesUtil.keyTimestampDismissBottomSheetNotification, timestampNow);
       } else {
-        debugPrint("roy93~ !save");
+        debugPrint("!save");
       }
       isDismissBottomSheetNotification.value = true;
     });

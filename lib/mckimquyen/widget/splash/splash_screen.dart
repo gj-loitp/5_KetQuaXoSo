@@ -60,7 +60,7 @@ class _SplashScreenState extends BaseStatefulState<SplashScreen> {
 
   Future<void> _showInterAd() async {
     bool isReady = (await AppLovinMAX.isInterstitialReady(getInterstitialAdUnitId())) ?? false;
-    debugPrint('roy93~ _showInterAd isReady $isReady');
+    // debugPrint('_showInterAd isReady $isReady');
     if (isReady) {
       AppLovinMAX.showInterstitial(getInterstitialAdUnitId());
     } else {
