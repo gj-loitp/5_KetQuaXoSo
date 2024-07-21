@@ -218,14 +218,21 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "$tag7${HeroConstants.appBarLeftIcon}",
           "$tag7${HeroConstants.appBarTitle}",
         ),
-        _buildViewItem(
-          "Dự báo\nthời tiết",
-          "assets/images/ic_weather.png",
-          () {
-            Get.to(() => WeatherScreen(tag8));
-          },
-          "$tag8${HeroConstants.appBarLeftIcon}",
-          "$tag8${HeroConstants.appBarTitle}",
+        ClipRect(
+          child: Banner(
+            message: "Beta",
+            location: BannerLocation.topEnd,
+            color: Colors.red,
+            child: _buildViewItem(
+              "Dự báo\nthời tiết",
+              "assets/images/ic_weather.png",
+              () {
+                Get.to(() => WeatherScreen(tag8));
+              },
+              "$tag8${HeroConstants.appBarLeftIcon}",
+              "$tag8${HeroConstants.appBarTitle}",
+            ),
+          ),
         ),
         Opacity(
           opacity: 0,

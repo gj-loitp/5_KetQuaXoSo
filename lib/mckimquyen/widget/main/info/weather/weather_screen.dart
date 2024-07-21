@@ -93,7 +93,7 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
                             child: const Material(
                               color: Colors.transparent,
                               child: Text(
-                                "Cộng đồng test app",
+                                "Dự báo thời tiết",
                                 style: TextStyle(
                                   fontWeight: FontWeight.w900,
                                   color: Colors.white,

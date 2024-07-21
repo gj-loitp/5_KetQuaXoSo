@@ -14,7 +14,7 @@ class StringConstants {
   static const String URL_IMG_6 = "https://live.staticflickr.com/8277/28953938513_9ea7e4a4e5_b.jpg";
   static const String URL_IMG_7 = "https://live.staticflickr.com/5542/30333782080_ef19d1b037_b.jpg";
 
-  static const String kqApiXoso = "https://xoso.mobi/embedded";
+  static const String kqApiXoso = "https://xosothantai.mobi/embedded";
   static const String kqMienNam = "$kqApiXoso/kq-miennam";
   static const String kqMienTrung = "$kqApiXoso/kq-mientrung";
   static const String kqMienBac = "$kqApiXoso/kq-mienbac";

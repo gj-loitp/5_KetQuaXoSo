@@ -136,27 +136,34 @@ class _VietlotScreenState extends BaseStatefulState<VietlotScreen> {
                                     : Colors.white.withOpacity(0.5),
                                 borderRadius: BorderRadius.circular(16),
                               ),
-                              child: Stack(
-                                children: [
-                                  Opacity(
-                                    opacity: _controllerMain.isSettingOnResultVietlotMax3d.value ? 1 : 0.5,
-                                    child: Image.asset(
-                                      "assets/images/ic_max.png",
-                                      width: double.infinity,
-                                      fit: BoxFit.contain,
-                                    ),
+                              child: ClipRect(
+                                child: Banner(
+                                  message: "Beta",
+                                  location: BannerLocation.topEnd,
+                                  color: Colors.red,
+                                  child: Stack(
+                                    children: [
+                                      Opacity(
+                                        opacity: _controllerMain.isSettingOnResultVietlotMax3d.value ? 1 : 0.5,
+                                        child: Image.asset(
+                                          "assets/images/ic_max.png",
+                                          width: double.infinity,
+                                          fit: BoxFit.contain,
+                                        ),
+                                      ),
+                                      // Container(
+                                      //   padding: const EdgeInsets.only(right: 8),
+                                      //   alignment: Alignment.centerRight,
+                                      //   child: Image.asset(
+                                      //     "assets/images/ic_beta.png",
+                                      //     width: 50,
+                                      //     height: 50,
+                                      //     fit: BoxFit.contain,
+                                      //   ),
+                                      // ),
+                                    ],
                                   ),
-                                  Container(
-                                    padding: const EdgeInsets.only(right: 8),
-                                    alignment: Alignment.centerRight,
-                                    child: Image.asset(
-                                      "assets/images/ic_beta.png",
-                                      width: 50,
-                                      height: 50,
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
                           ),
