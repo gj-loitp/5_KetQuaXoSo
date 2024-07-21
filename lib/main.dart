@@ -54,7 +54,7 @@ import 'mckimquyen/widget/splash/splash_screen.dart';
 
 //ref, documents
 //https://baomoi.com/tien-ich/ket-qua-vietlott-mega645.epi
-//https://xoso.mobi/tin-tuc/cach-chen-ma-code-nhung-ket-qua-truc-tiep-xo-so-dua-vao-website-blog-n7417.html#ma_code_nhung_ket_qua_xo_so_truc_tiep_cua_vietlott_theo_ngay
+//https://xosothantai.mobi/tin-tuc/cach-chen-ma-code-nhung-ket-qua-truc-tiep-xo-so-dua-vao-website-blog-n7417.html#ma_code_nhung_ket_qua_xo_so_truc_tiep_cua_vietlott_theo_ngay
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
