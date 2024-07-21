@@ -116,6 +116,7 @@ class _ProvinceListScreenState extends BaseStatefulState<ProvinceListScreen> {
                             child: MaterialButton(
                               onPressed: () {
                                 Get.back();
+                                // Navigator.pop(context);
                               },
                               color: Colors.white,
                               padding: const EdgeInsets.all(0),

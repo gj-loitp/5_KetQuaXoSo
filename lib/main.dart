@@ -106,11 +106,7 @@ Future<void> initializePlugin() async {
     debugPrint("initializePlugin !success");
   } else {
     debugPrint("initializePlugin success");
-    if (kDebugMode) {
-      Get.snackbar("Applovin", "initializePlugin success (only show this msg in debug mode)");
-    }
   }
-  // ControllerMain controllerMain = Get.find();
   final ControllerMain controllerMain = Get.put(ControllerMain());
   controllerMain.isInitializePluginApplovinFinished.value = true;
 }
@@ -120,7 +116,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final ControllerMain controllerMain = Get.put(ControllerMain());
     final ControllerMain controllerMain = Get.find();
     controllerMain.timeStartApp.value = DateTime.now().millisecondsSinceEpoch;
     return MaterialApp(

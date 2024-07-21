@@ -11,6 +11,7 @@ import 'package:ketquaxoso/mckimquyen/widget/applovin/applovin_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/history/history_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/soccer/soccer_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/info/testApp/test_app_screen.dart';
+import 'package:ketquaxoso/mckimquyen/widget/main/info/weather/weather_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/main/province/province_list_screen.dart';
 import 'package:ketquaxoso/mckimquyen/widget/setting/setting_screen.dart';
 
@@ -217,16 +218,25 @@ class _InfoScreenState extends BaseStatefulState<InfoScreen> {
           "$tag7${HeroConstants.appBarLeftIcon}",
           "$tag7${HeroConstants.appBarTitle}",
         ),
-        // _buildViewItem(
-        //   "",
-        //   "assets/images/ic_support.png",
-        //   () {},
-        // ),
-        // _buildViewItem(
-        //   "",
-        //   "assets/images/ic_settings.png",
-        //   () {},
-        // ),
+        _buildViewItem(
+          "Dự báo\nthời tiết",
+          "assets/images/ic_weather.png",
+          () {
+            Get.to(() => WeatherScreen(tag8));
+          },
+          "$tag8${HeroConstants.appBarLeftIcon}",
+          "$tag8${HeroConstants.appBarTitle}",
+        ),
+        Opacity(
+          opacity: 0,
+          child: _buildViewItem(
+            "",
+            "assets/images/ic_settings.png",
+            () {},
+            "$tag9${HeroConstants.appBarLeftIcon}",
+            "$tag9${HeroConstants.appBarTitle}",
+          ),
+        ),
       ],
     );
   }
