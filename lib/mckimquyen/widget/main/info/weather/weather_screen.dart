@@ -11,6 +11,7 @@ import 'package:slider_button/slider_button.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 //https://dash.elfsight.com/widget/dbac16ac-0b02-4d3d-bedc-ccc1f1bf2fca
+//https://weatherwidget.org/
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen(
     this.from, {
@@ -169,8 +170,13 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
 
   void _loadData() {
     var htmlString = ''''
-<div id="ww_919bd78628997" v='1.3' loc='auto' a='{"t":"responsive","lang":"vi","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"7"}'><a href="https://weatherwidget.org/" id="ww_919bd78628997_u" target="_blank">Weather Widget</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_919bd78628997"></script>
-    ''';
+    
+<a class="weatherwidget-io" href="https://forecast7.com/en/10d82106d63/ho-chi-minh-city/" data-label_1="HO CHI MINH" data-label_2="WEATHER" data-theme="original" >HO CHI MINH WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+ ''';
     var htmlWithStyle = """<!DOCTYPE html>
     <html>
       <head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
