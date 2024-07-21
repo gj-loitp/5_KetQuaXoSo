@@ -43,117 +43,123 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        color: ColorConstants.bkg,
-        child: Stack(
+    return WillPopScope(
+      onWillPop: () async {
+        _onBackPress();
+        return true;
+      },
+      child: Scaffold(
+        body: Container(
           alignment: Alignment.center,
-          children: [
-            Image.asset(
-              "assets/images/bkg_3.jpg",
-              height: double.infinity,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ).blurred(
-              colorOpacity: 0.0,
-              borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
-              blur: 5,
-            ),
-            SafeArea(
-              child: Column(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
-                    padding: const EdgeInsets.all(0),
-                    decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Row(
-                      children: [
-                        Hero(
-                          tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
-                          child: SizedBox(
-                            width: 40,
-                            height: 40,
-                            child: MaterialButton(
-                              onPressed: () {
-                                Get.back();
-                              },
-                              color: Colors.white,
-                              padding: const EdgeInsets.all(0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.clear,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Hero(
-                            tag: "${widget.from}${HeroConstants.appBarTitle}",
-                            child: const Material(
-                              color: Colors.transparent,
-                              child: Text(
-                                "Dự báo thời tiết",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  shadows: [
-                                    Shadow(
-                                      blurRadius: 5.0,
-                                      color: Colors.black,
-                                      offset: Offset(2.0, 2.0),
-                                    ),
-                                  ],
-                                ),
-                                textAlign: TextAlign.start,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
-                    width: double.infinity,
-                    color: Colors.white,
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          "assets/images/ic_beta.png",
-                          width: 25,
-                          height: 25,
-                          fit: BoxFit.contain,
-                        ),
-                        const SizedBox(width: 4),
-                        const Expanded(
-                          child: Text(
-                            "Lưu ý: Tính đăng đang thử nghiệm, có thể gây lỗi",
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.redAccent,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: _buildBody(),
-                  ),
-                ],
+          color: ColorConstants.bkg,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Image.asset(
+                "assets/images/bkg_3.jpg",
+                height: double.infinity,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ).blurred(
+                colorOpacity: 0.0,
+                borderRadius: const BorderRadius.horizontal(right: Radius.circular(0)),
+                blur: 5,
               ),
-            ),
-          ],
+              SafeArea(
+                child: Column(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.fromLTRB(8, 2, 8, 8),
+                      padding: const EdgeInsets.all(0),
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Row(
+                        children: [
+                          Hero(
+                            tag: "${widget.from}${HeroConstants.appBarLeftIcon}",
+                            child: SizedBox(
+                              width: 40,
+                              height: 40,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  _onBackPress();
+                                },
+                                color: Colors.white,
+                                padding: const EdgeInsets.all(0),
+                                shape: const CircleBorder(),
+                                child: const Icon(
+                                  Icons.clear,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Hero(
+                              tag: "${widget.from}${HeroConstants.appBarTitle}",
+                              child: const Material(
+                                color: Colors.transparent,
+                                child: Text(
+                                  "Dự báo thời tiết",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    shadows: [
+                                      Shadow(
+                                        blurRadius: 5.0,
+                                        color: Colors.black,
+                                        offset: Offset(2.0, 2.0),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.start,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+                      width: double.infinity,
+                      color: Colors.white,
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/images/ic_beta.png",
+                            width: 25,
+                            height: 25,
+                            fit: BoxFit.contain,
+                          ),
+                          const SizedBox(width: 4),
+                          const Expanded(
+                            child: Text(
+                              "Lưu ý: Tính đăng đang thử nghiệm, có thể gây lỗi",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.redAccent,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: _buildBody(),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -280,5 +286,11 @@ class _WeatherScreenState extends BaseStatefulState<WeatherScreen> {
       );
     // debugPrint(">>>>>>>> loadHtmlString htmlWithStyle $htmlWithStyle");
     _webViewController.loadHtmlString(htmlWithStyle);
+  }
+
+  void _onBackPress() {
+    // debugPrint("_onBackPress");
+    _controllerMain.setIsShowWebViewWeather(false);
+    Get.back();
   }
 }
