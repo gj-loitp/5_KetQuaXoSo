@@ -66,7 +66,7 @@ class _MainScreenState extends BaseStatefulState<MainScreen> with SingleTickerPr
       return Future(() => true);
     } else {
       _backPressTime = DateTime.now();
-      showSnackBarFull(StringConstants.warning, "Vui lòng nhấn thêm lần nữa để tắt ứng ");
+      showSnackBarFull(StringConstants.warning, "Vui lòng nhấn thêm lần nữa để tắt ứng dụng");
       return Future(() => false);
     }
   }
