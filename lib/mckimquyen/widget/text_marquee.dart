@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:marquee/marquee.dart';
+import 'package:ketquaxoso/mckimquyen/common/v/text_slide_animation.dart';
 
 import '../core/base_stateful_state.dart';
 import 'main/controller_main.dart';
@@ -32,15 +32,13 @@ class _TextMarqueeState extends BaseStatefulState<TextMarquee> {
     return Obx(() {
       var onOffTextOverflow = _controllerMain.isSettingOnTextOverflow.value;
       if (onOffTextOverflow == true) {
-        return Marquee(
-          text: widget.text,
-          style: const TextStyle(
+        return TextSlideAnimation(
+          widget.text,
+          const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w900,
             color: Colors.black,
           ),
-          blankSpace: 50.0,
-          velocity: 5,
         );
       } else {
         return Text(

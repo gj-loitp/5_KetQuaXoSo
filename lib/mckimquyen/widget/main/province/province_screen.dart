@@ -2,8 +2,8 @@ import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:highlight_text/highlight_text.dart';
+import 'package:ketquaxoso/mckimquyen/common/v/text_slide_animation.dart';
 import 'package:ketquaxoso/mckimquyen/util/duration_util.dart';
-import 'package:marquee/marquee.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../common/const/color_constants.dart';
@@ -138,15 +138,13 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                   color: Colors.black,
                 ),
                 textAlign: TextAlign.start,
-                child: Marquee(
-                  text:
-                      'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
-                  style: const TextStyle(
+                child: TextSlideAnimation(
+                  'Kết quả xổ số ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}',
+                  const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Colors.black87,
                   ),
-                  blankSpace: 50.0,
                 ),
               ),
             ),
@@ -174,14 +172,13 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
                         color: Colors.transparent,
                         child: InkWell(
                           borderRadius: BorderRadius.circular(45),
-                          child: Marquee(
-                            text: sCurrentSearchNumber,
-                            style: const TextStyle(
+                          child: TextSlideAnimation(
+                            sCurrentSearchNumber,
+                            const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                               color: Colors.black87,
                             ),
-                            blankSpace: 50.0,
                           ),
                           onTap: () {
                             Get.to(() => SearchScreen(
@@ -683,15 +680,13 @@ class _ProvinceScreenState extends BaseStatefulState<ProvinceScreen> {
           ),
           alignment: Alignment.center,
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: Marquee(
-            text:
-                "Kết quả ${dataWrapper.displayName} ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}",
-            style: const TextStyle(
+          child: TextSlideAnimation(
+            "Kết quả ${dataWrapper.displayName} ngày ${selectedDateTime.day} tháng ${selectedDateTime.month} năm ${selectedDateTime.year}",
+            const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
-            blankSpace: 200.0,
           ),
         ),
         Container(
