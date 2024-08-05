@@ -74,11 +74,11 @@ dependencies:
   app_settings: ^5.1.1
   #end zone daily_local_notification
 
-  firebase_core: ^3.1.1
-  firebase_analytics: ^11.1.0
-  firebase_crashlytics: ^4.0.2
+  firebase_core: ^3.3.0
+  firebase_analytics: ^11.2.1
+  firebase_crashlytics: ^4.0.4
 
-  fading_edge_scrollview: ^4.1.1
+#  fading_edge_scrollview: ^4.1.1
 
 dev_dependencies:
   flutter_test:
