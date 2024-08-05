@@ -44,7 +44,7 @@ dependencies:
   kenburns_nullsafety: ^1.0.1
   permission_handler:
   toggle_switch: ^2.3.0
-  highlight_text: ^1.7.0
+  highlight_text: ^1.8.0
 #  relative_dialog: ^0.2.1
   flutter_udid: ^3.0.0
   lunar: ^1.7.0
