@@ -86,6 +86,12 @@ Future<void> main() async {
       // transitionDuration: const Duration(milliseconds: 1000),
       transitionDuration: const Duration(milliseconds: 700),
       home: const MyApp(),
+      builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaler: const TextScaler.linear(1.0)),
+          child: child!,
+        );
+      },
       navigatorKey: navigatorKey,
       theme: ThemeData.light().copyWith(
         primaryColor: ColorConstants.appColor,
